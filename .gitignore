@@ -1,0 +1,24 @@
+# Python
+*.py
+
+# Data files
+*.xlsx
+*.xls
+*.csv
+
+# Claude
+.claude/
+
+# Environment
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
