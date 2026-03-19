@@ -451,6 +451,62 @@
     .qa-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--blue); }
     .qa-icon { font-size: 26px; }
     .qa-label { font-size: 12.5px; font-weight: 700; color: var(--gray-700); text-align: center; }
+
+    /* ══════════════════════════════════════════
+       5. AI DAILY COACH
+    ══════════════════════════════════════════ */
+    .coach-card {
+      background: white; border-radius: 16px; padding: 28px 28px 24px;
+      box-shadow: var(--shadow-md); border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--navy);
+    }
+    .coach-intro-desc { font-size: 14px; color: var(--gray-500); margin-bottom: 18px; line-height: 1.6; }
+    .coach-btn {
+      background: var(--navy); color: white; border: none; border-radius: 10px;
+      padding: 12px 22px; font-size: 14px; font-weight: 700; cursor: pointer;
+      font-family: inherit; transition: background 0.15s, transform 0.1s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .coach-btn:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .coach-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .coach-loading {
+      align-items: center; gap: 14px; padding: 20px 0;
+      color: var(--gray-500); font-size: 14px;
+    }
+    .coach-spinner {
+      width: 22px; height: 22px; border: 2.5px solid var(--gray-200);
+      border-top-color: var(--blue); border-radius: 50%;
+      animation: spin 0.8s linear infinite; flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .coach-sections { display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; }
+    .coach-section-item {
+      padding: 14px 16px; background: var(--gray-50);
+      border-radius: 10px; border-left: 3px solid var(--blue);
+    }
+    .coach-section-item.quote { border-left-color: var(--purple); background: var(--purple-bg); }
+    .coach-section-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--blue); margin-bottom: 7px;
+    }
+    .coach-section-item.quote .coach-section-label { color: var(--purple); }
+    .coach-section-text { font-size: 14px; color: var(--gray-700); line-height: 1.65; }
+    .coach-section-item.quote .coach-section-text { font-style: italic; font-size: 15px; color: var(--gray-900); }
+    .coach-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px; border-top: 1px solid var(--gray-100);
+    }
+    .coach-timestamp { font-size: 11px; color: var(--gray-400); }
+    .coach-regen-btn {
+      background: var(--blue-bg); color: var(--blue); border: none;
+      border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: background 0.15s;
+    }
+    .coach-regen-btn:hover { background: #dce9ff; }
+    .coach-error {
+      background: var(--red-bg); border: 1px solid #fecaca; border-radius: 10px;
+      padding: 14px 16px; font-size: 13px; color: var(--red); line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -504,6 +560,23 @@
     <div class="briefing-text">
       <div class="briefing-label">Daily Briefing</div>
       <div class="briefing-msg" id="briefingMsg"></div>
+    </div>
+  </div>
+
+  <!-- AI DAILY COACH -->
+  <div style="margin-bottom:32px;">
+    <div class="section-title">🤖 AI Daily Coach</div>
+    <div class="coach-card">
+      <div id="coachIntro">
+        <p class="coach-intro-desc">Get a sharp, personalized briefing from Claude — your #1 job search priority, a Vibe Coding tip, and a power quote to start the day.</p>
+        <button class="coach-btn" onclick="generateCoaching()">✨ Generate Today's Coaching</button>
+      </div>
+      <div class="coach-loading" id="coachLoading" style="display:none;">
+        <div class="coach-spinner"></div>
+        <span>Claude is thinking…</span>
+      </div>
+      <div id="coachResult" style="display:none;"></div>
+      <div class="coach-error" id="coachError" style="display:none;"></div>
     </div>
   </div>
 
@@ -966,6 +1039,114 @@ function renderTimeline() {
 function escHtml(s) {
   if (!s) return '';
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ─────────────────────────────────────────────
+   AI DAILY COACH
+───────────────────────────────────────────── */
+function setCoachState(state) {
+  document.getElementById('coachIntro').style.display   = state === 'idle'    ? ''     : 'none';
+  document.getElementById('coachLoading').style.display = state === 'loading'  ? 'flex' : 'none';
+  document.getElementById('coachResult').style.display  = state === 'result'   ? ''     : 'none';
+  document.getElementById('coachError').style.display   = state === 'error'    ? ''     : 'none';
+}
+
+function parseCoachingSections(text) {
+  const s1 = text.match(/1[.)]\s*([\s\S]*?)(?=\n\s*2[.)]|$)/);
+  const s2 = text.match(/2[.)]\s*([\s\S]*?)(?=\n\s*3[.)]|$)/);
+  const s3 = text.match(/3[.)]\s*([\s\S]*?)$/);
+  return [
+    s1 ? s1[1].trim() : '',
+    s2 ? s2[1].trim() : '',
+    s3 ? s3[1].trim() : text.trim(),
+  ];
+}
+
+function renderCoachResult(text) {
+  const [job, coding, quote] = parseCoachingSections(text);
+  const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  document.getElementById('coachResult').innerHTML = `
+    <div class="coach-sections">
+      <div class="coach-section-item">
+        <div class="coach-section-label">🎯 Today's #1 Job Search Priority</div>
+        <div class="coach-section-text">${escHtml(job)}</div>
+      </div>
+      <div class="coach-section-item">
+        <div class="coach-section-label">💻 Vibe Coding Suggestion</div>
+        <div class="coach-section-text">${escHtml(coding)}</div>
+      </div>
+      <div class="coach-section-item quote">
+        <div class="coach-section-label">✨ Power Quote</div>
+        <div class="coach-section-text">${escHtml(quote)}</div>
+      </div>
+    </div>
+    <div class="coach-footer">
+      <span class="coach-timestamp">Generated at ${now}</span>
+      <button class="coach-regen-btn" onclick="generateCoaching()">↻ Regenerate</button>
+    </div>
+  `;
+  setCoachState('result');
+}
+
+function showCoachError(msg) {
+  document.getElementById('coachError').innerHTML = `
+    <div>${escHtml(msg)}</div>
+    <button onclick="setCoachState('idle')" style="margin-top:10px;background:none;border:1px solid var(--red);color:var(--red);border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;font-family:inherit;">← Back</button>
+  `;
+  setCoachState('error');
+}
+
+async function generateCoaching() {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) {
+    showCoachError('No API key found. Open the browser console and run:\n\nlocalStorage.setItem("ja2_apikey", "sk-ant-...")');
+    return;
+  }
+
+  setCoachState('loading');
+
+  const dateStr = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+  const systemPrompt = `You are a personal coach for Seungjun Ahn, a senior GTM executive on sabbatical in Tokyo.
+He is job hunting for Country Manager / Head of Sales / BD roles at AI and tech companies expanding to Japan.
+Current job pipeline:
+- Wonderful.ai: Japan GM role, passed recruiter screening, waiting for Chief of Staff interview
+- Headout: BD Manager, case study done
+He is also learning Vibe Coding with Claude Code every day.
+Give him a sharp, motivating daily briefing in 3 sections:
+1. Today's #1 job search priority (2-3 sentences)
+2. Today's Vibe Coding suggestion (1-2 sentences)
+3. One powerful quote to start the day
+Keep total response under 150 words.
+Respond in English.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 500,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: `Good morning! Today is ${dateStr}. Give me my daily coaching briefing.` }],
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error?.message || `API error ${res.status}`);
+    }
+
+    const data = await res.json();
+    renderCoachResult(data.content[0].text);
+  } catch (err) {
+    showCoachError(`Failed to generate coaching: ${err.message}`);
+  }
 }
 
 /* ─────────────────────────────────────────────
