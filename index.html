@@ -1041,6 +1041,14 @@ function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// Escape HTML then render **bold** and *italic* markdown
+function renderMd(s) {
+  if (!s) return '';
+  return escHtml(s)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+}
+
 /* ─────────────────────────────────────────────
    AI DAILY COACH
 ───────────────────────────────────────────── */
@@ -1069,15 +1077,15 @@ function renderCoachResult(text) {
     <div class="coach-sections">
       <div class="coach-section-item">
         <div class="coach-section-label">🎯 Today's #1 Job Search Priority</div>
-        <div class="coach-section-text">${escHtml(job)}</div>
+        <div class="coach-section-text">${renderMd(job)}</div>
       </div>
       <div class="coach-section-item">
         <div class="coach-section-label">💻 Vibe Coding Suggestion</div>
-        <div class="coach-section-text">${escHtml(coding)}</div>
+        <div class="coach-section-text">${renderMd(coding)}</div>
       </div>
       <div class="coach-section-item quote">
         <div class="coach-section-label">✨ Power Quote</div>
-        <div class="coach-section-text">${escHtml(quote)}</div>
+        <div class="coach-section-text">${renderMd(quote)}</div>
       </div>
     </div>
     <div class="coach-footer">
