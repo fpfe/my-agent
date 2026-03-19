@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 580px;
+      padding: 32px;
+      height: fit-content;
+    }
+
+    h1 { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; }
+
+    /* --- Add form --- */
+    .form {
+      background: #f8f9fb;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .input-row, .options-row { display: flex; gap: 8px; }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      background: white;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus { border-color: #4f7ef8; }
+
+    input[type="date"], select {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      background: white;
+      color: #444;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    input[type="date"]:focus, select:focus { border-color: #4f7ef8; }
+
+    button.add-btn {
+      padding: 10px 20px;
+      background: #4f7ef8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    button.add-btn:hover { background: #3a68e0; }
+
+    /* --- Filters --- */
+    .filters { display: flex; gap: 6px; margin-bottom: 16px; }
+
+    .filter-btn {
+      padding: 5px 16px;
+      border: 1.5px solid #ddd;
+      background: white;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: #555;
+      transition: all 0.15s;
+    }
+    .filter-btn.active { background: #4f7ef8; border-color: #4f7ef8; color: white; }
+
+    /* --- Task tree --- */
+    .todo-list, .child-list { list-style: none; }
+
+    .child-node {
+      border-left: 2px solid #e8edf5;
+      margin-left: 22px;
+      padding-left: 14px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .task-node:last-child > .todo-item { border-bottom: none; }
+
+    .todo-item input[type="checkbox"] {
+      width: 17px; height: 17px;
+      margin-top: 3px;
+      accent-color: #4f7ef8;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .task-body { flex: 1; min-width: 0; }
+
+    .todo-text {
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      word-break: break-word;
+      line-height: 1.4;
+    }
+    .todo-item.done .todo-text { text-decoration: line-through; color: #aaa; }
+
+    /* --- Badges --- */
+    .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge-date    { background: #eef2ff; color: #4f7ef8; }
+    .badge-overdue { background: #fee2e2; color: #dc2626; }
+    .badge-today   { background: #ffedd5; color: #ea580c; }
+    .badge-soon    { background: #fef9c3; color: #b45309; }
+    .badge-future  { background: #dcfce7; color: #16a34a; }
+    .badge-elapsed { background: #f3f4f6; color: #6b7280; }
+    .badge-done-at { background: #f3f4f6; color: #6b7280; }
+
+    /* --- Inline edit panel --- */
+    .edit-panel {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f0f4ff;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .edit-panel label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.76rem;
+      color: #6b7280;
+      font-weight: 500;
+      flex: 1;
+      min-width: 130px;
+    }
+    .edit-panel input[type="date"],
+    .edit-panel select {
+      padding: 5px 8px;
+      border: 1.5px solid #c7d2fe;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      background: white;
+      color: #333;
+      cursor: pointer;
+    }
+    .edit-panel input[type="date"]:focus,
+    .edit-panel select:focus { border-color: #4f7ef8; outline: none; }
+
+    /* --- Buttons --- */
+    .edit-btn {
+      background: none;
+      border: none;
+      font-size: 0.82rem;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #d1d5db;
+      transition: color 0.15s;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .edit-btn:hover, .edit-btn.active { color: #4f7ef8; }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #d1d5db;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 4px;
+      transition: color 0.15s;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .delete-btn:hover { color: #e05252; }
+
+    /* --- GCal button --- */
+    .gcal-btn {
+      background: none;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      padding: 2px 6px;
+      color: #94a3b8;
+      transition: color 0.15s, border-color 0.15s;
+      flex-shrink: 0;
+      margin-top: 2px;
+      white-space: nowrap;
+      line-height: 1.6;
+    }
+    .gcal-btn:hover:not(:disabled) { color: #4285f4; border-color: #4285f4; }
+    .gcal-btn:disabled { opacity: 0.5; cursor: wait; }
+    .gcal-btn.gcal-success { color: #16a34a; border-color: #16a34a; }
+
+    /* --- Footer --- */
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.83rem;
+      color: #9ca3af;
+    }
+    .clear-btn {
+      background: none;
+      border: none;
+      color: #e05252;
+      font-size: 0.83rem;
+      cursor: pointer;
+      padding: 0;
+    }
+    .clear-btn:hover { text-decoration: underline; }
+
+    .empty { text-align: center; color: #ccc; padding: 32px 0; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <div class="form">
+      <div class="input-row">
+        <input type="text" id="new-task" placeholder="新しいタスクを追加..." autocomplete="off">
+        <button class="add-btn" onclick="addTask()">追加</button>
+      </div>
+      <div class="options-row">
+        <input type="date" id="new-date" title="期限日">
+        <select id="new-parent"><option value="">親タスクなし</option></select>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', this)">すべて</button>
+      <button class="filter-btn" onclick="setFilter('active', this)">進行中</button>
+      <button class="filter-btn" onclick="setFilter('done', this)">完了</button>
+    </div>
+
+    <ul class="todo-list" id="todo-list"></ul>
+
+    <div class="footer">
+      <span id="count"></span>
+      <button class="clear-btn" onclick="clearDone()">完了済みを削除</button>
+    </div>
+  </div>
+
+  <script>
+    let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+    let filter = 'all';
+    let editingId = null;
+
+    // ── Helpers ──────────────────────────────────────────────
+
+    function todayStr() {
+      return new Date().toISOString().split('T')[0];
+    }
+
+    function diffDays(from, to) {
+      return Math.round(
+        (new Date(to + 'T00:00:00') - new Date(from + 'T00:00:00')) / 86400000
+      );
+    }
+
+    function save() {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Returns Set of IDs: the task itself + all descendants
+    function getDescendantIds(taskId) {
+      const result = new Set([taskId]);
+      const queue = [taskId];
+      while (queue.length) {
+        const cur = queue.shift();
+        tasks.filter(t => t.parentId === cur).forEach(t => {
+          if (!result.has(t.id)) { result.add(t.id); queue.push(t.id); }
+        });
+      }
+      return result;
+    }
+
+    // Build "Grandparent › Parent › Task" label for selects
+    function getTaskPath(task) {
+      const parts = [];
+      let cur = task;
+      const visited = new Set();
+      while (cur) {
+        if (visited.has(cur.id)) break; // cycle guard
+        visited.add(cur.id);
+        parts.unshift(escapeHtml(cur.text));
+        cur = cur.parentId ? tasks.find(t => t.id === cur.parentId) : null;
+      }
+      return parts.join(' › ');
+    }
+
+    // Options for parent selector, excluding task itself and its descendants
+    function buildParentOptions(taskId, currentParentId) {
+      const excluded = getDescendantIds(taskId);
+      return '<option value="">親タスクなし</option>' +
+        tasks
+          .filter(t => !excluded.has(t.id))
+          .map(t =>
+            `<option value="${t.id}"${t.id === currentParentId ? ' selected' : ''}>${getTaskPath(t)}</option>`
+          ).join('');
+    }
+
+    // ── CRUD ─────────────────────────────────────────────────
+
+    function addTask() {
+      const textEl   = document.getElementById('new-task');
+      const dateEl   = document.getElementById('new-date');
+      const parentEl = document.getElementById('new-parent');
+
+      const text = textEl.value.trim();
+      if (!text) return;
+
+      tasks.push({
+        id: Date.now(),
+        text,
+        done: false,
+        dueDate:     dateEl.value   || null,
+        parentId:    parentEl.value ? Number(parentEl.value) : null,
+        createdAt:   todayStr(),
+        completedAt: null,
+      });
+
+      textEl.value = ''; dateEl.value = ''; parentEl.value = '';
+      save(); render();
+    }
+
+    function toggle(id) {
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+      task.done = !task.done;
+      task.completedAt = task.done ? todayStr() : null;
+      save(); render();
+    }
+
+    function remove(id) {
+      const toRemove = getDescendantIds(id);
+      tasks = tasks.filter(t => !toRemove.has(t.id));
+      if (editingId && toRemove.has(editingId)) editingId = null;
+      save(); render();
+    }
+
+    function clearDone() {
+      // Active children of done tasks are re-parented to root to avoid orphaning
+      const doneIds = new Set(tasks.filter(t => t.done).map(t => t.id));
+      tasks.forEach(t => {
+        if (!t.done && t.parentId && doneIds.has(t.parentId)) {
+          t.parentId = null;
+        }
+      });
+      tasks = tasks.filter(t => !t.done);
+      if (editingId && !tasks.find(t => t.id === editingId)) editingId = null;
+      save(); render();
+    }
+
+    function setFilter(f, btn) {
+      filter = f;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    }
+
+    function toggleEdit(id) {
+      editingId = editingId === id ? null : id;
+      render();
+    }
+
+    function updateDate(id, val) {
+      const task = tasks.find(t => t.id === id);
+      if (task) { task.dueDate = val || null; save(); render(); }
+    }
+
+    function updateParent(id, val) {
+      const task = tasks.find(t => t.id === id);
+      if (task) { task.parentId = val ? Number(val) : null; save(); render(); }
+    }
+
+    // ── Rendering ────────────────────────────────────────────
+
+    function buildBadges(task) {
+      const today = todayStr();
+      const parts = [];
+
+      if (!task.done && task.createdAt) {
+        const elapsed = diffDays(task.createdAt, today);
+        if (elapsed > 0) parts.push(`<span class="badge badge-elapsed">経過 ${elapsed}日</span>`);
+      }
+
+      if (task.done && task.completedAt) {
+        const ago = diffDays(task.completedAt, today);
+        parts.push(`<span class="badge badge-done-at">${ago === 0 ? '本日完了' : `${ago}日前に完了`}</span>`);
+      }
+
+      if (task.dueDate) {
+        parts.push(`<span class="badge badge-date">📅 ${task.dueDate}</span>`);
+        if (!task.done) {
+          const rem = diffDays(today, task.dueDate);
+          let cls, label;
+          if      (rem < 0)   { cls = 'badge-overdue'; label = `${Math.abs(rem)}日超過`; }
+          else if (rem === 0) { cls = 'badge-today';   label = '今日が期限'; }
+          else if (rem <= 3)  { cls = 'badge-soon';    label = `あと ${rem}日`; }
+          else                { cls = 'badge-future';  label = `あと ${rem}日`; }
+          parts.push(`<span class="badge ${cls}">${label}</span>`);
+        }
+      }
+
+      return parts.length ? `<div class="badges">${parts.join('')}</div>` : '';
+    }
+
+    function renderItem(task) {
+      const isEditing = editingId === task.id;
+      const editPanel = isEditing ? `
+        <div class="edit-panel">
+          <label>期限日
+            <input type="date" value="${task.dueDate || ''}"
+              onchange="updateDate(${task.id}, this.value)">
+          </label>
+          <label>親タスク
+            <select onchange="updateParent(${task.id}, this.value)">
+              ${buildParentOptions(task.id, task.parentId)}
+            </select>
+          </label>
+        </div>` : '';
+
+      return `
+        <div class="todo-item${task.done ? ' done' : ''}">
+          <input type="checkbox" ${task.done ? 'checked' : ''} onchange="toggle(${task.id})">
+          <div class="task-body">
+            <span class="todo-text">${escapeHtml(task.text)}</span>
+            ${buildBadges(task)}
+            ${editPanel}
+          </div>
+          <button class="gcal-btn" data-gcal-id="${task.id}" onclick="handleGcal(${task.id})" title="Googleカレンダーに追加">📅 GCal</button>
+          <button class="edit-btn${isEditing ? ' active' : ''}" onclick="toggleEdit(${task.id})" title="編集">✏</button>
+          <button class="delete-btn" onclick="remove(${task.id})" title="削除">&#x2715;</button>
+        </div>`;
+    }
+
+    // Recursive tree renderer (arbitrary depth)
+    function renderTree(parentId, depth) {
+      const children = tasks.filter(t => (t.parentId ?? null) === parentId);
+
+      // Apply filter only at root level; always show all children
+      const visible = depth === 0
+        ? children.filter(t =>
+            filter === 'active' ? !t.done :
+            filter === 'done'   ?  t.done : true)
+        : children;
+
+      return visible.map(task => {
+        const subtree = renderTree(task.id, depth + 1);
+        return `
+          <li class="task-node${depth > 0 ? ' child-node' : ''}">
+            ${renderItem(task)}
+            ${subtree ? `<ul class="child-list">${subtree}</ul>` : ''}
+          </li>`;
+      }).join('');
+    }
+
+    function render() {
+      // Rebuild add-form parent selector (all tasks, with full path)
+      const parentSelect = document.getElementById('new-parent');
+      parentSelect.innerHTML =
+        '<option value="">親タスクなし</option>' +
+        tasks.map(t => `<option value="${t.id}">${getTaskPath(t)}</option>`).join('');
+
+      const list = document.getElementById('todo-list');
+      const html = renderTree(null, 0);
+      list.innerHTML = html || '<li class="empty">タスクがありません。</li>';
+
+      const remaining = tasks.filter(t => (t.parentId ?? null) === null && !t.done).length;
+      document.getElementById('count').textContent = `${remaining} 件残り`;
+    }
+
+    // ── Google Calendar integration ───────────────────────────
+
+    const GCAL_CLIENT_ID = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+    const GCAL_SCOPE     = 'https://www.googleapis.com/auth/calendar.events';
+
+    let tokenClient       = null;
+    let gcalAccessToken   = null;
+    let pendingGcalTaskId = null;
+
+    function initGoogleIdentity() {
+      if (!window.google?.accounts?.oauth2) return;
+      tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: GCAL_CLIENT_ID,
+        scope:     GCAL_SCOPE,
+        callback:  (response) => {
+          if (response.error) {
+            alert('Google認証エラー: ' + response.error);
+            return;
+          }
+          gcalAccessToken = response.access_token;
+          if (pendingGcalTaskId !== null) {
+            const id = pendingGcalTaskId;
+            pendingGcalTaskId = null;
+            pushToGcal(id);
+          }
+        },
+      });
+    }
+
+    function handleGcal(taskId) {
+      if (!tokenClient) {
+        alert('Google Identity Services の読み込みに失敗しました。\nインターネット接続を確認し、ページを再読み込みしてください。');
+        return;
+      }
+      pendingGcalTaskId = taskId;
+      if (!gcalAccessToken) {
+        tokenClient.requestAccessToken();   // shows Google sign-in popup
+      } else {
+        pendingGcalTaskId = null;
+        pushToGcal(taskId);
+      }
+    }
+
+    function nextDay(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      d.setDate(d.getDate() + 1);
+      return d.toISOString().split('T')[0];
+    }
+
+    async function pushToGcal(taskId) {
+      const task = tasks.find(t => t.id === taskId);
+      if (!task) return;
+
+      const btn = document.querySelector(`[data-gcal-id="${taskId}"]`);
+      const setBtn = (label, cls, disabled) => {
+        if (!btn) return;
+        btn.textContent = label;
+        btn.className   = 'gcal-btn' + (cls ? ' ' + cls : '');
+        btn.disabled    = disabled;
+      };
+
+      setBtn('⏳', '', true);
+
+      const date  = task.dueDate || todayStr();
+      const event = {
+        summary: task.text,
+        start:   { date },
+        end:     { date: nextDay(date) },   // GCal all-day end is exclusive
+      };
+
+      try {
+        const res = await fetch(
+          'https://www.googleapis.com/calendar/v3/calendars/primary/events',
+          {
+            method:  'POST',
+            headers: {
+              'Authorization': 'Bearer ' + gcalAccessToken,
+              'Content-Type':  'application/json',
+            },
+            body: JSON.stringify(event),
+          }
+        );
+
+        if (res.status === 401) {
+          // Token expired — request a fresh one and retry
+          gcalAccessToken   = null;
+          pendingGcalTaskId = taskId;
+          setBtn('📅 GCal', '', false);
+          tokenClient.requestAccessToken();
+          return;
+        }
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.error?.message || `HTTP ${res.status}`);
+        }
+
+        setBtn('✓ GCal', 'gcal-success', false);
+        setTimeout(() => setBtn('📅 GCal', '', false), 3000);
+
+      } catch (err) {
+        setBtn('📅 GCal', '', false);
+        alert('Googleカレンダーへの追加に失敗しました:\n' + err.message);
+      }
+    }
+
+    // ── Japanese IME guard ────────────────────────────────────
+    let composing = false;
+    const taskInput = document.getElementById('new-task');
+    taskInput.addEventListener('compositionstart', () => { composing = true; });
+    taskInput.addEventListener('compositionend',   () => { composing = false; });
+    taskInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !composing) addTask();
+    });
+
+    render();
+  </script>
+
+  <!--
+    Google Identity Services — loaded async after inline script so initGoogleIdentity is defined.
+    REQUIRED: add your local origin (e.g. http://localhost:8080) to
+    "Authorized JavaScript origins" in Google Cloud Console → APIs & Services → Credentials.
+    The file:// protocol is NOT supported by Google OAuth; serve this file via a local HTTP server.
+  -->
+  <script src="https://accounts.google.com/gsi/client"
+          onload="initGoogleIdentity()"
+          async defer></script>
+</body>
+</html>

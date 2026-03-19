@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabbatical Command Center</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #1a2332; --navy-light: #243447; --navy-muted: #2d3f55;
+      --blue: #4f7ef8; --blue-light: #6b94ff; --blue-bg: #eff4ff;
+      --green: #10b981; --green-bg: #ecfdf5;
+      --purple: #7c3aed; --purple-bg: #f3e8ff;
+      --orange: #f59e0b; --orange-bg: #fffbeb;
+      --red: #ef4444; --red-bg: #fef2f2;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+      --gray-400: #94a3b8; --gray-500: #64748b; --gray-700: #334155; --gray-900: #0f172a;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: var(--gray-100);
+      color: var(--gray-900);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--navy);
+      color: white;
+      padding: 0 28px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header-left { display: flex; align-items: center; gap: 14px; }
+    .header-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), #3b60d4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 19px; flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(79,126,248,0.4);
+    }
+    .header-title { font-size: 18px; font-weight: 700; color: white; letter-spacing: -0.2px; }
+    .header-sub { font-size: 11.5px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+    .header-right { text-align: right; }
+    .header-date { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .header-time { font-size: 22px; font-weight: 700; color: white; font-variant-numeric: tabular-nums; letter-spacing: -0.5px; }
+
+    /* ── MAIN ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--gray-500); margin-bottom: 12px;
+    }
+
+    /* ══════════════════════════════════════════
+       1. SABBATICAL TRACKER
+    ══════════════════════════════════════════ */
+    .sab-tracker {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .sab-tracker::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(79,126,248,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sab-top {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 600px) { .sab-top { flex-direction: column; align-items: flex-start; gap: 16px; } }
+    .sab-counter {
+      background: rgba(79,126,248,0.18);
+      border: 1px solid rgba(79,126,248,0.35);
+      border-radius: 16px;
+      padding: 16px 24px;
+      text-align: center;
+      flex-shrink: 0;
+      min-width: 110px;
+    }
+    .sab-day-num {
+      font-size: 52px; font-weight: 900; line-height: 1;
+      color: #79a4ff; font-variant-numeric: tabular-nums;
+      letter-spacing: -2px;
+    }
+    .sab-day-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-top: 4px;
+    }
+    .sab-info { flex: 1; }
+    .sab-headline {
+      font-size: 22px; font-weight: 800; color: white;
+      margin-bottom: 6px; letter-spacing: -0.3px;
+    }
+    .sab-week-info {
+      font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 12px;
+    }
+    .sab-motivation {
+      background: rgba(255,255,255,0.07);
+      border-left: 3px solid #79a4ff;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 14px; color: rgba(255,255,255,0.88);
+      font-style: italic; line-height: 1.5;
+    }
+    /* Progress bar */
+    .sab-progress-wrap { margin-top: 4px; }
+    .sab-progress-label {
+      display: flex; justify-content: space-between;
+      font-size: 11px; color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .sab-progress-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px; height: 8px;
+      overflow: hidden;
+    }
+    .sab-progress-fill {
+      height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, #4f7ef8, #79a4ff);
+      transition: width 1s ease;
+      min-width: 4px;
+    }
+    .sab-weeks-row {
+      display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap;
+    }
+    .sab-week-dot {
+      width: 28px; height: 28px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s;
+    }
+    .sab-week-dot.done {
+      background: rgba(79,126,248,0.4);
+      border-color: rgba(79,126,248,0.6);
+      color: #79a4ff;
+    }
+    .sab-week-dot.current {
+      background: rgba(79,126,248,0.7);
+      border-color: #4f7ef8;
+      color: white;
+      box-shadow: 0 0 8px rgba(79,126,248,0.5);
+    }
+
+    /* ── BRIEFING ── */
+    .briefing {
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-muted));
+      border-radius: 16px; padding: 22px 24px; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 18px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .briefing-icon { font-size: 36px; flex-shrink: 0; line-height: 1; }
+    .briefing-text { flex: 1; }
+    .briefing-label {
+      font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--blue-light); margin-bottom: 5px;
+    }
+    .briefing-msg { font-size: 15px; color: rgba(255,255,255,0.9); line-height: 1.6; font-weight: 500; }
+
+    /* ── APP CARDS ── */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin-bottom: 32px;
+    }
+    @media (max-width: 640px) { .apps-grid { grid-template-columns: 1fr; } }
+
+    .app-card {
+      background: white; border-radius: 16px; padding: 24px 20px;
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 0;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer; position: relative; overflow: hidden;
+    }
+    .app-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px; border-radius: 16px 16px 0 0;
+    }
+    .app-card.blue::before  { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
+    .app-card.green::before { background: linear-gradient(90deg, #10b981, #34d399); }
+    .app-card.purple::before{ background: linear-gradient(90deg, #7c3aed, #a855f7); }
+    .app-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .app-card.blue:hover  { border-color: var(--blue); }
+    .app-card.green:hover { border-color: var(--green); }
+    .app-card.purple:hover{ border-color: var(--purple); }
+    .app-icon-wrap {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; margin-bottom: 14px; flex-shrink: 0;
+    }
+    .app-card.blue   .app-icon-wrap { background: var(--blue-bg); }
+    .app-card.green  .app-icon-wrap { background: var(--green-bg); }
+    .app-card.purple .app-icon-wrap { background: var(--purple-bg); }
+    .app-name { font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+    .app-desc { font-size: 12.5px; color: var(--gray-500); line-height: 1.55; flex: 1; }
+    .app-arrow {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 12px; font-weight: 600; margin-top: 16px;
+      transition: gap 0.15s;
+    }
+    .app-card.blue   .app-arrow { color: var(--blue); }
+    .app-card.green  .app-arrow { color: var(--green); }
+    .app-card.purple .app-arrow { color: var(--purple); }
+    .app-card:hover .app-arrow { gap: 8px; }
+
+    /* ══════════════════════════════════════════
+       2. JOB SEARCH PIPELINE
+    ══════════════════════════════════════════ */
+    .pipeline-section { margin-bottom: 32px; }
+    .pipeline-board {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .pipeline-board { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .pipeline-board { grid-template-columns: 1fr 1fr; }
+    }
+
+    .pipeline-col {
+      background: var(--gray-50);
+      border-radius: 14px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+    .pipeline-col-header {
+      padding: 10px 12px;
+      font-size: 11.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .pipeline-col-title { display: flex; align-items: center; gap: 6px; }
+    .col-count {
+      background: var(--gray-200); color: var(--gray-500);
+      border-radius: 999px; padding: 1px 7px;
+      font-size: 11px; font-weight: 700;
+    }
+    .pipeline-cards { padding: 10px; display: flex; flex-direction: column; gap: 8px; min-height: 60px; }
+
+    /* Job cards */
+    .job-card {
+      background: white; border-radius: 10px;
+      border: 1.5px solid var(--gray-200);
+      padding: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+      animation: cardIn 0.25s ease;
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .job-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .job-card.border-green { border-color: #10b981; }
+    .job-card.border-blue  { border-color: var(--blue); }
+    .job-card.border-purple{ border-color: var(--purple); }
+    .job-card.border-orange{ border-color: var(--orange); }
+    .job-card.border-red   { border-color: var(--red); }
+
+    .jc-company { font-size: 13px; font-weight: 800; color: var(--gray-900); margin-bottom: 2px; }
+    .jc-role    { font-size: 11.5px; color: var(--gray-500); margin-bottom: 6px; line-height: 1.3; }
+    .jc-date    { font-size: 10.5px; color: var(--gray-400); margin-bottom: 6px; }
+    .jc-note    { font-size: 11px; color: var(--gray-700); line-height: 1.5; background: var(--gray-50); border-radius: 6px; padding: 7px 8px; margin-bottom: 8px; }
+    .jc-actions { display: flex; gap: 5px; justify-content: flex-end; }
+    .jc-btn {
+      border: none; border-radius: 6px; cursor: pointer;
+      font-size: 13px; padding: 4px 8px;
+      transition: background 0.15s, transform 0.1s;
+      line-height: 1;
+    }
+    .jc-btn:hover { transform: scale(1.1); }
+    .jc-btn.prev { background: var(--gray-100); color: var(--gray-500); }
+    .jc-btn.next { background: var(--blue-bg); color: var(--blue); }
+    .jc-btn.del  { background: var(--red-bg); color: var(--red); }
+    .jc-btn.prev:hover { background: var(--gray-200); }
+    .jc-btn.next:hover { background: #dce9ff; }
+    .jc-btn.del:hover  { background: #fecaca; }
+
+    /* Add card form */
+    .pipeline-add-btn {
+      margin: 0 10px 10px;
+      width: calc(100% - 20px);
+      background: transparent;
+      border: 1.5px dashed var(--gray-300);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 12px; color: var(--gray-400);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .pipeline-add-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-bg); }
+
+    /* Add card modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 200;
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: white; border-radius: 18px;
+      padding: 28px; width: 90%; max-width: 420px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+      animation: modalIn 0.2s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.95) translateY(10px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .modal-title { font-size: 17px; font-weight: 800; margin-bottom: 18px; color: var(--gray-900); }
+    .form-group { margin-bottom: 14px; }
+    .form-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-500); margin-bottom: 5px; display: block; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; border: 1.5px solid var(--gray-200);
+      border-radius: 8px; padding: 9px 12px;
+      font-size: 13.5px; color: var(--gray-900);
+      font-family: inherit;
+      outline: none; transition: border-color 0.15s;
+      background: white;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--blue); }
+    .form-textarea { min-height: 72px; resize: vertical; }
+    .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+    .btn { border: none; border-radius: 8px; padding: 9px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover { background: #3b6ae0; }
+    .btn-ghost { background: var(--gray-100); color: var(--gray-700); }
+    .btn-ghost:hover { background: var(--gray-200); }
+
+    /* ══════════════════════════════════════════
+       3. DAILY LEARNING LOG
+    ══════════════════════════════════════════ */
+    .learning-section { margin-bottom: 32px; }
+    .learning-inner {
+      display: grid; grid-template-columns: 340px 1fr; gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 760px) { .learning-inner { grid-template-columns: 1fr; } }
+
+    .learning-form-card {
+      background: white; border-radius: 16px;
+      padding: 22px 20px; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    .learning-form-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 16px; }
+    .cat-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+    .cat-pill {
+      border: 1.5px solid var(--gray-200); border-radius: 999px;
+      padding: 5px 12px; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all 0.15s; background: white; color: var(--gray-600);
+    }
+    .cat-pill:hover, .cat-pill.active {
+      border-color: var(--blue); background: var(--blue-bg); color: var(--blue);
+    }
+    .learning-submit-btn {
+      width: 100%; background: var(--navy); color: white;
+      border: none; border-radius: 10px; padding: 11px;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s;
+      margin-top: 4px;
+    }
+    .learning-submit-btn:hover { background: var(--navy-light); }
+
+    /* Timeline */
+    .learning-timeline { background: white; border-radius: 16px; padding: 22px 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+    .timeline-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 16px; }
+    .timeline-empty { font-size: 13px; color: var(--gray-400); text-align: center; padding: 20px 0; }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: flex; gap: 14px; padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      animation: cardIn 0.25s ease;
+    }
+    .tl-item:last-child { border-bottom: none; }
+    .tl-dot-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding-top: 3px; }
+    .tl-dot {
+      width: 30px; height: 30px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0;
+    }
+    .tl-dot.vibe    { background: #eff4ff; }
+    .tl-dot.ai      { background: #f3e8ff; }
+    .tl-dot.sales   { background: #ecfdf5; }
+    .tl-dot.job     { background: #fffbeb; }
+    .tl-line { width: 2px; flex: 1; background: var(--gray-100); margin-top: 6px; }
+    .tl-content { flex: 1; }
+    .tl-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+    .tl-date { font-size: 11px; color: var(--gray-400); font-weight: 500; }
+    .tl-cat-badge {
+      font-size: 10.5px; font-weight: 700; padding: 2px 8px;
+      border-radius: 999px; letter-spacing: 0.3px;
+    }
+    .tl-cat-badge.vibe  { background: var(--blue-bg); color: var(--blue); }
+    .tl-cat-badge.ai    { background: var(--purple-bg); color: var(--purple); }
+    .tl-cat-badge.sales { background: var(--green-bg); color: #065f46; }
+    .tl-cat-badge.job   { background: var(--orange-bg); color: #92400e; }
+    .tl-text { font-size: 13px; color: var(--gray-700); line-height: 1.6; }
+    .tl-del { background: none; border: none; color: var(--gray-300); cursor: pointer; font-size: 15px; padding: 2px; flex-shrink: 0; transition: color 0.15s; align-self: flex-start; margin-top: 2px; }
+    .tl-del:hover { color: var(--red); }
+
+    /* ══════════════════════════════════════════
+       4. QUICK ACTIONS
+    ══════════════════════════════════════════ */
+    .quick-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) { .quick-actions-grid { grid-template-columns: 1fr 1fr; } }
+    .qa-btn {
+      background: white; border: 1.5px solid var(--gray-200);
+      border-radius: 14px; padding: 18px 12px;
+      text-decoration: none; color: var(--gray-900);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      box-shadow: var(--shadow-sm); transition: all 0.2s;
+      cursor: pointer; font-family: inherit; font-size: inherit;
+    }
+    .qa-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--blue); }
+    .qa-icon { font-size: 26px; }
+    .qa-label { font-size: 12.5px; font-weight: 700; color: var(--gray-700); text-align: center; }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <div class="header-icon">🚀</div>
+    <div>
+      <div class="header-title">Sabbatical Command Center</div>
+      <div class="header-sub">Daily hub — planner · tasks · job search · learning</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="header-date" id="hdrDate"></div>
+    <div class="header-time" id="hdrTime"></div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ═══════════════════════════════════════════
+       1. SABBATICAL TRACKER
+  ═══════════════════════════════════════════ -->
+  <div class="sab-tracker">
+    <div class="sab-top">
+      <div class="sab-counter">
+        <div class="sab-day-num" id="sabDay">—</div>
+        <div class="sab-day-label">Day</div>
+      </div>
+      <div class="sab-info">
+        <div class="sab-headline" id="sabHeadline">Sabbatical in Progress</div>
+        <div class="sab-week-info" id="sabWeekInfo">Loading...</div>
+        <div class="sab-motivation" id="sabMotivation">Stay focused.</div>
+      </div>
+    </div>
+    <div class="sab-progress-wrap">
+      <div class="sab-progress-label">
+        <span id="progLeft">Week 1 of 8</span>
+        <span id="progRight">0%</span>
+      </div>
+      <div class="sab-progress-track">
+        <div class="sab-progress-fill" id="progFill" style="width:0%"></div>
+      </div>
+      <div class="sab-weeks-row" id="weeksRow"></div>
+    </div>
+  </div>
+
+  <!-- DAILY BRIEFING -->
+  <div class="briefing">
+    <div class="briefing-icon" id="briefingIcon"></div>
+    <div class="briefing-text">
+      <div class="briefing-label">Daily Briefing</div>
+      <div class="briefing-msg" id="briefingMsg"></div>
+    </div>
+  </div>
+
+  <!-- APP CARDS -->
+  <div class="section-title">Your Apps</div>
+  <div class="apps-grid" style="margin-bottom:32px;">
+    <a class="app-card blue" href="daily-planner.html">
+      <div class="app-icon-wrap">📅</div>
+      <div class="app-name">Daily Planner</div>
+      <div class="app-desc">Plan your day, track tasks, and journal your mood and progress.</div>
+      <div class="app-arrow">Open Planner →</div>
+    </a>
+    <a class="app-card green" href="todo.html">
+      <div class="app-icon-wrap">✅</div>
+      <div class="app-name">Todo List</div>
+      <div class="app-desc">Manage tasks with priorities, due dates, and categories.</div>
+      <div class="app-arrow">Open Todos →</div>
+    </a>
+    <a class="app-card purple" href="job-agent.html">
+      <div class="app-icon-wrap">💼</div>
+      <div class="app-name">Job Search Agent</div>
+      <div class="app-desc">Track applications, discover companies, and write cover letters.</div>
+      <div class="app-arrow">Open Job Agent →</div>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       2. JOB SEARCH PIPELINE
+  ═══════════════════════════════════════════ -->
+  <div class="pipeline-section">
+    <div class="section-title">Job Search Pipeline</div>
+    <div class="pipeline-board" id="pipelineBoard">
+      <!-- Columns rendered by JS -->
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       3. DAILY LEARNING LOG
+  ═══════════════════════════════════════════ -->
+  <div class="learning-section">
+    <div class="section-title">Daily Learning Log</div>
+    <div class="learning-inner">
+      <!-- Form -->
+      <div class="learning-form-card">
+        <div class="learning-form-title">📝 Log Today's Learning</div>
+        <div class="form-group">
+          <label class="form-label">Date</label>
+          <input class="form-input" type="date" id="learnDate">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <div class="cat-pills" id="catPills">
+            <button class="cat-pill" data-cat="vibe">Vibe Coding</button>
+            <button class="cat-pill" data-cat="ai">AI Knowledge</button>
+            <button class="cat-pill" data-cat="sales">Sales Strategy</button>
+            <button class="cat-pill" data-cat="job">Job Search</button>
+          </div>
+          <input type="hidden" id="learnCat" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label">What I Learned</label>
+          <textarea class="form-textarea" id="learnText" placeholder="Describe what you learned today..."></textarea>
+        </div>
+        <button class="learning-submit-btn" onclick="addLearning()">Add to Log →</button>
+      </div>
+      <!-- Timeline -->
+      <div class="learning-timeline">
+        <div class="timeline-title">📚 Recent Learnings (Last 7 Entries)</div>
+        <div class="timeline-list" id="timelineList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       4. QUICK ACTIONS
+  ═══════════════════════════════════════════ -->
+  <div class="section-title">Quick Actions</div>
+  <div class="quick-actions-grid">
+    <a class="qa-btn" href="daily-planner.html">
+      <span class="qa-icon">📅</span>
+      <span class="qa-label">Daily Planner</span>
+    </a>
+    <a class="qa-btn" href="todo.html">
+      <span class="qa-icon">✅</span>
+      <span class="qa-label">Todo List</span>
+    </a>
+    <a class="qa-btn" href="job-agent.html">
+      <span class="qa-icon">💼</span>
+      <span class="qa-label">Job Search Agent</span>
+    </a>
+    <a class="qa-btn" href="daily-planner.html">
+      <span class="qa-icon">📔</span>
+      <span class="qa-label">Journal</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- Add Job Card Modal -->
+<div class="modal-overlay" id="addCardModal">
+  <div class="modal">
+    <div class="modal-title">➕ Add Job Card</div>
+    <div class="form-group">
+      <label class="form-label">Company</label>
+      <input class="form-input" id="newCompany" placeholder="e.g. Acme Corp">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Role</label>
+      <input class="form-input" id="newRole" placeholder="e.g. Country Manager Japan">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Date</label>
+      <input class="form-input" type="date" id="newDate">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Note</label>
+      <textarea class="form-textarea" id="newNote" placeholder="Key details, next steps..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Card Color</label>
+      <select class="form-select" id="newColor">
+        <option value="border-blue">Blue</option>
+        <option value="border-green">Green</option>
+        <option value="border-purple">Purple</option>
+        <option value="border-orange">Orange</option>
+        <option value="border-red">Red</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewCard()">Add Card</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ─────────────────────────────────────────────
+   CONSTANTS
+───────────────────────────────────────────── */
+const SABBATICAL_START = new Date('2026-03-17T00:00:00');
+const DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const PIPELINE_COLS = [
+  { id: 'targeting',  label: '🎯 Targeting' },
+  { id: 'applied',    label: '📤 Applied' },
+  { id: 'screening',  label: '📞 Screening' },
+  { id: 'interview',  label: '🤝 Interview' },
+  { id: 'offer',      label: '🏆 Offer' },
+];
+const CAT_META = {
+  vibe:  { icon: '💻', label: 'Vibe Coding' },
+  ai:    { icon: '🤖', label: 'AI Knowledge' },
+  sales: { icon: '📈', label: 'Sales Strategy' },
+  job:   { icon: '💼', label: 'Job Search' },
+};
+
+/* ─────────────────────────────────────────────
+   CLOCK / BRIEFING / SABBATICAL TRACKER
+───────────────────────────────────────────── */
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function update() {
+  const now = new Date();
+  const h = now.getHours();
+
+  // Header clock
+  document.getElementById('hdrTime').textContent = `${pad(h)}:${pad(now.getMinutes())}`;
+  document.getElementById('hdrDate').textContent =
+    `${DAYS[now.getDay()]}, ${MONTHS[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+
+  // Briefing
+  let icon, msg;
+  if (h >= 6 && h < 12) {
+    icon = '☀️'; msg = 'Good morning, Seungjun! Ready to make today count? Your sabbatical is your runway.';
+  } else if (h >= 12 && h < 18) {
+    icon = '⚡'; msg = 'Keep the momentum going. Every application and every skill you build today matters.';
+  } else if (h >= 18) {
+    icon = '🌙'; msg = 'Great work today. Rest well — tomorrow is another opportunity.';
+  } else {
+    icon = '🌙'; msg = 'Rest well. Tomorrow is another opportunity to move the needle.';
+  }
+  document.getElementById('briefingIcon').textContent = icon;
+  document.getElementById('briefingMsg').textContent  = msg;
+
+  // Sabbatical tracker
+  const startMidnight = new Date(SABBATICAL_START); startMidnight.setHours(0,0,0,0);
+  const todayMidnight = new Date(now);              todayMidnight.setHours(0,0,0,0);
+  const dayNum  = Math.max(1, Math.floor((todayMidnight - startMidnight) / 86400000) + 1);
+  const weekNum = Math.ceil(dayNum / 7);
+  const TOTAL_WEEKS = 8;
+  const pct = Math.min(100, Math.round(((dayNum - 1) / (TOTAL_WEEKS * 7)) * 100));
+
+  let motivation;
+  if (weekNum <= 1)      motivation = 'Building your foundation. Every day counts.';
+  else if (weekNum <= 2) motivation = 'Momentum is building. Keep going.';
+  else if (weekNum <= 3) motivation = "You're in the zone now.";
+  else                   motivation = "You're playing the long game. Stay sharp.";
+
+  document.getElementById('sabDay').textContent      = dayNum;
+  document.getElementById('sabHeadline').textContent = `Day ${dayNum} of your Sabbatical`;
+  document.getElementById('sabWeekInfo').textContent = `Week ${weekNum} · Started March 17, 2026 · ${pct}% through 8-week plan`;
+  document.getElementById('sabMotivation').textContent = motivation;
+  document.getElementById('progLeft').textContent    = `Week ${weekNum} of ${TOTAL_WEEKS}`;
+  document.getElementById('progRight').textContent   = `${pct}%`;
+  document.getElementById('progFill').style.width    = pct + '%';
+
+  // Week dots
+  const row = document.getElementById('weeksRow');
+  row.innerHTML = '';
+  for (let w = 1; w <= TOTAL_WEEKS; w++) {
+    const dot = document.createElement('div');
+    dot.className = 'sab-week-dot' + (w < weekNum ? ' done' : w === weekNum ? ' current' : '');
+    dot.textContent = `W${w}`;
+    row.appendChild(dot);
+  }
+}
+
+update();
+const msToNext = (60 - new Date().getSeconds()) * 1000 - new Date().getMilliseconds();
+setTimeout(() => { update(); setInterval(update, 60000); }, msToNext);
+
+/* ─────────────────────────────────────────────
+   PIPELINE — localStorage key: "pipeline_cards"
+───────────────────────────────────────────── */
+const PIPELINE_KEY = 'pipeline_cards';
+
+const DEFAULT_CARDS = [
+  {
+    id: 'card_wonderful',
+    company: 'Wonderful.ai',
+    role: 'Japan GM / Country Manager',
+    col: 'screening',
+    date: '2026-03-17',
+    note: 'Recruiter screening went great. Virginia Campo promised to introduce me to Chief of Staff. Next step coming this week.',
+    color: 'border-green',
+  },
+  {
+    id: 'card_headout',
+    company: 'Headout',
+    role: 'BD Manager Japan',
+    col: 'screening',
+    date: '2026-03-17',
+    note: 'Case study preparation done. Web scraping of UberEats and Demaecan completed.',
+    color: 'border-blue',
+  },
+];
+
+function loadCards() {
+  try {
+    const raw = localStorage.getItem(PIPELINE_KEY);
+    return raw ? JSON.parse(raw) : DEFAULT_CARDS;
+  } catch { return DEFAULT_CARDS; }
+}
+
+function saveCards(cards) {
+  localStorage.setItem(PIPELINE_KEY, JSON.stringify(cards));
+}
+
+function renderPipeline() {
+  const cards = loadCards();
+  const board = document.getElementById('pipelineBoard');
+  board.innerHTML = '';
+
+  PIPELINE_COLS.forEach(col => {
+    const colCards = cards.filter(c => c.col === col.id);
+
+    const colEl = document.createElement('div');
+    colEl.className = 'pipeline-col';
+
+    colEl.innerHTML = `
+      <div class="pipeline-col-header">
+        <div class="pipeline-col-title">${col.label}</div>
+        <span class="col-count">${colCards.length}</span>
+      </div>
+      <div class="pipeline-cards" id="col_${col.id}"></div>
+      <button class="pipeline-add-btn" onclick="openModal('${col.id}')">+ Add</button>
+    `;
+    board.appendChild(colEl);
+
+    const cardsEl = colEl.querySelector(`#col_${col.id}`);
+    colCards.forEach(card => {
+      cardsEl.appendChild(buildCardEl(card, cards));
+    });
+  });
+}
+
+function buildCardEl(card, allCards) {
+  const colIdx = PIPELINE_COLS.findIndex(c => c.id === card.col);
+  const el = document.createElement('div');
+  el.className = `job-card ${card.color || ''}`;
+  el.dataset.id = card.id;
+
+  const dateStr = card.date ? new Date(card.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+
+  el.innerHTML = `
+    <div class="jc-company">${escHtml(card.company)}</div>
+    <div class="jc-role">${escHtml(card.role)}</div>
+    <div class="jc-date">${dateStr}</div>
+    ${card.note ? `<div class="jc-note">${escHtml(card.note)}</div>` : ''}
+    <div class="jc-actions">
+      ${colIdx > 0 ? `<button class="jc-btn prev" title="Move back" onclick="moveCard('${card.id}',-1)">←</button>` : ''}
+      ${colIdx < PIPELINE_COLS.length - 1 ? `<button class="jc-btn next" title="Move forward" onclick="moveCard('${card.id}',1)">→</button>` : ''}
+      <button class="jc-btn del" title="Delete" onclick="deleteCard('${card.id}')">✕</button>
+    </div>
+  `;
+  return el;
+}
+
+function moveCard(id, dir) {
+  const cards = loadCards();
+  const card = cards.find(c => c.id === id);
+  if (!card) return;
+  const idx = PIPELINE_COLS.findIndex(c => c.id === card.col);
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= PIPELINE_COLS.length) return;
+  card.col = PIPELINE_COLS[newIdx].id;
+  saveCards(cards);
+  renderPipeline();
+}
+
+function deleteCard(id) {
+  const cards = loadCards().filter(c => c.id !== id);
+  saveCards(cards);
+  renderPipeline();
+}
+
+// Modal state
+let _modalCol = 'targeting';
+
+function openModal(colId) {
+  _modalCol = colId;
+  document.getElementById('newDate').value = new Date().toISOString().slice(0,10);
+  document.getElementById('newCompany').value = '';
+  document.getElementById('newRole').value = '';
+  document.getElementById('newNote').value = '';
+  document.getElementById('newColor').value = 'border-blue';
+  document.getElementById('addCardModal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('addCardModal').classList.remove('open');
+}
+
+document.getElementById('addCardModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+function saveNewCard() {
+  const company = document.getElementById('newCompany').value.trim();
+  const role    = document.getElementById('newRole').value.trim();
+  if (!company) { document.getElementById('newCompany').focus(); return; }
+
+  const card = {
+    id: 'card_' + Date.now(),
+    company,
+    role,
+    col: _modalCol,
+    date: document.getElementById('newDate').value,
+    note: document.getElementById('newNote').value.trim(),
+    color: document.getElementById('newColor').value,
+  };
+  const cards = loadCards();
+  cards.push(card);
+  saveCards(cards);
+  closeModal();
+  renderPipeline();
+}
+
+/* ─────────────────────────────────────────────
+   LEARNING LOG — localStorage key: "learning_log"
+───────────────────────────────────────────── */
+const LEARN_KEY = 'learning_log';
+
+const DEFAULT_LEARNINGS = [
+  {
+    id: 'learn_1',
+    date: '2026-03-17',
+    cat: 'vibe',
+    text: 'Built todo.html, daily-planner.html, job-agent.html, and index.html from scratch using Claude Code. Learned JSON, HTML, APIs, Google Calendar integration, and vibe coding fundamentals. Had Wonderful.ai recruiter screening — went great. Prepared Headout BD case with web scraping.',
+  },
+];
+
+function loadLearnings() {
+  try {
+    const raw = localStorage.getItem(LEARN_KEY);
+    return raw ? JSON.parse(raw) : DEFAULT_LEARNINGS;
+  } catch { return DEFAULT_LEARNINGS; }
+}
+
+function saveLearnings(items) {
+  localStorage.setItem(LEARN_KEY, JSON.stringify(items));
+}
+
+// Category pill selection
+document.querySelectorAll('.cat-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById('learnCat').value = pill.dataset.cat;
+  });
+});
+
+// Pre-select today's date
+document.getElementById('learnDate').value = new Date().toISOString().slice(0,10);
+
+function addLearning() {
+  const date = document.getElementById('learnDate').value;
+  const cat  = document.getElementById('learnCat').value;
+  const text = document.getElementById('learnText').value.trim();
+  if (!cat) { alert('Please select a category.'); return; }
+  if (!text) { document.getElementById('learnText').focus(); return; }
+
+  const item = { id: 'learn_' + Date.now(), date, cat, text };
+  const items = loadLearnings();
+  items.unshift(item);
+  saveLearnings(items);
+  document.getElementById('learnText').value = '';
+  renderTimeline();
+}
+
+function deleteLearning(id) {
+  saveLearnings(loadLearnings().filter(i => i.id !== id));
+  renderTimeline();
+}
+
+function renderTimeline() {
+  const list = document.getElementById('timelineList');
+  const items = loadLearnings().slice(0, 7);
+  if (!items.length) {
+    list.innerHTML = '<div class="timeline-empty">No entries yet. Log your first learning above!</div>';
+    return;
+  }
+  list.innerHTML = '';
+  items.forEach((item, idx) => {
+    const meta = CAT_META[item.cat] || { icon: '📖', label: item.cat };
+    const dateStr = item.date ? new Date(item.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+    const div = document.createElement('div');
+    div.className = 'tl-item';
+    div.innerHTML = `
+      <div class="tl-dot-col">
+        <div class="tl-dot ${item.cat}">${meta.icon}</div>
+        ${idx < items.length - 1 ? '<div class="tl-line"></div>' : ''}
+      </div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-date">${dateStr}</span>
+          <span class="tl-cat-badge ${item.cat}">${meta.label}</span>
+        </div>
+        <div class="tl-text">${escHtml(item.text)}</div>
+      </div>
+      <button class="tl-del" title="Delete" onclick="deleteLearning('${item.id}')">✕</button>
+    `;
+    list.appendChild(div);
+  });
+}
+
+/* ─────────────────────────────────────────────
+   UTILS
+───────────────────────────────────────────── */
+function escHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ─────────────────────────────────────────────
+   INIT
+───────────────────────────────────────────── */
+renderPipeline();
+renderTimeline();
+</script>
+</body>
+</html>

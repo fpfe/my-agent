@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search Agent | Seungjun Ahn</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #1a2332; --navy-light: #243447;
+      --blue: #4f7ef8; --blue-light: #6b94ff;
+      --green: #22c55e; --yellow: #eab308;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1; --gray-500: #64748b; --gray-700: #334155; --gray-900: #0f172a;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08); --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--gray-100); color: var(--gray-900); font-size: 14px; overflow: hidden; height: 100vh; }
+
+    /* ── HEADER ── */
+    .header { background: var(--navy); color: white; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .logo { font-size: 17px; font-weight: 700; color: #79a4ff; }
+    .logo-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+    .hdr-right { display: flex; gap: 8px; align-items: center; }
+    .hdr-btn { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.85); padding: 6px 12px; border-radius: 7px; cursor: pointer; font-size: 12px; font-weight: 500; transition: background .15s; }
+    .hdr-btn:hover { background: rgba(255,255,255,0.14); }
+
+    /* ── TAB BAR ── */
+    .tab-bar { background: white; border-bottom: 1px solid var(--gray-200); display: flex; padding: 0 16px; gap: 0; overflow-x: auto; height: 46px; align-items: flex-end; }
+    .tab-btn { padding: 10px 16px; border: none; background: none; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--gray-500); border-bottom: 2px solid transparent; transition: all .15s; white-space: nowrap; display: flex; align-items: center; gap: 5px; }
+    .tab-btn:hover { color: var(--gray-900); }
+    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
+    .tab-badge { background: var(--blue); color: white; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: 700; min-width: 16px; text-align: center; }
+
+    /* ── CONTENT ── */
+    .content { height: calc(100vh - 102px); overflow-y: auto; }
+    .tab-pane { display: none; padding: 20px; max-width: 1100px; margin: 0 auto; }
+    .tab-pane.active { display: block; }
+
+    /* ── SECTION HEADERS ── */
+    .sec-title { font-size: 18px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+    .sec-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; }
+
+    /* ── SEARCH TAB ── */
+    .board-section { margin-bottom: 28px; }
+    .board-name { font-size: 13px; font-weight: 700; color: var(--gray-700); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .board-name-logo { width: 20px; height: 20px; border-radius: 4px; object-fit: contain; }
+    .search-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+    .search-card {
+      background: white; border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); cursor: pointer; transition: all .18s; text-decoration: none; color: inherit;
+    }
+    .search-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--blue); }
+    .search-card-label { font-size: 13px; font-weight: 500; color: var(--gray-800); line-height: 1.4; }
+    .search-card-action { font-size: 11px; color: var(--blue); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+    .open-all-btn { background: var(--navy); color: white; border: none; padding: 7px 14px; border-radius: 7px; cursor: pointer; font-size: 12px; font-weight: 600; transition: background .15s; margin-bottom: 10px; }
+    .open-all-btn:hover { background: var(--navy-light); }
+
+    /* ── COMPANY CARDS ── */
+    .filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .filter-chip { padding: 5px 12px; border-radius: 20px; border: 1px solid var(--gray-200); cursor: pointer; font-size: 12px; font-weight: 500; background: white; color: var(--gray-700); transition: all .15s; }
+    .filter-chip:hover { border-color: var(--blue); color: var(--blue); }
+    .filter-chip.active { background: var(--blue); color: white; border-color: var(--blue); }
+    .companies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .company-card { background: white; border-radius: 12px; padding: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: all .18s; }
+    .company-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+    .cc-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .cc-logo { width: 28px; height: 28px; border-radius: 6px; object-fit: contain; background: var(--gray-100); flex-shrink: 0; }
+    .cc-logo-fallback { width: 28px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, var(--blue), var(--navy)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 11px; flex-shrink: 0; }
+    .cc-name { font-size: 14px; font-weight: 700; color: var(--gray-900); }
+    .cc-actions { margin-left: auto; display: flex; gap: 6px; }
+    .watch-btn { padding: 4px 10px; border-radius: 6px; border: 1px solid var(--gray-200); cursor: pointer; font-size: 11px; font-weight: 600; background: white; color: var(--gray-600); transition: all .15s; white-space: nowrap; }
+    .watch-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .watch-btn.watched { background: #eff4ff; color: var(--blue); border-color: var(--blue); }
+    .cc-why { font-size: 12.5px; color: var(--gray-600); line-height: 1.55; margin-bottom: 12px; }
+    .cc-link { display: inline-flex; align-items: center; gap: 4px; color: var(--blue); font-size: 12px; font-weight: 600; text-decoration: none; }
+    .cc-link:hover { text-decoration: underline; }
+
+    /* Category tags */
+    .cat-tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10.5px; font-weight: 600; margin-left: 4px; }
+    .cat-ai { background: #f3e8ff; color: #7e22ce; }
+    .cat-autonomous { background: #dbeafe; color: #1d4ed8; }
+    .cat-tech { background: #ccfbf1; color: #0f766e; }
+    .cat-mobility { background: #ffedd5; color: #c2410c; }
+    .cat-expansion { background: #ecfdf5; color: #065f46; }
+    .first-hire-banner { background: linear-gradient(135deg,#ecfdf5,#d1fae5); border: 1px solid #6ee7b7; border-radius: 7px; padding: 8px 11px; font-size: 11.5px; color: #065f46; line-height: 1.5; margin-bottom: 10px; font-weight: 500; }
+    .company-card.expansion-card { border-top: 3px solid #10b981; }
+
+    /* ── APPLICATIONS TAB ── */
+    .apps-layout { display: grid; grid-template-columns: 320px 1fr; gap: 20px; }
+    @media (max-width: 780px) { .apps-layout { grid-template-columns: 1fr; } }
+    .add-form { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+    .form-title { font-size: 14px; font-weight: 700; margin-bottom: 14px; color: var(--gray-900); }
+    .form-group { margin-bottom: 12px; }
+    .form-label { font-size: 11.5px; font-weight: 600; color: var(--gray-600); margin-bottom: 4px; display: block; }
+    .form-input { width: 100%; padding: 8px 10px; border: 1px solid var(--gray-200); border-radius: 7px; font-size: 13px; font-family: inherit; color: var(--gray-900); background: white; transition: border-color .15s; }
+    .form-input:focus { outline: none; border-color: var(--blue); }
+    textarea.form-input { resize: vertical; }
+    select.form-input { cursor: pointer; }
+    .submit-btn { width: 100%; padding: 10px; background: var(--blue); color: white; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s; margin-top: 4px; }
+    .submit-btn:hover { background: var(--blue-light); }
+
+    /* App list */
+    .apps-list { display: flex; flex-direction: column; gap: 10px; }
+    .app-item { background: white; border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); border-left: 4px solid var(--gray-200); }
+    .app-item.status-saved     { border-left-color: var(--blue); }
+    .app-item.status-applied   { border-left-color: #8b5cf6; }
+    .app-item.status-interview { border-left-color: var(--yellow); }
+    .app-item.status-offer     { border-left-color: var(--green); }
+    .app-item.status-rejected  { border-left-color: var(--gray-300); opacity: .7; }
+    .app-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .app-company { font-weight: 700; font-size: 14px; color: var(--gray-900); }
+    .app-role { font-size: 12.5px; color: var(--gray-500); margin-top: 2px; }
+    .app-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+    .status-badge { padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700; }
+    .sb-saved     { background: #eff4ff; color: var(--blue); }
+    .sb-applied   { background: #f3e8ff; color: #7e22ce; }
+    .sb-interview { background: #fef9c3; color: #a16207; }
+    .sb-offer     { background: #dcfce7; color: #15803d; }
+    .sb-rejected  { background: var(--gray-100); color: var(--gray-500); }
+    .app-date { font-size: 11px; color: var(--gray-400); }
+    .app-notes { font-size: 12px; color: var(--gray-600); line-height: 1.5; }
+    .app-actions { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+    .app-btn { padding: 4px 10px; border-radius: 5px; border: 1px solid var(--gray-200); cursor: pointer; font-size: 11px; font-weight: 600; background: white; color: var(--gray-600); transition: all .15s; }
+    .app-btn:hover { background: var(--gray-100); }
+    .app-btn.danger:hover { border-color: #fca5a5; color: #dc2626; }
+    .status-select { padding: 3px 8px; border-radius: 5px; border: 1px solid var(--gray-200); font-size: 11px; cursor: pointer; background: white; }
+    .app-url-link { font-size: 11px; color: var(--blue); text-decoration: none; }
+    .app-url-link:hover { text-decoration: underline; }
+    .apps-empty { text-align: center; padding: 40px; color: var(--gray-400); }
+
+    /* ── COVER LETTER TAB ── */
+    .cl-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 780px) { .cl-layout { grid-template-columns: 1fr; } }
+    .cl-input-panel { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+    .cl-output-panel { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+    .cl-panel-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 14px; }
+    .cl-generate-btn { width: 100%; padding: 11px; background: var(--blue); color: white; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s; margin-top: 8px; }
+    .cl-generate-btn:hover { background: var(--blue-light); }
+    .cl-generate-btn:disabled { opacity: .55; cursor: not-allowed; }
+    .lang-toggle { display: flex; gap: 4px; margin-bottom: 10px; }
+    .lang-btn { padding: 4px 12px; border-radius: 5px; border: 1px solid var(--gray-200); cursor: pointer; font-size: 11.5px; font-weight: 600; background: white; color: var(--gray-600); transition: all .15s; }
+    .lang-btn.active { background: var(--blue); color: white; border-color: var(--blue); }
+    .cl-text { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; padding: 14px; font-size: 13px; line-height: 1.75; color: var(--gray-700); white-space: pre-wrap; min-height: 200px; }
+    .cl-placeholder { color: var(--gray-300); font-style: italic; text-align: center; padding: 40px 20px; }
+    .copy-btn-sm { float: right; padding: 3px 9px; border-radius: 4px; border: 1px solid var(--gray-200); cursor: pointer; font-size: 10.5px; background: white; color: var(--gray-500); transition: background .15s; margin-bottom: 6px; }
+    .copy-btn-sm:hover { background: var(--gray-100); }
+    .profile-summary { background: #eff4ff; border: 1px solid #c7d9ff; border-radius: 8px; padding: 12px 14px; font-size: 12px; color: #1d4ed8; line-height: 1.7; margin-bottom: 14px; }
+    .profile-summary strong { display: block; margin-bottom: 4px; font-size: 12.5px; }
+
+    /* ── LIVE LISTINGS ── */
+    .live-filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .live-jobs-grid { display: flex; flex-direction: column; gap: 10px; }
+    .job-listing-card {
+      background: white; border-radius: 12px; padding: 16px 18px; border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm); transition: all .18s; display: flex; align-items: center; gap: 14px;
+    }
+    .job-listing-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--blue); }
+    .jlc-logo { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; background: var(--gray-100); flex-shrink: 0; }
+    .jlc-body { flex: 1; min-width: 0; }
+    .jlc-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 2px; }
+    .jlc-meta { font-size: 12px; color: var(--gray-500); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .jlc-company { font-weight: 600; color: var(--gray-700); }
+    .jlc-tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10.5px; font-weight: 600; }
+    .jlc-apply { flex-shrink: 0; padding: 8px 16px; background: var(--blue); color: white; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: background .15s; white-space: nowrap; }
+    .jlc-apply:hover { background: var(--blue-light); }
+    .live-notice { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #92400e; margin-bottom: 16px; }
+
+    /* ── DASHBOARD ── */
+    .dash-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .dash-stat { background: white; border-radius: 10px; padding: 16px; box-shadow: var(--shadow-sm); text-align: center; border: 1px solid var(--gray-200); }
+    .dash-stat-num { font-size: 28px; font-weight: 700; color: var(--blue); }
+    .dash-stat-label { font-size: 11px; color: var(--gray-500); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 700px) { .dash-grid { grid-template-columns: 1fr; } }
+    .dash-panel { background: white; border-radius: 12px; padding: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
+    .dash-panel-title { font-size: 13px; font-weight: 700; color: var(--gray-700); margin-bottom: 12px; }
+    .dash-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--gray-100); font-size: 13px; }
+    .dash-row:last-child { border-bottom: none; }
+    .dash-bar-wrap { margin-top: 6px; }
+    .dash-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 12px; }
+    .dash-bar-label { width: 70px; color: var(--gray-600); flex-shrink: 0; }
+    .dash-bar-bg { flex: 1; background: var(--gray-100); border-radius: 4px; height: 8px; overflow: hidden; }
+    .dash-bar-fill { height: 100%; border-radius: 4px; transition: width .5s; }
+    .dash-bar-count { width: 24px; text-align: right; font-weight: 600; color: var(--gray-700); }
+    .dash-empty { color: var(--gray-400); font-size: 13px; text-align: center; padding: 16px 0; }
+
+    /* ── MODAL ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.55); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.show { display: flex; }
+    .modal { background: white; border-radius: 16px; padding: 26px; width: 100%; max-width: 460px; box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+    .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .modal-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 16px; line-height: 1.5; }
+    .modal-input { width: 100%; padding: 10px 13px; border: 1px solid var(--gray-200); border-radius: 8px; font-size: 14px; margin-bottom: 10px; font-family: monospace; }
+    .modal-input:focus { outline: none; border-color: var(--blue); }
+    .modal-note { font-size: 11px; color: var(--gray-400); margin-bottom: 16px; line-height: 1.5; }
+    .modal-footer { display: flex; justify-content: flex-end; gap: 10px; }
+    .modal-btn { padding: 8px 18px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; font-weight: 600; transition: all .15s; }
+    .modal-btn.primary { background: var(--blue); color: white; }
+    .modal-btn.primary:hover { background: var(--blue-light); }
+    .modal-btn.secondary { background: var(--gray-100); color: var(--gray-700); }
+    .modal-btn.secondary:hover { background: var(--gray-200); }
+
+    /* ── MISC ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 3px; }
+    .divider { height: 1px; background: var(--gray-100); margin: 16px 0; }
+    .spinner { width: 36px; height: 36px; border: 3px solid var(--gray-200); border-top-color: var(--blue); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-box { text-align: center; padding: 30px; color: var(--gray-500); font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div>
+    <div class="logo">🎯 Job Agent</div>
+    <div class="logo-sub">Seungjun Ahn · Senior GTM Executive · Tokyo</div>
+  </div>
+  <div class="hdr-right">
+    <button class="hdr-btn" onclick="showApiModal()">🔑 API Key</button>
+  </div>
+</header>
+
+<!-- TAB BAR -->
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="live"      onclick="switchTab('live')">🎯 Live Listings <span class="tab-badge" id="liveBadge">0</span></button>
+  <button class="tab-btn"        data-tab="search"    onclick="switchTab('search')">🔍 Search Boards</button>
+  <button class="tab-btn"        data-tab="companies" onclick="switchTab('companies')">🏢 Target Companies</button>
+  <button class="tab-btn"        data-tab="apps"      onclick="switchTab('apps')">📋 My Applications <span class="tab-badge" id="appsBadge">0</span></button>
+  <button class="tab-btn"        data-tab="cl"        onclick="switchTab('cl')">✍️ Cover Letter Builder</button>
+  <button class="tab-btn"        data-tab="dash"      onclick="switchTab('dash')">📊 Dashboard</button>
+</nav>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- TAB 0: LIVE LISTINGS -->
+  <div id="tab-live" class="tab-pane active">
+    <div class="sec-title">🎯 Live Job Listings</div>
+    <div class="sec-sub">Real open roles at target companies — verified and linked directly to the application page.</div>
+    <div class="live-notice">⚠️ Job listings change frequently. Links verified as of March 2026 — click to confirm the role is still open before applying.</div>
+    <div class="live-filter-row" id="liveFilters">
+      <div class="filter-chip active" onclick="filterLive('all',this)">All</div>
+      <div class="filter-chip" onclick="filterLive('AI',this)">🤖 AI</div>
+      <div class="filter-chip" onclick="filterLive('Fintech',this)">💳 Fintech</div>
+      <div class="filter-chip" onclick="filterLive('Data',this)">📊 Data</div>
+    </div>
+    <div class="live-jobs-grid" id="liveJobsGrid"></div>
+  </div>
+
+  <!-- TAB 1: SEARCH REAL JOBS -->
+  <div id="tab-search" class="tab-pane">
+    <div class="sec-title">🔍 Search Real Jobs</div>
+    <div class="sec-sub">Pre-built searches tailored to your profile — click to open in a new tab.</div>
+    <div id="searchBoards"></div>
+  </div>
+
+  <!-- TAB 2: TARGET COMPANIES -->
+  <div id="tab-companies" class="tab-pane">
+    <div class="sec-title">🏢 Target Companies</div>
+    <div class="sec-sub">Companies most likely to be hiring a senior GTM leader for Japan. Toggle 📌 to track ones you're monitoring.</div>
+    <div class="filter-row" id="companyFilters">
+      <div class="filter-chip active" onclick="filterCompanies('all',this)">All</div>
+      <div class="filter-chip" onclick="filterCompanies('Expansion',this)" style="border-color:#10b981;color:#065f46;">🌏 Japan Expansion</div>
+      <div class="filter-chip" onclick="filterCompanies('AI',this)">🤖 AI</div>
+      <div class="filter-chip" onclick="filterCompanies('Autonomous',this)">🚗 Autonomous</div>
+      <div class="filter-chip" onclick="filterCompanies('Tech',this)">💻 Tech</div>
+      <div class="filter-chip" onclick="filterCompanies('Mobility',this)">📱 Mobility</div>
+    </div>
+    <div class="companies-grid" id="companiesGrid"></div>
+  </div>
+
+  <!-- TAB 3: MY APPLICATIONS -->
+  <div id="tab-apps" class="tab-pane">
+    <div class="sec-title">📋 My Applications</div>
+    <div class="sec-sub">Log and track every real job you apply to.</div>
+    <div class="apps-layout">
+      <!-- Add form -->
+      <div>
+        <div class="add-form">
+          <div class="form-title">➕ Log New Application</div>
+          <div class="form-group">
+            <label class="form-label">Company *</label>
+            <input class="form-input" id="aCompany" placeholder="e.g. OpenAI">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Role *</label>
+            <input class="form-input" id="aRole" placeholder="e.g. Country Manager, Japan">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Job URL</label>
+            <input class="form-input" id="aUrl" placeholder="https://...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input class="form-input" type="date" id="aDate">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Status</label>
+            <select class="form-input" id="aStatus">
+              <option value="Saved">💾 Saved — Interested</option>
+              <option value="Applied">✅ Applied</option>
+              <option value="Interview">🗣️ Interview Scheduled</option>
+              <option value="Offer">🎉 Offer Received</option>
+              <option value="Rejected">❌ Rejected</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Notes</label>
+            <textarea class="form-input" id="aNotes" rows="3" placeholder="Contact name, next steps, salary discussed…"></textarea>
+          </div>
+          <button class="submit-btn" onclick="addApplication()">Log Application</button>
+        </div>
+      </div>
+      <!-- Apps list -->
+      <div>
+        <div class="filter-row" id="appsFilter">
+          <div class="filter-chip active" onclick="filterApps('all',this)">All</div>
+          <div class="filter-chip" onclick="filterApps('Saved',this)">💾 Saved</div>
+          <div class="filter-chip" onclick="filterApps('Applied',this)">✅ Applied</div>
+          <div class="filter-chip" onclick="filterApps('Interview',this)">🗣️ Interview</div>
+          <div class="filter-chip" onclick="filterApps('Offer',this)">🎉 Offer</div>
+          <div class="filter-chip" onclick="filterApps('Rejected',this)">❌ Rejected</div>
+        </div>
+        <div class="apps-list" id="appsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: COVER LETTER BUILDER -->
+  <div id="tab-cl" class="tab-pane">
+    <div class="sec-title">✍️ Cover Letter Builder</div>
+    <div class="sec-sub">Paste any real job description — Claude generates a personalized cover letter using your actual track record.</div>
+    <div class="cl-layout">
+      <!-- Input -->
+      <div class="cl-input-panel">
+        <div class="cl-panel-title">Job Details</div>
+        <div class="profile-summary">
+          <strong>✓ Profile locked in for all letters:</strong>
+          Wolt Drive 0→10% revenue · Uber Japan (Rakuten, PayPay, Amazon deals) · Honda, Deloitte · Chicago Booth MBA · Fluent JA/EN/KO
+        </div>
+        <div class="form-group">
+          <label class="form-label">Company Name</label>
+          <input class="form-input" id="clCompany" placeholder="e.g. OpenAI">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Role Title</label>
+          <input class="form-input" id="clRole" placeholder="e.g. Country Manager, Japan">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Paste Full Job Description *</label>
+          <textarea class="form-input" id="clJd" rows="10" placeholder="Paste the complete job description here…"></textarea>
+        </div>
+        <button class="cl-generate-btn" id="clBtn" onclick="generateCoverLetter()">✨ Generate Cover Letter</button>
+      </div>
+      <!-- Output -->
+      <div class="cl-output-panel">
+        <div class="cl-panel-title">Generated Cover Letter</div>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="clEN-btn" onclick="switchClLang('en')">🇺🇸 English</button>
+          <button class="lang-btn" id="clJA-btn" onclick="switchClLang('ja')">🇯🇵 日本語</button>
+        </div>
+        <div id="clEN-wrap">
+          <button class="copy-btn-sm" onclick="copyEl('clEN-text')">📋 Copy</button>
+          <div class="cl-text" id="clEN-text"><div class="cl-placeholder">Your cover letter will appear here after generation.</div></div>
+        </div>
+        <div id="clJA-wrap" style="display:none;">
+          <button class="copy-btn-sm" onclick="copyEl('clJA-text')">📋 Copy</button>
+          <div class="cl-text" id="clJA-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 5: DASHBOARD -->
+  <div id="tab-dash" class="tab-pane">
+    <div class="sec-title">📊 Dashboard</div>
+    <div class="sec-sub">Your job search at a glance.</div>
+    <div class="dash-stats" id="dashStats"></div>
+    <div class="dash-grid" id="dashGrid"></div>
+  </div>
+
+</div>
+
+<!-- API KEY MODAL -->
+<div class="modal-overlay" id="apiModal">
+  <div class="modal">
+    <div class="modal-title">🔑 Anthropic API Key</div>
+    <div class="modal-sub">Required for the Cover Letter Builder. Stored locally — never sent anywhere except api.anthropic.com.</div>
+    <input type="password" class="modal-input" id="apiKeyInput" placeholder="sk-ant-api03-..."
+           onkeydown="if(event.key==='Enter')saveApiKey()">
+    <div class="modal-note">🔒 Your key is only used to call the Anthropic API for cover letter generation.</div>
+    <div class="modal-footer">
+      <button class="modal-btn secondary" onclick="closeModal('apiModal')">Cancel</button>
+      <button class="modal-btn primary" onclick="saveApiKey()">Save Key</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ════════════════════════════════════════
+// DATA
+// ════════════════════════════════════════
+
+const BOARDS = [
+  {
+    name: 'LinkedIn Jobs', domain: 'linkedin.com', color: '#0077b5',
+    searches: [
+      { label: 'Country Manager · AI · Tokyo (Senior level)',          url: 'https://www.linkedin.com/jobs/search/?keywords=Country+Manager+AI&location=Tokyo%2C+Japan&f_E=5%2C6' },
+      { label: 'Head of Sales · Tech Japan (Director+)',               url: 'https://www.linkedin.com/jobs/search/?keywords=Head+of+Sales+Tech&location=Japan&f_E=5%2C6' },
+      { label: 'Head of Business Development · Japan',                 url: 'https://www.linkedin.com/jobs/search/?keywords=Head+of+Business+Development+Japan&location=Tokyo%2C+Japan' },
+      { label: 'Country Manager · Autonomous Driving · Japan',         url: 'https://www.linkedin.com/jobs/search/?keywords=Country+Manager+Autonomous+Driving&location=Japan' },
+      { label: 'General Manager · Japan Expansion · Startup',          url: 'https://www.linkedin.com/jobs/search/?keywords=General+Manager+Japan+expansion&location=Japan' },
+      { label: 'VP Sales · Japan Market Entry',                        url: 'https://www.linkedin.com/jobs/search/?keywords=VP+Sales+Japan+market+entry&location=Tokyo%2C+Japan&f_E=5%2C6' },
+    ],
+  },
+  {
+    name: 'Indeed Japan', domain: 'jp.indeed.com', color: '#003A9B',
+    searches: [
+      { label: 'Country Manager · Tokyo',                              url: 'https://jp.indeed.com/jobs?q=Country+Manager&l=Tokyo' },
+      { label: 'Head of Sales · AI · Tokyo',                           url: 'https://jp.indeed.com/jobs?q=Head+of+Sales+AI&l=Tokyo' },
+      { label: 'Business Development Director · Japan',                url: 'https://jp.indeed.com/jobs?q=Business+Development+Director&l=Japan' },
+      { label: 'General Manager · Tech Startup · Tokyo',              url: 'https://jp.indeed.com/jobs?q=General+Manager+Tech&l=Tokyo' },
+    ],
+  },
+  {
+    name: 'Glassdoor', domain: 'glassdoor.com', color: '#0CAA41',
+    searches: [
+      { label: 'Country Manager · Japan (with salary info)',           url: 'https://www.glassdoor.com/Job/japan-country-manager-jobs-SRCH_IL.0,5_IN123_KO6,21.htm' },
+    ],
+  },
+  {
+    name: 'TokyoDev', domain: 'tokyodev.com', color: '#E34A21',
+    searches: [
+      { label: 'Tech leadership roles in Japan (English OK)',           url: 'https://www.tokyodev.com/jobs' },
+    ],
+  },
+  {
+    name: 'Japan Dev', domain: 'japan-dev.com', color: '#4A90D9',
+    searches: [
+      { label: 'Tech & startup jobs in Japan',                         url: 'https://japan-dev.com/jobs' },
+    ],
+  },
+  {
+    name: 'Daijob (English)', domain: 'daijob.com', color: '#CC2222',
+    searches: [
+      { label: 'Country Manager · Executive · Tokyo',                  url: 'https://www.daijob.com/en/jobs/search?keyword=country+manager&location=tokyo' },
+      { label: 'Business Development · Director · Japan',              url: 'https://www.daijob.com/en/jobs/search?keyword=business+development+director&location=japan' },
+    ],
+  },
+  {
+    name: 'Bizreach (JP)', domain: 'bizreach.jp', color: '#E8232D',
+    searches: [
+      { label: '管理職・事業責任者 — カントリーマネージャー',              url: 'https://www.bizreach.jp/job-manage/search?freeword=%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC' },
+      { label: 'ビジネス開発・事業開発 責任者',                           url: 'https://www.bizreach.jp/job-manage/search?freeword=%E4%BA%8B%E6%A5%AD%E9%96%8B%E7%99%BA' },
+    ],
+  },
+];
+
+const COMPANIES = [
+  // AI
+  { id:'openai',     name:'OpenAI',      cat:'AI',         domain:'openai.com',      url:'https://openai.com/careers',                    why:'Announced Japan office; needs a trusted enterprise GTM leader who can navigate government and media relationships.' },
+  { id:'anthropic',  name:'Anthropic',   cat:'AI',         domain:'anthropic.com',   url:'https://www.anthropic.com/careers',             why:'Safety-focused AI expanding enterprise APAC; Honda/Deloitte background aligns with their institutional partnerships approach.' },
+  { id:'perplexity', name:'Perplexity',  cat:'Expansion',  domain:'perplexity.ai',   url:'https://www.perplexity.ai/hub/careers',         why:'No Japan office yet. Fast-growing AI search with SoftBank partnership — Amazon/consumer background perfect for Japan GTM. First to build Japan could own the enterprise search market.' },
+  { id:'cohere',     name:'Cohere',      cat:'Expansion',  domain:'cohere.com',      url:'https://cohere.com/about/careers',              why:'Enterprise AI expanding in APAC — no dedicated Japan first hire yet. B2B sales background from Wolt and Uber is a perfect fit for targeting Japan\'s manufacturing and finance sectors.' },
+  { id:'mistral',    name:'Mistral AI',  cat:'Expansion',  domain:'mistral.ai',      url:'https://mistral.ai/company/careers',            why:'European AI company expanding to Asia — no Japan office yet. Ideal first-hire opportunity to lead Japan from zero for a company with major enterprise traction in Europe.' },
+  { id:'xai',        name:'xAI',         cat:'Expansion',  domain:'x.ai',            url:'https://x.ai/careers',                          why:'Grok expanding globally — Japan is a key target market. Seungjun\'s enterprise BD experience is exactly what is needed to land the first anchor accounts and build the Japan operation.' },
+  { id:'groq',       name:'Groq',        cat:'AI',         domain:'groq.com',        url:'https://groq.com/careers/',                     why:'Fastest inference chips; semiconductor and automotive partnerships in Japan (Honda, Toyota) are natural targets.' },
+  // Autonomous
+  { id:'waymo',      name:'Waymo',       cat:'Expansion',  domain:'waymo.com',       url:'https://waymo.com/careers/',                    why:'Alphabet\'s robotaxi expanding globally — Japan regulatory navigation is exactly what Seungjun did at Honda and JUMP/Uber. C-suite OEM relationships make this a uniquely strong fit.' },
+  { id:'mobileye',   name:'Mobileye',   cat:'Autonomous', domain:'mobileye.com',    url:'https://www.mobileye.com/careers/',             why:'Intel-backed ADAS leader deepening OEM partnerships with Toyota, Honda, Nissan — former Honda connection is a direct advantage.' },
+  { id:'momenta',    name:'Momenta',     cat:'Autonomous', domain:'momenta.ai',      url:'https://www.momenta.ai/en/careers',             why:'Chinese AV leader targeting Japan OEM software deals; needs Japan country head with automotive BD background.' },
+  { id:'weride',     name:'WeRide',      cat:'Autonomous', domain:'weride.ai',       url:'https://www.weride.ai/careers',                 why:'Public road testing underway in Japan; regulatory navigation and local GM role opening up.' },
+  { id:'ponyai',     name:'Pony.ai',     cat:'Autonomous', domain:'pony.ai',         url:'https://pony.ai/careers',                       why:'NYSE-listed; Japan robotaxi JV in progress — partnership BD with taxi operators and municipalities.' },
+  // Tech
+  { id:'stripe',     name:'Stripe',      cat:'Tech',       domain:'stripe.com',      url:'https://stripe.com/jobs',                       why:'Deepening Japan enterprise fintech; large merchant partnership BD similar to Uber eats merchant growth work.' },
+  { id:'notion',     name:'Notion',      cat:'Tech',       domain:'notion.so',       url:'https://www.notion.so/careers',                 why:'SMB→Enterprise expansion in Japan; needs a Head of Sales who can run top-down and bottom-up GTM simultaneously.' },
+  { id:'figma',      name:'Figma',       cat:'Tech',       domain:'figma.com',       url:'https://www.figma.com/careers/',                why:'Post-Adobe-block growth mode; Japan enterprise design platform sales with a bilingual leader.' },
+  { id:'canva',      name:'Canva',       cat:'Tech',       domain:'canva.com',       url:'https://www.canva.com/careers/',                why:'$26B valuation; Japan enterprise push starting — Wolt-style "build from nothing" BD approach needed.' },
+  { id:'databricks', name:'Databricks',  cat:'Tech',       domain:'databricks.com',  url:'https://www.databricks.com/company/careers',   why:'Data+AI platform; Japan enterprise sales leader needed as they ramp past $1.5B ARR.' },
+  { id:'servicenow', name:'ServiceNow',  cat:'Tech',       domain:'servicenow.com',  url:'https://careers.servicenow.com/',               why:'Enterprise SaaS deeply embedded in Japan manufacturing; head of sales/BD role possible.' },
+  // Mobility
+  { id:'grab',       name:'Grab',        cat:'Mobility',   domain:'grab.com',        url:'https://grab.careers/',                         why:'SE Asia super-app expanding fintech — Uber rival background and Japan market expertise is directly relevant.' },
+  { id:'goto',       name:'GoTo Group',  cat:'Mobility',   domain:'gotogroup.com',   url:'https://www.gotogroup.com/careers',             why:'Gojek + Tokopedia; financial services expansion into Japan could leverage marketplace expertise.' },
+  { id:'nuro',       name:'Nuro',        cat:'Expansion',  domain:'nuro.ai',         url:'https://nuro.ai/careers',                       why:'Autonomous delivery — no Japan presence. Combines Wolt last-mile delivery experience and autonomous vehicle background perfectly. Could be the founding Japan hire.' },
+
+  // Japan Expansion — AI & LLM
+  { id:'stabilityai', name:'Stability AI',  cat:'Expansion', domain:'stability.ai',    url:'https://stability.ai/careers',                 why:'Creative AI with no Japan office. Japan is one of the world\'s largest creative markets — manga, animation, game — making it a massive untapped opportunity for the founding Japan hire.' },
+  { id:'elevenlabs',  name:'ElevenLabs',    cat:'Expansion', domain:'elevenlabs.io',   url:'https://elevenlabs.io/careers',                why:'Voice AI expanding globally with massive Japan localization needs. Japanese language voice is a core market — Seungjun\'s bilingual enterprise BD background is a direct fit.' },
+  { id:'runwayml',    name:'Runway ML',     cat:'Expansion', domain:'runwayml.com',    url:'https://runwayml.com/careers',                 why:'Video AI with no Japan presence. Japan\'s enormous creative and media industry makes this a standout opportunity for a founding GM who understands both tech and content.' },
+
+  // Japan Expansion — Autonomous & Mobility
+  { id:'zoox',        name:'Zoox (Amazon)', cat:'Expansion', domain:'zoox.com',        url:'https://zoox.com/careers',                     why:'Amazon-backed robotaxi — Seungjun\'s Amazon Japan experience combined with JUMP/Uber autonomous knowledge is a massive advantage for Japan market entry.' },
+  { id:'maymobility', name:'May Mobility',  cat:'Expansion', domain:'maymobility.com', url:'https://maymobility.com/careers',              why:'Autonomous shuttle service exploring Japan — transit partnerships similar to JUMP/Uber at local government level is exactly where Seungjun\'s regulatory BD experience applies.' },
+  { id:'gatik',       name:'Gatik',         cat:'Expansion', domain:'gatik.ai',        url:'https://gatik.ai/careers',                     why:'B2B autonomous logistics with no Japan presence. Japan\'s manufacturing and logistics sector is the ideal market and Honda connections open the door immediately.' },
+  { id:'joby',        name:'Joby Aviation', cat:'Expansion', domain:'jobyaviation.com',url:'https://www.jobyaviation.com/careers',         why:'Air taxi company with Japan as a key target market. Regulatory navigation experience from Honda and JUMP Bikes is precisely what Japan entry requires.' },
+  { id:'archer',      name:'Archer Aviation',cat:'Expansion',domain:'archer.com',      url:'https://archer.com/careers',                   why:'eVTOL company targeting Japan — Honda\'s aviation legacy makes Seungjun\'s connection uniquely valuable for landing OEM partnerships and regulatory approvals.' },
+
+  // Japan Expansion — Delivery & Quick Commerce
+  { id:'getir',       name:'Getir',         cat:'Expansion', domain:'getir.com',       url:'https://getir.com/careers',                    why:'Turkish quick commerce giant expanding to Asia. Wolt Drive 0→10% P&L experience is directly transferable to launching instant delivery from zero in Japan.' },
+  { id:'gopuff',      name:'Gopuff',        cat:'Expansion', domain:'gopuff.com',      url:'https://www.gopuff.com/go/careers',            why:'US instant delivery with no Japan presence. Seungjun could build Japan from scratch — same playbook as Wolt Drive expansion, identical growth-stage mandate.' },
+  { id:'glovo',       name:'Glovo',         cat:'Expansion', domain:'glovoapp.com',    url:'https://careers.glovoapp.com',                 why:'European delivery platform expanding in Asia. Direct Wolt competitor — intimate knowledge of the playbook makes Seungjun the ideal Japan country lead.' },
+  { id:'instacart',   name:'Instacart',     cat:'Expansion', domain:'instacart.com',   url:'https://instacart.careers',                    why:'Grocery delivery giant with no Japan presence. Japan\'s grocery market is one of the world\'s largest — B2B partnerships with retailers and enterprise accounts is a direct match.' },
+
+  // Japan Expansion — Fintech
+  { id:'revolut',     name:'Revolut',       cat:'Expansion', domain:'revolut.com',     url:'https://www.revolut.com/careers',              why:'UK neobank that just entered Japan and needs an experienced GTM leader to scale. Consumer fintech + B2B enterprise BD experience from Uber and Wolt is the exact profile needed.' },
+  { id:'wise',        name:'Wise',          cat:'Expansion', domain:'wise.com',        url:'https://wise.com/gb/careers',                  why:'International money transfer growing fast in Japan. The B2B partnership model Seungjun built at Uber — Rakuten, PayPay, Amazon deals — maps directly to Wise\'s distribution strategy.' },
+  { id:'airwallex',   name:'Airwallex',     cat:'Expansion', domain:'airwallex.com',   url:'https://www.airwallex.com/careers',            why:'Australian fintech expanding in Japan with a cross-border payments B2B enterprise focus. Scaling from early stage with enterprise anchor accounts is Seungjun\'s core strength.' },
+  { id:'rapyd',       name:'Rapyd',         cat:'Expansion', domain:'rapyd.net',       url:'https://www.rapyd.net/company/careers',        why:'Global fintech infrastructure in Japan entry phase — a first hire opportunity to shape the entire go-to-market and build the local team from the ground up.' },
+  { id:'nium',        name:'Nium',          cat:'Expansion', domain:'nium.com',        url:'https://www.nium.com/careers',                 why:'Singapore fintech with a strong Japan push. Enterprise BD background with financial institutions, airlines, and travel companies at Uber is an ideal match.' },
+
+  // Japan Expansion — B2B SaaS
+  { id:'rippling',    name:'Rippling',      cat:'Expansion', domain:'rippling.com',    url:'https://www.rippling.com/careers',             why:'HR/IT platform with no Japan presence yet. Enterprise sales background from Wolt is perfect for landing the first anchor accounts and building the local team.' },
+  { id:'linear',      name:'Linear',        cat:'Expansion', domain:'linear.app',      url:'https://linear.app/careers',                  why:'Fast-growing developer tool with Japan expansion planned. Seungjun\'s developer community background and enterprise BD skills make this an ideal first-hire GTM lead role.' },
+  { id:'retool',      name:'Retool',        cat:'Expansion', domain:'retool.com',      url:'https://retool.com/careers',                  why:'Internal tools platform expanding enterprise — no Japan office. Japan\'s large enterprise and manufacturing sector is hungry for no-code internal tooling.' },
+  { id:'vercel',      name:'Vercel',        cat:'Expansion', domain:'vercel.com',      url:'https://vercel.com/careers',                  why:'Developer platform growing fast in Japan. Enterprise expansion from PLG to sales-led motion requires the exact GTM playbook Seungjun ran at Wolt and Uber.' },
+  { id:'loom',        name:'Loom (Atlassian)',cat:'Expansion',domain:'loom.com',       url:'https://www.loom.com/careers',                why:'Video messaging tool with Japan enterprise push. Bilingual async communication tool has massive adoption potential in Japanese corporate culture — founding Japan GTM role.' },
+  { id:'deel',        name:'Deel',          cat:'Expansion', domain:'deel.com',        url:'https://www.deel.com/careers',                why:'HR/payroll platform with active Japan expansion — needs an enterprise BD leader with Japan C-suite access. Uber/Deloitte relationships with Japan\'s largest corporations are a direct advantage.' },
+  { id:'remote',      name:'Remote.com',    cat:'Expansion', domain:'remote.com',      url:'https://remote.com/careers',                  why:'Global HR platform expanding in Japan. The shift to distributed work is still early in Japan — a bilingual GTM leader who understands Japanese corporate culture can own this market.' },
+
+  // Japan Expansion — Health Tech & AgeTech
+  { id:'himshers',    name:'Hims & Hers',   cat:'Expansion', domain:'forhims.com',     url:'https://www.forhims.com/careers',             why:'Digital health company — Japan\'s aging population makes it one of the world\'s most attractive health markets. Consumer brand building experience from Wolt and Uber is directly relevant.' },
+  { id:'noom',        name:'Noom',          cat:'Expansion', domain:'noom.com',        url:'https://www.noom.com/careers',                why:'Digital health/weight wellness expanding globally. Japan\'s wellness market is enormous — brand and B2B partnership experience makes Seungjun an ideal founding Japan lead.' },
+  { id:'tempus',      name:'Tempus AI',     cat:'Expansion', domain:'tempus.com',      url:'https://www.tempus.com/careers',              why:'AI health data company needing Japan pharma partnerships. Japan is the world\'s third largest pharma market — enterprise BD with institutional partners is the core skill required.' },
+  { id:'veeva',       name:'Veeva Systems', cat:'Expansion', domain:'veeva.com',       url:'https://careers.veeva.com',                   why:'Life sciences cloud deeply embedded in Japan pharma. Japan pharma market is massive and Veeva\'s enterprise expansion requires a senior sales leader who can navigate large institutional accounts.' },
+
+  // Japan Expansion — Climate Tech & Smart City
+  { id:'aurorasolar', name:'Aurora Solar',  cat:'Expansion', domain:'aurorasolar.com', url:'https://aurorasolar.com/careers',             why:'Solar software company — Japan\'s renewable energy push is one of the fastest growing in Asia. Enterprise SaaS sales experience is a direct fit for targeting utility and EPC customers.' },
+  { id:'samsara',     name:'Samsara',       cat:'Expansion', domain:'samsara.com',     url:'https://www.samsara.com/company/careers',     why:'Fleet management IoT platform expanding in Japan\'s logistics market. Mobility and logistics background from Wolt and Uber is a direct match for selling to fleet operators and manufacturers.' },
+  { id:'innoviz',     name:'Innoviz',       cat:'Expansion', domain:'innoviz.tech',    url:'https://innoviz.tech/careers',                why:'LiDAR company targeting Japan\'s auto industry — Honda and Nissan connections make Seungjun the ideal candidate to lead Japan BD and OEM partnerships from zero.' },
+];
+
+const LIVE_JOBS = [
+  // ── Stripe Japan ──────────────────────────────────────────────────
+  {
+    id: 'stripe-hes-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
+    title: 'Head of Enterprise Sales, Japan',
+    location: 'Tokyo, Japan', type: 'Sales Leadership',
+    tagColor: '#635bff', tagBg: '#ede9ff',
+    url: 'https://stripe.com/jobs/listing/head-of-enterprise-sales-japan/7243072',
+  },
+  {
+    id: 'stripe-ae-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
+    title: 'Account Executive, Enterprise Japan',
+    location: 'Tokyo, Japan', type: 'Enterprise Sales',
+    tagColor: '#635bff', tagBg: '#ede9ff',
+    url: 'https://stripe.com/jobs/listing/account-executive-enterprise-japan/6433160',
+  },
+  {
+    id: 'stripe-ae-hunter-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
+    title: 'Account Executive, Enterprise (Hunter), Japan',
+    location: 'Tokyo, Japan', type: 'Enterprise Sales',
+    tagColor: '#635bff', tagBg: '#ede9ff',
+    url: 'https://stripe.com/jobs/listing/account-executive-enterprise-hunter-japan/7528816',
+  },
+  {
+    id: 'stripe-ae-eb-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
+    title: 'Account Executive, Existing Business (Japan)',
+    location: 'Tokyo, Japan', type: 'Enterprise Sales',
+    tagColor: '#635bff', tagBg: '#ede9ff',
+    url: 'https://stripe.com/jobs/listing/account-executive-existing-business-japan/7013117',
+  },
+  // ── Anthropic Japan ───────────────────────────────────────────────
+  {
+    id: 'anthropic-ae-jp', company: 'Anthropic', domain: 'anthropic.com', cat: 'AI',
+    title: 'Enterprise Account Executive, Japan',
+    location: 'Tokyo, Japan', type: 'Enterprise Sales',
+    tagColor: '#7e22ce', tagBg: '#f3e8ff',
+    url: 'https://job-boards.greenhouse.io/anthropic/jobs/4798695008',
+  },
+  // ── OpenAI Japan ──────────────────────────────────────────────────
+  {
+    id: 'openai-sa-tokyo', company: 'OpenAI', domain: 'openai.com', cat: 'AI',
+    title: 'Solutions Architect – Tokyo',
+    location: 'Tokyo, Japan (Hybrid)', type: 'Technical Sales',
+    tagColor: '#065f46', tagBg: '#d1fae5',
+    url: 'https://openai.com/careers/solutions-architect-tokyo/',
+  },
+  {
+    id: 'openai-comms-tokyo', company: 'OpenAI', domain: 'openai.com', cat: 'AI',
+    title: 'Communications Manager – Tokyo',
+    location: 'Tokyo, Japan (Hybrid)', type: 'Comms / PR',
+    tagColor: '#065f46', tagBg: '#d1fae5',
+    url: 'https://openai.com/careers/communications-manager-tokyo-japan/',
+  },
+  // ── Databricks Japan ──────────────────────────────────────────────
+  {
+    id: 'db-ae-hunter-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
+    title: 'Account Executive – Enterprise Hunter (Japan)',
+    location: 'Japan', type: 'Enterprise Sales',
+    tagColor: '#1d4ed8', tagBg: '#dbeafe',
+    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---enterprise-hunter-7852596002',
+  },
+  {
+    id: 'db-ae-mfg-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
+    title: 'Account Executive – Manufacturing (Japan)',
+    location: 'Japan', type: 'Enterprise Sales',
+    tagColor: '#1d4ed8', tagBg: '#dbeafe',
+    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---manufacturing--7852666002',
+  },
+  {
+    id: 'db-sae-dn-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
+    title: 'Strategic Account Executive – Digital Native (Japan)',
+    location: 'Japan', type: 'Strategic Sales',
+    tagColor: '#1d4ed8', tagBg: '#dbeafe',
+    url: 'https://www.databricks.com/company/careers/enterprise-sales/strategic-account-executive---digital-native-8194916002',
+  },
+  {
+    id: 'db-fsi-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
+    title: 'Account Executive – FSI (Japan)',
+    location: 'Japan', type: 'Enterprise Sales',
+    tagColor: '#1d4ed8', tagBg: '#dbeafe',
+    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---fsi-7558827002',
+  },
+];
+
+// ════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════
+const S = {
+  apiKey: '',
+  apps: [],              // [{id, company, role, url, date, status, notes, createdAt}]
+  watched: new Set(),    // Set of company ids
+  activeTab: 'live',
+  liveFilter: 'all',
+  appsFilter: 'all',
+  companyFilter: 'all',
+  clLang: 'en',
+  clTexts: { en: '', ja: '' },
+};
+
+function persist() {
+  localStorage.setItem('ja2_apps',    JSON.stringify(S.apps));
+  localStorage.setItem('ja2_watched', JSON.stringify([...S.watched]));
+}
+function hydrate() {
+  S.apiKey = localStorage.getItem('ja2_apikey') || '';
+  try { S.apps    = JSON.parse(localStorage.getItem('ja2_apps'))    || []; } catch(e){}
+  try { S.watched = new Set(JSON.parse(localStorage.getItem('ja2_watched')) || []); } catch(e){}
+}
+
+// ════════════════════════════════════════
+// TABS
+// ════════════════════════════════════════
+function switchTab(id) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelector(`[data-tab="${id}"]`).classList.add('active');
+  S.activeTab = id;
+  if (id === 'dash') renderDashboard();
+}
+
+// ════════════════════════════════════════
+// TAB 0 — LIVE LISTINGS
+// ════════════════════════════════════════
+function renderLiveJobs() {
+  const f = S.liveFilter;
+  const list = f === 'all' ? LIVE_JOBS : LIVE_JOBS.filter(j => j.cat === f);
+  document.getElementById('liveBadge').textContent = LIVE_JOBS.length;
+  document.getElementById('liveJobsGrid').innerHTML = list.map(j => `
+    <div class="job-listing-card">
+      <img class="jlc-logo"
+           src="https://www.google.com/s2/favicons?domain=${j.domain}&sz=64"
+           alt="${esc(j.company)}"
+           onerror="this.style.display='none'">
+      <div class="jlc-body">
+        <div class="jlc-title">${esc(j.title)}</div>
+        <div class="jlc-meta">
+          <span class="jlc-company">${esc(j.company)}</span>
+          <span>📍 ${esc(j.location)}</span>
+          <span class="jlc-tag" style="color:${j.tagColor};background:${j.tagBg}">${esc(j.type)}</span>
+        </div>
+      </div>
+      <a class="jlc-apply" href="${j.url}" target="_blank" rel="noopener">Apply ↗</a>
+    </div>`).join('');
+}
+
+function filterLive(val, el) {
+  document.querySelectorAll('#liveFilters .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  S.liveFilter = val;
+  renderLiveJobs();
+}
+
+// ════════════════════════════════════════
+// TAB 1 — SEARCH BOARDS
+// ════════════════════════════════════════
+function renderSearchBoards() {
+  const container = document.getElementById('searchBoards');
+  container.innerHTML = BOARDS.map(board => `
+    <div class="board-section">
+      <div class="board-name">
+        <img class="board-name-logo"
+             src="https://www.google.com/s2/favicons?domain=${board.domain}&sz=32"
+             alt="${board.name}"
+             onerror="this.style.display='none'">
+        ${board.name}
+        ${board.searches.length > 1
+          ? `<button class="open-all-btn" onclick="openAll(${JSON.stringify(board.searches.map(s=>s.url)).replace(/"/g,'&quot;')})">Open all →</button>`
+          : ''}
+      </div>
+      <div class="search-grid">
+        ${board.searches.map(s => `
+          <a class="search-card" href="${s.url}" target="_blank" rel="noopener">
+            <span class="search-card-label">${esc(s.label)}</span>
+            <span class="search-card-action">Open ↗</span>
+          </a>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+function openAll(urls) {
+  urls.forEach(u => window.open(u, '_blank'));
+}
+
+// ════════════════════════════════════════
+// TAB 2 — COMPANIES
+// ════════════════════════════════════════
+function renderCompanies() {
+  const f = S.companyFilter;
+  const list = f === 'all' ? COMPANIES : COMPANIES.filter(c => c.cat === f);
+  document.getElementById('companiesGrid').innerHTML = list.map(companyCard).join('');
+}
+
+function companyCard(c) {
+  const watched = S.watched.has(c.id);
+  const catCls = { AI:'cat-ai', Autonomous:'cat-autonomous', Tech:'cat-tech', Mobility:'cat-mobility', Expansion:'cat-expansion' }[c.cat] || 'cat-tech';
+  const catLbl = { AI:'🤖 AI', Autonomous:'🚗 Autonomous', Tech:'💻 Tech', Mobility:'📱 Mobility', Expansion:'🌏 Japan Expansion' }[c.cat] || c.cat;
+  const isExpansion = c.cat === 'Expansion';
+  return `
+  <div class="company-card ${isExpansion ? 'expansion-card' : ''}" id="cc-${c.id}">
+    <div class="cc-header">
+      <img class="cc-logo"
+           src="https://www.google.com/s2/favicons?domain=${c.domain}&sz=64"
+           alt="${c.name}"
+           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>'">
+      <div>
+        <div class="cc-name">${esc(c.name)} <span class="cat-tag ${catCls}">${catLbl}</span></div>
+      </div>
+      <div class="cc-actions">
+        <button class="watch-btn ${watched?'watched':''}" id="wb-${c.id}" onclick="toggleWatch('${c.id}')">
+          ${watched ? '📌 Watching' : '+ Watch'}
+        </button>
+      </div>
+    </div>
+    ${isExpansion ? `<div class="first-hire-banner">🎯 First Hire Opportunity — build Japan from zero, exactly like Wolt Drive and JUMP/Uber.</div>` : ''}
+    <div class="cc-why">${esc(c.why)}</div>
+    <a class="cc-link" href="${c.url}" target="_blank" rel="noopener">View Open Roles →</a>
+  </div>`;
+}
+
+function filterCompanies(val, el) {
+  document.querySelectorAll('#companyFilters .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  S.companyFilter = val;
+  renderCompanies();
+}
+
+function toggleWatch(id) {
+  if (S.watched.has(id)) S.watched.delete(id);
+  else S.watched.add(id);
+  persist();
+  const btn = document.getElementById('wb-' + id);
+  if (btn) {
+    const w = S.watched.has(id);
+    btn.textContent = w ? '📌 Watching' : '+ Watch';
+    btn.className = `watch-btn ${w ? 'watched' : ''}`;
+  }
+  updateBadges();
+}
+
+// ════════════════════════════════════════
+// TAB 3 — APPLICATIONS
+// ════════════════════════════════════════
+function addApplication() {
+  const company = document.getElementById('aCompany').value.trim();
+  const role    = document.getElementById('aRole').value.trim();
+  if (!company || !role) { toast('Company and Role are required'); return; }
+
+  const app = {
+    id: Date.now().toString(),
+    company,
+    role,
+    url:    document.getElementById('aUrl').value.trim(),
+    date:   document.getElementById('aDate').value || new Date().toISOString().split('T')[0],
+    status: document.getElementById('aStatus').value,
+    notes:  document.getElementById('aNotes').value.trim(),
+    createdAt: new Date().toISOString(),
+  };
+  S.apps.unshift(app);
+  persist();
+  updateBadges();
+
+  // Clear form
+  ['aCompany','aRole','aUrl','aNotes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('aDate').value = '';
+  document.getElementById('aStatus').value = 'Saved';
+
+  renderApps();
+  toast('Application logged ✓');
+}
+
+function renderApps() {
+  const list = document.getElementById('appsList');
+  const f = S.appsFilter;
+  const filtered = f === 'all' ? S.apps : S.apps.filter(a => a.status === f);
+
+  if (!filtered.length) {
+    list.innerHTML = `<div class="apps-empty">${
+      S.apps.length === 0
+        ? '📋 No applications yet — log your first one!'
+        : `No applications with status "${f}"`
+    }</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(a => {
+    const statusSlug = a.status.toLowerCase().replace(/\s+/g,'');
+    const sbCls = { saved:'sb-saved', applied:'sb-applied', interview:'sb-interview', offer:'sb-offer', rejected:'sb-rejected' }[statusSlug] || 'sb-saved';
+    const statusEmoji = { Saved:'💾', Applied:'✅', Interview:'🗣️', Offer:'🎉', Rejected:'❌' }[a.status] || '';
+    return `
+    <div class="app-item status-${statusSlug}" id="app-${a.id}">
+      <div class="app-header">
+        <div>
+          <div class="app-company">${esc(a.company)}</div>
+          <div class="app-role">${esc(a.role)}</div>
+        </div>
+        <select class="status-select" onchange="updateStatus('${a.id}', this.value)">
+          ${['Saved','Applied','Interview','Offer','Rejected'].map(s =>
+            `<option${s===a.status?' selected':''}>${s}</option>`).join('')}
+        </select>
+      </div>
+      <div class="app-meta">
+        <span class="status-badge ${sbCls}">${statusEmoji} ${a.status}</span>
+        <span class="app-date">📅 ${a.date || 'No date'}</span>
+        ${a.url ? `<a class="app-url-link" href="${esc(a.url)}" target="_blank" rel="noopener">🔗 Job Listing</a>` : ''}
+      </div>
+      ${a.notes ? `<div class="app-notes">📝 ${esc(a.notes)}</div>` : ''}
+      <div class="app-actions">
+        ${a.url ? `<button class="app-btn" onclick="window.open('${esc(a.url)}','_blank')">🔗 Open Listing</button>` : ''}
+        <button class="app-btn" onclick="prefillCL('${a.id}')">✍️ Write Cover Letter</button>
+        <button class="app-btn danger" onclick="deleteApp('${a.id}')">🗑️ Delete</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterApps(val, el) {
+  document.querySelectorAll('#appsFilter .filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  S.appsFilter = val;
+  renderApps();
+}
+
+function updateStatus(id, status) {
+  const a = S.apps.find(x => x.id === id);
+  if (!a) return;
+  a.status = status;
+  persist();
+  updateBadges();
+  renderApps();
+}
+
+function deleteApp(id) {
+  if (!confirm('Delete this application?')) return;
+  S.apps = S.apps.filter(x => x.id !== id);
+  persist();
+  updateBadges();
+  renderApps();
+}
+
+function prefillCL(id) {
+  const a = S.apps.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById('clCompany').value = a.company;
+  document.getElementById('clRole').value    = a.role;
+  switchTab('cl');
+  toast('Company & role pre-filled — paste the job description and generate!');
+}
+
+// ════════════════════════════════════════
+// TAB 4 — COVER LETTER
+// ════════════════════════════════════════
+async function generateCoverLetter() {
+  if (!S.apiKey) { showApiModal(); return; }
+
+  const company = document.getElementById('clCompany').value.trim() || 'the company';
+  const role    = document.getElementById('clRole').value.trim()    || 'the role';
+  const jd      = document.getElementById('clJd').value.trim();
+  if (!jd) { toast('Please paste a job description first'); return; }
+
+  const btn = document.getElementById('clBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Generating…';
+
+  document.getElementById('clEN-text').innerHTML = '<div class="loading-box"><div class="spinner"></div>Generating English cover letter…</div>';
+  document.getElementById('clJA-text').innerHTML = '';
+
+  const SYSTEM = `You are an expert executive career coach writing on behalf of Seungjun Ahn.
+Write compelling, specific, results-driven cover letters for senior GTM executive roles in Japan.
+CRITICAL: Respond with valid JSON only. No markdown. No backticks. No code fences. First character must be { and last must be }.`;
+
+  const USER = `Write a personalized cover letter for this job application:
+
+COMPANY: ${company}
+ROLE: ${role}
+
+JOB DESCRIPTION:
+${jd}
+
+CANDIDATE PROFILE — Seungjun Ahn (安俊):
+- 20+ years GTM leadership experience in Japan
+- Amazon Japan: country-level retail and marketplace operations
+- Uber Japan (Rides + Eats): secured enterprise partnerships with Rakuten, PayPay, Benesse, Amazon Japan, McDonald's, Seven-Eleven
+- Wolt/DoorDash Japan: led Wolt Drive from $0 to 10% of total company global revenue in 1.5 years
+- Honda Motor: market expansion and partnerships
+- Deloitte Consulting: enterprise strategy
+- Founded motorcycle marketplace in Indonesia (200+ dealer partners, built from scratch)
+- Landit (AI HR platform): drove 25% productivity improvement in 90 days via AI-native workflows
+- MBA: University of Chicago Booth School of Business
+- Languages: Japanese (business fluent), English (native-level), Korean (native)
+- Expertise: Japan market entry, C-suite relationship building, regulatory navigation, enterprise sales, AI-driven operations
+
+INSTRUCTIONS:
+1. Analyze which specific aspects of Seungjun's background are MOST relevant to this role
+2. Write an English cover letter (4-5 paragraphs, professional yet personable)
+3. Write a Japanese cover letter (same structure, culturally appropriate business Japanese)
+4. Quantify achievements wherever possible
+5. Reference the company by name and show genuine understanding of their Japan strategy
+
+Return ONLY this JSON (no other text, no markdown):
+{
+  "english": "Full English cover letter text",
+  "japanese": "日本語カバーレター全文"
+}`;
+
+  try {
+    const raw  = await callClaude(SYSTEM, USER, 3000);
+    const data = extractJSON(raw);
+    S.clTexts.en = data.english || raw;
+    S.clTexts.ja = data.japanese || '(Japanese version unavailable)';
+    document.getElementById('clEN-text').textContent = S.clTexts.en;
+    document.getElementById('clJA-text').textContent = S.clTexts.ja;
+    toast('Cover letter generated ✓');
+  } catch (err) {
+    document.getElementById('clEN-text').textContent = 'Error: ' + err.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '✨ Generate Cover Letter';
+  }
+}
+
+function switchClLang(lang) {
+  S.clLang = lang;
+  document.getElementById('clEN-btn').classList.toggle('active', lang==='en');
+  document.getElementById('clJA-btn').classList.toggle('active', lang==='ja');
+  document.getElementById('clEN-wrap').style.display = lang==='en' ? 'block' : 'none';
+  document.getElementById('clJA-wrap').style.display = lang==='ja' ? 'block' : 'none';
+}
+
+// ════════════════════════════════════════
+// TAB 5 — DASHBOARD
+// ════════════════════════════════════════
+function renderDashboard() {
+  const total    = S.apps.length;
+  const watched  = S.watched.size;
+  const applied  = S.apps.filter(a => a.status === 'Applied').length;
+  const interviews = S.apps.filter(a => a.status === 'Interview').length;
+  const offers   = S.apps.filter(a => a.status === 'Offer').length;
+
+  // Stats row
+  document.getElementById('dashStats').innerHTML = [
+    { num: total,      label: 'Total Logged',   color: '#4f7ef8' },
+    { num: applied,    label: 'Applied',         color: '#7c3aed' },
+    { num: interviews, label: 'Interviews',      color: '#d97706' },
+    { num: offers,     label: 'Offers',          color: '#16a34a' },
+    { num: watched,    label: 'Companies Watched', color: '#0f766e' },
+  ].map(s => `<div class="dash-stat">
+    <div class="dash-stat-num" style="color:${s.color}">${s.num}</div>
+    <div class="dash-stat-label">${s.label}</div>
+  </div>`).join('');
+
+  // Pipeline breakdown
+  const statuses  = ['Saved','Applied','Interview','Offer','Rejected'];
+  const colors    = ['#4f7ef8','#7c3aed','#d97706','#16a34a','#94a3b8'];
+  const counts    = statuses.map(s => S.apps.filter(a => a.status === s).length);
+  const maxCount  = Math.max(...counts, 1);
+
+  const pipelineHTML = statuses.map((s, i) => `
+    <div class="dash-bar-row">
+      <div class="dash-bar-label">${s}</div>
+      <div class="dash-bar-bg"><div class="dash-bar-fill" style="width:${Math.round(counts[i]/maxCount*100)}%;background:${colors[i]};"></div></div>
+      <div class="dash-bar-count">${counts[i]}</div>
+    </div>`).join('');
+
+  // Watched companies
+  const watchedList = COMPANIES.filter(c => S.watched.has(c.id));
+  const watchedHTML = watchedList.length
+    ? watchedList.map(c => `<div class="dash-row">
+        <span>${c.name}</span>
+        <a href="${c.url}" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;">Open careers ↗</a>
+      </div>`).join('')
+    : '<div class="dash-empty">No companies watched yet — go to Target Companies tab</div>';
+
+  // Recent apps
+  const recentHTML = S.apps.slice(0,5).length
+    ? S.apps.slice(0,5).map(a => `<div class="dash-row">
+        <span style="font-size:13px;">${esc(a.company)} <span style="color:var(--gray-400);font-size:11px;">— ${esc(a.role)}</span></span>
+        <span class="status-badge ${{Saved:'sb-saved',Applied:'sb-applied',Interview:'sb-interview',Offer:'sb-offer',Rejected:'sb-rejected'}[a.status]||'sb-saved'}">${a.status}</span>
+      </div>`).join('')
+    : '<div class="dash-empty">No applications logged yet</div>';
+
+  // Japan Expansion Radar
+  const expansionCos = COMPANIES.filter(c => c.cat === 'Expansion');
+  const expansionBySubcat = [
+    { label: 'AI / LLM',      ids: ['perplexity','cohere','mistral','xai','stabilityai','elevenlabs','runwayml'] },
+    { label: 'Autonomous',    ids: ['waymo','nuro','zoox','maymobility','gatik','joby','archer'] },
+    { label: 'Delivery',      ids: ['getir','gopuff','glovo','instacart'] },
+    { label: 'Fintech',       ids: ['revolut','wise','airwallex','rapyd','nium'] },
+    { label: 'B2B SaaS',      ids: ['rippling','linear','retool','vercel','loom','deel','remote'] },
+    { label: 'HealthTech',    ids: ['himshers','noom','tempus','veeva'] },
+    { label: 'ClimateTech',   ids: ['aurorasolar','samsara','innoviz'] },
+  ];
+  const radarRows = expansionBySubcat.map(sub => {
+    const count = sub.ids.filter(id => expansionCos.find(c => c.id === id)).length;
+    const watched = sub.ids.filter(id => S.watched.has(id)).length;
+    return `<div class="dash-row">
+      <span style="font-size:12px;">${sub.label}</span>
+      <span style="font-size:11px;color:var(--gray-500);">${count} cos · <span style="color:#10b981;font-weight:600;">${watched} watched</span></span>
+    </div>`;
+  }).join('');
+
+  document.getElementById('dashGrid').innerHTML = `
+    <div class="dash-panel">
+      <div class="dash-panel-title">📊 Pipeline</div>
+      <div class="dash-bar-wrap">${pipelineHTML}</div>
+    </div>
+    <div class="dash-panel">
+      <div class="dash-panel-title">📌 Watching (${watchedList.length})</div>
+      ${watchedHTML}
+    </div>
+    <div class="dash-panel" style="border-top:3px solid #10b981;">
+      <div class="dash-panel-title">🌏 Japan Expansion Radar</div>
+      <div style="background:#ecfdf5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;font-size:11.5px;color:#065f46;margin-bottom:10px;line-height:1.5;">
+        <strong>${expansionCos.length} target companies</strong> in pre-Japan-entry phase —
+        your biggest opportunity: shape the entire strategy as the founding hire.
+      </div>
+      ${radarRows}
+      <div style="margin-top:8px;">
+        <button class="open-all-btn" style="width:100%;text-align:left;background:#10b981;" onclick="switchTab('companies');S.companyFilter='Expansion';renderCompanies();document.querySelectorAll('#companyFilters .filter-chip').forEach((c,i)=>{c.classList.toggle('active',i===1)})">🌏 View all expansion targets →</button>
+      </div>
+    </div>
+    <div class="dash-panel">
+      <div class="dash-panel-title">🕐 Recent Applications</div>
+      ${recentHTML}
+    </div>
+    <div class="dash-panel">
+      <div class="dash-panel-title">⚡ Quick Actions</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+        <button class="open-all-btn" style="width:100%;text-align:left;" onclick="switchTab('live')">🎯 Browse live job listings</button>
+        <button class="open-all-btn" style="width:100%;text-align:left;" onclick="switchTab('search')">🔍 Search new jobs on LinkedIn</button>
+        <button class="open-all-btn" style="width:100%;text-align:left;" onclick="switchTab('companies')">🏢 Check target company openings</button>
+        <button class="open-all-btn" style="width:100%;text-align:left;" onclick="switchTab('cl')">✍️ Write a cover letter</button>
+        <button class="open-all-btn" style="width:100%;text-align:left;" onclick="switchTab('apps')">➕ Log a new application</button>
+      </div>
+    </div>`;
+}
+
+// ════════════════════════════════════════
+// API KEY
+// ════════════════════════════════════════
+function showApiModal() {
+  document.getElementById('apiKeyInput').value = S.apiKey;
+  openModal('apiModal');
+  setTimeout(() => document.getElementById('apiKeyInput').focus(), 120);
+}
+function saveApiKey() {
+  const v = document.getElementById('apiKeyInput').value.trim();
+  if (!v) { toast('Please enter a valid API key'); return; }
+  S.apiKey = v;
+  localStorage.setItem('ja2_apikey', v);
+  closeModal('apiModal');
+  toast('API key saved ✓');
+}
+
+// ════════════════════════════════════════
+// CLAUDE API
+// ════════════════════════════════════════
+async function callClaude(system, user, maxTok = 3000) {
+  if (!S.apiKey) { showApiModal(); throw new Error('No API key set'); }
+  const r = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': S.apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: maxTok,
+      system,
+      messages: [{ role: 'user', content: user }],
+    }),
+  });
+  if (!r.ok) {
+    const e = await r.json().catch(() => ({}));
+    throw new Error(e.error?.message || `API error ${r.status}`);
+  }
+  return (await r.json()).content[0].text;
+}
+
+function extractJSON(text) {
+  let s = text.replace(/^```(?:json)?\s*/im, '').replace(/```\s*$/im, '').trim();
+  const first = s.indexOf('{');
+  if (first === -1) throw new Error('No JSON found in AI response');
+  const last = s.lastIndexOf('}');
+  const candidate = last >= first ? s.slice(first, last + 1) : s.slice(first);
+  try { return JSON.parse(candidate); } catch(_) {}
+  try { return JSON.parse(repairJSON(candidate)); } catch(e) {
+    throw new Error('Could not parse AI response. Try again.');
+  }
+}
+function repairJSON(s) {
+  const opens  = (s.match(/\{/g)||[]).length;
+  const closes = (s.match(/\}/g)||[]).length;
+  return s + '}'.repeat(Math.max(0, opens - closes));
+}
+
+// ════════════════════════════════════════
+// MODAL HELPERS
+// ════════════════════════════════════════
+function openModal(id)  { document.getElementById(id).classList.add('show'); }
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+document.querySelectorAll('.modal-overlay').forEach(o =>
+  o.addEventListener('click', e => { if (e.target===o) o.classList.remove('show'); })
+);
+
+// ════════════════════════════════════════
+// UTILITIES
+// ════════════════════════════════════════
+function esc(s) {
+  if (s == null) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function copyEl(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.textContent || el.value || '').then(() => toast('Copied ✓'));
+}
+
+function updateBadges() {
+  document.getElementById('appsBadge').textContent = S.apps.length;
+}
+
+function toast(msg) {
+  const t = document.createElement('div');
+  t.style.cssText = 'position:fixed;bottom:20px;right:20px;z-index:9999;background:#0f172a;color:white;padding:10px 18px;border-radius:9px;font-size:13px;font-weight:500;box-shadow:0 4px 16px rgba(0,0,0,.28);animation:toastIn .22s ease;pointer-events:none;';
+  t.textContent = msg;
+  if (!document.getElementById('toastStyle')) {
+    const st = document.createElement('style');
+    st.id = 'toastStyle';
+    st.textContent = '@keyframes toastIn{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}';
+    document.head.appendChild(st);
+  }
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2500);
+}
+
+// ════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════
+(function init() {
+  hydrate();
+  renderLiveJobs();
+  renderSearchBoards();
+  renderCompanies();
+  renderApps();
+  updateBadges();
+
+  // Set default date for app form
+  document.getElementById('aDate').value = new Date().toISOString().split('T')[0];
+
+  // Prompt API key on first visit if no key set
+  if (!S.apiKey) {
+    // Only show on cover letter tab visit, not on load
+  }
+})();
+</script>
+</body>
+</html>
