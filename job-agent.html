@@ -225,7 +225,7 @@
 
 <!-- TAB BAR -->
 <nav class="tab-bar">
-  <button class="tab-btn active" data-tab="live"      onclick="switchTab('live')">🎯 Live Listings <span class="tab-badge" id="liveBadge">0</span></button>
+  <button class="tab-btn active" data-tab="live"      onclick="switchTab('live')">🎯 Active Pipeline <span class="tab-badge" style="background:#22c55e;">3</span></button>
   <button class="tab-btn"        data-tab="search"    onclick="switchTab('search')">🔍 Search Boards</button>
   <button class="tab-btn"        data-tab="companies" onclick="switchTab('companies')">🏢 Target Companies</button>
   <button class="tab-btn"        data-tab="apps"      onclick="switchTab('apps')">📋 My Applications <span class="tab-badge" id="appsBadge">0</span></button>
@@ -236,18 +236,108 @@
 <!-- CONTENT -->
 <div class="content">
 
-  <!-- TAB 0: LIVE LISTINGS -->
+  <!-- TAB 0: ACTIVE PIPELINE & SEARCH -->
   <div id="tab-live" class="tab-pane active">
-    <div class="sec-title">🎯 Live Job Listings</div>
-    <div class="sec-sub">Real open roles at target companies — verified and linked directly to the application page.</div>
-    <div class="live-notice">⚠️ Job listings change frequently. Links verified as of March 2026 — click to confirm the role is still open before applying.</div>
-    <div class="live-filter-row" id="liveFilters">
-      <div class="filter-chip active" onclick="filterLive('all',this)">All</div>
-      <div class="filter-chip" onclick="filterLive('AI',this)">🤖 AI</div>
-      <div class="filter-chip" onclick="filterLive('Fintech',this)">💳 Fintech</div>
-      <div class="filter-chip" onclick="filterLive('Data',this)">📊 Data</div>
+    <div class="sec-title">🎯 Active Pipeline & Job Search</div>
+    <div class="sec-sub">Your current active processes and real job board search links.</div>
+
+    <div class="live-notice" style="background:#fef2f2;border-color:#fca5a5;color:#991b1b;">
+      ⚠️ This tab shows your real active applications and verified job board links only.
+      No AI-generated listings — everything here is manually curated and real.
     </div>
-    <div class="live-jobs-grid" id="liveJobsGrid"></div>
+
+    <!-- ACTIVE APPLICATIONS -->
+    <div style="margin-bottom:28px;">
+      <div style="font-size:13px;font-weight:700;color:var(--gray-700);margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+        🟢 Active Processes <span style="background:#dcfce7;color:#15803d;font-size:11px;padding:2px 8px;border-radius:20px;font-weight:700;">3 in progress</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+
+        <div style="background:white;border-radius:12px;padding:16px 18px;border:1px solid #e2e8f0;border-left:4px solid #22c55e;box-shadow:0 1px 4px rgba(0,0,0,0.07);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <img src="https://www.google.com/s2/favicons?domain=wonderful.ai&sz=48" style="width:36px;height:36px;border-radius:7px;background:var(--gray-100);flex-shrink:0;" onerror="this.style.display='none'">
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:14px;font-weight:700;color:var(--gray-900);">Wonderful.ai</div>
+            <div style="font-size:12.5px;color:var(--gray-500);margin-top:2px;">Japan GM / Country Manager</div>
+            <div style="font-size:12px;color:var(--gray-600);margin-top:6px;line-height:1.5;">📝 Recruiter screening passed. Chief of Staff interview coming this week.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;">
+            <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">🟢 In Process</span>
+            <a href="https://www.wonderful.ai/careers" target="_blank" rel="noopener" style="padding:6px 14px;background:var(--navy);color:white;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none;transition:background .15s;" onmouseover="this.style.background='#243447'" onmouseout="this.style.background='var(--navy)'">Careers ↗</a>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:12px;padding:16px 18px;border:1px solid #e2e8f0;border-left:4px solid #22c55e;box-shadow:0 1px 4px rgba(0,0,0,0.07);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <img src="https://www.google.com/s2/favicons?domain=headout.com&sz=48" style="width:36px;height:36px;border-radius:7px;background:var(--gray-100);flex-shrink:0;" onerror="this.style.display='none'">
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:14px;font-weight:700;color:var(--gray-900);">Headout</div>
+            <div style="font-size:12.5px;color:var(--gray-500);margin-top:2px;">BD Manager Japan</div>
+            <div style="font-size:12px;color:var(--gray-600);margin-top:6px;line-height:1.5;">📝 Case study submitted. Awaiting feedback.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;">
+            <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">🟢 In Process</span>
+            <a href="https://www.headout.com/careers" target="_blank" rel="noopener" style="padding:6px 14px;background:var(--navy);color:white;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none;" onmouseover="this.style.background='#243447'" onmouseout="this.style.background='var(--navy)'">Careers ↗</a>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:12px;padding:16px 18px;border:1px solid #e2e8f0;border-left:4px solid #22c55e;box-shadow:0 1px 4px rgba(0,0,0,0.07);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <img src="https://www.google.com/s2/favicons?domain=fresha.com&sz=48" style="width:36px;height:36px;border-radius:7px;background:var(--gray-100);flex-shrink:0;" onerror="this.style.display='none'">
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:14px;font-weight:700;color:var(--gray-900);">Fresha</div>
+            <div style="font-size:12.5px;color:var(--gray-500);margin-top:2px;">Head of Japan</div>
+            <div style="font-size:12px;color:var(--gray-600);margin-top:6px;line-height:1.5;">📝 Process ongoing. First contact made. World's largest beauty & wellness marketplace.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;">
+            <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">🟢 In Process</span>
+            <a href="https://www.fresha.com/careers" target="_blank" rel="noopener" style="padding:6px 14px;background:var(--navy);color:white;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none;" onmouseover="this.style.background='#243447'" onmouseout="this.style.background='var(--navy)'">Careers ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JOB BOARD SEARCH LINKS -->
+    <div>
+      <div style="font-size:13px;font-weight:700;color:var(--gray-700);margin-bottom:14px;">🔍 Search Real Jobs</div>
+
+      <!-- LinkedIn -->
+      <div style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px;">
+          <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" style="width:18px;height:18px;border-radius:3px;">
+          <span style="font-size:12.5px;font-weight:700;color:var(--gray-700);">LinkedIn Jobs</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;">
+          <a href="https://www.linkedin.com/jobs/search/?keywords=Country+Manager+Japan+AI&location=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Country Manager · Japan · AI</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://www.linkedin.com/jobs/search/?keywords=Head+of+Sales+Japan+Tech&location=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Head of Sales · Japan · Tech</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://www.linkedin.com/jobs/search/?keywords=Head+of+Business+Development+Japan&location=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Head of Business Development · Japan</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://www.linkedin.com/jobs/search/?keywords=First+Hire+Japan+Startup&location=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">First Hire · Japan · Startup</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://www.linkedin.com/jobs/search/?keywords=General+Manager+Japan+Tech&location=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">General Manager · Japan · Tech</span><span class="search-card-action">Search ↗</span></a>
+        </div>
+      </div>
+
+      <!-- Indeed -->
+      <div style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px;">
+          <img src="https://www.google.com/s2/favicons?domain=jp.indeed.com&sz=32" style="width:18px;height:18px;border-radius:3px;">
+          <span style="font-size:12.5px;font-weight:700;color:var(--gray-700);">Indeed Japan</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;">
+          <a href="https://jp.indeed.com/jobs?q=Country+Manager&l=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Country Manager · Tokyo</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://jp.indeed.com/jobs?q=Head+of+Sales+AI&l=Tokyo" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Head of Sales · AI · Tokyo</span><span class="search-card-action">Search ↗</span></a>
+          <a href="https://jp.indeed.com/jobs?q=Business+Development+Director&l=Japan" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Business Development Director · Japan</span><span class="search-card-action">Search ↗</span></a>
+        </div>
+      </div>
+
+      <!-- Executive Boards -->
+      <div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--gray-700);margin-bottom:9px;">🏆 Executive Job Boards</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;">
+          <a href="https://www.bizreach.jp/" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Bizreach — Japanese executive jobs</span><span class="search-card-action">Open ↗</span></a>
+          <a href="https://www.daijob.com/en/jobs/search?keyword=country+manager" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Daijob — Bilingual executive</span><span class="search-card-action">Open ↗</span></a>
+          <a href="https://wahlandcase.com/jobs/" target="_blank" rel="noopener" class="search-card"><span class="search-card-label">Wahl+Case — Tech executive recruiting</span><span class="search-card-action">Open ↗</span></a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- TAB 1: SEARCH REAL JOBS -->
@@ -537,89 +627,6 @@ const COMPANIES = [
   { id:'innoviz',     name:'Innoviz',       cat:'Expansion', domain:'innoviz.tech',    url:'https://innoviz.tech/careers',                why:'LiDAR company targeting Japan\'s auto industry — Honda and Nissan connections make Seungjun the ideal candidate to lead Japan BD and OEM partnerships from zero.' },
 ];
 
-const LIVE_JOBS = [
-  // ── Stripe Japan ──────────────────────────────────────────────────
-  {
-    id: 'stripe-hes-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
-    title: 'Head of Enterprise Sales, Japan',
-    location: 'Tokyo, Japan', type: 'Sales Leadership',
-    tagColor: '#635bff', tagBg: '#ede9ff',
-    url: 'https://stripe.com/jobs/listing/head-of-enterprise-sales-japan/7243072',
-  },
-  {
-    id: 'stripe-ae-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
-    title: 'Account Executive, Enterprise Japan',
-    location: 'Tokyo, Japan', type: 'Enterprise Sales',
-    tagColor: '#635bff', tagBg: '#ede9ff',
-    url: 'https://stripe.com/jobs/listing/account-executive-enterprise-japan/6433160',
-  },
-  {
-    id: 'stripe-ae-hunter-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
-    title: 'Account Executive, Enterprise (Hunter), Japan',
-    location: 'Tokyo, Japan', type: 'Enterprise Sales',
-    tagColor: '#635bff', tagBg: '#ede9ff',
-    url: 'https://stripe.com/jobs/listing/account-executive-enterprise-hunter-japan/7528816',
-  },
-  {
-    id: 'stripe-ae-eb-jp', company: 'Stripe', domain: 'stripe.com', cat: 'Fintech',
-    title: 'Account Executive, Existing Business (Japan)',
-    location: 'Tokyo, Japan', type: 'Enterprise Sales',
-    tagColor: '#635bff', tagBg: '#ede9ff',
-    url: 'https://stripe.com/jobs/listing/account-executive-existing-business-japan/7013117',
-  },
-  // ── Anthropic Japan ───────────────────────────────────────────────
-  {
-    id: 'anthropic-ae-jp', company: 'Anthropic', domain: 'anthropic.com', cat: 'AI',
-    title: 'Enterprise Account Executive, Japan',
-    location: 'Tokyo, Japan', type: 'Enterprise Sales',
-    tagColor: '#7e22ce', tagBg: '#f3e8ff',
-    url: 'https://job-boards.greenhouse.io/anthropic/jobs/4798695008',
-  },
-  // ── OpenAI Japan ──────────────────────────────────────────────────
-  {
-    id: 'openai-sa-tokyo', company: 'OpenAI', domain: 'openai.com', cat: 'AI',
-    title: 'Solutions Architect – Tokyo',
-    location: 'Tokyo, Japan (Hybrid)', type: 'Technical Sales',
-    tagColor: '#065f46', tagBg: '#d1fae5',
-    url: 'https://openai.com/careers/solutions-architect-tokyo/',
-  },
-  {
-    id: 'openai-comms-tokyo', company: 'OpenAI', domain: 'openai.com', cat: 'AI',
-    title: 'Communications Manager – Tokyo',
-    location: 'Tokyo, Japan (Hybrid)', type: 'Comms / PR',
-    tagColor: '#065f46', tagBg: '#d1fae5',
-    url: 'https://openai.com/careers/communications-manager-tokyo-japan/',
-  },
-  // ── Databricks Japan ──────────────────────────────────────────────
-  {
-    id: 'db-ae-hunter-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
-    title: 'Account Executive – Enterprise Hunter (Japan)',
-    location: 'Japan', type: 'Enterprise Sales',
-    tagColor: '#1d4ed8', tagBg: '#dbeafe',
-    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---enterprise-hunter-7852596002',
-  },
-  {
-    id: 'db-ae-mfg-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
-    title: 'Account Executive – Manufacturing (Japan)',
-    location: 'Japan', type: 'Enterprise Sales',
-    tagColor: '#1d4ed8', tagBg: '#dbeafe',
-    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---manufacturing--7852666002',
-  },
-  {
-    id: 'db-sae-dn-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
-    title: 'Strategic Account Executive – Digital Native (Japan)',
-    location: 'Japan', type: 'Strategic Sales',
-    tagColor: '#1d4ed8', tagBg: '#dbeafe',
-    url: 'https://www.databricks.com/company/careers/enterprise-sales/strategic-account-executive---digital-native-8194916002',
-  },
-  {
-    id: 'db-fsi-jp', company: 'Databricks', domain: 'databricks.com', cat: 'Data',
-    title: 'Account Executive – FSI (Japan)',
-    location: 'Japan', type: 'Enterprise Sales',
-    tagColor: '#1d4ed8', tagBg: '#dbeafe',
-    url: 'https://www.databricks.com/company/careers/enterprise-sales/account-executive---fsi-7558827002',
-  },
-];
 
 // ════════════════════════════════════════
 // DEFAULT APPLICATIONS (active pipeline)
@@ -665,7 +672,6 @@ const S = {
   apps: [],              // [{id, company, role, url, date, status, notes, createdAt}]
   watched: new Set(),    // Set of company ids
   activeTab: 'live',
-  liveFilter: 'all',
   appsFilter: 'all',
   companyFilter: 'all',
   clLang: 'en',
@@ -704,37 +710,6 @@ function switchTab(id) {
   if (id === 'dash') renderDashboard();
 }
 
-// ════════════════════════════════════════
-// TAB 0 — LIVE LISTINGS
-// ════════════════════════════════════════
-function renderLiveJobs() {
-  const f = S.liveFilter;
-  const list = f === 'all' ? LIVE_JOBS : LIVE_JOBS.filter(j => j.cat === f);
-  document.getElementById('liveBadge').textContent = LIVE_JOBS.length;
-  document.getElementById('liveJobsGrid').innerHTML = list.map(j => `
-    <div class="job-listing-card">
-      <img class="jlc-logo"
-           src="https://www.google.com/s2/favicons?domain=${j.domain}&sz=64"
-           alt="${esc(j.company)}"
-           onerror="this.style.display='none'">
-      <div class="jlc-body">
-        <div class="jlc-title">${esc(j.title)}</div>
-        <div class="jlc-meta">
-          <span class="jlc-company">${esc(j.company)}</span>
-          <span>📍 ${esc(j.location)}</span>
-          <span class="jlc-tag" style="color:${j.tagColor};background:${j.tagBg}">${esc(j.type)}</span>
-        </div>
-      </div>
-      <a class="jlc-apply" href="${j.url}" target="_blank" rel="noopener">Apply ↗</a>
-    </div>`).join('');
-}
-
-function filterLive(val, el) {
-  document.querySelectorAll('#liveFilters .filter-chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-  S.liveFilter = val;
-  renderLiveJobs();
-}
 
 // ════════════════════════════════════════
 // TAB 1 — SEARCH BOARDS
@@ -1227,7 +1202,6 @@ function toast(msg) {
 // ════════════════════════════════════════
 (function init() {
   hydrate();
-  renderLiveJobs();
   renderSearchBoards();
   renderCompanies();
   renderApps();
