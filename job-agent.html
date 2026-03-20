@@ -527,6 +527,10 @@ const COMPANIES = [
   { id:'tempus',      name:'Tempus AI',     cat:'Expansion', domain:'tempus.com',      url:'https://www.tempus.com/careers',              why:'AI health data company needing Japan pharma partnerships. Japan is the world\'s third largest pharma market — enterprise BD with institutional partners is the core skill required.' },
   { id:'veeva',       name:'Veeva Systems', cat:'Expansion', domain:'veeva.com',       url:'https://careers.veeva.com',                   why:'Life sciences cloud deeply embedded in Japan pharma. Japan pharma market is massive and Veeva\'s enterprise expansion requires a senior sales leader who can navigate large institutional accounts.' },
 
+  // Beauty & Wellness Marketplace
+  { id:'fresha', name:'Fresha', cat:'Expansion', domain:'fresha.com', url:'https://www.fresha.com/careers',
+    why:'World\'s #1 beauty and wellness marketplace expanding globally. Head of Japan is a classic First Hire role requiring Japan market entry expertise, C-suite partnership building, and 0-to-1 GTM execution — exactly what Seungjun has done at Wolt Drive, Uber JUMP, and in Indonesia.' },
+
   // Japan Expansion — Climate Tech & Smart City
   { id:'aurorasolar', name:'Aurora Solar',  cat:'Expansion', domain:'aurorasolar.com', url:'https://aurorasolar.com/careers',             why:'Solar software company — Japan\'s renewable energy push is one of the fastest growing in Asia. Enterprise SaaS sales experience is a direct fit for targeting utility and EPC customers.' },
   { id:'samsara',     name:'Samsara',       cat:'Expansion', domain:'samsara.com',     url:'https://www.samsara.com/company/careers',     why:'Fleet management IoT platform expanding in Japan\'s logistics market. Mobility and logistics background from Wolt and Uber is a direct match for selling to fleet operators and manufacturers.' },
@@ -618,6 +622,42 @@ const LIVE_JOBS = [
 ];
 
 // ════════════════════════════════════════
+// DEFAULT APPLICATIONS (active pipeline)
+// ════════════════════════════════════════
+const DEFAULT_APPS = [
+  {
+    id: 'app_wonderful',
+    company: 'Wonderful.ai',
+    role: 'Japan GM / Country Manager',
+    url: '',
+    date: '2026-03-17',
+    status: 'Interview',
+    notes: 'Recruiter screening with Virginia Campo (COO, Breakmark) went great. Promised to introduce to Chief of Staff. Next step coming this week.',
+    createdAt: '2026-03-17T00:00:00',
+  },
+  {
+    id: 'app_headout',
+    company: 'Headout',
+    role: 'BD Manager Japan',
+    url: '',
+    date: '2026-03-17',
+    status: 'Interview',
+    notes: 'Case study preparation completed. Web scraping of UberEats and Demaecan done. Waiting for feedback.',
+    createdAt: '2026-03-17T00:00:00',
+  },
+  {
+    id: 'app_fresha',
+    company: 'Fresha',
+    role: 'Head of Japan',
+    url: 'https://www.fresha.com/careers',
+    date: '2026-03-20',
+    status: 'Applied',
+    notes: 'Process ongoing. First contact made. Fresha is the world\'s largest beauty & wellness marketplace. Japan market entry role — ideal First Hire position.',
+    createdAt: '2026-03-20T00:00:00',
+  },
+];
+
+// ════════════════════════════════════════
 // STATE
 // ════════════════════════════════════════
 const S = {
@@ -638,7 +678,29 @@ function persist() {
 }
 function hydrate() {
   S.apiKey = localStorage.getItem('ja2_apikey') || '';
-  try { S.apps    = JSON.parse(localStorage.getItem('ja2_apps'))    || []; } catch(e){}
+  try {
+    const stored = JSON.parse(localStorage.getItem('ja2_apps'));
+    if (!stored || stored.length === 0) {
+      // First load — seed with active pipeline
+      S.apps = DEFAULT_APPS.slice();
+    } else {
+      S.apps = stored;
+      // Migrate: add missing default apps and update notes on existing ones
+      let changed = false;
+      DEFAULT_APPS.forEach(da => {
+        const existing = S.apps.find(a => a.id === da.id);
+        if (existing) {
+          existing.notes = da.notes;
+          changed = true;
+        } else {
+          S.apps.unshift(da);
+          changed = true;
+        }
+      });
+      if (changed) persist();
+    }
+    persist();
+  } catch(e) { S.apps = DEFAULT_APPS.slice(); persist(); }
   try { S.watched = new Set(JSON.parse(localStorage.getItem('ja2_watched')) || []); } catch(e){}
 }
 
@@ -1019,7 +1081,7 @@ function renderDashboard() {
   const expansionBySubcat = [
     { label: 'AI / LLM',      ids: ['perplexity','cohere','mistral','xai','stabilityai','elevenlabs','runwayml'] },
     { label: 'Autonomous',    ids: ['waymo','nuro','zoox','maymobility','gatik','joby','archer'] },
-    { label: 'Delivery',      ids: ['getir','gopuff','glovo','instacart'] },
+    { label: 'Delivery',      ids: ['getir','gopuff','glovo','instacart','fresha'] },
     { label: 'Fintech',       ids: ['revolut','wise','airwallex','rapyd','nium'] },
     { label: 'B2B SaaS',      ids: ['rippling','linear','retool','vercel','loom','deel','remote'] },
     { label: 'HealthTech',    ids: ['himshers','noom','tempus','veeva'] },

@@ -830,7 +830,7 @@ const DEFAULT_CARDS = [
     role: 'Japan GM / Country Manager',
     col: 'screening',
     date: '2026-03-17',
-    note: 'Recruiter screening went great. Virginia Campo promised to introduce me to Chief of Staff. Next step coming this week.',
+    note: 'Recruiter screening with Virginia Campo (COO, Breakmark) went great. Promised to introduce to Chief of Staff. Next step coming this week.',
     color: 'border-green',
   },
   {
@@ -839,10 +839,35 @@ const DEFAULT_CARDS = [
     role: 'BD Manager Japan',
     col: 'screening',
     date: '2026-03-17',
-    note: 'Case study preparation done. Web scraping of UberEats and Demaecan completed.',
+    note: 'Case study preparation completed. Web scraping of UberEats and Demaecan done. Waiting for feedback.',
     color: 'border-blue',
   },
+  {
+    id: 'card_fresha',
+    company: 'Fresha',
+    role: 'Head of Japan',
+    col: 'screening',
+    date: '2026-03-20',
+    note: 'Process ongoing. First contact made. Fresha is the world\'s largest beauty & wellness marketplace. Japan market entry role — ideal First Hire position.',
+    color: 'border-purple',
+  },
 ];
+
+function migratePipeline() {
+  const raw = localStorage.getItem(PIPELINE_KEY);
+  if (!raw) return; // first load — DEFAULT_CARDS will be used
+  try {
+    let cards = JSON.parse(raw);
+    let changed = false;
+    // Update notes on existing cards
+    DEFAULT_CARDS.forEach(dc => {
+      const c = cards.find(x => x.id === dc.id);
+      if (c) { c.note = dc.note; c.col = dc.col; changed = true; }
+      else if (!cards.find(x => x.id === dc.id)) { cards.push(dc); changed = true; }
+    });
+    if (changed) localStorage.setItem(PIPELINE_KEY, JSON.stringify(cards));
+  } catch(e) {}
+}
 
 function loadCards() {
   try {
@@ -1180,6 +1205,7 @@ Respond in English.`;
 /* ─────────────────────────────────────────────
    INIT
 ───────────────────────────────────────────── */
+migratePipeline();
 renderPipeline();
 renderTimeline();
 </script>
