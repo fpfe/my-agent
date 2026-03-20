@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Learning Tracker</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; color: #1a2332; }
+
+  header {
+    background: linear-gradient(135deg, #1a2332 0%, #243447 100%);
+    color: white; padding: 28px 24px; text-align: center;
+    box-shadow: 0 4px 20px rgba(26,35,50,0.3);
+  }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
+  header p { opacity: 0.7; margin-top: 6px; font-size: 0.95rem; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+  /* METRIC CARDS */
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+  .metric-card {
+    background: white; border-radius: 14px; padding: 22px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .metric-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .metric-icon { font-size: 1.8rem; margin-bottom: 8px; }
+  .metric-value { font-size: 2rem; font-weight: 700; color: #1a2332; }
+  .metric-label { font-size: 0.78rem; color: #7a8ea0; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+  /* SECTION */
+  .section { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 24px; }
+  .section-title { font-size: 1.05rem; font-weight: 700; color: #1a2332; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+
+  /* CONTRIBUTION GRID */
+  .contrib-grid { display: flex; gap: 4px; flex-wrap: wrap; }
+  .contrib-cell {
+    width: 18px; height: 18px; border-radius: 3px; cursor: pointer;
+    transition: transform 0.15s; position: relative;
+  }
+  .contrib-cell:hover { transform: scale(1.3); z-index: 10; }
+  .contrib-cell .tooltip {
+    display: none; position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%);
+    background: #1a2332; color: white; padding: 5px 9px; border-radius: 6px;
+    font-size: 0.7rem; white-space: nowrap; z-index: 20; pointer-events: none;
+  }
+  .contrib-cell:hover .tooltip { display: block; }
+  .contrib-0 { background: #e2e8f0; }
+  .contrib-1 { background: #86efac; }
+  .contrib-2 { background: #22c55e; }
+  .contrib-3 { background: #15803d; }
+  .contrib-legend { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 0.75rem; color: #7a8ea0; }
+  .legend-cell { width: 14px; height: 14px; border-radius: 2px; }
+
+  /* KNOWLEDGE MAP */
+  .knowledge-map { }
+  .map-row-label { font-size: 0.72rem; font-weight: 600; color: #7a8ea0; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 8px; }
+  .map-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .map-cell {
+    padding: 10px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s; border: 2px solid transparent;
+    user-select: none;
+  }
+  .map-cell:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .map-0 { background: #e2e8f0; color: #7a8ea0; }
+  .map-1 { background: #bfdbfe; color: #1e40af; border-color: #93c5fd; }
+  .map-2 { background: #60a5fa; color: white; }
+  .map-3 { background: #1a2332; color: white; box-shadow: 0 2px 8px rgba(26,35,50,0.3); }
+  .map-legend { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+  .map-legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #7a8ea0; }
+  .map-legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+
+  /* FORM */
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label { font-size: 0.82rem; font-weight: 600; color: #4a5568; }
+  .form-group input, .form-group select, .form-group textarea {
+    border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;
+    font-size: 0.9rem; font-family: inherit; transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fafbfc; color: #1a2332;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  /* STARS */
+  .stars { display: flex; gap: 4px; }
+  .star { font-size: 1.6rem; cursor: pointer; opacity: 0.3; transition: opacity 0.15s, transform 0.15s; }
+  .star.active { opacity: 1; }
+  .star:hover { transform: scale(1.2); }
+
+  /* BUTTONS */
+  .btn {
+    padding: 11px 22px; border-radius: 9px; border: none; cursor: pointer;
+    font-size: 0.9rem; font-weight: 600; font-family: inherit;
+    transition: all 0.2s; display: inline-flex; align-items: center; gap: 7px;
+  }
+  .btn-primary { background: #1a2332; color: white; }
+  .btn-primary:hover { background: #243447; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,35,50,0.3); }
+  .btn-blue { background: #3b82f6; color: white; }
+  .btn-blue:hover { background: #2563eb; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59,130,246,0.35); }
+  .btn-outline { background: white; color: #1a2332; border: 1.5px solid #e2e8f0; }
+  .btn-outline:hover { border-color: #3b82f6; color: #3b82f6; }
+
+  /* ENTRIES LIST */
+  .entries-list { display: flex; flex-direction: column; gap: 12px; max-height: 420px; overflow-y: auto; }
+  .entry-card {
+    border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 14px 16px;
+    transition: border-color 0.2s;
+  }
+  .entry-card:hover { border-color: #93c5fd; }
+  .entry-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .entry-topic { font-weight: 700; font-size: 0.95rem; }
+  .entry-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .badge {
+    padding: 3px 9px; border-radius: 20px; font-size: 0.72rem; font-weight: 600;
+  }
+  .badge-category { background: #eff6ff; color: #1d4ed8; }
+  .badge-source { background: #f0fdf4; color: #166534; }
+  .badge-time { background: #fefce8; color: #854d0e; }
+  .entry-learned { font-size: 0.85rem; color: #4a5568; margin-top: 8px; line-height: 1.5; }
+  .entry-date { font-size: 0.75rem; color: #7a8ea0; white-space: nowrap; }
+  .entry-stars { color: #f59e0b; font-size: 0.85rem; }
+
+  /* QUIZ */
+  .quiz-container { }
+  .quiz-question { font-size: 1rem; font-weight: 600; margin-bottom: 16px; line-height: 1.5; }
+  .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+  .quiz-option {
+    padding: 12px 16px; border-radius: 9px; border: 1.5px solid #e2e8f0;
+    cursor: pointer; font-size: 0.9rem; transition: all 0.2s; text-align: left; background: white;
+    font-family: inherit;
+  }
+  .quiz-option:hover { border-color: #3b82f6; background: #eff6ff; }
+  .quiz-option.correct { border-color: #22c55e; background: #f0fdf4; color: #166534; }
+  .quiz-option.wrong { border-color: #ef4444; background: #fef2f2; color: #991b1b; }
+  .quiz-option.disabled { cursor: default; }
+  .quiz-explanation { margin-top: 14px; padding: 12px 14px; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; color: #4a5568; line-height: 1.6; border-left: 3px solid #3b82f6; }
+  .quiz-progress { display: flex; gap: 6px; margin-bottom: 18px; }
+  .quiz-dot { width: 10px; height: 10px; border-radius: 50%; background: #e2e8f0; }
+  .quiz-dot.active { background: #3b82f6; }
+  .quiz-dot.done-correct { background: #22c55e; }
+  .quiz-dot.done-wrong { background: #ef4444; }
+  .quiz-loading { text-align: center; padding: 30px; color: #7a8ea0; }
+  .quiz-loading .spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid #e2e8f0; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* API KEY */
+  .api-key-section { padding: 16px; background: #f8fafc; border-radius: 10px; border: 1.5px dashed #cbd5e1; margin-bottom: 16px; }
+  .api-key-section label { font-size: 0.82rem; font-weight: 600; color: #4a5568; display: block; margin-bottom: 6px; }
+  .api-key-row { display: flex; gap: 8px; }
+  .api-key-row input { flex: 1; }
+
+  /* TOAST */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px; background: #1a2332; color: white;
+    padding: 12px 18px; border-radius: 10px; font-size: 0.88rem; font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2); z-index: 1000;
+    transform: translateY(100px); opacity: 0; transition: all 0.3s;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    z-index: 500; align-items: center; justify-content: center; padding: 16px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: white; border-radius: 16px; padding: 28px; max-width: 520px; width: 100%;
+    max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    animation: slideUp 0.25s ease;
+  }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .modal-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+  .modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    header h1 { font-size: 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .metrics { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* TABS */
+  .tabs { display: flex; gap: 4px; background: #f0f4f8; border-radius: 10px; padding: 4px; margin-bottom: 20px; }
+  .tab { flex: 1; padding: 8px 12px; border-radius: 7px; border: none; cursor: pointer; font-size: 0.85rem; font-weight: 600; font-family: inherit; color: #7a8ea0; background: transparent; transition: all 0.2s; }
+  .tab.active { background: white; color: #1a2332; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+  .delete-btn { background: none; border: none; cursor: pointer; color: #cbd5e1; font-size: 1rem; padding: 2px; transition: color 0.15s; }
+  .delete-btn:hover { color: #ef4444; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 AI Learning Tracker</h1>
+  <p>Track your journey to AI expertise • Seungjun's Sabbatical 2026</p>
+</header>
+
+<div class="container">
+
+  <!-- METRICS -->
+  <div class="metrics" id="metricsRow">
+    <div class="metric-card">
+      <div class="metric-icon">📅</div>
+      <div class="metric-value" id="m-days">0</div>
+      <div class="metric-label">Days Studied</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">⏱️</div>
+      <div class="metric-value" id="m-hours">0</div>
+      <div class="metric-label">Total Hours</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">🏆</div>
+      <div class="metric-value" id="m-top" style="font-size:1rem; padding-top:4px">—</div>
+      <div class="metric-label">Top Category</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">🔥</div>
+      <div class="metric-value" id="m-streak">0</div>
+      <div class="metric-label">Day Streak</div>
+    </div>
+  </div>
+
+  <!-- CONTRIBUTION GRID -->
+  <div class="section">
+    <div class="section-title">📊 Last 30 Days Activity</div>
+    <div class="contrib-grid" id="contribGrid"></div>
+    <div class="contrib-legend">
+      <span>Less</span>
+      <div class="legend-cell contrib-0"></div>
+      <div class="legend-cell contrib-1"></div>
+      <div class="legend-cell contrib-2"></div>
+      <div class="legend-cell contrib-3"></div>
+      <span>More</span>
+    </div>
+  </div>
+
+  <!-- KNOWLEDGE MAP -->
+  <div class="section">
+    <div class="section-title">🗺️ Knowledge Map <span style="font-size:0.78rem; font-weight:400; color:#7a8ea0; margin-left:4px">Click a topic to log a new entry</span></div>
+    <div id="knowledgeMap"></div>
+    <div class="map-legend">
+      <div class="map-legend-item"><div class="map-legend-dot map-0"></div> Not studied</div>
+      <div class="map-legend-item"><div class="map-legend-dot map-1"></div> Learning (1–2×)</div>
+      <div class="map-legend-item"><div class="map-legend-dot map-2"></div> Practiced (3–5×)</div>
+      <div class="map-legend-item"><div class="map-legend-dot map-3"></div> Confident</div>
+    </div>
+  </div>
+
+  <!-- MAIN TWO-COL -->
+  <div class="two-col">
+
+    <!-- LOG + ENTRIES -->
+    <div>
+      <!-- LOG FORM -->
+      <div class="section">
+        <div class="section-title">✏️ Log Today's Learning</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="f-date">
+          </div>
+          <div class="form-group">
+            <label>Topic</label>
+            <input type="text" id="f-topic" placeholder="e.g. RAG Fundamentals">
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="f-category">
+              <option value="AI Fundamentals">AI Fundamentals</option>
+              <option value="LLM & Prompting">LLM & Prompting</option>
+              <option value="Vibe Coding">Vibe Coding</option>
+              <option value="AI Tools & Products">AI Tools & Products</option>
+              <option value="AI Business Strategy">AI Business Strategy</option>
+              <option value="Interview Prep">Interview Prep</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Source</label>
+            <select id="f-source">
+              <option value="Claude.ai chat">Claude.ai chat</option>
+              <option value="YouTube">YouTube</option>
+              <option value="Article/Blog">Article/Blog</option>
+              <option value="Book">Book</option>
+              <option value="Hands-on Practice">Hands-on Practice</option>
+              <option value="Interview/Meeting">Interview/Meeting</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>What I Learned</label>
+            <textarea id="f-learned" placeholder="Describe what you learned today..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Difficulty</label>
+            <div class="stars" id="starsInput">
+              <span class="star" data-v="1">⭐</span>
+              <span class="star" data-v="2">⭐</span>
+              <span class="star" data-v="3">⭐</span>
+              <span class="star" data-v="4">⭐</span>
+              <span class="star" data-v="5">⭐</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Time Spent (minutes)</label>
+            <input type="number" id="f-time" placeholder="60" min="1">
+          </div>
+          <div class="form-group full">
+            <button class="btn btn-primary" onclick="saveEntry()">💾 Save Entry</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRIES -->
+      <div class="section">
+        <div class="section-title">📖 Learning History</div>
+        <div class="entries-list" id="entriesList"></div>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div>
+      <div class="section">
+        <div class="section-title">🧠 Knowledge Quiz</div>
+
+        <div class="api-key-section">
+          <label>Anthropic API Key</label>
+          <div class="api-key-row">
+            <input type="password" id="apiKeyInput" placeholder="sk-ant-..." style="font-family: monospace; font-size: 0.82rem;">
+            <button class="btn btn-outline" onclick="saveApiKey()">Save</button>
+          </div>
+          <div style="font-size: 0.73rem; color: #7a8ea0; margin-top: 5px;">Stored locally as 'ja2_apikey'</div>
+        </div>
+
+        <div id="quizStart">
+          <p style="font-size: 0.88rem; color: #4a5568; margin-bottom: 16px; line-height: 1.6;">
+            Generate personalized quiz questions based on your recent learning entries using Claude AI.
+          </p>
+          <button class="btn btn-blue" onclick="startQuiz()" style="width: 100%; justify-content: center;">
+            🧠 Test My Knowledge
+          </button>
+        </div>
+
+        <div id="quizArea" style="display:none;">
+          <div class="quiz-progress" id="quizProgress"></div>
+          <div id="quizContent"></div>
+        </div>
+      </div>
+
+      <!-- QUICK STATS BY CATEGORY -->
+      <div class="section">
+        <div class="section-title">📈 Category Breakdown</div>
+        <div id="categoryStats"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL for quick-log from knowledge map -->
+<div class="modal-overlay" id="quickLogModal">
+  <div class="modal">
+    <div class="modal-title">📝 Quick Log: <span id="modalTopic"></span></div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="m-date">
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <select id="m-category">
+          <option value="AI Fundamentals">AI Fundamentals</option>
+          <option value="LLM & Prompting">LLM & Prompting</option>
+          <option value="Vibe Coding">Vibe Coding</option>
+          <option value="AI Tools & Products">AI Tools & Products</option>
+          <option value="AI Business Strategy">AI Business Strategy</option>
+          <option value="Interview Prep">Interview Prep</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>What I Learned</label>
+        <textarea id="m-learned" placeholder="Describe what you learned..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Source</label>
+        <select id="m-source">
+          <option value="Claude.ai chat">Claude.ai chat</option>
+          <option value="YouTube">YouTube</option>
+          <option value="Article/Blog">Article/Blog</option>
+          <option value="Book">Book</option>
+          <option value="Hands-on Practice">Hands-on Practice</option>
+          <option value="Interview/Meeting">Interview/Meeting</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Time (minutes)</label>
+        <input type="number" id="m-time" placeholder="30" min="1">
+      </div>
+      <div class="form-group">
+        <label>Difficulty</label>
+        <div class="stars" id="modalStars">
+          <span class="star" data-v="1">⭐</span>
+          <span class="star" data-v="2">⭐</span>
+          <span class="star" data-v="3">⭐</span>
+          <span class="star" data-v="4">⭐</span>
+          <span class="star" data-v="5">⭐</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveModalEntry()">💾 Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────────────────
+const STORAGE_KEY = 'ai_tracker_entries';
+let currentStarRating = 0;
+let modalStarRating = 0;
+let quizQuestions = [];
+let quizIndex = 0;
+let quizAnswers = [];
+let currentModalTopic = '';
+
+const KNOWLEDGE_MAP = [
+  { row: '🔬 Foundations', topics: ['LLM Basics', 'Prompting', 'RAG', 'Fine-tuning', 'AI Agents'] },
+  { row: '🛠️ Tools', topics: ['Claude', 'ChatGPT', 'Cursor', 'GitHub', 'APIs'] },
+  { row: '💼 Business', topics: ['GTM Strategy', 'Sales', 'Market Entry', 'Product Strategy', 'AI Trends'] },
+  { row: '💻 Technical', topics: ['Python', 'JavaScript', 'HTML/CSS', 'Git', 'Vibe Coding'] },
+];
+
+const SEED_ENTRIES = [
+  {
+    id: 'seed1',
+    date: '2026-03-17',
+    topic: 'Vibe Coding Fundamentals',
+    category: 'Vibe Coding',
+    learned: 'Built todo.html, daily-planner.html, job-agent.html from scratch using Claude Code. Learned JSON, HTML, APIs, Google Calendar integration basics.',
+    source: 'Hands-on Practice',
+    difficulty: 3,
+    time: 180,
+  },
+  {
+    id: 'seed2',
+    date: '2026-03-19',
+    topic: 'GitHub & AI API Integration',
+    category: 'Vibe Coding',
+    learned: 'Published apps to GitHub Pages. Learned git push, .gitignore, deploy.sh automation. Integrated Anthropic API into web app to create AI Daily Coach.',
+    source: 'Hands-on Practice',
+    difficulty: 4,
+    time: 120,
+  },
+  {
+    id: 'seed3',
+    date: '2026-03-20',
+    topic: 'AI Learning Tracker Development',
+    category: 'AI Tools & Products',
+    learned: 'Building an AI-powered learning tracker with knowledge maps, contribution grids, and quiz features using Claude Code.',
+    source: 'Hands-on Practice',
+    difficulty: 4,
+    time: 60,
+  },
+];
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+function getEntries() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) return JSON.parse(raw);
+  // First load: seed entries
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_ENTRIES));
+  return SEED_ENTRIES;
+}
+function saveEntries(entries) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+function formatDate(d) {
+  return new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+// ── STARS ──────────────────────────────────────────────────────────────────
+function initStars(containerId, setter) {
+  const stars = document.querySelectorAll(`#${containerId} .star`);
+  stars.forEach(s => {
+    s.addEventListener('mouseover', () => highlightStars(stars, parseInt(s.dataset.v)));
+    s.addEventListener('mouseout', () => highlightStars(stars, setter()));
+    s.addEventListener('click', () => {
+      setter(parseInt(s.dataset.v));
+      highlightStars(stars, setter());
+    });
+  });
+}
+function highlightStars(stars, n) {
+  stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.v) <= n));
+}
+
+// ── METRICS ────────────────────────────────────────────────────────────────
+function updateMetrics() {
+  const entries = getEntries();
+  const uniqueDays = new Set(entries.map(e => e.date)).size;
+  const totalMin = entries.reduce((a, e) => a + (parseInt(e.time) || 0), 0);
+  const totalHours = (totalMin / 60).toFixed(1);
+
+  const catCount = {};
+  entries.forEach(e => catCount[e.category] = (catCount[e.category] || 0) + (parseInt(e.time) || 0));
+  const topCat = Object.entries(catCount).sort((a,b) => b[1]-a[1])[0];
+  const topCatLabel = topCat ? topCat[0].replace('AI ', '').replace(' & ', '/') : '—';
+
+  // Streak
+  const days = [...new Set(entries.map(e => e.date))].sort().reverse();
+  let streak = 0;
+  const today = todayStr();
+  let check = today;
+  for (const d of days) {
+    if (d === check) { streak++; check = prevDay(check); }
+    else if (d < check) break;
+  }
+
+  document.getElementById('m-days').textContent = uniqueDays;
+  document.getElementById('m-hours').textContent = totalHours;
+  document.getElementById('m-top').textContent = topCatLabel;
+  document.getElementById('m-streak').textContent = streak;
+}
+
+function prevDay(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  d.setDate(d.getDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+// ── CONTRIBUTION GRID ──────────────────────────────────────────────────────
+function buildContribGrid() {
+  const entries = getEntries();
+  const minutesByDay = {};
+  entries.forEach(e => {
+    minutesByDay[e.date] = (minutesByDay[e.date] || 0) + (parseInt(e.time) || 0);
+  });
+
+  const grid = document.getElementById('contribGrid');
+  grid.innerHTML = '';
+  const today = new Date();
+  for (let i = 29; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().slice(0, 10);
+    const mins = minutesByDay[ds] || 0;
+    let cls = 'contrib-0';
+    if (mins > 0 && mins <= 30) cls = 'contrib-1';
+    else if (mins > 30 && mins <= 60) cls = 'contrib-2';
+    else if (mins > 60) cls = 'contrib-3';
+    const cell = document.createElement('div');
+    cell.className = `contrib-cell ${cls}`;
+    cell.innerHTML = `<div class="tooltip">${formatDate(ds)}: ${mins} min</div>`;
+    grid.appendChild(cell);
+  }
+}
+
+// ── KNOWLEDGE MAP ──────────────────────────────────────────────────────────
+function buildKnowledgeMap() {
+  const entries = getEntries();
+  const countByTopic = {};
+  entries.forEach(e => {
+    const t = (e.topic || '').toLowerCase();
+    KNOWLEDGE_MAP.forEach(row => row.topics.forEach(topic => {
+      if (t.includes(topic.toLowerCase())) {
+        countByTopic[topic] = (countByTopic[topic] || 0) + 1;
+      }
+    }));
+    // Also check category-based
+    if (e.category === 'Vibe Coding') countByTopic['Vibe Coding'] = (countByTopic['Vibe Coding'] || 0) + 1;
+    if (e.category === 'LLM & Prompting') countByTopic['Prompting'] = (countByTopic['Prompting'] || 0) + 1;
+    if (e.topic === 'GitHub & AI API Integration') {
+      countByTopic['GitHub'] = (countByTopic['GitHub'] || 0) + 1;
+      countByTopic['APIs'] = (countByTopic['APIs'] || 0) + 1;
+    }
+    if (e.topic === 'Vibe Coding Fundamentals') {
+      countByTopic['HTML/CSS'] = (countByTopic['HTML/CSS'] || 0) + 1;
+      countByTopic['JavaScript'] = (countByTopic['JavaScript'] || 0) + 1;
+    }
+  });
+
+  const container = document.getElementById('knowledgeMap');
+  container.innerHTML = '';
+  KNOWLEDGE_MAP.forEach(row => {
+    const rowLabel = document.createElement('div');
+    rowLabel.className = 'map-row-label';
+    rowLabel.textContent = row.row;
+    container.appendChild(rowLabel);
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'map-row';
+    row.topics.forEach(topic => {
+      const count = countByTopic[topic] || 0;
+      let cls = 'map-0';
+      if (count >= 6) cls = 'map-3';
+      else if (count >= 3) cls = 'map-2';
+      else if (count >= 1) cls = 'map-1';
+      const cell = document.createElement('div');
+      cell.className = `map-cell ${cls}`;
+      cell.textContent = topic;
+      cell.title = `${topic}: studied ${count}×`;
+      cell.onclick = () => openQuickLog(topic, row.row);
+      rowDiv.appendChild(cell);
+    });
+    container.appendChild(rowDiv);
+  });
+}
+
+function openQuickLog(topic, rowLabel) {
+  currentModalTopic = topic;
+  document.getElementById('modalTopic').textContent = topic;
+  document.getElementById('m-date').value = todayStr();
+  document.getElementById('m-learned').value = '';
+  document.getElementById('m-time').value = '';
+  modalStarRating = 0;
+  highlightStars(document.querySelectorAll('#modalStars .star'), 0);
+
+  // Auto-set category
+  if (rowLabel.includes('Foundations')) document.getElementById('m-category').value = 'AI Fundamentals';
+  else if (rowLabel.includes('Tools')) document.getElementById('m-category').value = 'AI Tools & Products';
+  else if (rowLabel.includes('Business')) document.getElementById('m-category').value = 'AI Business Strategy';
+  else if (rowLabel.includes('Technical')) document.getElementById('m-category').value = 'Vibe Coding';
+
+  document.getElementById('quickLogModal').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('quickLogModal').classList.remove('open');
+}
+
+function saveModalEntry() {
+  const topic = currentModalTopic;
+  const date = document.getElementById('m-date').value;
+  const category = document.getElementById('m-category').value;
+  const learned = document.getElementById('m-learned').value.trim();
+  const source = document.getElementById('m-source').value;
+  const time = parseInt(document.getElementById('m-time').value) || 0;
+  if (!topic || !date || !learned) { showToast('Please fill in all required fields'); return; }
+  const entries = getEntries();
+  entries.unshift({ id: Date.now().toString(), date, topic, category, learned, source, difficulty: modalStarRating, time });
+  saveEntries(entries);
+  closeModal();
+  refreshAll();
+  showToast('✅ Entry saved!');
+}
+
+// ── ENTRIES LIST ───────────────────────────────────────────────────────────
+function renderEntries() {
+  const entries = getEntries().slice().sort((a, b) => b.date.localeCompare(a.date));
+  const list = document.getElementById('entriesList');
+  if (entries.length === 0) { list.innerHTML = '<p style="color:#7a8ea0; text-align:center; padding:20px;">No entries yet. Start logging!</p>'; return; }
+  list.innerHTML = entries.map(e => `
+    <div class="entry-card">
+      <div class="entry-header">
+        <div>
+          <div class="entry-topic">${e.topic}</div>
+          <div class="entry-meta">
+            <span class="badge badge-category">${e.category}</span>
+            <span class="badge badge-source">${e.source}</span>
+            <span class="badge badge-time">⏱ ${e.time} min</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+          <div class="entry-date">${formatDate(e.date)}</div>
+          <div class="entry-stars">${'⭐'.repeat(e.difficulty || 0)}</div>
+          <button class="delete-btn" onclick="deleteEntry('${e.id}')">🗑</button>
+        </div>
+      </div>
+      <div class="entry-learned">${e.learned}</div>
+    </div>
+  `).join('');
+}
+
+function deleteEntry(id) {
+  const entries = getEntries().filter(e => e.id !== id);
+  saveEntries(entries);
+  refreshAll();
+  showToast('Entry deleted');
+}
+
+// ── SAVE FORM ──────────────────────────────────────────────────────────────
+function saveEntry() {
+  const date = document.getElementById('f-date').value;
+  const topic = document.getElementById('f-topic').value.trim();
+  const category = document.getElementById('f-category').value;
+  const learned = document.getElementById('f-learned').value.trim();
+  const source = document.getElementById('f-source').value;
+  const time = parseInt(document.getElementById('f-time').value) || 0;
+  if (!date || !topic || !learned) { showToast('⚠️ Please fill in date, topic, and what you learned'); return; }
+  const entries = getEntries();
+  entries.unshift({ id: Date.now().toString(), date, topic, category, learned, source, difficulty: currentStarRating, time });
+  saveEntries(entries);
+  document.getElementById('f-topic').value = '';
+  document.getElementById('f-learned').value = '';
+  document.getElementById('f-time').value = '';
+  currentStarRating = 0;
+  highlightStars(document.querySelectorAll('#starsInput .star'), 0);
+  refreshAll();
+  showToast('✅ Entry saved!');
+}
+
+// ── CATEGORY STATS ─────────────────────────────────────────────────────────
+function renderCategoryStats() {
+  const entries = getEntries();
+  const catTime = {};
+  entries.forEach(e => catTime[e.category] = (catTime[e.category] || 0) + (parseInt(e.time) || 0));
+  const sorted = Object.entries(catTime).sort((a,b) => b[1]-a[1]);
+  const max = sorted[0]?.[1] || 1;
+  const colors = ['#3b82f6','#8b5cf6','#f59e0b','#10b981','#ef4444','#ec4899'];
+  const container = document.getElementById('categoryStats');
+  if (sorted.length === 0) { container.innerHTML = '<p style="color:#7a8ea0;font-size:0.88rem">No data yet</p>'; return; }
+  container.innerHTML = sorted.map(([cat, mins], i) => `
+    <div style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:0.82rem">
+        <span style="font-weight:600;color:#1a2332">${cat}</span>
+        <span style="color:#7a8ea0">${(mins/60).toFixed(1)}h</span>
+      </div>
+      <div style="background:#e2e8f0;border-radius:20px;height:8px;overflow:hidden">
+        <div style="height:100%;border-radius:20px;background:${colors[i%colors.length]};width:${(mins/max*100).toFixed(1)}%;transition:width 0.5s"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── QUIZ ───────────────────────────────────────────────────────────────────
+function getApiKey() { return localStorage.getItem('ja2_apikey') || ''; }
+function saveApiKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) { showToast('Enter an API key first'); return; }
+  localStorage.setItem('ja2_apikey', key);
+  showToast('🔑 API key saved');
+}
+
+async function startQuiz() {
+  const apiKey = getApiKey();
+  if (!apiKey) { showToast('⚠️ Please save your Anthropic API key first'); document.getElementById('apiKeyInput').focus(); return; }
+  const entries = getEntries().slice(0, 10);
+  if (entries.length === 0) { showToast('Add some learning entries first!'); return; }
+
+  document.getElementById('quizStart').style.display = 'none';
+  document.getElementById('quizArea').style.display = 'block';
+  document.getElementById('quizContent').innerHTML = `
+    <div class="quiz-loading">
+      <div class="spinner"></div>
+      <div>Generating quiz questions...</div>
+    </div>`;
+
+  const context = entries.map(e => `- ${e.date}: ${e.topic} (${e.category}) — ${e.learned.slice(0,200)}`).join('\n');
+
+  const prompt = `Based on these recent AI learning entries from Seungjun:
+${context}
+
+Generate exactly 3 multiple-choice quiz questions to test his knowledge. Each question must be about something he actually studied.
+
+Return ONLY valid JSON in this exact format, no extra text:
+{
+  "questions": [
+    {
+      "question": "Question text here?",
+      "options": ["A) Option 1", "B) Option 2", "C) Option 3", "D) Option 4"],
+      "correct": 0,
+      "explanation": "Brief explanation of why this is correct."
+    }
+  ]
+}
+
+The "correct" field is the 0-based index of the correct option.`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1200,
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.error?.message || 'API error');
+    }
+
+    const data = await response.json();
+    const text = data.content[0].text.trim();
+    const parsed = JSON.parse(text);
+    quizQuestions = parsed.questions;
+    quizIndex = 0;
+    quizAnswers = [];
+    renderQuizQuestion();
+  } catch (e) {
+    document.getElementById('quizContent').innerHTML = `
+      <div style="color:#ef4444; padding:16px; text-align:center; font-size:0.88rem">
+        ❌ ${e.message || 'Failed to generate quiz. Check your API key.'}
+      </div>
+      <button class="btn btn-outline" onclick="resetQuiz()" style="margin-top:12px; width:100%; justify-content:center">Try Again</button>`;
+  }
+}
+
+function renderQuizProgress() {
+  const prog = document.getElementById('quizProgress');
+  prog.innerHTML = quizQuestions.map((_, i) => {
+    let cls = 'quiz-dot';
+    if (i < quizAnswers.length) {
+      cls += quizAnswers[i].correct ? ' done-correct' : ' done-wrong';
+    } else if (i === quizIndex) cls += ' active';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+}
+
+function renderQuizQuestion() {
+  renderQuizProgress();
+  if (quizIndex >= quizQuestions.length) { renderQuizResults(); return; }
+  const q = quizQuestions[quizIndex];
+  document.getElementById('quizContent').innerHTML = `
+    <div class="quiz-question">Q${quizIndex+1}. ${q.question}</div>
+    <div class="quiz-options">
+      ${q.options.map((opt, i) => `
+        <button class="quiz-option" onclick="answerQuiz(${i})">${opt}</button>
+      `).join('')}
+    </div>
+  `;
+}
+
+function answerQuiz(chosenIdx) {
+  const q = quizQuestions[quizIndex];
+  const correct = chosenIdx === q.correct;
+  quizAnswers.push({ correct, chosen: chosenIdx });
+  const options = document.querySelectorAll('.quiz-option');
+  options.forEach((btn, i) => {
+    btn.classList.add('disabled');
+    btn.onclick = null;
+    if (i === q.correct) btn.classList.add('correct');
+    else if (i === chosenIdx && !correct) btn.classList.add('wrong');
+  });
+  const expl = document.createElement('div');
+  expl.className = 'quiz-explanation';
+  expl.innerHTML = `${correct ? '✅ Correct!' : '❌ Not quite.'} ${q.explanation}`;
+  document.getElementById('quizContent').appendChild(expl);
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'btn btn-blue';
+  nextBtn.style.cssText = 'margin-top:14px; width:100%; justify-content:center';
+  nextBtn.textContent = quizIndex < quizQuestions.length - 1 ? 'Next Question →' : 'See Results';
+  nextBtn.onclick = () => { quizIndex++; renderQuizQuestion(); renderQuizProgress(); };
+  document.getElementById('quizContent').appendChild(nextBtn);
+}
+
+function renderQuizResults() {
+  const score = quizAnswers.filter(a => a.correct).length;
+  const total = quizQuestions.length;
+  const pct = Math.round(score/total*100);
+  const emoji = pct === 100 ? '🏆' : pct >= 67 ? '🎯' : pct >= 33 ? '📚' : '💪';
+  document.getElementById('quizContent').innerHTML = `
+    <div style="text-align:center; padding:20px 0">
+      <div style="font-size:3rem; margin-bottom:12px">${emoji}</div>
+      <div style="font-size:1.8rem; font-weight:700; color:#1a2332">${score}/${total}</div>
+      <div style="color:#7a8ea0; margin-top:6px">${pct}% correct</div>
+      <div style="margin-top:12px; font-size:0.9rem; color:#4a5568">
+        ${pct===100 ? 'Perfect score! You\'re crushing it!' : pct>=67 ? 'Great work! Keep learning!' : 'Keep studying — you\'ll get there!'}
+      </div>
+    </div>
+    <button class="btn btn-blue" onclick="startQuiz()" style="width:100%; justify-content:center; margin-top:16px">🔄 New Quiz</button>
+    <button class="btn btn-outline" onclick="resetQuiz()" style="width:100%; justify-content:center; margin-top:8px">Back</button>
+  `;
+}
+
+function resetQuiz() {
+  quizQuestions = [];
+  quizIndex = 0;
+  quizAnswers = [];
+  document.getElementById('quizStart').style.display = 'block';
+  document.getElementById('quizArea').style.display = 'none';
+}
+
+// ── TOAST ──────────────────────────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ── REFRESH ALL ────────────────────────────────────────────────────────────
+function refreshAll() {
+  updateMetrics();
+  buildContribGrid();
+  buildKnowledgeMap();
+  renderEntries();
+  renderCategoryStats();
+}
+
+// ── BOOT ───────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Set today's date
+  document.getElementById('f-date').value = todayStr();
+
+  // Star input
+  initStars('starsInput', (v) => { if (v !== undefined) currentStarRating = v; return currentStarRating; });
+  initStars('modalStars', (v) => { if (v !== undefined) modalStarRating = v; return modalStarRating; });
+
+  // Load saved API key
+  const savedKey = getApiKey();
+  if (savedKey) document.getElementById('apiKeyInput').value = savedKey;
+
+  // Close modal on overlay click
+  document.getElementById('quickLogModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  refreshAll();
+});
+</script>
+</body>
+</html>
