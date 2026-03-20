@@ -681,25 +681,13 @@ function hydrate() {
   try {
     const stored = JSON.parse(localStorage.getItem('ja2_apps'));
     if (!stored || stored.length === 0) {
-      // First load — seed with active pipeline
+      // First load only: seed with active pipeline and save to localStorage
       S.apps = DEFAULT_APPS.slice();
+      persist();
     } else {
+      // Always use whatever is in localStorage — never overwrite
       S.apps = stored;
-      // Migrate: add missing default apps and update notes on existing ones
-      let changed = false;
-      DEFAULT_APPS.forEach(da => {
-        const existing = S.apps.find(a => a.id === da.id);
-        if (existing) {
-          existing.notes = da.notes;
-          changed = true;
-        } else {
-          S.apps.unshift(da);
-          changed = true;
-        }
-      });
-      if (changed) persist();
     }
-    persist();
   } catch(e) { S.apps = DEFAULT_APPS.slice(); persist(); }
   try { S.watched = new Set(JSON.parse(localStorage.getItem('ja2_watched')) || []); } catch(e){}
 }

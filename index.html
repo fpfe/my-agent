@@ -853,26 +853,13 @@ const DEFAULT_CARDS = [
   },
 ];
 
-function migratePipeline() {
-  const raw = localStorage.getItem(PIPELINE_KEY);
-  if (!raw) return; // first load — DEFAULT_CARDS will be used
-  try {
-    let cards = JSON.parse(raw);
-    let changed = false;
-    // Update notes on existing cards
-    DEFAULT_CARDS.forEach(dc => {
-      const c = cards.find(x => x.id === dc.id);
-      if (c) { c.note = dc.note; c.col = dc.col; changed = true; }
-      else if (!cards.find(x => x.id === dc.id)) { cards.push(dc); changed = true; }
-    });
-    if (changed) localStorage.setItem(PIPELINE_KEY, JSON.stringify(cards));
-  } catch(e) {}
-}
-
 function loadCards() {
   try {
     const raw = localStorage.getItem(PIPELINE_KEY);
-    return raw ? JSON.parse(raw) : DEFAULT_CARDS;
+    if (raw) return JSON.parse(raw);
+    // First load only: save defaults so future loads always read from localStorage
+    saveCards(DEFAULT_CARDS);
+    return DEFAULT_CARDS;
   } catch { return DEFAULT_CARDS; }
 }
 
@@ -1205,7 +1192,6 @@ Respond in English.`;
 /* ─────────────────────────────────────────────
    INIT
 ───────────────────────────────────────────── */
-migratePipeline();
 renderPipeline();
 renderTimeline();
 </script>
