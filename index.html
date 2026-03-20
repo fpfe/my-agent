@@ -204,11 +204,13 @@
     .app-card.green::before { background: linear-gradient(90deg, #10b981, #34d399); }
     .app-card.purple::before{ background: linear-gradient(90deg, #7c3aed, #a855f7); }
     .app-card.orange::before{ background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .app-card.teal::before  { background: linear-gradient(90deg, #0d9488, #14b8a6); }
     .app-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .app-card.blue:hover  { border-color: var(--blue); }
     .app-card.green:hover { border-color: var(--green); }
     .app-card.purple:hover{ border-color: var(--purple); }
     .app-card.orange:hover{ border-color: var(--orange); }
+    .app-card.teal:hover  { border-color: #0d9488; }
     .app-icon-wrap {
       width: 52px; height: 52px; border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
@@ -218,6 +220,7 @@
     .app-card.green  .app-icon-wrap { background: var(--green-bg); }
     .app-card.purple .app-icon-wrap { background: var(--purple-bg); }
     .app-card.orange .app-icon-wrap { background: var(--orange-bg); }
+    .app-card.teal   .app-icon-wrap { background: #f0fdfa; }
     .app-name { font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
     .app-desc { font-size: 12.5px; color: var(--gray-500); line-height: 1.55; flex: 1; }
     .app-arrow {
@@ -229,6 +232,7 @@
     .app-card.green  .app-arrow { color: var(--green); }
     .app-card.purple .app-arrow { color: var(--purple); }
     .app-card.orange .app-arrow { color: var(--orange); }
+    .app-card.teal   .app-arrow { color: #0d9488; }
     .app-card:hover .app-arrow { gap: 8px; }
 
     /* ══════════════════════════════════════════
@@ -610,6 +614,12 @@
       <div class="app-name">AI Learning Tracker</div>
       <div class="app-desc">Track your AI learning journey, knowledge map, and quiz yourself.</div>
       <div class="app-arrow">Open Tracker →</div>
+    </a>
+    <a class="app-card teal" href="prompt-bank.html">
+      <div class="app-icon-wrap">📚</div>
+      <div class="app-name">Prompt Bank</div>
+      <div class="app-desc">Save, organize, and reuse your best prompts for Claude, ChatGPT, and Cursor.</div>
+      <div class="app-arrow">Open Prompt Bank →</div>
     </a>
   </div>
 

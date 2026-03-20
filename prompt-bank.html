@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Bank</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif; background: #f0f4f8; color: #1a2332; min-height: 100vh; }
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, #1a2332 0%, #243447 100%);
+  color: white; padding: 0 28px; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(26,35,50,0.3);
+  position: sticky; top: 0; z-index: 200;
+}
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-logo { font-size: 1.5rem; }
+.header-title { font-size: 1.1rem; font-weight: 700; }
+.header-sub { font-size: 0.72rem; opacity: 0.5; margin-top: 1px; }
+.header-actions { display: flex; gap: 10px; align-items: center; }
+.header-count { font-size: 0.78rem; opacity: 0.6; }
+
+/* ── LAYOUT ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+/* ── TOOLBAR ── */
+.toolbar {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px;
+  background: white; padding: 16px 20px; border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.search-wrap { position: relative; flex: 1; min-width: 200px; }
+.search-wrap input {
+  width: 100%; padding: 9px 12px 9px 36px; border-radius: 9px;
+  border: 1.5px solid #e2e8f0; font-size: 0.88rem; font-family: inherit;
+  background: #f8fafc; transition: all 0.2s; color: #1a2332;
+}
+.search-wrap input:focus { outline: none; border-color: #3b82f6; background: white; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+.search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 0.88rem; pointer-events: none; }
+.filter-select {
+  padding: 9px 12px; border-radius: 9px; border: 1.5px solid #e2e8f0;
+  font-size: 0.85rem; font-family: inherit; background: #f8fafc; color: #1a2332;
+  cursor: pointer; transition: border-color 0.2s;
+}
+.filter-select:focus { outline: none; border-color: #3b82f6; }
+.toolbar-right { display: flex; gap: 8px; margin-left: auto; }
+.fav-toggle {
+  padding: 9px 14px; border-radius: 9px; border: 1.5px solid #e2e8f0;
+  background: #f8fafc; font-size: 0.85rem; cursor: pointer; font-family: inherit;
+  transition: all 0.2s; color: #4a5568; font-weight: 600;
+}
+.fav-toggle.active { background: #fef9c3; border-color: #fbbf24; color: #92400e; }
+
+/* ── STATS BAR ── */
+.stats-bar { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.stat-pill {
+  background: white; border-radius: 20px; padding: 6px 14px;
+  font-size: 0.78rem; font-weight: 600; color: #4a5568;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 5px;
+}
+.stat-pill span { color: #1a2332; font-size: 0.9rem; }
+
+/* ── PROMPT GRID ── */
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.empty-state { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #94a3b8; }
+.empty-state .empty-icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-state p { font-size: 0.95rem; }
+
+/* ── PROMPT CARD ── */
+.prompt-card {
+  background: white; border-radius: 14px; padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07); border: 1.5px solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: flex; flex-direction: column; gap: 10px; cursor: pointer;
+  position: relative;
+}
+.prompt-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-color: #93c5fd; }
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.card-title { font-size: 0.95rem; font-weight: 700; color: #1a2332; line-height: 1.3; flex: 1; }
+.fav-btn { background: none; border: none; font-size: 1.1rem; cursor: pointer; padding: 2px; opacity: 0.4; transition: opacity 0.15s, transform 0.15s; flex-shrink: 0; }
+.fav-btn.active { opacity: 1; }
+.fav-btn:hover { transform: scale(1.2); opacity: 1; }
+.card-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge {
+  padding: 3px 9px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.2px; white-space: nowrap;
+}
+.badge-tool { background: #1a2332; color: white; }
+.badge-tool.claude-code { background: #1e3a5f; }
+.badge-tool.claude-ai   { background: #5b21b6; }
+.badge-tool.chatgpt     { background: #065f46; }
+.badge-tool.cursor      { background: #1e40af; }
+.badge-tool.other       { background: #374151; }
+
+.badge-cat { font-size: 0.68rem; font-weight: 700; }
+.cat-app-dev    { background: #eff6ff; color: #1d4ed8; }
+.cat-interview  { background: #f5f3ff; color: #6d28d9; }
+.cat-job-search { background: #ecfdf5; color: #065f46; }
+.cat-writing    { background: #fff7ed; color: #c2410c; }
+.cat-data       { background: #fef9c3; color: #854d0e; }
+.cat-learning   { background: #fce7f3; color: #9d174d; }
+.cat-planning   { background: #e0f2fe; color: #0369a1; }
+.cat-other      { background: #f1f5f9; color: #475569; }
+
+.card-preview { font-size: 0.82rem; color: #64748b; line-height: 1.55; font-family: monospace; background: #f8fafc; border-radius: 7px; padding: 10px 12px; border-left: 3px solid #e2e8f0; }
+.card-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.tag { background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: 500; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.usage-count { font-size: 0.72rem; color: #94a3b8; display: flex; align-items: center; gap: 4px; }
+.card-actions { display: flex; gap: 5px; }
+.icon-btn {
+  width: 30px; height: 30px; border-radius: 7px; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+  transition: all 0.15s; background: #f1f5f9; color: #64748b;
+}
+.icon-btn:hover { background: #e2e8f0; transform: scale(1.1); }
+.icon-btn.copy-btn:hover { background: #dbeafe; color: #2563eb; }
+.icon-btn.edit-btn:hover { background: #fef3c7; color: #d97706; }
+.icon-btn.del-btn:hover  { background: #fee2e2; color: #dc2626; }
+.copy-flash { background: #dcfce7 !important; color: #16a34a !important; }
+
+/* ── ADD BUTTON (floating) ── */
+.fab {
+  position: fixed; bottom: 28px; right: 28px;
+  background: #1a2332; color: white; border: none;
+  width: 56px; height: 56px; border-radius: 50%; font-size: 1.5rem;
+  cursor: pointer; box-shadow: 0 4px 20px rgba(26,35,50,0.35);
+  transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+.fab:hover { background: #3b82f6; transform: scale(1.1) rotate(90deg); box-shadow: 0 6px 24px rgba(59,130,246,0.4); }
+
+/* ── MODAL BASE ── */
+.overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5); z-index: 300;
+  align-items: center; justify-content: center; padding: 16px;
+}
+.overlay.open { display: flex; }
+
+/* ── ADD/EDIT MODAL ── */
+.form-modal {
+  background: white; border-radius: 18px; padding: 28px;
+  width: 100%; max-width: 600px; max-height: 92vh; overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2); animation: slideUp 0.25s ease;
+}
+@keyframes slideUp { from { transform: translateY(16px); opacity: 0; } to { transform: none; opacity: 1; } }
+.modal-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 22px; color: #1a2332; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: #4a5568; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 10px 13px; border-radius: 9px; border: 1.5px solid #e2e8f0;
+  font-size: 0.9rem; font-family: inherit; color: #1a2332; background: #fafbfc;
+  transition: all 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.form-group textarea { resize: vertical; }
+.prompt-textarea { min-height: 160px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85rem; line-height: 1.6; }
+.notes-textarea { min-height: 80px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #f1f5f9; }
+
+/* ── DETAIL MODAL ── */
+.detail-modal {
+  background: white; border-radius: 18px; padding: 32px;
+  width: 100%; max-width: 680px; max-height: 92vh; overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2); animation: slideUp 0.25s ease;
+}
+.detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+.detail-title { font-size: 1.3rem; font-weight: 800; color: #1a2332; line-height: 1.3; flex: 1; }
+.detail-close { background: #f1f5f9; border: none; border-radius: 8px; width: 34px; height: 34px; cursor: pointer; font-size: 1rem; color: #64748b; transition: all 0.15s; flex-shrink: 0; }
+.detail-close:hover { background: #e2e8f0; color: #1a2332; }
+.detail-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.detail-prompt-wrap { position: relative; margin-bottom: 20px; }
+.detail-prompt {
+  background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px;
+  padding: 18px; font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85rem; line-height: 1.7; white-space: pre-wrap; color: #1a2332;
+  max-height: 320px; overflow-y: auto;
+}
+.detail-copy-btn {
+  position: absolute; top: 10px; right: 10px;
+  background: #1a2332; color: white; border: none; border-radius: 7px;
+  padding: 6px 14px; font-size: 0.78rem; font-weight: 600; cursor: pointer;
+  font-family: inherit; transition: all 0.2s;
+}
+.detail-copy-btn:hover { background: #3b82f6; }
+.detail-section { margin-bottom: 18px; }
+.detail-section-label { font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.detail-notes { background: #fff7ed; border-left: 3px solid #f59e0b; border-radius: 0 8px 8px 0; padding: 12px 14px; font-size: 0.88rem; color: #4a5568; line-height: 1.6; }
+.detail-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+.detail-meta-item { font-size: 0.82rem; color: #64748b; }
+.detail-meta-item strong { color: #1a2332; }
+.detail-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.detail-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid #f1f5f9; gap: 10px; }
+
+/* ── BUTTONS ── */
+.btn { padding: 10px 20px; border-radius: 9px; border: none; cursor: pointer; font-size: 0.88rem; font-weight: 600; font-family: inherit; transition: all 0.2s; }
+.btn-primary { background: #1a2332; color: white; }
+.btn-primary:hover { background: #243447; }
+.btn-blue { background: #3b82f6; color: white; }
+.btn-blue:hover { background: #2563eb; }
+.btn-ghost { background: #f1f5f9; color: #4a5568; }
+.btn-ghost:hover { background: #e2e8f0; }
+.btn-danger { background: #fee2e2; color: #dc2626; }
+.btn-danger:hover { background: #fecaca; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 90px; right: 28px;
+  background: #1a2332; color: white; padding: 11px 18px;
+  border-radius: 10px; font-size: 0.85rem; font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2); z-index: 1000;
+  transform: translateY(80px); opacity: 0; transition: all 0.3s;
+  pointer-events: none;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .toolbar { gap: 8px; }
+  .form-row { grid-template-columns: 1fr; }
+  .prompt-grid { grid-template-columns: 1fr; }
+  header { padding: 0 16px; }
+  .container { padding: 16px 12px 80px; }
+  .detail-modal, .form-modal { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="header-logo">📚</div>
+    <div>
+      <div class="header-title">Prompt Bank</div>
+      <div class="header-sub">Your best prompts, always ready</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <span class="header-count" id="headerCount"></span>
+    <button class="btn btn-blue" onclick="openAddModal()" style="padding: 8px 16px; font-size: 0.82rem;">+ New Prompt</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search prompts, tags, content…" oninput="renderGrid()">
+    </div>
+    <select class="filter-select" id="filterCat" onchange="renderGrid()">
+      <option value="">All Categories</option>
+      <option value="App Development">App Development</option>
+      <option value="Interview Prep">Interview Prep</option>
+      <option value="Job Search">Job Search</option>
+      <option value="Writing & Communication">Writing & Communication</option>
+      <option value="Data Analysis">Data Analysis</option>
+      <option value="Learning & Research">Learning & Research</option>
+      <option value="Daily Planning">Daily Planning</option>
+      <option value="Other">Other</option>
+    </select>
+    <select class="filter-select" id="filterTool" onchange="renderGrid()">
+      <option value="">All Tools</option>
+      <option value="Claude Code">Claude Code</option>
+      <option value="Claude.ai">Claude.ai</option>
+      <option value="ChatGPT">ChatGPT</option>
+      <option value="Cursor">Cursor</option>
+      <option value="Other">Other</option>
+    </select>
+    <select class="filter-select" id="filterSort" onchange="renderGrid()">
+      <option value="newest">Newest First</option>
+      <option value="mostused">Most Used</option>
+      <option value="alpha">Alphabetical</option>
+      <option value="fav">Favorites First</option>
+    </select>
+    <button class="fav-toggle" id="favToggle" onclick="toggleFavFilter()">⭐ Favorites</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar" id="statsBar"></div>
+
+  <!-- GRID -->
+  <div class="prompt-grid" id="promptGrid"></div>
+
+</div>
+
+<!-- FAB -->
+<button class="fab" onclick="openAddModal()" title="Add new prompt">+</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ADD / EDIT MODAL -->
+<div class="overlay" id="formOverlay">
+  <div class="form-modal">
+    <div class="modal-title" id="formTitle">Add New Prompt</div>
+    <input type="hidden" id="editId">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" id="fTitle" placeholder="e.g. Build a full-stack app">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Category</label>
+        <select id="fCategory">
+          <option value="App Development">App Development</option>
+          <option value="Interview Prep">Interview Prep</option>
+          <option value="Job Search">Job Search</option>
+          <option value="Writing & Communication">Writing & Communication</option>
+          <option value="Data Analysis">Data Analysis</option>
+          <option value="Learning & Research">Learning & Research</option>
+          <option value="Daily Planning">Daily Planning</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>AI Tool</label>
+        <select id="fTool">
+          <option value="Claude Code">Claude Code</option>
+          <option value="Claude.ai">Claude.ai</option>
+          <option value="ChatGPT">ChatGPT</option>
+          <option value="Cursor">Cursor</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Prompt Text</label>
+      <textarea class="prompt-textarea" id="fPrompt" placeholder="Enter your full prompt here…"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Tags <span style="font-weight:400; text-transform:none; color:#94a3b8">(comma separated)</span></label>
+      <input type="text" id="fTags" placeholder="e.g. html, dark-mode, responsive">
+    </div>
+    <div class="form-group">
+      <label>Notes / Usage Tips <span style="font-weight:400; text-transform:none; color:#94a3b8">(optional)</span></label>
+      <textarea class="notes-textarea" id="fNotes" placeholder="When to use this prompt, what context to provide, tips…"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeFormModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="savePrompt()">💾 Save Prompt</button>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="overlay" id="detailOverlay">
+  <div class="detail-modal" id="detailContent"></div>
+</div>
+
+<script>
+// ── STORAGE ────────────────────────────────────────────────────────────────
+const STORAGE_KEY = 'prompt_bank_v1';
+
+const SEED_PROMPTS = [
+  {
+    id: 's1',
+    title: 'Daily Planner — Sunsama Style',
+    category: 'App Development',
+    tool: 'Claude Code',
+    prompt: `Create a Daily Planner app called daily-planner.html inspired by Sunsama.
+
+Features:
+- Morning ritual flow with intention setting
+- Time-blocked calendar view (6AM–10PM), 30-min slots
+- Task list with drag-to-schedule
+- Google Calendar API integration to pull events
+- Mood tracker (emoji-based, 1–5 scale)
+- Evening reflection section
+- Daily theme/focus field
+- Progress bar showing % of planned time completed
+
+Design:
+- Dark navy (#1a2332) header
+- Clean white card layout
+- Smooth animations
+- Mobile responsive
+- LocalStorage for persistence
+
+Save as daily-planner.html. No external dependencies except Google Calendar API.`,
+    tags: ['planner', 'html', 'google-calendar', 'productivity'],
+    notes: 'Works best when you specify the color scheme upfront. Add "Japanese UTF-8 support" if you need Japanese text.',
+    favorite: true,
+    uses: 3,
+    created: '2026-03-17',
+  },
+  {
+    id: 's2',
+    title: 'Single-File App with localStorage',
+    category: 'App Development',
+    tool: 'Claude Code',
+    prompt: `Build a single-file HTML app called [APP_NAME].html with these requirements:
+
+Technical constraints:
+- Pure HTML/CSS/JavaScript — zero external libraries
+- All data persisted in localStorage
+- Responsive mobile-first design
+- No build step needed, opens directly in browser
+
+Features:
+[LIST YOUR FEATURES HERE]
+
+Design system:
+- Dark navy header: #1a2332
+- Accent color: [YOUR COLOR]
+- White cards with box-shadow: 0 2px 12px rgba(0,0,0,0.07)
+- Border radius: 14px for cards, 9px for inputs
+- Font: system-ui / -apple-system stack
+- Smooth hover transitions (0.2s)
+- Japanese UTF-8 support
+
+Pre-fill with realistic sample data so the app looks populated on first load.`,
+    tags: ['html', 'localstorage', 'single-file', 'template'],
+    notes: 'Replace [APP_NAME], [LIST YOUR FEATURES HERE], and [YOUR COLOR] before using. This is my go-to template for all vibe coding projects.',
+    favorite: true,
+    uses: 8,
+    created: '2026-03-17',
+  },
+  {
+    id: 's3',
+    title: 'Cover Letter — AI Company Japan Role',
+    category: 'Job Search',
+    tool: 'Claude.ai',
+    prompt: `Write a compelling cover letter for the following role. I am Seungjun Ahn, a senior GTM executive with 10+ years of experience scaling tech companies in Japan and Asia-Pacific.
+
+Role: [COMPANY] — [ROLE TITLE]
+Job description key points: [PASTE 3–5 BULLET POINTS]
+
+My relevant experience:
+- Scaled [COMPANY] Japan from $0 to $[X]M ARR as [ROLE]
+- Built and led teams of [N] people across sales, BD, and partnerships
+- Deep network in Japan's tech and enterprise ecosystem
+- Fluent Japanese (business level) and English
+
+Tone: Confident, specific, human — not corporate. Show genuine excitement for AI's impact on Japan.
+Length: 4 short paragraphs max.
+End with a clear ask for a conversation.`,
+    tags: ['cover-letter', 'job-search', 'japan', 'ai-companies'],
+    notes: 'Fill in [COMPANY], [ROLE TITLE], and paste 3-5 key JD bullet points. Always add one specific thing you know about their Japan expansion.',
+    favorite: true,
+    uses: 5,
+    created: '2026-03-18',
+  },
+  {
+    id: 's4',
+    title: 'Country Manager Interview Prep',
+    category: 'Interview Prep',
+    tool: 'Claude.ai',
+    prompt: `I have a [ROUND] interview for a Country Manager / Head of Japan role at [COMPANY]. They are a [DESCRIPTION] company expanding to Japan.
+
+Help me prepare by:
+
+1. Generate 5 likely interview questions for this role and stage
+2. For each question, give me a STAR-format answer framework using my background (Seungjun Ahn, 10+ years Japan GTM, scaled multiple tech companies)
+3. Identify the 3 most important things to demonstrate in this interview
+4. Suggest 3 smart questions I should ask them
+5. Red flags to avoid
+
+Company context: [PASTE ANYTHING YOU KNOW — recent news, investors, product, team]
+
+Be direct and specific. No generic advice.`,
+    tags: ['interview', 'country-manager', 'japan', 'STAR'],
+    notes: 'Use this 24 hours before each interview. Fill in company context from their website + LinkedIn + recent news. Research their Japan team on LinkedIn first.',
+    favorite: true,
+    uses: 4,
+    created: '2026-03-18',
+  },
+  {
+    id: 's5',
+    title: 'Japan Market Entry Strategy',
+    category: 'Job Search',
+    tool: 'Claude.ai',
+    prompt: `I'm preparing for a business case interview / strategy presentation on expanding [COMPANY / PRODUCT] into Japan.
+
+Give me a structured Japan market entry framework covering:
+
+1. Market sizing — TAM/SAM/SOM for Japan
+2. Key localization requirements (language, UX, compliance, payment)
+3. Go-to-market strategy (direct vs. partnership vs. channel)
+4. Pricing considerations vs. US/global pricing
+5. Top 3 risks and mitigation strategies
+6. 90-day quick wins if I become Country Manager
+7. KPIs to track in Year 1
+
+Company context: [PASTE COMPANY INFO]
+My competitive advantage: Deep Japan network, enterprise sales experience, fluent Japanese
+
+Format as a structured document I can turn into slides.`,
+    tags: ['strategy', 'japan', 'market-entry', 'case-study'],
+    notes: 'Great for case interviews and for demonstrating strategic thinking. Pair with real data from sources like METI, Statista, or company earnings calls.',
+    favorite: false,
+    uses: 2,
+    created: '2026-03-19',
+  },
+  {
+    id: 's6',
+    title: 'Debug & Fix My Code',
+    category: 'App Development',
+    tool: 'Claude Code',
+    prompt: `I have a bug in my [LANGUAGE] code. Here's the issue:
+
+Problem: [DESCRIBE WHAT'S HAPPENING VS. WHAT YOU EXPECT]
+
+Error message (if any):
+[PASTE ERROR]
+
+Relevant code:
+[PASTE CODE]
+
+What I've already tried:
+[LIST ATTEMPTS]
+
+Please:
+1. Identify the root cause
+2. Fix it with minimal changes
+3. Explain why it was broken
+4. Mention any related issues I should watch for`,
+    tags: ['debugging', 'fix', 'code-review'],
+    notes: 'Always paste the exact error message — Claude gives much better answers with the full stack trace.',
+    favorite: false,
+    uses: 6,
+    created: '2026-03-19',
+  },
+  {
+    id: 's7',
+    title: 'Weekly Reflection & Planning',
+    category: 'Daily Planning',
+    tool: 'Claude.ai',
+    prompt: `Help me do a structured weekly review and plan for next week.
+
+Week of: [DATE RANGE]
+Sabbatical week: [WEEK NUMBER]
+
+THIS WEEK — what happened:
+- Job search: [BRIEF SUMMARY]
+- Learning: [WHAT I BUILT/STUDIED]
+- Personal: [OTHER HIGHLIGHTS]
+
+Wins: [LIST]
+Didn't go as planned: [LIST]
+Energy level this week (1–5): [SCORE]
+
+For next week, help me:
+1. Identify my top 3 priorities (job search, learning, personal)
+2. Spot any patterns or blind spots from this week
+3. Suggest one thing to stop, start, and continue
+4. Write a one-sentence intention for the week
+
+Be direct — like a sharp coach, not a therapist.`,
+    tags: ['weekly-review', 'planning', 'sabbatical', 'reflection'],
+    notes: 'Do this every Sunday evening. Takes about 15 minutes. Keeps the sabbatical focused.',
+    favorite: false,
+    uses: 1,
+    created: '2026-03-19',
+  },
+  {
+    id: 's8',
+    title: 'API Integration into HTML App',
+    category: 'App Development',
+    tool: 'Claude Code',
+    prompt: `Add Anthropic API integration to my existing HTML app.
+
+Requirements:
+- API key stored in localStorage with key name 'ja2_apikey'
+- Show an API key input field (password type) with a Save button
+- Add a UI section for the AI feature: [DESCRIBE THE FEATURE]
+- Make the API call to claude-sonnet-4-6 model
+- Handle loading state with a spinner
+- Handle errors gracefully (show error message to user)
+- Add header: 'anthropic-dangerous-direct-browser-access': 'true'
+
+The prompt to send to Claude:
+[DESCRIBE WHAT YOU WANT CLAUDE TO GENERATE]
+
+Existing app context:
+[BRIEF DESCRIPTION OF YOUR APP'S PURPOSE AND CURRENT STRUCTURE]`,
+    tags: ['api', 'anthropic', 'claude', 'integration', 'html'],
+    notes: 'Always use claude-sonnet-4-6 as the default model. Set max_tokens based on expected output — 500 for short responses, 1500+ for structured content.',
+    favorite: true,
+    uses: 4,
+    created: '2026-03-20',
+  },
+  {
+    id: 's9',
+    title: 'LinkedIn Message — Warm Outreach',
+    category: 'Writing & Communication',
+    tool: 'Claude.ai',
+    prompt: `Write a LinkedIn connection message / InMail for the following situation.
+
+Who I'm reaching out to: [NAME, TITLE, COMPANY]
+Why I'm reaching out: [JOB OPPORTUNITY / NETWORKING / REFERRAL REQUEST]
+My connection to them: [MUTUAL CONNECTION / SAW THEIR POST / WORKED IN SAME SPACE]
+What I want from this message: [A CALL / REFERRAL / INTRO]
+
+My background (use selectively): 10+ years Japan GTM, scaled Airbnb/tech companies in Japan, currently exploring AI company roles.
+
+Rules:
+- Under 300 characters for connection request (LinkedIn limit)
+- Or under 150 words for InMail
+- Specific, not generic — mention something real
+- Clear ask but low pressure
+- No "I hope this message finds you well"`,
+    tags: ['linkedin', 'outreach', 'networking', 'job-search'],
+    notes: 'For connection requests, aim for 200–250 characters — enough to be specific but fits in the preview. Always mention one specific thing about them.',
+    favorite: false,
+    uses: 3,
+    created: '2026-03-20',
+  },
+  {
+    id: 's10',
+    title: 'Explain This Code to Me',
+    category: 'Learning & Research',
+    tool: 'Claude.ai',
+    prompt: `Explain the following code to me. I'm comfortable with [YOUR LEVEL: basics / intermediate / advanced] programming.
+
+Code:
+[PASTE CODE]
+
+Please explain:
+1. What this code does overall (1–2 sentences)
+2. Walk through it section by section
+3. Any patterns or techniques I should know about
+4. How I could modify it to [WHAT YOU WANT TO CHANGE]
+5. Common gotchas or edge cases
+
+Use plain language and analogies where helpful.`,
+    tags: ['learning', 'code-explanation', 'education'],
+    notes: 'Good for understanding code you found online or that Claude wrote for you. Specify your level accurately for the right depth.',
+    favorite: false,
+    uses: 2,
+    created: '2026-03-20',
+  },
+];
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+let showFavOnly = false;
+let currentDetailId = null;
+
+function getPrompts() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) return JSON.parse(raw);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_PROMPTS));
+  return SEED_PROMPTS;
+}
+function savePrompts(prompts) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(prompts));
+}
+
+// ── TOOL → CSS CLASS ───────────────────────────────────────────────────────
+function toolClass(tool) {
+  const map = { 'Claude Code': 'claude-code', 'Claude.ai': 'claude-ai', 'ChatGPT': 'chatgpt', 'Cursor': 'cursor', 'Other': 'other' };
+  return map[tool] || 'other';
+}
+
+// ── CATEGORY → CSS CLASS ───────────────────────────────────────────────────
+function catClass(cat) {
+  const map = {
+    'App Development': 'cat-app-dev',
+    'Interview Prep': 'cat-interview',
+    'Job Search': 'cat-job-search',
+    'Writing & Communication': 'cat-writing',
+    'Data Analysis': 'cat-data',
+    'Learning & Research': 'cat-learning',
+    'Daily Planning': 'cat-planning',
+    'Other': 'cat-other',
+  };
+  return map[cat] || 'cat-other';
+}
+
+// ── FILTER & SORT ──────────────────────────────────────────────────────────
+function getFiltered() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const cat = document.getElementById('filterCat').value;
+  const tool = document.getElementById('filterTool').value;
+  const sort = document.getElementById('filterSort').value;
+
+  let prompts = getPrompts();
+
+  if (q) prompts = prompts.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    p.prompt.toLowerCase().includes(q) ||
+    (p.tags || []).some(t => t.toLowerCase().includes(q)) ||
+    (p.notes || '').toLowerCase().includes(q)
+  );
+  if (cat)  prompts = prompts.filter(p => p.category === cat);
+  if (tool) prompts = prompts.filter(p => p.tool === tool);
+  if (showFavOnly) prompts = prompts.filter(p => p.favorite);
+
+  if (sort === 'newest')  prompts.sort((a,b) => b.created.localeCompare(a.created));
+  if (sort === 'mostused') prompts.sort((a,b) => (b.uses||0) - (a.uses||0));
+  if (sort === 'alpha')   prompts.sort((a,b) => a.title.localeCompare(b.title));
+  if (sort === 'fav')     prompts.sort((a,b) => (b.favorite?1:0) - (a.favorite?1:0));
+
+  return prompts;
+}
+
+// ── STATS BAR ──────────────────────────────────────────────────────────────
+function renderStats() {
+  const all = getPrompts();
+  const filtered = getFiltered();
+  const totalUses = all.reduce((s,p) => s + (p.uses||0), 0);
+  const favCount = all.filter(p => p.favorite).length;
+
+  document.getElementById('headerCount').textContent = `${all.length} prompts`;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat-pill">📚 <span>${filtered.length}</span> showing</div>
+    <div class="stat-pill">⭐ <span>${favCount}</span> favorites</div>
+    <div class="stat-pill">🚀 <span>${totalUses}</span> total uses</div>
+  `;
+}
+
+// ── RENDER GRID ────────────────────────────────────────────────────────────
+function renderGrid() {
+  const prompts = getFiltered();
+  const grid = document.getElementById('promptGrid');
+
+  if (prompts.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">🔍</div>
+        <p>No prompts match your filters.</p>
+        <p style="margin-top:6px; font-size:0.82rem">Try adjusting the search or filters.</p>
+      </div>`;
+    renderStats();
+    return;
+  }
+
+  grid.innerHTML = prompts.map(p => {
+    const preview = p.prompt.slice(0, 110).replace(/\n/g, ' ') + (p.prompt.length > 110 ? '…' : '');
+    const tagHtml = (p.tags||[]).slice(0,3).map(t => `<span class="tag">#${t}</span>`).join('');
+    return `
+      <div class="prompt-card" onclick="openDetail('${p.id}')">
+        <div class="card-top">
+          <div class="card-title">${escHtml(p.title)}</div>
+          <button class="fav-btn ${p.favorite ? 'active' : ''}" onclick="event.stopPropagation(); toggleFav('${p.id}')" title="${p.favorite ? 'Unfavorite' : 'Favorite'}">⭐</button>
+        </div>
+        <div class="card-badges">
+          <span class="badge badge-tool ${toolClass(p.tool)}">${escHtml(p.tool)}</span>
+          <span class="badge badge-cat ${catClass(p.category)}">${escHtml(p.category)}</span>
+        </div>
+        <div class="card-preview">${escHtml(preview)}</div>
+        ${tagHtml ? `<div class="card-tags">${tagHtml}</div>` : ''}
+        <div class="card-footer">
+          <div class="usage-count">📋 ${p.uses||0} ${(p.uses||0) === 1 ? 'use' : 'uses'}</div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="icon-btn copy-btn" onclick="copyPrompt('${p.id}')" title="Copy prompt">📋</button>
+            <button class="icon-btn edit-btn" onclick="openEditModal('${p.id}')" title="Edit">✏️</button>
+            <button class="icon-btn del-btn" onclick="deletePrompt('${p.id}')" title="Delete">🗑</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  renderStats();
+}
+
+// ── COPY ───────────────────────────────────────────────────────────────────
+function copyPrompt(id, fromDetail = false) {
+  const prompts = getPrompts();
+  const p = prompts.find(x => x.id === id);
+  if (!p) return;
+  navigator.clipboard.writeText(p.prompt).then(() => {
+    p.uses = (p.uses || 0) + 1;
+    savePrompts(prompts);
+    renderGrid();
+    showToast('✅ Prompt copied to clipboard!');
+    if (fromDetail) {
+      const btn = document.querySelector('.detail-copy-btn');
+      if (btn) { const orig = btn.textContent; btn.textContent = '✅ Copied!'; setTimeout(() => btn.textContent = orig, 1500); }
+    }
+  });
+}
+
+// ── FAVORITE ───────────────────────────────────────────────────────────────
+function toggleFav(id) {
+  const prompts = getPrompts();
+  const p = prompts.find(x => x.id === id);
+  if (!p) return;
+  p.favorite = !p.favorite;
+  savePrompts(prompts);
+  renderGrid();
+}
+
+function toggleFavFilter() {
+  showFavOnly = !showFavOnly;
+  document.getElementById('favToggle').classList.toggle('active', showFavOnly);
+  renderGrid();
+}
+
+// ── DELETE ─────────────────────────────────────────────────────────────────
+function deletePrompt(id) {
+  if (!confirm('Delete this prompt?')) return;
+  savePrompts(getPrompts().filter(p => p.id !== id));
+  renderGrid();
+  showToast('Prompt deleted');
+}
+
+// ── ADD / EDIT MODAL ───────────────────────────────────────────────────────
+function openAddModal() {
+  document.getElementById('formTitle').textContent = 'Add New Prompt';
+  document.getElementById('editId').value = '';
+  document.getElementById('fTitle').value = '';
+  document.getElementById('fCategory').value = 'App Development';
+  document.getElementById('fTool').value = 'Claude Code';
+  document.getElementById('fPrompt').value = '';
+  document.getElementById('fTags').value = '';
+  document.getElementById('fNotes').value = '';
+  document.getElementById('formOverlay').classList.add('open');
+}
+
+function openEditModal(id) {
+  const p = getPrompts().find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('formTitle').textContent = 'Edit Prompt';
+  document.getElementById('editId').value = id;
+  document.getElementById('fTitle').value = p.title;
+  document.getElementById('fCategory').value = p.category;
+  document.getElementById('fTool').value = p.tool;
+  document.getElementById('fPrompt').value = p.prompt;
+  document.getElementById('fTags').value = (p.tags||[]).join(', ');
+  document.getElementById('fNotes').value = p.notes || '';
+  document.getElementById('formOverlay').classList.add('open');
+}
+
+function closeFormModal() {
+  document.getElementById('formOverlay').classList.remove('open');
+}
+
+function savePrompt() {
+  const title = document.getElementById('fTitle').value.trim();
+  const prompt = document.getElementById('fPrompt').value.trim();
+  if (!title || !prompt) { showToast('⚠️ Title and prompt text are required'); return; }
+
+  const tags = document.getElementById('fTags').value.split(',').map(t => t.trim()).filter(Boolean);
+  const id = document.getElementById('editId').value;
+  const prompts = getPrompts();
+
+  if (id) {
+    const p = prompts.find(x => x.id === id);
+    if (p) {
+      p.title = title;
+      p.category = document.getElementById('fCategory').value;
+      p.tool = document.getElementById('fTool').value;
+      p.prompt = prompt;
+      p.tags = tags;
+      p.notes = document.getElementById('fNotes').value.trim();
+    }
+    showToast('✅ Prompt updated!');
+  } else {
+    prompts.unshift({
+      id: 'p' + Date.now(),
+      title,
+      category: document.getElementById('fCategory').value,
+      tool: document.getElementById('fTool').value,
+      prompt,
+      tags,
+      notes: document.getElementById('fNotes').value.trim(),
+      favorite: false,
+      uses: 0,
+      created: new Date().toISOString().slice(0, 10),
+    });
+    showToast('✅ Prompt saved!');
+  }
+
+  savePrompts(prompts);
+  closeFormModal();
+  renderGrid();
+}
+
+// ── DETAIL VIEW ────────────────────────────────────────────────────────────
+function openDetail(id) {
+  const p = getPrompts().find(x => x.id === id);
+  if (!p) return;
+  currentDetailId = id;
+
+  const tagHtml = (p.tags||[]).map(t => `<span class="tag">#${t}</span>`).join('');
+  const dateStr = p.created ? new Date(p.created + 'T12:00:00').toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' }) : '—';
+
+  document.getElementById('detailContent').innerHTML = `
+    <div class="detail-header">
+      <div class="detail-title">${escHtml(p.title)}</div>
+      <button class="detail-close" onclick="closeDetail()">✕</button>
+    </div>
+    <div class="detail-badges">
+      <span class="badge badge-tool ${toolClass(p.tool)}">${escHtml(p.tool)}</span>
+      <span class="badge badge-cat ${catClass(p.category)}">${escHtml(p.category)}</span>
+      ${p.favorite ? '<span class="badge" style="background:#fef9c3;color:#92400e">⭐ Favorite</span>' : ''}
+    </div>
+    <div class="detail-prompt-wrap">
+      <div class="detail-prompt">${escHtml(p.prompt)}</div>
+      <button class="detail-copy-btn" onclick="copyPrompt('${p.id}', true)">📋 Copy Prompt</button>
+    </div>
+    ${p.notes ? `
+    <div class="detail-section">
+      <div class="detail-section-label">💡 Usage Tips & Notes</div>
+      <div class="detail-notes">${escHtml(p.notes)}</div>
+    </div>` : ''}
+    ${tagHtml ? `
+    <div class="detail-section">
+      <div class="detail-section-label">🏷 Tags</div>
+      <div class="detail-tags">${tagHtml}</div>
+    </div>` : ''}
+    <div class="detail-section">
+      <div class="detail-section-label">📊 Info</div>
+      <div class="detail-meta">
+        <div class="detail-meta-item">Created: <strong>${dateStr}</strong></div>
+        <div class="detail-meta-item">Used: <strong>${p.uses||0} times</strong></div>
+        <div class="detail-meta-item">Characters: <strong>${p.prompt.length}</strong></div>
+      </div>
+    </div>
+    <div class="detail-footer">
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-ghost" onclick="closeDetail(); openEditModal('${p.id}')">✏️ Edit</button>
+        <button class="btn btn-danger" onclick="closeDetail(); deletePrompt('${p.id}')">🗑 Delete</button>
+      </div>
+      <button class="btn btn-primary" onclick="copyPrompt('${p.id}', true)">📋 Copy & Use</button>
+    </div>
+  `;
+  document.getElementById('detailOverlay').classList.add('open');
+}
+
+function closeDetail() {
+  document.getElementById('detailOverlay').classList.remove('open');
+  currentDetailId = null;
+}
+
+// ── OVERLAY CLOSE ON OUTSIDE CLICK ────────────────────────────────────────
+document.getElementById('formOverlay').addEventListener('click', function(e) { if (e.target === this) closeFormModal(); });
+document.getElementById('detailOverlay').addEventListener('click', function(e) { if (e.target === this) closeDetail(); });
+
+// ── KEYBOARD SHORTCUTS ────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeFormModal(); closeDetail(); }
+  if (e.key === 'n' && !e.ctrlKey && !e.metaKey && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+    openAddModal();
+  }
+});
+
+// ── TOAST ──────────────────────────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+// ── UTILS ──────────────────────────────────────────────────────────────────
+function escHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+renderGrid();
+</script>
+</body>
+</html>
