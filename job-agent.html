@@ -679,13 +679,18 @@ const S = {
 };
 
 function persist() {
-  localStorage.setItem('ja2_apps',    JSON.stringify(S.apps));
+  localStorage.setItem('shared_job_pipeline', JSON.stringify(S.apps));
   localStorage.setItem('ja2_watched', JSON.stringify([...S.watched]));
 }
 function hydrate() {
   S.apiKey = localStorage.getItem('ja2_apikey') || '';
   try {
-    const stored = JSON.parse(localStorage.getItem('ja2_apps'));
+    // Migrate from old key on first run
+    const oldData = localStorage.getItem('ja2_apps');
+    if (oldData && !localStorage.getItem('shared_job_pipeline')) {
+      localStorage.setItem('shared_job_pipeline', oldData);
+    }
+    const stored = JSON.parse(localStorage.getItem('shared_job_pipeline'));
     if (!stored || stored.length === 0) {
       // First load only: seed with active pipeline and save to localStorage
       S.apps = DEFAULT_APPS.slice();

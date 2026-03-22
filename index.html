@@ -829,52 +829,82 @@ const msToNext = (60 - new Date().getSeconds()) * 1000 - new Date().getMilliseco
 setTimeout(() => { update(); setInterval(update, 60000); }, msToNext);
 
 /* ─────────────────────────────────────────────
-   PIPELINE — localStorage key: "pipeline_cards"
+   PIPELINE — shared key: "shared_job_pipeline"
+   Synced with job-agent.html (job-agent format:
+   {status, notes} ↔ index format: {col, note})
 ───────────────────────────────────────────── */
-const PIPELINE_KEY = 'pipeline_cards';
+const PIPELINE_KEY = 'shared_job_pipeline';
 
-const DEFAULT_CARDS = [
-  {
-    id: 'card_wonderful',
-    company: 'Wonderful.ai',
-    role: 'Japan GM / Country Manager',
-    col: 'screening',
-    date: '2026-03-17',
-    note: 'Recruiter screening with Virginia Campo (COO, Breakmark) went great. Promised to introduce to Chief of Staff. Next step coming this week.',
-    color: 'border-green',
-  },
-  {
-    id: 'card_headout',
-    company: 'Headout',
-    role: 'BD Manager Japan',
-    col: 'screening',
-    date: '2026-03-17',
-    note: 'Case study preparation completed. Web scraping of UberEats and Demaecan done. Waiting for feedback.',
-    color: 'border-blue',
-  },
-  {
-    id: 'card_fresha',
-    company: 'Fresha',
-    role: 'Head of Japan',
-    col: 'screening',
-    date: '2026-03-20',
-    note: 'Process ongoing. First contact made. Fresha is the world\'s largest beauty & wellness marketplace. Japan market entry role — ideal First Hire position.',
-    color: 'border-purple',
-  },
-];
+// job-agent status  →  pipeline column
+const STATUS_TO_COL = {
+  'Saved':     'targeting',
+  'Applied':   'applied',
+  'Screening': 'screening',
+  'Interview': 'interview',
+  'Offer':     'offer',
+  'Rejected':  'targeting',  // keep visible, shown in Targeting
+};
+// pipeline column  →  job-agent status
+const COL_TO_STATUS = {
+  'targeting': 'Saved',
+  'applied':   'Applied',
+  'screening': 'Screening',
+  'interview': 'Interview',
+  'offer':     'Offer',
+};
+
+// Convert job-agent record → card for rendering
+function jobToCard(job) {
+  return {
+    id:        job.id,
+    company:   job.company,
+    role:      job.role      || '',
+    col:       STATUS_TO_COL[job.status] || job.col || 'targeting',
+    date:      job.date      || '',
+    note:      job.notes     || job.note || '',
+    color:     job.color     || 'border-blue',
+    url:       job.url       || '',
+    createdAt: job.createdAt || '',
+  };
+}
+
+// Convert card → job-agent record for saving
+function cardToJob(card) {
+  return {
+    id:        card.id,
+    company:   card.company,
+    role:      card.role      || '',
+    status:    COL_TO_STATUS[card.col] || 'Saved',
+    notes:     card.note      || '',
+    date:      card.date      || '',
+    color:     card.color     || 'border-blue',
+    url:       card.url       || '',
+    createdAt: card.createdAt || new Date().toISOString(),
+  };
+}
 
 function loadCards() {
   try {
     const raw = localStorage.getItem(PIPELINE_KEY);
-    if (raw) return JSON.parse(raw);
-    // First load only: save defaults so future loads always read from localStorage
-    saveCards(DEFAULT_CARDS);
-    return DEFAULT_CARDS;
-  } catch { return DEFAULT_CARDS; }
+    if (!raw) {
+      // Migrate from old pipeline_cards key if it exists
+      const old = localStorage.getItem('pipeline_cards');
+      if (old) {
+        const oldCards = JSON.parse(old);
+        localStorage.setItem(PIPELINE_KEY, JSON.stringify(oldCards.map(cardToJob)));
+        return oldCards; // already in col/note format
+      }
+      return [];
+    }
+    const stored = JSON.parse(raw);
+    // Handle both formats: job-agent (has .status) and legacy index (has .col)
+    return stored.map(item => item.status !== undefined ? jobToCard(item) : item);
+  } catch { return []; }
 }
 
 function saveCards(cards) {
-  localStorage.setItem(PIPELINE_KEY, JSON.stringify(cards));
+  // Always persist in job-agent format so job-agent.html can read it
+  localStorage.setItem(PIPELINE_KEY, JSON.stringify(cards.map(cardToJob)));
 }
 
 function renderPipeline() {
@@ -972,13 +1002,14 @@ function saveNewCard() {
   if (!company) { document.getElementById('newCompany').focus(); return; }
 
   const card = {
-    id: 'card_' + Date.now(),
+    id:        'card_' + Date.now(),
     company,
     role,
-    col: _modalCol,
-    date: document.getElementById('newDate').value,
-    note: document.getElementById('newNote').value.trim(),
-    color: document.getElementById('newColor').value,
+    col:       _modalCol,
+    date:      document.getElementById('newDate').value,
+    note:      document.getElementById('newNote').value.trim(),
+    color:     document.getElementById('newColor').value,
+    createdAt: new Date().toISOString(),
   };
   const cards = loadCards();
   cards.push(card);
@@ -986,6 +1017,9 @@ function saveNewCard() {
   closeModal();
   renderPipeline();
 }
+
+// Auto-refresh pipeline every 30 s to pick up changes made in job-agent.html
+setInterval(renderPipeline, 30000);
 
 /* ─────────────────────────────────────────────
    LEARNING LOG — localStorage key: "learning_log"
