@@ -50,10 +50,8 @@ body{
 .card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-bottom:14px}
 
 /* ── SETTINGS ── */
-.settings-grid{display:flex;flex-direction:column;gap:12px}
-.setting-row{display:flex;flex-direction:column;gap:4px}
-.setting-label{font-size:12px;font-weight:600;color:var(--text-muted)}
-.key-row{display:flex;gap:8px}
+.setting-label{font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:4px}
+.key-row{display:flex;gap:8px;margin-bottom:4px}
 .key-input{
   flex:1;background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
   border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;
@@ -72,7 +70,6 @@ body{
 .btn-sm{padding:7px 14px;font-size:12px;border-radius:8px}
 .btn-record{background:var(--blue);color:white}
 .btn-record:hover{background:var(--blue-light)}
-.btn-record.recording{background:var(--red)}
 .btn-stop{background:var(--navy-muted);color:var(--text);border:1px solid var(--border)}
 .btn-stop:hover{border-color:var(--gray-400)}
 .btn-ghost{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
@@ -81,6 +78,8 @@ body{
 .btn-primary:hover{background:var(--blue-light)}
 .btn-success{background:#059669;color:white}
 .btn-success:hover{background:var(--green)}
+.btn-otter{background:#7c3aed;color:white;font-size:13px;padding:8px 16px;border-radius:8px}
+.btn-otter:hover{background:#6d28d9}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 
 /* ── RECORDING CONTROLS ── */
@@ -102,23 +101,31 @@ body{
 .speaker-btn.active.me{border-color:var(--blue);color:var(--blue);background:rgba(79,126,248,.12)}
 .speaker-btn.active.interviewer{border-color:var(--orange);color:var(--orange);background:rgba(245,158,11,.12)}
 
-/* ── REC STATUS BOX ── */
-.rec-status{
-  min-height:56px;background:var(--navy-muted);border:1px solid var(--border);
+/* ── LIVE TEXT BOX ── */
+.live-box{
+  min-height:52px;background:var(--navy-muted);border:1px solid var(--border);
   border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.6;
-  color:var(--text-muted);display:flex;align-items:center;gap:10px;
+  color:var(--text-muted);font-style:italic;margin-bottom:10px;
 }
-.rec-status.active{border-color:#3b60d4;color:#93c5fd}
-.rec-status.transcribing{border-color:var(--orange);color:var(--orange)}
-.rec-status.error{border-color:var(--red);color:var(--red)}
+.live-box.active{border-color:#3b60d4;color:#93c5fd;font-style:normal}
+.live-box.error{border-color:var(--red);color:var(--red);font-style:normal}
 
 /* ── REC INDICATOR ── */
-.rec-dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0;animation:pulse-dot 1.2s ease-in-out infinite}
+.rec-dot{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;animation:pulse-dot 1.2s ease-in-out infinite;display:inline-block}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
 .hidden{display:none!important}
 
 /* ── TIMER ── */
-.rec-timer{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--red);margin-left:auto;white-space:nowrap}
+.rec-timer{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--red)}
+
+/* ── OTTER BANNER ── */
+.otter-banner{
+  background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.4);
+  border-radius:10px;padding:14px 16px;display:flex;align-items:center;
+  justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.otter-msg{font-size:13px;line-height:1.55;color:var(--text)}
+.otter-msg strong{color:#a78bfa}
 
 /* ── TRANSCRIPT ── */
 .transcript-box{
@@ -210,43 +217,32 @@ body{
 
   <!-- ── SETTINGS ── -->
   <div class="card">
-    <div class="card-title">API Keys</div>
-    <div class="settings-grid">
-      <div class="setting-row">
-        <div class="setting-label">OpenAI API Key <span style="color:var(--text-muted);font-weight:400">(for Whisper transcription)</span></div>
-        <div class="key-row">
-          <input type="password" class="key-input" id="openai-key-input" placeholder="sk-..." autocomplete="off">
-          <button class="btn btn-sm btn-ghost" onclick="saveOpenAIKey()">Save</button>
-        </div>
-        <div class="key-status empty" id="openai-key-status">Required for transcription</div>
-      </div>
-      <div class="setting-row">
-        <div class="setting-label">Anthropic API Key <span style="color:var(--text-muted);font-weight:400">(for AI analysis)</span></div>
-        <div class="key-row">
-          <input type="password" class="key-input" id="anthropic-key-input" placeholder="sk-ant-..." autocomplete="off">
-          <button class="btn btn-sm btn-ghost" onclick="saveAnthropicKey()">Save</button>
-        </div>
-        <div class="key-status empty" id="anthropic-key-status">Required for analysis</div>
-      </div>
+    <div class="card-title">API Key</div>
+    <div class="setting-label">Anthropic API Key <span style="font-weight:400;color:var(--text-muted)">(for AI analysis)</span></div>
+    <div class="key-row">
+      <input type="password" class="key-input" id="anthropic-key-input" placeholder="sk-ant-..." autocomplete="off">
+      <button class="btn btn-sm btn-ghost" onclick="saveAnthropicKey()">Save</button>
     </div>
+    <div class="key-status empty" id="anthropic-key-status">Required for AI analysis</div>
   </div>
 
   <!-- ── RECORDING ── -->
   <div class="card">
     <div class="card-title">Recording</div>
 
-    <!-- Controls row -->
+    <!-- Controls -->
     <div class="rec-top">
       <select class="lang-select" id="lang-select">
-        <option value="en">🇺🇸 English</option>
-        <option value="ja">🇯🇵 Japanese</option>
+        <option value="en-US">🇺🇸 English</option>
+        <option value="ja-JP">🇯🇵 Japanese</option>
       </select>
       <button class="btn btn-record" id="btn-start" onclick="startRecording()">
         ⏺ Start Recording
       </button>
       <button class="btn btn-stop hidden" id="btn-stop" onclick="stopRecording()">
-        ⏹ Stop &amp; Transcribe
+        ⏹ Stop Recording
       </button>
+      <span class="rec-timer hidden" id="rec-timer">00:00</span>
     </div>
 
     <!-- Speaker toggle -->
@@ -256,16 +252,27 @@ body{
       <button class="speaker-btn interviewer" id="btn-interviewer" onclick="setSpeaker('interviewer')">🎤 INTERVIEWER</button>
     </div>
 
-    <!-- Status box -->
-    <div class="rec-status" id="rec-status">
-      Press <strong>Start Recording</strong> to begin. Audio is recorded locally, then sent to Whisper when you stop.
+    <!-- Live interim text -->
+    <div class="live-box" id="live-box">
+      Press <strong>Start Recording</strong> — real-time transcript appears here while you speak.
+    </div>
+
+    <!-- Otter.ai banner (shown after stop) -->
+    <div class="otter-banner hidden" id="otter-banner">
+      <div class="otter-msg">
+        ✅ <strong>Audio saved to Downloads folder.</strong><br>
+        Upload to Otter.ai for speaker detection.
+      </div>
+      <a href="https://otter.ai" target="_blank" rel="noopener" class="btn btn-otter">
+        Open Otter.ai →
+      </a>
     </div>
   </div>
 
   <!-- ── TRANSCRIPT ── -->
   <div class="card">
     <div class="card-title">Transcript</div>
-    <textarea class="transcript-box" id="transcript" placeholder="Transcript will appear here after you stop recording. You can also type or paste text manually."></textarea>
+    <textarea class="transcript-box" id="transcript" placeholder="Your transcript appears here in real time. Edit manually if needed."></textarea>
     <div class="transcript-actions">
       <button class="btn btn-sm btn-ghost" onclick="clearTranscript()">✕ Clear</button>
       <button class="btn btn-sm btn-ghost" onclick="copyTranscript()">⎘ Copy</button>
@@ -360,44 +367,36 @@ body{
 // ══════════════════════════════════════════
 //  STATE
 // ══════════════════════════════════════════
-let mediaRecorder = null;
+let recognition   = null;   // SpeechRecognition
+let mediaRecorder = null;   // MediaRecorder (audio capture)
 let audioChunks   = [];
+let audioMimeType = '';
 let isRecording   = false;
-let recordingStart = null;
-let timerInterval  = null;
-let currentSpeaker = 'me';   // 'me' | 'interviewer'
+let finalBuffer   = '';     // accumulated final transcript text
+let timerInterval = null;
+let timerStart    = null;
+let currentSpeaker = 'me'; // 'me' | 'interviewer'
 let currentModalId = null;
 let currentAnalysis = null;
 
 // ══════════════════════════════════════════
-//  API KEYS
+//  API KEY
 // ══════════════════════════════════════════
 function loadKeys() {
-  const oKey = localStorage.getItem('openai_apikey') || '';
-  const aKey = localStorage.getItem('ja2_apikey') || '';
-  document.getElementById('openai-key-input').value = oKey;
-  document.getElementById('anthropic-key-input').value = aKey;
-  updateKeyStatus('openai-key-status', oKey, 'sk-', 'OpenAI key saved ✓', 'Required for transcription');
-  updateKeyStatus('anthropic-key-status', aKey, 'sk-ant-', 'Anthropic key saved ✓', 'Required for analysis');
+  const key = localStorage.getItem('ja2_apikey') || '';
+  document.getElementById('anthropic-key-input').value = key;
+  updateKeyStatus(key);
 }
-
-function updateKeyStatus(elId, key, prefix, okMsg, emptyMsg) {
-  const el = document.getElementById(elId);
-  if (!key) { el.textContent = emptyMsg; el.className = 'key-status empty'; }
-  else if (key.startsWith(prefix)) { el.textContent = okMsg; el.className = 'key-status ok'; }
+function updateKeyStatus(key) {
+  const el = document.getElementById('anthropic-key-status');
+  if (!key) { el.textContent = 'Required for AI analysis'; el.className = 'key-status empty'; }
+  else if (key.startsWith('sk-ant-')) { el.textContent = 'Anthropic key saved ✓'; el.className = 'key-status ok'; }
   else { el.textContent = '⚠ Key saved (check format)'; el.className = 'key-status warn'; }
 }
-
-function saveOpenAIKey() {
-  const key = document.getElementById('openai-key-input').value.trim();
-  localStorage.setItem('openai_apikey', key);
-  updateKeyStatus('openai-key-status', key, 'sk-', 'OpenAI key saved ✓', 'Required for transcription');
-}
-
 function saveAnthropicKey() {
   const key = document.getElementById('anthropic-key-input').value.trim();
   localStorage.setItem('ja2_apikey', key);
-  updateKeyStatus('anthropic-key-status', key, 'sk-ant-', 'Anthropic key saved ✓', 'Required for analysis');
+  updateKeyStatus(key);
 }
 
 // ══════════════════════════════════════════
@@ -405,7 +404,7 @@ function saveAnthropicKey() {
 // ══════════════════════════════════════════
 function setSpeaker(who) {
   currentSpeaker = who;
-  document.getElementById('btn-me').className = 'speaker-btn me' + (who === 'me' ? ' active' : '');
+  document.getElementById('btn-me').className          = 'speaker-btn me'          + (who === 'me'          ? ' active' : '');
   document.getElementById('btn-interviewer').className = 'speaker-btn interviewer' + (who === 'interviewer' ? ' active' : '');
 }
 
@@ -413,172 +412,186 @@ function setSpeaker(who) {
 //  TIMER
 // ══════════════════════════════════════════
 function startTimer() {
-  recordingStart = Date.now();
-  timerInterval = setInterval(updateTimer, 1000);
+  timerStart = Date.now();
+  timerInterval = setInterval(() => {
+    const s = Math.floor((Date.now() - timerStart) / 1000);
+    const mm = Math.floor(s / 60).toString().padStart(2, '0');
+    const ss = (s % 60).toString().padStart(2, '0');
+    document.getElementById('rec-timer').textContent = mm + ':' + ss;
+    if (s === 85 * 60) setLive('⚠️ Approaching 90 min — consider stopping soon.', 'active');
+  }, 1000);
 }
 function stopTimer() {
   clearInterval(timerInterval);
   timerInterval = null;
 }
-function updateTimer() {
-  const elapsed = Math.floor((Date.now() - recordingStart) / 1000);
-  const m = Math.floor(elapsed / 60).toString().padStart(2, '0');
-  const s = (elapsed % 60).toString().padStart(2, '0');
-  const timerEl = document.getElementById('rec-timer');
-  if (timerEl) timerEl.textContent = m + ':' + s;
 
-  // warn at 85 min (Whisper 25MB limit safety margin)
-  if (elapsed === 85 * 60) {
-    setStatus('⚠️ Approaching 90 min — consider stopping soon to avoid file size limits.', 'active');
-  }
-}
-function formatDuration(ms) {
-  const s = Math.floor(ms / 1000);
-  const m = Math.floor(s / 60);
-  const sec = s % 60;
-  return m > 0 ? `${m}m ${sec}s` : `${sec}s`;
+// ══════════════════════════════════════════
+//  LIVE BOX
+// ══════════════════════════════════════════
+function setLive(text, mode) {
+  const el = document.getElementById('live-box');
+  el.textContent = text;
+  el.className = 'live-box' + (mode ? ' ' + mode : '');
 }
 
 // ══════════════════════════════════════════
-//  STATUS BOX
+//  AUDIO FILENAME
 // ══════════════════════════════════════════
-function setStatus(html, mode) {
-  // mode: '' | 'active' | 'transcribing' | 'error'
-  const el = document.getElementById('rec-status');
-  el.innerHTML = html;
-  el.className = 'rec-status' + (mode ? ' ' + mode : '');
+function buildFilename(mimeType) {
+  const now = new Date();
+  const pad = n => n.toString().padStart(2, '0');
+  const dateStr = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}-${pad(now.getHours())}-${pad(now.getMinutes())}`;
+  const ext = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
+  return `interview-${dateStr}.${ext}`;
 }
 
 // ══════════════════════════════════════════
-//  RECORDING — MediaRecorder
+//  DOWNLOAD AUDIO
+// ══════════════════════════════════════════
+function downloadAudio() {
+  if (!audioChunks.length) return;
+  const blob = new Blob(audioChunks, { type: audioMimeType || 'audio/webm' });
+  const filename = buildFilename(audioMimeType);
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+  console.log('[Recorder] Downloaded:', filename, 'size:', blob.size);
+
+  // Show Otter.ai banner
+  document.getElementById('otter-banner').classList.remove('hidden');
+}
+
+// ══════════════════════════════════════════
+//  START — launches both SpeechRecognition
+//           AND MediaRecorder in parallel
 // ══════════════════════════════════════════
 async function startRecording() {
-  const openaiKey = localStorage.getItem('openai_apikey') || '';
-  if (!openaiKey) {
-    setStatus('❌ Please save your OpenAI API key first (needed for Whisper transcription).', 'error');
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    setLive('❌ Speech Recognition not supported. Use Chrome or Safari on iOS.', 'error');
     return;
   }
 
+  // ── 1. Get microphone stream for MediaRecorder ──
   let stream;
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   } catch (err) {
-    console.error('[Recorder] getUserMedia error:', err);
-    if (err.name === 'NotAllowedError') {
-      setStatus('❌ Microphone access denied. Please allow microphone access in your browser settings.', 'error');
-    } else {
-      setStatus('❌ Could not access microphone: ' + err.message, 'error');
-    }
+    console.error('[Recorder] getUserMedia:', err);
+    const msg = err.name === 'NotAllowedError'
+      ? '❌ Microphone access denied. Allow microphone access in browser settings.'
+      : '❌ Could not access microphone: ' + err.message;
+    setLive(msg, 'error');
     return;
   }
 
-  // Pick best supported MIME type
-  const mimeType = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
+  // ── 2. Start MediaRecorder (audio capture for download) ──
+  audioMimeType = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
     .find(t => MediaRecorder.isTypeSupported(t)) || '';
-  console.log('[Recorder] Using mimeType:', mimeType || '(browser default)');
+  console.log('[Recorder] mimeType:', audioMimeType || '(browser default)');
 
   audioChunks = [];
-  mediaRecorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
-
-  mediaRecorder.ondataavailable = (e) => {
-    if (e.data && e.data.size > 0) audioChunks.push(e.data);
-  };
-
-  mediaRecorder.onstop = async () => {
+  mediaRecorder = new MediaRecorder(stream, audioMimeType ? { mimeType: audioMimeType } : {});
+  mediaRecorder.ondataavailable = e => { if (e.data?.size > 0) audioChunks.push(e.data); };
+  mediaRecorder.onstop = () => {
     stream.getTracks().forEach(t => t.stop());
-    const duration = Date.now() - recordingStart;
-    await transcribeAudio(duration);
+    downloadAudio();
+  };
+  mediaRecorder.start(1000);
+
+  // ── 3. Start SpeechRecognition (live transcript) ──
+  const lang = document.getElementById('lang-select').value;
+  console.log('[Recorder] SpeechRecognition lang:', lang);
+
+  finalBuffer = document.getElementById('transcript').value;
+
+  recognition = new SpeechRecognition();
+  recognition.lang = lang;
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+  recognition.onstart = () => {
+    console.log('[Recorder] SpeechRecognition started');
+    setLive('🎙️ Listening...', 'active');
   };
 
-  mediaRecorder.start(1000); // collect chunks every 1s
+  recognition.onresult = e => {
+    let interim = '';
+    let newFinal = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript; // [0] = best alternative
+      if (e.results[i].isFinal) newFinal += t + ' ';
+      else interim += t;
+    }
+    if (newFinal) {
+      // Prefix with speaker label on each new final chunk
+      const prefix = currentSpeaker === 'me' ? '[ME]: ' : '[INTERVIEWER]: ';
+      finalBuffer += (finalBuffer ? '\n' : '') + prefix + newFinal.trim();
+      document.getElementById('transcript').value = finalBuffer;
+    }
+    setLive(interim || '🎙️ Listening...', 'active');
+  };
+
+  recognition.onerror = e => {
+    console.error('[Recorder] SpeechRecognition error:', e.error);
+    if (e.error === 'not-allowed') {
+      setLive('❌ Microphone access denied.', 'error');
+      stopRecording();
+    } else if (e.error === 'no-speech') {
+      console.log('[Recorder] no-speech, continuing...');
+    } else {
+      console.warn('[Recorder] error:', e.error);
+    }
+  };
+
+  recognition.onend = () => {
+    console.log('[Recorder] SpeechRecognition ended, isRecording:', isRecording);
+    if (isRecording) recognition.start(); // keep alive for 90-min sessions
+  };
+
+  recognition.start();
+
+  // ── 4. Update UI ──
   isRecording = true;
   startTimer();
   setRecordingUI(true);
-  setStatus(
-    '<span class="rec-dot"></span> Recording… <span id="rec-timer">00:00</span>',
-    'active'
-  );
-  console.log('[Recorder] MediaRecorder started');
+  document.getElementById('otter-banner').classList.add('hidden');
 }
 
+// ══════════════════════════════════════════
+//  STOP — stops both SpeechRecognition
+//          AND MediaRecorder
+// ══════════════════════════════════════════
 function stopRecording() {
-  if (!mediaRecorder || mediaRecorder.state === 'inactive') return;
-  console.log('[Recorder] Stopping MediaRecorder');
+  console.log('[Recorder] stopRecording');
   isRecording = false;
   stopTimer();
+
+  // Stop SpeechRecognition
+  if (recognition) { recognition.stop(); recognition = null; }
+
+  // Stop MediaRecorder — onstop will trigger downloadAudio()
+  if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+    mediaRecorder.stop();
+  }
+
+  setLive('Recording stopped. Edit transcript below if needed.', '');
   setRecordingUI(false);
-  setStatus(
-    'Transcribing… <span class="dots" style="color:var(--orange)"><span></span><span></span><span></span></span>',
-    'transcribing'
-  );
-  mediaRecorder.stop(); // triggers onstop → transcribeAudio
 }
 
 function setRecordingUI(on) {
   document.getElementById('btn-start').classList.toggle('hidden', on);
   document.getElementById('btn-stop').classList.toggle('hidden', !on);
+  document.getElementById('rec-timer').classList.toggle('hidden', !on);
   document.getElementById('lang-select').disabled = on;
   document.getElementById('btn-me').disabled = on;
   document.getElementById('btn-interviewer').disabled = on;
-}
-
-// ══════════════════════════════════════════
-//  WHISPER TRANSCRIPTION
-// ══════════════════════════════════════════
-async function transcribeAudio(durationMs) {
-  const openaiKey = localStorage.getItem('openai_apikey') || '';
-  const lang = document.getElementById('lang-select').value; // 'en' | 'ja'
-
-  const mimeType = audioChunks[0]?.type || 'audio/webm';
-  const ext = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
-  const blob = new Blob(audioChunks, { type: mimeType });
-
-  console.log('[Whisper] Blob size:', blob.size, 'type:', mimeType, 'duration:', durationMs);
-
-  if (blob.size < 100) {
-    setStatus('⚠️ Recording was too short or empty. Please try again.', 'error');
-    return;
-  }
-
-  const formData = new FormData();
-  formData.append('file', blob, 'recording.' + ext);
-  formData.append('model', 'whisper-1');
-  formData.append('language', lang);
-
-  try {
-    const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
-      method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + openaiKey },
-      body: formData
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || 'HTTP ' + res.status);
-    }
-
-    const data = await res.json();
-    const text = (data.text || '').trim();
-    console.log('[Whisper] Transcript:', text);
-
-    if (!text) {
-      setStatus('⚠️ No speech detected in the recording. Try again.', 'error');
-      return;
-    }
-
-    // Prepend speaker label and append to existing transcript
-    const prefix = currentSpeaker === 'me' ? '[ME]: ' : '[INTERVIEWER]: ';
-    const existing = document.getElementById('transcript').value;
-    const newText = (existing ? existing + '\n\n' : '') + prefix + text;
-    document.getElementById('transcript').value = newText;
-
-    const dur = formatDuration(durationMs);
-    setStatus(`✓ Transcribed (${dur}) — ${text.split(' ').length} words added.`, '');
-
-  } catch (err) {
-    console.error('[Whisper] Error:', err);
-    setStatus('❌ Transcription failed: ' + err.message, 'error');
-  }
 }
 
 // ══════════════════════════════════════════
@@ -587,9 +600,11 @@ async function transcribeAudio(durationMs) {
 function clearTranscript() {
   if (isRecording) { alert('Stop recording first.'); return; }
   document.getElementById('transcript').value = '';
+  finalBuffer = '';
   currentAnalysis = null;
   document.getElementById('analysis-output').classList.add('hidden');
-  setStatus('Transcript cleared. Press Start Recording to begin a new session.', '');
+  document.getElementById('otter-banner').classList.add('hidden');
+  setLive('Transcript cleared. Press Start Recording to begin.', '');
 }
 
 function copyTranscript() {
@@ -608,7 +623,7 @@ function copyTranscript() {
 // ══════════════════════════════════════════
 async function analyzeInterview() {
   const transcript = document.getElementById('transcript').value.trim();
-  if (!transcript) { alert('No transcript to analyze. Record and transcribe first.'); return; }
+  if (!transcript) { alert('No transcript to analyze.'); return; }
 
   const apiKey = localStorage.getItem('ja2_apikey') || '';
   if (!apiKey) { alert('Please save your Anthropic API key first.'); return; }
@@ -661,11 +676,11 @@ Be specific, actionable, and encouraging. Score from 1-10.`;
     const analysis = JSON.parse(jsonStr);
     currentAnalysis = analysis;
 
-    document.getElementById('a-summary-text').textContent = analysis.summary || '';
-    document.getElementById('a-strong-text').textContent  = analysis.strong || '';
-    document.getElementById('a-weak-text').textContent    = analysis.weak || '';
-    document.getElementById('a-suggested-text').textContent = analysis.suggested || '';
-    document.getElementById('a-score-num').textContent    = analysis.score ?? '—';
+    document.getElementById('a-summary-text').textContent   = analysis.summary  || '';
+    document.getElementById('a-strong-text').textContent    = analysis.strong   || '';
+    document.getElementById('a-weak-text').textContent      = analysis.weak     || '';
+    document.getElementById('a-suggested-text').textContent = analysis.suggested|| '';
+    document.getElementById('a-score-num').textContent      = analysis.score    ?? '—';
     document.getElementById('analysis-output').classList.remove('hidden');
 
   } catch (err) {
@@ -679,12 +694,8 @@ Be specific, actionable, and encouraging. Score from 1-10.`;
 // ══════════════════════════════════════════
 //  SAVE / HISTORY
 // ══════════════════════════════════════════
-function getHistory() {
-  return JSON.parse(localStorage.getItem('interview_history') || '[]');
-}
-function saveHistory(list) {
-  localStorage.setItem('interview_history', JSON.stringify(list));
-}
+function getHistory() { return JSON.parse(localStorage.getItem('interview_history') || '[]'); }
+function saveHistory(list) { localStorage.setItem('interview_history', JSON.stringify(list)); }
 
 function saveSession() {
   const transcript = document.getElementById('transcript').value.trim();
@@ -712,7 +723,7 @@ function renderHistory() {
   const list = getHistory();
   const el = document.getElementById('history-list');
   if (!list.length) {
-    el.innerHTML = '<div class="empty-state">No past recordings yet.<br>Record, transcribe, and save to build your history.</div>';
+    el.innerHTML = '<div class="empty-state">No past recordings yet.<br>Record, then save to build your history.</div>';
     return;
   }
   el.innerHTML = list.map(item => `
@@ -740,45 +751,40 @@ function openModal(id) {
   const item = getHistory().find(x => x.id === id);
   if (!item) return;
   currentModalId = id;
-
-  document.getElementById('modal-title').textContent = item.date;
+  document.getElementById('modal-title').textContent     = item.date;
   document.getElementById('modal-transcript').textContent = item.transcript;
-
   const aw = document.getElementById('modal-analysis-wrap');
   if (item.analysis) {
     aw.classList.remove('hidden');
-    document.getElementById('modal-summary').textContent   = item.analysis.summary || '';
-    document.getElementById('modal-strong').textContent    = item.analysis.strong || '';
-    document.getElementById('modal-weak').textContent      = item.analysis.weak || '';
+    document.getElementById('modal-summary').textContent   = item.analysis.summary   || '';
+    document.getElementById('modal-strong').textContent    = item.analysis.strong    || '';
+    document.getElementById('modal-weak').textContent      = item.analysis.weak      || '';
     document.getElementById('modal-suggested').textContent = item.analysis.suggested || '';
-    document.getElementById('modal-score').textContent     = item.analysis.score ?? '—';
+    document.getElementById('modal-score').textContent     = item.analysis.score     ?? '—';
   } else {
     aw.classList.add('hidden');
   }
-
   document.getElementById('history-modal').classList.remove('hidden');
 }
-
 function closeModal() {
   document.getElementById('history-modal').classList.add('hidden');
   currentModalId = null;
 }
-
 function closeModalOverlay(e) {
   if (e.target.id === 'history-modal') closeModal();
 }
-
 function loadIntoEditor() {
   const item = getHistory().find(x => x.id === currentModalId);
   if (!item) return;
   document.getElementById('transcript').value = item.transcript;
+  finalBuffer = item.transcript;
   if (item.analysis) {
     currentAnalysis = item.analysis;
-    document.getElementById('a-summary-text').textContent   = item.analysis.summary || '';
-    document.getElementById('a-strong-text').textContent    = item.analysis.strong || '';
-    document.getElementById('a-weak-text').textContent      = item.analysis.weak || '';
+    document.getElementById('a-summary-text').textContent   = item.analysis.summary   || '';
+    document.getElementById('a-strong-text').textContent    = item.analysis.strong    || '';
+    document.getElementById('a-weak-text').textContent      = item.analysis.weak      || '';
     document.getElementById('a-suggested-text').textContent = item.analysis.suggested || '';
-    document.getElementById('a-score-num').textContent      = item.analysis.score ?? '—';
+    document.getElementById('a-score-num').textContent      = item.analysis.score     ?? '—';
     document.getElementById('analysis-output').classList.remove('hidden');
   }
   closeModal();
@@ -791,9 +797,6 @@ function loadIntoEditor() {
 loadKeys();
 renderHistory();
 document.getElementById('transcript').value = '';
-
-// auto-save keys on change
-document.getElementById('openai-key-input').addEventListener('change', saveOpenAIKey);
 document.getElementById('anthropic-key-input').addEventListener('change', saveAnthropicKey);
 </script>
 </body>
