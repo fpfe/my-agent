@@ -376,6 +376,12 @@ function updateApiKeyStatus(key) {
 }
 
 // ── SPEECH RECOGNITION ──
+function setStatus(msg, isError) {
+  const el = document.getElementById('live-text');
+  el.textContent = msg;
+  el.className = isError ? 'live-text' : 'live-text active';
+}
+
 function startRecording() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
@@ -383,51 +389,76 @@ function startRecording() {
     return;
   }
 
+  const lang = document.getElementById('lang-select').value;
+  console.log('[Recorder] Starting recognition, lang:', lang);
+
   recognition = new SpeechRecognition();
-  recognition.lang = document.getElementById('lang-select').value;
+  recognition.lang = lang;
   recognition.continuous = true;
   recognition.interimResults = true;
 
+  // Keep existing transcript text as base
   finalBuffer = document.getElementById('transcript').value;
 
+  recognition.onstart = () => {
+    console.log('[Recorder] Recognition started');
+    setStatus('Listening...', false);
+  };
+
   recognition.onresult = (e) => {
+    console.log('[Recorder] onresult, results count:', e.results.length);
     let interim = '';
     let newFinal = '';
     for (let i = e.resultIndex; i < e.results.length; i++) {
-      const t = e.results[i].transcript;
-      if (e.results[i].isFinal) newFinal += t + ' ';
-      else interim += t;
+      // e.results[i] is a SpeechRecognitionResult (array-like), [0] is the best alternative
+      const t = e.results[i][0].transcript;
+      console.log('[Recorder] result[' + i + '] isFinal=' + e.results[i].isFinal + ' text="' + t + '"');
+      if (e.results[i].isFinal) {
+        newFinal += t + ' ';
+      } else {
+        interim += t;
+      }
     }
     if (newFinal) finalBuffer += newFinal;
     liveBuffer = interim;
 
-    document.getElementById('live-text').textContent = interim || '...';
-    document.getElementById('live-text').className = 'live-text active';
+    setStatus(interim || '🎙️ Listening...', false);
     document.getElementById('transcript').value = finalBuffer;
   };
 
   recognition.onerror = (e) => {
-    console.error('Speech error:', e.error);
+    console.error('[Recorder] Speech error:', e.error);
     if (e.error === 'not-allowed') {
-      alert('Microphone access denied. Please allow microphone access in your browser settings.');
+      setStatus('❌ Microphone access denied. Please allow microphone in browser settings.', true);
       stopRecording();
+    } else if (e.error === 'no-speech') {
+      console.log('[Recorder] No speech detected, continuing...');
+    } else {
+      setStatus('⚠️ Error: ' + e.error, true);
     }
   };
 
   recognition.onend = () => {
-    if (isRecording) recognition.start(); // keep alive
+    console.log('[Recorder] onend, isRecording:', isRecording);
+    if (isRecording) {
+      console.log('[Recorder] Restarting recognition...');
+      recognition.start(); // keep alive
+    }
   };
 
   recognition.start();
   isRecording = true;
   setRecordingUI(true);
+  console.log('[Recorder] recognition.start() called');
 }
 
 function stopRecording() {
+  console.log('[Recorder] stopRecording called');
   isRecording = false;
   if (recognition) { recognition.stop(); recognition = null; }
-  document.getElementById('live-text').textContent = 'Recording stopped.';
-  document.getElementById('live-text').className = 'live-text';
+  const el = document.getElementById('live-text');
+  el.textContent = 'Recording stopped. Edit transcript below if needed.';
+  el.className = 'live-text';
   setRecordingUI(false);
 }
 
@@ -642,6 +673,11 @@ function loadIntoEditor() {
 // ── INIT ──
 loadApiKey();
 renderHistory();
+
+// Ensure clean state on load
+document.getElementById('transcript').value = '';
+document.getElementById('live-text').textContent = 'Live transcript will appear here as you speak...';
+document.getElementById('live-text').className = 'live-text';
 
 // auto-save API key on input
 document.getElementById('apikey-input').addEventListener('change', saveApiKey);
