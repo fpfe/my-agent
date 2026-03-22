@@ -205,12 +205,14 @@
     .app-card.purple::before{ background: linear-gradient(90deg, #7c3aed, #a855f7); }
     .app-card.orange::before{ background: linear-gradient(90deg, #f59e0b, #fbbf24); }
     .app-card.teal::before  { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+    .app-card.red::before   { background: linear-gradient(90deg, #ef4444, #f87171); }
     .app-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .app-card.blue:hover  { border-color: var(--blue); }
     .app-card.green:hover { border-color: var(--green); }
     .app-card.purple:hover{ border-color: var(--purple); }
     .app-card.orange:hover{ border-color: var(--orange); }
     .app-card.teal:hover  { border-color: #0d9488; }
+    .app-card.red:hover   { border-color: var(--red); }
     .app-icon-wrap {
       width: 52px; height: 52px; border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
@@ -221,6 +223,7 @@
     .app-card.purple .app-icon-wrap { background: var(--purple-bg); }
     .app-card.orange .app-icon-wrap { background: var(--orange-bg); }
     .app-card.teal   .app-icon-wrap { background: #f0fdfa; }
+    .app-card.red    .app-icon-wrap { background: var(--red-bg); }
     .app-name { font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
     .app-desc { font-size: 12.5px; color: var(--gray-500); line-height: 1.55; flex: 1; }
     .app-arrow {
@@ -233,6 +236,7 @@
     .app-card.purple .app-arrow { color: var(--purple); }
     .app-card.orange .app-arrow { color: var(--orange); }
     .app-card.teal   .app-arrow { color: #0d9488; }
+    .app-card.red    .app-arrow { color: var(--red); }
     .app-card:hover .app-arrow { gap: 8px; }
 
     /* ══════════════════════════════════════════
@@ -620,6 +624,12 @@
       <div class="app-name">Prompt Bank</div>
       <div class="app-desc">Save, organize, and reuse your best prompts for Claude, ChatGPT, and Cursor.</div>
       <div class="app-arrow">Open Prompt Bank →</div>
+    </a>
+    <a class="app-card red" href="interview-recorder.html">
+      <div class="app-icon-wrap">🎙️</div>
+      <div class="app-name">Interview Recorder</div>
+      <div class="app-desc">Record practice interviews, get AI feedback, and track your improvement over time.</div>
+      <div class="app-arrow">Open Recorder →</div>
     </a>
   </div>
 
