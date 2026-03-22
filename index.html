@@ -887,19 +887,24 @@ function loadCards() {
   try {
     const raw = localStorage.getItem(PIPELINE_KEY);
     if (!raw) {
-      // Migrate from old pipeline_cards key if it exists
+      // Migrate from old pipeline_cards key only if job-agent hasn't set up shared key yet
       const old = localStorage.getItem('pipeline_cards');
       if (old) {
         const oldCards = JSON.parse(old);
         localStorage.setItem(PIPELINE_KEY, JSON.stringify(oldCards.map(cardToJob)));
+        console.log('[index] migrated pipeline_cards →', oldCards.length, 'cards');
         return oldCards; // already in col/note format
       }
       return [];
     }
     const stored = JSON.parse(raw);
+    console.log('[index] loadCards:', stored.length, 'items. First item:',
+      stored[0] ? JSON.stringify({ company: stored[0].company, status: stored[0].status, col: stored[0].col }) : 'none');
     // Handle both formats: job-agent (has .status) and legacy index (has .col)
-    return stored.map(item => item.status !== undefined ? jobToCard(item) : item);
-  } catch { return []; }
+    const cards = stored.map(item => item.status !== undefined ? jobToCard(item) : item);
+    console.log('[index] mapped cols:', cards.map(c => c.company + ':' + c.col).join(', '));
+    return cards;
+  } catch(e) { console.error('[index] loadCards error:', e); return []; }
 }
 
 function saveCards(cards) {
@@ -1018,8 +1023,17 @@ function saveNewCard() {
   renderPipeline();
 }
 
-// Auto-refresh pipeline every 30 s to pick up changes made in job-agent.html
+// Auto-refresh pipeline every 30 s (fallback)
 setInterval(renderPipeline, 30000);
+
+// Immediate sync: re-render the moment job-agent.html writes to shared_job_pipeline
+// (storage event fires in OTHER tabs when localStorage changes)
+window.addEventListener('storage', (e) => {
+  if (e.key === 'shared_job_pipeline') {
+    console.log('[index] storage event fired — re-rendering pipeline');
+    renderPipeline();
+  }
+});
 
 /* ─────────────────────────────────────────────
    LEARNING LOG — localStorage key: "learning_log"

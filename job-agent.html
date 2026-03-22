@@ -681,16 +681,25 @@ const S = {
 function persist() {
   localStorage.setItem('shared_job_pipeline', JSON.stringify(S.apps));
   localStorage.setItem('ja2_watched', JSON.stringify([...S.watched]));
+  console.log('[job-agent] saved', S.apps.length, 'apps →', JSON.stringify(
+    S.apps.map(a => ({ company: a.company, status: a.status }))
+  ));
 }
 function hydrate() {
   S.apiKey = localStorage.getItem('ja2_apikey') || '';
   try {
-    // Migrate from old key on first run
+    // ja2_apps ALWAYS wins — job-agent is the source of truth.
+    // Migrate it unconditionally and delete the old key so this runs only once.
     const oldData = localStorage.getItem('ja2_apps');
-    if (oldData && !localStorage.getItem('shared_job_pipeline')) {
+    if (oldData) {
+      console.log('[job-agent] migrating ja2_apps → shared_job_pipeline');
       localStorage.setItem('shared_job_pipeline', oldData);
+      localStorage.removeItem('ja2_apps');
     }
     const stored = JSON.parse(localStorage.getItem('shared_job_pipeline'));
+    console.log('[job-agent] loaded', stored ? stored.length : 0,
+      'records from shared_job_pipeline. Sample:',
+      stored && stored[0] ? JSON.stringify({ company: stored[0].company, status: stored[0].status }) : 'none');
     if (!stored || stored.length === 0) {
       // First load only: seed with active pipeline and save to localStorage
       S.apps = DEFAULT_APPS.slice();
