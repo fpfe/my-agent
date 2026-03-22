@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Review</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3250;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --text: #e8eaf6;
+      --muted: #8892b0;
+      --win: #ffd700;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px 16px 60px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p { color: var(--muted); margin-top: 4px; font-size: 0.9rem; }
+
+    .week-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .week-bar label { color: var(--muted); font-size: 0.85rem; }
+    .week-bar select {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      outline: none;
+    }
+    .week-bar select:focus { border-color: var(--accent); }
+    .week-label {
+      color: var(--accent2);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-title .icon { font-size: 1rem; }
+
+    /* Wins */
+    .win-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .win-num {
+      color: var(--win);
+      font-weight: 700;
+      font-size: 1.1rem;
+      min-width: 22px;
+    }
+    .win-item input {
+      flex: 1;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .win-item input:focus { border-color: var(--win); }
+
+    /* Learned */
+    .learn-row { margin-bottom: 12px; }
+    .learn-row label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--accent2);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .learn-row textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      outline: none;
+      resize: vertical;
+      min-height: 68px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    .learn-row textarea:focus { border-color: var(--accent2); }
+
+    /* Pipeline */
+    .pipeline-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .pipeline-row label {
+      color: var(--muted);
+      font-size: 0.88rem;
+      flex: 1;
+    }
+    .pipeline-row input[type="number"] {
+      width: 70px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      outline: none;
+    }
+    .pipeline-row input[type="number"]:focus { border-color: var(--accent); }
+    .pipeline-big {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-align: center;
+      padding: 8px 0 4px;
+    }
+    .pipeline-sub { text-align: center; color: var(--muted); font-size: 0.8rem; }
+
+    /* Priorities */
+    .priority-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .priority-num {
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .priority-item input {
+      flex: 1;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .priority-item input:focus { border-color: var(--accent); }
+
+    /* Buttons row */
+    .actions {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 11px 22px;
+      border-radius: 9px;
+      border: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn-save {
+      background: var(--accent2);
+      color: #0f1117;
+    }
+    .btn-coach {
+      background: linear-gradient(135deg, var(--accent), #9f6ef5);
+      color: white;
+      flex: 1;
+    }
+    .btn-clear {
+      background: var(--surface2);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* Coach panel */
+    #coach-panel {
+      display: none;
+      max-width: 1100px;
+      margin: 20px auto 0;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    #coach-panel h3 {
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 12px;
+    }
+    #coach-output {
+      color: var(--text);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    #coach-output .thinking {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
+    .spinner {
+      display: inline-block;
+      width: 16px; height: 16px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* API key input */
+    .apikey-row {
+      max-width: 1100px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .apikey-row label { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
+    .apikey-row input {
+      flex: 1;
+      min-width: 200px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .apikey-row input:focus { border-color: var(--accent); }
+    .apikey-row button {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--accent2);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📋 Weekly Review</h1>
+  <p>Reflect · Learn · Plan</p>
+</header>
+
+<!-- Week selector -->
+<div class="week-bar">
+  <label for="week-select">Week of:</label>
+  <select id="week-select"></select>
+  <span class="week-label" id="week-range-label"></span>
+</div>
+
+<!-- API Key -->
+<div class="apikey-row">
+  <label>🔑 Anthropic API Key (saved locally):</label>
+  <input type="password" id="apikey-input" placeholder="sk-ant-..." />
+  <button onclick="saveApiKey()">Save Key</button>
+</div>
+
+<!-- Main grid -->
+<div class="grid">
+
+  <!-- Wins -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🏆</span> Three Wins This Week</div>
+    <div class="win-item"><span class="win-num">1</span><input id="win1" type="text" placeholder="e.g. Passed screening call" /></div>
+    <div class="win-item"><span class="win-num">2</span><input id="win2" type="text" placeholder="e.g. Shipped a feature" /></div>
+    <div class="win-item"><span class="win-num">3</span><input id="win3" type="text" placeholder="e.g. Learned something new" /></div>
+  </div>
+
+  <!-- What I Learned -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🧠</span> What I Learned</div>
+    <div class="learn-row">
+      <label>AI Knowledge</label>
+      <textarea id="learn-ai" placeholder="Models, prompts, architectures…"></textarea>
+    </div>
+    <div class="learn-row">
+      <label>Vibe Coding</label>
+      <textarea id="learn-vibe" placeholder="Tools, workflows, builds…"></textarea>
+    </div>
+    <div class="learn-row">
+      <label>Job Search</label>
+      <textarea id="learn-job" placeholder="Interviews, networking, insights…"></textarea>
+    </div>
+  </div>
+
+  <!-- Job Pipeline -->
+  <div class="card">
+    <div class="card-title"><span class="icon">💼</span> Job Pipeline Status</div>
+    <div class="pipeline-row">
+      <label>Active Roles</label>
+      <input type="number" id="pipeline-active" min="0" value="0" />
+    </div>
+    <div class="pipeline-row">
+      <label>Interviews Scheduled</label>
+      <input type="number" id="pipeline-interviews" min="0" value="0" />
+    </div>
+    <div class="pipeline-row">
+      <label>Applications Sent</label>
+      <input type="number" id="pipeline-apps" min="0" value="0" />
+    </div>
+    <div class="pipeline-row">
+      <label>Offers / Late Stage</label>
+      <input type="number" id="pipeline-offers" min="0" value="0" />
+    </div>
+  </div>
+
+  <!-- Next Week Priorities -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🎯</span> Next Week Top 3 Priorities</div>
+    <div class="priority-item"><span class="priority-num">1</span><input id="p1" type="text" placeholder="Most important focus" /></div>
+    <div class="priority-item"><span class="priority-num">2</span><input id="p2" type="text" placeholder="Second priority" /></div>
+    <div class="priority-item"><span class="priority-num">3</span><input id="p3" type="text" placeholder="Third priority" /></div>
+  </div>
+
+</div>
+
+<!-- Action buttons -->
+<div class="actions">
+  <button class="btn btn-clear" onclick="clearWeek()">🗑 Clear</button>
+  <button class="btn btn-save" onclick="saveWeek()">💾 Save Week</button>
+  <button class="btn btn-coach" onclick="runCoach()">🤖 AI Coach — Analyze My Week</button>
+</div>
+
+<!-- Coach output -->
+<div id="coach-panel">
+  <h3>🤖 AI Coach Feedback</h3>
+  <div id="coach-output"></div>
+</div>
+
+<div id="toast">Saved!</div>
+
+<script>
+// ─── Week utilities ──────────────────────────────────────────────────────────
+
+function getMondayOf(date) {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  d.setDate(d.getDate() + diff);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+function getFridayOf(monday) {
+  const f = new Date(monday);
+  f.setDate(f.getDate() + 4);
+  return f;
+}
+
+function formatDate(d) {
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function weekKey(monday) {
+  return monday.toISOString().slice(0, 10); // e.g. "2026-03-16"
+}
+
+function weekLabel(monday) {
+  const friday = getFridayOf(monday);
+  const opts = { month: 'short', day: 'numeric' };
+  return `${monday.toLocaleDateString('en-US', opts)} – ${friday.toLocaleDateString('en-US', opts)}, ${friday.getFullYear()}`;
+}
+
+// ─── Build week selector (last 10 weeks + next 2) ───────────────────────────
+
+function buildWeekSelector() {
+  const sel = document.getElementById('week-select');
+  const now = new Date();
+  const currentMonday = getMondayOf(now);
+
+  // Generate weeks: 10 past + current + 2 future
+  const weeks = [];
+  for (let i = -10; i <= 2; i++) {
+    const d = new Date(currentMonday);
+    d.setDate(d.getDate() + i * 7);
+    weeks.push(d);
+  }
+
+  weeks.reverse(); // most recent first
+
+  weeks.forEach(monday => {
+    const opt = document.createElement('option');
+    opt.value = weekKey(monday);
+    opt.textContent = weekLabel(monday);
+    if (weekKey(monday) === weekKey(currentMonday)) {
+      opt.textContent += ' (this week)';
+      opt.selected = true;
+    }
+    sel.appendChild(opt);
+  });
+
+  updateWeekLabel();
+  sel.addEventListener('change', () => { loadWeek(); updateWeekLabel(); });
+}
+
+function updateWeekLabel() {
+  const sel = document.getElementById('week-select');
+  const key = sel.value;
+  const monday = new Date(key + 'T00:00:00');
+  const friday = getFridayOf(monday);
+  document.getElementById('week-range-label').textContent =
+    `📅 ${monday.toLocaleDateString('en-US', {month:'long',day:'numeric'})}–${friday.toLocaleDateString('en-US', {month:'long',day:'numeric',year:'numeric'})}`;
+}
+
+// ─── Data model ─────────────────────────────────────────────────────────────
+
+function getFormData() {
+  return {
+    win1: v('win1'), win2: v('win2'), win3: v('win3'),
+    learnAI: v('learn-ai'), learnVibe: v('learn-vibe'), learnJob: v('learn-job'),
+    pipelineActive: v('pipeline-active'),
+    pipelineInterviews: v('pipeline-interviews'),
+    pipelineApps: v('pipeline-apps'),
+    pipelineOffers: v('pipeline-offers'),
+    p1: v('p1'), p2: v('p2'), p3: v('p3'),
+  };
+}
+
+function setFormData(data) {
+  if (!data) { clearFields(); return; }
+  sv('win1', data.win1); sv('win2', data.win2); sv('win3', data.win3);
+  sv('learn-ai', data.learnAI); sv('learn-vibe', data.learnVibe); sv('learn-job', data.learnJob);
+  sv('pipeline-active', data.pipelineActive ?? 0);
+  sv('pipeline-interviews', data.pipelineInterviews ?? 0);
+  sv('pipeline-apps', data.pipelineApps ?? 0);
+  sv('pipeline-offers', data.pipelineOffers ?? 0);
+  sv('p1', data.p1); sv('p2', data.p2); sv('p3', data.p3);
+}
+
+function clearFields() {
+  ['win1','win2','win3','learn-ai','learn-vibe','learn-job','p1','p2','p3'].forEach(id => sv(id, ''));
+  ['pipeline-active','pipeline-interviews','pipeline-apps','pipeline-offers'].forEach(id => sv(id, 0));
+}
+
+function v(id) { return document.getElementById(id)?.value ?? ''; }
+function sv(id, val) { const el = document.getElementById(id); if (el) el.value = val ?? ''; }
+
+// ─── Save / Load ─────────────────────────────────────────────────────────────
+
+function currentWeekKey() {
+  return document.getElementById('week-select').value;
+}
+
+function saveWeek() {
+  const key = 'wr_' + currentWeekKey();
+  localStorage.setItem(key, JSON.stringify(getFormData()));
+  showToast('✅ Week saved!');
+}
+
+function loadWeek() {
+  const key = 'wr_' + currentWeekKey();
+  const raw = localStorage.getItem(key);
+  setFormData(raw ? JSON.parse(raw) : null);
+  document.getElementById('coach-panel').style.display = 'none';
+}
+
+function clearWeek() {
+  if (!confirm('Clear all data for this week?')) return;
+  clearFields();
+  localStorage.removeItem('wr_' + currentWeekKey());
+  showToast('🗑 Cleared');
+}
+
+// ─── API Key ─────────────────────────────────────────────────────────────────
+
+function saveApiKey() {
+  const key = document.getElementById('apikey-input').value.trim();
+  if (!key) return showToast('⚠️ Enter an API key first');
+  localStorage.setItem('ja2_apikey', key);
+  showToast('🔑 API key saved');
+}
+
+function loadApiKey() {
+  const key = localStorage.getItem('ja2_apikey') || '';
+  document.getElementById('apikey-input').value = key;
+}
+
+// ─── AI Coach ────────────────────────────────────────────────────────────────
+
+async function runCoach() {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) {
+    showToast('⚠️ Add your Anthropic API key first');
+    return;
+  }
+
+  const data = getFormData();
+  const weekRange = document.getElementById('week-range-label').textContent.replace('📅 ', '');
+
+  const prompt = `You are a supportive AI career coach helping a job seeker who is also building AI tools.
+
+Week: ${weekRange}
+
+🏆 WINS:
+1. ${data.win1 || '(none listed)'}
+2. ${data.win2 || '(none listed)'}
+3. ${data.win3 || '(none listed)'}
+
+🧠 WHAT I LEARNED:
+- AI Knowledge: ${data.learnAI || '(nothing noted)'}
+- Vibe Coding: ${data.learnVibe || '(nothing noted)'}
+- Job Search: ${data.learnJob || '(nothing noted)'}
+
+💼 JOB PIPELINE:
+- Active roles: ${data.pipelineActive}
+- Interviews scheduled: ${data.pipelineInterviews}
+- Applications sent: ${data.pipelineApps}
+- Offers / late stage: ${data.pipelineOffers}
+
+🎯 NEXT WEEK PRIORITIES:
+1. ${data.p1 || '(not set)'}
+2. ${data.p2 || '(not set)'}
+3. ${data.p3 || '(not set)'}
+
+Please analyze this week and provide:
+1. **Recognition** — Acknowledge what went well and why it matters
+2. **Insights** — Patterns or observations from the data above
+3. **Advice** — 2-3 specific, actionable recommendations for next week
+4. **Motivational close** — One encouraging sentence
+
+Keep it concise, direct, and practical. Avoid generic platitudes.`;
+
+  const panel = document.getElementById('coach-panel');
+  const output = document.getElementById('coach-output');
+  panel.style.display = 'block';
+  output.innerHTML = '<span class="spinner"></span> Thinking…';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: 'claude-opus-4-6',
+        max_tokens: 1024,
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${response.status}`);
+    }
+
+    const result = await response.json();
+    const text = result.content?.find(b => b.type === 'text')?.text || '(no response)';
+    output.textContent = text;
+
+  } catch (err) {
+    output.innerHTML = `<span style="color:var(--danger)">❌ Error: ${err.message}</span>`;
+  }
+}
+
+// ─── Toast ────────────────────────────────────────────────────────────────────
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+// ─── Pre-fill March 17-21 2026 ───────────────────────────────────────────────
+
+function prefillMarch17() {
+  const targetKey = '2026-03-16'; // Monday of that week
+  const existing = localStorage.getItem('wr_' + targetKey);
+  if (existing) return; // don't overwrite if already saved
+
+  const data = {
+    win1: 'Passed Wonderful.ai screening',
+    win2: 'Built and published 7 apps to GitHub Pages',
+    win3: 'Learned GitHub MCP setup',
+    learnAI: '',
+    learnVibe: '',
+    learnJob: '',
+    pipelineActive: 0,
+    pipelineInterviews: 0,
+    pipelineApps: 0,
+    pipelineOffers: 0,
+    p1: '', p2: '', p3: '',
+  };
+  localStorage.setItem('wr_' + targetKey, JSON.stringify(data));
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+
+prefillMarch17();
+buildWeekSelector();
+loadApiKey();
+loadWeek();
+</script>
+</body>
+</html>
