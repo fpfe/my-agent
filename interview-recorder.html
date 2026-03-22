@@ -11,15 +11,14 @@
   --blue:#4f7ef8;--blue-light:#6b94ff;
   --green:#10b981;--red:#ef4444;--red-dark:#dc2626;
   --orange:#f59e0b;--purple:#7c3aed;
-  --gray-400:#94a3b8;--gray-500:#64748b;--gray-700:#334155;
+  --gray-400:#94a3b8;--gray-500:#64748b;
   --text:#e2e8f0;--text-muted:#94a3b8;
   --border:#2d3f55;
   --shadow:0 4px 16px rgba(0,0,0,0.3);
 }
 body{
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif;
-  background:var(--navy);color:var(--text);min-height:100vh;
-  display:flex;flex-direction:column;
+  background:var(--navy);color:var(--text);min-height:100vh;display:flex;flex-direction:column;
 }
 
 /* ── HEADER ── */
@@ -39,8 +38,7 @@ body{
 .header-sub{font-size:11px;color:var(--text-muted)}
 .back-link{
   font-size:12px;color:var(--text-muted);text-decoration:none;
-  padding:5px 10px;border-radius:7px;border:1px solid var(--border);
-  transition:all .15s;
+  padding:5px 10px;border-radius:7px;border:1px solid var(--border);transition:all .15s;
 }
 .back-link:hover{color:var(--text);border-color:var(--gray-400)}
 
@@ -48,34 +46,35 @@ body{
 .main{max-width:760px;margin:0 auto;padding:24px 16px 60px;width:100%;display:flex;flex-direction:column;gap:16px}
 
 /* ── CARD ── */
-.card{
-  background:var(--navy-light);border-radius:16px;padding:20px;
-  border:1px solid var(--border);box-shadow:var(--shadow);
-}
-.card-title{
-  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;
-  color:var(--text-muted);margin-bottom:14px;
-}
+.card{background:var(--navy-light);border-radius:16px;padding:20px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-bottom:14px}
 
-/* ── RECORDING SECTION ── */
-.rec-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.lang-select{
-  background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
-  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;
-  outline:none;cursor:pointer;transition:border-color .15s;
+/* ── SETTINGS ── */
+.settings-grid{display:flex;flex-direction:column;gap:12px}
+.setting-row{display:flex;flex-direction:column;gap:4px}
+.setting-label{font-size:12px;font-weight:600;color:var(--text-muted)}
+.key-row{display:flex;gap:8px}
+.key-input{
+  flex:1;background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
+  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;
 }
-.lang-select:focus{border-color:var(--blue)}
+.key-input:focus{border-color:var(--blue)}
+.key-status{font-size:11px}
+.key-status.ok{color:var(--green)}
+.key-status.warn{color:var(--orange)}
+.key-status.empty{color:var(--text-muted)}
 
+/* ── BUTTONS ── */
 .btn{
   padding:10px 20px;border-radius:10px;border:none;font-size:14px;font-weight:600;
-  font-family:inherit;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:7px;
+  font-family:inherit;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:7px;
 }
+.btn-sm{padding:7px 14px;font-size:12px;border-radius:8px}
 .btn-record{background:var(--blue);color:white}
 .btn-record:hover{background:var(--blue-light)}
-.btn-record.recording{background:var(--red);animation:pulse-bg 1.5s infinite}
+.btn-record.recording{background:var(--red)}
 .btn-stop{background:var(--navy-muted);color:var(--text);border:1px solid var(--border)}
 .btn-stop:hover{border-color:var(--gray-400)}
-.btn-sm{padding:7px 14px;font-size:12px;border-radius:8px}
 .btn-ghost{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
 .btn-ghost:hover{color:var(--text);border-color:var(--gray-400)}
 .btn-primary{background:var(--blue);color:white}
@@ -84,44 +83,57 @@ body{
 .btn-success:hover{background:var(--green)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 
-/* ── RECORDING INDICATOR ── */
-.rec-indicator{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--red);font-weight:600}
-.rec-dot{
-  width:10px;height:10px;border-radius:50%;background:var(--red);
-  animation:pulse-dot 1.2s ease-in-out infinite;
+/* ── RECORDING CONTROLS ── */
+.rec-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.lang-select{
+  background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
+  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;cursor:pointer;
 }
-@keyframes pulse-dot{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:.4;transform:scale(.8)}
+.lang-select:focus{border-color:var(--blue)}
+
+/* ── SPEAKER TOGGLE ── */
+.speaker-row{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.speaker-label{font-size:12px;color:var(--text-muted);font-weight:600;white-space:nowrap}
+.speaker-btn{
+  padding:6px 14px;border-radius:8px;border:1.5px solid var(--border);
+  background:transparent;color:var(--text-muted);font-size:12px;font-weight:600;
+  font-family:inherit;cursor:pointer;transition:all .15s;
 }
-@keyframes pulse-bg{
-  0%,100%{background:var(--red)}
-  50%{background:var(--red-dark)}
+.speaker-btn.active.me{border-color:var(--blue);color:var(--blue);background:rgba(79,126,248,.12)}
+.speaker-btn.active.interviewer{border-color:var(--orange);color:var(--orange);background:rgba(245,158,11,.12)}
+
+/* ── REC STATUS BOX ── */
+.rec-status{
+  min-height:56px;background:var(--navy-muted);border:1px solid var(--border);
+  border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.6;
+  color:var(--text-muted);display:flex;align-items:center;gap:10px;
 }
+.rec-status.active{border-color:#3b60d4;color:#93c5fd}
+.rec-status.transcribing{border-color:var(--orange);color:var(--orange)}
+.rec-status.error{border-color:var(--red);color:var(--red)}
+
+/* ── REC INDICATOR ── */
+.rec-dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0;animation:pulse-dot 1.2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
 .hidden{display:none!important}
+
+/* ── TIMER ── */
+.rec-timer{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--red);margin-left:auto;white-space:nowrap}
 
 /* ── TRANSCRIPT ── */
 .transcript-box{
-  width:100%;min-height:160px;background:var(--navy-muted);border:1px solid var(--border);
+  width:100%;min-height:180px;background:var(--navy-muted);border:1px solid var(--border);
   border-radius:10px;padding:14px;color:var(--text);font-size:14px;line-height:1.7;
   font-family:inherit;resize:vertical;outline:none;transition:border-color .15s;
 }
 .transcript-box:focus{border-color:var(--blue)}
 .transcript-box::placeholder{color:var(--text-muted)}
-.live-text{
-  min-height:80px;background:var(--navy-muted);border:1px solid var(--border);
-  border-radius:10px;padding:14px;font-size:14px;line-height:1.7;color:var(--text-muted);
-  font-style:italic;margin-bottom:10px;
-}
-.live-text.active{color:#93c5fd;border-color:#3b60d4}
-.transcript-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.transcript-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
 
 /* ── ANALYSIS ── */
 .analyze-btn-wrap{margin-bottom:14px}
 .analysis-output{display:flex;flex-direction:column;gap:12px}
-.analysis-section{
-  background:var(--navy-muted);border-radius:10px;padding:14px;border-left:3px solid var(--blue);
-}
+.analysis-section{background:var(--navy-muted);border-radius:10px;padding:14px;border-left:3px solid var(--blue)}
 .analysis-section.strong{border-left-color:var(--green)}
 .analysis-section.weak{border-left-color:var(--orange)}
 .analysis-section.suggested{border-left-color:var(--purple)}
@@ -130,14 +142,13 @@ body{
 .analysis-content{font-size:13.5px;line-height:1.7;color:var(--text);white-space:pre-wrap}
 .score-number{font-size:48px;font-weight:800;color:var(--red);line-height:1}
 .score-label{font-size:13px;color:var(--text-muted);margin-top:4px}
-.loading-dots{display:inline-flex;gap:5px;align-items:center}
-.loading-dots span{
-  width:7px;height:7px;border-radius:50%;background:var(--blue);
-  animation:bounce 1.2s infinite;
-}
-.loading-dots span:nth-child(2){animation-delay:.2s}
-.loading-dots span:nth-child(3){animation-delay:.4s}
-@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+
+/* ── LOADING DOTS ── */
+.dots{display:inline-flex;gap:4px;align-items:center;vertical-align:middle}
+.dots span{width:6px;height:6px;border-radius:50%;background:currentColor;animation:bounce 1.2s infinite}
+.dots span:nth-child(2){animation-delay:.2s}
+.dots span:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
 
 /* ── HISTORY ── */
 .history-list{display:flex;flex-direction:column;gap:8px}
@@ -167,26 +178,11 @@ body{
 }
 .modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .modal-title{font-size:15px;font-weight:700}
-.modal-close{
-  background:transparent;border:none;color:var(--text-muted);cursor:pointer;
-  font-size:20px;line-height:1;padding:4px 8px;border-radius:6px;
-}
+.modal-close{background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:20px;line-height:1;padding:4px 8px;border-radius:6px}
 .modal-close:hover{color:var(--text);background:var(--navy-muted)}
 .modal-section{margin-bottom:14px}
 .modal-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--text-muted);margin-bottom:6px}
-.modal-text{font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;
-  background:var(--navy-muted);border-radius:8px;padding:12px;border:1px solid var(--border)}
-
-/* ── API KEY ── */
-.apikey-row{display:flex;align-items:center;gap:8px;margin-top:4px}
-.apikey-input{
-  flex:1;background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
-  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;
-}
-.apikey-input:focus{border-color:var(--blue)}
-.apikey-status{font-size:11px;margin-top:4px}
-.apikey-status.ok{color:var(--green)}
-.apikey-status.missing{color:var(--orange)}
+.modal-text{font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;background:var(--navy-muted);border-radius:8px;padding:12px;border:1px solid var(--border)}
 
 /* ── MOBILE ── */
 @media(max-width:500px){
@@ -204,7 +200,7 @@ body{
     <div class="header-icon">🎙️</div>
     <div>
       <div class="header-title">Interview Recorder</div>
-      <div class="header-sub">Record · Analyze · Improve</div>
+      <div class="header-sub">Record · Transcribe · Analyze</div>
     </div>
   </div>
   <a href="index.html" class="back-link">← Home</a>
@@ -212,53 +208,72 @@ body{
 
 <div class="main">
 
-  <!-- API KEY -->
+  <!-- ── SETTINGS ── -->
   <div class="card">
-    <div class="card-title">API Key</div>
-    <div class="apikey-row">
-      <input type="password" class="apikey-input" id="apikey-input" placeholder="sk-ant-..." autocomplete="off">
-      <button class="btn btn-sm btn-ghost" onclick="saveApiKey()">Save</button>
-    </div>
-    <div class="apikey-status" id="apikey-status"></div>
-  </div>
-
-  <!-- RECORDING -->
-  <div class="card">
-    <div class="card-title">Recording</div>
-    <div class="rec-controls">
-      <select class="lang-select" id="lang-select">
-        <option value="en-US">🇺🇸 English</option>
-        <option value="ja-JP">🇯🇵 Japanese</option>
-      </select>
-      <button class="btn btn-record" id="btn-start" onclick="startRecording()">
-        <span>⏺</span> Start Recording
-      </button>
-      <button class="btn btn-stop hidden" id="btn-stop" onclick="stopRecording()">
-        <span>⏹</span> Stop
-      </button>
-      <div class="rec-indicator hidden" id="rec-indicator">
-        <div class="rec-dot"></div> REC
+    <div class="card-title">API Keys</div>
+    <div class="settings-grid">
+      <div class="setting-row">
+        <div class="setting-label">OpenAI API Key <span style="color:var(--text-muted);font-weight:400">(for Whisper transcription)</span></div>
+        <div class="key-row">
+          <input type="password" class="key-input" id="openai-key-input" placeholder="sk-..." autocomplete="off">
+          <button class="btn btn-sm btn-ghost" onclick="saveOpenAIKey()">Save</button>
+        </div>
+        <div class="key-status empty" id="openai-key-status">Required for transcription</div>
+      </div>
+      <div class="setting-row">
+        <div class="setting-label">Anthropic API Key <span style="color:var(--text-muted);font-weight:400">(for AI analysis)</span></div>
+        <div class="key-row">
+          <input type="password" class="key-input" id="anthropic-key-input" placeholder="sk-ant-..." autocomplete="off">
+          <button class="btn btn-sm btn-ghost" onclick="saveAnthropicKey()">Save</button>
+        </div>
+        <div class="key-status empty" id="anthropic-key-status">Required for analysis</div>
       </div>
     </div>
+  </div>
 
-    <!-- live preview -->
-    <div style="margin-top:14px">
-      <div class="live-text" id="live-text">Live transcript will appear here as you speak...</div>
+  <!-- ── RECORDING ── -->
+  <div class="card">
+    <div class="card-title">Recording</div>
+
+    <!-- Controls row -->
+    <div class="rec-top">
+      <select class="lang-select" id="lang-select">
+        <option value="en">🇺🇸 English</option>
+        <option value="ja">🇯🇵 Japanese</option>
+      </select>
+      <button class="btn btn-record" id="btn-start" onclick="startRecording()">
+        ⏺ Start Recording
+      </button>
+      <button class="btn btn-stop hidden" id="btn-stop" onclick="stopRecording()">
+        ⏹ Stop &amp; Transcribe
+      </button>
+    </div>
+
+    <!-- Speaker toggle -->
+    <div class="speaker-row">
+      <span class="speaker-label">Speaker:</span>
+      <button class="speaker-btn me active" id="btn-me" onclick="setSpeaker('me')">👤 ME</button>
+      <button class="speaker-btn interviewer" id="btn-interviewer" onclick="setSpeaker('interviewer')">🎤 INTERVIEWER</button>
+    </div>
+
+    <!-- Status box -->
+    <div class="rec-status" id="rec-status">
+      Press <strong>Start Recording</strong> to begin. Audio is recorded locally, then sent to Whisper when you stop.
     </div>
   </div>
 
-  <!-- TRANSCRIPT -->
+  <!-- ── TRANSCRIPT ── -->
   <div class="card">
     <div class="card-title">Transcript</div>
-    <textarea class="transcript-box" id="transcript" placeholder="Your transcript will appear here. You can also type or edit it manually."></textarea>
+    <textarea class="transcript-box" id="transcript" placeholder="Transcript will appear here after you stop recording. You can also type or paste text manually."></textarea>
     <div class="transcript-actions">
       <button class="btn btn-sm btn-ghost" onclick="clearTranscript()">✕ Clear</button>
       <button class="btn btn-sm btn-ghost" onclick="copyTranscript()">⎘ Copy</button>
-      <button class="btn btn-sm btn-success" onclick="saveRecording()" style="margin-left:auto">💾 Save</button>
+      <button class="btn btn-sm btn-success" onclick="saveSession()" style="margin-left:auto">💾 Save</button>
     </div>
   </div>
 
-  <!-- AI ANALYSIS -->
+  <!-- ── AI ANALYSIS ── -->
   <div class="card">
     <div class="card-title">AI Analysis</div>
     <div class="analyze-btn-wrap">
@@ -266,34 +281,34 @@ body{
         🤖 Analyze My Interview
       </button>
     </div>
+    <div class="hidden" id="analyze-loading" style="padding:14px 0;color:var(--text-muted);font-size:13px">
+      Analyzing <span class="dots" style="color:var(--blue)"><span></span><span></span><span></span></span>
+    </div>
     <div class="analysis-output hidden" id="analysis-output">
-      <div class="analysis-section" id="a-summary">
+      <div class="analysis-section">
         <div class="analysis-label">Summary</div>
         <div class="analysis-content" id="a-summary-text"></div>
       </div>
-      <div class="analysis-section strong" id="a-strong">
+      <div class="analysis-section strong">
         <div class="analysis-label">💪 Strong Answers</div>
         <div class="analysis-content" id="a-strong-text"></div>
       </div>
-      <div class="analysis-section weak" id="a-weak">
+      <div class="analysis-section weak">
         <div class="analysis-label">⚠️ Weak Points to Improve</div>
         <div class="analysis-content" id="a-weak-text"></div>
       </div>
-      <div class="analysis-section suggested" id="a-suggested">
+      <div class="analysis-section suggested">
         <div class="analysis-label">💡 Suggested Better Answers</div>
         <div class="analysis-content" id="a-suggested-text"></div>
       </div>
-      <div class="analysis-section score" id="a-score">
+      <div class="analysis-section score">
         <div class="score-number" id="a-score-num">—</div>
         <div class="score-label">Overall Score / 10</div>
       </div>
     </div>
-    <div class="hidden" id="analyze-loading" style="padding:16px 0;text-align:center;color:var(--text-muted);font-size:13px">
-      Analyzing <div class="loading-dots" style="display:inline-flex"><span></span><span></span><span></span></div>
-    </div>
   </div>
 
-  <!-- HISTORY -->
+  <!-- ── HISTORY ── -->
   <div class="card">
     <div class="card-title">Past Recordings</div>
     <div class="history-list" id="history-list"></div>
@@ -301,12 +316,12 @@ body{
 
 </div>
 
-<!-- HISTORY MODAL -->
-<div class="modal-overlay hidden" id="history-modal" onclick="closeModal(event)">
+<!-- ── HISTORY MODAL ── -->
+<div class="modal-overlay hidden" id="history-modal" onclick="closeModalOverlay(event)">
   <div class="modal">
     <div class="modal-header">
       <div class="modal-title" id="modal-title">Recording</div>
-      <button class="modal-close" onclick="closeHistoryModal()">✕</button>
+      <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-section">
       <div class="modal-section-label">Transcript</div>
@@ -336,169 +351,267 @@ body{
     </div>
     <div style="margin-top:14px;display:flex;gap:8px;justify-content:flex-end">
       <button class="btn btn-sm btn-ghost" onclick="loadIntoEditor()">📋 Load into Editor</button>
-      <button class="btn btn-sm btn-ghost" onclick="closeHistoryModal()">Close</button>
+      <button class="btn btn-sm btn-ghost" onclick="closeModal()">Close</button>
     </div>
   </div>
 </div>
 
 <script>
-// ── STATE ──
-let recognition = null;
-let isRecording = false;
-let liveBuffer = '';
-let finalBuffer = '';
+// ══════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════
+let mediaRecorder = null;
+let audioChunks   = [];
+let isRecording   = false;
+let recordingStart = null;
+let timerInterval  = null;
+let currentSpeaker = 'me';   // 'me' | 'interviewer'
 let currentModalId = null;
 let currentAnalysis = null;
 
-// ── API KEY ──
-function loadApiKey() {
-  const key = localStorage.getItem('ja2_apikey') || '';
-  document.getElementById('apikey-input').value = key;
-  updateApiKeyStatus(key);
+// ══════════════════════════════════════════
+//  API KEYS
+// ══════════════════════════════════════════
+function loadKeys() {
+  const oKey = localStorage.getItem('openai_apikey') || '';
+  const aKey = localStorage.getItem('ja2_apikey') || '';
+  document.getElementById('openai-key-input').value = oKey;
+  document.getElementById('anthropic-key-input').value = aKey;
+  updateKeyStatus('openai-key-status', oKey, 'sk-', 'OpenAI key saved ✓', 'Required for transcription');
+  updateKeyStatus('anthropic-key-status', aKey, 'sk-ant-', 'Anthropic key saved ✓', 'Required for analysis');
 }
-function saveApiKey() {
-  const key = document.getElementById('apikey-input').value.trim();
+
+function updateKeyStatus(elId, key, prefix, okMsg, emptyMsg) {
+  const el = document.getElementById(elId);
+  if (!key) { el.textContent = emptyMsg; el.className = 'key-status empty'; }
+  else if (key.startsWith(prefix)) { el.textContent = okMsg; el.className = 'key-status ok'; }
+  else { el.textContent = '⚠ Key saved (check format)'; el.className = 'key-status warn'; }
+}
+
+function saveOpenAIKey() {
+  const key = document.getElementById('openai-key-input').value.trim();
+  localStorage.setItem('openai_apikey', key);
+  updateKeyStatus('openai-key-status', key, 'sk-', 'OpenAI key saved ✓', 'Required for transcription');
+}
+
+function saveAnthropicKey() {
+  const key = document.getElementById('anthropic-key-input').value.trim();
   localStorage.setItem('ja2_apikey', key);
-  updateApiKeyStatus(key);
+  updateKeyStatus('anthropic-key-status', key, 'sk-ant-', 'Anthropic key saved ✓', 'Required for analysis');
 }
-function updateApiKeyStatus(key) {
-  const el = document.getElementById('apikey-status');
-  if (key && key.startsWith('sk-ant-')) {
-    el.textContent = '✓ API key saved';
-    el.className = 'apikey-status ok';
-  } else if (key) {
-    el.textContent = '⚠ Key saved (check format)';
-    el.className = 'apikey-status missing';
-  } else {
-    el.textContent = 'Enter your Anthropic API key to enable AI analysis';
-    el.className = 'apikey-status missing';
+
+// ══════════════════════════════════════════
+//  SPEAKER TOGGLE
+// ══════════════════════════════════════════
+function setSpeaker(who) {
+  currentSpeaker = who;
+  document.getElementById('btn-me').className = 'speaker-btn me' + (who === 'me' ? ' active' : '');
+  document.getElementById('btn-interviewer').className = 'speaker-btn interviewer' + (who === 'interviewer' ? ' active' : '');
+}
+
+// ══════════════════════════════════════════
+//  TIMER
+// ══════════════════════════════════════════
+function startTimer() {
+  recordingStart = Date.now();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+}
+function updateTimer() {
+  const elapsed = Math.floor((Date.now() - recordingStart) / 1000);
+  const m = Math.floor(elapsed / 60).toString().padStart(2, '0');
+  const s = (elapsed % 60).toString().padStart(2, '0');
+  const timerEl = document.getElementById('rec-timer');
+  if (timerEl) timerEl.textContent = m + ':' + s;
+
+  // warn at 85 min (Whisper 25MB limit safety margin)
+  if (elapsed === 85 * 60) {
+    setStatus('⚠️ Approaching 90 min — consider stopping soon to avoid file size limits.', 'active');
   }
 }
-
-// ── SPEECH RECOGNITION ──
-function setStatus(msg, isError) {
-  const el = document.getElementById('live-text');
-  el.textContent = msg;
-  el.className = isError ? 'live-text' : 'live-text active';
+function formatDuration(ms) {
+  const s = Math.floor(ms / 1000);
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return m > 0 ? `${m}m ${sec}s` : `${sec}s`;
 }
 
-function startRecording() {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SpeechRecognition) {
-    alert('Speech Recognition is not supported in this browser.\nPlease use Chrome or Edge.');
+// ══════════════════════════════════════════
+//  STATUS BOX
+// ══════════════════════════════════════════
+function setStatus(html, mode) {
+  // mode: '' | 'active' | 'transcribing' | 'error'
+  const el = document.getElementById('rec-status');
+  el.innerHTML = html;
+  el.className = 'rec-status' + (mode ? ' ' + mode : '');
+}
+
+// ══════════════════════════════════════════
+//  RECORDING — MediaRecorder
+// ══════════════════════════════════════════
+async function startRecording() {
+  const openaiKey = localStorage.getItem('openai_apikey') || '';
+  if (!openaiKey) {
+    setStatus('❌ Please save your OpenAI API key first (needed for Whisper transcription).', 'error');
     return;
   }
 
-  const lang = document.getElementById('lang-select').value;
-  console.log('[Recorder] Starting recognition, lang:', lang);
-
-  recognition = new SpeechRecognition();
-  recognition.lang = lang;
-  recognition.continuous = true;
-  recognition.interimResults = true;
-
-  // Keep existing transcript text as base
-  finalBuffer = document.getElementById('transcript').value;
-
-  recognition.onstart = () => {
-    console.log('[Recorder] Recognition started');
-    setStatus('Listening...', false);
-  };
-
-  recognition.onresult = (e) => {
-    console.log('[Recorder] onresult, results count:', e.results.length);
-    let interim = '';
-    let newFinal = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      // e.results[i] is a SpeechRecognitionResult (array-like), [0] is the best alternative
-      const t = e.results[i][0].transcript;
-      console.log('[Recorder] result[' + i + '] isFinal=' + e.results[i].isFinal + ' text="' + t + '"');
-      if (e.results[i].isFinal) {
-        newFinal += t + ' ';
-      } else {
-        interim += t;
-      }
-    }
-    if (newFinal) finalBuffer += newFinal;
-    liveBuffer = interim;
-
-    setStatus(interim || '🎙️ Listening...', false);
-    document.getElementById('transcript').value = finalBuffer;
-  };
-
-  recognition.onerror = (e) => {
-    console.error('[Recorder] Speech error:', e.error);
-    if (e.error === 'not-allowed') {
-      setStatus('❌ Microphone access denied. Please allow microphone in browser settings.', true);
-      stopRecording();
-    } else if (e.error === 'no-speech') {
-      console.log('[Recorder] No speech detected, continuing...');
+  let stream;
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  } catch (err) {
+    console.error('[Recorder] getUserMedia error:', err);
+    if (err.name === 'NotAllowedError') {
+      setStatus('❌ Microphone access denied. Please allow microphone access in your browser settings.', 'error');
     } else {
-      setStatus('⚠️ Error: ' + e.error, true);
+      setStatus('❌ Could not access microphone: ' + err.message, 'error');
     }
+    return;
+  }
+
+  // Pick best supported MIME type
+  const mimeType = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
+    .find(t => MediaRecorder.isTypeSupported(t)) || '';
+  console.log('[Recorder] Using mimeType:', mimeType || '(browser default)');
+
+  audioChunks = [];
+  mediaRecorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
+
+  mediaRecorder.ondataavailable = (e) => {
+    if (e.data && e.data.size > 0) audioChunks.push(e.data);
   };
 
-  recognition.onend = () => {
-    console.log('[Recorder] onend, isRecording:', isRecording);
-    if (isRecording) {
-      console.log('[Recorder] Restarting recognition...');
-      recognition.start(); // keep alive
-    }
+  mediaRecorder.onstop = async () => {
+    stream.getTracks().forEach(t => t.stop());
+    const duration = Date.now() - recordingStart;
+    await transcribeAudio(duration);
   };
 
-  recognition.start();
+  mediaRecorder.start(1000); // collect chunks every 1s
   isRecording = true;
+  startTimer();
   setRecordingUI(true);
-  console.log('[Recorder] recognition.start() called');
+  setStatus(
+    '<span class="rec-dot"></span> Recording… <span id="rec-timer">00:00</span>',
+    'active'
+  );
+  console.log('[Recorder] MediaRecorder started');
 }
 
 function stopRecording() {
-  console.log('[Recorder] stopRecording called');
+  if (!mediaRecorder || mediaRecorder.state === 'inactive') return;
+  console.log('[Recorder] Stopping MediaRecorder');
   isRecording = false;
-  if (recognition) { recognition.stop(); recognition = null; }
-  const el = document.getElementById('live-text');
-  el.textContent = 'Recording stopped. Edit transcript below if needed.';
-  el.className = 'live-text';
+  stopTimer();
   setRecordingUI(false);
+  setStatus(
+    'Transcribing… <span class="dots" style="color:var(--orange)"><span></span><span></span><span></span></span>',
+    'transcribing'
+  );
+  mediaRecorder.stop(); // triggers onstop → transcribeAudio
 }
 
 function setRecordingUI(on) {
   document.getElementById('btn-start').classList.toggle('hidden', on);
   document.getElementById('btn-stop').classList.toggle('hidden', !on);
-  document.getElementById('rec-indicator').classList.toggle('hidden', !on);
-  document.getElementById('btn-start').classList.toggle('recording', on);
   document.getElementById('lang-select').disabled = on;
+  document.getElementById('btn-me').disabled = on;
+  document.getElementById('btn-interviewer').disabled = on;
 }
 
-// ── TRANSCRIPT ──
+// ══════════════════════════════════════════
+//  WHISPER TRANSCRIPTION
+// ══════════════════════════════════════════
+async function transcribeAudio(durationMs) {
+  const openaiKey = localStorage.getItem('openai_apikey') || '';
+  const lang = document.getElementById('lang-select').value; // 'en' | 'ja'
+
+  const mimeType = audioChunks[0]?.type || 'audio/webm';
+  const ext = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
+  const blob = new Blob(audioChunks, { type: mimeType });
+
+  console.log('[Whisper] Blob size:', blob.size, 'type:', mimeType, 'duration:', durationMs);
+
+  if (blob.size < 100) {
+    setStatus('⚠️ Recording was too short or empty. Please try again.', 'error');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', blob, 'recording.' + ext);
+  formData.append('model', 'whisper-1');
+  formData.append('language', lang);
+
+  try {
+    const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + openaiKey },
+      body: formData
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || 'HTTP ' + res.status);
+    }
+
+    const data = await res.json();
+    const text = (data.text || '').trim();
+    console.log('[Whisper] Transcript:', text);
+
+    if (!text) {
+      setStatus('⚠️ No speech detected in the recording. Try again.', 'error');
+      return;
+    }
+
+    // Prepend speaker label and append to existing transcript
+    const prefix = currentSpeaker === 'me' ? '[ME]: ' : '[INTERVIEWER]: ';
+    const existing = document.getElementById('transcript').value;
+    const newText = (existing ? existing + '\n\n' : '') + prefix + text;
+    document.getElementById('transcript').value = newText;
+
+    const dur = formatDuration(durationMs);
+    setStatus(`✓ Transcribed (${dur}) — ${text.split(' ').length} words added.`, '');
+
+  } catch (err) {
+    console.error('[Whisper] Error:', err);
+    setStatus('❌ Transcription failed: ' + err.message, 'error');
+  }
+}
+
+// ══════════════════════════════════════════
+//  TRANSCRIPT ACTIONS
+// ══════════════════════════════════════════
 function clearTranscript() {
-  if (isRecording) stopRecording();
+  if (isRecording) { alert('Stop recording first.'); return; }
   document.getElementById('transcript').value = '';
-  document.getElementById('live-text').textContent = 'Live transcript will appear here as you speak...';
-  document.getElementById('live-text').className = 'live-text';
-  finalBuffer = '';
   currentAnalysis = null;
   document.getElementById('analysis-output').classList.add('hidden');
+  setStatus('Transcript cleared. Press Start Recording to begin a new session.', '');
 }
 
 function copyTranscript() {
   const text = document.getElementById('transcript').value;
   if (!text) return;
   navigator.clipboard.writeText(text).then(() => {
-    const btn = event.target;
+    const btn = event.currentTarget;
     const orig = btn.textContent;
     btn.textContent = '✓ Copied!';
     setTimeout(() => btn.textContent = orig, 1500);
   });
 }
 
-// ── AI ANALYSIS ──
+// ══════════════════════════════════════════
+//  AI ANALYSIS (Anthropic Claude)
+// ══════════════════════════════════════════
 async function analyzeInterview() {
   const transcript = document.getElementById('transcript').value.trim();
-  if (!transcript) { alert('Please record or enter a transcript first.'); return; }
+  if (!transcript) { alert('No transcript to analyze. Record and transcribe first.'); return; }
 
   const apiKey = localStorage.getItem('ja2_apikey') || '';
-  if (!apiKey) { alert('Please enter your Anthropic API key first.'); return; }
+  if (!apiKey) { alert('Please save your Anthropic API key first.'); return; }
 
   const btn = document.getElementById('btn-analyze');
   btn.disabled = true;
@@ -539,33 +652,33 @@ Be specific, actionable, and encouraging. Score from 1-10.`;
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+      throw new Error(err?.error?.message || 'HTTP ' + res.status);
     }
 
     const data = await res.json();
     const raw = data.content[0].text.trim();
-
-    // parse JSON — strip any accidental markdown fences
     const jsonStr = raw.replace(/^```json\s*/i, '').replace(/\s*```$/, '');
     const analysis = JSON.parse(jsonStr);
     currentAnalysis = analysis;
 
     document.getElementById('a-summary-text').textContent = analysis.summary || '';
-    document.getElementById('a-strong-text').textContent = analysis.strong || '';
-    document.getElementById('a-weak-text').textContent = analysis.weak || '';
+    document.getElementById('a-strong-text').textContent  = analysis.strong || '';
+    document.getElementById('a-weak-text').textContent    = analysis.weak || '';
     document.getElementById('a-suggested-text').textContent = analysis.suggested || '';
-    document.getElementById('a-score-num').textContent = analysis.score ?? '—';
-
+    document.getElementById('a-score-num').textContent    = analysis.score ?? '—';
     document.getElementById('analysis-output').classList.remove('hidden');
-  } catch (e) {
-    alert('Analysis failed: ' + e.message);
+
+  } catch (err) {
+    alert('Analysis failed: ' + err.message);
   } finally {
     btn.disabled = false;
     document.getElementById('analyze-loading').classList.add('hidden');
   }
 }
 
-// ── SAVE / HISTORY ──
+// ══════════════════════════════════════════
+//  SAVE / HISTORY
+// ══════════════════════════════════════════
 function getHistory() {
   return JSON.parse(localStorage.getItem('interview_history') || '[]');
 }
@@ -573,7 +686,7 @@ function saveHistory(list) {
   localStorage.setItem('interview_history', JSON.stringify(list));
 }
 
-function saveRecording() {
+function saveSession() {
   const transcript = document.getElementById('transcript').value.trim();
   if (!transcript) { alert('Nothing to save — transcript is empty.'); return; }
 
@@ -589,7 +702,7 @@ function saveRecording() {
   saveHistory(list);
   renderHistory();
 
-  const btn = event.target;
+  const btn = event.currentTarget;
   const orig = btn.innerHTML;
   btn.innerHTML = '✓ Saved!';
   setTimeout(() => btn.innerHTML = orig, 1500);
@@ -599,14 +712,14 @@ function renderHistory() {
   const list = getHistory();
   const el = document.getElementById('history-list');
   if (!list.length) {
-    el.innerHTML = '<div class="empty-state">No past recordings yet.<br>Record and save to build your history.</div>';
+    el.innerHTML = '<div class="empty-state">No past recordings yet.<br>Record, transcribe, and save to build your history.</div>';
     return;
   }
   el.innerHTML = list.map(item => `
-    <div class="history-item" onclick="openHistoryModal(${item.id})">
-      <div>
+    <div class="history-item" onclick="openModal(${item.id})">
+      <div style="flex:1;min-width:0">
         <div class="history-date">${item.date}${item.analysis ? ' · Score: ' + item.analysis.score + '/10' : ''}</div>
-        <div class="history-preview">${item.transcript.slice(0, 100)}${item.transcript.length > 100 ? '…' : ''}</div>
+        <div class="history-preview">${item.transcript.slice(0, 120)}${item.transcript.length > 120 ? '…' : ''}</div>
       </div>
       <button class="history-delete" onclick="deleteEntry(event,${item.id})" title="Delete">✕</button>
     </div>
@@ -620,8 +733,10 @@ function deleteEntry(e, id) {
   renderHistory();
 }
 
-// ── MODAL ──
-function openHistoryModal(id) {
+// ══════════════════════════════════════════
+//  MODAL
+// ══════════════════════════════════════════
+function openModal(id) {
   const item = getHistory().find(x => x.id === id);
   if (!item) return;
   currentModalId = id;
@@ -632,11 +747,11 @@ function openHistoryModal(id) {
   const aw = document.getElementById('modal-analysis-wrap');
   if (item.analysis) {
     aw.classList.remove('hidden');
-    document.getElementById('modal-summary').textContent = item.analysis.summary || '';
-    document.getElementById('modal-strong').textContent = item.analysis.strong || '';
-    document.getElementById('modal-weak').textContent = item.analysis.weak || '';
+    document.getElementById('modal-summary').textContent   = item.analysis.summary || '';
+    document.getElementById('modal-strong').textContent    = item.analysis.strong || '';
+    document.getElementById('modal-weak').textContent      = item.analysis.weak || '';
     document.getElementById('modal-suggested').textContent = item.analysis.suggested || '';
-    document.getElementById('modal-score').textContent = item.analysis.score ?? '—';
+    document.getElementById('modal-score').textContent     = item.analysis.score ?? '—';
   } else {
     aw.classList.add('hidden');
   }
@@ -644,13 +759,13 @@ function openHistoryModal(id) {
   document.getElementById('history-modal').classList.remove('hidden');
 }
 
-function closeHistoryModal() {
+function closeModal() {
   document.getElementById('history-modal').classList.add('hidden');
   currentModalId = null;
 }
 
-function closeModal(e) {
-  if (e.target.id === 'history-modal') closeHistoryModal();
+function closeModalOverlay(e) {
+  if (e.target.id === 'history-modal') closeModal();
 }
 
 function loadIntoEditor() {
@@ -659,28 +774,27 @@ function loadIntoEditor() {
   document.getElementById('transcript').value = item.transcript;
   if (item.analysis) {
     currentAnalysis = item.analysis;
-    document.getElementById('a-summary-text').textContent = item.analysis.summary || '';
-    document.getElementById('a-strong-text').textContent = item.analysis.strong || '';
-    document.getElementById('a-weak-text').textContent = item.analysis.weak || '';
+    document.getElementById('a-summary-text').textContent   = item.analysis.summary || '';
+    document.getElementById('a-strong-text').textContent    = item.analysis.strong || '';
+    document.getElementById('a-weak-text').textContent      = item.analysis.weak || '';
     document.getElementById('a-suggested-text').textContent = item.analysis.suggested || '';
-    document.getElementById('a-score-num').textContent = item.analysis.score ?? '—';
+    document.getElementById('a-score-num').textContent      = item.analysis.score ?? '—';
     document.getElementById('analysis-output').classList.remove('hidden');
   }
-  closeHistoryModal();
+  closeModal();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── INIT ──
-loadApiKey();
+// ══════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════
+loadKeys();
 renderHistory();
-
-// Ensure clean state on load
 document.getElementById('transcript').value = '';
-document.getElementById('live-text').textContent = 'Live transcript will appear here as you speak...';
-document.getElementById('live-text').className = 'live-text';
 
-// auto-save API key on input
-document.getElementById('apikey-input').addEventListener('change', saveApiKey);
+// auto-save keys on change
+document.getElementById('openai-key-input').addEventListener('change', saveOpenAIKey);
+document.getElementById('anthropic-key-input').addEventListener('change', saveAnthropicKey);
 </script>
 </body>
 </html>
