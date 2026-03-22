@@ -90,17 +90,6 @@ body{
 }
 .lang-select:focus{border-color:var(--blue)}
 
-/* ── SPEAKER TOGGLE ── */
-.speaker-row{display:flex;align-items:center;gap:8px;margin-bottom:14px}
-.speaker-label{font-size:12px;color:var(--text-muted);font-weight:600;white-space:nowrap}
-.speaker-btn{
-  padding:6px 14px;border-radius:8px;border:1.5px solid var(--border);
-  background:transparent;color:var(--text-muted);font-size:12px;font-weight:600;
-  font-family:inherit;cursor:pointer;transition:all .15s;
-}
-.speaker-btn.active.me{border-color:var(--blue);color:var(--blue);background:rgba(79,126,248,.12)}
-.speaker-btn.active.interviewer{border-color:var(--orange);color:var(--orange);background:rgba(245,158,11,.12)}
-
 /* ── LIVE TEXT BOX ── */
 .live-box{
   min-height:52px;background:var(--navy-muted);border:1px solid var(--border);
@@ -245,13 +234,6 @@ body{
       <span class="rec-timer hidden" id="rec-timer">00:00</span>
     </div>
 
-    <!-- Speaker toggle -->
-    <div class="speaker-row">
-      <span class="speaker-label">Speaker:</span>
-      <button class="speaker-btn me active" id="btn-me" onclick="setSpeaker('me')">👤 ME</button>
-      <button class="speaker-btn interviewer" id="btn-interviewer" onclick="setSpeaker('interviewer')">🎤 INTERVIEWER</button>
-    </div>
-
     <!-- Live interim text -->
     <div class="live-box" id="live-box">
       Press <strong>Start Recording</strong> — real-time transcript appears here while you speak.
@@ -375,7 +357,6 @@ let isRecording   = false;
 let finalBuffer   = '';     // accumulated final transcript text
 let timerInterval = null;
 let timerStart    = null;
-let currentSpeaker = 'me'; // 'me' | 'interviewer'
 let currentModalId = null;
 let currentAnalysis = null;
 
@@ -397,15 +378,6 @@ function saveAnthropicKey() {
   const key = document.getElementById('anthropic-key-input').value.trim();
   localStorage.setItem('ja2_apikey', key);
   updateKeyStatus(key);
-}
-
-// ══════════════════════════════════════════
-//  SPEAKER TOGGLE
-// ══════════════════════════════════════════
-function setSpeaker(who) {
-  currentSpeaker = who;
-  document.getElementById('btn-me').className          = 'speaker-btn me'          + (who === 'me'          ? ' active' : '');
-  document.getElementById('btn-interviewer').className = 'speaker-btn interviewer' + (who === 'interviewer' ? ' active' : '');
 }
 
 // ══════════════════════════════════════════
@@ -530,9 +502,7 @@ async function startRecording() {
       else interim += t;
     }
     if (newFinal) {
-      // Prefix with speaker label on each new final chunk
-      const prefix = currentSpeaker === 'me' ? '[ME]: ' : '[INTERVIEWER]: ';
-      finalBuffer += (finalBuffer ? '\n' : '') + prefix + newFinal.trim();
+      finalBuffer += newFinal;
       document.getElementById('transcript').value = finalBuffer;
     }
     setLive(interim || '🎙️ Listening...', 'active');
@@ -590,8 +560,6 @@ function setRecordingUI(on) {
   document.getElementById('btn-stop').classList.toggle('hidden', !on);
   document.getElementById('rec-timer').classList.toggle('hidden', !on);
   document.getElementById('lang-select').disabled = on;
-  document.getElementById('btn-me').disabled = on;
-  document.getElementById('btn-interviewer').disabled = on;
 }
 
 // ══════════════════════════════════════════
