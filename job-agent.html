@@ -211,6 +211,71 @@
   </style>
 </head>
 <body>
+<!-- PASSWORD PROTECTION -->
+<style>
+#_pw_overlay{position:fixed;inset:0;background:#0d1520;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+#_pw_box{background:#1a2332;border-radius:20px;padding:36px 28px;width:min(340px,90vw);text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+#_pw_icon{font-size:2.8rem;margin-bottom:16px}
+#_pw_title{color:#e2e8f0;font-size:1.3rem;font-weight:700;margin-bottom:6px}
+#_pw_sub{color:#7a8ea0;font-size:0.85rem;margin-bottom:24px}
+#_pw_input{width:100%;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.12);border-radius:12px;color:white;font-size:1rem;padding:14px 16px;text-align:center;letter-spacing:2px;margin-bottom:12px;outline:none}
+#_pw_input:focus{border-color:#3b82f6}
+#_pw_btn{width:100%;padding:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer}
+#_pw_btn:active{transform:scale(0.97)}
+#_pw_err{color:#f87171;font-size:0.85rem;margin-top:10px;min-height:20px}
+#_lock_btn{position:fixed;top:12px;right:12px;z-index:8888;background:rgba(0,0,0,0.4);border:none;color:rgba(255,255,255,0.55);font-size:0.72rem;padding:5px 10px;border-radius:20px;cursor:pointer;display:none;backdrop-filter:blur(4px)}
+#_lock_btn:hover{background:rgba(0,0,0,0.7);color:white}
+</style>
+<div id="_pw_overlay">
+  <div id="_pw_box">
+    <div id="_pw_icon">🔐</div>
+    <div id="_pw_title">Private App</div>
+    <div id="_pw_sub">Enter password to continue</div>
+    <input id="_pw_input" type="password" placeholder="Password" autocomplete="current-password">
+    <button id="_pw_btn" onclick="_pwCheck()">Unlock →</button>
+    <div id="_pw_err"></div>
+  </div>
+</div>
+<button id="_lock_btn" onclick="_pwLock()">🔒 Lock</button>
+<script>
+(function(){
+  var PW='sabbatical2026';
+  function _pwCheck(){
+    var v=document.getElementById('_pw_input').value;
+    if(v===PW){
+      localStorage.setItem('app_unlocked','true');
+      document.getElementById('_pw_overlay').style.display='none';
+      document.getElementById('_lock_btn').style.display='block';
+    } else {
+      document.getElementById('_pw_err').textContent='Wrong password';
+      document.getElementById('_pw_input').value='';
+      document.getElementById('_pw_input').focus();
+    }
+  }
+  window._pwCheck=_pwCheck;
+  window._pwLock=function(){
+    localStorage.removeItem('app_unlocked');
+    document.getElementById('_pw_overlay').style.display='flex';
+    document.getElementById('_lock_btn').style.display='none';
+    document.getElementById('_pw_input').value='';
+    document.getElementById('_pw_err').textContent='';
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(localStorage.getItem('app_unlocked')==='true'){
+      document.getElementById('_pw_overlay').style.display='none';
+      document.getElementById('_lock_btn').style.display='block';
+    }
+    document.getElementById('_pw_input').addEventListener('keydown',function(e){
+      if(e.key==='Enter') _pwCheck();
+    });
+    if(localStorage.getItem('app_unlocked')!=='true'){
+      setTimeout(function(){document.getElementById('_pw_input').focus();},100);
+    }
+  });
+})();
+</script>
+<!-- END PASSWORD PROTECTION -->
+
 
 <!-- HEADER -->
 <header class="header">
