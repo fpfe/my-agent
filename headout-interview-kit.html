@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Headout Japan — Complete BD Interview Kit</title>
+<style>
+:root{
+  --red:#e8174a;--red-d:#b8103a;--red-l:#fff0f3;
+  --bg:#f4f6f9;--card:#fff;--border:#e3e7ed;
+  --text:#1a1d23;--muted:#6b7280;--muted2:#9ca3af;
+  --high:#dc2626;--high-bg:#fef2f2;
+  --med:#d97706;--med-bg:#fffbeb;
+  --low:#16a34a;--low-bg:#f0fdf4;
+  --yes-c:#15803d;--yes-bg:#dcfce7;
+  --no-c:#b91c1c;--no-bg:#fee2e2;
+  --part-c:#7c3aed;--part-bg:#f3f0ff;
+  --p1:#15803d;--p1-bg:#dcfce7;--p1-border:#86efac;
+  --p2:#1d4ed8;--p2-bg:#dbeafe;--p2-border:#93c5fd;
+  --p3:#7c3aed;--p3-bg:#f3f0ff;--p3-border:#c4b5fd;
+  --sh:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --sh2:0 4px 12px rgba(0,0,0,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;font-size:14px}
+
+/* ── HEADER ── */
+.hdr{background:linear-gradient(135deg,#1a1d23 0%,#b8103a 60%,var(--red) 100%);color:#fff;padding:28px 32px}
+.hdr-inner{max-width:1500px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+.hdr-left h1{font-size:22px;font-weight:800;letter-spacing:-.3px}
+.hdr-left p{margin-top:4px;opacity:.85;font-size:13px}
+.hdr-pills{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:500}
+.home-link{color:rgba(255,255,255,.75);font-size:12px;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:6px 12px;white-space:nowrap;align-self:flex-start}
+.home-link:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+
+/* ── TABS ── */
+.tabs{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;box-shadow:var(--sh)}
+.tabs-inner{max-width:1500px;margin:0 auto;display:flex;overflow-x:auto}
+.tab{padding:13px 18px;border:none;background:none;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:.15s all}
+.tab:hover{color:var(--red)}
+.tab.on{color:var(--red);border-bottom-color:var(--red)}
+
+/* ── LAYOUT ── */
+.main{max-width:1500px;margin:0 auto;padding:28px 20px}
+.sec{display:none}.sec.on{display:block}
+.sec-hdr{margin-bottom:18px}
+.sec-hdr h2{font-size:18px;font-weight:700}
+.sec-hdr p{color:var(--muted);font-size:13px;margin-top:3px}
+
+/* ── STATS ROW ── */
+.stats{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:13px 16px;flex:1;min-width:120px;box-shadow:var(--sh)}
+.stat-v{font-size:22px;font-weight:800;color:var(--red)}
+.stat-l{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.3}
+
+/* ── TOOLBAR ── */
+.toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.srch{flex:1;min-width:200px;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:var(--card);color:var(--text);outline:none;transition:.15s border-color}
+.srch:focus{border-color:var(--red)}
+.sel{padding:9px 10px;border:1px solid var(--border);border-radius:8px;font-size:12.5px;background:var(--card);color:var(--text);cursor:pointer;outline:none}
+.sel:focus{border-color:var(--red)}
+.cnt{background:var(--red);color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;white-space:nowrap}
+.copy-btn{padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;background:var(--card);color:var(--text);cursor:pointer;transition:.15s all;white-space:nowrap}
+.copy-btn:hover{background:var(--text);color:#fff;border-color:var(--text)}
+.copy-btn.copied{background:var(--yes-c);color:#fff;border-color:var(--yes-c)}
+
+/* ── TABLE ── */
+.twrap{background:var(--card);border-radius:12px;box-shadow:var(--sh);overflow:auto;border:1px solid var(--border);max-height:70vh}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead th{background:#f1f4f8;padding:10px 12px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;cursor:pointer;user-select:none;white-space:nowrap}
+thead th:hover{background:#e8ecf1;color:var(--text)}
+thead th.sorted{color:var(--red)}
+tbody tr{border-bottom:1px solid #f0f3f6}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#fafbfc}
+td{padding:9px 12px;vertical-align:middle}
+.no-res{text-align:center;padding:40px;color:var(--muted)}
+.grp-row td{background:#f7f9fb;font-weight:700;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;padding:7px 12px;border-top:2px solid var(--border)}
+
+/* ── BADGES ── */
+.b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.bH{background:var(--high-bg);color:var(--high)}
+.bM{background:var(--med-bg);color:var(--med)}
+.bL{background:var(--low-bg);color:var(--low)}
+.bY{background:var(--yes-bg);color:var(--yes-c)}
+.bN{background:var(--no-bg);color:var(--no-c)}
+.bP{background:var(--part-bg);color:var(--part-c)}
+.bP1{background:var(--p1-bg);color:var(--p1);border:1px solid var(--p1-border)}
+.bP2{background:var(--p2-bg);color:var(--p2);border:1px solid var(--p2-border)}
+.bP3{background:var(--p3-bg);color:var(--p3);border:1px solid var(--p3-border)}
+
+/* ── CAT CHIPS ── */
+.cc{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+.cCultural{background:#ede9fe;color:#5b21b6}
+.cFood{background:#fef3c7;color:#92400e}
+.cTransport{background:#d1fae5;color:#065f46}
+.cNature{background:#dcfce7;color:#15803d}
+.cWellness{background:#fce7f3;color:#be185d}
+.cAdventure{background:#dbeafe;color:#1d4ed8}
+.cEntertainment{background:#fef9c3;color:#854d0e}
+.cObservation{background:#cffafe;color:#0e7490}
+.cAquarium{background:#e0f2fe;color:#0369a1}
+.cZoo{background:#dcfce7;color:#15803d}
+.cSport{background:#fef3c7;color:#92400e}
+.cEssential{background:#f3f4f6;color:#374151}
+.cThemePark{background:#ede9fe;color:#5b21b6}
+.cDigitalArt{background:#f0fdf4;color:#166534}
+.cImmersive{background:#faf5ff;color:#7e22ce}
+.cMuseum{background:#eff6ff;color:#1e40af}
+.cOnsen{background:#fce7f3;color:#9d174d}
+.cHistoric{background:#f3f4f6;color:#374151}
+.cArt{background:#fdf4ff;color:#701a75}
+.cArtMuseum{background:#fdf4ff;color:#701a75}
+.cScenic{background:#f0fdf4;color:#166534}
+.cPark{background:#f0fdf4;color:#166534}
+.cTheater{background:#fce7f3;color:#be185d}
+.cShow{background:#fef3c7;color:#92400e}
+.cAttractionDefault{background:#f3f4f6;color:#374151}
+
+/* ── S2: DEMAND CARDS ── */
+.demand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;margin-bottom:24px}
+.dcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--sh)}
+.dcard-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.dcard-title{font-weight:700;font-size:13.5px}
+.dcard-pct{font-size:22px;font-weight:800;color:var(--red)}
+.dbar-wrap{background:#f0f3f6;border-radius:20px;height:7px;overflow:hidden;margin-bottom:6px}
+.dbar{background:linear-gradient(90deg,var(--red),var(--red-d));height:100%;border-radius:20px}
+.dcard-note{font-size:11.5px;color:var(--muted)}
+.insights-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+@media(max-width:700px){.insights-row{grid-template-columns:1fr}}
+.ibox{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--sh)}
+.ibox h3{font-size:14px;font-weight:700;margin-bottom:12px}
+.top10-item{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed #eef0f3}
+.top10-item:last-child{border-bottom:none}
+.top10-rank{width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.top10-rank.gold{background:#d97706}
+.top10-rank.silver{background:#6b7280}
+.top10-rank.bronze{background:#92400e}
+.top10-name{font-size:13px}
+.insight-item{padding:7px 0;border-bottom:1px dashed #eef0f3;font-size:13px}
+.insight-item:last-child{border-bottom:none}
+.insight-item strong{color:var(--red)}
+.src-tag{display:inline-block;background:#f1f4f8;border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:11px;color:var(--muted);margin-bottom:16px}
+
+/* ── S4: PHASE BLOCKS ── */
+.phase-block{border-radius:12px;border:1px solid var(--border);margin-bottom:24px;overflow:hidden;box-shadow:var(--sh)}
+.phase-hdr{padding:14px 18px;display:flex;align-items:flex-start;gap:14px}
+.phase-hdr.ph1{background:linear-gradient(90deg,#f0fdf4,#dcfce7)}
+.phase-hdr.ph2{background:linear-gradient(90deg,#eff6ff,#dbeafe)}
+.phase-hdr.ph3{background:linear-gradient(90deg,#faf5ff,#f3f0ff)}
+.phase-badge{padding:3px 12px;border-radius:20px;font-size:12px;font-weight:800;white-space:nowrap}
+.ph1-badge{background:var(--p1-bg);color:var(--p1);border:1px solid var(--p1-border)}
+.ph2-badge{background:var(--p2-bg);color:var(--p2);border:1px solid var(--p2-border)}
+.ph3-badge{background:var(--p3-bg);color:var(--p3);border:1px solid var(--p3-border)}
+.phase-hdr-text h3{font-size:15px;font-weight:700;margin-bottom:2px}
+.phase-hdr-text p{font-size:12.5px;color:var(--muted)}
+
+/* ── S5: CHEAT SHEET ── */
+.nums-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:28px}
+.num-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 16px;box-shadow:var(--sh);text-align:center}
+.num-val{font-size:28px;font-weight:900;color:var(--red);line-height:1.1}
+.num-label{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+.num-card.highlight{border-color:var(--red);background:var(--red-l)}
+.num-card.highlight .num-val{color:var(--red-d)}
+
+.chart-section{margin-bottom:28px}
+.chart-section h3{font-size:15px;font-weight:700;margin-bottom:14px}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.bar-label{width:130px;font-size:12.5px;text-align:right;flex-shrink:0;color:var(--text)}
+.bar-track{flex:1;background:#f0f3f6;border-radius:6px;height:22px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff;transition:.6s width}
+.bar-fill.bar-ko{background:#ef4444}
+.bar-fill.bar-cn{background:#f97316}
+.bar-fill.bar-tw{background:#eab308}
+.bar-fill.bar-us{background:#3b82f6}
+.bar-fill.bar-hk{background:#8b5cf6}
+.bar-fill.bar-au{background:#06b6d4}
+.bar-fill.bar-uk{background:#ec4899}
+.bar-note{font-size:11px;color:var(--muted);margin-left:4px;white-space:nowrap}
+
+.year-chart{margin-bottom:28px}
+.year-chart h3{font-size:15px;font-weight:700;margin-bottom:14px}
+.year-bars{display:flex;align-items:flex-end;gap:10px;height:140px;padding-bottom:24px;position:relative;border-bottom:2px solid var(--border)}
+.year-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1;min-width:0}
+.year-bar{width:100%;border-radius:6px 6px 0 0;position:relative;transition:.6s height;min-height:4px;display:flex;align-items:flex-end;justify-content:center}
+.year-bar.normal{background:#e3e7ed}
+.year-bar.low{background:#fca5a5}
+.year-bar.growing{background:#fbbf24}
+.year-bar.record{background:linear-gradient(180deg,var(--red),var(--red-d))}
+.year-bar.projected{background:linear-gradient(180deg,#f97316,#ea580c);opacity:.8;border:2px dashed #ea580c}
+.year-val{font-size:9px;font-weight:700;color:#fff;padding-bottom:3px}
+.year-label{font-size:10px;color:var(--muted);margin-top:5px;text-align:center}
+.year-insight{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;font-size:13px;margin-bottom:20px}
+.year-insight strong{color:var(--red)}
+
+.qa-block{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:14px;overflow:hidden;box-shadow:var(--sh)}
+.qa-q{padding:14px 16px;font-weight:700;font-size:13.5px;background:#fafbfc;border-bottom:1px solid var(--border);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.qa-q:hover{background:#f1f4f8}
+.qa-a{padding:14px 16px;font-size:13px;line-height:1.7;display:none}
+.qa-a.open{display:block}
+.qa-a strong{color:var(--red)}
+.qa-chevron{color:var(--muted);font-size:14px;flex-shrink:0;transition:.2s transform}
+.qa-chevron.open{transform:rotate(180deg)}
+
+.talking-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+@media(max-width:700px){.talking-grid{grid-template-columns:1fr}}
+.talk-card{background:var(--card);border-left:4px solid var(--red);border-radius:0 10px 10px 0;padding:14px 16px;box-shadow:var(--sh);font-size:13px;line-height:1.6}
+.talk-card em{color:var(--red);font-style:normal;font-weight:600}
+
+.cs5-section{margin-bottom:28px}
+.cs5-section h3{font-size:15px;font-weight:700;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--red)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:3px}
+
+/* ── PRINT (Tab 5) ── */
+@media print{
+  .hdr,.tabs,.toolbar,.stats,.qa-q .qa-chevron{display:none!important}
+  .sec{display:block!important}
+  #s1,#s2,#s3,#s4{display:none!important}
+  #s5{display:block!important}
+  .qa-a{display:block!important}
+  body{background:#fff;font-size:11px}
+  .nums-grid{grid-template-columns:repeat(3,1fr)}
+  .talking-grid{grid-template-columns:1fr}
+  .qa-block{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+}
+
+@media(max-width:700px){
+  .hdr{padding:16px}
+  .hdr-inner{flex-direction:column}
+  .main{padding:16px 10px}
+  thead th{font-size:10px;padding:8px 8px}
+  td{padding:7px 8px;font-size:12px}
+  .nums-grid{grid-template-columns:repeat(2,1fr)}
+  .year-val{font-size:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-left">
+      <h1>🎯 Headout Japan — Complete BD Interview Kit</h1>
+      <p>Competitive intelligence · demand analysis · venue mapping · 90-day plan · interview prep</p>
+      <div class="hdr-pills">
+        <span class="pill">📊 Sources: JNTO 2024 · Klook Live · Headout Live · Dentsu 2025</span>
+        <span class="pill">🗓 March 2026</span>
+        <span class="pill">90 gap items · 100 targets · 60 venues · 9 demand categories</span>
+      </div>
+    </div>
+    <a class="home-link" href="index.html">← Home</a>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab on"  onclick="show('s1',this)">§1 — Gap Analysis (90)</button>
+    <button class="tab"     onclick="show('s2',this)">§2 — Tourist Demand</button>
+    <button class="tab"     onclick="show('s3',this)">§3 — Venues (60+)</button>
+    <button class="tab"     onclick="show('s4',this)">§4 — 90-Day Plan (100 Partners)</button>
+    <button class="tab"     onclick="show('s5',this)">§5 — Interview Cheat Sheet 🎯</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══════════════ S1 ══════════════ -->
+<div id="s1" class="sec on">
+  <div class="sec-hdr">
+    <h2>Gap Analysis — Klook Has, Headout Japan Doesn't</h2>
+    <p>90 experiences &amp; products across 11 categories where Klook leads. Prioritised by demand &amp; BD opportunity.</p>
+  </div>
+  <div class="stats" id="s1-stats"></div>
+  <div class="toolbar">
+    <input class="srch" id="s1-q" placeholder="🔍  Search experience, category, BD notes…" oninput="fs1()"/>
+    <select class="sel" id="s1-cat" onchange="fs1()">
+      <option value="">All Categories</option>
+      <option>Cultural</option><option>Food</option><option>Transport</option>
+      <option>Nature</option><option>Wellness</option><option>Adventure</option>
+      <option>Entertainment</option><option>Observation</option>
+      <option>Aquarium</option><option>Sport</option><option>Essential</option>
+    </select>
+    <select class="sel" id="s1-pri" onchange="fs1()">
+      <option value="">All Priorities</option><option>HIGH</option><option>MED</option><option>LOW</option>
+    </select>
+    <select class="sel" id="s1-ho" onchange="fs1()">
+      <option value="">Headout: All</option>
+      <option value="NO">Not on Headout</option>
+      <option value="YES">On Headout</option>
+      <option value="PARTIAL">Partial</option>
+    </select>
+    <span class="cnt" id="s1-cnt">90 results</span>
+  </div>
+  <div class="twrap">
+    <table id="s1-tbl">
+      <thead><tr>
+        <th onclick="st('s1',0)"># <span>↕</span></th>
+        <th onclick="st('s1',1)">Category <span>↕</span></th>
+        <th onclick="st('s1',2)">Experience / Product <span>↕</span></th>
+        <th onclick="st('s1',3)">Klook? <span>↕</span></th>
+        <th onclick="st('s1',4)">Headout JP? <span>↕</span></th>
+        <th onclick="st('s1',5)">Priority <span>↕</span></th>
+        <th onclick="st('s1',6)">Est. Demand <span>↕</span></th>
+        <th>BD Notes</th>
+      </tr></thead>
+      <tbody id="s1-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════ S2 ══════════════ -->
+<div id="s2" class="sec">
+  <div class="sec-hdr">
+    <h2>What Foreign Tourists Want in Japan</h2>
+    <p>Demand intelligence from official survey data</p>
+  </div>
+  <div class="src-tag">📋 Sources: JNTO International Visitor Survey 2024 &amp; Dentsu Japan Brand Survey 2025</div>
+  <div class="demand-grid" id="s2-demand"></div>
+  <div class="insights-row">
+    <div class="ibox">
+      <h3>🏆 Top 10 Experiences — Western Tourists (US/EU/AU)</h3>
+      <div id="s2-top10"></div>
+    </div>
+    <div class="ibox">
+      <h3>💡 Key Insights from Dentsu 2025</h3>
+      <div id="s2-insights"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ S3 ══════════════ -->
+<div id="s3" class="sec">
+  <div class="sec-hdr">
+    <h2>Ticketed Venues &amp; Facilities Master List</h2>
+    <p>60+ venues with visitor volumes, pricing, platform presence &amp; BD priority</p>
+  </div>
+  <div class="stats" id="s3-stats"></div>
+  <div class="toolbar">
+    <input class="srch" id="s3-q" placeholder="🔍  Search venue, city, category…" oninput="fs3()"/>
+    <select class="sel" id="s3-cat" onchange="fs3()">
+      <option value="">All Categories</option>
+      <option>Theme Park</option><option>Digital Art</option><option>Immersive</option>
+      <option>Observation</option><option>Museum</option><option>Art</option>
+      <option>Entertainment</option><option>Aquarium</option><option>Zoo</option>
+      <option>Sports</option><option>Theater</option><option>Show</option>
+      <option>Onsen</option><option>Historic</option><option>Cultural</option><option>Scenic</option>
+    </select>
+    <select class="sel" id="s3-ho" onchange="fs3()">
+      <option value="">Headout: All</option>
+      <option value="Yes">On Headout</option><option value="No">Not on Headout</option><option value="Partial">Partial</option>
+    </select>
+    <select class="sel" id="s3-pri" onchange="fs3()">
+      <option value="">All Priorities</option><option>HIGH</option><option>MED</option><option>LOW</option>
+    </select>
+    <select class="sel" id="s3-book" onchange="fs3()">
+      <option value="">Booking: All</option>
+      <option value="YES">Pre-booking Required</option><option value="NO">Walk-in OK</option>
+    </select>
+    <span class="cnt" id="s3-cnt"></span>
+  </div>
+  <div class="twrap">
+    <table id="s3-tbl">
+      <thead><tr>
+        <th onclick="st('s3',0)"># <span>↕</span></th>
+        <th onclick="st('s3',1)">Venue <span>↕</span></th>
+        <th onclick="st('s3',2)">City <span>↕</span></th>
+        <th onclick="st('s3',3)">Category <span>↕</span></th>
+        <th onclick="st('s3',4)">Est. Annual Visitors <span>↕</span></th>
+        <th onclick="st('s3',5)">Avg Ticket (JPY) <span>↕</span></th>
+        <th onclick="st('s3',6)">Headout? <span>↕</span></th>
+        <th onclick="st('s3',7)">Klook? <span>↕</span></th>
+        <th onclick="st('s3',8)">Pre-booking? <span>↕</span></th>
+        <th onclick="st('s3',9)">Priority <span>↕</span></th>
+      </tr></thead>
+      <tbody id="s3-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════ S4 ══════════════ -->
+<div id="s4" class="sec">
+  <div class="sec-hdr">
+    <h2>My 90-Day Japan BD Plan</h2>
+    <p>100 target partners across 3 phases — from quick wins to enterprise scale</p>
+  </div>
+  <div class="stats" id="s4-stats"></div>
+  <div class="toolbar">
+    <input class="srch" id="s4-q" placeholder="🔍  Search partner, category, city, strategy…" oninput="fs4()"/>
+    <select class="sel" id="s4-ph" onchange="fs4()">
+      <option value="">All Phases</option>
+      <option value="1">Phase 1 — Quick Wins (1-30)</option>
+      <option value="2">Phase 2 — Supply Depth (31-60)</option>
+      <option value="3">Phase 3 — Volume &amp; Scale (61-90)</option>
+    </select>
+    <select class="sel" id="s4-cat" onchange="fs4()">
+      <option value="">All Categories</option>
+      <option>Cultural</option><option>Food</option><option>Transport</option><option>Nature</option>
+      <option>Wellness</option><option>Adventure</option><option>Entertainment</option>
+      <option>Observation</option><option>Aquarium</option><option>Sport</option><option>Historic</option><option>Zoo</option><option>Art</option>
+    </select>
+    <select class="sel" id="s4-city" onchange="fs4()">
+      <option value="">All Cities</option>
+      <option>Tokyo</option><option>Kyoto</option><option>Osaka</option><option>Hokkaido</option>
+      <option>Nagoya</option><option>Okinawa</option><option>Kanagawa</option><option>National</option>
+    </select>
+    <span class="cnt" id="s4-cnt">100 partners</span>
+    <button class="copy-btn" id="copy-btn" onclick="copyList()">📋 Copy filtered list</button>
+  </div>
+  <div id="s4-phases"></div>
+</div>
+
+<!-- ══════════════ S5 ══════════════ -->
+<div id="s5" class="sec">
+  <div class="sec-hdr">
+    <h2>Key Facts — Interview Preparation</h2>
+    <p>Numbers, talking points, hard Q&amp;A, and market trends. <button onclick="window.print()" style="border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:12px;background:var(--card);cursor:pointer;margin-left:8px">🖨 Print this tab</button></p>
+  </div>
+
+  <!-- SECTION A -->
+  <div class="cs5-section">
+    <h3>A — Numbers to Memorise</h3>
+    <div class="nums-grid" id="s5-nums"></div>
+  </div>
+
+  <!-- SECTION B -->
+  <div class="cs5-section">
+    <h3>B — Visitor Breakdown by Country (2024)</h3>
+    <div class="chart-section" id="s5-visitors"></div>
+  </div>
+
+  <!-- SECTION E — Year chart (before Q&A so it's visible early) -->
+  <div class="cs5-section">
+    <h3>E — Japan Inbound Tourism Recovery Curve</h3>
+    <div class="year-insight"><strong>Key pitch line:</strong> "The market doubled in 12 months (2023→2024). At 36.9M we are already past the 2019 peak. We are at the <strong>beginning</strong> of the growth curve — not the middle."</div>
+    <div class="year-chart"><div class="year-bars" id="s5-years"></div><div id="s5-year-labels" style="display:flex;gap:10px;margin-top:4px"></div></div>
+  </div>
+
+  <!-- SECTION C -->
+  <div class="cs5-section">
+    <h3>C — Parth-Specific Talking Points</h3>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Parth Maheshwari — built Headout UAE from scratch, ex-Uber Operations, IIT Bombay</p>
+    <div class="talking-grid" id="s5-talking"></div>
+  </div>
+
+  <!-- SECTION D -->
+  <div class="cs5-section">
+    <h3>D — Expected Hard Questions (click to expand)</h3>
+    <div id="s5-qa"></div>
+  </div>
+
+</div><!-- /s5 -->
+
+</div><!-- /main -->
+
+<script>
+/* ══════════════════════════════════════
+   DATA — S1 (90 rows)
+   [#, cat, experience, klook, headout, priority, demand, notes]
+══════════════════════════════════════ */
+const D1=[
+ [1,"Cultural","Kimono rental + photoshoot (Tokyo/Kyoto/Osaka)","YES","NO","HIGH","5M+ bookings/yr","Top bucket list item for Western tourists"],
+ [2,"Cultural","Tea ceremony experience","YES","NO","HIGH","3M+","#1 cultural activity requested"],
+ [3,"Cultural","Ninja experience / cafe / training","YES","NO","HIGH","2M+","Viral social content"],
+ [4,"Cultural","Samurai experience / theater","YES","PARTIAL","HIGH","2M+","Headout has Samurai Theatre only"],
+ [5,"Cultural","Calligraphy workshop","YES","NO","MED","500K","Cultural immersion"],
+ [6,"Cultural","Sake brewery tour + tasting","YES","NO","MED","800K","Food tourism growing fast"],
+ [7,"Cultural","Matcha making class","YES","NO","HIGH","1M+","Every tourist wants this"],
+ [8,"Cultural","Taiko drumming experience","YES","NO","MED","300K","Unique Japan-only"],
+ [9,"Cultural","Geisha district walking tour (Gion)","YES","NO","HIGH","2M+","Kyoto essential"],
+ [10,"Cultural","Ikebana (flower arranging) class","YES","NO","LOW","200K","Niche cultural"],
+ [11,"Cultural","Origami workshop","YES","NO","LOW","300K","Family friendly"],
+ [12,"Cultural","Pottery class (Kyoto style)","YES","NO","MED","400K","Hands-on craft"],
+ [13,"Cultural","Jeans/textile making workshop","YES","NO","LOW","100K","Craft tourism"],
+ [14,"Cultural","Noh theater experience","YES","NO","LOW","150K","High-end cultural"],
+ [15,"Cultural","Kabuki theater tickets","YES","NO","MED","500K","Traditional performing arts"],
+ [16,"Cultural","Sumo stable morning practice visit","YES","NO","HIGH","800K","Authentic Japan experience"],
+ [17,"Food","Sushi making class","YES","NO","HIGH","2M+","#1 food experience requested"],
+ [18,"Food","Ramen making class","YES","NO","HIGH","1.5M+","Comfort food tourism"],
+ [19,"Food","Takoyaki / Okonomiyaki making class","YES","NO","MED","600K","Street food tourism"],
+ [20,"Food","Tsukiji outer market food tour","YES","NO","HIGH","3M+","Must-do in Tokyo"],
+ [21,"Food","Osaka street food tour (Dotonbori)","YES","NO","HIGH","2M+","Osaka essential"],
+ [22,"Food","Sake + wagyu pairing experience","YES","NO","MED","400K","Premium food tourism"],
+ [23,"Food","Conveyor belt sushi experience tour","YES","NO","MED","1M+","Unique to Japan"],
+ [24,"Food","Okinawa cooking class","YES","NO","LOW","200K","Regional cuisine"],
+ [25,"Food","Tuna auction experience (Toyosu)","YES","NO","HIGH","500K","Very limited slots — high value"],
+ [26,"Food","Izakaya food tour","YES","NO","MED","800K","Evening experience gap"],
+ [27,"Transport","JR Pass (7/14/21 day)","YES","NO","HIGH","10M+","Essential for every tourist"],
+ [28,"Transport","Tokyo Subway 24/48/72hr pass","YES","YES","MED","5M+","Headout has this"],
+ [29,"Transport","Keisei Skyliner (Narita–Tokyo)","YES","YES","MED","3M+","Headout has this"],
+ [30,"Transport","IC Card (Suica/Pasmo)","YES","NO","HIGH","20M+","Every tourist needs this"],
+ [31,"Transport","Shinkansen point-to-point tickets","YES","NO","HIGH","15M+","Major gap"],
+ [32,"Transport","Airport limousine bus","YES","NO","HIGH","5M+","Arrival essential"],
+ [33,"Transport","Private airport transfer","YES","NO","MED","2M+","Premium segment"],
+ [34,"Nature","Mt Fuji + Hakone day tour","YES","NO","HIGH","5M+","#1 day trip from Tokyo"],
+ [35,"Nature","Hakone ropeway + onsen day trip","YES","NO","HIGH","3M+","Classic tourist route"],
+ [36,"Nature","Kyoto day trip from Tokyo","YES","NO","HIGH","8M+","#1 destination Japan"],
+ [37,"Nature","Nara deer park day trip","YES","NO","HIGH","3M+","Family favorite"],
+ [38,"Nature","Nikko temples day trip","YES","NO","MED","1.5M+","UNESCO heritage"],
+ [39,"Nature","Kamakura Great Buddha day trip","YES","NO","HIGH","2M+","Tokyo day trip staple"],
+ [40,"Nature","Cherry blossom seasonal tour","YES","NO","HIGH","10M+ (seasonal)","Peak season mega-demand"],
+ [41,"Nature","Autumn foliage tour","YES","NO","HIGH","5M+ (seasonal)","Second peak season"],
+ [42,"Nature","Fruit picking experience","YES","NO","MED","500K","Family tourism"],
+ [43,"Nature","Hokkaido nature tour","YES","NO","MED","2M+","Winter tourism"],
+ [44,"Nature","Okinawa snorkeling / beach","YES","NO","MED","1.5M+","Summer peak"],
+ [45,"Wellness","Onsen day experience (Tokyo)","YES","NO","HIGH","5M+","Western tourists underserved"],
+ [46,"Wellness","Ryokan stay + onsen (Hakone)","YES","NO","HIGH","2M+","Premium experience"],
+ [47,"Wellness","Hakone Yunessun onsen theme park","YES","NO","HIGH","1M+","Family onsen"],
+ [48,"Wellness","Traditional Japanese massage","NO","NO","MED","1M+","Neither platform has this"],
+ [49,"Wellness","Forest bathing (Shinrin-yoku)","NO","NO","MED","300K","Wellness trend"],
+ [50,"Adventure","Street go-karting Tokyo/Osaka","YES","NO","HIGH","1M+","Viral — Western tourists love this"],
+ [51,"Adventure","Snowmobile Hokkaido","YES","NO","MED","200K","Winter adventure"],
+ [52,"Adventure","Surfing lesson (Shonan/Okinawa)","NO","NO","MED","300K","Gap on both platforms"],
+ [53,"Adventure","Cycling tour (Tokyo/Kyoto)","YES","NO","MED","500K","Eco-tourism trend"],
+ [54,"Adventure","Kayaking (Iriomote/Nikko)","YES","NO","MED","200K","Nature adventure"],
+ [55,"Adventure","Paragliding (Nagano/Fuji)","NO","NO","LOW","100K","Niche adventure"],
+ [56,"Entertainment","Tokyo Disneyland","YES","NO","HIGH","17M visitors/yr","Major gap for Headout"],
+ [57,"Entertainment","Tokyo DisneySea","YES","NO","HIGH","14M visitors/yr","Major gap for Headout"],
+ [58,"Entertainment","Universal Studios Japan","YES","NO","HIGH","14M visitors/yr","Major gap for Headout"],
+ [59,"Entertainment","teamLab Planets","YES","YES","HIGH","2M+","Both have this"],
+ [60,"Entertainment","teamLab Borderless","YES","YES","HIGH","2M+","Both have this"],
+ [61,"Entertainment","Warner Bros Studio Tokyo","YES","YES","HIGH","1M+","Both have this"],
+ [62,"Entertainment","Ghibli Museum","YES","PARTIAL","HIGH","700K","Headout has guided tour only"],
+ [63,"Entertainment","Ghibli Park (Nagoya)","YES","NO","HIGH","1M+","Growing fast"],
+ [64,"Entertainment","Nintendo Museum (Kyoto)","NO","NO","HIGH","500K","New 2024 — both missing"],
+ [65,"Entertainment","Immersive Fort Tokyo","YES","NO","HIGH","New","Growing fast — Klook only"],
+ [66,"Entertainment","Sanrio Puroland","YES","YES","MED","1.5M","Both have this"],
+ [67,"Entertainment","Fuji-Q Highland","YES","YES","MED","2M","Both have this"],
+ [68,"Entertainment","Yomiuriland","YES","NO","MED","1.5M","Klook only"],
+ [69,"Entertainment","Tokyo Joypolis (SEGA)","NO","NO","MED","1M","Neither has this"],
+ [70,"Entertainment","Legoland Japan (Nagoya)","YES","YES","LOW","1.5M","Both have this"],
+ [71,"Entertainment","Edo Wonderland","YES","YES","LOW","500K","Both have this"],
+ [72,"Observation","Tokyo Skytree","YES","YES","HIGH","6M","Both have this"],
+ [73,"Observation","Tokyo Tower","YES","YES","HIGH","3M","Both have this"],
+ [74,"Observation","Shibuya Sky","YES","NO","HIGH","2M","Klook only"],
+ [75,"Observation","Roppongi Hills / Tokyo City View","YES","YES","MED","1M","Both have this"],
+ [76,"Observation","Harukas 300 (Osaka)","YES","NO","MED","1M","Klook only"],
+ [77,"Observation","Umeda Sky Building (Osaka)","YES","NO","MED","800K","Klook only"],
+ [78,"Aquarium","Sumida Aquarium","YES","YES","MED","1.5M","Both have this"],
+ [79,"Aquarium","Sunshine Aquarium","YES","NO","MED","1M","Klook only"],
+ [80,"Aquarium","Art Aquarium Museum Ginza","YES","NO","MED","800K","Klook only"],
+ [81,"Aquarium","Osaka Aquarium Kaiyukan","YES","NO","HIGH","3M","Klook only"],
+ [82,"Aquarium","Asahiyama Zoo (Hokkaido)","YES","NO","MED","1.7M","Klook only"],
+ [83,"Sport","Sumo tournament tickets","YES","YES","HIGH","600K","Both have this"],
+ [84,"Sport","Baseball (NPB) game tickets","YES","NO","HIGH","20M total","Major gap"],
+ [85,"Sport","J-League football tickets","NO","NO","MED","5M total","Neither has this"],
+ [86,"Sport","Yomiuri Giants at Tokyo Dome","YES","NO","HIGH","3M","Klook only"],
+ [87,"Sport","Ski resort day trip (Niseko/Hakuba)","YES","NO","HIGH","2M (winter)","Seasonal gap"],
+ [88,"Essential","Pocket WiFi rental","YES","NO","HIGH","10M+","Every tourist needs this"],
+ [89,"Essential","SIM card / eSIM","YES","YES","HIGH","15M+","Both have this"],
+ [90,"Essential","Japan Rail Pass","YES","NO","HIGH","10M+","Major gap"],
+];
+
+/* ══════════════════════════════════════
+   DATA — S2
+══════════════════════════════════════ */
+const D2_demand=[
+ {pct:89,title:"Japanese Food & Dining",note:"Highest priority for all visitor nationalities"},
+ {pct:76,title:"Shopping",note:"Duty-free, electronics, fashion, cosmetics"},
+ {pct:71,title:"Natural Scenery (Mt Fuji, Seasonal)",note:"Mt Fuji #1 wish for first-time visitors"},
+ {pct:68,title:"Cultural Experiences",note:"Kimono, tea ceremony, temples — core demand"},
+ {pct:52,title:"Theme Parks & Entertainment",note:"Disney, USJ, teamLab driving volume"},
+ {pct:34,title:"Traditional Crafts & Workshops",note:"Sushi/ramen making, pottery — growing"},
+ {pct:31,title:"Wellness & Onsen",note:"🔥 Fastest growing among Western tourists"},
+ {pct:18,title:"Sports & Live Events",note:"Sumo, baseball — underserved on booking platforms"},
+ {pct:15,title:"Adventure Activities",note:"Go-kart, skiing — viral content drives demand"},
+];
+const D2_top10=["Mount Fuji viewing / day trip","Sushi / food experience","Kimono wearing / photoshoot","Cherry blossom viewing","teamLab digital art","Onsen experience","Sumo watching","Go-karting (Mario Kart style)","Ghibli Museum","Street food tour"];
+const D2_insights=[
+ ["52.7%","of global visitors want to return to Japan — highest repeat-intent of any destination"],
+ ["40M+","international visitors expected in 2025 — breaking all-time record"],
+ ["Western tourists","have LOW awareness of onsen locations — major untapped segment"],
+ ["Regional tourism","growing — visitors increasingly going beyond Tokyo/Kyoto/Osaka"],
+ ["Solo & FIT travel","up 38% post-pandemic — higher intent to pre-book experiences"],
+ ["Mobile-first booking","93% of under-35 tourists book on mobile — platform UX critical"],
+ ["Shoulder season demand","growing — Oct/Nov autumn foliage rivals cherry blossom peak"],
+];
+
+/* ══════════════════════════════════════
+   DATA — S3 (60 venues)
+   [group, #, venue, city, cat, visitors, priceJPY, headout, klook, booking, priority]
+══════════════════════════════════════ */
+const D3=[
+ ["THEME PARKS",1,"Tokyo Disneyland","Chiba","Theme Park","17M","10,900","No","Yes","YES","HIGH"],
+ ["THEME PARKS",2,"Tokyo DisneySea","Chiba","Theme Park","14M","10,900","No","Yes","YES","HIGH"],
+ ["THEME PARKS",3,"Universal Studios Japan","Osaka","Theme Park","14M","10,400","No","Yes","YES","HIGH"],
+ ["THEME PARKS",4,"Fuji-Q Highland","Yamanashi","Theme Park","2M","6,000","Yes","Yes","YES","MED"],
+ ["THEME PARKS",5,"Sanrio Puroland","Tokyo","Theme Park","1.5M","4,500","Yes","Yes","YES","MED"],
+ ["THEME PARKS",6,"Yomiuriland","Tokyo","Theme Park","1.5M","2,400","No","Yes","YES","LOW"],
+ ["THEME PARKS",7,"Legoland Japan","Nagoya","Theme Park","1.5M","3,200","Yes","Yes","NO","LOW"],
+ ["DIGITAL ART / IMMERSIVE",8,"teamLab Planets","Tokyo","Digital Art","2M","3,200","Yes","Yes","YES","HIGH"],
+ ["DIGITAL ART / IMMERSIVE",9,"teamLab Borderless","Tokyo","Digital Art","2M","3,200","Yes","Yes","YES","HIGH"],
+ ["DIGITAL ART / IMMERSIVE",10,"Immersive Fort Tokyo","Tokyo","Immersive","Growing","4,000","No","Yes","YES","HIGH"],
+ ["DIGITAL ART / IMMERSIVE",11,"Art Aquarium Museum","Tokyo","Art","800K","2,500","No","Yes","NO","MED"],
+ ["DIGITAL ART / IMMERSIVE",12,"Tokyo Trick Art Museum","Tokyo","Art","500K","1,200","No","No","NO","LOW"],
+ ["DIGITAL ART / IMMERSIVE",13,"Hokusai: Another Story","Tokyo","Immersive","New","2,500","Partial","No","YES","MED"],
+ ["OBSERVATION DECKS",14,"Tokyo Skytree Tembo Deck","Tokyo","Observation","6M","2,100","Yes","Yes","NO","HIGH"],
+ ["OBSERVATION DECKS",15,"Tokyo Skytree Tembo Galleria","Tokyo","Observation","3M","3,000","Yes","Yes","NO","HIGH"],
+ ["OBSERVATION DECKS",16,"Tokyo Tower Main Deck","Tokyo","Observation","3M","1,200","Yes","Yes","NO","HIGH"],
+ ["OBSERVATION DECKS",17,"Tokyo Tower Top Deck","Tokyo","Observation","1M","3,000","Yes","Yes","YES","MED"],
+ ["OBSERVATION DECKS",18,"Shibuya Sky","Tokyo","Observation","2M","2,000","No","Yes","YES","HIGH"],
+ ["OBSERVATION DECKS",19,"Tokyo City View (Roppongi)","Tokyo","Observation","1M","1,800","Yes","Yes","NO","MED"],
+ ["OBSERVATION DECKS",20,"Harukas 300","Osaka","Observation","1M","1,500","No","Yes","NO","MED"],
+ ["OBSERVATION DECKS",21,"Umeda Sky Building","Osaka","Observation","800K","1,500","No","Yes","NO","LOW"],
+ ["MUSEUMS & CULTURAL",22,"Ghibli Museum","Tokyo","Museum","700K","1,000","Partial","Yes","YES","HIGH"],
+ ["MUSEUMS & CULTURAL",23,"Ghibli Park","Nagoya","Theme Park","1M","2,000","No","Yes","YES","HIGH"],
+ ["MUSEUMS & CULTURAL",24,"Nintendo Museum","Kyoto","Museum","500K","3,300","No","No","YES","HIGH"],
+ ["MUSEUMS & CULTURAL",25,"Warner Bros Studio Tokyo","Tokyo","Entertainment","1M+","6,300","Yes","Yes","YES","HIGH"],
+ ["MUSEUMS & CULTURAL",26,"Edo Wonderland","Nikko","Cultural","500K","5,500","Yes","Yes","NO","MED"],
+ ["MUSEUMS & CULTURAL",27,"Tokyo National Museum","Tokyo","Museum","1M","1,000","No","No","NO","MED"],
+ ["MUSEUMS & CULTURAL",28,"Edo-Tokyo Museum","Tokyo","Museum","600K","600","No","No","NO","LOW"],
+ ["MUSEUMS & CULTURAL",29,"Mori Art Museum","Tokyo","Art","1M","2,000","No","No","NO","MED"],
+ ["MUSEUMS & CULTURAL",30,"Hiroshima Peace Museum","Hiroshima","Historic","900K","200","No","No","NO","MED"],
+ ["MUSEUMS & CULTURAL",31,"Osaka Museum of History","Osaka","Museum","400K","600","No","No","NO","LOW"],
+ ["MUSEUMS & CULTURAL",32,"Kyoto National Museum","Kyoto","Museum","500K","700","No","No","NO","LOW"],
+ ["AQUARIUMS & ZOOS",33,"Sumida Aquarium","Tokyo","Aquarium","1.5M","2,400","Yes","Yes","NO","MED"],
+ ["AQUARIUMS & ZOOS",34,"Sunshine Aquarium","Tokyo","Aquarium","1M","2,400","No","Yes","NO","MED"],
+ ["AQUARIUMS & ZOOS",35,"Art Aquarium Museum Ginza","Tokyo","Aquarium","800K","2,500","No","Yes","NO","MED"],
+ ["AQUARIUMS & ZOOS",36,"Osaka Aquarium Kaiyukan","Osaka","Aquarium","3M","2,700","No","Yes","NO","HIGH"],
+ ["AQUARIUMS & ZOOS",37,"Asahiyama Zoo","Hokkaido","Zoo","1.7M","1,000","No","Yes","NO","MED"],
+ ["AQUARIUMS & ZOOS",38,"Ueno Zoo","Tokyo","Zoo","3M","600","No","No","NO","LOW"],
+ ["SPORTS VENUES",39,"Kokugikan (Sumo Hall)","Tokyo","Sports","600K","3,800","Yes","Yes","YES","HIGH"],
+ ["SPORTS VENUES",40,"Tokyo Dome (Baseball)","Tokyo","Sports","3M","4,000","No","Yes","YES","HIGH"],
+ ["SPORTS VENUES",41,"Koshien Stadium","Osaka","Sports","1M","2,000","No","No","YES","MED"],
+ ["SPORTS VENUES",42,"Niseko Ski Resort","Hokkaido","Sports","500K","8,000","No","Yes","YES","HIGH"],
+ ["SPORTS VENUES",43,"Hakuba Valley Ski Resort","Nagano","Sports","400K","7,000","No","Yes","YES","MED"],
+ ["PERFORMING ARTS",44,"Kabuki-za Theatre","Tokyo","Theater","500K","18,000","No","No","YES","MED"],
+ ["PERFORMING ARTS",45,"National Noh Theatre","Tokyo","Theater","200K","3,000","No","No","YES","LOW"],
+ ["PERFORMING ARTS",46,"Takarazuka Grand Theater","Osaka","Theater","800K","6,000","No","No","YES","MED"],
+ ["PERFORMING ARTS",47,"Robot Restaurant Shinjuku","Tokyo","Show","400K","10,000","No","No","YES","MED"],
+ ["SCENIC / NATURE",48,"Fushimi Inari Shrine","Kyoto","Scenic","10M","Free","No","No","NO","MED"],
+ ["SCENIC / NATURE",49,"Arashiyama Bamboo Grove","Kyoto","Scenic","5M","Free","No","No","NO","LOW"],
+ ["SCENIC / NATURE",50,"Shinjuku Gyoen","Tokyo","Scenic","2M","500","No","No","NO","LOW"],
+ ["SCENIC / NATURE",51,"Kinkaku-ji (Golden Pavilion)","Kyoto","Scenic","5M","500","No","No","NO","MED"],
+ ["SCENIC / NATURE",52,"Nijo Castle","Kyoto","Historic","2M","1,300","No","No","NO","MED"],
+ ["SCENIC / NATURE",53,"Senso-ji Temple","Tokyo","Scenic","30M","Free","No","No","NO","LOW"],
+ ["ONSEN & WELLNESS",54,"Oedo Onsen Monogatari","Tokyo","Onsen","1M","2,900","No","Yes","NO","HIGH"],
+ ["ONSEN & WELLNESS",55,"LaQua (Tokyo Dome City)","Tokyo","Onsen","800K","2,436","No","No","NO","MED"],
+ ["ONSEN & WELLNESS",56,"Hakone Yunessun","Hakone","Onsen","700K","2,500","No","Yes","YES","HIGH"],
+ ["ONSEN & WELLNESS",57,"Beppu Hells (Jigoku Meguri)","Oita","Onsen","1M","2,200","No","No","NO","MED"],
+ ["ONSEN & WELLNESS",58,"Arima Onsen","Hyogo","Onsen","800K","3,000","No","No","YES","MED"],
+ ["ONSEN & WELLNESS",59,"Kinosaki Onsen","Hyogo","Onsen","500K","2,500","No","No","YES","MED"],
+ ["ONSEN & WELLNESS",60,"Kusatsu Onsen","Gunma","Onsen","600K","Free","No","No","NO","LOW"],
+];
+
+/* ══════════════════════════════════════
+   DATA — S4 (100 partners)
+   [#, phase, partner, category, city, whyFirst, govYr, contactStrategy]
+══════════════════════════════════════ */
+const D4=[
+ [1,1,"Tokyo Skytree","Observation","Tokyo","Already on Headout — upgrade & upsell","¥500M","Account expansion"],
+ [2,1,"Tokyo Tower","Observation","Tokyo","Already on Headout — upsell Top Deck","¥200M","Account expansion"],
+ [3,1,"Warner Bros Studio Tokyo","Entertainment","Tokyo","Already on Headout — combo tickets","¥300M","Account expansion"],
+ [4,1,"teamLab Planets","Digital Art","Tokyo","Already on Headout — premium pass upsell","¥400M","Account expansion"],
+ [5,1,"teamLab Borderless","Digital Art","Tokyo","Already on Headout — bundle deals","¥400M","Account expansion"],
+ [6,1,"Fuji-Q Highland","Theme Park","Yamanashi","Already on Headout — seasonal packages","¥150M","Account expansion"],
+ [7,1,"Shibuya Sky","Observation","Tokyo","High volume — digital native operator","¥300M","Direct outreach"],
+ [8,1,"Hakone Yunessun","Onsen","Kanagawa","Western tourist magnet","¥200M","Direct outreach"],
+ [9,1,"Sumida Aquarium","Aquarium","Tokyo","Already on Headout — combo with Skytree","¥150M","Account expansion"],
+ [10,1,"Sanrio Puroland","Theme Park","Tokyo","Already on Headout — family packages","¥100M","Account expansion"],
+ [11,1,"Oedo Onsen Monogatari","Onsen","Tokyo","Popular with Western tourists","¥100M","Direct outreach"],
+ [12,1,"Art Aquarium Museum Ginza","Art","Tokyo","Instagram-famous Western tourist demand","¥80M","Direct outreach"],
+ [13,1,"Immersive Fort Tokyo","Entertainment","Tokyo","New 2024 — not yet on Headout","¥200M","Direct outreach"],
+ [14,1,"Sunshine Aquarium","Aquarium","Tokyo","High foot traffic (Ikebukuro)","¥100M","Direct outreach"],
+ [15,1,"Manyo Club Toyosu","Onsen","Tokyo","Near teamLab — combo opportunity","¥80M","Direct outreach"],
+ [16,1,"Edo Wonderland","Cultural","Nikko","Already on Headout — day trip bundle","¥60M","Account expansion"],
+ [17,1,"Harukas 300","Observation","Osaka","Osaka #1 observation deck","¥100M","Direct outreach"],
+ [18,1,"Umeda Sky Building","Observation","Osaka","Iconic Osaka landmark","¥80M","Direct outreach"],
+ [19,1,"Osaka Aquarium Kaiyukan","Aquarium","Osaka","3M visitors/yr — major gap","¥300M","Direct outreach"],
+ [20,1,"Osaka Castle","Historic","Osaka","3M visitors/yr — no online partner","¥200M","Direct outreach"],
+ [21,2,"Kimono rental (Wargo)","Cultural","Tokyo/Kyoto","Largest kimono chain Japan","¥500M","Direct outreach"],
+ [22,2,"Yae no Komichi Kimono","Cultural","Kyoto","Premium kimono Gion district","¥200M","Direct outreach"],
+ [23,2,"Tsukiji Outer Market tour","Food","Tokyo","#1 food experience Western tourists","¥150M","Partnership"],
+ [24,2,"Tokyo Sushi Academy","Food","Tokyo","Most requested cooking class","¥100M","Direct outreach"],
+ [25,2,"Ramen-making class","Food","Tokyo","#2 most requested cooking class","¥80M","Direct outreach"],
+ [26,2,"Tea ceremony (En)","Cultural","Tokyo","Largest tea ceremony operator Tokyo","¥100M","Direct outreach"],
+ [27,2,"Matcha experience (Urasenke)","Cultural","Kyoto","Most prestigious tea school Japan","¥80M","Direct outreach"],
+ [28,2,"Ninja Trick House","Cultural","Tokyo","Top-rated ninja experience","¥60M","Direct outreach"],
+ [29,2,"Street go-kart (Akiba Kart)","Adventure","Tokyo","Viral Western tourist experience","¥150M","Direct outreach"],
+ [30,2,"Street go-kart Osaka","Adventure","Osaka","Second city coverage","¥80M","Direct outreach"],
+ [31,2,"Hakone day tour operator","Nature","Kanagawa","Mt Fuji + Hakone #1 day trip","¥500M","Partnership"],
+ [32,2,"Mt Fuji climbing guide","Nature","Yamanashi","200K climbers/yr summer","¥100M","Direct outreach"],
+ [33,2,"Kamakura day trip operator","Nature","Kanagawa","#2 Tokyo day trip","¥200M","Direct outreach"],
+ [34,2,"Nara day trip operator","Nature","Nara","Family favorite — deer park","¥150M","Direct outreach"],
+ [35,2,"Nikko day trip operator","Nature","Tochigi","UNESCO heritage day trip","¥100M","Direct outreach"],
+ [36,2,"Cherry blossom tour (seasonal)","Nature","Tokyo","Peak season 10M+ demand","¥300M","Seasonal"],
+ [37,2,"Sake brewery (Hakutsuru)","Food","Osaka","Most visited sake brewery Japan","¥50M","Direct outreach"],
+ [38,2,"Sumo stable morning tour","Cultural","Tokyo","Authentic experience — gap on all platforms","¥40M","Direct outreach"],
+ [39,2,"Cycling tour (Tokyobike)","Adventure","Tokyo","Eco-tourism growing fast","¥40M","Direct outreach"],
+ [40,2,"Ghibli Park tour operator","Entertainment","Nagoya","New — no Headout listing","¥200M","Direct outreach"],
+ [41,2,"Nintendo Museum","Entertainment","Kyoto","New 2024 — neither platform","¥150M","Direct outreach"],
+ [42,2,"Kyoto walking tour (Johnnie Fox)","Cultural","Kyoto","Top-rated English tour","¥50M","Direct outreach"],
+ [43,2,"Geisha district tour (Gion)","Cultural","Kyoto","Exclusive Gion experience","¥60M","Direct outreach"],
+ [44,2,"Calligraphy workshop (Nishiki)","Cultural","Kyoto","Cultural immersion","¥30M","Direct outreach"],
+ [45,2,"Takoyaki making class","Food","Osaka","Street food tourism staple","¥40M","Direct outreach"],
+ [46,2,"Osaka street food tour","Food","Osaka","Dotonbori evening tours","¥80M","Direct outreach"],
+ [47,2,"Hiroshima Peace Museum","Historic","Hiroshima","900K visitors/yr — no partner","¥50M","Direct outreach"],
+ [48,2,"Miyajima Island tour","Nature","Hiroshima","UNESCO shrine island","¥80M","Direct outreach"],
+ [49,2,"Himeji Castle","Historic","Hyogo","Japan's most beautiful castle","¥100M","Direct outreach"],
+ [50,2,"Niseko skiing (Niseko United)","Adventure","Hokkaido","#1 ski resort Western tourists","¥300M","Direct outreach"],
+ [51,2,"Snowmobile Hokkaido","Adventure","Hokkaido","Winter tourism gap","¥30M","Direct outreach"],
+ [52,2,"Asahiyama Zoo","Zoo","Hokkaido","1.7M visitors/yr — Klook has it","¥100M","Direct outreach"],
+ [53,2,"Okinawa snorkeling","Adventure","Okinawa","Summer peak demand","¥80M","Direct outreach"],
+ [54,2,"Kabuki theater (Kabukiza)","Theater","Tokyo","Traditional performing arts gap","¥60M","Direct outreach"],
+ [55,2,"Taiko drumming experience","Cultural","Tokyo","Unique Japan-only","¥40M","Direct outreach"],
+ [56,2,"Pottery class Kyoto","Cultural","Kyoto","Hands-on craft tourism","¥30M","Direct outreach"],
+ [57,2,"Kayaking Nikko","Adventure","Tochigi","Outdoor adventure gap","¥20M","Direct outreach"],
+ [58,2,"Fushimi Inari guided tour","Cultural","Kyoto","Most Instagrammed Japan spot","¥80M","Direct outreach"],
+ [59,2,"Arashiyama rickshaw tour","Cultural","Kyoto","Premium Kyoto experience","¥50M","Direct outreach"],
+ [60,2,"Nishiki Market food tour","Food","Kyoto","Kyoto kitchen food tour","¥50M","Direct outreach"],
+ [61,3,"JR East (Shinkansen tickets)","Transport","National","15M+ tourists use Shinkansen","¥2B","Enterprise"],
+ [62,3,"Tokyo Metro (IC Card / pass)","Transport","Tokyo","20M+ tourists need this","¥500M","Enterprise"],
+ [63,3,"Airport Limousine Bus (Keio)","Transport","Tokyo","Arrival essential every tourist","¥200M","Direct outreach"],
+ [64,3,"Keisei Narita limousine bus","Transport","Chiba","Second airport transfer","¥150M","Direct outreach"],
+ [65,3,"Yomiuriland","Theme Park","Tokyo","Seasonal amusement park gap","¥80M","Direct outreach"],
+ [66,3,"Tokyo Joypolis (SEGA)","Entertainment","Tokyo","Neither platform has this","¥60M","Direct outreach"],
+ [67,3,"Kyoto Tower observation","Observation","Kyoto","Kyoto most visited landmark","¥60M","Direct outreach"],
+ [68,3,"Nijo Castle","Historic","Kyoto","UNESCO site — no online partner","¥60M","Direct outreach"],
+ [69,3,"Kanazawa samurai district tour","Cultural","Kanazawa","Regional gem growing fast","¥30M","Direct outreach"],
+ [70,3,"Sapporo Beer Garden tour","Food","Hokkaido","1M visitors/yr","¥30M","Direct outreach"],
+ [71,3,"Otaru canal tour","Cultural","Hokkaido","Hokkaido sightseeing staple","¥20M","Direct outreach"],
+ [72,3,"Nikko Toshogu shrine tour","Cultural","Tochigi","UNESCO guided tour","¥40M","Direct outreach"],
+ [73,3,"Kamikochi hiking guide","Nature","Nagano","Alpine tourism growing","¥30M","Direct outreach"],
+ [74,3,"Fuji Five Lakes boat tour","Nature","Yamanashi","Mt Fuji area expansion","¥40M","Direct outreach"],
+ [75,3,"Atami Onsen resort","Wellness","Shizuoka","Day trip onsen from Tokyo","¥50M","Direct outreach"],
+ [76,3,"Kusatsu Onsen experience","Wellness","Gunma","Most famous onsen town Japan","¥60M","Direct outreach"],
+ [77,3,"Kinugawa Onsen resort","Wellness","Tochigi","2M visitors/yr","¥40M","Direct outreach"],
+ [78,3,"Yokohama Chinatown food tour","Food","Kanagawa","Tokyo day trip destination","¥40M","Direct outreach"],
+ [79,3,"Cup Noodles Museum Yokohama","Food","Kanagawa","Quirky family experience","¥30M","Direct outreach"],
+ [80,3,"Sumo practice viewing tour","Cultural","Tokyo","Early morning exclusive","¥40M","Direct outreach"],
+ [81,3,"Wagyu beef tasting","Food","Tokyo","Premium food tourism","¥30M","Direct outreach"],
+ [82,3,"Tsukiji tuna auction (Toyosu)","Food","Tokyo","Very limited — high value","¥30M","Lottery partnership"],
+ [83,3,"Tokyo Giants baseball","Sport","Tokyo","3M stadium visitors/yr","¥150M","Enterprise"],
+ [84,3,"Tokyo Swallows baseball","Sport","Tokyo","Second team coverage","¥80M","Enterprise"],
+ [85,3,"Hanshin Tigers baseball","Sport","Osaka","Osaka most beloved team","¥100M","Enterprise"],
+ [86,3,"J-League (Urawa Reds)","Sport","Saitama","Neither platform has J-League","¥50M","Direct outreach"],
+ [87,3,"Hoshi Ryokan (1300yr old)","Wellness","Ishikawa","Premium ryokan experience","¥30M","Direct outreach"],
+ [88,3,"Kyoto cooking class (Uzuki)","Food","Kyoto","Top-rated cooking class Kyoto","¥40M","Direct outreach"],
+ [89,3,"Okinawa glass-bottom boat","Nature","Okinawa","Family marine activity","¥50M","Direct outreach"],
+ [90,3,"Fruit picking Yamanashi","Nature","Yamanashi","Family seasonal activity","¥20M","Direct outreach"],
+ [91,3,"Sake tasting tour Kyoto","Food","Kyoto","Fushimi sake district","¥30M","Direct outreach"],
+ [92,3,"Wagashi (sweet) making class","Food","Kyoto","Japanese sweets workshop","¥20M","Direct outreach"],
+ [93,3,"Nagoya Castle","Historic","Nagoya","Regional coverage","¥50M","Direct outreach"],
+ [94,3,"SCMAGLEV Railway Museum","Transport","Nagoya","New attraction Nagoya","¥30M","Direct outreach"],
+ [95,3,"Okinawa American Village tour","Cultural","Okinawa","Unique cultural destination","¥20M","Direct outreach"],
+ [96,3,"Miyako Island snorkeling","Adventure","Okinawa","Premium marine destination","¥30M","Direct outreach"],
+ [97,3,"Shirakawa-go day trip","Cultural","Gifu","UNESCO village day trip","¥40M","Direct outreach"],
+ [98,3,"Takayama old town tour","Cultural","Gifu","Regional hidden gem","¥30M","Direct outreach"],
+ [99,3,"Naoshima Art Island tour","Art","Kagawa","Contemporary art destination","¥30M","Direct outreach"],
+ [100,3,"Yakushima nature tour","Nature","Kagoshima","UNESCO island eco-tourism","¥20M","Direct outreach"],
+];
+
+/* ══════════════════════════════════════
+   DATA — S5
+══════════════════════════════════════ */
+const D5_nums=[
+ {val:"36.9M",  label:"Visitors 2024\n(record, +16% vs 2019)",    hi:true},
+ {val:"¥8.1T",  label:"Total inbound spend 2024",                 hi:true},
+ {val:"¥227K",  label:"Avg spend per visitor",                    hi:false},
+ {val:"7%",     label:"Experiences share of total spend\n(YOUR opportunity)", hi:true},
+ {val:"40M+",   label:"Projected 2025 visitors",                  hi:false},
+ {val:"¥15T",   label:"Japan govt 2030 spend target",             hi:false},
+ {val:"60M",    label:"Visitors target by 2030",                  hi:false},
+ {val:"100",    label:"Partners I will target in 90 days",        hi:true},
+ {val:"¥13B+",  label:"Est. GOV potential from 100 partners",     hi:true},
+];
+
+const D5_visitors=[
+ {country:"South Korea",m:8.8,color:"bar-ko",note:""},
+ {country:"China",m:7.0,color:"bar-cn",note:"Still -27% vs 2019 → recovery ahead"},
+ {country:"Taiwan",m:6.0,color:"bar-tw",note:""},
+ {country:"USA",m:2.7,color:"bar-us",note:"Highest spend per trip"},
+ {country:"Hong Kong",m:2.3,color:"bar-hk",note:""},
+ {country:"Australia",m:0.8,color:"bar-au",note:""},
+ {country:"UK",m:0.6,color:"bar-uk",note:""},
+];
+
+const D5_years=[
+ {yr:"2019",m:31.9,cls:"normal"},
+ {yr:"2020",m:0.25,cls:"low"},
+ {yr:"2021",m:0.25,cls:"low"},
+ {yr:"2022",m:0.38,cls:"low"},
+ {yr:"2023",m:25.1,cls:"growing"},
+ {yr:"2024",m:36.9,cls:"record"},
+ {yr:"2025",m:40,cls:"projected"},
+];
+
+const D5_talking=[
+ "\"I studied how you built UAE. <em>High-volume venues first, then layer experiences.</em> That is my Phase 1 approach — 20 proven partners in 30 days.\"",
+ "\"UAE had Desert Safari as the anchor. Japan has teamLab + Mt Fuji. <em>I will make those the anchor and build the supply chain around them.</em>\"",
+ "\"You closed UAE in months, not years. <em>I will bring the same urgency</em> — first signed contract within 2 weeks of starting.\"",
+ "\"As a former Uber Ops leader, you will track every metric. <em>Here are mine:</em> Wolt Drive 0→10% of company revenue in 18 months. Uber Taxi 3x fleet in 12 months. Enterprise deals with McDonald's, Rakuten, Amazon Japan.\"",
+];
+
+const D5_qa=[
+ {
+  q:"How will you convince Japanese operators to work with Headout?",
+  a:"<strong>3 angles:</strong><br><br><strong>(1) Western tourist access</strong> — Headout audience is 80%+ non-Japanese, completely unreachable through domestic channels. This is new revenue, not cannibalisation.<br><br><strong>(2) Zero upfront cost, pure commission</strong> — no risk for the operator. They list, we sell, we pay on performance.<br><br><strong>(3) Competitive pressure</strong> — I will show them that their direct competitors are already on Klook and Headout. Nobody wants to be the last venue without online distribution."
+ },
+ {
+  q:"What is your Year 1 GOV target?",
+  a:"<strong>Conservative: ¥2–3B. Aggressive: ¥5B.</strong><br><br>Phase 1 alone: 20 partners × avg ¥150M GOV = ¥3B GOV potential. At 15–20% commission that is ¥450–600M revenue from Phase 1 alone.<br><br>The market is at record 36.9M visitors with a government target of 60M by 2030. The tailwind is exceptional."
+ },
+ {
+  q:"What is the hardest thing about Japan BD?",
+  a:"<strong>Trust takes time — but I have a shortcut.</strong><br><br>(1) Start with Tokyo operators who already work with foreign OTAs (teamLab, Skytree). They become references.<br><br>(2) Use my existing Wolt/Uber/Amazon Japan network — I know procurement contacts at major operators.<br><br>(3) First 3 contracts become social proof that opens every next door. In Japan, one trusted referral is worth 10 cold calls."
+ },
+ {
+  q:"Why you over a generic BD hire?",
+  a:"\"<strong>I have done this before — three times in Japan.</strong><br><br>Wolt Drive: first hire, built from ¥0 to 10% of company revenue.<br>Uber: built enterprise team from zero.<br>Indonesia: signed 200+ dealers solo.<br><br>I don't need to learn how to build from zero. I have done it three times in Japan already. The BD muscle memory is already there.\""
+ },
+ {
+  q:"What is Headout's competitive advantage vs Klook in Japan?",
+  a:"\"<strong>Klook is strong in Asia. Headout's strength is Western tourists — the highest-spending segment in Japan.</strong><br><br>Average Western tourist spends 3x more per trip than the average Asian tourist. Headout's English-first, mobile-first, experience-curated product is exactly right for this segment.<br><br>Klook competes on price and volume with Asian tourists. I will focus Headout Japan on quality + Western tourist conversion — a segment Klook cannot serve as well.\""
+ },
+];
+
+/* ══════════════════════════════════════
+   HELPERS
+══════════════════════════════════════ */
+const PRO={HIGH:0,MED:1,LOW:2};
+function priCls(p){return p==='HIGH'?'bH':p==='MED'?'bM':'bL'}
+function ynCls(v){
+  if(v==='YES'||v==='Yes')return 'bY';
+  if(v==='NO'||v==='No')return 'bN';
+  return 'bP';
+}
+function catClass(c){
+  const m={Cultural:'cCultural',Food:'cFood',Transport:'cTransport',Nature:'cNature',
+   Wellness:'cWellness',Adventure:'cAdventure',Entertainment:'cEntertainment',
+   Observation:'cObservation',Aquarium:'cAquarium',Zoo:'cZoo',Sport:'cSport',
+   Essential:'cEssential','Theme Park':'cThemePark','Digital Art':'cDigitalArt',
+   Immersive:'cImmersive',Museum:'cMuseum',Art:'cArt','Art Museum':'cArtMuseum',
+   Onsen:'cOnsen',Historic:'cHistoric',Scenic:'cScenic',Sports:'cSport',
+   Theater:'cTheater',Show:'cShow',Park:'cPark'};
+  return m[c]||'cAttractionDefault';
+}
+
+/* ══════════════════════════════════════
+   S1 RENDER
+══════════════════════════════════════ */
+function buildS1Stats(){
+  const t=D1.length,h=D1.filter(r=>r[5]==='HIGH').length;
+  const gaps=D1.filter(r=>r[4]==='NO').length,parts=D1.filter(r=>r[4]==='PARTIAL').length;
+  document.getElementById('s1-stats').innerHTML=`
+   <div class="stat"><div class="stat-v">${t}</div><div class="stat-l">Total Items</div></div>
+   <div class="stat"><div class="stat-v">${h}</div><div class="stat-l">HIGH Priority</div></div>
+   <div class="stat"><div class="stat-v">${gaps}</div><div class="stat-l">Not on Headout</div></div>
+   <div class="stat"><div class="stat-v">${parts}</div><div class="stat-l">Partial on Headout</div></div>
+   <div class="stat"><div class="stat-v">${[...new Set(D1.map(r=>r[1]))].length}</div><div class="stat-l">Categories</div></div>
+   <div class="stat"><div class="stat-v">${D1.filter(r=>r[4]==='NO'&&r[5]==='HIGH').length}</div><div class="stat-l">HIGH + Not on Headout</div></div>`;
+}
+function renderS1(data){
+  const b=document.getElementById('s1-body');
+  if(!data.length){b.innerHTML='<tr><td colspan="8" class="no-res">No results</td></tr>';return;}
+  b.innerHTML=data.map(r=>`<tr>
+   <td style="color:var(--muted2);font-size:11px">${r[0]}</td>
+   <td><span class="cc c${r[1]}">${r[1]}</span></td>
+   <td style="font-weight:600;min-width:200px">${r[2]}</td>
+   <td><span class="b ${ynCls(r[3])}">${r[3]}</span></td>
+   <td><span class="b ${ynCls(r[4])}">${r[4]}</span></td>
+   <td><span class="b ${priCls(r[5])}">${r[5]}</span></td>
+   <td style="white-space:nowrap;font-size:12px;color:var(--muted)">${r[6]}</td>
+   <td style="font-size:12px;color:var(--muted);max-width:260px">${r[7]}</td>
+  </tr>`).join('');
+  document.getElementById('s1-cnt').textContent=data.length+' results';
+}
+function fs1(){
+  const q=document.getElementById('s1-q').value.toLowerCase();
+  const cat=document.getElementById('s1-cat').value;
+  const pri=document.getElementById('s1-pri').value;
+  const ho=document.getElementById('s1-ho').value;
+  renderS1(D1.filter(r=>
+   (!q||[r[1],r[2],r[6],r[7]].some(v=>v.toLowerCase().includes(q)))&&
+   (!cat||r[1]===cat)&&(!pri||r[5]===pri)&&(!ho||r[4]===ho)));
+}
+
+/* ══════════════════════════════════════
+   S2 RENDER
+══════════════════════════════════════ */
+function buildS2(){
+  document.getElementById('s2-demand').innerHTML=D2_demand.map(d=>`
+   <div class="dcard">
+    <div class="dcard-top"><div class="dcard-title">${d.title}</div><div class="dcard-pct">${d.pct}%</div></div>
+    <div class="dbar-wrap"><div class="dbar" style="width:${d.pct}%"></div></div>
+    <div class="dcard-note">${d.note}</div>
+   </div>`).join('');
+  document.getElementById('s2-top10').innerHTML=D2_top10.map((t,i)=>{
+   const rc=i===0?'gold':i===1?'silver':i===2?'bronze':'';
+   return`<div class="top10-item"><div class="top10-rank ${rc}">${i+1}</div><div class="top10-name">${t}</div></div>`;
+  }).join('');
+  document.getElementById('s2-insights').innerHTML=D2_insights.map(([v,t])=>
+   `<div class="insight-item"><strong>${v}</strong> ${t}</div>`).join('');
+}
+
+/* ══════════════════════════════════════
+   S3 RENDER
+══════════════════════════════════════ */
+function buildS3Stats(){
+  document.getElementById('s3-stats').innerHTML=`
+   <div class="stat"><div class="stat-v">${D3.length}</div><div class="stat-l">Venues Tracked</div></div>
+   <div class="stat"><div class="stat-v">${D3.filter(r=>r[7]==='Yes').length}</div><div class="stat-l">On Headout</div></div>
+   <div class="stat"><div class="stat-v">${D3.filter(r=>r[7]==='No').length}</div><div class="stat-l">Not on Headout</div></div>
+   <div class="stat"><div class="stat-v">${D3.filter(r=>r[10]==='HIGH').length}</div><div class="stat-l">HIGH Priority</div></div>
+   <div class="stat"><div class="stat-v">${D3.filter(r=>r[9]==='YES').length}</div><div class="stat-l">Pre-booking Required</div></div>`;
+}
+function renderS3(data){
+  const b=document.getElementById('s3-body');
+  if(!data.length){b.innerHTML='<tr><td colspan="10" class="no-res">No results</td></tr>';document.getElementById('s3-cnt').textContent='0 venues';return;}
+  const groups={};
+  data.forEach(r=>{if(!groups[r[0]])groups[r[0]]=[];groups[r[0]].push(r);});
+  let html='';
+  for(const[g,rows] of Object.entries(groups)){
+    html+=`<tr class="grp-row"><td colspan="10">${g}</td></tr>`;
+    rows.forEach(r=>{
+      const ps=r[6]==='Free'?'<span style="color:var(--yes-c);font-weight:600">Free</span>':`¥${Number(r[6].replace(/,/g,'')).toLocaleString()}`;
+      html+=`<tr>
+       <td style="color:var(--muted2);font-size:11px">${r[1]}</td>
+       <td style="font-weight:600;min-width:160px">${r[2]}</td>
+       <td>${r[3]}</td>
+       <td><span class="cc ${catClass(r[4])}">${r[4]}</span></td>
+       <td style="white-space:nowrap;font-size:12px">${r[5]}</td>
+       <td style="white-space:nowrap;font-size:12px">${ps}</td>
+       <td><span class="b ${ynCls(r[7])}">${r[7]}</span></td>
+       <td><span class="b ${ynCls(r[8])}">${r[8]}</span></td>
+       <td><span class="b ${r[9]==='YES'?'bH':'bL'}">${r[9]}</span></td>
+       <td><span class="b ${priCls(r[10])}">${r[10]}</span></td>
+      </tr>`;
+    });
+  }
+  b.innerHTML=html;
+  document.getElementById('s3-cnt').textContent=Object.values(groups).flat().length+' venues';
+}
+function fs3(){
+  const q=document.getElementById('s3-q').value.toLowerCase();
+  const cat=document.getElementById('s3-cat').value.toLowerCase();
+  const ho=document.getElementById('s3-ho').value;
+  const pri=document.getElementById('s3-pri').value;
+  const book=document.getElementById('s3-book').value;
+  renderS3(D3.filter(r=>
+   (!q||[r[2],r[3],r[4]].some(v=>v.toLowerCase().includes(q)))&&
+   (!cat||r[4].toLowerCase().includes(cat))&&
+   (!ho||r[7]===ho)&&(!pri||r[10]===pri)&&(!book||r[9]===book)));
+}
+
+/* ══════════════════════════════════════
+   S4 RENDER
+══════════════════════════════════════ */
+let s4Filtered=D4;
+function buildS4Stats(){
+  const p1gov=3.7,p2gov=4.3,p3gov=5.0;
+  document.getElementById('s4-stats').innerHTML=`
+   <div class="stat"><div class="stat-v">100</div><div class="stat-l">Total Target Partners</div></div>
+   <div class="stat" style="border-top:3px solid var(--p1)"><div class="stat-v" style="color:var(--p1)">20</div><div class="stat-l">Phase 1 — Quick Wins (Day 1–30)</div></div>
+   <div class="stat" style="border-top:3px solid var(--p2)"><div class="stat-v" style="color:var(--p2)">40</div><div class="stat-l">Phase 2 — Supply Depth (Day 31–60)</div></div>
+   <div class="stat" style="border-top:3px solid var(--p3)"><div class="stat-v" style="color:var(--p3)">40</div><div class="stat-l">Phase 3 — Volume &amp; Scale (Day 61–90)</div></div>
+   <div class="stat" style="border-top:3px solid var(--red)"><div class="stat-v">¥13B+</div><div class="stat-l">Total Est. GOV Potential</div></div>`;
+}
+
+function renderS4(data){
+  s4Filtered=data;
+  const container=document.getElementById('s4-phases');
+  if(!data.length){
+    container.innerHTML='<p class="no-res">No results found</p>';
+    document.getElementById('s4-cnt').textContent='0 partners';
+    return;
+  }
+  // Group by phase
+  const phaseInfo={
+   1:{label:'PHASE 1 — DAY 1–30: QUICK WINS',sub:'Establish proof of concept. Sign operators who already understand online booking.',cls:'ph1',badgeCls:'ph1-badge',bCls:'bP1',gov:'¥3.7B GOV potential'},
+   2:{label:'PHASE 2 — DAY 31–60: SUPPLY DEPTH',sub:'Add experiences Western tourists specifically want but can\'t easily book.',cls:'ph2',badgeCls:'ph2-badge',bCls:'bP2',gov:'¥4.3B GOV potential'},
+   3:{label:'PHASE 3 — DAY 61–90: VOLUME & SCALE',sub:'Target high-volume transport, passes, tier-2 cities. Build supply base for Year 1 GOV target.',cls:'ph3',badgeCls:'ph3-badge',bCls:'bP3',gov:'¥5.0B GOV potential'},
+  };
+  const phases={};
+  data.forEach(r=>{if(!phases[r[1]])phases[r[1]]=[];phases[r[1]].push(r);});
+  let html='';
+  for(const[ph,rows] of Object.entries(phases)){
+    const pi=phaseInfo[ph];
+    html+=`<div class="phase-block">
+     <div class="phase-hdr ${pi.cls}">
+      <span class="phase-badge ${pi.badgeCls}">${pi.gov}</span>
+      <div class="phase-hdr-text"><h3>${pi.label}</h3><p>${pi.sub}</p></div>
+     </div>
+     <div class="twrap" style="max-height:none;border-radius:0;border:none;box-shadow:none">
+      <table>
+       <thead><tr>
+        <th onclick="stS4(0)"># <span>↕</span></th>
+        <th>Phase</th>
+        <th onclick="stS4(2)">Partner <span>↕</span></th>
+        <th onclick="stS4(3)">Category <span>↕</span></th>
+        <th onclick="stS4(4)">City <span>↕</span></th>
+        <th onclick="stS4(5)">Why This Partner <span>↕</span></th>
+        <th onclick="stS4(6)">Est. GOV/yr <span>↕</span></th>
+        <th onclick="stS4(7)">Contact Strategy <span>↕</span></th>
+       </tr></thead>
+       <tbody>
+        ${rows.map(r=>`<tr>
+         <td style="color:var(--muted2);font-size:11px">${r[0]}</td>
+         <td><span class="b ${pi.bCls}">P${r[1]}</span></td>
+         <td style="font-weight:600;min-width:160px">${r[2]}</td>
+         <td><span class="cc ${catClass(r[3])}">${r[3]}</span></td>
+         <td style="white-space:nowrap">${r[4]}</td>
+         <td style="font-size:12px;color:var(--muted);max-width:220px">${r[5]}</td>
+         <td style="white-space:nowrap;font-weight:600;color:var(--red)">${r[6]}</td>
+         <td style="font-size:12px;white-space:nowrap">${r[7]}</td>
+        </tr>`).join('')}
+       </tbody>
+      </table>
+     </div>
+    </div>`;
+  }
+  container.innerHTML=html;
+  document.getElementById('s4-cnt').textContent=data.length+' partners';
+}
+
+function fs4(){
+  const q=document.getElementById('s4-q').value.toLowerCase();
+  const ph=document.getElementById('s4-ph').value;
+  const cat=document.getElementById('s4-cat').value;
+  const city=document.getElementById('s4-city').value;
+  renderS4(D4.filter(r=>
+   (!q||[r[2],r[3],r[4],r[5],r[7]].some(v=>v.toLowerCase().includes(q)))&&
+   (!ph||r[1]===Number(ph))&&(!cat||r[3]===cat)&&
+   (!city||r[4].toLowerCase().includes(city.toLowerCase()))));
+}
+
+let s4SortCol=-1,s4SortAsc=true;
+function stS4(col){
+  s4SortAsc=(s4SortCol===col)?!s4SortAsc:true;
+  s4SortCol=col;
+  const sorted=[...s4Filtered].sort((a,b)=>{
+   let av=a[col],bv=b[col];
+   if(col===0||col===1)return s4SortAsc?av-bv:bv-av;
+   if(col===6){
+    const parse=v=>Number(v.replace(/[¥BM,]/g,'').replace('B','000'))*(/B$/.test(v)?1000:1);
+    return s4SortAsc?parse(av)-parse(bv):parse(bv)-parse(av);
+   }
+   return s4SortAsc?String(av).localeCompare(String(bv)):String(bv).localeCompare(String(av));
+  });
+  renderS4(sorted);
+}
+
+function copyList(){
+  const text=s4Filtered.map(r=>`${r[0]}. ${r[2]} | ${r[3]} | ${r[4]} | ${r[6]} | ${r[7]}`).join('\n');
+  navigator.clipboard.writeText(text).then(()=>{
+   const btn=document.getElementById('copy-btn');
+   btn.textContent='✅ Copied!';
+   btn.classList.add('copied');
+   setTimeout(()=>{btn.textContent='📋 Copy filtered list';btn.classList.remove('copied');},2000);
+  });
+}
+
+/* ══════════════════════════════════════
+   S5 RENDER
+══════════════════════════════════════ */
+function buildS5(){
+  // Numbers
+  document.getElementById('s5-nums').innerHTML=D5_nums.map(n=>`
+   <div class="num-card${n.hi?' highlight':''}">
+    <div class="num-val">${n.val}</div>
+    <div class="num-label">${n.label.replace('\n','<br>')}</div>
+   </div>`).join('');
+
+  // Visitors bar
+  const maxM=Math.max(...D5_visitors.map(v=>v.m));
+  document.getElementById('s5-visitors').innerHTML=D5_visitors.map(v=>`
+   <div class="bar-row">
+    <div class="bar-label">${v.country}</div>
+    <div class="bar-track">
+     <div class="bar-fill ${v.color}" style="width:${(v.m/maxM*100).toFixed(1)}%">${v.m}M</div>
+    </div>
+    ${v.note?`<div class="bar-note">← ${v.note}</div>`:''}
+   </div>`).join('');
+
+  // Year chart
+  const maxY=Math.max(...D5_years.map(y=>y.m));
+  document.getElementById('s5-years').innerHTML=D5_years.map(y=>`
+   <div class="year-bar-wrap">
+    <div class="year-bar ${y.cls}" style="height:${Math.max(8,(y.m/maxY*120)).toFixed(0)}px">
+     <div class="year-val">${y.m}M</div>
+    </div>
+   </div>`).join('');
+  document.getElementById('s5-year-labels').innerHTML=D5_years.map(y=>`
+   <div class="year-label" style="flex:1">${y.yr}${y.cls==='projected'?' (est.)':''}</div>`).join('');
+
+  // Talking points
+  document.getElementById('s5-talking').innerHTML=D5_talking.map((t,i)=>`
+   <div class="talk-card"><strong style="color:var(--muted);font-size:11px">POINT ${i+1}</strong><br>${t}</div>`).join('');
+
+  // Q&A accordion
+  document.getElementById('s5-qa').innerHTML=D5_qa.map((qa,i)=>`
+   <div class="qa-block">
+    <div class="qa-q" onclick="toggleQA(${i})">
+     <span>Q: ${qa.q}</span>
+     <span class="qa-chevron" id="chev-${i}">▼</span>
+    </div>
+    <div class="qa-a" id="qa-a-${i}"><strong>A:</strong> ${qa.a}</div>
+   </div>`).join('');
+}
+
+function toggleQA(i){
+  const a=document.getElementById(`qa-a-${i}`);
+  const c=document.getElementById(`chev-${i}`);
+  a.classList.toggle('open');
+  c.classList.toggle('open');
+}
+
+/* ══════════════════════════════════════
+   SORT (S1, S3)
+══════════════════════════════════════ */
+const SS={s1:{c:-1,a:true},s3:{c:-1,a:true}};
+function st(sec,col){
+  const s=SS[sec];
+  s.a=(s.c===col)?!s.a:true;s.c=col;
+  const tbl=document.getElementById(`${sec}-tbl`);
+  tbl.querySelectorAll('thead th').forEach(th=>{th.classList.remove('sorted');const sp=th.querySelector('span');if(sp)sp.textContent='↕';});
+  const th=tbl.querySelectorAll('thead th')[col];
+  th.classList.add('sorted');const sp=th.querySelector('span');if(sp)sp.textContent=s.a?'↑':'↓';
+  if(sec==='s1'){
+   const sorted=[...D1].sort((a,b)=>{
+    let av=a[col],bv=b[col];
+    if(col===5){av=PRO[av]??9;bv=PRO[bv]??9;return s.a?av-bv:bv-av;}
+    if(col===0)return s.a?av-bv:bv-av;
+    return s.a?String(av).localeCompare(String(bv)):String(bv).localeCompare(String(av));
+   });
+   renderS1(sorted);
+  }else{
+   const sorted=[...D3].sort((a,b)=>{
+    let av=a[col+1],bv=b[col+1];
+    if(col===9){av=PRO[av]??9;bv=PRO[bv]??9;return s.a?av-bv:bv-av;}
+    if(col===1)return s.a?Number(av.replace(/[^\d]/g,''))-Number(bv.replace(/[^\d]/g,'')):Number(bv.replace(/[^\d]/g,''))-Number(av.replace(/[^\d]/g,''));
+    return s.a?String(av).localeCompare(String(bv)):String(bv).localeCompare(String(av));
+   });
+   renderS3(sorted);
+  }
+}
+
+/* ══════════════════════════════════════
+   TAB SWITCH
+══════════════════════════════════════ */
+function show(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+
+/* ══════════════════════════════════════
+   INIT
+══════════════════════════════════════ */
+buildS1Stats();renderS1(D1);
+buildS2();
+buildS3Stats();renderS3(D3);
+buildS4Stats();renderS4(D4);
+buildS5();
+</script>
+</body>
+</html>
