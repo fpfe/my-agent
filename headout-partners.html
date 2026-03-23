@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Headout Japan Partner Research</title>
+  <style>
+    :root {
+      --primary: #e8174a;
+      --primary-dark: #b8103a;
+      --bg: #f7f8fa;
+      --card-bg: #ffffff;
+      --border: #e2e6ea;
+      --text: #1a1d23;
+      --text-muted: #6b7280;
+      --high: #dc2626;
+      --high-bg: #fef2f2;
+      --med: #d97706;
+      --med-bg: #fffbeb;
+      --low: #16a34a;
+      --low-bg: #f0fdf4;
+      --yes-bg: #dcfce7;
+      --yes-color: #15803d;
+      --no-bg: #fee2e2;
+      --no-color: #b91c1c;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 32px 40px;
+    }
+    .header-inner { max-width: 1400px; margin: 0 auto; }
+    .header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
+    .header p { margin-top: 6px; opacity: 0.85; font-size: 14px; }
+    .header-meta {
+      display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .header-meta span {
+      background: rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* ── NAV TABS ────────────────────────────── */
+    .nav-tabs {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: var(--shadow);
+    }
+    .nav-tabs-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; gap: 0; overflow-x: auto;
+    }
+    .tab-btn {
+      padding: 14px 22px;
+      border: none; background: none;
+      font-size: 13px; font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s;
+    }
+    .tab-btn:hover { color: var(--primary); }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+    /* ── MAIN CONTENT ────────────────────────── */
+    .main { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .section-header {
+      margin-bottom: 20px;
+    }
+    .section-header h2 {
+      font-size: 20px; font-weight: 700; color: var(--text);
+    }
+    .section-header p {
+      margin-top: 4px; color: var(--text-muted); font-size: 14px;
+    }
+
+    /* ── SEARCH / FILTER BAR ─────────────────── */
+    .toolbar {
+      display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center;
+    }
+    .search-input {
+      flex: 1; min-width: 200px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--card-bg);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { border-color: var(--primary); }
+    .filter-select {
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+    }
+    .filter-select:focus { border-color: var(--primary); }
+    .count-badge {
+      background: var(--primary);
+      color: white;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* ── TABLES ──────────────────────────────── */
+    .table-wrap {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    thead th {
+      background: #f1f3f5;
+      padding: 11px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 53px;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    thead th:hover { background: #e9ecef; color: var(--text); }
+    thead th .sort-icon { margin-left: 4px; opacity: 0.4; }
+    thead th.sorted .sort-icon { opacity: 1; color: var(--primary); }
+    tbody tr { border-bottom: 1px solid #f0f2f4; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #fafbfc; }
+    tbody td { padding: 10px 14px; vertical-align: middle; }
+    .no-results { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; }
+
+    /* ── PRIORITY BADGES ─────────────────────── */
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .badge-HIGH { background: var(--high-bg); color: var(--high); }
+    .badge-MED  { background: var(--med-bg);  color: var(--med);  }
+    .badge-LOW  { background: var(--low-bg);  color: var(--low);  }
+
+    .badge-YES { background: var(--yes-bg); color: var(--yes-color); }
+    .badge-NO  { background: var(--no-bg);  color: var(--no-color);  }
+
+    /* ── CATEGORY CHIPS ──────────────────────── */
+    .cat-chip {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #f0f2f5;
+      color: #374151;
+    }
+    .cat-Cultural   { background: #ede9fe; color: #5b21b6; }
+    .cat-Adventure  { background: #dbeafe; color: #1d4ed8; }
+    .cat-Food       { background: #fef3c7; color: #92400e; }
+    .cat-Transport  { background: #d1fae5; color: #065f46; }
+    .cat-Nature     { background: #dcfce7; color: #15803d; }
+    .cat-Wellness   { background: #fce7f3; color: #be185d; }
+    .cat-ThemePark  { background: #ede9fe; color: #5b21b6; }
+    .cat-Museum     { background: #dbeafe; color: #1d4ed8; }
+    .cat-Entertainment { background: #fef3c7; color: #92400e; }
+    .cat-Observation { background: #cffafe; color: #0e7490; }
+    .cat-Aquarium   { background: #e0f2fe; color: #0369a1; }
+    .cat-Zoo        { background: #dcfce7; color: #15803d; }
+    .cat-Theater    { background: #fce7f3; color: #be185d; }
+    .cat-Show       { background: #fef3c7; color: #92400e; }
+    .cat-Historic   { background: #f3f4f6; color: #374151; }
+
+    /* ── CARD GRID (SECTION 2) ───────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      padding: 16px 18px 12px;
+      display: flex; align-items: center; gap: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-icon {
+      font-size: 26px;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg);
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .card-title { font-size: 15px; font-weight: 700; }
+    .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+    .card-body { padding: 14px 18px; }
+    .card-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 5px 0;
+      font-size: 13.5px;
+      border-bottom: 1px dashed #f0f2f4;
+    }
+    .card-item:last-child { border-bottom: none; }
+    .card-item::before {
+      content: "→";
+      color: var(--primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── S3 SUBGROUP HEADERS ─────────────────── */
+    .group-row td {
+      background: #f8f9fa;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 8px 14px;
+      border-top: 2px solid var(--border);
+    }
+
+    /* ── STATS ROW ───────────────────────────── */
+    .stats-row {
+      display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      flex: 1; min-width: 140px;
+      box-shadow: var(--shadow);
+    }
+    .stat-card .stat-value { font-size: 26px; font-weight: 800; color: var(--primary); }
+    .stat-card .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 700px) {
+      .header { padding: 20px 16px; }
+      .main { padding: 20px 12px; }
+      thead th { font-size: 11px; padding: 9px 10px; }
+      tbody td { padding: 8px 10px; font-size: 12.5px; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════ HEADER ════════ -->
+<div class="header">
+  <div class="header-inner">
+    <h1>🇯🇵 Headout Japan — Partner Research Tool</h1>
+    <p>Competitive gap analysis &amp; opportunity mapping for interview preparation</p>
+    <div class="header-meta">
+      <span>📊 Sources: JNTO, Dentsu Tourism Survey, Klook/Headout live data</span>
+      <span>🗓 March 2026</span>
+      <span>🎯 Focus: Western tourist demand</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ NAV TABS ════════ -->
+<div class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <button class="tab-btn active" onclick="showSection('s1', this)">
+      § 1 — Gap Analysis (Klook vs Headout)
+    </button>
+    <button class="tab-btn" onclick="showSection('s2', this)">
+      § 2 — What Tourists Want
+    </button>
+    <button class="tab-btn" onclick="showSection('s3', this)">
+      § 3 — Ticketed Venues
+    </button>
+  </div>
+</div>
+
+<!-- ════════ MAIN ════════ -->
+<div class="main">
+
+  <!-- ─── SECTION 1 ─────────────────────────── -->
+  <div id="s1" class="section active">
+    <div class="section-header">
+      <h2>Experiences Klook Has That Headout Japan Doesn't</h2>
+      <p>Competitive gap analysis — high-priority acquisition targets for Headout Japan expansion</p>
+    </div>
+
+    <div class="stats-row" id="s1-stats"></div>
+
+    <div class="toolbar">
+      <input type="text"   class="search-input"  id="s1-search"   placeholder="🔍  Search experience, category…" oninput="filterS1()" />
+      <select class="filter-select" id="s1-cat"  onchange="filterS1()">
+        <option value="">All Categories</option>
+        <option>Cultural</option>
+        <option>Adventure</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Nature</option>
+        <option>Wellness</option>
+      </select>
+      <select class="filter-select" id="s1-pri" onchange="filterS1()">
+        <option value="">All Priorities</option>
+        <option>HIGH</option>
+        <option>MED</option>
+        <option>LOW</option>
+      </select>
+      <span class="count-badge" id="s1-count">25 results</span>
+    </div>
+
+    <div class="table-wrap">
+      <table id="s1-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('s1',0)" data-col="0">#  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s1',1)" data-col="1">Category  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s1',2)" data-col="2">Experience  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s1',3)" data-col="3">Why It Matters  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s1',4)" data-col="4">Priority  <span class="sort-icon">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="s1-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 2 ─────────────────────────── -->
+  <div id="s2" class="section">
+    <div class="section-header">
+      <h2>What Foreign Tourists Want in Japan</h2>
+      <p>Demand intelligence sourced from JNTO visitor surveys &amp; Dentsu tourism research</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" class="search-input" id="s2-search" placeholder="🔍  Filter experiences…" oninput="filterS2()" />
+    </div>
+
+    <div class="cards-grid" id="s2-grid"></div>
+  </div>
+
+  <!-- ─── SECTION 3 ─────────────────────────── -->
+  <div id="s3" class="section">
+    <div class="section-header">
+      <h2>Ticketed Venues &amp; Facilities</h2>
+      <p>Key attraction inventory — presence on Headout vs Klook, visitor volume &amp; acquisition priority</p>
+    </div>
+
+    <div class="stats-row" id="s3-stats"></div>
+
+    <div class="toolbar">
+      <input type="text"   class="search-input"  id="s3-search"  placeholder="🔍  Search venue, city, category…" oninput="filterS3()" />
+      <select class="filter-select" id="s3-cat"  onchange="filterS3()">
+        <option value="">All Categories</option>
+        <option>Theme Park</option>
+        <option>Museum</option>
+        <option>Entertainment</option>
+        <option>Observation</option>
+        <option>Aquarium</option>
+        <option>Zoo</option>
+        <option>Theater</option>
+        <option>Show</option>
+        <option>Historic</option>
+        <option>Digital Art</option>
+      </select>
+      <select class="filter-select" id="s3-headout" onchange="filterS3()">
+        <option value="">Headout: All</option>
+        <option value="Yes">On Headout</option>
+        <option value="No">Not on Headout</option>
+      </select>
+      <select class="filter-select" id="s3-pri" onchange="filterS3()">
+        <option value="">All Priorities</option>
+        <option>HIGH</option>
+        <option>MED</option>
+        <option>LOW</option>
+      </select>
+      <span class="count-badge" id="s3-count"></span>
+    </div>
+
+    <div class="table-wrap">
+      <table id="s3-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('s3',0)" data-col="0">#  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',1)" data-col="1">Venue  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',2)" data-col="2">Category  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',3)" data-col="3">Location  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',4)" data-col="4">Est. Annual Visitors  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',5)" data-col="5">On Headout?  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',6)" data-col="6">On Klook?  <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('s3',7)" data-col="7">Priority  <span class="sort-icon">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="s3-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+/* ══════════════════════════════════════════════
+   DATA
+══════════════════════════════════════════════ */
+
+const s1Data = [
+  [1,  "Cultural",   "Kimono rental + photoshoot",           "High demand Western tourists",    "HIGH"],
+  [2,  "Cultural",   "Tea ceremony experience",              "Top bucket list item",             "HIGH"],
+  [3,  "Cultural",   "Ninja experience / cafe",              "Unique Japan-only",                "HIGH"],
+  [4,  "Cultural",   "Samurai experience",                   "Western tourist favorite",         "HIGH"],
+  [5,  "Cultural",   "Calligraphy workshop",                 "Cultural immersion",               "MED"],
+  [6,  "Cultural",   "Sake brewery tour",                    "Food tourism trending",            "MED"],
+  [7,  "Cultural",   "Sumo wrestling experience",            "Iconic Japan sport",               "HIGH"],
+  [8,  "Adventure",  "Street go-karting Tokyo",              "Viral social media",               "HIGH"],
+  [9,  "Adventure",  "Mt Fuji day tour",                     "#1 day trip",                      "HIGH"],
+  [10, "Adventure",  "Snowmobile Hokkaido",                  "Winter tourism",                   "MED"],
+  [11, "Adventure",  "Kayaking Iriomote",                    "Nature tourism",                   "MED"],
+  [12, "Adventure",  "Paragliding",                          "Adventure sports",                 "LOW"],
+  [13, "Food",       "Tsukiji fish market tour",             "Food tourism",                     "HIGH"],
+  [14, "Food",       "Ramen making class",                   "Hands-on cooking",                 "HIGH"],
+  [15, "Food",       "Sushi making class",                   "Top bucket list",                  "HIGH"],
+  [16, "Food",       "Takoyaki / Okonomiyaki class",         "Street food",                      "MED"],
+  [17, "Food",       "Okinawa cooking class",                "Regional cuisine",                 "MED"],
+  [18, "Transport",  "JR Pass",                              "Essential for tourists",            "HIGH"],
+  [19, "Transport",  "Airport limousine bus",                "Arrival essential",                "HIGH"],
+  [20, "Transport",  "IC Card (Suica/Pasmo)",                "Daily transport",                  "HIGH"],
+  [21, "Nature",     "Cherry blossom tour",                  "Seasonal mega-demand",             "HIGH"],
+  [22, "Nature",     "Autumn foliage tour",                  "Second peak season",               "HIGH"],
+  [23, "Nature",     "Hakone ropeway + onsen",               "Day trip classic",                 "HIGH"],
+  [24, "Wellness",   "Onsen day experience",                 "Western tourists underserved",     "HIGH"],
+  [25, "Wellness",   "Ryokan stay with onsen",               "Premium experience",               "HIGH"],
+];
+
+const s2Data = [
+  {
+    icon: "🎌", title: "Cultural Experiences", subtitle: "Most Demanded",
+    items: [
+      "Kimono wearing / photoshoot",
+      "Tea ceremony",
+      "Zen meditation",
+      "Temple / shrine visits",
+      "Traditional crafts (pottery, origami, calligraphy)",
+      "Geisha district walking tour (Gion)",
+      "Samurai / Ninja experiences",
+      "Onsen (hot springs) — especially underserved for Western tourists",
+    ]
+  },
+  {
+    icon: "🍜", title: "Food Experiences", subtitle: "Fastest Growing",
+    items: [
+      "Sushi / sashimi making class",
+      "Ramen making class",
+      "Street food tour (Tsukiji, Dotonbori)",
+      "Sake / whisky tasting",
+      "Wagyu beef experience",
+      "Convenience store food tour (yes, really)",
+      "Kaiseki dinner experience",
+    ]
+  },
+  {
+    icon: "🎢", title: "Entertainment / Attractions", subtitle: "High Volume",
+    items: [
+      "teamLab Planets / Borderless (digital art)",
+      "Immersive Fort Tokyo",
+      "DisneySea / Disneyland",
+      "Universal Studios Japan",
+      "Warner Bros Studio Tour (Harry Potter)",
+      "Ghibli Museum",
+      "Nintendo Museum (Kyoto)",
+      "Robot Restaurant (Shinjuku)",
+    ]
+  },
+  {
+    icon: "🏔️", title: "Nature / Day Trips", subtitle: "Western Tourists",
+    items: [
+      "Mt Fuji (day tour or climbing)",
+      "Hakone (onsen + views)",
+      "Nikko (temples + nature)",
+      "Kamakura (Great Buddha)",
+      "Kyoto day trip from Tokyo",
+      "Nara (deer park)",
+      "Hokkaido (nature + skiing)",
+      "Cherry blossom / autumn foliage seasonal",
+    ]
+  },
+  {
+    icon: "🚗", title: "Adventure / Unique", subtitle: "Experiential & Viral",
+    items: [
+      "Street go-karting (Tokyo / Osaka)",
+      "Snowmobile (Hokkaido)",
+      "Surfing (Shonan / Okinawa)",
+      "Cycling tour",
+      "Bullet train (Shinkansen) experience",
+    ]
+  },
+];
+
+const s3Data = [
+  // group, #, venue, category, location, visitors, headout, klook, priority
+  ["THEME PARKS", 1,  "Tokyo Disneyland",            "Theme Park",    "Chiba",     "17M",    "No",  "Yes", "HIGH"],
+  ["THEME PARKS", 2,  "Tokyo DisneySea",             "Theme Park",    "Chiba",     "14M",    "No",  "Yes", "HIGH"],
+  ["THEME PARKS", 3,  "Universal Studios Japan",     "Theme Park",    "Osaka",     "14M",    "No",  "Yes", "HIGH"],
+  ["THEME PARKS", 4,  "Fuji-Q Highland",             "Theme Park",    "Yamanashi", "2M",     "No",  "Yes", "MED"],
+  ["MUSEUMS",     5,  "teamLab Planets",             "Digital Art",   "Tokyo",     "2M+",    "Yes", "Yes", "HIGH"],
+  ["MUSEUMS",     6,  "teamLab Borderless",          "Digital Art",   "Tokyo",     "2M+",    "Yes", "Yes", "HIGH"],
+  ["MUSEUMS",     7,  "Ghibli Museum",               "Museum",        "Tokyo",     "700K",   "No",  "Yes", "HIGH"],
+  ["MUSEUMS",     8,  "Mori Art Museum",             "Art Museum",    "Tokyo",     "1M",     "No",  "Yes", "MED"],
+  ["MUSEUMS",     9,  "Tokyo National Museum",       "Museum",        "Tokyo",     "1M",     "No",  "No",  "MED"],
+  ["MUSEUMS",     10, "Edo-Tokyo Museum",            "Museum",        "Tokyo",     "600K",   "No",  "No",  "MED"],
+  ["MUSEUMS",     11, "Osaka Castle",                "Historic",      "Osaka",     "3M",     "No",  "Yes", "HIGH"],
+  ["MUSEUMS",     12, "Hiroshima Peace Museum",      "Historic",      "Hiroshima", "900K",   "No",  "No",  "MED"],
+  ["ENTERTAINMENT",13,"Warner Bros Studio Tokyo",   "Entertainment", "Tokyo",     "1M+",    "Yes", "Yes", "HIGH"],
+  ["ENTERTAINMENT",14,"Immersive Fort Tokyo",        "Entertainment", "Tokyo",     "New",    "No",  "Yes", "HIGH"],
+  ["ENTERTAINMENT",15,"Joypolis",                   "Entertainment", "Tokyo",     "1M",     "No",  "No",  "MED"],
+  ["ENTERTAINMENT",16,"Legoland Japan",             "Theme Park",    "Nagoya",    "1.5M",   "No",  "No",  "MED"],
+  ["OBSERVATION DECKS",17,"Tokyo Skytree",          "Observation",   "Tokyo",     "6M",     "Yes", "Yes", "HIGH"],
+  ["OBSERVATION DECKS",18,"Shibuya Sky",            "Observation",   "Tokyo",     "2M",     "No",  "Yes", "HIGH"],
+  ["OBSERVATION DECKS",19,"Tokyo Tower",            "Observation",   "Tokyo",     "3M",     "No",  "Yes", "MED"],
+  ["OBSERVATION DECKS",20,"Tembo Galleria (Roppongi)","Observation", "Tokyo",     "1M",     "No",  "Yes", "MED"],
+  ["AQUARIUMS / ZOOS",21,"Sumida Aquarium",         "Aquarium",      "Tokyo",     "1.5M",   "No",  "Yes", "MED"],
+  ["AQUARIUMS / ZOOS",22,"Sunshine Aquarium",       "Aquarium",      "Tokyo",     "1M",     "No",  "Yes", "MED"],
+  ["AQUARIUMS / ZOOS",23,"Osaka Aquarium Kaiyukan", "Aquarium",      "Osaka",     "3M",     "No",  "Yes", "HIGH"],
+  ["AQUARIUMS / ZOOS",24,"Ueno Zoo",               "Zoo",           "Tokyo",     "3M",     "No",  "No",  "LOW"],
+  ["AQUARIUMS / ZOOS",25,"Asahiyama Zoo",          "Zoo",           "Hokkaido",  "1.7M",   "No",  "Yes", "MED"],
+  ["PERFORMING ARTS / SHOWS",26,"Taiko drumming show","Show",       "Tokyo",     "—",      "No",  "No",  "MED"],
+  ["PERFORMING ARTS / SHOWS",27,"Kabuki theater",  "Theater",       "Tokyo",     "—",      "No",  "No",  "MED"],
+];
+
+/* ══════════════════════════════════════════════
+   SECTION 1 — RENDER & FILTER
+══════════════════════════════════════════════ */
+
+function renderS1(data) {
+  const body = document.getElementById('s1-body');
+  if (!data.length) {
+    body.innerHTML = `<tr><td colspan="5" class="no-results">No results found</td></tr>`;
+    document.getElementById('s1-count').textContent = '0 results';
+    return;
+  }
+  body.innerHTML = data.map(r => `
+    <tr>
+      <td style="color:var(--text-muted);font-size:12px">${r[0]}</td>
+      <td><span class="cat-chip cat-${r[1]}">${r[1]}</span></td>
+      <td style="font-weight:500">${r[2]}</td>
+      <td style="color:var(--text-muted)">${r[3]}</td>
+      <td><span class="badge badge-${r[4]}">${r[4]}</span></td>
+    </tr>`).join('');
+  document.getElementById('s1-count').textContent = data.length + ' results';
+}
+
+function filterS1() {
+  const q   = document.getElementById('s1-search').value.toLowerCase();
+  const cat = document.getElementById('s1-cat').value;
+  const pri = document.getElementById('s1-pri').value;
+  const filtered = s1Data.filter(r =>
+    (!q   || r.slice(1).some(v => String(v).toLowerCase().includes(q))) &&
+    (!cat || r[1] === cat) &&
+    (!pri || r[4] === pri)
+  );
+  renderS1(filtered);
+}
+
+function buildS1Stats() {
+  const total = s1Data.length;
+  const high  = s1Data.filter(r => r[4]==='HIGH').length;
+  const cats  = [...new Set(s1Data.map(r=>r[1]))].length;
+  document.getElementById('s1-stats').innerHTML = `
+    <div class="stat-card"><div class="stat-value">${total}</div><div class="stat-label">Total Gaps Identified</div></div>
+    <div class="stat-card"><div class="stat-value">${high}</div><div class="stat-label">HIGH Priority Items</div></div>
+    <div class="stat-card"><div class="stat-value">${cats}</div><div class="stat-label">Categories Covered</div></div>
+    <div class="stat-card"><div class="stat-value">${s1Data.filter(r=>r[1]==='Cultural').length}</div><div class="stat-label">Cultural Gaps</div></div>
+    <div class="stat-card"><div class="stat-value">${s1Data.filter(r=>r[1]==='Food').length}</div><div class="stat-label">Food &amp; Drink Gaps</div></div>
+  `;
+}
+
+/* ══════════════════════════════════════════════
+   SECTION 2 — RENDER & FILTER
+══════════════════════════════════════════════ */
+
+function renderS2(data) {
+  document.getElementById('s2-grid').innerHTML = data.map(c => `
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">${c.icon}</div>
+        <div>
+          <div class="card-title">${c.title}</div>
+          <div class="card-subtitle">${c.subtitle}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        ${c.items.map(i=>`<div class="card-item">${i}</div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+function filterS2() {
+  const q = document.getElementById('s2-search').value.toLowerCase();
+  if (!q) { renderS2(s2Data); return; }
+  const filtered = s2Data.map(c => ({
+    ...c,
+    items: c.items.filter(i => i.toLowerCase().includes(q) || c.title.toLowerCase().includes(q))
+  })).filter(c => c.items.length > 0 || c.title.toLowerCase().includes(q));
+  renderS2(filtered.length ? filtered : []);
+  if (!filtered.length) {
+    document.getElementById('s2-grid').innerHTML =
+      `<p style="color:var(--text-muted);padding:20px">No results for "<strong>${q}</strong>"</p>`;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   SECTION 3 — RENDER & FILTER
+══════════════════════════════════════════════ */
+
+function renderS3(data) {
+  const body = document.getElementById('s3-body');
+  if (!data.length) {
+    body.innerHTML = `<tr><td colspan="8" class="no-results">No results found</td></tr>`;
+    document.getElementById('s3-count').textContent = '0 results';
+    return;
+  }
+
+  // Group by first element
+  const groups = {};
+  data.forEach(r => {
+    if (!groups[r[0]]) groups[r[0]] = [];
+    groups[r[0]].push(r);
+  });
+
+  let html = '';
+  for (const [group, rows] of Object.entries(groups)) {
+    html += `<tr class="group-row"><td colspan="8">${group}</td></tr>`;
+    rows.forEach(r => {
+      const catClass = r[3].replace(/\s+/g,'');
+      html += `<tr>
+        <td style="color:var(--text-muted);font-size:12px">${r[1]}</td>
+        <td style="font-weight:600">${r[2]}</td>
+        <td><span class="cat-chip cat-${catClass}">${r[3]}</span></td>
+        <td>${r[4]}</td>
+        <td style="font-variant-numeric:tabular-nums">${r[5]}</td>
+        <td><span class="badge badge-${r[6]==='Yes'?'YES':'NO'}">${r[6]}</span></td>
+        <td><span class="badge badge-${r[7]==='Yes'?'YES':'NO'}">${r[7]}</span></td>
+        <td><span class="badge badge-${r[8]}">${r[8]}</span></td>
+      </tr>`;
+    });
+  }
+  body.innerHTML = html;
+  const flat = Object.values(groups).flat();
+  document.getElementById('s3-count').textContent = flat.length + ' venues';
+}
+
+function filterS3() {
+  const q       = document.getElementById('s3-search').value.toLowerCase();
+  const cat     = document.getElementById('s3-cat').value.toLowerCase();
+  const headout = document.getElementById('s3-headout').value;
+  const pri     = document.getElementById('s3-pri').value;
+
+  const filtered = s3Data.filter(r =>
+    (!q       || [r[2],r[3],r[4]].some(v=>String(v).toLowerCase().includes(q))) &&
+    (!cat     || r[3].toLowerCase().includes(cat)) &&
+    (!headout || r[6] === headout) &&
+    (!pri     || r[8] === pri)
+  );
+  renderS3(filtered);
+}
+
+function buildS3Stats() {
+  const notOnHeadout = s3Data.filter(r => r[6]==='No').length;
+  const highPri      = s3Data.filter(r => r[8]==='HIGH').length;
+  const onHeadout    = s3Data.filter(r => r[6]==='Yes').length;
+  const onKlook      = s3Data.filter(r => r[7]==='Yes').length;
+  document.getElementById('s3-stats').innerHTML = `
+    <div class="stat-card"><div class="stat-value">${s3Data.length}</div><div class="stat-label">Total Venues Tracked</div></div>
+    <div class="stat-card"><div class="stat-value">${onHeadout}</div><div class="stat-label">Already on Headout</div></div>
+    <div class="stat-card"><div class="stat-value">${notOnHeadout}</div><div class="stat-label">Not on Headout (Gap)</div></div>
+    <div class="stat-card"><div class="stat-value">${highPri}</div><div class="stat-label">HIGH Priority Venues</div></div>
+    <div class="stat-card"><div class="stat-value">${onKlook}</div><div class="stat-label">On Klook (Benchmark)</div></div>
+  `;
+}
+
+/* ══════════════════════════════════════════════
+   SORT
+══════════════════════════════════════════════ */
+
+const sortState = { s1: { col: -1, asc: true }, s3: { col: -1, asc: true } };
+
+function sortTable(section, col) {
+  const state = sortState[section];
+  state.asc = (state.col === col) ? !state.asc : true;
+  state.col = col;
+
+  // update header icons
+  const table = document.getElementById(`${section}-table`);
+  table.querySelectorAll('thead th').forEach((th, i) => {
+    th.classList.remove('sorted');
+    th.querySelector('.sort-icon').textContent = '↕';
+  });
+  const th = table.querySelectorAll('thead th')[col];
+  th.classList.add('sorted');
+  th.querySelector('.sort-icon').textContent = state.asc ? '↑' : '↓';
+
+  if (section === 's1') {
+    const priOrder = { HIGH:0, MED:1, LOW:2 };
+    const sorted = [...s1Data].sort((a,b)=>{
+      let av = a[col], bv = b[col];
+      if (col === 4) { av = priOrder[av]??9; bv = priOrder[bv]??9; return state.asc ? av-bv : bv-av; }
+      if (col === 0) return state.asc ? av-bv : bv-av;
+      return state.asc ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+    });
+    renderS1(sorted);
+  } else {
+    const priOrder = { HIGH:0, MED:1, LOW:2 };
+    const sorted = [...s3Data].sort((a,b)=>{
+      let av = a[col], bv = b[col];
+      if (col === 8) { av = priOrder[av]??9; bv = priOrder[bv]??9; return state.asc ? av-bv : bv-av; }
+      if (col === 1) return state.asc ? av-bv : bv-av;
+      return state.asc ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+    });
+    renderS3(sorted);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   TABS
+══════════════════════════════════════════════ */
+
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ══════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════ */
+
+buildS1Stats();
+renderS1(s1Data);
+renderS2(s2Data);
+buildS3Stats();
+renderS3(s3Data);
+</script>
+</body>
+</html>
