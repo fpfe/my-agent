@@ -541,6 +541,15 @@
       padding: 14px 16px; font-size: 13px; color: var(--red); line-height: 1.6;
     }
 
+    /* ── LOG DRIVE STATUS BAR ── */
+    .log-drive-bar {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 12px; padding: 8px 14px;
+      background: white; border-radius: 10px;
+      border: 1px solid var(--gray-200); font-size: 12.5px;
+    }
+    .log-drive-note { color: var(--gray-400); font-size: 12px; font-style: italic; flex: 1; }
+
     /* ── GOOGLE DRIVE TOOLBAR ── */
     .drive-toolbar {
       display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
@@ -794,6 +803,18 @@
   ═══════════════════════════════════════════ -->
   <div class="learning-section">
     <div class="section-title">Daily Learning Log</div>
+    <!-- Log Drive conflict banner -->
+    <div class="drive-conflict-banner" id="log-conflict-banner">
+      ☁️ Newer log found in Drive. Load from Drive?
+      <button class="conflict-btn load" onclick="GDRIVE_LOG.loadFromDrive()">Load from Drive</button>
+      <button class="conflict-btn keep" onclick="GDRIVE_LOG.dismissConflict()">Keep Local</button>
+    </div>
+    <!-- Log Drive status bar -->
+    <div class="log-drive-bar">
+      <span class="drive-status" id="log-drive-status"></span>
+      <span class="log-drive-note" id="log-drive-note">Connect Google Drive above to enable cloud backup for your logs</span>
+      <button class="drive-action-btn" onclick="GDRIVE_LOG.downloadBackup()">📥 Download Logs</button>
+    </div>
     <div class="learning-inner">
       <!-- Form -->
       <div class="learning-form-card">
@@ -1206,6 +1227,8 @@ function loadLearnings() {
 
 function saveLearnings(items) {
   localStorage.setItem(LEARN_KEY, JSON.stringify(items));
+  sessionStorage.setItem('log_last_saved', Date.now().toString());
+  GDRIVE_LOG.save(items);
 }
 
 // Category pill selection
@@ -1427,6 +1450,7 @@ const GDRIVE = {
       this.connected = true;
       this._updateUI();
       setTimeout(() => this._checkDriveOnStartup(), 500);
+      setTimeout(() => { GDRIVE_LOG.updateUI(); GDRIVE_LOG.checkOnStartup(); }, 600);
     }
   },
 
@@ -1443,6 +1467,8 @@ const GDRIVE = {
         this.connected = true;
         this._updateUI();
         this._checkDriveOnStartup();
+        GDRIVE_LOG.updateUI();
+        GDRIVE_LOG.checkOnStartup();
       }
     });
     const btn = document.getElementById('drive-connect-btn');
@@ -1646,6 +1672,208 @@ const GDRIVE = {
   _updateUI() {
     const btn = document.getElementById('drive-connect-btn');
     if (btn) btn.style.display = this.connected ? 'none' : 'inline-flex';
+  },
+};
+
+/* ─────────────────────────────────────────────
+   GOOGLE DRIVE — DAILY LEARNING LOG
+   Shares auth token with GDRIVE (no separate login)
+───────────────────────────────────────────── */
+const GDRIVE_LOG = {
+  FILE_NAME: 'sabbatical_daily_log.json',
+  fileId: null,
+  saving: false,
+  lastSaved: null,
+  retryTimer: null,
+  pendingEntries: null,
+  _driveDataCache: null,
+
+  // ── Shared auth via GDRIVE ──
+  _validToken() { return GDRIVE._validToken(); },
+
+  async _apiFetch(path, opts = {}) {
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/drive/v3/' + path, {
+      ...opts,
+      headers: { 'Authorization': 'Bearer ' + GDRIVE.accessToken, ...(opts.headers || {}) },
+    });
+    if (!res.ok) throw new Error('Drive API ' + res.status);
+    return res;
+  },
+
+  async _findFile() {
+    const res = await this._apiFetch(
+      'files?q=' + encodeURIComponent("name='" + this.FILE_NAME + "' and trashed=false") +
+      '&fields=files(id,modifiedTime)&spaces=drive'
+    );
+    const j = await res.json();
+    return j.files && j.files.length ? j.files[0] : null;
+  },
+
+  async _readFile(id) {
+    const res = await this._apiFetch('files/' + id + '?alt=media');
+    return res.json();
+  },
+
+  async _createFile(data) {
+    const meta = { name: this.FILE_NAME, mimeType: 'application/json' };
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
+    form.append('file', new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + GDRIVE.accessToken },
+      body: form,
+    });
+    if (!res.ok) throw new Error('Drive log create ' + res.status);
+    return (await res.json()).id;
+  },
+
+  async _updateFile(id, data) {
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/upload/drive/v3/files/' + id + '?uploadType=media', {
+      method: 'PATCH',
+      headers: { 'Authorization': 'Bearer ' + GDRIVE.accessToken, 'Content-Type': 'application/json' },
+      body: JSON.stringify(data, null, 2),
+    });
+    if (!res.ok) throw new Error('Drive log update ' + res.status);
+  },
+
+  _drivePayload(entries) {
+    return { version: '1.0', lastUpdated: new Date().toISOString(), entries };
+  },
+
+  _localEntries() {
+    try {
+      const raw = localStorage.getItem(LEARN_KEY);
+      return raw ? JSON.parse(raw) : DEFAULT_LEARNINGS;
+    } catch { return DEFAULT_LEARNINGS; }
+  },
+
+  async checkOnStartup() {
+    try {
+      const file = await this._findFile();
+      if (!file) {
+        this.fileId = await this._createFile(this._drivePayload(this._localEntries()));
+        this.lastSaved = new Date();
+        this._setSaved();
+      } else {
+        this.fileId = file.id;
+        const driveData = await this._readFile(file.id);
+        this._driveDataCache = driveData;
+        const driveTime = driveData.lastUpdated ? new Date(driveData.lastUpdated).getTime() : 0;
+        const localTime = parseInt(sessionStorage.getItem('log_last_saved') || '0');
+        if (driveTime > localTime && driveData.entries && driveData.entries.length > 0) {
+          this._showConflictBanner();
+        } else {
+          this.lastSaved = new Date();
+          this._setSaved();
+        }
+      }
+    } catch(e) {
+      console.error('[Drive Log] startup check error:', e);
+      this._setError();
+    }
+  },
+
+  _showConflictBanner() {
+    const b = document.getElementById('log-conflict-banner');
+    if (b) b.style.display = 'flex';
+  },
+
+  loadFromDrive() {
+    const data = this._driveDataCache;
+    if (data && data.entries) {
+      localStorage.setItem(LEARN_KEY, JSON.stringify(data.entries));
+      sessionStorage.setItem('log_last_saved', Date.now().toString());
+      renderTimeline();
+    }
+    const b = document.getElementById('log-conflict-banner');
+    if (b) b.style.display = 'none';
+    this.lastSaved = new Date();
+    this._setSaved();
+  },
+
+  dismissConflict() {
+    const b = document.getElementById('log-conflict-banner');
+    if (b) b.style.display = 'none';
+    this.lastSaved = new Date();
+    this._setSaved();
+  },
+
+  async save(entries) {
+    if (!GDRIVE.connected || !this._validToken()) { this.pendingEntries = entries; return; }
+    if (this.saving) { this.pendingEntries = entries; return; }
+    clearTimeout(this.retryTimer);
+    this.saving = true;
+    this._setSaving();
+    try {
+      const payload = this._drivePayload(entries);
+      if (this.fileId) {
+        await this._updateFile(this.fileId, payload);
+      } else {
+        const file = await this._findFile();
+        if (file) { this.fileId = file.id; await this._updateFile(this.fileId, payload); }
+        else { this.fileId = await this._createFile(payload); }
+      }
+      this.lastSaved = new Date();
+      this._setSaved();
+      if (this.pendingEntries) {
+        const p = this.pendingEntries; this.pendingEntries = null;
+        setTimeout(() => this.save(p), 200);
+      }
+    } catch(e) {
+      console.error('[Drive Log] save error:', e);
+      this._setError();
+      const retry = this.pendingEntries || entries;
+      this.retryTimer = setTimeout(() => this.save(retry), 30000);
+    } finally { this.saving = false; }
+  },
+
+  downloadBackup() {
+    const today = new Date().toISOString().slice(0,10);
+    const data = this._drivePayload(this._localEntries());
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: 'daily-log-backup-' + today + '.json' });
+    a.click(); URL.revokeObjectURL(url);
+  },
+
+  _setSaving() {
+    const el = document.getElementById('log-drive-status');
+    if (el) { el.style.display = 'inline-flex'; el.innerHTML = '<span class="drive-dot saving"></span> ☁️ Saving...'; }
+  },
+
+  _setSaved() {
+    const el   = document.getElementById('log-drive-status');
+    const note = document.getElementById('log-drive-note');
+    if (note) note.style.display = 'none';
+    if (el) {
+      const t = this.lastSaved
+        ? this.lastSaved.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+        : 'now';
+      el.style.display = 'inline-flex';
+      el.innerHTML = '<span class="drive-dot synced"></span> ☁️ Synced · Last saved: ' + t;
+    }
+  },
+
+  _setError() {
+    const el = document.getElementById('log-drive-status');
+    if (el) {
+      el.style.display = 'inline-flex';
+      el.innerHTML = '<span class="drive-dot error"></span> ⚠️ Drive sync failed. Saved locally.';
+    }
+  },
+
+  updateUI() {
+    const note = document.getElementById('log-drive-note');
+    const el   = document.getElementById('log-drive-status');
+    if (GDRIVE.connected) {
+      if (note) note.style.display = 'none';
+    } else {
+      if (note) note.style.display = '';
+      if (el) el.style.display = 'none';
+    }
   },
 };
 
