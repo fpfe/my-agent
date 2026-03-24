@@ -172,6 +172,76 @@ td{padding:9px 12px;vertical-align:middle}
 .comp-insight{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;font-size:13px;margin-top:14px}
 .comp-insight strong{color:var(--red)}
 ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:3px}
+/* ── S6 GOV CALCULATOR ── */
+.s6-wrap{display:grid;grid-template-columns:380px 1fr;gap:20px;align-items:start}
+@media(max-width:900px){.s6-wrap{grid-template-columns:1fr}}
+.s6-panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--sh)}
+.s6-group{margin-bottom:22px}
+.s6-group-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--red);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #f0e8ea}
+.s6-field{margin-bottom:14px}
+.s6-label{font-size:12.5px;font-weight:600;color:var(--text);margin-bottom:4px;display:block}
+.s6-helper{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}
+.s6-input{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;background:#fafbfc;color:var(--text);outline:none;transition:.15s border-color}
+.s6-input:focus{border-color:var(--red);background:#fff}
+.s6-radio-row{display:flex;gap:8px;flex-wrap:wrap}
+.s6-radio{display:flex;align-items:center;gap:6px;cursor:pointer;padding:7px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:12.5px;font-weight:500;transition:.15s all;background:#fafbfc;white-space:nowrap}
+.s6-radio:has(input:checked){border-color:var(--red);background:var(--red-l);color:var(--red)}
+.s6-radio input{accent-color:var(--red)}
+.s6-slider-row{display:flex;align-items:center;gap:10px;margin-top:4px}
+.s6-slider{flex:1;accent-color:var(--red);height:6px}
+.s6-slider-val{min-width:44px;text-align:right;font-size:13px;font-weight:700;color:var(--red)}
+.s6-presets{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.s6-preset{padding:5px 11px;border:1.5px solid var(--border);border-radius:20px;font-size:11.5px;font-weight:600;cursor:pointer;background:#fafbfc;color:var(--text);transition:.15s all;white-space:nowrap}
+.s6-preset:hover{border-color:var(--red);color:var(--red);background:var(--red-l)}
+.s6-preset.active{border-color:var(--red);background:var(--red);color:#fff}
+.s6-calc-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--red),var(--red-d));color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:.2px;transition:.15s all;margin-top:8px;box-shadow:0 4px 12px rgba(232,23,74,.3)}
+.s6-calc-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(232,23,74,.4)}
+.s6-scenario-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.s6-scenario{padding:9px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:12.5px;font-weight:600;cursor:pointer;background:var(--card);color:var(--text);transition:.15s all;white-space:nowrap;box-shadow:var(--sh)}
+.s6-scenario:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.s6-results{display:none}
+.s6-results.on{display:block}
+.s6-section-title{font-size:14px;font-weight:800;color:var(--text);margin:22px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--red)}
+.s6-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:20px}
+.s6-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 16px;box-shadow:var(--sh);text-align:center}
+.s6-card-val{font-size:26px;font-weight:900;color:var(--red);line-height:1.1}
+.s6-card-label{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.4}
+.s6-card.c-blue{border-color:#93c5fd;background:#eff6ff}.s6-card.c-blue .s6-card-val{color:#1d4ed8}
+.s6-card.c-green{border-color:#86efac;background:#f0fdf4}.s6-card.c-green .s6-card-val{color:#15803d}
+.s6-card.c-orange{border-color:#fcd34d;background:#fffbeb}.s6-card.c-orange .s6-card-val{color:#92400e}
+.s6-card.c-red{border-color:#fca5a5;background:#fef2f2}.s6-card.c-red .s6-card-val{color:var(--red)}
+.s6-twrap{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:auto;box-shadow:var(--sh);max-height:420px;margin-bottom:18px}
+.s6-twrap table{width:100%;border-collapse:collapse;font-size:12.5px}
+.s6-twrap thead th{background:#f1f4f8;padding:9px 12px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+.s6-twrap tbody td{padding:9px 12px;border-bottom:1px solid #f0f3f6}
+.s6-twrap tbody tr:last-child td{border-bottom:none;font-weight:800;background:#f7f9fb}
+.s6-twrap tbody tr.intro-row{background:#fffbeb}
+.s6-twrap tbody tr.std-row{background:#f0fdf4}
+.s6-twrap tbody tr.total-row{background:#f7f9fb;font-weight:800}
+.s6-phase-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-bottom:18px}
+.s6-phase-card{border-radius:10px;padding:14px 16px;text-align:center}
+.s6-phase-card.ph1{background:#fef3c7;border:1px solid #fcd34d}
+.s6-phase-card.ph2{background:#dbeafe;border:1px solid #93c5fd}
+.s6-phase-card.ph3{background:#dcfce7;border:1px solid #86efac}
+.s6-phase-card.total{background:#fef2f2;border:1px solid #fca5a5}
+.s6-pc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:4px}
+.s6-pc-val{font-size:22px;font-weight:900;color:var(--text)}
+.s6-pc-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.s6-talking{background:#fffbeb;border:1.5px solid #fcd34d;border-radius:12px;padding:18px;font-size:13px;line-height:1.7;white-space:pre-wrap;font-family:inherit;margin-bottom:10px;color:#1a1d23}
+.s6-copy-btn{padding:8px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:12.5px;font-weight:600;background:var(--card);color:var(--text);cursor:pointer;transition:.15s all}
+.s6-copy-btn:hover{background:var(--text);color:#fff}
+.s6-copy-btn.copied{background:var(--yes-c);color:#fff;border-color:var(--yes-c)}
+.portfolio-list{margin-bottom:14px}
+.port-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;font-size:13px;box-shadow:var(--sh)}
+.port-name{font-weight:700;flex:2}
+.port-val{flex:1;text-align:right;color:var(--muted);font-size:12px}
+.port-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:0 4px;line-height:1}
+.port-del:hover{color:var(--high)}
+.port-total{background:#f7f9fb;font-weight:800;border:1.5px solid var(--border)}
+.port-empty{color:var(--muted);font-size:13px;text-align:center;padding:20px;background:var(--card);border:1px dashed var(--border);border-radius:8px}
+.s6-add-btn{padding:10px 18px;background:var(--yes-c);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s all}
+.s6-add-btn:hover{background:#166534}
+.s6-port-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 @media print{
   .hdr,.tabs,.toolbar,.stats{display:none!important}
   .sec{display:block!important}#s1,#s2,#s3,#s4{display:none!important}#s5{display:block!important}
@@ -208,6 +278,7 @@ td{padding:9px 12px;vertical-align:middle}
     <button class="tab" onclick="show('s3',this)">§3 — Venues (60+)</button>
     <button class="tab" onclick="show('s4',this)">§4 — 90-Day Plan (103 Partners)</button>
     <button class="tab" onclick="show('s5',this)">§5 — Japan Market Data 📊</button>
+    <button class="tab" onclick="show('s6',this)">§6 — GOV Calculator 🧮</button>
   </div>
 </div>
 
@@ -362,6 +433,221 @@ td{padding:9px 12px;vertical-align:middle}
       </table>
     </div>
     <div class="comp-insight" id="s5-comp-insight"></div>
+  </div>
+</div>
+
+<!-- S6 GOV Calculator -->
+<div id="s6" class="sec">
+  <div class="sec-hdr">
+    <h2>🧮 GOV &amp; Commission Calculator</h2>
+    <p>Calculate potential for any operator scenario — sessions, pricing, occupancy, commission structure.</p>
+  </div>
+
+  <!-- Scenario Presets -->
+  <div style="margin-bottom:18px">
+    <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Quick Presets — Auto-fill all fields:</div>
+    <div class="s6-scenario-row">
+      <button class="s6-scenario" onclick="applyPreset('sake')">🍶 Sake Brewery Tour</button>
+      <button class="s6-scenario" onclick="applyPreset('kimono')">👘 Kimono Experience</button>
+      <button class="s6-scenario" onclick="applyPreset('gokart')">🎯 Go-Kart Tokyo</button>
+      <button class="s6-scenario" onclick="applyPreset('fuji')">🗻 Mt Fuji Day Tour</button>
+      <button class="s6-scenario" onclick="applyPreset('samurai')">🎭 Samurai Theater</button>
+    </div>
+  </div>
+
+  <div class="s6-wrap">
+    <!-- LEFT: Input panel -->
+    <div class="s6-panel">
+      <!-- Group A -->
+      <div class="s6-group">
+        <div class="s6-group-title">A — Experience Details</div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-name">Operator / Experience Name</label>
+          <input class="s6-input" id="g-name" type="text" placeholder="e.g. Sake Brewery Tour, Kimono Experience, Go-Kart Tokyo" oninput="liveCalc()"/>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label">Pricing Model</label>
+          <div class="s6-radio-row">
+            <label class="s6-radio"><input type="radio" name="pricing" value="person" checked onchange="toggleGroupSize();liveCalc()"> Per Person</label>
+            <label class="s6-radio"><input type="radio" name="pricing" value="group" onchange="toggleGroupSize();liveCalc()"> Per Group / Session</label>
+            <label class="s6-radio"><input type="radio" name="pricing" value="ticket" onchange="toggleGroupSize();liveCalc()"> Per Ticket (flat)</label>
+          </div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-price">Price per Booking (¥)</label>
+          <input class="s6-input" id="g-price" type="number" value="15000" min="0" oninput="liveCalc()"/>
+          <div class="s6-helper">Price per person, or total per group/session</div>
+        </div>
+        <div class="s6-field" id="g-groupsize-wrap">
+          <label class="s6-label" for="g-group">People per Booking</label>
+          <input class="s6-input" id="g-group" type="number" value="1" min="1" oninput="liveCalc()"/>
+          <div class="s6-helper">For solo tickets: 1. For group tours: avg group size</div>
+        </div>
+      </div>
+
+      <!-- Group B -->
+      <div class="s6-group">
+        <div class="s6-group-title">B — Capacity &amp; Schedule</div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-sessions">Sessions per Day</label>
+          <input class="s6-input" id="g-sessions" type="number" value="3" min="1" oninput="liveCalc()"/>
+          <div class="s6-helper">How many times the experience runs per day</div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-cap">Capacity per Session (people)</label>
+          <input class="s6-input" id="g-cap" type="number" value="10" min="1" oninput="liveCalc()"/>
+          <div class="s6-helper">Max participants per session</div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-days">Operating Days per Week</label>
+          <input class="s6-input" id="g-days" type="number" value="5" min="1" max="7" oninput="liveCalc()"/>
+          <div class="s6-helper">Days operator runs per week (7 = daily)</div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-weeks">Operating Weeks per Year</label>
+          <input class="s6-input" id="g-weeks" type="number" value="50" min="1" max="52" oninput="liveCalc()"/>
+          <div class="s6-helper">50 = year-round · 13 = quarterly · 26 = 6 months</div>
+        </div>
+      </div>
+
+      <!-- Group C -->
+      <div class="s6-group">
+        <div class="s6-group-title">C — Demand Assumptions</div>
+        <div class="s6-field">
+          <label class="s6-label">Occupancy Rate</label>
+          <div class="s6-presets" id="occ-presets">
+            <button class="s6-preset" onclick="setOcc(15)">New Operator 15%</button>
+            <button class="s6-preset active" onclick="setOcc(30)">Early Stage 30%</button>
+            <button class="s6-preset" onclick="setOcc(55)">Growing 55%</button>
+            <button class="s6-preset" onclick="setOcc(80)">Mature 80%</button>
+          </div>
+          <div class="s6-slider-row" style="margin-top:10px">
+            <input class="s6-slider" type="range" id="g-occ" min="5" max="100" value="30" oninput="document.getElementById('g-occ-val').textContent=this.value+'%';syncOccPresets();liveCalc()"/>
+            <span class="s6-slider-val" id="g-occ-val">30%</span>
+          </div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label">Headout Booking Share</label>
+          <div class="s6-slider-row">
+            <input class="s6-slider" type="range" id="g-share" min="5" max="50" value="20" oninput="document.getElementById('g-share-val').textContent=this.value+'%';liveCalc()"/>
+            <span class="s6-slider-val" id="g-share-val">20%</span>
+          </div>
+          <div class="s6-helper">% of operator's total bookings through Headout. New partner: 10-15% · Established: 25-40%</div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-growth">Monthly Growth Rate (%)</label>
+          <div class="s6-presets">
+            <button class="s6-preset" onclick="document.getElementById('g-growth').value=5;liveCalc()">Conservative 5%</button>
+            <button class="s6-preset" onclick="document.getElementById('g-growth').value=10;liveCalc()">Normal 10%</button>
+            <button class="s6-preset" onclick="document.getElementById('g-growth').value=15;liveCalc()">Aggressive 15%</button>
+          </div>
+          <input class="s6-input" id="g-growth" type="number" value="8" min="0" max="50" style="margin-top:8px" oninput="liveCalc()"/>
+          <div class="s6-helper">Booking growth per month as reviews build. Typical: 5-15%</div>
+        </div>
+      </div>
+
+      <!-- Group D -->
+      <div class="s6-group">
+        <div class="s6-group-title">D — Commercial Terms</div>
+        <div class="s6-field">
+          <label class="s6-label">Standard Commission Rate</label>
+          <div class="s6-presets">
+            <button class="s6-preset" onclick="document.getElementById('g-comm').value=15;document.getElementById('g-comm-val').textContent='15%';liveCalc()">Intro 15%</button>
+            <button class="s6-preset active" onclick="document.getElementById('g-comm').value=25;document.getElementById('g-comm-val').textContent='25%';liveCalc()">Standard 25%</button>
+            <button class="s6-preset" onclick="document.getElementById('g-comm').value=30;document.getElementById('g-comm-val').textContent='30%';liveCalc()">Premium 30%</button>
+          </div>
+          <div class="s6-slider-row" style="margin-top:10px">
+            <input class="s6-slider" type="range" id="g-comm" min="10" max="35" value="25" oninput="document.getElementById('g-comm-val').textContent=this.value+'%';liveCalc()"/>
+            <span class="s6-slider-val" id="g-comm-val">25%</span>
+          </div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-intro-rate">Introductory Commission Rate (%)</label>
+          <input class="s6-input" id="g-intro-rate" type="number" value="15" min="0" max="35" oninput="liveCalc()"/>
+          <div class="s6-helper">Lower rate to reduce signup friction</div>
+        </div>
+        <div class="s6-field">
+          <label class="s6-label" for="g-intro-months">Introductory Period (months)</label>
+          <input class="s6-input" id="g-intro-months" type="number" value="3" min="0" max="12" oninput="liveCalc()"/>
+          <div class="s6-helper">Number of months at introductory rate before switching to standard</div>
+        </div>
+      </div>
+
+      <button class="s6-calc-btn" onclick="calculate()">📊 Calculate GOV Potential</button>
+    </div>
+
+    <!-- RIGHT: Results panel -->
+    <div>
+      <div class="s6-results" id="s6-results">
+
+        <!-- ROW 1: Big stat cards -->
+        <div class="s6-section-title">Summary Statistics</div>
+        <div class="s6-cards" id="s6-stat-cards"></div>
+
+        <!-- ROW 2: Monthly projection table -->
+        <div class="s6-section-title">12-Month Projection</div>
+        <div class="s6-twrap"><table>
+          <thead><tr>
+            <th>Month</th><th>Fill Rate</th><th>Operator GOV</th>
+            <th>Headout GOV</th><th>Commission %</th><th>Headout Revenue</th>
+          </tr></thead>
+          <tbody id="s6-proj-body"></tbody>
+        </table></div>
+
+        <!-- ROW 3: Phase summary -->
+        <div class="s6-section-title">Phase Summary</div>
+        <div class="s6-phase-cards" id="s6-phase-cards"></div>
+
+        <!-- ROW 4: Commission comparison -->
+        <div class="s6-section-title">Commission Rate Comparison</div>
+        <div class="s6-twrap"><table>
+          <thead><tr>
+            <th>Commission Rate</th><th>Operator Net (Year 1)</th>
+            <th>Headout Revenue (Year 1)</th><th>vs Standard</th>
+          </tr></thead>
+          <tbody id="s6-comm-body"></tbody>
+        </table></div>
+
+        <!-- ROW 5: Talking point -->
+        <div class="s6-section-title">Auto-Generated BD Talking Point</div>
+        <div class="s6-talking" id="s6-talking"></div>
+        <button class="s6-copy-btn" id="s6-copy-tp" onclick="copyTalkingPoint()">📋 Copy Talking Point</button>
+
+        <!-- ROW 6: Sensitivity analysis -->
+        <div class="s6-section-title" style="margin-top:20px">Sensitivity Analysis — Occupancy Scenarios</div>
+        <div class="s6-twrap"><table>
+          <thead><tr>
+            <th>Occupancy</th><th>Monthly Operator GOV</th>
+            <th>Monthly Headout GOV</th><th>Monthly Headout Revenue</th>
+          </tr></thead>
+          <tbody id="s6-sens-body"></tbody>
+        </table></div>
+
+      </div>
+      <div id="s6-empty-state" style="text-align:center;padding:60px 20px;color:var(--muted)">
+        <div style="font-size:40px;margin-bottom:12px">🧮</div>
+        <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px">Fill in the inputs and click Calculate</div>
+        <div style="font-size:13px">Or select a quick preset above to auto-fill a sample scenario</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Builder -->
+  <div style="margin-top:32px">
+    <div class="s6-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <div>
+          <div style="font-size:15px;font-weight:800">📦 Portfolio Builder</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:2px">Add multiple operators to see total GOV impact</div>
+        </div>
+        <div class="s6-port-btns">
+          <button class="s6-add-btn" onclick="addToPortfolio()">+ Add Current Operator</button>
+          <button class="s6-copy-btn" onclick="copyPortfolio()">📋 Copy Summary</button>
+          <button class="s6-copy-btn" style="color:var(--high)" onclick="clearPortfolio()">🗑 Clear</button>
+        </div>
+      </div>
+      <div class="portfolio-list" id="s6-portfolio"></div>
+    </div>
   </div>
 </div>
 
@@ -974,6 +1260,298 @@ function show(id,btn){
   document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
   document.getElementById(id).classList.add('on');btn.classList.add('on');
 }
+
+/* ── S6 GOV CALCULATOR ── */
+const S6_PRESETS={
+  sake:{name:'Sake Brewery Tour',pricing:'person',price:15000,group:1,sessions:2,cap:10,days:3,weeks:50,occ:30,share:20,growth:8,comm:25,introRate:15,introMonths:3},
+  kimono:{name:'Kimono Experience',pricing:'person',price:8000,group:1,sessions:8,cap:6,days:7,weeks:52,occ:55,share:25,growth:10,comm:25,introRate:15,introMonths:3},
+  gokart:{name:'Go-Kart Tokyo',pricing:'person',price:12000,group:1,sessions:6,cap:8,days:7,weeks:52,occ:60,share:20,growth:8,comm:22,introRate:15,introMonths:3},
+  fuji:{name:'Mt Fuji Day Tour',pricing:'group',price:18000,group:25,sessions:1,cap:25,days:7,weeks:40,occ:70,share:30,growth:6,comm:20,introRate:15,introMonths:3},
+  samurai:{name:'Samurai Theater',pricing:'ticket',price:6500,group:1,sessions:3,cap:30,days:5,weeks:50,occ:50,share:15,growth:7,comm:25,introRate:15,introMonths:3}
+};
+let S6_portfolio=[];
+let S6_lastResult=null;
+
+function applyPreset(key){
+  const p=S6_PRESETS[key];
+  document.getElementById('g-name').value=p.name;
+  document.querySelectorAll('input[name="pricing"]').forEach(r=>{r.checked=(r.value===p.pricing);});
+  document.getElementById('g-price').value=p.price;
+  document.getElementById('g-group').value=p.group;
+  document.getElementById('g-sessions').value=p.sessions;
+  document.getElementById('g-cap').value=p.cap;
+  document.getElementById('g-days').value=p.days;
+  document.getElementById('g-weeks').value=p.weeks;
+  document.getElementById('g-occ').value=p.occ;
+  document.getElementById('g-occ-val').textContent=p.occ+'%';
+  document.getElementById('g-share').value=p.share;
+  document.getElementById('g-share-val').textContent=p.share+'%';
+  document.getElementById('g-growth').value=p.growth;
+  document.getElementById('g-comm').value=p.comm;
+  document.getElementById('g-comm-val').textContent=p.comm+'%';
+  document.getElementById('g-intro-rate').value=p.introRate;
+  document.getElementById('g-intro-months').value=p.introMonths;
+  toggleGroupSize();
+  syncOccPresets();
+  calculate();
+}
+
+function toggleGroupSize(){
+  const val=document.querySelector('input[name="pricing"]:checked').value;
+  document.getElementById('g-groupsize-wrap').style.display=(val==='person'?'':'none');
+}
+
+function setOcc(v){
+  document.getElementById('g-occ').value=v;
+  document.getElementById('g-occ-val').textContent=v+'%';
+  syncOccPresets();
+  liveCalc();
+}
+
+function syncOccPresets(){
+  const v=parseInt(document.getElementById('g-occ').value);
+  document.querySelectorAll('#occ-presets .s6-preset').forEach(btn=>{
+    const bv=parseInt(btn.getAttribute('onclick').match(/\d+/)[0]);
+    btn.classList.toggle('active',bv===v);
+  });
+}
+
+function getInputs(){
+  const pricing=document.querySelector('input[name="pricing"]:checked').value;
+  const price=parseFloat(document.getElementById('g-price').value)||0;
+  const groupSize=(pricing==='person')?Math.max(1,parseFloat(document.getElementById('g-group').value)||1):1;
+  const sessions=Math.max(1,parseFloat(document.getElementById('g-sessions').value)||1);
+  const cap=Math.max(1,parseFloat(document.getElementById('g-cap').value)||1);
+  const days=Math.min(7,Math.max(1,parseFloat(document.getElementById('g-days').value)||1));
+  const weeks=Math.min(52,Math.max(1,parseFloat(document.getElementById('g-weeks').value)||1));
+  const occ=parseFloat(document.getElementById('g-occ').value)/100;
+  const share=parseFloat(document.getElementById('g-share').value)/100;
+  const growth=parseFloat(document.getElementById('g-growth').value)/100;
+  const comm=parseFloat(document.getElementById('g-comm').value)/100;
+  const introRate=parseFloat(document.getElementById('g-intro-rate').value)/100;
+  const introMonths=parseInt(document.getElementById('g-intro-months').value)||0;
+  const name=document.getElementById('g-name').value.trim()||'This Operator';
+  // bookingPrice = price per booking event
+  const bookingPrice=pricing==='person'?(price*groupSize):price;
+  // capacityPerSession in bookings
+  const capsPerSession=pricing==='person'?Math.ceil(cap/Math.max(groupSize,1)):1;
+  return {name,pricing,price,groupSize,bookingPrice,sessions,cap,capsPerSession,days,weeks,occ,share,growth,comm,introRate,introMonths};
+}
+
+function govPerMonth(inp,fillRate){
+  // Operator GOV: sessions/day × days/week × weeks/year/12 × fill × bookingPrice × capsPerSession
+  const sessionsPerMonth=(inp.sessions*inp.days*inp.weeks)/12;
+  const bookingsPerMonth=sessionsPerMonth*(inp.pricing==='group'?1:Math.floor(inp.cap/Math.max(inp.groupSize,1)))*fillRate;
+  const opGOV=bookingsPerMonth*inp.price*(inp.pricing==='person'?inp.groupSize:1);
+  return opGOV;
+}
+
+function fmt(n){return '¥'+Math.round(n).toLocaleString('en-US');}
+function fmtM(n){return n>=1e8?'¥'+(n/1e8).toFixed(1)+'億':n>=1e6?'¥'+(n/1e6).toFixed(1)+'M':fmt(n);}
+function pct(n){return (n*100).toFixed(0)+'%';}
+
+function calculate(){
+  const inp=getInputs();
+  // Max weekly capacity
+  const maxWeeklyCap=inp.sessions*inp.days*Math.floor(inp.cap/Math.max(inp.groupSize,1));
+  // Realistic monthly GOV at starting occupancy
+  const monthlyOpGOV=govPerMonth(inp,inp.occ);
+  const monthlyHOGOV=monthlyOpGOV*inp.share;
+  const monthlyHORev=monthlyHOGOV*inp.comm;
+
+  // ROW 1 stat cards
+  document.getElementById('s6-stat-cards').innerHTML=`
+    <div class="s6-card c-blue">
+      <div class="s6-card-val">${maxWeeklyCap.toLocaleString()}</div>
+      <div class="s6-card-label">Max Weekly Capacity<br>bookings/week at 100% fill</div>
+    </div>
+    <div class="s6-card c-green">
+      <div class="s6-card-val">${fmtM(monthlyOpGOV)}</div>
+      <div class="s6-card-label">Operator Monthly GOV<br>at ${pct(inp.occ)} occupancy</div>
+    </div>
+    <div class="s6-card c-orange">
+      <div class="s6-card-val">${fmtM(monthlyHOGOV)}</div>
+      <div class="s6-card-label">Headout Monthly GOV<br>${pct(inp.share)} of operator GOV</div>
+    </div>
+    <div class="s6-card c-red">
+      <div class="s6-card-val">${fmtM(monthlyHORev)}</div>
+      <div class="s6-card-label">Headout Monthly Revenue<br>${pct(inp.comm)} commission</div>
+    </div>`;
+
+  // ROW 2: 12-month projection
+  let rows='';
+  let totOpGOV=0,totHOGOV=0,totHORev=0;
+  const monthData=[];
+  for(let m=1;m<=12;m++){
+    const growthMult=Math.min(1,inp.occ*Math.pow(1+inp.growth,m-1));
+    const fillRate=Math.min(1,growthMult);
+    const isIntro=m<=inp.introMonths;
+    const commRate=isIntro?inp.introRate:inp.comm;
+    const opGOV=govPerMonth(inp,fillRate);
+    const hoGOV=opGOV*inp.share;
+    const hoRev=hoGOV*commRate;
+    totOpGOV+=opGOV;totHOGOV+=hoGOV;totHORev+=hoRev;
+    monthData.push({m,fillRate,opGOV,hoGOV,commRate,hoRev,isIntro});
+    rows+=`<tr class="${isIntro?'intro-row':'std-row'}">
+      <td>Month ${m}${isIntro?' 🟡':' 🟢'}</td>
+      <td>${(fillRate*100).toFixed(0)}%</td>
+      <td>${fmt(opGOV)}</td>
+      <td>${fmt(hoGOV)}</td>
+      <td>${(commRate*100).toFixed(0)}%</td>
+      <td style="font-weight:700">${fmt(hoRev)}</td>
+    </tr>`;
+  }
+  rows+=`<tr class="total-row">
+    <td colspan="2">TOTAL (Year 1)</td>
+    <td>${fmt(totOpGOV)}</td>
+    <td>${fmt(totHOGOV)}</td>
+    <td>—</td>
+    <td style="color:var(--red)">${fmt(totHORev)}</td>
+  </tr>`;
+  document.getElementById('s6-proj-body').innerHTML=rows;
+
+  // ROW 3: Phase summary
+  const p1=monthData.slice(0,3),p2=monthData.slice(3,6),p3=monthData.slice(6,12);
+  const avgRev=arr=>arr.reduce((s,r)=>s+r.hoRev,0)/arr.length;
+  document.getElementById('s6-phase-cards').innerHTML=`
+    <div class="s6-phase-card ph1"><div class="s6-pc-label">Phase 1 (M1–3)</div><div class="s6-pc-val">${fmtM(avgRev(p1))}</div><div class="s6-pc-sub">avg monthly Headout revenue</div></div>
+    <div class="s6-phase-card ph2"><div class="s6-pc-label">Phase 2 (M4–6)</div><div class="s6-pc-val">${fmtM(avgRev(p2))}</div><div class="s6-pc-sub">avg monthly Headout revenue</div></div>
+    <div class="s6-phase-card ph3"><div class="s6-pc-label">Phase 3 (M7–12)</div><div class="s6-pc-val">${fmtM(avgRev(p3))}</div><div class="s6-pc-sub">avg monthly Headout revenue</div></div>
+    <div class="s6-phase-card total"><div class="s6-pc-label">Year 1 Total</div><div class="s6-pc-val">${fmtM(totHORev)}</div><div class="s6-pc-sub">total Headout revenue</div></div>`;
+
+  // ROW 4: Commission comparison
+  const stdYrGOV=monthData.reduce((s,r)=>s+r.hoGOV,0);
+  const stdYrRev=monthData.reduce((s,r)=>s+r.hoRev,0);
+  const stdOpNet=monthData.reduce((s,r)=>s+r.opGOV*(1-(r.isIntro?inp.introRate:inp.comm)),0);
+  const commRates=[0.15,0.20,0.25,0.30];
+  let commRows='';
+  commRates.forEach(cr=>{
+    const yrRev=stdYrGOV*cr;
+    const opNet=totOpGOV*(1-cr);
+    const delta=yrRev-stdYrRev;
+    const isStd=cr===inp.comm;
+    commRows+=`<tr${isStd?' style="background:#fef2f2;font-weight:700"':''}>
+      <td>${(cr*100).toFixed(0)}%${isStd?' ✓ (standard)':''}</td>
+      <td>${fmt(opNet)}</td>
+      <td>${fmt(yrRev)}</td>
+      <td style="color:${delta>0?'var(--yes-c)':delta<0?'var(--high)':'var(--muted)'}">${delta===0?'baseline':(delta>0?'+':'')+fmt(delta)}</td>
+    </tr>`;
+  });
+  document.getElementById('s6-comm-body').innerHTML=commRows;
+
+  // ROW 5: Talking point
+  const matureOcc=0.80;
+  const matureMonthlyRev=govPerMonth(inp,matureOcc)*inp.share*inp.comm;
+  const matureYrRev=matureMonthlyRev*12;
+  const introPeriodRevDiff=(inp.comm-inp.introRate)*monthData.filter(r=>r.isIntro).reduce((s,r)=>s+r.hoGOV,0)/Math.max(inp.introMonths,1);
+  const tp=`${inp.name} runs ${inp.sessions} session${inp.sessions>1?'s':''}/day at ¥${inp.price.toLocaleString()}/${inp.pricing==='person'?'person':'session'} with capacity of ${inp.cap} people per session.
+
+Maximum monthly GOV: ${fmt(govPerMonth(inp,1))} at full capacity.
+Realistic early-stage GOV: ${fmt(monthlyOpGOV)}/month (${pct(inp.occ)} fill rate).
+Headout's share at ${pct(inp.share)}: ${fmt(monthlyHOGOV)} GOV → ${fmt(monthlyHORev)} revenue/month.
+
+Proposed commercial structure:
+→ ${(inp.introRate*100).toFixed(0)}% commission for first ${inp.introMonths} month${inp.introMonths!==1?'s':''} (reduce signup friction)
+→ ${(inp.comm*100).toFixed(0)}% from Month ${inp.introMonths+1}
+→ Revenue difference in intro period: ${fmt(introPeriodRevDiff)}/month
+→ Year 1 total Headout revenue: ${fmt(totHORev)}
+
+At mature stage (80% fill), monthly revenue reaches ${fmt(matureMonthlyRev)} — making this a ${fmtM(matureYrRev)}/year partner.`;
+  document.getElementById('s6-talking').textContent=tp;
+
+  // ROW 6: Sensitivity
+  const sensOccs=[0.10,0.20,0.30,0.50,0.70,0.90];
+  const curOcc=inp.occ;
+  document.getElementById('s6-sens-body').innerHTML=sensOccs.map(o=>{
+    const opGOV=govPerMonth(inp,o);
+    const hoGOV=opGOV*inp.share;
+    const hoRev=hoGOV*inp.comm;
+    const isCur=Math.abs(o-curOcc)<0.01;
+    return `<tr${isCur?' style="background:#fef2f2;font-weight:700"':''}>
+      <td>${(o*100).toFixed(0)}%${isCur?' ← current':''}</td>
+      <td>${fmt(opGOV)}</td>
+      <td>${fmt(hoGOV)}</td>
+      <td>${fmt(hoRev)}</td>
+    </tr>`;
+  }).join('');
+
+  // Store result for portfolio
+  S6_lastResult={
+    name:inp.name||'Unnamed Operator',
+    monthlyOpGOV,monthlyHOGOV,monthlyHORev,
+    yearRev:totHORev,comm:inp.comm,share:inp.share
+  };
+
+  // Show results
+  document.getElementById('s6-results').classList.add('on');
+  document.getElementById('s6-empty-state').style.display='none';
+  document.getElementById('s6-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function liveCalc(){
+  if(document.getElementById('s6-results').classList.contains('on')) calculate();
+}
+
+function copyTalkingPoint(){
+  const text=document.getElementById('s6-talking').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=document.getElementById('s6-copy-tp');
+    btn.textContent='✅ Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 Copy Talking Point';btn.classList.remove('copied');},2000);
+  });
+}
+
+function addToPortfolio(){
+  if(!S6_lastResult){alert('Run a calculation first.');return;}
+  S6_portfolio.push({...S6_lastResult,id:Date.now()});
+  renderPortfolio();
+}
+
+function removeFromPortfolio(id){
+  S6_portfolio=S6_portfolio.filter(p=>p.id!==id);
+  renderPortfolio();
+}
+
+function clearPortfolio(){
+  S6_portfolio=[];renderPortfolio();
+}
+
+function renderPortfolio(){
+  const el=document.getElementById('s6-portfolio');
+  if(!S6_portfolio.length){
+    el.innerHTML='<div class="port-empty">No operators added yet. Calculate a scenario and click "+ Add Current Operator".</div>';
+    return;
+  }
+  const totMonthly=S6_portfolio.reduce((s,p)=>s+p.monthlyHORev,0);
+  const totYear=S6_portfolio.reduce((s,p)=>s+p.yearRev,0);
+  el.innerHTML=S6_portfolio.map(p=>`
+    <div class="port-row">
+      <div class="port-name">${p.name}</div>
+      <div class="port-val">${fmtM(p.monthlyHOGOV)}/mo GOV</div>
+      <div class="port-val">${fmtM(p.monthlyHORev)}/mo rev</div>
+      <div class="port-val">${fmtM(p.yearRev)}/yr</div>
+      <button class="port-del" onclick="removeFromPortfolio(${p.id})">✕</button>
+    </div>`).join('')+`
+    <div class="port-row port-total">
+      <div class="port-name">TOTAL (${S6_portfolio.length} operators)</div>
+      <div class="port-val"></div>
+      <div class="port-val">${fmtM(totMonthly)}/mo revenue</div>
+      <div class="port-val">${fmtM(totYear)}/yr revenue</div>
+      <div></div>
+    </div>`;
+}
+
+function copyPortfolio(){
+  if(!S6_portfolio.length){alert('No operators in portfolio.');return;}
+  const totYear=S6_portfolio.reduce((s,p)=>s+p.yearRev,0);
+  const text='HEADOUT JAPAN — PORTFOLIO SUMMARY\n\n'+
+    S6_portfolio.map(p=>`• ${p.name}: ${fmtM(p.monthlyHORev)}/mo → ${fmtM(p.yearRev)}/yr (${(p.comm*100).toFixed(0)}% commission)`).join('\n')+
+    `\n\nTOTAL: ${fmtM(totYear)}/year Headout revenue`;
+  navigator.clipboard.writeText(text).then(()=>alert('Copied to clipboard!'));
+}
+
+// Init portfolio empty state
+renderPortfolio();
 
 /* ── INIT ── */
 buildS1Stats();renderS1(D1);
