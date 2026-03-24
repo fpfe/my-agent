@@ -1355,8 +1355,8 @@ function pct(n){return (n*100).toFixed(0)+'%';}
 
 function calculate(){
   const inp=getInputs();
-  // Max weekly capacity
-  const maxWeeklyCap=inp.sessions*inp.days*Math.floor(inp.cap/Math.max(inp.groupSize,1));
+  // Max monthly capacity
+  const maxWeeklyCap=Math.round(inp.sessions*inp.days*(inp.weeks/12)*Math.floor(inp.cap/Math.max(inp.groupSize,1)));
   // Realistic monthly GOV at starting occupancy
   const monthlyOpGOV=govPerMonth(inp,inp.occ);
   const monthlyHOGOV=monthlyOpGOV*inp.share;
@@ -1372,7 +1372,7 @@ function calculate(){
   document.getElementById('s6-stat-cards').innerHTML=`
     <div class="s6-card c-blue">
       <div class="s6-card-val">${maxWeeklyCap.toLocaleString()}</div>
-      <div class="s6-card-label">Max Weekly Capacity<br>bookings/week at 100% fill</div>
+      <div class="s6-card-label">Max Monthly Capacity<br>bookings/month at 100% fill</div>
     </div>
     <div class="s6-card c-blue">
       <div class="s6-card-val">${Math.round(monthlyHOBookings).toLocaleString()}</div>
