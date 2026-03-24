@@ -208,6 +208,48 @@
     .spinner { width: 36px; height: 36px; border: 3px solid var(--gray-200); border-top-color: var(--blue); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 12px; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .loading-box { text-align: center; padding: 30px; color: var(--gray-500); font-size: 13px; }
+
+    /* ── GOOGLE DRIVE TOOLBAR ── */
+    .drive-toolbar {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 14px; padding: 10px 14px;
+      background: white; border-radius: 12px;
+      border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);
+    }
+    .drive-connect-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 8px; border: none;
+      background: #4285f4; color: white;
+      font-size: 12.5px; font-weight: 600; cursor: pointer; transition: background .15s;
+    }
+    .drive-connect-btn:hover { background: #3367d6; }
+    .drive-connect-btn:disabled { background: #94a3b8; cursor: default; }
+    .drive-status {
+      display: none; align-items: center; gap: 6px;
+      font-size: 12.5px; color: var(--gray-700); font-weight: 500;
+    }
+    .drive-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .drive-dot.synced { background: #22c55e; }
+    .drive-dot.saving { background: #eab308; animation: drivePulse .8s infinite; }
+    .drive-dot.error  { background: #ef4444; }
+    @keyframes drivePulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .drive-action-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border-radius: 7px;
+      border: 1px solid var(--gray-200); background: white;
+      color: var(--gray-700); font-size: 12px; font-weight: 500;
+      cursor: pointer; transition: all .15s;
+    }
+    .drive-action-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .drive-conflict-banner {
+      display: none; align-items: center; gap: 10px; flex-wrap: wrap;
+      padding: 10px 14px; margin-bottom: 12px;
+      background: #eff6ff; border: 1px solid #93c5fd; border-radius: 10px;
+      font-size: 13px; color: #1e40af;
+    }
+    .conflict-btn { padding: 5px 12px; border-radius: 6px; border: none; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .conflict-btn.load { background: #4285f4; color: white; }
+    .conflict-btn.keep { background: var(--gray-300); color: var(--gray-700); }
   </style>
 </head>
 <body>
@@ -327,6 +369,19 @@
   <div id="tab-apps" class="tab-pane">
     <div class="sec-title">📋 My Applications</div>
     <div class="sec-sub">Log and track every real job you apply to.</div>
+    <!-- Drive conflict banner -->
+    <div class="drive-conflict-banner" id="drive-conflict-banner">
+      ☁️ Newer data found in Drive. Load from Drive?
+      <button class="conflict-btn load" onclick="GDRIVE.loadFromDrive()">Load from Drive</button>
+      <button class="conflict-btn keep" onclick="GDRIVE.dismissConflict()">Keep Local</button>
+    </div>
+    <!-- Drive toolbar -->
+    <div class="drive-toolbar">
+      <button class="drive-connect-btn" id="drive-connect-btn" onclick="GDRIVE.connect()">☁️ Connect Google Drive</button>
+      <span class="drive-status" id="drive-status"></span>
+      <button class="drive-action-btn" onclick="GDRIVE.syncNow()" title="Manually sync to Drive">↕️ Sync Now</button>
+      <button class="drive-action-btn" onclick="GDRIVE.downloadBackup()">📥 Download Backup</button>
+    </div>
     <div class="apps-layout">
       <!-- Add form -->
       <div>
@@ -642,6 +697,8 @@ const S = {
 function persist() {
   localStorage.setItem('shared_job_pipeline', JSON.stringify(S.apps));
   localStorage.setItem('ja2_watched', JSON.stringify([...S.watched]));
+  sessionStorage.setItem('local_last_saved', Date.now().toString());
+  GDRIVE.save(S.apps);
   console.log('[job-agent] saved', S.apps.length, 'apps →', JSON.stringify(
     S.apps.map(a => ({ company: a.company, status: a.status }))
   ));
@@ -1173,6 +1230,260 @@ function toast(msg) {
 }
 
 // ════════════════════════════════════════
+// GOOGLE DRIVE INTEGRATION
+// ════════════════════════════════════════
+const GDRIVE = {
+  CLIENT_ID: '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com',
+  SCOPE: 'https://www.googleapis.com/auth/drive.file',
+  FILE_NAME: 'sabbatical_job_pipeline.json',
+  tokenClient: null,
+  accessToken: null,
+  tokenExpiry: null,
+  fileId: null,
+  connected: false,
+  saving: false,
+  lastSaved: null,
+  retryTimer: null,
+  pendingJobs: null,
+  _driveDataCache: null,
+
+  init() {
+    const s = document.createElement('script');
+    s.src = 'https://accounts.google.com/gsi/client';
+    s.onload = () => this._initTokenClient();
+    document.head.appendChild(s);
+    const tok = sessionStorage.getItem('gdrive_token');
+    const exp = sessionStorage.getItem('gdrive_expiry');
+    if (tok && exp && Date.now() < parseInt(exp) - 60000) {
+      this.accessToken = tok;
+      this.tokenExpiry = parseInt(exp);
+      this.connected = true;
+      this._updateUI();
+      setTimeout(() => this._checkDriveOnStartup(), 500);
+    }
+  },
+
+  _initTokenClient() {
+    this.tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: this.CLIENT_ID,
+      scope: this.SCOPE,
+      callback: (resp) => {
+        if (resp.error) { console.error('[Drive] token error:', resp.error); return; }
+        this.accessToken = resp.access_token;
+        this.tokenExpiry = Date.now() + (resp.expires_in * 1000);
+        sessionStorage.setItem('gdrive_token', resp.access_token);
+        sessionStorage.setItem('gdrive_expiry', String(this.tokenExpiry));
+        this.connected = true;
+        this._updateUI();
+        this._checkDriveOnStartup();
+      }
+    });
+    const btn = document.getElementById('drive-connect-btn');
+    if (btn) btn.disabled = false;
+  },
+
+  connect() {
+    if (!this.tokenClient) {
+      const btn = document.getElementById('drive-connect-btn');
+      if (btn) btn.textContent = '⏳ Loading...';
+      setTimeout(() => this.connect(), 600);
+      return;
+    }
+    this.tokenClient.requestAccessToken({ prompt: 'consent' });
+  },
+
+  _validToken() {
+    return this.accessToken && Date.now() < this.tokenExpiry - 60000;
+  },
+
+  async _apiFetch(path, opts = {}) {
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/drive/v3/' + path, {
+      ...opts,
+      headers: { 'Authorization': 'Bearer ' + this.accessToken, ...(opts.headers || {}) },
+    });
+    if (!res.ok) throw new Error('Drive API ' + res.status);
+    return res;
+  },
+
+  async _findFile() {
+    const res = await this._apiFetch(
+      'files?q=' + encodeURIComponent("name='" + this.FILE_NAME + "' and trashed=false") +
+      '&fields=files(id,modifiedTime)&spaces=drive'
+    );
+    const j = await res.json();
+    return j.files && j.files.length ? j.files[0] : null;
+  },
+
+  async _readFile(id) {
+    const res = await this._apiFetch('files/' + id + '?alt=media');
+    return res.json();
+  },
+
+  async _createFile(data) {
+    const meta = { name: this.FILE_NAME, mimeType: 'application/json' };
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
+    form.append('file', new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + this.accessToken },
+      body: form,
+    });
+    if (!res.ok) throw new Error('Drive create ' + res.status);
+    return (await res.json()).id;
+  },
+
+  async _updateFile(id, data) {
+    if (!this._validToken()) throw new Error('No valid token');
+    const res = await fetch('https://www.googleapis.com/upload/drive/v3/files/' + id + '?uploadType=media', {
+      method: 'PATCH',
+      headers: {
+        'Authorization': 'Bearer ' + this.accessToken,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data, null, 2),
+    });
+    if (!res.ok) throw new Error('Drive update ' + res.status);
+  },
+
+  _drivePayload(jobs) {
+    return { version: '1.0', lastUpdated: new Date().toISOString(), jobs };
+  },
+
+  async _checkDriveOnStartup() {
+    try {
+      const file = await this._findFile();
+      if (!file) {
+        const jobs = this._localJobs();
+        this.fileId = await this._createFile(this._drivePayload(jobs));
+        this.lastSaved = new Date();
+        this._setSaved();
+      } else {
+        this.fileId = file.id;
+        const driveData = await this._readFile(file.id);
+        this._driveDataCache = driveData;
+        const driveTime = driveData.lastUpdated ? new Date(driveData.lastUpdated).getTime() : 0;
+        const localTime = parseInt(sessionStorage.getItem('local_last_saved') || '0');
+        if (driveTime > localTime && driveData.jobs && driveData.jobs.length > 0) {
+          this._showConflictBanner();
+        } else {
+          this.lastSaved = new Date();
+          this._setSaved();
+        }
+      }
+    } catch(e) {
+      console.error('[Drive] startup check error:', e);
+      this._setError();
+    }
+  },
+
+  _localJobs() {
+    try { return JSON.parse(localStorage.getItem('shared_job_pipeline') || '[]'); } catch { return []; }
+  },
+
+  _showConflictBanner() {
+    const b = document.getElementById('drive-conflict-banner');
+    if (b) b.style.display = 'flex';
+  },
+
+  loadFromDrive() {
+    const data = this._driveDataCache;
+    if (data && data.jobs) {
+      S.apps = data.jobs;
+      localStorage.setItem('shared_job_pipeline', JSON.stringify(data.jobs));
+      sessionStorage.setItem('local_last_saved', Date.now().toString());
+      renderApps();
+      updateBadges();
+    }
+    const b = document.getElementById('drive-conflict-banner');
+    if (b) b.style.display = 'none';
+    this.lastSaved = new Date();
+    this._setSaved();
+  },
+
+  dismissConflict() {
+    const b = document.getElementById('drive-conflict-banner');
+    if (b) b.style.display = 'none';
+    this.lastSaved = new Date();
+    this._setSaved();
+  },
+
+  async save(jobs) {
+    if (!this.connected || !this._validToken()) { this.pendingJobs = jobs; return; }
+    if (this.saving) { this.pendingJobs = jobs; return; }
+    clearTimeout(this.retryTimer);
+    this.saving = true;
+    this._setSaving();
+    try {
+      const payload = this._drivePayload(jobs);
+      if (this.fileId) {
+        await this._updateFile(this.fileId, payload);
+      } else {
+        const file = await this._findFile();
+        if (file) { this.fileId = file.id; await this._updateFile(this.fileId, payload); }
+        else { this.fileId = await this._createFile(payload); }
+      }
+      this.lastSaved = new Date();
+      this._setSaved();
+      if (this.pendingJobs) {
+        const p = this.pendingJobs; this.pendingJobs = null;
+        setTimeout(() => this.save(p), 200);
+      }
+    } catch(e) {
+      console.error('[Drive] save error:', e);
+      this._setError();
+      const retry = this.pendingJobs || jobs;
+      this.retryTimer = setTimeout(() => this.save(retry), 30000);
+    } finally { this.saving = false; }
+  },
+
+  async syncNow() {
+    if (!this.connected) { alert('Connect Google Drive first.'); return; }
+    await this.save(this._localJobs());
+  },
+
+  downloadBackup() {
+    const data = this._drivePayload(this._localJobs());
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: this.FILE_NAME });
+    a.click(); URL.revokeObjectURL(url);
+  },
+
+  _setSaving() {
+    const el = document.getElementById('drive-status');
+    if (el) { el.style.display = 'inline-flex'; el.innerHTML = '<span class="drive-dot saving"></span> ☁️ Saving...'; }
+  },
+
+  _setSaved() {
+    const btn = document.getElementById('drive-connect-btn');
+    const el  = document.getElementById('drive-status');
+    if (btn) btn.style.display = 'none';
+    if (el) {
+      const t = this.lastSaved
+        ? this.lastSaved.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+        : 'now';
+      el.style.display = 'inline-flex';
+      el.innerHTML = '<span class="drive-dot synced"></span> ☁️ Synced · Last saved: ' + t;
+    }
+  },
+
+  _setError() {
+    const el = document.getElementById('drive-status');
+    if (el) {
+      el.style.display = 'inline-flex';
+      el.innerHTML = '<span class="drive-dot error"></span> ⚠️ Drive sync failed. Data saved locally only.';
+    }
+  },
+
+  _updateUI() {
+    const btn = document.getElementById('drive-connect-btn');
+    if (btn) btn.style.display = this.connected ? 'none' : 'inline-flex';
+  },
+};
+
+// ════════════════════════════════════════
 // INIT
 // ════════════════════════════════════════
 (function init() {
@@ -1181,6 +1492,7 @@ function toast(msg) {
   renderCompanies();
   renderApps();
   updateBadges();
+  GDRIVE.init();
 
   // Set default date for app form
   document.getElementById('aDate').value = new Date().toISOString().split('T')[0];
