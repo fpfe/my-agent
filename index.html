@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
 (function(){
-  const key='scc_auth';
-  if(sessionStorage.getItem(key)==='1')return;
-  document.addEventListener('DOMContentLoaded',function(){
-    document.body.style.display='none';
-  });
-  const pwd=prompt('🔒 Enter password:');
-  if(pwd==='emma0916'){sessionStorage.setItem(key,'1');}
-  else{document.write('<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;font-size:18px;color:#ef4444;background:#f8fafc">❌ Incorrect password.</div>');document.close();throw new Error('auth');}
+  const key = 'scc_auth';
+  if(sessionStorage.getItem(key) === '1') return;
+
+  // Hide page immediately before DOM loads
+  document.documentElement.style.visibility = 'hidden';
+
+  const pwd = prompt('🔒 Enter password to access Sabbatical Command Center:');
+
+  if(pwd === 'emma0916'){
+    sessionStorage.setItem(key, '1');
+    document.documentElement.style.visibility = 'visible';
+  } else {
+    document.documentElement.style.visibility = 'visible';
+    document.write('<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#0f172a;color:#ef4444;gap:16px"><div style="font-size:48px">🔒</div><div style="font-size:20px;font-weight:bold">Incorrect password</div><div style="font-size:14px;color:#94a3b8">Access denied</div></div>');
+    document.close();
+    throw new Error('auth failed');
+  }
 })();
 </script>
   <title>Sabbatical Command Center</title>
