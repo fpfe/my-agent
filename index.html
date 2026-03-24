@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){
+  const key='scc_auth';
+  if(sessionStorage.getItem(key)==='1')return;
+  document.addEventListener('DOMContentLoaded',function(){
+    document.body.style.display='none';
+  });
+  const pwd=prompt('🔒 Enter password:');
+  if(pwd==='emma0916'){sessionStorage.setItem(key,'1');}
+  else{document.write('<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;font-size:18px;color:#ef4444;background:#f8fafc">❌ Incorrect password.</div>');document.close();throw new Error('auth');}
+})();
+</script>
   <title>Sabbatical Command Center</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
