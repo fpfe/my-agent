@@ -611,10 +611,10 @@ td{padding:9px 12px;vertical-align:middle}
           <tbody id="s6-comm-body"></tbody>
         </table></div>
 
-        <!-- ROW 5: Talking point -->
-        <div class="s6-section-title">Talking Point to Operator</div>
+        <!-- ROW 5: Summary in Words -->
+        <div class="s6-section-title">Summary in Words</div>
         <div class="s6-talking" id="s6-talking"></div>
-        <button class="s6-copy-btn" id="s6-copy-tp" onclick="copyTalkingPoint()">📋 Copy Talking Point to Operator</button>
+        <button class="s6-copy-btn" id="s6-copy-tp" onclick="copyTalkingPoint()">📋 Copy Summary in Words</button>
 
         <!-- ROW 6: Sensitivity analysis -->
         <div class="s6-section-title" style="margin-top:20px">Sensitivity Analysis — Occupancy Scenarios</div>
@@ -1522,7 +1522,7 @@ function copyTalkingPoint(){
   navigator.clipboard.writeText(text).then(()=>{
     const btn=document.getElementById('s6-copy-tp');
     btn.textContent='✅ Copied!';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='📋 Copy Talking Point to Operator';btn.classList.remove('copied');},2000);
+    setTimeout(()=>{btn.textContent='📋 Copy Summary in Words';btn.classList.remove('copied');},2000);
   });
 }
 
