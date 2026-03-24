@@ -210,6 +210,8 @@ td{padding:9px 12px;vertical-align:middle}
 .s6-card.c-green{border-color:#86efac;background:#f0fdf4}.s6-card.c-green .s6-card-val{color:#15803d}
 .s6-card.c-orange{border-color:#fcd34d;background:#fffbeb}.s6-card.c-orange .s6-card-val{color:#92400e}
 .s6-card.c-red{border-color:#fca5a5;background:#fef2f2}.s6-card.c-red .s6-card-val{color:var(--red)}
+.s6-card.c-purple{border-color:#c4b5fd;background:#faf5ff}.s6-card.c-purple .s6-card-val{color:#7c3aed}
+.s6-card.c-gray{border-color:#e5e7eb;background:#f9fafb}.s6-card.c-gray .s6-card-val{color:#374151}
 .s6-twrap{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:auto;box-shadow:var(--sh);max-height:420px;margin-bottom:18px}
 .s6-twrap table{width:100%;border-collapse:collapse;font-size:12.5px}
 .s6-twrap thead th{background:#f1f4f8;padding:9px 12px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
@@ -589,6 +591,7 @@ td{padding:9px 12px;vertical-align:middle}
         <div class="s6-twrap"><table>
           <thead><tr>
             <th>Month</th><th>Fill Rate</th><th>Operator GOV</th>
+            <th>Headout Bookings</th><th>Headout Persons</th>
             <th>Headout GOV</th><th>Commission %</th><th>Headout Revenue</th>
           </tr></thead>
           <tbody id="s6-proj-body"></tbody>
@@ -609,9 +612,9 @@ td{padding:9px 12px;vertical-align:middle}
         </table></div>
 
         <!-- ROW 5: Talking point -->
-        <div class="s6-section-title">Auto-Generated BD Talking Point</div>
+        <div class="s6-section-title">Talking Point to Operator</div>
         <div class="s6-talking" id="s6-talking"></div>
-        <button class="s6-copy-btn" id="s6-copy-tp" onclick="copyTalkingPoint()">📋 Copy Talking Point</button>
+        <button class="s6-copy-btn" id="s6-copy-tp" onclick="copyTalkingPoint()">📋 Copy Talking Point to Operator</button>
 
         <!-- ROW 6: Sensitivity analysis -->
         <div class="s6-section-title" style="margin-top:20px">Sensitivity Analysis — Occupancy Scenarios</div>
@@ -1360,14 +1363,24 @@ function calculate(){
   const monthlyHORev=monthlyHOGOV*inp.comm;
 
   // ROW 1 stat cards
+  // Headout monthly bookings & persons
+  const sessionsPerMonthCalc=(inp.sessions*inp.days*inp.weeks)/12;
+  const bookingsPerSessionCalc=(inp.pricing==='group')?1:Math.floor(inp.cap/Math.max(inp.groupSize,1));
+  const monthlyHOBookings=sessionsPerMonthCalc*bookingsPerSessionCalc*inp.occ*inp.share;
+  const monthlyHOPersons=monthlyHOBookings*(inp.pricing==='person'?inp.groupSize:inp.cap);
+
   document.getElementById('s6-stat-cards').innerHTML=`
     <div class="s6-card c-blue">
       <div class="s6-card-val">${maxWeeklyCap.toLocaleString()}</div>
       <div class="s6-card-label">Max Weekly Capacity<br>bookings/week at 100% fill</div>
     </div>
-    <div class="s6-card c-green">
-      <div class="s6-card-val">${fmtM(monthlyOpGOV)}</div>
-      <div class="s6-card-label">Operator Monthly GOV<br>at ${pct(inp.occ)} occupancy</div>
+    <div class="s6-card c-blue">
+      <div class="s6-card-val">${Math.round(monthlyHOBookings).toLocaleString()}</div>
+      <div class="s6-card-label">Headout Bookings/Month<br>at ${pct(inp.occ)} fill × ${pct(inp.share)} share</div>
+    </div>
+    <div class="s6-card c-purple">
+      <div class="s6-card-val">${Math.round(monthlyHOPersons).toLocaleString()}</div>
+      <div class="s6-card-label">Headout Persons/Month<br>${inp.pricing==='person'?inp.groupSize:inp.cap} person(s) per booking</div>
     </div>
     <div class="s6-card c-orange">
       <div class="s6-card-val">${fmtM(monthlyHOGOV)}</div>
@@ -1376,6 +1389,10 @@ function calculate(){
     <div class="s6-card c-red">
       <div class="s6-card-val">${fmtM(monthlyHORev)}</div>
       <div class="s6-card-label">Headout Monthly Revenue<br>${pct(inp.comm)} commission</div>
+    </div>
+    <div class="s6-card c-gray">
+      <div class="s6-card-val">${pct(inp.share)}</div>
+      <div class="s6-card-label">Headout Booking Share<br>of operator's total volume</div>
     </div>`;
 
   // ROW 2: 12-month projection
@@ -1391,19 +1408,27 @@ function calculate(){
     const hoGOV=opGOV*inp.share;
     const hoRev=hoGOV*commRate;
     totOpGOV+=opGOV;totHOGOV+=hoGOV;totHORev+=hoRev;
-    monthData.push({m,fillRate,opGOV,hoGOV,commRate,hoRev,isIntro});
+    const hoBookings=sessionsPerMonthCalc*bookingsPerSessionCalc*fillRate*inp.share;
+    const hoPersons=hoBookings*(inp.pricing==='person'?inp.groupSize:inp.cap);
+    monthData.push({m,fillRate,opGOV,hoGOV,commRate,hoRev,isIntro,hoBookings,hoPersons});
     rows+=`<tr class="${isIntro?'intro-row':'std-row'}">
       <td>Month ${m}${isIntro?' 🟡':' 🟢'}</td>
       <td>${(fillRate*100).toFixed(0)}%</td>
       <td>${fmt(opGOV)}</td>
+      <td>${Math.round(hoBookings).toLocaleString()}</td>
+      <td>${Math.round(hoPersons).toLocaleString()}</td>
       <td>${fmt(hoGOV)}</td>
       <td>${(commRate*100).toFixed(0)}%</td>
       <td style="font-weight:700">${fmt(hoRev)}</td>
     </tr>`;
   }
+  const totHOBookings=monthData.reduce((s,r)=>s+r.hoBookings,0);
+  const totHOPersons=monthData.reduce((s,r)=>s+r.hoPersons,0);
   rows+=`<tr class="total-row">
     <td colspan="2">TOTAL (Year 1)</td>
     <td>${fmt(totOpGOV)}</td>
+    <td>${Math.round(totHOBookings).toLocaleString()}</td>
+    <td>${Math.round(totHOPersons).toLocaleString()}</td>
     <td>${fmt(totHOGOV)}</td>
     <td>—</td>
     <td style="color:var(--red)">${fmt(totHORev)}</td>
@@ -1497,7 +1522,7 @@ function copyTalkingPoint(){
   navigator.clipboard.writeText(text).then(()=>{
     const btn=document.getElementById('s6-copy-tp');
     btn.textContent='✅ Copied!';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='📋 Copy Talking Point';btn.classList.remove('copied');},2000);
+    setTimeout(()=>{btn.textContent='📋 Copy Talking Point to Operator';btn.classList.remove('copied');},2000);
   });
 }
 
