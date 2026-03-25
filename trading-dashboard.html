@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 Trading Dashboard — SBIネオトレード</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card2: #263347;
+      --border: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --green: #22c55e;
+      --green-dim: #16a34a;
+      --red: #ef4444;
+      --red-dim: #dc2626;
+      --blue: #4f7ef8;
+      --yellow: #f59e0b;
+      --purple: #a855f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      background: #1a2332;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .home-link {
+      color: var(--muted); text-decoration: none; font-size: 13px;
+      display: flex; align-items: center; gap: 4px;
+      padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .home-link:hover { color: var(--text); border-color: var(--muted); }
+    .header-title { font-size: 18px; font-weight: 700; }
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .sync-status {
+      font-size: 12px; padding: 4px 10px; border-radius: 20px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .sync-status.synced { color: var(--green); border-color: var(--green-dim); }
+    .sync-status.local { color: var(--yellow); border-color: var(--yellow); }
+
+    /* TABS */
+    .tabs {
+      background: #1a2332;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; gap: 0;
+    }
+    .tab-btn {
+      padding: 14px 20px;
+      background: none; border: none; color: var(--muted);
+      font-size: 14px; font-weight: 500; cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--green); border-bottom-color: var(--green); }
+
+    /* MAIN */
+    .main { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--muted); margin-bottom: 12px;
+    }
+
+    /* CARDS */
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+    }
+    .stat-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .stat-value {
+      font-size: 28px; font-weight: 800; letter-spacing: -1px;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-value.positive { color: var(--green); }
+    .stat-value.negative { color: var(--red); }
+    .stat-value.neutral { color: var(--text); }
+    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* IMPORT ZONE */
+    .import-section { margin-bottom: 24px; }
+    .drop-zone {
+      border: 2px dashed var(--border); border-radius: 16px;
+      padding: 40px 20px; text-align: center; cursor: pointer;
+      transition: all 0.2s; position: relative; background: var(--card);
+    }
+    .drop-zone:hover, .drop-zone.drag-over {
+      border-color: var(--green); background: rgba(34,197,94,0.05);
+    }
+    .drop-zone input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+    .drop-icon { font-size: 40px; margin-bottom: 12px; }
+    .drop-text { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .drop-sub { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green); color: white; border: none;
+      padding: 10px 20px; border-radius: 10px; font-size: 14px;
+      font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .btn-primary:hover { background: var(--green-dim); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--card2); color: var(--text); border: 1px solid var(--border);
+      padding: 10px 20px; border-radius: 10px; font-size: 14px;
+      font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--muted); }
+    .import-result {
+      margin-top: 12px; padding: 12px 16px; border-radius: 10px;
+      background: rgba(34,197,94,0.1); border: 1px solid var(--green-dim);
+      font-size: 13px; color: var(--green);
+    }
+    .import-result.error { background: rgba(239,68,68,0.1); border-color: var(--red-dim); color: var(--red); }
+
+    /* TARGET TABLE */
+    .target-section { margin-bottom: 24px; }
+    .target-inputs {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 600px) { .target-inputs { grid-template-columns: 1fr; } }
+    .input-group label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 6px; }
+    .input-group input {
+      width: 100%; background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 14px;
+    }
+    .input-group input:focus { outline: none; border-color: var(--green); }
+
+    .table-wrap {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th {
+      background: var(--card2); padding: 12px 16px; text-align: left;
+      font-size: 12px; color: var(--muted); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+    }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { color: var(--text); }
+    td {
+      padding: 12px 16px; font-size: 13px;
+      border-bottom: 1px solid rgba(51,65,85,0.5);
+    }
+    tr:last-child td { border-bottom: none; }
+    tr.profit { background: rgba(34,197,94,0.04); }
+    tr.loss { background: rgba(239,68,68,0.04); }
+    .green { color: var(--green); }
+    .red { color: var(--red); }
+    .muted { color: var(--muted); }
+
+    /* BAR CHART */
+    .chart-section { margin-bottom: 24px; }
+    .chart-wrap {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+    }
+    .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+    .bar-chart {
+      display: flex; align-items: flex-end; gap: 4px;
+      height: 160px; position: relative;
+    }
+    .zero-line {
+      position: absolute; left: 0; right: 0;
+      border-top: 1px dashed rgba(148,163,184,0.4);
+    }
+    .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; position: relative; }
+    .bar {
+      width: 100%; border-radius: 3px 3px 0 0;
+      min-height: 2px; transition: opacity 0.2s;
+      cursor: pointer; position: relative;
+    }
+    .bar.neg { border-radius: 0 0 3px 3px; }
+    .bar.pos-bar { background: var(--green); }
+    .bar.neg-bar { background: var(--red); }
+    .bar-label { font-size: 9px; color: var(--muted); white-space: nowrap; }
+    .bar-tooltip {
+      display: none; position: absolute; bottom: 100%; left: 50%;
+      transform: translateX(-50%); background: #1a2332; border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 10px; font-size: 12px; z-index: 10;
+      white-space: nowrap; pointer-events: none;
+    }
+    .bar-col:hover .bar-tooltip { display: block; }
+
+    /* AI SECTION */
+    .ai-section { margin-bottom: 24px; }
+    .news-box {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 16px; margin-bottom: 20px;
+      max-height: 200px; overflow-y: auto;
+    }
+    .news-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .news-item {
+      padding: 6px 0; border-bottom: 1px solid var(--border);
+      font-size: 13px; color: var(--muted);
+    }
+    .news-item:last-child { border-bottom: none; }
+    .advisor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 768px) { .advisor-grid { grid-template-columns: 1fr; } }
+    .advisor-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+    }
+    .advisor-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .advisor-icon { font-size: 28px; }
+    .advisor-name { font-size: 14px; font-weight: 700; }
+    .score-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 800; margin: 0 auto 16px;
+      border: 3px solid var(--border);
+    }
+    .score-high { border-color: var(--green); color: var(--green); }
+    .score-mid { border-color: var(--yellow); color: var(--yellow); }
+    .score-low { border-color: var(--red); color: var(--red); }
+    .advisor-section { margin-bottom: 12px; }
+    .advisor-section-title { font-size: 11px; color: var(--muted); font-weight: 600; margin-bottom: 6px; text-transform: uppercase; }
+    .advisor-list { list-style: none; }
+    .advisor-list li { font-size: 12px; padding: 2px 0; }
+    .advisor-advice {
+      font-size: 13px; color: var(--muted); line-height: 1.5;
+      padding: 10px; background: rgba(255,255,255,0.03); border-radius: 8px;
+    }
+    .ai-btn-row { display: flex; justify-content: center; margin-bottom: 20px; }
+    .btn-ai {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: white; border: none; padding: 12px 28px; border-radius: 12px;
+      font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .btn-ai:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ai:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .ai-loading {
+      text-align: center; padding: 40px; color: var(--muted);
+      font-size: 14px;
+    }
+    .spinner {
+      width: 32px; height: 32px; border: 3px solid var(--border);
+      border-top-color: var(--purple); border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* HISTORY FILTERS */
+    .filter-row {
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .filter-input {
+      flex: 1; min-width: 160px; background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 13px;
+    }
+    .filter-input:focus { outline: none; border-color: var(--green); }
+    .filter-select {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 13px;
+    }
+    .filter-select:focus { outline: none; border-color: var(--green); }
+    .pagination {
+      display: flex; align-items: center; gap: 8px; margin-top: 12px;
+      justify-content: center;
+    }
+    .page-btn {
+      background: var(--card2); border: 1px solid var(--border);
+      color: var(--text); padding: 6px 14px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; transition: all 0.2s;
+    }
+    .page-btn:hover { border-color: var(--muted); }
+    .page-btn.active { background: var(--green); border-color: var(--green); color: white; }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .page-info { font-size: 12px; color: var(--muted); }
+
+    /* STOCK SUMMARY */
+    .stock-summary-section { margin-bottom: 24px; }
+
+    /* UTILITY */
+    .badge {
+      font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 600;
+    }
+    .badge-buy { background: rgba(79,126,248,0.15); color: var(--blue); }
+    .badge-sell { background: rgba(168,85,247,0.15); color: var(--purple); }
+    .badge-spot { background: rgba(148,163,184,0.15); color: var(--muted); }
+    .badge-margin { background: rgba(245,158,11,0.15); color: var(--yellow); }
+    .empty-state {
+      text-align: center; padding: 60px 20px; color: var(--muted); font-size: 14px;
+    }
+    .empty-icon { font-size: 40px; margin-bottom: 12px; }
+    .google-auth-bar {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 16px; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .google-auth-bar .auth-info { flex: 1; font-size: 13px; color: var(--muted); }
+    .state-indicator {
+      display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--muted); margin-right: 6px;
+    }
+    .state-indicator.on { background: var(--green); }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <a class="home-link" href="index.html">← Home</a>
+    <span class="header-title">📈 Trading Dashboard — SBIネオトレード</span>
+  </div>
+  <div class="header-right">
+    <span id="syncStatus" class="sync-status">⚠️ Local only</span>
+    <button class="btn-secondary" onclick="AUTH.signIn()" id="authBtn" style="font-size:12px;padding:6px 14px;">🔑 Google連携</button>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('dashboard')">📊 ダッシュボード</button>
+  <button class="tab-btn" onclick="switchTab('ai')">🤖 AI分析</button>
+  <button class="tab-btn" onclick="switchTab('history')">📋 取引履歴</button>
+  <button class="tab-btn" onclick="switchTab('stocks')">📈 銘柄別</button>
+</div>
+
+<div class="main">
+
+  <!-- CSV IMPORT (always visible) -->
+  <div class="import-section">
+    <div class="section-title">CSVインポート</div>
+    <div class="drop-zone" id="dropZone" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleDrop(event)">
+      <input type="file" accept=".csv" onchange="handleFileInput(event)">
+      <div class="drop-icon">📂</div>
+      <div class="drop-text">CSVをここにドロップ</div>
+      <div class="drop-sub">SBIネオトレードのCSVファイル（Shift-JIS）</div>
+      <button class="btn-primary" onclick="event.preventDefault()">📂 CSVファイルを選択</button>
+    </div>
+    <div id="importResult" style="display:none;" class="import-result"></div>
+  </div>
+
+  <!-- ═══ TAB: DASHBOARD ═══ -->
+  <div class="tab-pane active" id="tab-dashboard">
+
+    <!-- STATS CARDS -->
+    <div class="section-title">損益サマリー</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">今日の損益</div>
+        <div class="stat-value neutral" id="todayPnl">¥0</div>
+        <div class="stat-sub" id="todayDate">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">今月の損益</div>
+        <div class="stat-value neutral" id="monthPnl">¥0</div>
+        <div class="stat-sub" id="monthLabel">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">累計損益</div>
+        <div class="stat-value neutral" id="totalPnl">¥0</div>
+        <div class="stat-sub">全期間合計</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">口座残高</div>
+        <div class="stat-value neutral" id="balance">¥0</div>
+        <div class="stat-sub" id="balanceDate">—</div>
+      </div>
+    </div>
+
+    <!-- TARGET vs ACTUAL -->
+    <div class="target-section">
+      <div class="section-title">目標 vs 実績</div>
+      <div class="target-inputs">
+        <div class="input-group">
+          <label>週間目標 (¥)</label>
+          <input type="number" id="weekTarget" placeholder="例: 50000" oninput="saveTargets();updateTargetTable()">
+        </div>
+        <div class="input-group">
+          <label>月間目標 (¥)</label>
+          <input type="number" id="monthTarget" placeholder="例: 200000" oninput="saveTargets();updateTargetTable()">
+        </div>
+        <div class="input-group">
+          <label>年間目標 (¥)</label>
+          <input type="number" id="yearTarget" placeholder="例: 2400000" oninput="saveTargets();updateTargetTable()">
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>期間</th><th>目標</th><th>実績</th><th>差額</th><th>達成率</th><th>状態</th>
+            </tr>
+          </thead>
+          <tbody id="targetTableBody">
+            <tr><td colspan="6" class="muted" style="text-align:center;padding:20px;">データなし</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DAILY CHART -->
+    <div class="chart-section">
+      <div class="section-title">日次損益チャート（直近30日）</div>
+      <div class="chart-wrap">
+        <div id="barChart" class="bar-chart">
+          <div class="empty-state" style="width:100%;"><div class="empty-icon">📊</div>データなし</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: AI ═══ -->
+  <div class="tab-pane" id="tab-ai">
+    <div class="ai-section">
+      <div class="ai-btn-row">
+        <button class="btn-ai" id="analyzeBtn" onclick="runAIAnalysis()">
+          🤖 今日のトレードを分析する
+        </button>
+      </div>
+      <div id="aiResult" style="display:none;">
+        <div class="section-title">📰 市場ニュース TOP10</div>
+        <div class="news-box">
+          <ul id="newsList" style="list-style:none;"></ul>
+        </div>
+        <div class="section-title">アドバイザー分析</div>
+        <div class="advisor-grid" id="advisorGrid"></div>
+      </div>
+      <div id="aiLoading" style="display:none;">
+        <div class="ai-loading">
+          <div class="spinner"></div>
+          市場ニュース取得中・AI分析中…
+        </div>
+      </div>
+      <div id="aiError" style="display:none;" class="import-result error"></div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB: HISTORY ═══ -->
+  <div class="tab-pane" id="tab-history">
+    <div class="section-title">取引履歴</div>
+    <div class="filter-row">
+      <input class="filter-input" type="text" id="searchInput" placeholder="銘柄名・コードで検索" oninput="renderHistory()">
+      <select class="filter-select" id="typeFilter" onchange="renderHistory()">
+        <option value="">全て</option>
+        <option value="現物">現物</option>
+        <option value="信用">信用</option>
+      </select>
+      <select class="filter-select" id="pnlFilter" onchange="renderHistory()">
+        <option value="">全て</option>
+        <option value="profit">利益</option>
+        <option value="loss">損失</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="sortable" onclick="sortHistory('tradeDate')">約定日 ▲</th>
+            <th class="sortable" onclick="sortHistory('settleDate')">受渡日</th>
+            <th class="sortable" onclick="sortHistory('name')">銘柄</th>
+            <th class="sortable" onclick="sortHistory('code')">コード</th>
+            <th>取引区分</th>
+            <th>種別</th>
+            <th class="sortable" onclick="sortHistory('qty')">数量</th>
+            <th class="sortable" onclick="sortHistory('price')">単価</th>
+            <th class="sortable" onclick="sortHistory('pnl')">損益</th>
+            <th>残高</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody">
+          <tr><td colspan="10" class="empty-state"><div class="empty-icon">📋</div>取引データなし</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination" id="historyPagination"></div>
+  </div>
+
+  <!-- ═══ TAB: STOCKS ═══ -->
+  <div class="tab-pane" id="tab-stocks">
+    <div class="section-title">銘柄別サマリー</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>銘柄コード</th>
+            <th>銘柄名</th>
+            <th>取引回数</th>
+            <th>合計損益</th>
+            <th>勝率</th>
+            <th>平均損益</th>
+          </tr>
+        </thead>
+        <tbody id="stockSummaryBody">
+          <tr><td colspan="6" class="empty-state"><div class="empty-icon">📈</div>データなし</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- Google Identity Services -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script>
+// ═══════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════
+const CLIENT_ID = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+const SCOPES = 'https://www.googleapis.com/auth/drive.file';
+const DRIVE_FILE = 'trading_history.json';
+const LS_KEY = 'trading_data';
+const LS_TARGETS = 'trading_targets';
+const TODAY = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+// ═══════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════
+let trades = []; // all parsed trades with P&L
+let sortCol = 'tradeDate';
+let sortAsc = false;
+let histPage = 1;
+const PAGE_SIZE = 20;
+
+// ═══════════════════════════════════════════════
+// GOOGLE AUTH
+// ═══════════════════════════════════════════════
+const AUTH = (() => {
+  let tokenClient = null;
+  let accessToken = null;
+
+  function init() {
+    if (!window.google) { setTimeout(init, 500); return; }
+    tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID,
+      scope: SCOPES,
+      callback: (resp) => {
+        if (resp.error) return;
+        accessToken = resp.access_token;
+        document.getElementById('authBtn').textContent = '✅ 連携済み';
+        setSyncStatus('synced');
+        loadFromDrive();
+      }
+    });
+    // try silent
+    tokenClient.requestAccessToken({ prompt: '' });
+  }
+
+  function signIn() {
+    if (!tokenClient) return;
+    tokenClient.requestAccessToken({ prompt: 'consent' });
+  }
+
+  function getToken() { return accessToken; }
+
+  return { init, signIn, getToken };
+})();
+
+function setSyncStatus(state) {
+  const el = document.getElementById('syncStatus');
+  if (state === 'synced') { el.textContent = '☁️ Synced'; el.className = 'sync-status synced'; }
+  else { el.textContent = '⚠️ Local only'; el.className = 'sync-status local'; }
+}
+
+// ═══════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════
+function switchTab(id) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ═══════════════════════════════════════════════
+// CSV PARSING
+// ═══════════════════════════════════════════════
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('dropZone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) parseCSV(file);
+}
+
+function handleFileInput(e) {
+  const file = e.target.files[0];
+  if (file) parseCSV(file);
+}
+
+function parseCSV(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const decoder = new TextDecoder('shift-jis');
+      const text = decoder.decode(e.target.result);
+      processCSVText(text);
+    } catch(err) {
+      showImportResult('❌ 読み込みエラー: ' + err.message, true);
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function processCSVText(text) {
+  const lines = text.split('\n').map(l => l.replace(/\r$/, ''));
+  // Skip row 0 (timestamp), row 1 (headers)
+  const dataLines = lines.slice(2).filter(l => l.trim());
+
+  const newTrades = [];
+  for (const line of dataLines) {
+    const cols = splitCSVLine(line);
+    if (cols.length < 11) continue;
+
+    const product = cols[2].trim();
+    if (product === '金銭' || product === '') continue;
+
+    const settleDate = cols[0].trim();
+    const tradeDate  = cols[1].trim();
+    const code       = cols[3].trim();
+    const name       = cols[4].trim();
+    const account    = cols[5].trim();
+    const tradeType  = cols[6].trim();
+    const qty        = parseInt(cols[7].replace(/,/g,'')) || 0;
+    const price      = parseFloat(cols[8].replace(/,/g,'')) || 0;
+    const amount     = parseInt((cols[10] || '0').replace(/,/g,'')) || 0; // 受渡金額合計
+    const fees       = parseInt((cols[11] || '0').replace(/,/g,'')) || 0; // 諸費用合計
+    const balance    = parseInt((cols[12] || '0').replace(/,/g,'')) || 0; // 口座残高
+
+    const isMargin = product.includes('信用');
+    const isBuy    = tradeType === '買付' || tradeType === '新規買';
+    const isSell   = tradeType === '売付' || tradeType === '返済売';
+
+    newTrades.push({
+      settleDate, tradeDate, product, code, name, account,
+      tradeType, qty, price, amount, fees, balance,
+      isMargin, isBuy, isSell
+    });
+  }
+
+  // Calculate P&L
+  const withPnl = calculatePnl(newTrades);
+
+  // Duplicate check
+  const existing = trades;
+  const makeKey = t => `${t.settleDate}|${t.tradeDate}|${t.code}|${t.tradeType}|${t.qty}|${t.price}`;
+  const existingKeys = new Set(existing.map(makeKey));
+
+  let added = 0, skipped = 0;
+  const toAdd = [];
+  for (const t of withPnl) {
+    const k = makeKey(t);
+    if (existingKeys.has(k)) { skipped++; }
+    else { toAdd.push(t); added++; }
+  }
+
+  trades = [...existing, ...toAdd].sort((a,b) => b.tradeDate.localeCompare(a.tradeDate));
+
+  showImportResult(`✅ ${withPnl.length}件の取引を読み込みました / 新規: ${added}件 / 重複: ${skipped}件`, false);
+  saveLocal();
+  saveToDrive();
+  refreshAll();
+}
+
+function splitCSVLine(line) {
+  const result = [];
+  let cur = '';
+  let inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') { inQ = !inQ; }
+    else if (c === ',' && !inQ) { result.push(cur); cur = ''; }
+    else { cur += c; }
+  }
+  result.push(cur);
+  return result;
+}
+
+function calculatePnl(rawTrades) {
+  // Sort by date
+  const sorted = [...rawTrades].sort((a,b) => a.tradeDate.localeCompare(b.tradeDate));
+
+  // For 現物: match BUY and SELL same code same day
+  // P&L = SELL amount + BUY amount (BUY is negative)
+  // For 信用: fees = P&L on 返済売
+
+  // Group 現物 by date+code
+  const spotGroups = {};
+  for (const t of sorted) {
+    if (!t.isMargin) {
+      const key = t.tradeDate + '|' + t.code;
+      if (!spotGroups[key]) spotGroups[key] = [];
+      spotGroups[key].push(t);
+    }
+  }
+
+  // Compute spot P&L
+  const spotPnlMap = {};
+  for (const [key, group] of Object.entries(spotGroups)) {
+    const totalSell = group.filter(t => t.isSell).reduce((s,t) => s + t.amount, 0);
+    const totalBuy  = group.filter(t => t.isBuy).reduce((s,t) => s + t.amount, 0);
+    // amount for sell is positive, for buy is negative in SBI
+    const pnl = totalSell + totalBuy;
+    for (const t of group) {
+      spotPnlMap[key] = pnl;
+    }
+  }
+
+  return sorted.map(t => {
+    let pnl = null;
+    if (t.isMargin) {
+      if (t.tradeType === '返済売') {
+        pnl = t.fees; // 諸費用合計 = realized P&L
+      }
+    } else {
+      const key = t.tradeDate + '|' + t.code;
+      if (t.isSell) {
+        pnl = spotPnlMap[key] || null;
+      }
+    }
+    return { ...t, pnl };
+  });
+}
+
+function showImportResult(msg, isError) {
+  const el = document.getElementById('importResult');
+  el.style.display = 'block';
+  el.textContent = msg;
+  el.className = 'import-result' + (isError ? ' error' : '');
+}
+
+// ═══════════════════════════════════════════════
+// LOCAL STORAGE
+// ═══════════════════════════════════════════════
+function saveLocal() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(trades)); } catch(e) {}
+}
+
+function loadLocal() {
+  try {
+    const d = localStorage.getItem(LS_KEY);
+    if (d) { trades = JSON.parse(d); refreshAll(); }
+  } catch(e) {}
+}
+
+function saveTargets() {
+  const targets = {
+    week: document.getElementById('weekTarget').value,
+    month: document.getElementById('monthTarget').value,
+    year: document.getElementById('yearTarget').value
+  };
+  localStorage.setItem(LS_TARGETS, JSON.stringify(targets));
+}
+
+function loadTargets() {
+  try {
+    const d = localStorage.getItem(LS_TARGETS);
+    if (d) {
+      const t = JSON.parse(d);
+      document.getElementById('weekTarget').value = t.week || '';
+      document.getElementById('monthTarget').value = t.month || '';
+      document.getElementById('yearTarget').value = t.year || '';
+    }
+  } catch(e) {}
+}
+
+// ═══════════════════════════════════════════════
+// GOOGLE DRIVE
+// ═══════════════════════════════════════════════
+async function findDriveFile() {
+  const token = AUTH.getToken();
+  if (!token) return null;
+  const resp = await fetch(`https://www.googleapis.com/drive/v3/files?q=name='${DRIVE_FILE}' and trashed=false&fields=files(id,name,modifiedTime)`, {
+    headers: { Authorization: 'Bearer ' + token }
+  });
+  const data = await resp.json();
+  return data.files && data.files.length ? data.files[0] : null;
+}
+
+async function loadFromDrive() {
+  const token = AUTH.getToken();
+  if (!token) { loadLocal(); return; }
+  try {
+    const file = await findDriveFile();
+    if (!file) { loadLocal(); return; }
+    const resp = await fetch(`https://www.googleapis.com/drive/v3/files/${file.id}?alt=media`, {
+      headers: { Authorization: 'Bearer ' + token }
+    });
+    const data = await resp.json();
+    if (Array.isArray(data)) {
+      trades = data;
+      saveLocal();
+      setSyncStatus('synced');
+      refreshAll();
+    }
+  } catch(e) { loadLocal(); }
+}
+
+async function saveToDrive() {
+  const token = AUTH.getToken();
+  if (!token) { setSyncStatus('local'); return; }
+  try {
+    const content = JSON.stringify(trades);
+    const blob = new Blob([content], { type: 'application/json' });
+    const file = await findDriveFile();
+
+    if (file) {
+      await fetch(`https://www.googleapis.com/upload/drive/v3/files/${file.id}?uploadType=media`, {
+        method: 'PATCH',
+        headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: content
+      });
+    } else {
+      const meta = new Blob([JSON.stringify({ name: DRIVE_FILE })], { type: 'application/json' });
+      const form = new FormData();
+      form.append('metadata', meta);
+      form.append('file', blob);
+      await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + token },
+        body: form
+      });
+    }
+    setSyncStatus('synced');
+  } catch(e) { setSyncStatus('local'); }
+}
+
+// ═══════════════════════════════════════════════
+// REFRESH ALL
+// ═══════════════════════════════════════════════
+function refreshAll() {
+  updateStatCards();
+  updateTargetTable();
+  renderBarChart();
+  renderHistory();
+  renderStockSummary();
+}
+
+// ═══════════════════════════════════════════════
+// FORMAT
+// ═══════════════════════════════════════════════
+function fmt(n) {
+  if (n === null || n === undefined) return '—';
+  const abs = Math.abs(n);
+  const str = '¥' + abs.toLocaleString('ja-JP');
+  return n < 0 ? '-' + str : str;
+}
+
+function fmtPnl(n) {
+  if (n === null || n === undefined) return { text: '—', cls: 'muted' };
+  return { text: (n >= 0 ? '+' : '') + fmt(n), cls: n >= 0 ? 'green' : 'red' };
+}
+
+function pnlColor(el, n) {
+  if (n === null || n === undefined) { el.className = 'stat-value neutral'; el.textContent = '¥0'; return; }
+  el.className = 'stat-value ' + (n > 0 ? 'positive' : n < 0 ? 'negative' : 'neutral');
+  el.textContent = (n >= 0 ? '+' : '') + fmt(n);
+}
+
+// ═══════════════════════════════════════════════
+// STAT CARDS
+// ═══════════════════════════════════════════════
+function updateStatCards() {
+  const todayStr = TODAY; // YYYY-MM-DD
+  const nowMonth = TODAY.slice(0, 7);
+  const nowYear  = TODAY.slice(0, 4);
+
+  // Settled P&L trades (pnl != null)
+  const pnlTrades = trades.filter(t => t.pnl !== null && t.pnl !== undefined);
+
+  const todayPnl = pnlTrades.filter(t => t.tradeDate.replace(/\//g, '-') === todayStr)
+                             .reduce((s,t) => s + t.pnl, 0);
+  const monthPnl = pnlTrades.filter(t => t.tradeDate.replace(/\//g, '-').slice(0,7) === nowMonth)
+                             .reduce((s,t) => s + t.pnl, 0);
+  const totalPnl = pnlTrades.reduce((s,t) => s + t.pnl, 0);
+
+  pnlColor(document.getElementById('todayPnl'), todayPnl);
+  pnlColor(document.getElementById('monthPnl'), monthPnl);
+  pnlColor(document.getElementById('totalPnl'), totalPnl);
+
+  document.getElementById('todayDate').textContent = todayStr;
+  document.getElementById('monthLabel').textContent = nowMonth;
+
+  // Latest balance
+  const withBal = trades.filter(t => t.balance);
+  if (withBal.length) {
+    const latest = withBal.reduce((a,b) => a.tradeDate > b.tradeDate ? a : b);
+    document.getElementById('balance').textContent = fmt(latest.balance);
+    document.getElementById('balanceDate').textContent = latest.tradeDate + ' 現在';
+  }
+}
+
+// ═══════════════════════════════════════════════
+// TARGET TABLE
+// ═══════════════════════════════════════════════
+function updateTargetTable() {
+  const weekT = parseInt(document.getElementById('weekTarget').value) || null;
+  const monthT = parseInt(document.getElementById('monthTarget').value) || null;
+  const yearT  = parseInt(document.getElementById('yearTarget').value) || null;
+
+  const today = new Date(TODAY);
+  const nowMonth = TODAY.slice(0, 7);
+  const nowYear  = TODAY.slice(0, 4);
+
+  // Week start (Monday)
+  const dow = today.getDay() || 7;
+  const weekStart = new Date(today);
+  weekStart.setDate(today.getDate() - (dow - 1));
+  const weekStartStr = weekStart.toISOString().slice(0,10);
+
+  const pnlTrades = trades.filter(t => t.pnl !== null && t.pnl !== undefined);
+
+  function weekActual() {
+    return pnlTrades.filter(t => {
+      const d = t.tradeDate.replace(/\//g, '-');
+      return d >= weekStartStr && d <= TODAY;
+    }).reduce((s,t) => s + t.pnl, 0);
+  }
+
+  function todayActual() {
+    return pnlTrades.filter(t => t.tradeDate.replace(/\//g, '-') === TODAY).reduce((s,t) => s + t.pnl, 0);
+  }
+
+  function monthActual() {
+    return pnlTrades.filter(t => t.tradeDate.replace(/\//g, '-').slice(0,7) === nowMonth).reduce((s,t) => s + t.pnl, 0);
+  }
+
+  function yearActual() {
+    return pnlTrades.filter(t => t.tradeDate.replace(/\//g, '-').slice(0,4) === nowYear).reduce((s,t) => s + t.pnl, 0);
+  }
+
+  function statusEmoji(pct) {
+    if (pct === null) return '—';
+    if (pct >= 100) return '🟢';
+    if (pct >= 50)  return '🟡';
+    return '🔴';
+  }
+
+  function row(label, target, actual) {
+    const p = target ? fmtPnl(actual) : fmtPnl(actual);
+    const diff = target ? actual - target : null;
+    const pct  = target ? Math.round(actual / target * 100) : null;
+    return `<tr>
+      <td>${label}</td>
+      <td>${target !== null ? fmt(target) : '—'}</td>
+      <td class="${p.cls}">${p.text}</td>
+      <td class="${diff !== null ? (diff >= 0 ? 'green' : 'red') : 'muted'}">${diff !== null ? ((diff >= 0 ? '+' : '') + fmt(diff)) : '—'}</td>
+      <td>${pct !== null ? pct + '%' : '—'}</td>
+      <td>${statusEmoji(pct)}</td>
+    </tr>`;
+  }
+
+  document.getElementById('targetTableBody').innerHTML =
+    row('今日', null, todayActual()) +
+    row('今週', weekT, weekActual()) +
+    row('今月', monthT, monthActual()) +
+    row('今年', yearT, yearActual());
+}
+
+// ═══════════════════════════════════════════════
+// BAR CHART
+// ═══════════════════════════════════════════════
+function renderBarChart() {
+  const el = document.getElementById('barChart');
+
+  // Get last 30 trading days with P&L
+  const dayMap = {};
+  for (const t of trades) {
+    if (t.pnl === null || t.pnl === undefined) continue;
+    const d = t.tradeDate.replace(/\//g, '-');
+    dayMap[d] = (dayMap[d] || 0) + t.pnl;
+  }
+
+  const days = Object.keys(dayMap).sort().slice(-30);
+  if (days.length === 0) {
+    el.innerHTML = '<div class="empty-state" style="width:100%;"><div class="empty-icon">📊</div>データなし</div>';
+    return;
+  }
+
+  const values = days.map(d => dayMap[d]);
+  const max = Math.max(...values.map(Math.abs), 1);
+  const chartH = 140; // px for half chart
+
+  // Determine zero line position
+  const hasNeg = values.some(v => v < 0);
+  const hasPos = values.some(v => v > 0);
+
+  let html = '';
+  for (let i = 0; i < days.length; i++) {
+    const v = values[i];
+    const pct = Math.abs(v) / max;
+    const barPx = Math.max(2, Math.round(pct * chartH));
+    const label = days[i].slice(5); // MM-DD
+    const fmtV = (v >= 0 ? '+' : '') + '¥' + Math.abs(v).toLocaleString('ja-JP');
+    html += `<div class="bar-col">
+      <div class="bar-tooltip">${days[i]}<br><span class="${v>=0?'green':'red'}">${fmtV}</span></div>
+      ${v >= 0
+        ? `<div style="flex:1;display:flex;align-items:flex-end;width:100%;"><div class="bar pos-bar" style="height:${barPx}px;width:100%;"></div></div>
+           <div style="height:${chartH}px;"></div>`
+        : `<div style="height:${chartH}px;"></div>
+           <div style="flex:1;display:flex;align-items:flex-start;width:100%;"><div class="bar neg-bar neg" style="height:${barPx}px;width:100%;"></div></div>`
+      }
+      <div class="bar-label">${label}</div>
+    </div>`;
+  }
+
+  // Render zero-line in middle
+  el.style.position = 'relative';
+  el.innerHTML = html;
+  const zeroLine = document.createElement('div');
+  zeroLine.className = 'zero-line';
+  zeroLine.style.top = (chartH + 24) + 'px'; // rough center
+  el.appendChild(zeroLine);
+}
+
+// ═══════════════════════════════════════════════
+// HISTORY TABLE
+// ═══════════════════════════════════════════════
+function sortHistory(col) {
+  if (sortCol === col) { sortAsc = !sortAsc; }
+  else { sortCol = col; sortAsc = false; }
+  histPage = 1;
+  renderHistory();
+}
+
+function getFilteredTrades() {
+  const search = (document.getElementById('searchInput').value || '').toLowerCase();
+  const typeF  = document.getElementById('typeFilter').value;
+  const pnlF   = document.getElementById('pnlFilter').value;
+
+  return trades.filter(t => {
+    if (search && !t.name.toLowerCase().includes(search) && !t.code.toLowerCase().includes(search)) return false;
+    if (typeF === '現物' && t.isMargin) return false;
+    if (typeF === '信用' && !t.isMargin) return false;
+    if (pnlF === 'profit' && !(t.pnl > 0)) return false;
+    if (pnlF === 'loss' && !(t.pnl < 0)) return false;
+    return true;
+  }).sort((a, b) => {
+    let va, vb;
+    switch (sortCol) {
+      case 'tradeDate':  va = a.tradeDate; vb = b.tradeDate; break;
+      case 'settleDate': va = a.settleDate; vb = b.settleDate; break;
+      case 'name': va = a.name; vb = b.name; break;
+      case 'code': va = a.code; vb = b.code; break;
+      case 'qty':  va = a.qty; vb = b.qty; break;
+      case 'price':va = a.price; vb = b.price; break;
+      case 'pnl':  va = a.pnl || 0; vb = b.pnl || 0; break;
+      default:     va = a.tradeDate; vb = b.tradeDate;
+    }
+    if (va < vb) return sortAsc ? -1 : 1;
+    if (va > vb) return sortAsc ? 1 : -1;
+    return 0;
+  });
+}
+
+function renderHistory() {
+  const filtered = getFilteredTrades();
+  const total = filtered.length;
+  const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  if (histPage > pages) histPage = pages;
+
+  const slice = filtered.slice((histPage - 1) * PAGE_SIZE, histPage * PAGE_SIZE);
+
+  const body = document.getElementById('historyBody');
+  if (slice.length === 0) {
+    body.innerHTML = '<tr><td colspan="10" class="empty-state" style="text-align:center;padding:40px;">データなし</td></tr>';
+  } else {
+    body.innerHTML = slice.map(t => {
+      const p = fmtPnl(t.pnl);
+      const rowCls = t.pnl > 0 ? 'profit' : t.pnl < 0 ? 'loss' : '';
+      const tradeBadge = t.isBuy ? '<span class="badge badge-buy">BUY</span>' : '<span class="badge badge-sell">SELL</span>';
+      const typeBadge  = t.isMargin ? '<span class="badge badge-margin">信用</span>' : '<span class="badge badge-spot">現物</span>';
+      return `<tr class="${rowCls}">
+        <td>${t.tradeDate}</td>
+        <td>${t.settleDate}</td>
+        <td>${t.name}</td>
+        <td>${t.code}</td>
+        <td>${tradeBadge}</td>
+        <td>${typeBadge}</td>
+        <td>${t.qty.toLocaleString()}</td>
+        <td>¥${t.price.toLocaleString()}</td>
+        <td class="${p.cls}">${p.text}</td>
+        <td class="muted">${t.balance ? fmt(t.balance) : '—'}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  // Pagination
+  const pag = document.getElementById('historyPagination');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+
+  let pagHtml = `<button class="page-btn" onclick="histPage=${Math.max(1,histPage-1)};renderHistory()" ${histPage===1?'disabled':''}>‹</button>`;
+  for (let i = 1; i <= pages; i++) {
+    if (i === 1 || i === pages || Math.abs(i - histPage) <= 2) {
+      pagHtml += `<button class="page-btn ${i===histPage?'active':''}" onclick="histPage=${i};renderHistory()">${i}</button>`;
+    } else if (Math.abs(i - histPage) === 3) {
+      pagHtml += `<span class="page-info">…</span>`;
+    }
+  }
+  pagHtml += `<button class="page-btn" onclick="histPage=${Math.min(pages,histPage+1)};renderHistory()" ${histPage===pages?'disabled':''}>›</button>`;
+  pagHtml += `<span class="page-info">${total}件中 ${(histPage-1)*PAGE_SIZE+1}–${Math.min(histPage*PAGE_SIZE,total)}件</span>`;
+  pag.innerHTML = pagHtml;
+}
+
+// ═══════════════════════════════════════════════
+// STOCK SUMMARY
+// ═══════════════════════════════════════════════
+function renderStockSummary() {
+  const map = {};
+  for (const t of trades) {
+    if (t.pnl === null || t.pnl === undefined) continue;
+    if (!map[t.code]) map[t.code] = { code: t.code, name: t.name, count: 0, total: 0, wins: 0 };
+    map[t.code].count++;
+    map[t.code].total += t.pnl;
+    if (t.pnl > 0) map[t.code].wins++;
+  }
+
+  const rows = Object.values(map).sort((a,b) => b.total - a.total);
+  const body = document.getElementById('stockSummaryBody');
+
+  if (rows.length === 0) {
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--muted);">データなし</td></tr>';
+    return;
+  }
+
+  body.innerHTML = rows.map(r => {
+    const winRate = r.count ? Math.round(r.wins / r.count * 100) : 0;
+    const avg = r.count ? Math.round(r.total / r.count) : 0;
+    const p = fmtPnl(r.total);
+    const ap = fmtPnl(avg);
+    return `<tr class="${r.total >= 0 ? 'profit' : 'loss'}">
+      <td><strong>${r.code}</strong></td>
+      <td>${r.name}</td>
+      <td>${r.count}回</td>
+      <td class="${p.cls}">${p.text}</td>
+      <td>${winRate}%</td>
+      <td class="${ap.cls}">${ap.text}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════
+// AI ANALYSIS
+// ═══════════════════════════════════════════════
+async function runAIAnalysis() {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) {
+    document.getElementById('aiError').style.display = 'block';
+    document.getElementById('aiError').textContent = '❌ APIキーが設定されていません。メインページで設定してください。';
+    return;
+  }
+
+  const btn = document.getElementById('analyzeBtn');
+  btn.disabled = true;
+  document.getElementById('aiResult').style.display = 'none';
+  document.getElementById('aiError').style.display = 'none';
+  document.getElementById('aiLoading').style.display = 'block';
+
+  const todayStr = TODAY;
+  const todayTrades = trades.filter(t => t.tradeDate.replace(/\//g, '-') === todayStr);
+
+  // Build trade summary
+  const tradesSummary = todayTrades.map(t => ({
+    銘柄: t.name, コード: t.code, 取引: t.tradeType,
+    数量: t.qty, 単価: t.price, 損益: t.pnl
+  }));
+
+  // Recent P&L pattern (last 10 trading days)
+  const dayMap = {};
+  for (const t of trades) {
+    if (t.pnl !== null && t.pnl !== undefined) {
+      const d = t.tradeDate.replace(/\//g, '-');
+      dayMap[d] = (dayMap[d] || 0) + t.pnl;
+    }
+  }
+  const recentPattern = Object.entries(dayMap).sort().slice(-10)
+    .map(([d,v]) => ({ 日付: d, 損益: v }));
+
+  const systemPrompt = `You are a trading analysis system providing advice from three different investment advisor perspectives.
+Analyze the trades and market news provided.
+Respond in Japanese.
+Format your response as JSON with this structure:
+{
+  "marketNews": ["news1", "news2"],
+  "aggressive": {
+    "title": "積極派アドバイザー",
+    "score": 75,
+    "good": ["良かった点1", "良かった点2"],
+    "bad": ["改善点1", "改善点2"],
+    "advice": "具体的なアドバイス（明日の戦略など）",
+    "nextAction": "明日やるべきこと"
+  },
+  "intermediate": {
+    "title": "バランス派アドバイザー",
+    "score": 70,
+    "good": [],
+    "bad": [],
+    "advice": "",
+    "nextAction": ""
+  },
+  "conservative": {
+    "title": "堅実派アドバイザー",
+    "score": 65,
+    "good": [],
+    "bad": [],
+    "advice": "",
+    "nextAction": ""
+  }
+}`;
+
+  const userMsg = `今日（${todayStr}）の取引データ:
+${JSON.stringify(tradesSummary, null, 2)}
+
+直近の損益パターン:
+${JSON.stringify(recentPattern, null, 2)}
+
+以下のwebサーチで本日の日本株市場ニュースも調べて分析に含めてください:
+検索クエリ: "日経平均 株式市場 ニュース ${todayStr}"`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-beta': 'interleaved-thinking-2025-05-14'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 4096,
+        tools: [{
+          type: 'web_search_20250305',
+          name: 'web_search',
+          max_uses: 3
+        }],
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userMsg }]
+      })
+    });
+
+    const data = await resp.json();
+
+    // Find text content in response
+    let jsonStr = '';
+    if (data.content) {
+      for (const block of data.content) {
+        if (block.type === 'text') { jsonStr += block.text; }
+      }
+    }
+
+    // Extract JSON from response
+    const match = jsonStr.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('JSONが見つかりません: ' + jsonStr.slice(0, 200));
+
+    const result = JSON.parse(match[0]);
+    displayAIResult(result);
+
+  } catch (err) {
+    document.getElementById('aiError').style.display = 'block';
+    document.getElementById('aiError').textContent = '❌ AI分析エラー: ' + err.message;
+  } finally {
+    btn.disabled = false;
+    document.getElementById('aiLoading').style.display = 'none';
+  }
+}
+
+function displayAIResult(result) {
+  document.getElementById('aiResult').style.display = 'block';
+
+  // News
+  const newsList = document.getElementById('newsList');
+  const news = result.marketNews || [];
+  newsList.innerHTML = news.map(n => `<li class="news-item">• ${n}</li>`).join('') || '<li class="news-item muted">ニュースなし</li>';
+
+  // Advisors
+  const advisors = [
+    { key: 'aggressive',   icon: '🔥', color: 'score-high' },
+    { key: 'intermediate', icon: '⚖️', color: 'score-mid' },
+    { key: 'conservative', icon: '🛡️', color: 'score-low' }
+  ];
+
+  document.getElementById('advisorGrid').innerHTML = advisors.map(({ key, icon, color }) => {
+    const a = result[key] || {};
+    const score = a.score || 0;
+    const scoreCls = score >= 70 ? 'score-high' : score >= 50 ? 'score-mid' : 'score-low';
+    const goods = (a.good || []).map(g => `<li>✅ ${g}</li>`).join('');
+    const bads  = (a.bad  || []).map(b => `<li>❌ ${b}</li>`).join('');
+    return `<div class="advisor-card">
+      <div class="advisor-header">
+        <div class="advisor-icon">${icon}</div>
+        <div class="advisor-name">${a.title || key}</div>
+      </div>
+      <div class="score-circle ${scoreCls}">${score}</div>
+      ${goods ? `<div class="advisor-section"><div class="advisor-section-title">良かった点</div><ul class="advisor-list">${goods}</ul></div>` : ''}
+      ${bads  ? `<div class="advisor-section"><div class="advisor-section-title">改善点</div><ul class="advisor-list">${bads}</ul></div>` : ''}
+      ${a.advice ? `<div class="advisor-section"><div class="advisor-section-title">💡 アドバイス</div><div class="advisor-advice">${a.advice}</div></div>` : ''}
+      ${a.nextAction ? `<div class="advisor-section"><div class="advisor-section-title">🎯 明日のアクション</div><div class="advisor-advice">${a.nextAction}</div></div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadTargets();
+  loadLocal();
+  AUTH.init();
+});
+</script>
+</body>
+</html>
