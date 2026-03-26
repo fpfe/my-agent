@@ -428,6 +428,20 @@ body {
         <div class="news-list" id="news-list"></div>
       </div>
 
+      <div id="apikey-section" style="display:none;margin-bottom:14px;padding:12px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:8px;">
+        <div style="color:#fca5a5;font-size:12px;font-weight:700;margin-bottom:6px;">⚠️ APIキーが未設定です</div>
+        <div style="color:var(--muted);font-size:11px;line-height:1.7;margin-bottom:10px;">
+          設定方法：ブラウザのコンソール（F12）で以下を実行してください：<br>
+          <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:#a5b4fc;font-size:11px;">localStorage.setItem('ja2_apikey', 'YOUR_KEY')</code><br>
+          その後ページを再読み込みしてください。<br>
+          またはこちらから直接設定：
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input type="password" id="apikey-input" placeholder="sk-ant-..." style="flex:1;background:var(--card2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;">
+          <button onclick="saveApiKey()" style="background:var(--indigo);color:white;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;">保存</button>
+        </div>
+      </div>
+
       <div id="advisor-body">
         <div class="ai-placeholder">
           分析ボタンを押してAIアドバイスを取得してください。<br>
@@ -1027,14 +1041,58 @@ function getTargetRate() {
   return parseFloat(localStorage.getItem('trading_target_pct') || '0.1') / 100;
 }
 
+// Calculate total assets = 口座残高 + open position value
+// Open position: 買付 rows where no 売付 of same 銘柄コード exists on same or later date
+function calcTotalAssets(latestBal) {
+  if (!latestBal && latestBal !== 0) return null;
+  if (!allTrades.length) return latestBal;
+
+  // For each 銘柄コード, find 買付 rows without a later-or-same-date 売付
+  // Group buys and sells by 銘柄コード
+  const byCode = {};
+  for (const t of allTrades) {
+    if (t.商品 !== '株式') continue; // only 現物 open positions
+    if (!byCode[t.銘柄コード]) byCode[t.銘柄コード] = { buys: [], sells: [] };
+    if (t.取引種別 === '買付') byCode[t.銘柄コード].buys.push(t);
+    if (t.取引種別 === '売付') byCode[t.銘柄コード].sells.push(t);
+  }
+
+  let openValue = 0;
+  for (const code of Object.keys(byCode)) {
+    const { buys, sells } = byCode[code];
+    if (!buys.length) continue;
+
+    // Total bought qty
+    const totalBought = buys.reduce((s, t) => s + t.数量, 0);
+    // Total sold qty (all sells, any date)
+    const totalSold = sells.reduce((s, t) => s + t.数量, 0);
+    const openQty = totalBought - totalSold;
+
+    if (openQty <= 0) continue;
+
+    // Use the latest recorded 単価 for this code (most recent buy or sell)
+    const allTrades_code = [...buys, ...sells].sort((a, b) => b.約定日.localeCompare(a.約定日));
+    const latestPrice = allTrades_code[0].単価;
+
+    openValue += openQty * latestPrice;
+  }
+
+  return latestBal + openValue;
+}
+
 function updateTargetInfo(bal) {
   const el = document.getElementById('target-info');
-  if (bal) {
-    const daily = Math.round(bal * getTargetRate());
-    el.innerHTML = `目標額: <strong>¥${daily.toLocaleString()}/日</strong>`;
-  } else {
-    el.textContent = '目標額: —';
-  }
+  if (!bal && bal !== 0) { el.textContent = '目標額: —'; return; }
+
+  const totalAssets = calcTotalAssets(bal);
+  if (!totalAssets) { el.textContent = '目標額: —'; return; }
+
+  const rate = getTargetRate();
+  const daily = Math.round(totalAssets * rate);
+  const pct = (rate * 100).toFixed(2).replace(/\.?0+$/, '');
+  el.innerHTML =
+    `目標額: <strong>¥${daily.toLocaleString()}/日</strong>` +
+    `<div style="font-size:11px;color:var(--muted2);margin-top:2px">（総資産 ¥${totalAssets.toLocaleString()} × ${pct}%）</div>`;
 }
 
 // ═══════════════════════════════════════════
@@ -1281,12 +1339,22 @@ function renderAll() {
 // ═══════════════════════════════════════════
 // AI ADVISOR
 // ═══════════════════════════════════════════
+function saveApiKey() {
+  const val = document.getElementById('apikey-input').value.trim();
+  if (!val) return;
+  localStorage.setItem('ja2_apikey', val);
+  document.getElementById('apikey-section').style.display = 'none';
+  document.getElementById('apikey-input').value = '';
+  showStatus('✅ APIキーを保存しました。再度ボタンを押してください。');
+}
+
 async function runAI() {
   const apiKey = localStorage.getItem('ja2_apikey');
   if (!apiKey) {
-    alert('APIキーが設定されていません。\nブラウザのコンソールで以下を実行してください:\nlocalStorage.setItem("ja2_apikey", "YOUR_KEY")');
+    document.getElementById('apikey-section').style.display = 'block';
     return;
   }
+  document.getElementById('apikey-section').style.display = 'none';
 
   const btn = document.getElementById('analyze-btn');
   btn.disabled = true;
