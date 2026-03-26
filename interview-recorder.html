@@ -255,6 +255,59 @@ body{
 </script>
 <!-- END PASSWORD PROTECTION -->
 
+<!-- ── MIX MODAL ── -->
+<style>
+.mix-modal-bg{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.65);backdrop-filter:blur(3px);
+  align-items:center;justify-content:center;
+}
+.mix-modal-bg.show{display:flex}
+.mix-modal{
+  background:#243447;border:1px solid #2d3f55;border-radius:18px;
+  padding:28px 24px;width:min(400px,92vw);box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.mix-modal-title{font-size:16px;font-weight:700;margin-bottom:14px;color:#e2e8f0}
+.mix-modal-steps{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.mix-modal-steps li{
+  display:flex;align-items:flex-start;gap:10px;font-size:13px;
+  color:#94a3b8;line-height:1.5;
+}
+.mix-modal-steps li .step-n{
+  width:22px;height:22px;border-radius:50%;background:#4f7ef8;color:white;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.mix-modal-note{
+  background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);
+  border-radius:9px;padding:10px 13px;font-size:12px;color:#6ee7b7;margin-bottom:18px;
+}
+.mix-modal-btns{display:flex;gap:10px}
+.mix-modal-btns .btn{flex:1;justify-content:center}
+.chrome-warn{
+  display:none;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);
+  border-radius:9px;padding:9px 13px;font-size:12px;color:#fde68a;margin-bottom:10px;
+}
+.live-box.warn{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.3);color:#fde68a}
+</style>
+
+<div class="mix-modal-bg" id="mix-modal">
+  <div class="mix-modal">
+    <div class="mix-modal-title">📋 録音手順 — 相手の声も録音する</div>
+    <ol class="mix-modal-steps">
+      <li><span class="step-n">1</span>次の「画面共有」ダイアログで<br>「タブ」または「画面全体」を選択する</li>
+      <li><span class="step-n">2</span>必ず <strong style="color:#e2e8f0">「音声を共有」にチェック ✅</strong> を入れる<br><span style="font-size:11px;color:#64748b">（チェックなしだと相手の声が録音されません）</span></li>
+      <li><span class="step-n">3</span>「共有」ボタンをクリックする</li>
+    </ol>
+    <div class="mix-modal-note">
+      ✅ 設定完了後：<strong>あなたの声（マイク）+ 相手の声（スピーカー）</strong>が<br>
+      両方録音されます
+    </div>
+    <div class="mix-modal-btns">
+      <button class="btn btn-primary" onclick="confirmMixedRecording()">OK — 画面共有を開く</button>
+      <button class="btn btn-stop" onclick="cancelMixedRecording()">マイクのみで録音</button>
+    </div>
+  </div>
+</div>
 
 <div class="header">
   <div class="header-left">
@@ -293,6 +346,9 @@ body{
       <button class="btn btn-record" id="btn-start" onclick="startRecording()">
         ⏺ Start Recording
       </button>
+      <div class="chrome-warn" id="chrome-warn">
+        ⚠️ 相手の声の録音はChromeでのみ動作します。このブラウザではマイクのみ録音されます。
+      </div>
       <button class="btn btn-stop hidden" id="btn-stop" onclick="stopRecording()">
         ⏹ Stop Recording
       </button>
@@ -420,6 +476,10 @@ let audioChunks   = [];
 let audioMimeType = '';
 let isRecording   = false;
 let finalBuffer   = '';     // accumulated final transcript text
+let micStream     = null;   // microphone MediaStream
+let displayStream = null;   // system audio MediaStream (getDisplayMedia)
+let audioContext  = null;   // AudioContext for mixing
+let mixedMode     = false;  // true = mic + system audio mixed
 let timerInterval = null;
 let timerStart    = null;
 let currentModalId = null;
@@ -505,20 +565,47 @@ function downloadAudio() {
 }
 
 // ══════════════════════════════════════════
-//  START — launches both SpeechRecognition
-//           AND MediaRecorder in parallel
+//  START — Step 1: check browser, show modal
 // ══════════════════════════════════════════
-async function startRecording() {
+function startRecording() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
     setLive('❌ Speech Recognition not supported. Use Chrome or Safari on iOS.', 'error');
     return;
   }
 
-  // ── 1. Get microphone stream for MediaRecorder ──
-  let stream;
+  const isChrome = /Chrome/.test(navigator.userAgent) && !/Edg\/|OPR\//.test(navigator.userAgent);
+  if (!isChrome) {
+    // Non-Chrome: no system audio support — show warning, go straight to mic-only
+    document.getElementById('chrome-warn').style.display = 'block';
+    beginRecording(false);
+    return;
+  }
+
+  // Chrome: show instruction modal
+  document.getElementById('mix-modal').classList.add('show');
+}
+
+function confirmMixedRecording() {
+  document.getElementById('mix-modal').classList.remove('show');
+  beginRecording(true);
+}
+
+function cancelMixedRecording() {
+  document.getElementById('mix-modal').classList.remove('show');
+  beginRecording(false);
+}
+
+// ══════════════════════════════════════════
+//  BEGIN — get streams, mix if requested,
+//           launch MediaRecorder + SpeechRecognition
+// ══════════════════════════════════════════
+async function beginRecording(tryMixed) {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  // ── 1. Get microphone ──
   try {
-    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
   } catch (err) {
     console.error('[Recorder] getUserMedia:', err);
     const msg = err.name === 'NotAllowedError'
@@ -528,24 +615,68 @@ async function startRecording() {
     return;
   }
 
-  // ── 2. Start MediaRecorder (audio capture for download) ──
+  // ── 2. Try system audio via getDisplayMedia ──
+  let recordingStream = micStream;
+  mixedMode = false;
+
+  if (tryMixed) {
+    try {
+      displayStream = await navigator.mediaDevices.getDisplayMedia({
+        video: false,
+        audio: {
+          echoCancellation: false,
+          noiseSuppression: false,
+          sampleRate: 44100
+        }
+      });
+
+      if (displayStream.getAudioTracks().length === 0) {
+        throw new Error('音声トラックが共有されていません。「音声を共有」にチェックを入れてください。');
+      }
+
+      // Mix mic + system audio via AudioContext
+      audioContext = new AudioContext();
+      const destination = audioContext.createMediaStreamDestination();
+
+      const micSource = audioContext.createMediaStreamSource(micStream);
+      micSource.connect(destination);
+
+      const displaySource = audioContext.createMediaStreamSource(displayStream);
+      displaySource.connect(destination);
+
+      recordingStream = destination.stream;
+      mixedMode = true;
+      console.log('[Recorder] Mixed mode: mic + system audio');
+
+    } catch (err) {
+      // User cancelled or no audio shared — fall back to mic-only
+      console.warn('[Recorder] getDisplayMedia fallback:', err.message);
+      if (displayStream) { displayStream.getTracks().forEach(t => t.stop()); displayStream = null; }
+      if (audioContext)  { audioContext.close(); audioContext = null; }
+      recordingStream = micStream;
+      setLive('⚠️ マイクのみで録音中（相手の声は録音されません）', 'warn');
+    }
+  }
+
+  // ── 3. Start MediaRecorder ──
   audioMimeType = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
     .find(t => MediaRecorder.isTypeSupported(t)) || '';
-  console.log('[Recorder] mimeType:', audioMimeType || '(browser default)');
+  console.log('[Recorder] mimeType:', audioMimeType || '(browser default)', '| mixed:', mixedMode);
 
   audioChunks = [];
-  mediaRecorder = new MediaRecorder(stream, audioMimeType ? { mimeType: audioMimeType } : {});
+  mediaRecorder = new MediaRecorder(recordingStream, audioMimeType ? { mimeType: audioMimeType } : {});
   mediaRecorder.ondataavailable = e => { if (e.data?.size > 0) audioChunks.push(e.data); };
   mediaRecorder.onstop = () => {
-    stream.getTracks().forEach(t => t.stop());
+    // Clean up all streams and AudioContext
+    if (micStream)     { micStream.getTracks().forEach(t => t.stop());     micStream = null; }
+    if (displayStream) { displayStream.getTracks().forEach(t => t.stop()); displayStream = null; }
+    if (audioContext)  { audioContext.close(); audioContext = null; }
     downloadAudio();
   };
   mediaRecorder.start(1000);
 
-  // ── 3. Start SpeechRecognition (live transcript) ──
+  // ── 4. Start SpeechRecognition (live transcript) ──
   const lang = document.getElementById('lang-select').value;
-  console.log('[Recorder] SpeechRecognition lang:', lang);
-
   finalBuffer = document.getElementById('transcript').value;
 
   recognition = new SpeechRecognition();
@@ -554,15 +685,15 @@ async function startRecording() {
   recognition.interimResults = true;
 
   recognition.onstart = () => {
-    console.log('[Recorder] SpeechRecognition started');
-    setLive('🎙️ Listening...', 'active');
+    const label = mixedMode ? '🎙️ 録音中（マイク + システム音声）' : '🎙️ Listening...';
+    setLive(label, 'active');
   };
 
   recognition.onresult = e => {
     let interim = '';
     let newFinal = '';
     for (let i = e.resultIndex; i < e.results.length; i++) {
-      const t = e.results[i][0].transcript; // [0] = best alternative
+      const t = e.results[i][0].transcript;
       if (e.results[i].isFinal) newFinal += t + ' ';
       else interim += t;
     }
@@ -570,7 +701,8 @@ async function startRecording() {
       finalBuffer += newFinal;
       document.getElementById('transcript').value = finalBuffer;
     }
-    setLive(interim || '🎙️ Listening...', 'active');
+    const label = mixedMode ? '🎙️ 録音中（マイク + システム音声）' : '🎙️ Listening...';
+    setLive(interim || label, 'active');
   };
 
   recognition.onerror = e => {
@@ -586,13 +718,12 @@ async function startRecording() {
   };
 
   recognition.onend = () => {
-    console.log('[Recorder] SpeechRecognition ended, isRecording:', isRecording);
     if (isRecording) recognition.start(); // keep alive for 90-min sessions
   };
 
   recognition.start();
 
-  // ── 4. Update UI ──
+  // ── 5. Update UI ──
   isRecording = true;
   startTimer();
   setRecordingUI(true);
@@ -611,10 +742,16 @@ function stopRecording() {
   // Stop SpeechRecognition
   if (recognition) { recognition.stop(); recognition = null; }
 
-  // Stop MediaRecorder — onstop will trigger downloadAudio()
+  // Stop MediaRecorder — onstop callback handles all stream + AudioContext cleanup
   if (mediaRecorder && mediaRecorder.state !== 'inactive') {
     mediaRecorder.stop();
+  } else {
+    // MediaRecorder wasn't running — clean up streams manually
+    if (micStream)     { micStream.getTracks().forEach(t => t.stop());     micStream = null; }
+    if (displayStream) { displayStream.getTracks().forEach(t => t.stop()); displayStream = null; }
+    if (audioContext)  { audioContext.close(); audioContext = null; }
   }
+  mixedMode = false;
 
   setLive('Recording stopped. Edit transcript below if needed.', '');
   setRecordingUI(false);
