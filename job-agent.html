@@ -379,6 +379,7 @@
     <div class="drive-toolbar">
       <button class="drive-connect-btn" id="drive-connect-btn" onclick="GDRIVE.connect()">☁️ Connect Google Drive</button>
       <span class="drive-status" id="drive-status"></span>
+      <button class="drive-action-btn" id="drive-signout-btn" onclick="GDRIVE.signOut()" style="display:none">🚪 切断</button>
       <button class="drive-action-btn" onclick="GDRIVE.syncNow()" title="Manually sync to Drive">↕️ Sync Now</button>
       <button class="drive-action-btn" onclick="GDRIVE.downloadBackup()">📥 Download Backup</button>
     </div>
@@ -1252,8 +1253,8 @@ const GDRIVE = {
     s.src = 'https://accounts.google.com/gsi/client';
     s.onload = () => this._initTokenClient();
     document.head.appendChild(s);
-    const tok = sessionStorage.getItem('gdrive_token');
-    const exp = sessionStorage.getItem('gdrive_expiry');
+    const tok = localStorage.getItem('gdrive_token');
+    const exp = localStorage.getItem('gdrive_expiry');
     if (tok && exp && Date.now() < parseInt(exp) - 60000) {
       this.accessToken = tok;
       this.tokenExpiry = parseInt(exp);
@@ -1271,8 +1272,8 @@ const GDRIVE = {
         if (resp.error) { console.error('[Drive] token error:', resp.error); return; }
         this.accessToken = resp.access_token;
         this.tokenExpiry = Date.now() + (resp.expires_in * 1000);
-        sessionStorage.setItem('gdrive_token', resp.access_token);
-        sessionStorage.setItem('gdrive_expiry', String(this.tokenExpiry));
+        localStorage.setItem('gdrive_token', resp.access_token);
+        localStorage.setItem('gdrive_expiry', String(this.tokenExpiry));
         this.connected = true;
         this._updateUI();
         this._checkDriveOnStartup();
@@ -1302,6 +1303,7 @@ const GDRIVE = {
       ...opts,
       headers: { 'Authorization': 'Bearer ' + this.accessToken, ...(opts.headers || {}) },
     });
+    if (res.status === 401) { this.signOut(); throw new Error('セッションが期限切れです。再接続してください'); }
     if (!res.ok) throw new Error('Drive API ' + res.status);
     return res;
   },
@@ -1479,7 +1481,20 @@ const GDRIVE = {
 
   _updateUI() {
     const btn = document.getElementById('drive-connect-btn');
+    const soBtn = document.getElementById('drive-signout-btn');
     if (btn) btn.style.display = this.connected ? 'none' : 'inline-flex';
+    if (soBtn) soBtn.style.display = this.connected ? 'inline-flex' : 'none';
+  },
+
+  signOut() {
+    localStorage.removeItem('gdrive_token');
+    localStorage.removeItem('gdrive_expiry');
+    this.accessToken = null;
+    this.tokenExpiry = 0;
+    this.connected = false;
+    this._updateUI();
+    const el = document.getElementById('drive-status');
+    if (el) { el.style.display = 'none'; el.innerHTML = ''; }
   },
 };
 

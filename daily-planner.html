@@ -262,6 +262,7 @@ textarea{resize:vertical;line-height:1.6}
     <div class="btn-row" style="margin-top:14px">
       <button class="btn btn-blue" onclick="loadCalendar()">📅 カレンダーを読み込む</button>
       <span id="cal-status-inline" style="font-size:12px;color:var(--muted)"></span>
+      <button id="google-signout-btn" onclick="googleSignOut()" style="display:none;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;margin-left:4px">🚪 切断</button>
     </div>
 
     <div id="cal-events-wrap" class="hidden">
@@ -429,13 +430,15 @@ function gapiLoaded() {
     } catch(e) { console.warn('[gapi] calendar load:', e); }
     gapiReady = true;
 
-    // Try to restore session token
-    const tok = sessionStorage.getItem('planner_tok');
-    const exp = sessionStorage.getItem('planner_exp');
+    // Try to restore token from localStorage
+    const tok = localStorage.getItem('planner_tok');
+    const exp = localStorage.getItem('planner_exp');
     if (tok && exp && Date.now() < parseInt(exp) - 60000) {
       accessToken = tok;
       gapi.client.setToken({ access_token: tok });
       document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
+      const soBtn = document.getElementById('google-signout-btn');
+      if (soBtn) soBtn.style.display = 'inline-block';
       // Auto-load yesterday's data from Drive
       loadYesterdayFromDrive();
     }
@@ -452,10 +455,12 @@ function gisLoaded() {
         return;
       }
       accessToken = r.access_token;
-      sessionStorage.setItem('planner_tok', r.access_token);
-      sessionStorage.setItem('planner_exp', String(Date.now() + (r.expires_in || 3600) * 1000));
+      localStorage.setItem('planner_tok', r.access_token);
+      localStorage.setItem('planner_exp', String(Date.now() + (r.expires_in || 3600) * 1000));
       gapi.client.setToken(r);
       document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
+      const soBtn = document.getElementById('google-signout-btn');
+      if (soBtn) soBtn.style.display = 'inline-block';
       doLoadCalendar();
       loadYesterdayFromDrive();
     }
@@ -483,11 +488,22 @@ async function driveFetch(path, opts = {}) {
     ...opts,
     headers: { 'Authorization': 'Bearer ' + accessToken, ...(opts.headers || {}) }
   });
+  if (res.status === 401) { googleSignOut(); throw new Error('セッションが期限切れです。再接続してください'); }
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error((err.error && err.error.message) || 'Drive API ' + res.status);
   }
   return res;
+}
+
+function googleSignOut() {
+  localStorage.removeItem('planner_tok');
+  localStorage.removeItem('planner_exp');
+  accessToken = null;
+  if (gapi && gapi.client) gapi.client.setToken(null);
+  document.getElementById('cal-status-inline').textContent = '';
+  const soBtn = document.getElementById('google-signout-btn');
+  if (soBtn) soBtn.style.display = 'none';
 }
 
 async function findDriveFile() {

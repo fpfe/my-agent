@@ -350,6 +350,7 @@ body {
   </div>
   <div class="header-right">
     <span class="drive-badge" id="drive-badge" onclick="GDRIVE.connect()">☁️ Drive: 未接続</span>
+    <button id="drive-signout-btn" onclick="GDRIVE.signOut()" style="display:none;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer">🚪 切断</button>
     <button class="upload-btn" onclick="document.getElementById('csv-input').click()">📂 CSVアップロード</button>
   </div>
 </header>
@@ -747,9 +748,9 @@ const GDRIVE = {
     s.onload = () => this._initTC();
     document.head.appendChild(s);
 
-    // Restore session token
-    const tok = sessionStorage.getItem('gdrive_token');
-    const exp = sessionStorage.getItem('gdrive_expiry');
+    // Restore token from localStorage
+    const tok = localStorage.getItem('gdrive_token');
+    const exp = localStorage.getItem('gdrive_expiry');
     if (tok && exp && Date.now() < parseInt(exp) - 60000) {
       this.accessToken = tok;
       this.tokenExpiry = parseInt(exp);
@@ -767,8 +768,8 @@ const GDRIVE = {
         if (r.error) { this._setBadge('error'); return; }
         this.accessToken = r.access_token;
         this.tokenExpiry = Date.now() + r.expires_in * 1000;
-        sessionStorage.setItem('gdrive_token', r.access_token);
-        sessionStorage.setItem('gdrive_expiry', String(this.tokenExpiry));
+        localStorage.setItem('gdrive_token', r.access_token);
+        localStorage.setItem('gdrive_expiry', String(this.tokenExpiry));
         this.connected = true;
         this._setBadge('connected');
         this._load();
@@ -786,11 +787,13 @@ const GDRIVE = {
 
   _setBadge(state) {
     const el = document.getElementById('drive-badge');
+    const soBtn = document.getElementById('drive-signout-btn');
     el.className = 'drive-badge';
     if (state === 'connected') { el.textContent = '✓ Drive同期済み'; el.classList.add('connected'); }
     else if (state === 'syncing') { el.textContent = '⟳ 同期中...'; el.classList.add('syncing'); }
     else if (state === 'error') { el.textContent = '✗ Driveエラー'; el.classList.add('error'); }
     else { el.textContent = '☁️ Drive: 未接続'; }
+    if (soBtn) soBtn.style.display = (state === 'connected' || state === 'syncing') ? 'inline-block' : 'none';
   },
 
   async _fetch(path, opts = {}) {
@@ -799,6 +802,7 @@ const GDRIVE = {
       ...opts,
       headers: { 'Authorization': 'Bearer ' + this.accessToken, ...(opts.headers || {}) }
     });
+    if (res.status === 401) { this.signOut(); throw new Error('セッションが期限切れです。再接続してください'); }
     if (!res.ok) throw new Error('Drive API ' + res.status);
     return res;
   },
@@ -866,6 +870,17 @@ const GDRIVE = {
       }
       this._setBadge('connected');
     } catch(e) { console.warn('[Drive load]', e); }
+  },
+
+  signOut() {
+    localStorage.removeItem('gdrive_token');
+    localStorage.removeItem('gdrive_expiry');
+    this.accessToken = null;
+    this.tokenExpiry = 0;
+    this.connected = false;
+    this._setBadge('disconnected');
+    const soBtn = document.getElementById('drive-signout-btn');
+    if (soBtn) soBtn.style.display = 'none';
   }
 };
 
