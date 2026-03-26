@@ -1348,6 +1348,52 @@ function saveApiKey() {
   showStatus('✅ APIキーを保存しました。再度ボタンを押してください。');
 }
 
+// Helper: call Anthropic API and return raw text from response
+async function claudeCall(apiKey, payload) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'content-type': 'application/json',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify(payload)
+  });
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message || 'API error');
+  let text = '';
+  for (const blk of (data.content || [])) {
+    if (blk.type === 'text') text += blk.text;
+  }
+  return text;
+}
+
+// Helper: robustly parse JSON from a response that starts with prefill "{"
+function parseJSON(raw) {
+  const full = '{' + raw;
+  // Fix trailing commas before } or ]
+  const cleaned = full.replace(/,\s*([\}\]])/g, '$1');
+  try {
+    return JSON.parse(cleaned);
+  } catch (e1) {
+    console.error('[JSON parse] first attempt failed:', e1.message);
+    console.error('[JSON parse] raw (first 500):', full.slice(0, 500));
+    // Try extracting the outermost {...} block
+    const m = full.match(/\{[\s\S]*\}/);
+    if (m) {
+      const cleaned2 = m[0].replace(/,\s*([\}\]])/g, '$1');
+      try {
+        return JSON.parse(cleaned2);
+      } catch (e2) {
+        console.error('[JSON parse] second attempt failed:', e2.message);
+        throw new Error('AIの回答形式が正しくありませんでした。もう一度試してください。');
+      }
+    }
+    throw new Error('AIの回答形式が正しくありませんでした。もう一度試してください。');
+  }
+}
+
 async function runAI() {
   const apiKey = localStorage.getItem('ja2_apikey');
   if (!apiKey) {
@@ -1359,57 +1405,40 @@ async function runAI() {
   const btn = document.getElementById('analyze-btn');
   btn.disabled = true;
   btn.textContent = '⟳ 分析中...';
-  document.getElementById('advisor-body').innerHTML = '<div class="spinner">📡 市場ニュースを取得中...</div>';
+  document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    // Step 1: Fetch news via web_search
+    // ── CALL 1: Fetch market news as JSON ──────────────────────────
     let newsItems = [];
     try {
-      const newsRes = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json',
-          'anthropic-dangerous-direct-browser-access': 'true'
-        },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-6',
-          max_tokens: 1024,
-          tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-          messages: [{
+      const newsRaw = await claudeCall(apiKey, {
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1024,
+        system: 'You are a Japanese financial news summarizer.',
+        messages: [
+          {
             role: 'user',
-            content: '日経平均 株式市場 ニュース 本日 を検索して、最新の重要なニュースを箇条書きで10件教えてください。'
-          }]
-        })
+            content: '今日の日本株式市場のニュースTOP10を以下のJSON形式のみで返してください。前置きや説明は一切不要です。\n\n{"news":["ニュース1","ニュース2","ニュース3","ニュース4","ニュース5","ニュース6","ニュース7","ニュース8","ニュース9","ニュース10"]}'
+          },
+          { role: 'assistant', content: '{' }
+        ]
       });
-      const nd = await newsRes.json();
-      if (nd.content) {
-        for (const blk of nd.content) {
-          if (blk.type === 'text') {
-            const lines = blk.text.split('\n')
-              .map(l => l.replace(/^[\s\-\*•\d\.]+/, '').trim())
-              .filter(l => l.length > 5 && !l.startsWith('#'));
-            newsItems = lines.slice(0, 10);
-          }
-        }
-      }
+      const newsResult = parseJSON(newsRaw);
+      if (Array.isArray(newsResult.news)) newsItems = newsResult.news.slice(0, 10);
     } catch(e) {
-      console.warn('[AI] news fetch error:', e);
-      newsItems = ['ニュース取得に失敗しました'];
+      console.warn('[AI] news call failed:', e.message);
+      newsItems = ['市場ニュースの取得に失敗しました'];
     }
 
-    // Show news
-    if (newsItems.length) {
-      document.getElementById('news-section').style.display = 'block';
-      document.getElementById('news-list').innerHTML = newsItems.map(n =>
-        `<div class="news-item">${n}</div>`
-      ).join('');
-    }
+    // Show news panel
+    document.getElementById('news-section').style.display = 'block';
+    document.getElementById('news-list').innerHTML = newsItems.map(n =>
+      `<div class="news-item">${n}</div>`
+    ).join('');
 
+    // ── CALL 2: Advisor analysis ────────────────────────────────────
     document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 3名のアドバイザーが分析中...</div>';
 
-    // Step 2: Analysis
     const today = getLatestDate();
     const todayTrades = today ? allTrades.filter(t => t.約定日 === today) : allTrades.slice(0, 10);
 
@@ -1419,57 +1448,32 @@ async function runAI() {
       `損益:${t._pnl !== undefined ? fmtPnL(t._pnl) : '—'}`
     ).join('\n') || '（本日の取引なし）';
 
-    const newsStr = newsItems.join('\n') || '（ニュースなし）';
+    const newsStr = newsItems.join('\n');
 
-    const analysisRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'content-type': 'application/json',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2048,
-        system: 'あなたは3名の投資アドバイザーチームです。取引データと市場ニュースを分析し、必ずJSON形式のみで回答してください。',
-        messages: [
-          {
-            role: 'user',
-            content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<request>\n3名のアドバイザーとして分析してください。\nStep 1: 取引パターンを把握する\nStep 2: 市場ニュースとの関連を考える\nStep 3: 各アドバイザーの視点で評価する\nStep 4: 具体的なアクションを提案する\n</request>\n\n以下のJSONフォーマットで回答してください（他のテキストは不要）:\n{"marketNews":["ニュース1","ニュース2"],"aggressive":{"score":75,"good":["良かった点1"],"bad":["改善点1"],"advice":"総評","nextAction":"明日のアクション"},"intermediate":{"score":70,"good":[],"bad":[],"advice":"","nextAction":""},"conservative":{"score":65,"good":[],"bad":[],"advice":"","nextAction":""}}`
-          },
-          { role: 'assistant', content: '{' }
-        ]
-      })
+    const analysisRaw = await claudeCall(apiKey, {
+      model: 'claude-sonnet-4-6',
+      max_tokens: 2048,
+      system: `あなたは3名の投資アドバイザーチームです。
+必ずJSON形式のみで回答してください。
+JSONの前後に文章・説明・マークダウンを一切含めないでください。
+最初の文字は { でなければなりません。
+最後の文字は } でなければなりません。`,
+      messages: [
+        {
+          role: 'user',
+          content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n以下のJSON形式のみで回答してください：\n{\n  "aggressive": {\n    "score": 数値,\n    "good": ["良かった点"],\n    "bad": ["改善点"],\n    "advice": "アドバイス",\n    "nextAction": "明日のアクション"\n  },\n  "intermediate": { 同じ構造 },\n  "conservative": { 同じ構造 }\n}\n</instructions>`
+        },
+        { role: 'assistant', content: '{' }
+      ]
     });
 
-    const ad = await analysisRes.json();
-    let jsonStr = '{';
-    if (ad.content) {
-      for (const blk of ad.content) {
-        if (blk.type === 'text') jsonStr += blk.text;
-      }
-    }
-
-    // Fix common JSON issues (trailing comma, etc.)
-    jsonStr = jsonStr.replace(/,\s*([\}\]])/g, '$1');
-
-    const result = JSON.parse(jsonStr);
-
-    // Update news from result if richer
-    if (result.marketNews && result.marketNews.length > newsItems.length) {
-      document.getElementById('news-section').style.display = 'block';
-      document.getElementById('news-list').innerHTML = result.marketNews.map(n =>
-        `<div class="news-item">${n}</div>`
-      ).join('');
-    }
-
+    const result = parseJSON(analysisRaw);
     renderAdvisors(result);
 
   } catch(err) {
     console.error('[AI] error:', err);
     document.getElementById('advisor-body').innerHTML =
-      `<div style="color:var(--red);padding:12px;font-size:13px;">⚠️ エラー: ${err.message}</div>`;
+      `<div style="color:var(--red);padding:12px;font-size:13px;line-height:1.6;">⚠️ ${err.message}</div>`;
   } finally {
     btn.disabled = false;
     btn.textContent = '📊 今日のトレードを分析する';
