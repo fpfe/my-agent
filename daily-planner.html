@@ -660,11 +660,10 @@ Step 3: Sabbaticalの学習テーマと就活・Vibe Codingのバランスを考
 Step 4: 優先度順にTodoを提案する
 Step 5: 各Todoに所要時間と理由を付ける
 
-以下のJSON形式で返してください：
+以下のJSON形式のみで返してください。必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。
 {"todos":[{"title":"タスク名","duration":60,"priority":"high","category":"AI Literacy","reason":"理由","from_yesterday":false}],"coach_message":"コーチからひとこと"}
 </instructions>`
-        },
-        { role: 'assistant', content: '{' }
+        }
       ]
     });
 
@@ -888,10 +887,9 @@ JSONの前後に文章を一切含めないでください。`,
 エネルギー: ${energy}/10
 </today_log>
 
-以下のJSON形式で返してください：
+以下のJSON形式のみで返してください。必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。
 {"summary":"今日の一言まとめ","improvement":"明日の1%改善ポイント","encouragement":"励ましのメッセージ"}`
-        },
-        { role: 'assistant', content: '{' }
+        }
       ]
     });
 
@@ -997,18 +995,26 @@ async function claudeCall(payload) {
 }
 
 function parseJSON(raw) {
-  const full = '{' + raw;
-  const clean = s => s.replace(/,\s*([\}\]])/g, '$1');
-  try { return JSON.parse(clean(full)); }
-  catch(e1) {
-    console.error('[parseJSON] first attempt:', e1.message, full.slice(0, 300));
-    const m = full.match(/\{[\s\S]*\}/);
-    if (m) {
-      try { return JSON.parse(clean(m[0])); }
-      catch(e2) { console.error('[parseJSON] second attempt:', e2.message); }
-    }
-    throw new Error('AIの回答形式が正しくありませんでした。もう一度試してください。');
+  // Strip markdown code fences if present
+  let cleaned = raw
+    .replace(/```json\s*/g, '')
+    .replace(/```\s*/g, '')
+    .trim();
+
+  const fixCommas = s => s.replace(/,\s*([\}\]])/g, '$1');
+
+  // Attempt 1: direct parse
+  try { return JSON.parse(fixCommas(cleaned)); }
+  catch(e1) { console.error('[parseJSON] attempt 1:', e1.message, cleaned.slice(0, 300)); }
+
+  // Attempt 2: extract outermost {...}
+  const m = cleaned.match(/\{[\s\S]*\}/);
+  if (m) {
+    try { return JSON.parse(fixCommas(m[0])); }
+    catch(e2) { console.error('[parseJSON] attempt 2:', e2.message); }
   }
+
+  throw new Error('AIの回答形式が正しくありませんでした。もう一度試してください。');
 }
 
 // ═══════════════════════════════════════════
