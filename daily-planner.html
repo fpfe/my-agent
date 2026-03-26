@@ -1,167 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Planner</title>
+<title>📅 Daily Planner — Sabbatical 2026</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#1a2332;--navy-light:#243447;--navy-muted:#2d3f55;
-  --blue:#4f7ef8;--blue-light:#6b94ff;
-  --green:#10b981;--red:#ef4444;--orange:#f59e0b;--purple:#7c3aed;
-  --text:#e2e8f0;--text-muted:#94a3b8;--border:#2d3f55;
-  --shadow:0 4px 16px rgba(0,0,0,0.3);
+  --bg:#0f172a;--card:#1e293b;--card2:#263347;--border:#334155;
+  --text:#e2e8f0;--muted:#94a3b8;--muted2:#64748b;
+  --blue:#4f7ef8;--green:#10b981;--red:#ef4444;
+  --yellow:#f59e0b;--purple:#8b5cf6;--indigo:#6366f1;
 }
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif;
-  background:var(--navy);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+  background:var(--bg);color:var(--text);min-height:100vh}
+a{color:inherit;text-decoration:none}
 
 /* ── HEADER ── */
-.header{background:var(--navy-light);padding:0 20px;height:60px;display:flex;align-items:center;
-  justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.4);position:sticky;top:0;z-index:100;
-  border-bottom:1px solid var(--border)}
+.header{background:#1a2332;padding:0 20px;height:58px;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100}
 .header-left{display:flex;align-items:center;gap:12px}
-.header-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#3b60d4);
-  display:flex;align-items:center;justify-content:center;font-size:18px}
-.header-title{font-size:17px;font-weight:700;color:white}
-.header-date{font-size:12px;color:var(--text-muted);margin-top:1px}
-.back-link{font-size:12px;color:var(--text-muted);text-decoration:none;padding:5px 10px;
-  border-radius:7px;border:1px solid var(--border);transition:all .15s}
-.back-link:hover{color:var(--text);border-color:#94a3b8}
+.header-icon{width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--blue),#3b60d4);
+  display:flex;align-items:center;justify-content:center;font-size:17px}
+.header-title{font-size:16px;font-weight:700}
+.header-date{font-size:11px;color:var(--muted);margin-top:1px}
+.back-link{font-size:12px;color:var(--muted);padding:5px 10px;border-radius:7px;
+  border:1px solid var(--border);transition:all .15s}
+.back-link:hover{color:var(--text);border-color:var(--muted)}
 
 /* ── MAIN ── */
-.main{max-width:780px;margin:0 auto;padding:24px 16px 60px;width:100%;display:flex;flex-direction:column;gap:20px}
+.main{max-width:760px;margin:0 auto;padding:20px 16px 60px;display:flex;flex-direction:column;gap:18px}
+
+/* ── BANNERS ── */
+.banner{padding:11px 14px;border-radius:10px;font-size:13px;
+  display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.banner-yellow{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:#fde68a}
+.banner-green{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:#6ee7b7}
+.banner-blue{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);color:#a5b4fc}
+.banner-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5}
 
 /* ── STEP CARD ── */
-.step-card{background:var(--navy-light);border-radius:18px;padding:22px;border:1px solid var(--border);
-  box-shadow:var(--shadow)}
+.step-card{background:var(--card);border-radius:16px;padding:20px;border:1px solid var(--border)}
 .step-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
 .step-num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:white;
   font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.step-title{font-size:16px;font-weight:700;color:white}
-.step-sub{font-size:12px;color:var(--text-muted);margin-top:2px}
+.step-num.done{background:var(--green)}
+.step-title{font-size:15px;font-weight:700}
+.step-sub{font-size:11px;color:var(--muted);margin-top:2px}
 
-/* ── FORM ELEMENTS ── */
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.form-label{font-size:12px;font-weight:600;color:var(--text-muted)}
-textarea,input[type=text],input[type=number]{
-  background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
-  border-radius:10px;padding:11px 14px;font-size:14px;font-family:inherit;outline:none;
-  transition:border-color .15s;width:100%}
+/* ── FORM ── */
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.form-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+textarea,input[type=text],input[type=number],input[type=time],input[type=date]{
+  background:var(--card2);color:var(--text);border:1px solid var(--border);
+  border-radius:9px;padding:10px 13px;font-size:13px;font-family:inherit;
+  outline:none;transition:border-color .15s;width:100%}
 textarea:focus,input:focus{border-color:var(--blue)}
-textarea::placeholder,input::placeholder{color:var(--text-muted)}
+textarea::placeholder,input::placeholder{color:var(--muted2)}
 textarea{resize:vertical;line-height:1.6}
 .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:480px){.row-2{grid-template-columns:1fr}}
 
 /* ── BUTTONS ── */
-.btn{padding:10px 20px;border-radius:10px;border:none;font-size:14px;font-weight:600;
-  font-family:inherit;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:7px}
-.btn-sm{padding:7px 14px;font-size:12px;border-radius:8px}
-.btn-blue{background:var(--blue);color:white}.btn-blue:hover{background:var(--blue-light)}
-.btn-green{background:#059669;color:white}.btn-green:hover{background:var(--green)}
-.btn-ghost{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
-.btn-ghost:hover{color:var(--text);border-color:#94a3b8}
-.btn-purple{background:var(--purple);color:white}.btn-purple:hover{background:#6d28d9}
-.btn-orange{background:#d97706;color:white}.btn-orange:hover{background:var(--orange)}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{padding:9px 18px;border-radius:9px;border:none;font-size:13px;font-weight:600;
+  font-family:inherit;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:6px}
+.btn-sm{padding:6px 13px;font-size:12px;border-radius:7px}
+.btn-blue{background:var(--blue);color:white}.btn-blue:hover{opacity:.88}
+.btn-green{background:var(--green);color:white}.btn-green:hover{opacity:.88}
+.btn-indigo{background:var(--indigo);color:white}.btn-indigo:hover{opacity:.88}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--muted)}
+.btn-outline:hover{border-color:var(--muted);color:var(--text)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
 /* ── CALENDAR EVENTS ── */
-.cal-event-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-.cal-event{background:var(--navy-muted);border-radius:10px;padding:11px 14px;
-  display:flex;align-items:center;gap:12px;border-left:3px solid var(--blue)}
-.cal-event-time{font-size:12px;font-weight:700;color:var(--blue);white-space:nowrap;min-width:80px}
-.cal-event-name{font-size:13px;color:var(--text);flex:1}
-.cal-event-dur{font-size:11px;color:var(--text-muted);white-space:nowrap}
-.cal-free-note{font-size:12px;color:var(--green);margin-top:10px;padding:8px 12px;
-  background:rgba(16,185,129,.1);border-radius:8px;border:1px solid rgba(16,185,129,.2)}
+.cal-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.cal-event{background:var(--card2);border-radius:8px;border:1px solid var(--border);
+  padding:8px 12px;display:flex;align-items:center;gap:10px;font-size:12px}
+.cal-time{color:var(--muted);font-family:monospace;font-size:11px;white-space:nowrap}
+.cal-title{flex:1;font-weight:500}
+.cal-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
 
-/* ── STATUS / LOADING ── */
-.status-msg{font-size:13px;padding:10px 14px;border-radius:8px;margin-top:10px}
-.status-msg.info{background:rgba(79,126,248,.12);color:#93c5fd;border:1px solid rgba(79,126,248,.25)}
-.status-msg.error{background:rgba(239,68,68,.1);color:#fca5a5;border:1px solid rgba(239,68,68,.25)}
-.status-msg.success{background:rgba(16,185,129,.1);color:#6ee7b7;border:1px solid rgba(16,185,129,.2)}
-.dots{display:inline-flex;gap:4px;align-items:center;vertical-align:middle}
-.dots span{width:6px;height:6px;border-radius:50%;background:currentColor;animation:bounce 1.2s infinite}
-.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
-@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
-.hidden{display:none!important}
+/* ── TODO PROPOSAL CARDS ── */
+.todo-cards{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.todo-card{background:var(--card2);border-radius:10px;border:1px solid var(--border);padding:12px 14px}
+.todo-card-top{display:flex;align-items:flex-start;gap:10px}
+.todo-checkbox{width:18px;height:18px;border-radius:5px;border:2px solid var(--border);
+  background:transparent;flex-shrink:0;margin-top:1px;cursor:pointer;appearance:none;
+  transition:all .15s;position:relative}
+.todo-checkbox:checked{background:var(--indigo);border-color:var(--indigo)}
+.todo-checkbox:checked::after{content:'✓';position:absolute;top:-1px;left:2px;
+  color:white;font-size:12px;font-weight:800}
+.todo-card-body{flex:1;min-width:0}
+.todo-card-title{font-size:13px;font-weight:600;margin-bottom:5px;line-height:1.4}
+.todo-card-meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.badge{display:inline-block;padding:2px 8px;border-radius:5px;font-size:10px;font-weight:700;line-height:1.5}
+.badge-ai{background:rgba(79,126,248,.18);color:#93b4fb}
+.badge-vc{background:rgba(139,92,246,.18);color:#c4b5fd}
+.badge-js{background:rgba(16,185,129,.18);color:#6ee7b7}
+.badge-ps{background:rgba(100,116,139,.2);color:#cbd5e1}
+.badge-high{background:rgba(239,68,68,.15);color:#fca5a5}
+.badge-mid{background:rgba(245,158,11,.15);color:#fde68a}
+.badge-low{background:rgba(16,185,129,.15);color:#6ee7b7}
+.badge-ytd{background:rgba(245,158,11,.2);color:#fbbf24;border:1px solid rgba(245,158,11,.3)}
+.badge-dur{background:rgba(51,65,85,.6);color:var(--muted)}
+.todo-reason{font-size:11px;color:var(--muted);margin-top:7px;padding-top:7px;
+  border-top:1px solid rgba(51,65,85,.5);line-height:1.5;display:none}
+.reason-toggle{font-size:11px;color:var(--muted2);cursor:pointer;margin-top:6px;
+  text-decoration:underline;text-decoration-color:transparent}
+.reason-toggle:hover{color:var(--muted)}
 
-/* ── SCHEDULE BLOCKS ── */
-.schedule-list{display:flex;flex-direction:column;gap:8px;margin-top:4px}
-.sched-block{background:var(--navy-muted);border-radius:12px;padding:14px 16px;
-  display:flex;align-items:flex-start;gap:12px;border-left:3px solid var(--blue);transition:all .15s}
-.sched-block.fixed-block{border-left-color:var(--orange);opacity:.85}
-.sched-block.deselected{opacity:.4}
-.sched-check{margin-top:2px;accent-color:var(--blue);width:16px;height:16px;flex-shrink:0;cursor:pointer}
-.sched-body{flex:1;min-width:0}
-.sched-time{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:3px}
-.sched-block.fixed-block .sched-time{color:var(--orange)}
-.sched-task-input{background:transparent;border:none;border-bottom:1px solid transparent;
-  color:var(--text);font-size:14px;font-weight:600;font-family:inherit;width:100%;outline:none;
-  padding:0 0 2px;transition:border-color .15s}
-.sched-task-input:focus{border-bottom-color:var(--blue)}
-.sched-task-input:disabled{color:var(--text-muted)}
-.sched-note{font-size:12px;color:var(--text-muted);margin-top:4px;line-height:1.5}
-.sched-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
-  padding:2px 7px;border-radius:20px;background:rgba(245,158,11,.2);color:var(--orange);margin-left:6px}
-.sched-dur{font-size:11px;color:var(--text-muted);margin-top:3px}
-.add-status{font-size:11px;margin-top:4px;font-weight:600}
-.add-status.ok{color:var(--green)}.add-status.fail{color:var(--red)}
+.coach-box{background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.25);
+  border-radius:10px;padding:14px;margin-top:14px;font-size:13px;line-height:1.6;color:#c7d2fe}
+.coach-label{font-size:10px;font-weight:700;color:var(--indigo);text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:5px}
 
-/* ── PROPOSAL SUMMARY ── */
-.proposal-summary{background:rgba(79,126,248,.1);border:1px solid rgba(79,126,248,.25);
-  border-radius:10px;padding:13px 16px;font-size:13px;color:#93c5fd;line-height:1.6;margin-bottom:14px}
+/* ── STEP 3: TIME PICKERS ── */
+.approve-row{background:var(--card2);border-radius:10px;border:1px solid var(--border);
+  padding:11px 14px;margin-bottom:8px}
+.approve-row-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.approve-row-title{flex:1;font-size:13px;font-weight:600}
+.time-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.time-row input[type=time]{width:100px;padding:5px 8px;font-size:12px}
+.cal-toggle{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);
+  cursor:pointer;user-select:none}
+.cal-toggle input{width:auto;margin:0}
 
 /* ── EOD LOG ── */
-.eod-toggle{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;
-  padding:4px 0;width:100%}
-.eod-toggle-arrow{font-size:14px;color:var(--text-muted);transition:transform .2s}
-.eod-toggle-arrow.open{transform:rotate(90deg)}
-.eod-body{margin-top:16px}
-.slider-row{display:flex;align-items:center;gap:12px}
-input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:6px;
-  background:var(--navy-muted);border-radius:3px;outline:none;accent-color:var(--blue)}
-.slider-val{font-size:14px;font-weight:700;color:var(--blue);min-width:24px;text-align:center}
-.diary-box{background:var(--navy-muted);border:1px solid var(--border);border-radius:10px;
-  padding:14px;font-size:13.5px;line-height:1.8;color:var(--text);white-space:pre-wrap;margin-top:14px}
-.past-logs{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.past-log-item{background:var(--navy-muted);border-radius:10px;padding:11px 14px;
-  border:1px solid var(--border);cursor:pointer;transition:all .15s}
-.past-log-item:hover{border-color:var(--blue)}
-.past-log-date{font-size:12px;font-weight:700;color:var(--blue)}
-.past-log-preview{font-size:12px;color:var(--text-muted);margin-top:2px;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.energy-row{display:flex;align-items:center;gap:12px}
+.energy-slider{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;
+  background:var(--border);outline:none}
+.energy-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;
+  border-radius:50%;background:var(--blue);cursor:pointer}
+.energy-val{font-size:16px;font-weight:700;color:var(--blue);min-width:24px;text-align:center}
 
-@media(max-width:500px){
-  .main{padding:16px 12px 50px}
-  .step-card{padding:16px}
-  .btn{padding:9px 16px;font-size:13px}
-}
+.advice-box{background:var(--card2);border-radius:10px;border:1px solid var(--border);
+  padding:16px;margin-top:12px}
+.advice-section{margin-bottom:10px}
+.advice-label{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:4px}
+.advice-text{font-size:13px;line-height:1.6;color:var(--text)}
+
+/* ── STATUS ── */
+.status{font-size:12px;padding:8px 12px;border-radius:8px;display:none}
+.status.show{display:block}
+.status.success{background:rgba(16,185,129,.1);color:#6ee7b7;border:1px solid rgba(16,185,129,.2)}
+.status.error{background:rgba(239,68,68,.1);color:#fca5a5;border:1px solid rgba(239,68,68,.2)}
+.status.info{background:rgba(79,126,248,.1);color:#93b4fb;border:1px solid rgba(79,126,248,.2)}
+.loading{color:var(--muted);font-size:13px;padding:16px 0;text-align:center}
+
+.hidden{display:none!important}
 </style>
 </head>
 <body>
+
 <!-- PASSWORD PROTECTION -->
 <style>
-#_pw_overlay{position:fixed;inset:0;background:#0d1520;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-#_pw_box{background:#1a2332;border-radius:20px;padding:36px 28px;width:min(340px,90vw);text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
-#_pw_icon{font-size:2.8rem;margin-bottom:16px}
-#_pw_title{color:#e2e8f0;font-size:1.3rem;font-weight:700;margin-bottom:6px}
-#_pw_sub{color:#7a8ea0;font-size:0.85rem;margin-bottom:24px}
-#_pw_input{width:100%;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.12);border-radius:12px;color:white;font-size:1rem;padding:14px 16px;text-align:center;letter-spacing:2px;margin-bottom:12px;outline:none}
-#_pw_input:focus{border-color:#3b82f6}
-#_pw_btn{width:100%;padding:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer}
-#_pw_btn:active{transform:scale(0.97)}
-#_pw_err{color:#f87171;font-size:0.85rem;margin-top:10px;min-height:20px}
-#_lock_btn{position:fixed;top:12px;right:12px;z-index:8888;background:rgba(0,0,0,0.4);border:none;color:rgba(255,255,255,0.55);font-size:0.72rem;padding:5px 10px;border-radius:20px;cursor:pointer;display:none;backdrop-filter:blur(4px)}
-#_lock_btn:hover{background:rgba(0,0,0,0.7);color:white}
+#_pw_overlay{position:fixed;inset:0;background:#0a1120;z-index:9999;display:flex;align-items:center;justify-content:center}
+#_pw_box{background:#1e293b;border-radius:18px;padding:32px 26px;width:min(320px,90vw);text-align:center;border:1px solid #334155}
+#_pw_input{width:100%;background:#263347;border:1.5px solid #334155;border-radius:10px;color:#e2e8f0;
+  font-size:1rem;padding:12px 16px;text-align:center;letter-spacing:2px;margin-bottom:10px;outline:none}
+#_pw_input:focus{border-color:#4f7ef8}
+#_pw_btn{width:100%;padding:12px;background:linear-gradient(135deg,#4f7ef8,#3b60d4);color:white;
+  border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer}
+#_pw_err{color:#fca5a5;font-size:0.8rem;margin-top:8px;min-height:16px}
+#_lock_btn{position:fixed;top:10px;right:10px;z-index:8888;background:rgba(0,0,0,.4);border:none;
+  color:rgba(255,255,255,.5);font-size:11px;padding:4px 10px;border-radius:20px;cursor:pointer;display:none}
 </style>
 <div id="_pw_overlay">
   <div id="_pw_box">
-    <div id="_pw_icon">🔐</div>
-    <div id="_pw_title">Private App</div>
-    <div id="_pw_sub">Enter password to continue</div>
+    <div style="font-size:2.4rem;margin-bottom:14px">📅</div>
+    <div style="color:#e2e8f0;font-size:1.2rem;font-weight:700;margin-bottom:4px">Daily Planner</div>
+    <div style="color:#94a3b8;font-size:.8rem;margin-bottom:20px">Sabbatical 2026</div>
     <input id="_pw_input" type="password" placeholder="Password" autocomplete="current-password">
     <button id="_pw_btn" onclick="_pwCheck()">Unlock →</button>
     <div id="_pw_err"></div>
@@ -171,44 +182,35 @@ input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:6px;
 <script>
 (function(){
   var PW='sabbatical2026';
-  function _pwCheck(){
+  window._pwCheck=function(){
     var v=document.getElementById('_pw_input').value;
     if(v===PW){
       localStorage.setItem('app_unlocked','true');
       document.getElementById('_pw_overlay').style.display='none';
       document.getElementById('_lock_btn').style.display='block';
     } else {
-      document.getElementById('_pw_err').textContent='Wrong password';
+      document.getElementById('_pw_err').textContent='パスワードが違います';
       document.getElementById('_pw_input').value='';
-      document.getElementById('_pw_input').focus();
     }
-  }
-  window._pwCheck=_pwCheck;
+  };
   window._pwLock=function(){
     localStorage.removeItem('app_unlocked');
     document.getElementById('_pw_overlay').style.display='flex';
     document.getElementById('_lock_btn').style.display='none';
-    document.getElementById('_pw_input').value='';
-    document.getElementById('_pw_err').textContent='';
   };
   document.addEventListener('DOMContentLoaded',function(){
     if(localStorage.getItem('app_unlocked')==='true'){
       document.getElementById('_pw_overlay').style.display='none';
       document.getElementById('_lock_btn').style.display='block';
     }
-    document.getElementById('_pw_input').addEventListener('keydown',function(e){
-      if(e.key==='Enter') _pwCheck();
-    });
-    if(localStorage.getItem('app_unlocked')!=='true'){
+    document.getElementById('_pw_input').addEventListener('keydown',function(e){if(e.key==='Enter')_pwCheck();});
+    if(localStorage.getItem('app_unlocked')!=='true')
       setTimeout(function(){document.getElementById('_pw_input').focus();},100);
-    }
   });
 })();
 </script>
-<!-- END PASSWORD PROTECTION -->
 
-
-<!-- ── HEADER ── -->
+<!-- HEADER -->
 <div class="header">
   <div class="header-left">
     <div class="header-icon">📅</div>
@@ -222,225 +224,221 @@ input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:6px;
 
 <div class="main">
 
-  <!-- ══════════════════════════════════════
-       STEP 1 · MORNING SETUP
-  ══════════════════════════════════════ -->
+  <!-- YESTERDAY BANNER -->
+  <div id="missed-banner" class="banner banner-yellow hidden">
+    <span>📋</span>
+    <div><strong>昨日できなかったこと:</strong> <span id="missed-text"></span></div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 1: MORNING SETUP
+  ══════════════════════════════ -->
   <div class="step-card">
     <div class="step-header">
-      <div class="step-num">1</div>
+      <div class="step-num" id="step1-num">1</div>
       <div>
-        <div class="step-title">Morning Setup</div>
-        <div class="step-sub">Set your goals and load your calendar</div>
+        <div class="step-title">Step 1: Morning Setup</div>
+        <div class="step-sub">今日の目標と予定を設定する</div>
       </div>
     </div>
 
     <div class="form-group">
-      <div class="form-label">What do you want to accomplish today?</div>
+      <div class="form-label">今日やりたいこと</div>
       <textarea id="goals-input" rows="4"
-        placeholder="e.g. Prep for Headout interview, study AI chapter 3, apply to 2 jobs..."></textarea>
+        placeholder="e.g. Prompt Engineeringを学ぶ、Job Searchを2時間、Trading確認..."></textarea>
     </div>
 
     <div class="row-2">
       <div class="form-group" style="margin-bottom:0">
-        <div class="form-label">Available hours today</div>
-        <input type="number" id="hours-input" placeholder="e.g. 5.5" min="0.5" max="16" step="0.5" value="8">
+        <div class="form-label">利用可能な時間</div>
+        <input type="number" id="hours-input" value="8" min="1" max="16" step="0.5">
       </div>
       <div class="form-group" style="margin-bottom:0">
-        <div class="form-label">Start time (Tokyo)</div>
-        <input type="text" id="start-time-input" placeholder="e.g. 09:00" id="start-time-input">
+        <div class="form-label">開始時間 (Tokyo)</div>
+        <input type="time" id="start-time-input" value="09:00">
       </div>
     </div>
 
-    <div style="margin-top:16px" class="btn-row">
-      <button class="btn btn-blue" onclick="loadCalendar()">📅 Load My Calendar</button>
-      <span id="cal-auth-status" style="font-size:12px;color:var(--text-muted)"></span>
+    <div class="btn-row" style="margin-top:14px">
+      <button class="btn btn-blue" onclick="loadCalendar()">📅 カレンダーを読み込む</button>
+      <span id="cal-status-inline" style="font-size:12px;color:var(--muted)"></span>
     </div>
 
-    <!-- Calendar events list -->
     <div id="cal-events-wrap" class="hidden">
-      <div class="cal-event-list" id="cal-event-list"></div>
-      <div class="cal-free-note" id="cal-free-note"></div>
+      <div class="cal-list" id="cal-list"></div>
     </div>
-    <div id="cal-status" class="status-msg info hidden"></div>
+    <div class="status" id="cal-status"></div>
   </div>
 
-  <!-- ══════════════════════════════════════
-       STEP 2 · AI SCHEDULE PROPOSAL
-  ══════════════════════════════════════ -->
+  <!-- ══════════════════════════════
+       STEP 2: AI TODO PROPOSAL
+  ══════════════════════════════ -->
   <div class="step-card">
     <div class="step-header">
-      <div class="step-num">2</div>
+      <div class="step-num" id="step2-num">2</div>
       <div>
-        <div class="step-title">AI Schedule Proposal</div>
-        <div class="step-sub">Claude builds your time-blocked day</div>
+        <div class="step-title">Step 2: AI Todo Proposal</div>
+        <div class="step-sub">AIがあなたの今日のTodoを提案する</div>
       </div>
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-purple" id="btn-propose" onclick="proposeSchedule()">
-        🧠 Propose My Schedule
-      </button>
-      <div id="propose-loading" class="hidden" style="font-size:13px;color:var(--text-muted)">
-        Thinking <span class="dots" style="color:var(--blue)"><span></span><span></span><span></span></span>
-      </div>
+      <button class="btn btn-indigo" id="propose-btn" onclick="proposeTodos()">🧠 Todoを提案する</button>
     </div>
 
-    <div id="proposal-wrap" class="hidden" style="margin-top:16px">
-      <div class="proposal-summary" id="proposal-summary"></div>
-      <div class="schedule-list" id="schedule-list"></div>
-    </div>
-    <div id="propose-status" class="status-msg hidden" style="margin-top:10px"></div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       STEP 3 · APPROVE & ADD TO CALENDAR
-  ══════════════════════════════════════ -->
-  <div class="step-card" id="step3-card" class="hidden">
-    <div class="step-header">
-      <div class="step-num">3</div>
-      <div>
-        <div class="step-title">Approve &amp; Add to Calendar</div>
-        <div class="step-sub">Select blocks to add — fixed events are skipped</div>
+    <div id="propose-loading" class="loading hidden">🤖 AIが分析中...</div>
+    <div class="status" id="propose-status"></div>
+    <div id="todo-proposal" class="hidden">
+      <div class="todo-cards" id="todo-cards"></div>
+      <div id="coach-box" class="coach-box hidden">
+        <div class="coach-label">💬 コーチからひとこと</div>
+        <div id="coach-msg"></div>
       </div>
-    </div>
-
-    <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px">
-      Check the blocks you want to add to Google Calendar. Edit task names inline. Fixed events are already in your calendar.
-    </p>
-
-    <div class="btn-row">
-      <button class="btn btn-green" id="btn-add-cal" onclick="addToCalendar()">
-        ✅ Add Selected to Google Calendar
-      </button>
-      <button class="btn btn-ghost btn-sm" onclick="selectAll(true)">Select All</button>
-      <button class="btn btn-ghost btn-sm" onclick="selectAll(false)">Deselect All</button>
-    </div>
-    <div id="add-status" class="status-msg hidden" style="margin-top:10px"></div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       STEP 4 · END OF DAY LOG
-  ══════════════════════════════════════ -->
-  <div class="step-card">
-    <div class="step-header" style="margin-bottom:0">
-      <div class="step-num">4</div>
-      <div style="flex:1">
-        <div class="eod-toggle" onclick="toggleEOD()">
-          <div>
-            <div class="step-title">End of Day Log</div>
-            <div class="step-sub">Reflect, summarize, improve</div>
-          </div>
-          <span class="eod-toggle-arrow" id="eod-arrow" style="margin-left:auto">▶</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="eod-body hidden" id="eod-body">
-      <div class="form-group" style="margin-top:18px">
-        <div class="form-label">What I accomplished today</div>
-        <textarea id="eod-accomplished" rows="3" placeholder="List what you got done..."></textarea>
-      </div>
-      <div class="form-group">
-        <div class="form-label">What went well</div>
-        <textarea id="eod-well" rows="2" placeholder="Wins, good moments, proud of..."></textarea>
-      </div>
-      <div class="form-group">
-        <div class="form-label">What I missed or didn't finish</div>
-        <textarea id="eod-missed" rows="2" placeholder="Tasks left undone, distractions..."></textarea>
-      </div>
-      <div class="form-group">
-        <div class="form-label">One thing to do 1% better tomorrow</div>
-        <input type="text" id="eod-improve" placeholder="e.g. Start deep work before checking messages">
-      </div>
-      <div class="form-group">
-        <div class="form-label">Energy level today</div>
-        <div class="slider-row">
-          <span style="font-size:12px;color:var(--text-muted)">1</span>
-          <input type="range" id="eod-energy" min="1" max="10" value="7"
-            oninput="document.getElementById('energy-val').textContent=this.value">
-          <span style="font-size:12px;color:var(--text-muted)">10</span>
-          <span class="slider-val" id="energy-val">7</span>
-        </div>
-      </div>
-
-      <div class="btn-row" style="margin-top:4px">
-        <button class="btn btn-purple" id="btn-diary" onclick="generateDiary()">
-          🤖 Generate Daily Summary
-        </button>
-        <div id="diary-loading" class="hidden" style="font-size:13px;color:var(--text-muted)">
-          Writing <span class="dots" style="color:var(--purple)"><span></span><span></span><span></span></span>
-        </div>
-      </div>
-
-      <div id="diary-output" class="diary-box hidden"></div>
-
       <div class="btn-row" style="margin-top:14px">
-        <button class="btn btn-green" onclick="saveDailyLog()">💾 Save Daily Log</button>
-        <div id="save-status" style="font-size:12px;color:var(--green)"></div>
-      </div>
-
-      <!-- Past logs -->
-      <div style="margin-top:20px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;
-          color:var(--text-muted);margin-bottom:10px">Past Logs</div>
-        <div class="past-logs" id="past-logs-list"></div>
+        <button class="btn btn-green" onclick="approveSelected()">✅ 選択したTodoを承認する</button>
       </div>
     </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 3: APPROVE & ADD
+  ══════════════════════════════ -->
+  <div class="step-card" id="step3-card" style="display:none">
+    <div class="step-header">
+      <div class="step-num" id="step3-num">3</div>
+      <div>
+        <div class="step-title">Step 3: 承認 &amp; 追加</div>
+        <div class="step-sub">Todo.html に追加 + Googleカレンダーに予定を入れる</div>
+      </div>
+    </div>
+
+    <div id="approve-rows"></div>
+
+    <div class="btn-row" style="margin-top:14px">
+      <button class="btn btn-green" id="execute-btn" onclick="executeApproval()">🚀 実行する</button>
+    </div>
+    <div class="status" id="approve-status"></div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 4: END OF DAY LOG
+  ══════════════════════════════ -->
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num" id="step4-num">4</div>
+      <div>
+        <div class="step-title">Step 4: End of Day Log</div>
+        <div class="step-sub">今日の振り返りを記録する</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-label">今日できたこと</div>
+      <textarea id="eod-accomplished" rows="3" placeholder="完了したタスク、達成したこと..."></textarea>
+    </div>
+    <div class="form-group">
+      <div class="form-label">うまくいったこと</div>
+      <textarea id="eod-well" rows="2" placeholder="良かった点、気づき..."></textarea>
+    </div>
+    <div class="form-group">
+      <div class="form-label">できなかったこと / 未完了 ← 明日に引き継がれます</div>
+      <textarea id="eod-missed" rows="2" placeholder="未完了タスク、できなかった理由..."></textarea>
+    </div>
+    <div class="form-group">
+      <div class="form-label">明日1%改善するために</div>
+      <input type="text" id="eod-improve" placeholder="e.g. 集中タイムを1時間早く始める">
+    </div>
+    <div class="form-group">
+      <div class="form-label">今日のエネルギーレベル: <span id="energy-display">7</span>/10</div>
+      <div class="energy-row">
+        <span style="font-size:12px;color:var(--muted)">😴 1</span>
+        <input type="range" class="energy-slider" id="eod-energy" min="1" max="10" value="7"
+          oninput="document.getElementById('energy-display').textContent=this.value">
+        <span style="font-size:12px;color:var(--muted)">10 ⚡</span>
+      </div>
+    </div>
+
+    <div class="btn-row" style="margin-top:14px">
+      <button class="btn btn-indigo" id="advice-btn" onclick="generateAdvice()">🤖 AIデイリーアドバイスを生成</button>
+    </div>
+    <div id="advice-loading" class="loading hidden">🤖 AIが分析中...</div>
+    <div id="advice-output" class="advice-box hidden"></div>
+
+    <div class="btn-row" style="margin-top:14px">
+      <button class="btn btn-green" id="save-btn" onclick="saveLog()">💾 ログを保存 → Google Drive</button>
+      <span id="save-inline" style="font-size:12px;color:var(--muted)"></span>
+    </div>
+    <div class="status" id="save-status"></div>
   </div>
 
 </div><!-- /main -->
 
-<script src="https://apis.google.com/js/api.js" async defer onload="gapiLoaded()"></script>
-<script src="https://accounts.google.com/gsi/client" async defer onload="gisLoaded()"></script>
+<!-- Google APIs -->
+<script src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
 <script>
-// ══════════════════════════════════════════
-//  CONSTANTS
-// ══════════════════════════════════════════
-const CLIENT_ID = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
-const SCOPES    = 'https://www.googleapis.com/auth/calendar';
-const TZ        = 'Asia/Tokyo';
+// ═══════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════
+const CLIENT_ID   = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+const SCOPES      = 'https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive.file';
+const TZ          = 'Asia/Tokyo';
+const DRIVE_FILE  = 'sabbatical_daily_planner.json';
+const WEEK_THEME  = 'W2 RAG + Agents (AIエージェント、RAG、CLAUDE.md、Claude Code SDK)';
+const CAT_COLORS  = { 'AI Literacy':'9', 'Vibe Coding':'3', 'Job Search':'10', 'Personal':'8' };
 
-// ══════════════════════════════════════════
-//  STATE
-// ══════════════════════════════════════════
-let gapiReady     = false;
-let gisReady      = false;
-let tokenClient   = null;
-let calEvents     = [];     // [{title, start, end, durationMin}]
-let scheduleBlocks = [];    // [{start,end,task,note,fixed,duration}]
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+let gapiReady   = false;
+let gisReady    = false;
+let tokenClient = null;
+let accessToken = null;
+let calEvents   = [];       // [{title, start, end, durationMin}]
+let proposedTodos  = [];    // from AI
+let approvedTodos  = [];    // selected by user
+let plannerData = { logs: [] };
+let driveFileId = null;
+let aiAdviceResult = null;
 
-// ══════════════════════════════════════════
-//  INIT
-// ══════════════════════════════════════════
-function init() {
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', function() {
   // Header date
-  const now = tokyoNow();
+  const now = new Date();
   document.getElementById('header-date').textContent =
-    now.toLocaleDateString('en-US', {weekday:'long',year:'numeric',month:'long',day:'numeric',timeZone:TZ});
+    now.toLocaleDateString('ja-JP', { timeZone: TZ, weekday:'long', year:'numeric', month:'long', day:'numeric' });
 
-  // Default start time to current Tokyo hour rounded up
-  const tokyoStr = now.toLocaleString('en-US', {timeZone:TZ, hour:'2-digit', minute:'2-digit', hour12:false});
-  document.getElementById('start-time-input').value = tokyoStr.padStart(5,'0');
+  // Default start time to current Tokyo time rounded to nearest 30min
+  const tokyoTime = now.toLocaleString('en-US', { timeZone: TZ, hour:'2-digit', minute:'2-digit', hour12: false });
+  const [h, m] = tokyoTime.split(':').map(Number);
+  const rm = m < 30 ? '00' : '30';
+  document.getElementById('start-time-input').value = `${String(h).padStart(2,'0')}:${rm}`;
+});
 
-  renderPastLogs();
-}
-
-function tokyoNow() { return new Date(); }
-
-function tokyoDateStr() {
-  // Returns YYYY-MM-DD in Tokyo timezone
-  return new Date().toLocaleDateString('en-CA', {timeZone:TZ}); // en-CA gives YYYY-MM-DD
-}
-
-// ══════════════════════════════════════════
-//  GOOGLE API INIT
-// ══════════════════════════════════════════
+// ═══════════════════════════════════════════
+// GOOGLE API INIT
+// ═══════════════════════════════════════════
 function gapiLoaded() {
   gapi.load('client', async () => {
     await gapi.client.init({});
-    await gapi.client.load('https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest');
+    try {
+      await gapi.client.load('https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest');
+    } catch(e) { console.warn('[gapi] calendar load:', e); }
     gapiReady = true;
-    console.log('[GCal] gapi client ready');
+
+    // Try to restore session token
+    const tok = sessionStorage.getItem('planner_tok');
+    const exp = sessionStorage.getItem('planner_exp');
+    if (tok && exp && Date.now() < parseInt(exp) - 60000) {
+      accessToken = tok;
+      gapi.client.setToken({ access_token: tok });
+      document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
+      // Auto-load yesterday's data from Drive
+      loadYesterdayFromDrive();
+    }
   });
 }
 
@@ -448,460 +446,602 @@ function gisLoaded() {
   tokenClient = google.accounts.oauth2.initTokenClient({
     client_id: CLIENT_ID,
     scope: SCOPES,
-    callback: '' // set before each use
+    callback: (r) => {
+      if (r.error) {
+        showStatus('cal-status', '⚠️ Google認証エラー: ' + r.error, 'error');
+        return;
+      }
+      accessToken = r.access_token;
+      sessionStorage.setItem('planner_tok', r.access_token);
+      sessionStorage.setItem('planner_exp', String(Date.now() + (r.expires_in || 3600) * 1000));
+      gapi.client.setToken(r);
+      document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
+      doLoadCalendar();
+      loadYesterdayFromDrive();
+    }
   });
   gisReady = true;
-  console.log('[GCal] GIS ready');
 }
 
 function requireAuth(callback) {
-  if (!gapiReady || !gisReady) {
-    showStatus('cal-status','Google API still loading — try again in a moment.','info');
+  if (!gisReady || !gapiReady) {
+    showStatus('cal-status', 'Google APIを読み込み中...しばらくお待ちください', 'info');
+    setTimeout(() => requireAuth(callback), 800);
     return;
   }
-  tokenClient.callback = async (resp) => {
-    if (resp.error) {
-      showStatus('cal-status','Auth error: ' + resp.error,'error');
-      return;
-    }
-    await callback();
-  };
-  // If we already have a token, skip prompt
-  if (gapi.client.getToken() === null) {
-    tokenClient.requestAccessToken({ prompt: 'consent' });
+  if (accessToken) { callback(); return; }
+  tokenClient.requestAccessToken({ prompt: '' });
+}
+
+// ═══════════════════════════════════════════
+// DRIVE HELPERS
+// ═══════════════════════════════════════════
+async function driveFetch(path, opts = {}) {
+  if (!accessToken) throw new Error('未認証');
+  const url = path.startsWith('http') ? path : 'https://www.googleapis.com/drive/v3/' + path;
+  const res = await fetch(url, {
+    ...opts,
+    headers: { 'Authorization': 'Bearer ' + accessToken, ...(opts.headers || {}) }
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error((err.error && err.error.message) || 'Drive API ' + res.status);
+  }
+  return res;
+}
+
+async function findDriveFile() {
+  const res = await driveFetch(
+    `files?q=${encodeURIComponent(`name='${DRIVE_FILE}' and trashed=false`)}&fields=files(id,modifiedTime)&spaces=drive`
+  );
+  const j = await res.json();
+  return j.files && j.files.length ? j.files[0] : null;
+}
+
+async function readDriveFile() {
+  const f = await findDriveFile();
+  if (!f) return null;
+  driveFileId = f.id;
+  const res = await driveFetch(`files/${f.id}?alt=media`);
+  return await res.json();
+}
+
+async function writeDriveFile(data) {
+  const content = JSON.stringify(data, null, 2);
+  if (!driveFileId) {
+    const f = await findDriveFile();
+    driveFileId = f ? f.id : null;
+  }
+  if (driveFileId) {
+    await driveFetch(`https://www.googleapis.com/upload/drive/v3/files/${driveFileId}?uploadType=media`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: content
+    });
   } else {
-    tokenClient.requestAccessToken({ prompt: '' });
+    const meta = { name: DRIVE_FILE, mimeType: 'application/json' };
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
+    form.append('file', new Blob([content], { type: 'application/json' }));
+    const res = await driveFetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+      method: 'POST', body: form
+    });
+    driveFileId = (await res.json()).id;
   }
 }
 
-// ══════════════════════════════════════════
-//  STEP 1 · LOAD CALENDAR
-// ══════════════════════════════════════════
-function loadCalendar() {
-  showStatus('cal-status','Connecting to Google Calendar…','info');
-  requireAuth(fetchTodayEvents);
+// ═══════════════════════════════════════════
+// YESTERDAY'S DATA
+// ═══════════════════════════════════════════
+async function loadYesterdayFromDrive() {
+  try {
+    const data = await readDriveFile();
+    if (data && data.logs) {
+      plannerData = data;
+      const yesterday = tokyoDateStr(-1);
+      const yLog = data.logs.find(l => l.date === yesterday);
+      if (yLog && yLog.missed && yLog.missed.trim()) {
+        document.getElementById('missed-text').textContent = yLog.missed;
+        document.getElementById('missed-banner').classList.remove('hidden');
+      }
+    }
+  } catch(e) {
+    console.warn('[Drive] load yesterday failed:', e.message);
+  }
 }
 
-async function fetchTodayEvents() {
+// ═══════════════════════════════════════════
+// STEP 1: CALENDAR
+// ═══════════════════════════════════════════
+function loadCalendar() {
+  requireAuth(doLoadCalendar);
+}
+
+async function doLoadCalendar() {
+  showStatus('cal-status', '📅 カレンダーを読み込み中...', 'info');
   try {
-    const dateStr = tokyoDateStr(); // YYYY-MM-DD
-    const timeMin = dateStr + 'T00:00:00+09:00';
-    const timeMax = dateStr + 'T23:59:59+09:00';
+    const dateStr = tokyoDateStr();
+    const tzOffset = '+09:00';
+    const timeMin = `${dateStr}T00:00:00${tzOffset}`;
+    const timeMax = `${dateStr}T23:59:59${tzOffset}`;
 
     const resp = await gapi.client.calendar.events.list({
       calendarId: 'primary',
       timeMin, timeMax,
       singleEvents: true,
       orderBy: 'startTime',
-      timeZone: TZ
+      maxResults: 20
     });
 
     const items = resp.result.items || [];
-    calEvents = items
-      .filter(e => e.start?.dateTime) // skip all-day
-      .map(e => {
-        const start  = new Date(e.start.dateTime);
-        const end    = new Date(e.end.dateTime);
-        const durMin = Math.round((end - start) / 60000);
-        return {
-          title: e.summary || '(No title)',
-          startDT: e.start.dateTime,
-          endDT:   e.end.dateTime,
-          start:   fmtTime(start),
-          end:     fmtTime(end),
-          durationMin: durMin,
-          durationStr: durStr(durMin)
-        };
-      });
+    calEvents = items.map(ev => {
+      const start = ev.start.dateTime ? ev.start.dateTime.slice(11, 16) : '終日';
+      const end   = ev.end.dateTime   ? ev.end.dateTime.slice(11, 16)   : '';
+      const dMin  = ev.start.dateTime && ev.end.dateTime
+        ? Math.round((new Date(ev.end.dateTime) - new Date(ev.start.dateTime)) / 60000)
+        : 60;
+      return { title: ev.summary || '(無題)', start, end, durationMin: dMin };
+    });
 
-    renderCalEvents();
-    document.getElementById('cal-status').classList.add('hidden');
-    document.getElementById('cal-auth-status').textContent = '✓ Connected';
+    renderCalendarEvents();
+    showStatus('cal-status', `✅ ${calEvents.length}件の予定を読み込みました`, 'success');
   } catch(err) {
-    console.error('[GCal] fetch error:', err);
-    showStatus('cal-status','Failed to load calendar: ' + (err.result?.error?.message || err.message),'error');
+    showStatus('cal-status', '⚠️ カレンダーの読み込みに失敗: ' + err.message, 'error');
   }
 }
 
-function renderCalEvents() {
+function renderCalendarEvents() {
   const wrap = document.getElementById('cal-events-wrap');
-  const list = document.getElementById('cal-event-list');
+  const list = document.getElementById('cal-list');
 
   if (!calEvents.length) {
-    list.innerHTML = '<div style="font-size:13px;color:var(--text-muted);padding:8px 0">No timed events today.</div>';
-  } else {
-    list.innerHTML = calEvents.map(e => `
-      <div class="cal-event">
-        <div class="cal-event-time">${e.start}–${e.end}</div>
-        <div class="cal-event-name">${e.title}</div>
-        <div class="cal-event-dur">${e.durationStr}</div>
-      </div>
-    `).join('');
+    wrap.classList.add('hidden');
+    return;
   }
 
-  // Calc total busy minutes
-  const busyMin = calEvents.reduce((s,e) => s + e.durationMin, 0);
-  const availH  = parseFloat(document.getElementById('hours-input').value) || 8;
-  const freeMin = Math.max(0, availH * 60 - busyMin);
-  document.getElementById('cal-free-note').textContent =
-    `📊 ${calEvents.length} event(s) · ${durStr(busyMin)} scheduled · ${durStr(freeMin)} free`;
-
+  list.innerHTML = calEvents.map(ev => `
+    <div class="cal-event">
+      <div class="cal-dot"></div>
+      <div class="cal-time">${ev.start}${ev.end ? '–' + ev.end : ''}</div>
+      <div class="cal-title">${escHtml(ev.title)}</div>
+      <span class="badge badge-dur">${ev.durationMin}分</span>
+    </div>
+  `).join('');
   wrap.classList.remove('hidden');
 }
 
-// ══════════════════════════════════════════
-//  STEP 2 · AI SCHEDULE PROPOSAL
-// ══════════════════════════════════════════
-async function proposeSchedule() {
+// ═══════════════════════════════════════════
+// STEP 2: AI TODO PROPOSAL
+// ═══════════════════════════════════════════
+async function proposeTodos() {
   const goals = document.getElementById('goals-input').value.trim();
-  if (!goals) { showStatus('propose-status','Please enter your goals for today first.','error'); return; }
+  const hours = document.getElementById('hours-input').value || '8';
+  const startT = document.getElementById('start-time-input').value || '09:00';
 
-  const apiKey = localStorage.getItem('ja2_apikey') || '';
-  if (!apiKey) { showStatus('propose-status','Anthropic API key not found in localStorage (ja2_apikey).','error'); return; }
-
-  const btn = document.getElementById('btn-propose');
+  const btn = document.getElementById('propose-btn');
   btn.disabled = true;
   document.getElementById('propose-loading').classList.remove('hidden');
-  document.getElementById('propose-status').classList.add('hidden');
-  document.getElementById('proposal-wrap').classList.add('hidden');
-
-  const availH    = parseFloat(document.getElementById('hours-input').value) || 8;
-  const startTime = document.getElementById('start-time-input').value || '09:00';
-  const dateStr   = tokyoDateStr();
-  const nowTokyo  = new Date().toLocaleString('en-US', {timeZone:TZ,hour:'2-digit',minute:'2-digit',hour12:false});
-
-  const eventsText = calEvents.length
-    ? calEvents.map(e => `  ${e.start}–${e.end}: ${e.title} (${e.durationStr})`).join('\n')
-    : '  (No fixed events today)';
-
-  const prompt = `You are a productivity coach helping plan a full day in Tokyo.
-
-Today: ${dateStr}
-Current Tokyo time: ${nowTokyo}
-Planning start time: ${startTime}
-Available hours: ${availH}h
-
-FIXED CALENDAR EVENTS (do NOT change these times):
-${eventsText}
-
-USER'S GOALS FOR TODAY:
-${goals}
-
-Create a realistic time-blocked schedule starting at ${startTime}. Include all fixed events exactly as given. Fill remaining time with the user's goals. Add a lunch break if appropriate. Be specific.
-
-Respond ONLY with valid JSON, no markdown fences:
-{
-  "summary": "One sentence coaching note",
-  "schedule": [
-    {
-      "start": "09:00",
-      "end": "10:30",
-      "task": "Task name",
-      "duration": "1.5h",
-      "note": "Optional brief tip",
-      "fixed": false
-    }
-  ]
-}
-
-Rules:
-- Times in HH:MM 24h format
-- Mark fixed calendar events with "fixed": true (copy title exactly)
-- Realistic pacing, include short breaks
-- Only use hours within the available window`;
+  document.getElementById('todo-proposal').classList.add('hidden');
+  showStatus('propose-status', '', '');
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type':'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version':'2023-06-01',
-        'anthropic-dangerous-direct-browser-access':'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2000,
-        messages: [{ role:'user', content: prompt }]
-      })
+    const calStr = calEvents.length
+      ? calEvents.map(e => `${e.start}–${e.end}: ${e.title} (${e.durationMin}分)`).join('\n')
+      : '（本日のFixed予定なし）';
+
+    const missedStr = document.getElementById('missed-text').textContent || '（昨日のデータなし）';
+
+    const raw = await claudeCall({
+      model: 'claude-sonnet-4-6',
+      max_tokens: 2048,
+      system: `あなたは優秀な個人コーチです。
+ユーザーの今日のTodoリストを提案してください。
+必ずJSON形式のみで回答してください。
+JSONの前後に文章を一切含めないでください。
+最初の文字は { でなければなりません。
+最後の文字は } でなければなりません。`,
+      messages: [
+        {
+          role: 'user',
+          content: `<context>
+今日の目標: ${goals || '（未入力）'}
+利用可能時間: ${hours}時間
+開始時間: ${startT}
+今日のFixed予定:
+${calStr}
+昨日できなかったこと: ${missedStr}
+今週の学習テーマ: ${WEEK_THEME}
+</context>
+
+<instructions>
+Step 1: 昨日できなかったことを確認する
+Step 2: 今日の利用可能時間を計算する
+Step 3: Sabbaticalの学習テーマと就活・Vibe Codingのバランスを考える
+Step 4: 優先度順にTodoを提案する
+Step 5: 各Todoに所要時間と理由を付ける
+
+以下のJSON形式で返してください：
+{"todos":[{"title":"タスク名","duration":60,"priority":"high","category":"AI Literacy","reason":"理由","from_yesterday":false}],"coach_message":"コーチからひとこと"}
+</instructions>`
+        },
+        { role: 'assistant', content: '{' }
+      ]
     });
 
-    if (!res.ok) {
-      const err = await res.json().catch(()=>({}));
-      throw new Error(err?.error?.message || 'HTTP ' + res.status);
-    }
-
-    const data   = await res.json();
-    const raw    = data.content[0].text.trim().replace(/^```json\s*/i,'').replace(/\s*```$/,'');
-    const parsed = JSON.parse(raw);
-
-    scheduleBlocks = parsed.schedule || [];
-    document.getElementById('proposal-summary').textContent = parsed.summary || '';
-    renderSchedule();
-    document.getElementById('proposal-wrap').classList.remove('hidden');
-    document.getElementById('step3-card').classList.remove('hidden');
+    const result = parseJSON(raw);
+    proposedTodos = result.todos || [];
+    renderTodoProposal(proposedTodos, result.coach_message || '');
 
   } catch(err) {
-    console.error('[Claude] error:', err);
-    showStatus('propose-status','Failed: ' + err.message,'error');
+    showStatus('propose-status', '⚠️ ' + err.message, 'error');
+    console.error('[proposeTodos]', err);
   } finally {
     btn.disabled = false;
     document.getElementById('propose-loading').classList.add('hidden');
   }
 }
 
-function renderSchedule() {
-  const list = document.getElementById('schedule-list');
-  list.innerHTML = scheduleBlocks.map((b, i) => `
-    <div class="sched-block${b.fixed ? ' fixed-block' : ''}" id="sblock-${i}">
-      ${b.fixed
-        ? '<span style="font-size:18px;flex-shrink:0">🔒</span>'
-        : `<input type="checkbox" class="sched-check" id="chk-${i}" checked
-             onchange="toggleBlock(${i},this.checked)">`
-      }
-      <div class="sched-body">
-        <div class="sched-time">${b.start} – ${b.end}
-          ${b.fixed ? '<span class="sched-badge">FIXED</span>' : ''}
+function renderTodoProposal(todos, coachMsg) {
+  const cards = document.getElementById('todo-cards');
+  const BADGES = {
+    'AI Literacy': 'badge-ai', 'Vibe Coding': 'badge-vc',
+    'Job Search': 'badge-js', 'Personal': 'badge-ps'
+  };
+  const PRIO = { high: '🔴', medium: '🟡', low: '🟢' };
+
+  cards.innerHTML = todos.map((t, i) => `
+    <div class="todo-card">
+      <div class="todo-card-top">
+        <input type="checkbox" class="todo-checkbox" id="chk-${i}" checked>
+        <div class="todo-card-body">
+          <div class="todo-card-title">${escHtml(t.title)}</div>
+          <div class="todo-card-meta">
+            <span class="badge ${BADGES[t.category] || 'badge-ps'}">${escHtml(t.category)}</span>
+            <span class="badge badge-dur">⏱ ${t.duration}分</span>
+            <span>${PRIO[t.priority] || '🟡'} ${t.priority}</span>
+            ${t.from_yesterday ? '<span class="badge badge-ytd">📋 昨日の未完了</span>' : ''}
+          </div>
+          ${t.reason ? `<div class="reason-toggle" onclick="toggleReason(${i})">▼ 理由を見る</div>
+          <div class="todo-reason" id="reason-${i}">${escHtml(t.reason)}</div>` : ''}
         </div>
-        <input class="sched-task-input" id="task-${i}" value="${escHtml(b.task)}"
-          ${b.fixed ? 'disabled' : ''} placeholder="Task name">
-        <div class="sched-dur">${b.duration}</div>
-        ${b.note ? `<div class="sched-note">${escHtml(b.note)}</div>` : ''}
-        <div class="add-status hidden" id="addst-${i}"></div>
       </div>
     </div>
   `).join('');
+
+  const coachBox = document.getElementById('coach-box');
+  if (coachMsg) {
+    document.getElementById('coach-msg').textContent = coachMsg;
+    coachBox.classList.remove('hidden');
+  } else {
+    coachBox.classList.add('hidden');
+  }
+
+  document.getElementById('todo-proposal').classList.remove('hidden');
 }
 
-function toggleBlock(i, checked) {
-  const el = document.getElementById('sblock-' + i);
-  el.classList.toggle('deselected', !checked);
+function toggleReason(i) {
+  const el = document.getElementById('reason-' + i);
+  const tog = el.previousElementSibling;
+  const open = el.style.display === 'block';
+  el.style.display = open ? 'none' : 'block';
+  tog.textContent = open ? '▼ 理由を見る' : '▲ 閉じる';
 }
 
-function selectAll(state) {
-  scheduleBlocks.forEach((b, i) => {
-    if (b.fixed) return;
+function approveSelected() {
+  approvedTodos = proposedTodos.filter((_, i) => {
     const chk = document.getElementById('chk-' + i);
-    if (chk) { chk.checked = state; toggleBlock(i, state); }
+    return chk && chk.checked;
   });
+
+  if (!approvedTodos.length) {
+    showStatus('propose-status', '⚠️ 少なくとも1件選択してください', 'error');
+    return;
+  }
+
+  document.getElementById('step3-card').style.display = 'block';
+  renderStep3(approvedTodos);
+  document.getElementById('step3-card').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('step2-num').classList.add('done');
 }
 
-// ══════════════════════════════════════════
-//  STEP 3 · ADD TO CALENDAR
-// ══════════════════════════════════════════
-function addToCalendar() {
-  showStatus('add-status','Connecting to Google Calendar…','info');
-  requireAuth(doAddToCalendar);
+// ═══════════════════════════════════════════
+// STEP 3: APPROVE & ADD
+// ═══════════════════════════════════════════
+function renderStep3(todos) {
+  const startT = document.getElementById('start-time-input').value || '09:00';
+  const rows = document.getElementById('approve-rows');
+  let cursor = startT;
+
+  rows.innerHTML = todos.map((t, i) => {
+    const tStart = cursor;
+    const tEnd = addMinutes(cursor, t.duration);
+    cursor = tEnd;
+    return `
+    <div class="approve-row" id="arow-${i}">
+      <div class="approve-row-top">
+        <span class="badge ${catBadge(t.category)}">${escHtml(t.category)}</span>
+        <span class="approve-row-title">${escHtml(t.title)} <span style="color:var(--muted);font-size:11px">(${t.duration}分)</span></span>
+      </div>
+      <div class="time-row">
+        <label class="cal-toggle">
+          <input type="checkbox" id="cal-chk-${i}" checked>
+          📅 カレンダーに追加
+        </label>
+        <span style="margin-left:auto">開始:</span>
+        <input type="time" id="ts-${i}" value="${tStart}">
+        <span>〜</span>
+        <input type="time" id="te-${i}" value="${tEnd}">
+      </div>
+      <div id="arow-status-${i}" class="status" style="margin-top:6px"></div>
+    </div>`;
+  }).join('');
 }
 
-async function doAddToCalendar() {
+async function executeApproval() {
+  const btn = document.getElementById('execute-btn');
+  btn.disabled = true;
+  showStatus('approve-status', '⟳ 実行中...', 'info');
+
+  // Action A: Add to tasks localStorage
   const dateStr = tokyoDateStr();
-  let added = 0, failed = 0;
+  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+  let added = 0;
 
-  document.getElementById('btn-add-cal').disabled = true;
+  approvedTodos.forEach((t, i) => {
+    tasks.push({
+      id: Date.now() + i,
+      text: `${t.title} (${t.duration}分)`,
+      done: false,
+      dueDate: dateStr,
+      parentId: null,
+      createdAt: dateStr,
+      completedAt: null,
+    });
+    added++;
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 
-  for (let i = 0; i < scheduleBlocks.length; i++) {
-    const b = scheduleBlocks[i];
-    if (b.fixed) continue;
-    const chk = document.getElementById('chk-' + i);
+  // Action B: Add to Google Calendar
+  let calAdded = 0, calFail = 0;
+  for (let i = 0; i < approvedTodos.length; i++) {
+    const chk = document.getElementById('cal-chk-' + i);
     if (!chk || !chk.checked) continue;
 
-    const taskName = document.getElementById('task-' + i)?.value || b.task;
-    const startDT  = `${dateStr}T${b.start}:00+09:00`;
-    const endDT    = `${dateStr}T${b.end}:00+09:00`;
+    const tStart = document.getElementById('ts-' + i).value;
+    const tEnd   = document.getElementById('te-' + i).value;
+    if (!tStart || !tEnd) continue;
 
     try {
+      await ensureCalendarAuth();
       await gapi.client.calendar.events.insert({
         calendarId: 'primary',
         resource: {
-          summary: taskName,
-          start: { dateTime: startDT, timeZone: TZ },
-          end:   { dateTime: endDT,   timeZone: TZ }
+          summary: approvedTodos[i].title,
+          start: { dateTime: `${dateStr}T${tStart}:00+09:00`, timeZone: TZ },
+          end:   { dateTime: `${dateStr}T${tEnd}:00+09:00`,   timeZone: TZ },
+          colorId: CAT_COLORS[approvedTodos[i].category] || '8'
         }
       });
-      const st = document.getElementById('addst-' + i);
-      st.textContent = '✓ Added to calendar';
-      st.className   = 'add-status ok';
-      st.classList.remove('hidden');
-      added++;
+      showStatus('arow-status-' + i, '✓ カレンダーに追加済み', 'success');
+      calAdded++;
     } catch(err) {
-      const st = document.getElementById('addst-' + i);
-      st.textContent = '✗ Failed: ' + (err.result?.error?.message || err.message);
-      st.className   = 'add-status fail';
-      st.classList.remove('hidden');
-      failed++;
+      showStatus('arow-status-' + i, '✗ ' + err.message, 'error');
+      calFail++;
     }
   }
 
-  document.getElementById('btn-add-cal').disabled = false;
-  const msg = `${added} event(s) added to Google Calendar` + (failed ? `, ${failed} failed.` : '.');
-  showStatus('add-status', msg, failed ? 'error' : 'success');
+  const msg = `✅ todo.htmlに${added}件追加 / カレンダー: ${calAdded}件追加${calFail ? ` (${calFail}件失敗)` : ''}`;
+  showStatus('approve-status', msg, 'success');
+  document.getElementById('step3-num').classList.add('done');
+  btn.disabled = false;
 }
 
-// ══════════════════════════════════════════
-//  STEP 4 · END OF DAY LOG
-// ══════════════════════════════════════════
-function toggleEOD() {
-  const body  = document.getElementById('eod-body');
-  const arrow = document.getElementById('eod-arrow');
-  const open  = body.classList.toggle('hidden');
-  arrow.classList.toggle('open', !open);
-  arrow.textContent = open ? '▶' : '▼';
+async function ensureCalendarAuth() {
+  if (accessToken) return;
+  return new Promise((resolve, reject) => {
+    tokenClient.callback = (r) => {
+      if (r.error) { reject(new Error(r.error)); return; }
+      accessToken = r.access_token;
+      gapi.client.setToken(r);
+      resolve();
+    };
+    tokenClient.requestAccessToken({ prompt: '' });
+  });
 }
 
-async function generateDiary() {
+// ═══════════════════════════════════════════
+// STEP 4: EOD LOG
+// ═══════════════════════════════════════════
+async function generateAdvice() {
   const accomplished = document.getElementById('eod-accomplished').value.trim();
   const well         = document.getElementById('eod-well').value.trim();
   const missed       = document.getElementById('eod-missed').value.trim();
   const improve      = document.getElementById('eod-improve').value.trim();
   const energy       = document.getElementById('eod-energy').value;
 
-  if (!accomplished && !well && !missed) {
-    alert('Fill in at least one section before generating a summary.'); return;
-  }
-
-  const apiKey = localStorage.getItem('ja2_apikey') || '';
-  if (!apiKey) { alert('Anthropic API key not found (ja2_apikey).'); return; }
-
-  const btn = document.getElementById('btn-diary');
-  btn.disabled = true;
-  document.getElementById('diary-loading').classList.remove('hidden');
-  document.getElementById('diary-output').classList.add('hidden');
-
-  const dateStr = tokyoDateStr();
-  const goals   = document.getElementById('goals-input').value.trim();
-
-  const prompt = `Write a warm, reflective diary entry in first person for ${dateStr} based on these notes.
-Keep it to 3–5 sentences, honest and encouraging.
-
-Goals set this morning: ${goals || '(none recorded)'}
-Accomplished: ${accomplished || '(blank)'}
-What went well: ${well || '(blank)'}
-What I missed: ${missed || '(blank)'}
-1% improvement for tomorrow: ${improve || '(blank)'}
-Energy level: ${energy}/10
-
-Write the diary entry now. No headers, just flowing prose.`;
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST',
-      headers:{
-        'Content-Type':'application/json',
-        'x-api-key':apiKey,
-        'anthropic-version':'2023-06-01',
-        'anthropic-dangerous-direct-browser-access':'true'
-      },
-      body: JSON.stringify({
-        model:'claude-sonnet-4-6',
-        max_tokens:500,
-        messages:[{role:'user',content:prompt}]
-      })
-    });
-    if (!res.ok) { const e=await res.json().catch(()=>({})); throw new Error(e?.error?.message||'HTTP '+res.status); }
-    const data = await res.json();
-    const text = data.content[0].text.trim();
-    const out  = document.getElementById('diary-output');
-    out.textContent = text;
-    out.classList.remove('hidden');
-  } catch(err) {
-    alert('Diary generation failed: ' + err.message);
-  } finally {
-    btn.disabled = false;
-    document.getElementById('diary-loading').classList.add('hidden');
-  }
-}
-
-function saveDailyLog() {
-  const dateStr = tokyoDateStr();
-  const log = {
-    date:        dateStr,
-    goals:       document.getElementById('goals-input').value.trim(),
-    accomplished:document.getElementById('eod-accomplished').value.trim(),
-    well:        document.getElementById('eod-well').value.trim(),
-    missed:      document.getElementById('eod-missed').value.trim(),
-    improve:     document.getElementById('eod-improve').value.trim(),
-    energy:      document.getElementById('eod-energy').value,
-    diary:       document.getElementById('diary-output').textContent || '',
-    savedAt:     new Date().toISOString()
-  };
-
-  const logs = getLogs();
-  const idx  = logs.findIndex(l => l.date === dateStr);
-  if (idx >= 0) logs[idx] = log; else logs.unshift(log);
-  localStorage.setItem('daily_logs', JSON.stringify(logs));
-
-  const st = document.getElementById('save-status');
-  st.textContent = '✓ Saved for ' + dateStr;
-  renderPastLogs();
-}
-
-function getLogs() { return JSON.parse(localStorage.getItem('daily_logs') || '[]'); }
-
-function renderPastLogs() {
-  const logs = getLogs();
-  const el   = document.getElementById('past-logs-list');
-  if (!logs.length) {
-    el.innerHTML = '<div style="font-size:12px;color:var(--text-muted)">No past logs yet.</div>';
+  if (!accomplished && !missed) {
+    showStatus('save-status', '⚠️ 少なくとも「できたこと」か「できなかったこと」を入力してください', 'error');
     return;
   }
-  el.innerHTML = logs.slice(0, 10).map(l => `
-    <div class="past-log-item" onclick="loadLog('${l.date}')">
-      <div class="past-log-date">${l.date} · Energy ${l.energy}/10</div>
-      <div class="past-log-preview">${l.accomplished || l.diary || '(no notes)'}</div>
-    </div>
-  `).join('');
-}
 
-function loadLog(dateStr) {
-  const log = getLogs().find(l => l.date === dateStr);
-  if (!log) return;
-  document.getElementById('goals-input').value        = log.goals || '';
-  document.getElementById('eod-accomplished').value   = log.accomplished || '';
-  document.getElementById('eod-well').value           = log.well || '';
-  document.getElementById('eod-missed').value         = log.missed || '';
-  document.getElementById('eod-improve').value        = log.improve || '';
-  document.getElementById('eod-energy').value         = log.energy || 7;
-  document.getElementById('energy-val').textContent   = log.energy || 7;
-  if (log.diary) {
-    const out = document.getElementById('diary-output');
-    out.textContent = log.diary;
-    out.classList.remove('hidden');
+  const btn = document.getElementById('advice-btn');
+  btn.disabled = true;
+  document.getElementById('advice-loading').classList.remove('hidden');
+  document.getElementById('advice-output').classList.add('hidden');
+
+  try {
+    const raw = await claudeCall({
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1024,
+      system: `あなたは個人コーチです。
+今日の振り返りを分析し、明日への具体的なアドバイスを日本語で提供してください。
+JSON形式で返してください。
+JSONの前後に文章を一切含めないでください。`,
+      messages: [
+        {
+          role: 'user',
+          content: `<today_log>
+できたこと: ${accomplished || '（未入力）'}
+うまくいったこと: ${well || '（未入力）'}
+できなかったこと: ${missed || '（未入力）'}
+明日の改善点: ${improve || '（未入力）'}
+エネルギー: ${energy}/10
+</today_log>
+
+以下のJSON形式で返してください：
+{"summary":"今日の一言まとめ","improvement":"明日の1%改善ポイント","encouragement":"励ましのメッセージ"}`
+        },
+        { role: 'assistant', content: '{' }
+      ]
+    });
+
+    aiAdviceResult = parseJSON(raw);
+    renderAdvice(aiAdviceResult);
+
+  } catch(err) {
+    showStatus('save-status', '⚠️ AI生成エラー: ' + err.message, 'error');
+    console.error('[generateAdvice]', err);
+  } finally {
+    btn.disabled = false;
+    document.getElementById('advice-loading').classList.add('hidden');
   }
-  // Open EOD section
-  const body = document.getElementById('eod-body');
-  if (body.classList.contains('hidden')) toggleEOD();
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
 
-// ══════════════════════════════════════════
-//  HELPERS
-// ══════════════════════════════════════════
-function showStatus(id, msg, type) {
-  const el = document.getElementById(id);
-  el.textContent = msg;
-  el.className   = 'status-msg ' + type;
-  el.classList.remove('hidden');
+function renderAdvice(adv) {
+  const out = document.getElementById('advice-output');
+  out.innerHTML = `
+    <div class="advice-section">
+      <div class="advice-label">📝 今日のまとめ</div>
+      <div class="advice-text">${escHtml(adv.summary || '')}</div>
+    </div>
+    <div class="advice-section">
+      <div class="advice-label">🎯 明日の1%改善</div>
+      <div class="advice-text">${escHtml(adv.improvement || '')}</div>
+    </div>
+    <div class="advice-section" style="margin-bottom:0">
+      <div class="advice-label">💪 励ましのメッセージ</div>
+      <div class="advice-text" style="color:#6ee7b7">${escHtml(adv.encouragement || '')}</div>
+    </div>
+  `;
+  out.classList.remove('hidden');
 }
 
-function fmtTime(date) {
-  return date.toLocaleTimeString('en-US', {timeZone:TZ, hour:'2-digit', minute:'2-digit', hour12:false});
+async function saveLog() {
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true;
+
+  if (!accessToken) {
+    showStatus('save-status', '先にGoogleカレンダーを読み込んでGoogle接続してください', 'error');
+    btn.disabled = false;
+    return;
+  }
+
+  const entry = {
+    date:         tokyoDateStr(),
+    accomplished: document.getElementById('eod-accomplished').value.trim(),
+    went_well:    document.getElementById('eod-well').value.trim(),
+    missed:       document.getElementById('eod-missed').value.trim(),
+    improvement:  document.getElementById('eod-improve').value.trim(),
+    energy:       parseInt(document.getElementById('eod-energy').value),
+    ai_advice:    aiAdviceResult || null,
+    approved_todos: approvedTodos,
+    goals:        document.getElementById('goals-input').value.trim(),
+    saved_at:     new Date().toISOString(),
+  };
+
+  try {
+    showStatus('save-status', '⟳ Drive に保存中...', 'info');
+
+    // Ensure we have latest plannerData
+    if (!plannerData.logs) plannerData.logs = [];
+    const existing = plannerData.logs.findIndex(l => l.date === entry.date);
+    if (existing >= 0) plannerData.logs[existing] = entry;
+    else plannerData.logs.push(entry);
+
+    // Keep last 90 days
+    plannerData.logs.sort((a, b) => b.date.localeCompare(a.date));
+    plannerData.logs = plannerData.logs.slice(0, 90);
+
+    await writeDriveFile(plannerData);
+    showStatus('save-status', '✅ Google Driveに保存しました！', 'success');
+    document.getElementById('step4-num').classList.add('done');
+  } catch(err) {
+    showStatus('save-status', '⚠️ 保存失敗: ' + err.message, 'error');
+    console.error('[saveLog]', err);
+  } finally {
+    btn.disabled = false;
+  }
 }
 
-function durStr(min) {
-  if (min < 60) return min + 'm';
-  const h = Math.floor(min/60), m = min%60;
-  return m ? `${h}h ${m}m` : `${h}h`;
+// ═══════════════════════════════════════════
+// ANTHROPIC API HELPERS
+// ═══════════════════════════════════════════
+async function claudeCall(payload) {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) throw new Error('APIキーが設定されていません。localStorage.setItem("ja2_apikey","YOUR_KEY") で設定してください');
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'content-type': 'application/json',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify(payload)
+  });
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message || 'API error');
+  let text = '';
+  for (const b of (data.content || [])) if (b.type === 'text') text += b.text;
+  return text;
+}
+
+function parseJSON(raw) {
+  const full = '{' + raw;
+  const clean = s => s.replace(/,\s*([\}\]])/g, '$1');
+  try { return JSON.parse(clean(full)); }
+  catch(e1) {
+    console.error('[parseJSON] first attempt:', e1.message, full.slice(0, 300));
+    const m = full.match(/\{[\s\S]*\}/);
+    if (m) {
+      try { return JSON.parse(clean(m[0])); }
+      catch(e2) { console.error('[parseJSON] second attempt:', e2.message); }
+    }
+    throw new Error('AIの回答形式が正しくありませんでした。もう一度試してください。');
+  }
+}
+
+// ═══════════════════════════════════════════
+// UTILITY HELPERS
+// ═══════════════════════════════════════════
+function tokyoDateStr(offsetDays = 0) {
+  const d = new Date();
+  d.setDate(d.getDate() + offsetDays);
+  return d.toLocaleDateString('en-CA', { timeZone: TZ }); // YYYY-MM-DD
+}
+
+function addMinutes(timeStr, mins) {
+  const [h, m] = timeStr.split(':').map(Number);
+  const total = h * 60 + m + (parseInt(mins) || 0);
+  return `${String(Math.floor(total / 60) % 24).padStart(2,'0')}:${String(total % 60).padStart(2,'0')}`;
+}
+
+function catBadge(cat) {
+  return { 'AI Literacy':'badge-ai', 'Vibe Coding':'badge-vc', 'Job Search':'badge-js', 'Personal':'badge-ps' }[cat] || 'badge-ps';
 }
 
 function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ══════════════════════════════════════════
-//  START
-// ══════════════════════════════════════════
-init();
+function showStatus(id, msg, type) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = msg;
+  el.className = 'status' + (type ? ' ' + type : '');
+  if (msg) el.classList.add('show');
+  else el.classList.remove('show');
+}
 </script>
 </body>
 </html>
