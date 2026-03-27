@@ -337,6 +337,34 @@ td{padding:9px 12px;vertical-align:middle}
 .s7-retry-btn{padding:7px 16px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:8px;font-size:12px;color:#374151;cursor:pointer;font-weight:600}
 .s7-retry-btn:hover{background:#e5e7eb}
 .s7-inline-error{font-size:12px;color:#6b7280;margin-top:6px;padding:0 2px}
+/* S7 Drive bar */
+.s7-drive-bar{display:flex;align-items:center;gap:10px;padding:9px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;flex-wrap:wrap}
+.s7-drive-btn{padding:5px 12px;background:var(--card);border:1.5px solid var(--border);border-radius:6px;font-size:12px;font-weight:600;color:#374151;cursor:pointer;transition:.15s all}
+.s7-drive-btn:hover{border-color:#6b7280;color:#111827}
+.s7-drive-btn:disabled{opacity:.5;cursor:not-allowed}
+.s7-drive-stat{font-size:12px;color:#6b7280;flex:1}
+.s7-drive-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.s7-drive-dot.synced{background:#22c55e}.s7-drive-dot.saving{background:#eab308;animation:s7dp .8s infinite}.s7-drive-dot.error{background:#9ca3af}
+@keyframes s7dp{0%,100%{opacity:1}50%{opacity:.35}}
+.s7-drive-so{padding:4px 10px;background:none;border:1px solid var(--border);border-radius:6px;font-size:11px;color:#9ca3af;cursor:pointer;display:none}
+.s7-drive-so:hover{border-color:#9ca3af;color:#374151}
+/* S7 History panel */
+.s7-hist-panel{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;box-shadow:var(--sh);overflow:hidden}
+.s7-hist-toggle{width:100%;padding:11px 16px;background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#374151;text-align:left}
+.s7-hist-toggle:hover{background:#f9fafb}
+.s7-hist-cnt{background:#e5e7eb;color:#374151;border-radius:20px;padding:1px 8px;font-size:11px;font-weight:700;margin-left:2px}
+.s7-hist-arr{margin-left:auto;font-size:11px;color:#9ca3af;transition:.2s transform}
+.s7-hist-arr.open{transform:rotate(90deg)}
+.s7-hist-list{border-top:1px solid var(--border);padding:6px}
+.s7-hist-entry{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px}
+.s7-hist-entry:hover{background:#f9fafb}
+.s7-hist-ename{font-size:13px;font-weight:600;color:#111827;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s7-hist-edate{font-size:11px;color:#9ca3af;white-space:nowrap;flex-shrink:0}
+.s7-hist-load{padding:4px 10px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;font-size:11px;color:#1d4ed8;font-weight:600;cursor:pointer;transition:.15s;white-space:nowrap}
+.s7-hist-load:hover{background:#dbeafe}
+.s7-hist-del{padding:4px 8px;background:none;border:1px solid #e5e7eb;border-radius:6px;font-size:11px;color:#9ca3af;cursor:pointer;transition:.15s;flex-shrink:0}
+.s7-hist-del:hover{border-color:#6b7280;color:#374151}
+.s7-hist-empty{padding:16px;text-align:center;font-size:12px;color:#9ca3af}
 @media(max-width:700px){
   .s7-input-row{flex-direction:column}
   .s7-steps{display:none}
@@ -764,12 +792,28 @@ td{padding:9px 12px;vertical-align:middle}
     <div class="s7-search-box">
       <div class="s7-input-row">
         <input id="s7-input" class="s7-input" type="text"
-          placeholder="Enter company or service name  e.g. Asakusa Rickshaw, teamLab, Tokyo Skytree"
-          onkeydown="if(event.key==='Enter')s7StartSearch()">
+          placeholder="Enter company or service name  e.g. Asakusa Rickshaw, teamLab, Tokyo Skytree">
         <button id="s7-btn" class="s7-btn" onclick="s7StartSearch()">🔍 Start Research</button>
       </div>
       <div id="s7-inline-error" class="s7-inline-error" style="display:none"></div>
       <div id="s7-history" class="s7-history"></div>
+    </div>
+
+    <!-- Drive bar -->
+    <div class="s7-drive-bar">
+      <button id="s7-drive-btn" class="s7-drive-btn" onclick="s7DriveConnect()">☁️ Connect Drive</button>
+      <span id="s7-drive-stat" class="s7-drive-stat"></span>
+      <button id="s7-drive-so" class="s7-drive-so" onclick="s7DriveSignOut()">Disconnect</button>
+    </div>
+
+    <!-- History panel -->
+    <div class="s7-hist-panel">
+      <button class="s7-hist-toggle" onclick="s7ToggleHist(this)">
+        📂 Research History
+        <span class="s7-hist-cnt" id="s7-hist-cnt">0</span>
+        <span class="s7-hist-arr" id="s7-hist-arr">▶</span>
+      </button>
+      <div id="s7-hist-list" class="s7-hist-list" style="display:none"></div>
     </div>
 
     <!-- Progress -->
@@ -1774,6 +1818,16 @@ const SYS_EMAIL=`あなたはHeadoutのJapan BD担当者です。
 let s7State={research:null,news:null,email:null,contact:null};
 let s7CurrentQuery='';
 let s7IsRunning=false;
+let s7IsComposing=false;
+
+/* ── Drive constants ── */
+const S7_FILE='operator_research_history.json';
+const S7_LS='operator_research_history';
+const S7_CID='222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+const S7_SCOPE='https://www.googleapis.com/auth/drive.file';
+let s7Tok=null,s7TokExp=null,s7FileId=null,s7TokClient=null;
+let s7Hist={searches:[]};
+let s7HistOpen=false;
 
 /* ── Helpers ── */
 function s7ParseJSON(txt){
@@ -2158,12 +2212,248 @@ Step 3: アプローチすべき役職をアドバイスする
   }
 
   s7SetDone();
+
+  // Auto-save entry if any result was obtained
+  if(s7State.research||s7State.news||s7State.email||s7State.contact){
+    s7SaveEntry({
+      id:Date.now().toString(36)+Math.random().toString(36).slice(2,5),
+      company:q,
+      date:new Date().toISOString(),
+      research:s7State.research,
+      news:s7State.news,
+      email:s7State.email,
+      contacts:s7State.contact
+    });
+  }
+
   s7IsRunning=false;
   document.getElementById('s7-btn').disabled=false;
 };
 
-// Init
-s7RenderHistory();
+/* ── Drive helpers ── */
+function s7ValidTok(){return s7Tok&&Date.now()<s7TokExp-60000;}
+
+function s7DriveUI(){
+  const btn=document.getElementById('s7-drive-btn');
+  const so=document.getElementById('s7-drive-so');
+  if(s7ValidTok()){
+    if(btn)btn.style.display='none';
+    if(so)so.style.display='inline-block';
+  }else{
+    if(btn)btn.style.display='inline-block';
+    if(so)so.style.display='none';
+  }
+}
+
+function s7DriveStat(state,msg){
+  const el=document.getElementById('s7-drive-stat');
+  if(!el)return;
+  if(state==='saving')el.innerHTML='<span class="s7-drive-dot saving"></span> Saving to Drive...';
+  else if(state==='saved')el.innerHTML='<span class="s7-drive-dot synced"></span> ☁️ Saved to Drive ✓';
+  else if(state==='error')el.innerHTML='<span class="s7-drive-dot error"></span> Drive save failed — saved locally';
+  else if(state==='connected')el.innerHTML='<span class="s7-drive-dot synced"></span> Drive connected';
+  else el.innerHTML=msg||'';
+}
+
+function s7LoadGSI(){
+  if(window.google&&google.accounts){s7InitTok();return;}
+  const s=document.createElement('script');
+  s.src='https://accounts.google.com/gsi/client';
+  s.onload=s7InitTok;
+  document.head.appendChild(s);
+}
+
+function s7InitTok(){
+  s7TokClient=google.accounts.oauth2.initTokenClient({
+    client_id:S7_CID,scope:S7_SCOPE,
+    callback:(resp)=>{
+      if(resp.error){console.error('[S7 Drive]',resp.error);return;}
+      s7Tok=resp.access_token;
+      s7TokExp=Date.now()+resp.expires_in*1000;
+      localStorage.setItem('gdrive_token',s7Tok);
+      localStorage.setItem('gdrive_expiry',String(s7TokExp));
+      s7DriveUI();s7DriveStat('connected');
+      s7DriveLoad();
+    }
+  });
+  const tok=localStorage.getItem('gdrive_token');
+  const exp=localStorage.getItem('gdrive_expiry');
+  if(tok&&exp&&Date.now()<parseInt(exp)-60000){
+    s7Tok=tok;s7TokExp=parseInt(exp);
+    s7DriveUI();s7DriveStat('connected');
+    s7DriveLoad();
+  }
+}
+
+window.s7DriveConnect=function(){
+  if(!s7TokClient){
+    const btn=document.getElementById('s7-drive-btn');
+    if(btn)btn.textContent='⏳ Loading...';
+    setTimeout(s7DriveConnect,600);return;
+  }
+  s7TokClient.requestAccessToken({prompt:''});
+};
+
+window.s7DriveSignOut=function(){
+  s7Tok=null;s7TokExp=null;s7FileId=null;
+  localStorage.removeItem('gdrive_token');
+  localStorage.removeItem('gdrive_expiry');
+  s7DriveUI();
+  const el=document.getElementById('s7-drive-stat');
+  if(el)el.innerHTML='';
+};
+
+async function s7DriveApiFetch(path,opts={}){
+  const res=await fetch('https://www.googleapis.com/drive/v3/'+path,{
+    ...opts,headers:{'Authorization':'Bearer '+s7Tok,...(opts.headers||{})}
+  });
+  if(!res.ok)throw new Error('Drive '+res.status);
+  return res;
+}
+
+async function s7DriveFindFile(){
+  const res=await s7DriveApiFetch('files?q='+encodeURIComponent("name='"+S7_FILE+"' and trashed=false")+'&fields=files(id)&spaces=drive');
+  const j=await res.json();
+  return j.files&&j.files.length?j.files[0]:null;
+}
+
+async function s7DriveSaveData(data){
+  if(!s7ValidTok())return;
+  s7DriveStat('saving');
+  try{
+    if(!s7FileId){const f=await s7DriveFindFile();if(f)s7FileId=f.id;}
+    if(s7FileId){
+      const res=await fetch('https://www.googleapis.com/upload/drive/v3/files/'+s7FileId+'?uploadType=media',{
+        method:'PATCH',
+        headers:{'Authorization':'Bearer '+s7Tok,'Content-Type':'application/json'},
+        body:JSON.stringify(data,null,2)
+      });
+      if(!res.ok)throw new Error('Drive update '+res.status);
+    }else{
+      const meta={name:S7_FILE,mimeType:'application/json'};
+      const form=new FormData();
+      form.append('metadata',new Blob([JSON.stringify(meta)],{type:'application/json'}));
+      form.append('file',new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
+      const res=await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id',{
+        method:'POST',headers:{'Authorization':'Bearer '+s7Tok},body:form
+      });
+      if(!res.ok)throw new Error('Drive create '+res.status);
+      s7FileId=(await res.json()).id;
+    }
+    s7DriveStat('saved');
+  }catch(e){console.error('[S7 Drive] save:',e);s7DriveStat('error');}
+}
+
+async function s7DriveLoad(){
+  if(!s7ValidTok())return;
+  try{
+    const f=await s7DriveFindFile();
+    if(f){
+      s7FileId=f.id;
+      const res=await s7DriveApiFetch('files/'+f.id+'?alt=media');
+      const data=await res.json();
+      if(data&&data.searches){
+        s7Hist=data;
+        localStorage.setItem(S7_LS,JSON.stringify(s7Hist));
+        s7RenderHistPanel();
+      }
+    }
+  }catch(e){console.error('[S7 Drive] load:',e);}
+}
+
+/* ── localStorage history ── */
+function s7GetHist(){
+  try{return JSON.parse(localStorage.getItem(S7_LS)||'{"searches":[]}')}catch{return{searches:[]};}
+}
+function s7SetHist(h){
+  s7Hist=h;
+  localStorage.setItem(S7_LS,JSON.stringify(h));
+}
+
+/* ── Entry management ── */
+function s7SaveEntry(entry){
+  const h=s7GetHist();
+  // Remove existing entry with same company name (keep latest)
+  h.searches=h.searches.filter(e=>e.company!==entry.company);
+  h.searches.unshift(entry);
+  if(h.searches.length>20)h.searches=h.searches.slice(0,20);
+  s7SetHist(h);
+  s7RenderHistPanel();
+  if(s7ValidTok())s7DriveSaveData(h);
+}
+
+window.s7LoadEntry=function(id){
+  const h=s7GetHist();
+  const entry=h.searches.find(e=>e.id===id);
+  if(!entry)return;
+  s7State={research:entry.research,news:entry.news,email:entry.email,contact:entry.contacts};
+  // Restore UI
+  document.getElementById('s7-input').value=entry.company;
+  document.getElementById('s7-progress-wrap').style.display='none';
+  ['s7-card-a','s7-card-b','s7-card-c','s7-card-d'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('s7-a-body').innerHTML='';
+  document.getElementById('s7-b-body').innerHTML='';
+  document.getElementById('s7-c-body').innerHTML='';
+  document.getElementById('s7-d-body').innerHTML='';
+  if(entry.research){document.getElementById('s7-a-cat').textContent=entry.research.category||'';s7RenderA(entry.research);document.getElementById('s7-card-a').style.display='block';}
+  if(entry.news){s7RenderB(entry.news);document.getElementById('s7-card-b').style.display='block';}
+  if(entry.email){s7RenderC(entry.email);document.getElementById('s7-card-c').style.display='block';}
+  if(entry.contacts){s7RenderD(entry.contacts);document.getElementById('s7-card-d').style.display='block';}
+};
+
+window.s7DeleteEntry=function(id){
+  const h=s7GetHist();
+  h.searches=h.searches.filter(e=>e.id!==id);
+  s7SetHist(h);
+  s7RenderHistPanel();
+  if(s7ValidTok())s7DriveSaveData(h);
+};
+
+/* ── History panel render ── */
+function s7RenderHistPanel(){
+  const h=s7GetHist();
+  const cnt=h.searches.length;
+  const cntEl=document.getElementById('s7-hist-cnt');
+  const listEl=document.getElementById('s7-hist-list');
+  if(cntEl)cntEl.textContent=cnt;
+  if(!listEl)return;
+  if(!cnt){listEl.innerHTML='<div class="s7-hist-empty">No saved research yet. Run a search to save automatically.</div>';return;}
+  listEl.innerHTML=h.searches.map(e=>{
+    const d=new Date(e.date);
+    const dateStr=d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    const safeId=JSON.stringify(e.id);
+    return`<div class="s7-hist-entry">
+      <span class="s7-hist-ename">${e.company}</span>
+      <span class="s7-hist-edate">${dateStr}</span>
+      <button class="s7-hist-load" onclick="s7LoadEntry(${safeId})">Load</button>
+      <button class="s7-hist-del" onclick="s7DeleteEntry(${safeId})">✕</button>
+    </div>`;
+  }).join('');
+}
+
+window.s7ToggleHist=function(btn){
+  s7HistOpen=!s7HistOpen;
+  const list=document.getElementById('s7-hist-list');
+  const arr=document.getElementById('s7-hist-arr');
+  if(list)list.style.display=s7HistOpen?'block':'none';
+  if(arr)arr.classList.toggle('open',s7HistOpen);
+};
+
+/* ── Init ── */
+(function s7Init(){
+  s7RenderHistory();  // search chips
+  s7Hist=s7GetHist();
+  s7RenderHistPanel();
+  s7LoadGSI();
+
+  // IME-safe Enter key handler
+  const inp=document.getElementById('s7-input');
+  inp.addEventListener('compositionstart',()=>{s7IsComposing=true;});
+  inp.addEventListener('compositionend',()=>{s7IsComposing=false;});
+  inp.addEventListener('keydown',(e)=>{
+    if(e.key==='Enter'&&!s7IsComposing)s7StartSearch();
+  });
+})();
 
 })();
 </script>
