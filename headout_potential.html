@@ -268,6 +268,12 @@ td{padding:9px 12px;vertical-align:middle}
 .s7-step{flex:1;text-align:center;font-size:11px;padding:5px 4px;border-radius:8px;border:1px solid var(--border);color:#6b7280;transition:.2s all}
 .s7-step.active{border-color:#3b82f6;color:#1d4ed8;background:#eff6ff}
 .s7-step.done{border-color:var(--yes-c);color:var(--yes-c);background:var(--yes-bg)}
+/* Countdown */
+.s7-countdown{margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
+.s7-countdown-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;font-size:12px;color:#6b7280}
+.s7-countdown-time{font-family:monospace;font-size:14px;font-weight:700;color:#3b82f6}
+.s7-countdown-track{background:#f0f3f6;border-radius:20px;height:5px;overflow:hidden}
+.s7-countdown-bar{background:linear-gradient(90deg,#3b82f6,#1d4ed8);height:100%;border-radius:20px;transition:width .9s linear}
 /* Result Cards */
 .s7-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:var(--sh);animation:s7fadeIn .3s ease}
 @keyframes s7fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
@@ -830,6 +836,15 @@ td{padding:9px 12px;vertical-align:middle}
         <div id="s7-step-2" class="s7-step">② News</div>
         <div id="s7-step-3" class="s7-step">③ Email</div>
         <div id="s7-step-4" class="s7-step">④ Contacts</div>
+      </div>
+      <div id="s7-countdown" class="s7-countdown" style="display:none">
+        <div class="s7-countdown-row">
+          <span>⏱️ Next step starts in:</span>
+          <span id="s7-countdown-time" class="s7-countdown-time">1:05</span>
+        </div>
+        <div class="s7-countdown-track">
+          <div id="s7-countdown-bar" class="s7-countdown-bar" style="width:100%"></div>
+        </div>
       </div>
     </div>
 
@@ -1837,6 +1852,27 @@ function s7ParseJSON(txt){
 
 function s7Delay(ms){return new Promise(r=>setTimeout(r,ms));}
 
+function s7CountdownWait(seconds){
+  return new Promise(resolve=>{
+    const wrap=document.getElementById('s7-countdown');
+    const timeEl=document.getElementById('s7-countdown-time');
+    const barEl=document.getElementById('s7-countdown-bar');
+    let remaining=seconds;
+    function fmt(s){const m=Math.floor(s/60);return m+':'+(s%60<10?'0':'')+(s%60);}
+    function tick(){
+      timeEl.textContent=fmt(remaining);
+      barEl.style.width=(remaining/seconds*100)+'%';
+    }
+    wrap.style.display='block';
+    tick();
+    const iv=setInterval(()=>{
+      remaining--;
+      tick();
+      if(remaining<=0){clearInterval(iv);wrap.style.display='none';resolve();}
+    },1000);
+  });
+}
+
 async function s7ApiCall(system,userMsg,webSearch){
   const key=localStorage.getItem('ja2_apikey');
   if(!key) throw new Error('API key not found. Please set ja2_apikey in localStorage.');
@@ -1869,7 +1905,8 @@ async function s7ApiCall(system,userMsg,webSearch){
 
 /* ── Progress ── */
 function s7SetStep(n){
-  // n=1..4
+  // n=1..4; hide countdown when new step begins
+  document.getElementById('s7-countdown').style.display='none';
   const labels=['🔍 Researching service...','📰 Collecting news...','📧 Drafting email...','👤 Finding contacts...'];
   const pct=((n-1)/4*100).toFixed(0);
   document.getElementById('s7-progress-label').textContent=labels[n-1];
@@ -2063,7 +2100,7 @@ window.s7StartSearch=async function(forcedQuery){
     document.getElementById('s7-card-a').style.display='block';
     document.getElementById('s7-a-body').innerHTML=`<div class="s7-error"><p>⚠️ Service research failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(3000);
+  await s7CountdownWait(65);
 
   // ─ CALL 2: News ─
   s7SetStep(2);
@@ -2078,7 +2115,7 @@ window.s7StartSearch=async function(forcedQuery){
     document.getElementById('s7-card-b').style.display='block';
     document.getElementById('s7-b-body').innerHTML=`<div class="s7-error"><p>⚠️ News collection failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(3000);
+  await s7CountdownWait(65);
 
   // ─ CALL 3: Email ─
   s7SetStep(3);
@@ -2100,7 +2137,7 @@ window.s7StartSearch=async function(forcedQuery){
     document.getElementById('s7-card-c').style.display='block';
     document.getElementById('s7-c-body').innerHTML=`<div class="s7-error"><p>⚠️ Email drafting failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(3000);
+  await s7CountdownWait(65);
 
   // ─ CALL 4: Contacts ─
   s7SetStep(4);
