@@ -244,103 +244,99 @@ td{padding:9px 12px;vertical-align:middle}
 .s6-add-btn{padding:10px 18px;background:var(--yes-c);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s all}
 .s6-add-btn:hover{background:#166534}
 .s6-port-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-/* ── S7 OPERATOR RESEARCH (dark navy) ── */
-.s7-wrap{background:#0f172a;border-radius:16px;padding:28px 24px;min-height:400px}
-.s7-intro{margin-bottom:28px}
-.s7-intro h2{font-size:20px;font-weight:800;color:#f1f5f9;margin-bottom:4px}
-.s7-intro p{font-size:13px;color:#94a3b8}
-.s7-search-box{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:16px}
+/* ── S7 OPERATOR RESEARCH ── */
+.s7-search-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:var(--sh)}
 .s7-input-row{display:flex;gap:10px;align-items:stretch}
-.s7-input{flex:1;padding:13px 16px;background:#0f172a;border:1.5px solid #475569;border-radius:10px;font-size:14px;color:#f1f5f9;outline:none;transition:.15s border-color;font-family:inherit}
-.s7-input::placeholder{color:#64748b}
-.s7-input:focus{border-color:#e8174a}
-.s7-btn{padding:13px 22px;background:linear-gradient(135deg,#e8174a,#b8103a);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s all;box-shadow:0 4px 12px rgba(232,23,74,.35)}
-.s7-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(232,23,74,.45)}
-.s7-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.s7-history{margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.s7-hist-label{font-size:11px;color:#64748b;white-space:nowrap}
-.s7-hist-chip{padding:5px 12px;background:#0f172a;border:1px solid #334155;border-radius:20px;font-size:12px;color:#94a3b8;cursor:pointer;transition:.15s all;white-space:nowrap}
-.s7-hist-chip:hover{border-color:#e8174a;color:#f1f5f9}
+.s7-input{flex:1;padding:10px 13px;background:var(--card);border:1.5px solid var(--border);border-radius:8px;font-size:13px;color:var(--text);outline:none;transition:.15s border-color;font-family:inherit}
+.s7-input::placeholder{color:var(--muted2)}
+.s7-input:focus{border-color:var(--red)}
+.s7-btn{padding:10px 18px;background:linear-gradient(135deg,var(--red),var(--red-d));color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s all}
+.s7-btn:hover{opacity:.9}
+.s7-btn:disabled{opacity:.5;cursor:not-allowed}
+.s7-history{margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.s7-hist-label{font-size:11px;color:var(--muted);white-space:nowrap}
+.s7-hist-chip{padding:4px 10px;background:var(--bg);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--muted);cursor:pointer;transition:.15s all;white-space:nowrap}
+.s7-hist-chip:hover{border-color:var(--red);color:var(--red)}
 /* Progress */
-.s7-progress-wrap{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px 20px;margin-bottom:20px}
-.s7-progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.s7-progress-label{font-size:13px;font-weight:600;color:#f1f5f9}
-.s7-progress-pct{font-size:12px;color:#94a3b8}
-.s7-progress-track{background:#0f172a;border-radius:20px;height:8px;overflow:hidden;margin-bottom:12px}
-.s7-progress-bar{background:linear-gradient(90deg,#e8174a,#b8103a);height:100%;border-radius:20px;transition:width .4s ease}
+.s7-progress-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:18px;box-shadow:var(--sh)}
+.s7-progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.s7-progress-label{font-size:13px;font-weight:600;color:var(--text)}
+.s7-progress-pct{font-size:12px;color:var(--muted)}
+.s7-progress-track{background:#f0f3f6;border-radius:20px;height:7px;overflow:hidden;margin-bottom:10px}
+.s7-progress-bar{background:linear-gradient(90deg,var(--red),var(--red-d));height:100%;border-radius:20px;transition:width .4s ease}
 .s7-steps{display:flex;gap:8px}
-.s7-step{flex:1;text-align:center;font-size:11px;padding:6px 4px;border-radius:8px;border:1px solid #334155;color:#64748b;transition:.2s all}
-.s7-step.active{border-color:#e8174a;color:#e8174a;background:rgba(232,23,74,.1)}
-.s7-step.done{border-color:#15803d;color:#4ade80;background:rgba(21,128,61,.1)}
+.s7-step{flex:1;text-align:center;font-size:11px;padding:5px 4px;border-radius:8px;border:1px solid var(--border);color:var(--muted);transition:.2s all}
+.s7-step.active{border-color:var(--red);color:var(--red);background:var(--red-l)}
+.s7-step.done{border-color:var(--yes-c);color:var(--yes-c);background:var(--yes-bg)}
 /* Result Cards */
-.s7-card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:16px;animation:s7fadeIn .3s ease}
-@keyframes s7fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.s7-card-hdr{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #334155}
-.s7-card-hdr h3{font-size:15px;font-weight:700;color:#f1f5f9;flex:1}
-.s7-cat-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(232,23,74,.2);color:#fca5a5;border:1px solid rgba(232,23,74,.3)}
-.s7-company{font-size:22px;font-weight:900;color:#f1f5f9;margin-bottom:4px}
-.s7-summary{font-size:13px;color:#cbd5e1;line-height:1.6;margin-bottom:14px}
-.s7-row-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:6px;margin-top:14px}
+.s7-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:var(--sh);animation:s7fadeIn .3s ease}
+@keyframes s7fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.s7-card-hdr{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.s7-card-hdr h3{font-size:14px;font-weight:700;color:var(--text);flex:1}
+.s7-cat-badge{padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;background:var(--red-l);color:var(--red);border:1px solid #fecdd3}
+.s7-company{font-size:20px;font-weight:900;color:var(--text);margin-bottom:4px}
+.s7-summary{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.s7-row-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:5px;margin-top:12px}
 .s7-usp-list{list-style:none;padding:0}
-.s7-usp-list li{padding:5px 0;padding-left:16px;font-size:13px;color:#cbd5e1;position:relative}
-.s7-usp-list li::before{content:"✦";position:absolute;left:0;color:#e8174a;font-size:10px}
-.s7-highlight{background:rgba(232,23,74,.12);border:1px solid rgba(232,23,74,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#fca5a5;line-height:1.6;margin-top:6px}
-.s7-meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-.s7-meta{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 14px;flex:1;min-width:140px}
-.s7-meta-v{font-size:16px;font-weight:800;color:#e8174a}
-.s7-meta-l{font-size:11px;color:#64748b;margin-top:2px}
+.s7-usp-list li{padding:4px 0;padding-left:14px;font-size:13px;color:var(--text);position:relative}
+.s7-usp-list li::before{content:"✦";position:absolute;left:0;color:var(--red);font-size:10px}
+.s7-highlight{background:var(--red-l);border:1px solid #fecdd3;border-radius:8px;padding:10px 13px;font-size:13px;color:var(--red-d);line-height:1.6;margin-top:5px}
+.s7-meta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.s7-meta{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 13px;flex:1;min-width:130px}
+.s7-meta-v{font-size:15px;font-weight:800;color:var(--red)}
+.s7-meta-l{font-size:11px;color:var(--muted);margin-top:2px}
 /* News card */
-.s7-news-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #1e3a5f}
+.s7-news-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #f0f3f6}
 .s7-news-item:last-child{border-bottom:none}
-.s7-news-num{width:24px;height:24px;background:#e8174a;color:#fff;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.s7-news-num{width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
 .s7-news-body{flex:1;min-width:0}
-.s7-news-title{font-size:13px;font-weight:600;color:#f1f5f9;margin-bottom:3px}
-.s7-news-summary{font-size:12px;color:#94a3b8;line-height:1.5;margin-bottom:6px}
+.s7-news-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.s7-news-summary{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:5px}
 .s7-news-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.s7-news-date{font-size:11px;color:#64748b}
+.s7-news-date{font-size:11px;color:var(--muted2)}
 .s7-rel-badge{padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
-.s7-rel-high{background:rgba(220,38,38,.2);color:#fca5a5;border:1px solid rgba(220,38,38,.3)}
-.s7-rel-medium{background:rgba(217,119,6,.2);color:#fcd34d;border:1px solid rgba(217,119,6,.3)}
-.s7-rel-low{background:rgba(22,163,74,.2);color:#4ade80;border:1px solid rgba(22,163,74,.3)}
-.s7-news-link{padding:3px 10px;background:#0f172a;border:1px solid #334155;border-radius:6px;font-size:11px;color:#94a3b8;text-decoration:none;transition:.15s all;white-space:nowrap}
-.s7-news-link:hover{border-color:#e8174a;color:#e8174a}
+.s7-rel-high{background:var(--high-bg);color:var(--high);border:1px solid #fecaca}
+.s7-rel-medium{background:var(--med-bg);color:var(--med);border:1px solid #fcd34d}
+.s7-rel-low{background:var(--low-bg);color:var(--low);border:1px solid #86efac}
+.s7-news-link{padding:3px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:11px;color:var(--muted);text-decoration:none;transition:.15s all;white-space:nowrap}
+.s7-news-link:hover{border-color:var(--red);color:var(--red)}
 /* Email card */
-.s7-subject-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.s7-subject-label{font-size:11px;font-weight:700;color:#64748b;white-space:nowrap}
-.s7-subject-val{flex:1;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:8px 12px;font-size:13px;color:#f1f5f9;font-family:inherit}
-.s7-email-body{width:100%;background:#0f172a;border:1px solid #334155;border-radius:10px;padding:14px;font-size:13px;color:#f1f5f9;line-height:1.7;font-family:inherit;resize:vertical;min-height:240px;outline:none}
-.s7-email-body:focus{border-color:#e8174a}
-.s7-key-msg{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#93c5fd;margin:14px 0}
-.s7-action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.s7-action-btn{padding:10px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s all;white-space:nowrap}
-.s7-copy-btn{background:#0f172a;border:1.5px solid #475569;color:#f1f5f9}
-.s7-copy-btn:hover{border-color:#e8174a;color:#e8174a}
-.s7-copy-btn.copied{background:#15803d;border-color:#15803d;color:#fff}
+.s7-subject-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.s7-subject-label{font-size:11px;font-weight:700;color:var(--muted);white-space:nowrap;text-transform:uppercase;letter-spacing:.4px}
+.s7-subject-val{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 11px;font-size:13px;color:var(--text);font-family:inherit;outline:none}
+.s7-subject-val:focus{border-color:var(--red)}
+.s7-email-body{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px;color:var(--text);line-height:1.7;font-family:inherit;resize:vertical;min-height:240px;outline:none}
+.s7-email-body:focus{border-color:var(--red)}
+.s7-key-msg{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 13px;font-size:13px;color:#1d4ed8;margin:12px 0}
+.s7-action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.s7-action-btn{padding:9px 16px;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s all;white-space:nowrap}
+.s7-copy-btn{background:var(--card);border:1.5px solid var(--border);color:var(--text)}
+.s7-copy-btn:hover{background:var(--text);color:#fff}
+.s7-copy-btn.copied{background:var(--yes-c);border-color:var(--yes-c);color:#fff}
 .s7-gmail-btn{background:linear-gradient(135deg,#4285f4,#1967d2);border:none;color:#fff}
-.s7-gmail-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(66,133,244,.4)}
+.s7-gmail-btn:hover{opacity:.9}
 /* Contact card */
-.s7-rec-title{font-size:16px;font-weight:800;color:#f1f5f9;margin-bottom:4px}
-.s7-rec-reason{font-size:13px;color:#94a3b8;line-height:1.5;margin-bottom:16px}
-.s7-contact-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:16px}
-.s7-contact-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:14px}
-.s7-contact-name{font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:2px}
-.s7-contact-title{font-size:12px;color:#94a3b8;margin-bottom:10px}
+.s7-rec-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:4px}
+.s7-rec-reason{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:14px}
+.s7-contact-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.s7-contact-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:13px}
+.s7-contact-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.s7-contact-title{font-size:12px;color:var(--muted);margin-bottom:8px}
 .s7-contact-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.s7-linkedin-btn{padding:5px 12px;background:rgba(10,102,194,.2);border:1px solid rgba(10,102,194,.4);border-radius:6px;font-size:11px;color:#60a5fa;text-decoration:none;font-weight:600;transition:.15s all}
-.s7-linkedin-btn:hover{background:rgba(10,102,194,.35)}
-.s7-conf-badge{padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700}
-.s7-conf-high{background:rgba(21,128,61,.2);color:#4ade80;border:1px solid rgba(21,128,61,.3)}
-.s7-conf-medium{background:rgba(217,119,6,.2);color:#fcd34d;border:1px solid rgba(217,119,6,.3)}
-.s7-conf-low{background:rgba(100,116,139,.2);color:#94a3b8;border:1px solid rgba(100,116,139,.3)}
-.s7-channel{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#c4b5fd}
-.s7-advice{font-size:13px;color:#cbd5e1;line-height:1.6;margin-top:10px}
+.s7-linkedin-btn{padding:4px 10px;background:#dbeafe;border:1px solid #93c5fd;border-radius:6px;font-size:11px;color:#1d4ed8;text-decoration:none;font-weight:600;transition:.15s all}
+.s7-linkedin-btn:hover{background:#bfdbfe}
+.s7-conf-badge{padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.s7-conf-high{background:var(--yes-bg);color:var(--yes-c);border:1px solid var(--p1-border)}
+.s7-conf-medium{background:var(--med-bg);color:var(--med);border:1px solid #fcd34d}
+.s7-conf-low{background:#f3f4f6;color:#6b7280;border:1px solid #e5e7eb}
+.s7-channel{background:var(--part-bg);border:1px solid #ddd6fe;border-radius:8px;padding:10px 13px;font-size:13px;color:var(--part-c)}
+.s7-advice{font-size:13px;color:var(--text);line-height:1.6;margin-top:10px}
 /* Error state */
-.s7-error{background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.25);border-radius:10px;padding:16px;text-align:center}
-.s7-error p{font-size:13px;color:#fca5a5;margin-bottom:10px}
-.s7-retry-btn{padding:8px 18px;background:rgba(220,38,38,.2);border:1px solid rgba(220,38,38,.4);border-radius:8px;font-size:12px;color:#fca5a5;cursor:pointer;font-weight:600}
-.s7-retry-btn:hover{background:rgba(220,38,38,.35)}
+.s7-error{background:var(--high-bg);border:1px solid #fecaca;border-radius:8px;padding:14px;text-align:center}
+.s7-error p{font-size:13px;color:var(--high);margin-bottom:10px}
+.s7-retry-btn{padding:7px 16px;background:#fee2e2;border:1px solid #fecaca;border-radius:8px;font-size:12px;color:var(--high);cursor:pointer;font-weight:600}
+.s7-retry-btn:hover{background:#fecaca}
 @media(max-width:700px){
-  .s7-wrap{padding:16px 12px}
   .s7-input-row{flex-direction:column}
   .s7-steps{display:none}
   .s7-contact-cards{grid-template-columns:1fr}
@@ -381,7 +377,7 @@ td{padding:9px 12px;vertical-align:middle}
     <button class="tab" onclick="show('s4',this)">§4 — 90-Day Plan (103 Partners)</button>
     <button class="tab" onclick="show('s5',this)">§5 — Japan Market Data 📊</button>
     <button class="tab" onclick="show('s6',this)">§6 — GOV Calculator 🧮</button>
-    <button class="tab" onclick="show('s7',this)">🎯 オペレーター開拓</button>
+    <button class="tab" onclick="show('s7',this)">🎯 Operator Outreach</button>
   </div>
 </div>
 
@@ -758,18 +754,18 @@ td{padding:9px 12px;vertical-align:middle}
 <!-- S7 OPERATOR RESEARCH -->
 <div id="s7" class="sec">
   <div class="s7-wrap">
-    <div class="s7-intro">
-      <h2>🎯 オペレーター開拓ツール</h2>
-      <p>日本のエクスペリエンス事業者をAIでリサーチし、コールドメールを自動生成します</p>
+    <div class="sec-hdr">
+      <h2>🎯 Operator Outreach Tool</h2>
+      <p>AI-powered research for Japanese experience operators — generates cold email drafts automatically</p>
     </div>
 
     <!-- Search Box -->
     <div class="s7-search-box">
       <div class="s7-input-row">
         <input id="s7-input" class="s7-input" type="text"
-          placeholder="会社名またはサービス名を入力　例：浅草 人力車、teamLab、東京スカイツリー"
+          placeholder="Enter company or service name  e.g. Asakusa Rickshaw, teamLab, Tokyo Skytree"
           onkeydown="if(event.key==='Enter')s7StartSearch()">
-        <button id="s7-btn" class="s7-btn" onclick="s7StartSearch()">🔍 リサーチ開始</button>
+        <button id="s7-btn" class="s7-btn" onclick="s7StartSearch()">🔍 Start Research</button>
       </div>
       <div id="s7-history" class="s7-history"></div>
     </div>
@@ -777,17 +773,17 @@ td{padding:9px 12px;vertical-align:middle}
     <!-- Progress -->
     <div id="s7-progress-wrap" class="s7-progress-wrap" style="display:none">
       <div class="s7-progress-top">
-        <span id="s7-progress-label" class="s7-progress-label">🔍 サービスを調査中...</span>
+        <span id="s7-progress-label" class="s7-progress-label">🔍 Researching service...</span>
         <span id="s7-progress-pct" class="s7-progress-pct">0%</span>
       </div>
       <div class="s7-progress-track">
         <div id="s7-progress-bar" class="s7-progress-bar" style="width:0%"></div>
       </div>
       <div class="s7-steps">
-        <div id="s7-step-1" class="s7-step">① リサーチ</div>
-        <div id="s7-step-2" class="s7-step">② ニュース</div>
-        <div id="s7-step-3" class="s7-step">③ メール</div>
-        <div id="s7-step-4" class="s7-step">④ コンタクト</div>
+        <div id="s7-step-1" class="s7-step">① Research</div>
+        <div id="s7-step-2" class="s7-step">② News</div>
+        <div id="s7-step-3" class="s7-step">③ Email</div>
+        <div id="s7-step-4" class="s7-step">④ Contacts</div>
       </div>
     </div>
 
@@ -796,7 +792,7 @@ td{padding:9px 12px;vertical-align:middle}
       <!-- Card A: Research Summary -->
       <div id="s7-card-a" class="s7-card" style="display:none">
         <div class="s7-card-hdr">
-          <h3>📊 サービスリサーチサマリー</h3>
+          <h3>📊 Service Research Summary</h3>
           <span id="s7-a-cat" class="s7-cat-badge"></span>
         </div>
         <div id="s7-a-body"></div>
@@ -805,7 +801,7 @@ td{padding:9px 12px;vertical-align:middle}
       <!-- Card B: News -->
       <div id="s7-card-b" class="s7-card" style="display:none">
         <div class="s7-card-hdr">
-          <h3>📰 最新ニュース TOP10</h3>
+          <h3>📰 Latest News TOP10</h3>
         </div>
         <div id="s7-b-body"></div>
       </div>
@@ -813,7 +809,7 @@ td{padding:9px 12px;vertical-align:middle}
       <!-- Card C: Cold Email -->
       <div id="s7-card-c" class="s7-card" style="display:none">
         <div class="s7-card-hdr">
-          <h3>📧 コールドメール下書き</h3>
+          <h3>📧 Cold Email Draft</h3>
         </div>
         <div id="s7-c-body"></div>
       </div>
@@ -821,7 +817,7 @@ td{padding:9px 12px;vertical-align:middle}
       <!-- Card D: Contacts -->
       <div id="s7-card-d" class="s7-card" style="display:none">
         <div class="s7-card-hdr">
-          <h3>👤 コンタクト先候補</h3>
+          <h3>👤 Contact Candidates</h3>
         </div>
         <div id="s7-d-body"></div>
       </div>
@@ -1792,7 +1788,7 @@ function s7ParseJSON(txt){
 
 async function s7ApiCall(system,userMsg,webSearch){
   const key=localStorage.getItem('ja2_apikey');
-  if(!key) throw new Error('APIキーが設定されていません。LocalStorageに "ja2_apikey" を設定してください。');
+  if(!key) throw new Error('API key not found. Please set ja2_apikey in localStorage.');
   const body={
     model:'claude-sonnet-4-6',
     max_tokens:4096,
@@ -1803,7 +1799,8 @@ async function s7ApiCall(system,userMsg,webSearch){
   const headers={
     'Content-Type':'application/json',
     'x-api-key':key,
-    'anthropic-version':'2023-06-01'
+    'anthropic-version':'2023-06-01',
+    'anthropic-dangerous-direct-browser-access':'true'
   };
   if(webSearch) headers['anthropic-beta']='web-search-2025-03-05';
   const resp=await fetch('https://api.anthropic.com/v1/messages',{
@@ -1822,7 +1819,7 @@ async function s7ApiCall(system,userMsg,webSearch){
 /* ── Progress ── */
 function s7SetStep(n){
   // n=1..4
-  const labels=['🔍 サービスを調査中...','📰 ニュースを収集中...','📧 メールを作成中...','👤 担当者を検索中...'];
+  const labels=['🔍 Researching service...','📰 Collecting news...','📧 Drafting email...','👤 Finding contacts...'];
   const pct=((n-1)/4*100).toFixed(0);
   document.getElementById('s7-progress-label').textContent=labels[n-1];
   document.getElementById('s7-progress-pct').textContent=pct+'%';
@@ -1834,7 +1831,7 @@ function s7SetStep(n){
 }
 
 function s7SetDone(){
-  document.getElementById('s7-progress-label').textContent='✅ 完了！';
+  document.getElementById('s7-progress-label').textContent='✅ Done!';
   document.getElementById('s7-progress-pct').textContent='100%';
   document.getElementById('s7-progress-bar').style.width='100%';
   for(let i=1;i<=4;i++) document.getElementById('s7-step-'+i).className='s7-step done';
@@ -1845,7 +1842,7 @@ function s7RenderHistory(){
   const hist=JSON.parse(localStorage.getItem('operator_searches')||'[]');
   const el=document.getElementById('s7-history');
   if(!hist.length){el.innerHTML='';return;}
-  el.innerHTML='<span class="s7-hist-label">最近の検索:</span>'+
+  el.innerHTML='<span class="s7-hist-label">Recent searches:</span>'+
     hist.slice(0,5).map(q=>`<button class="s7-hist-chip" onclick="s7StartSearch(${JSON.stringify(q)})">${q}</button>`).join('');
 }
 
@@ -1913,8 +1910,8 @@ function s7RenderC(d){
     <div class="s7-row-label">求めるアクション</div>
     <div style="font-size:13px;color:#cbd5e1;margin-bottom:14px">${d.call_to_action||''}</div>
     <div class="s7-action-row">
-      <button class="s7-action-btn s7-copy-btn" id="s7-copy-email-btn" onclick="s7CopyEmail()">📋 メールをコピー</button>
-      <button class="s7-action-btn s7-gmail-btn" onclick="s7OpenGmail()">✉️ Gmailで開く</button>
+      <button class="s7-action-btn s7-copy-btn" id="s7-copy-email-btn" onclick="s7CopyEmail()">📋 Copy Email</button>
+      <button class="s7-action-btn s7-gmail-btn" onclick="s7OpenGmail()">✉️ Open in Gmail</button>
     </div>`;
 }
 
@@ -1951,8 +1948,8 @@ function s7ShowError(cardId,label,err,retryFn){
   const existing=document.getElementById(body);
   if(existing) existing.innerHTML=`
     <div class="s7-error">
-      <p>⚠️ ${label}の取得に失敗しました。しばらくしてから再試行してください。</p>
-      <button class="s7-retry-btn" onclick="(${retryFn.toString()})()">🔄 再試行</button>
+      <p>⚠️ Failed to fetch ${label}. Please try again.</p>
+      <button class="s7-retry-btn" onclick="(${retryFn.toString()})()">🔄 Retry</button>
     </div>`;
 }
 
@@ -1962,8 +1959,8 @@ window.s7CopyEmail=function(){
   const body=document.getElementById('s7-email-body')?.value||'';
   navigator.clipboard.writeText('件名: '+subj+'\n\n'+body).then(()=>{
     const btn=document.getElementById('s7-copy-email-btn');
-    btn.textContent='✅ コピーしました！';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='📋 メールをコピー';btn.classList.remove('copied');},2000);
+    btn.textContent='✅ Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 Copy Email';btn.classList.remove('copied');},2000);
   });
 };
 
@@ -2025,7 +2022,7 @@ Step 3: HeadoutとのSynergyを考える
     document.getElementById('s7-card-a').style.display='block';
   }catch(e){
     document.getElementById('s7-card-a').style.display='block';
-    document.getElementById('s7-a-body').innerHTML=`<div class="s7-error"><p>⚠️ サービスリサーチに失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+    document.getElementById('s7-a-body').innerHTML=`<div class="s7-error"><p>⚠️ Service research failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
 
   // ─ CALL 2: News ─
@@ -2054,7 +2051,7 @@ ${q}に関する最新ニュースを10件収集してください。
     document.getElementById('s7-card-b').style.display='block';
   }catch(e){
     document.getElementById('s7-card-b').style.display='block';
-    document.getElementById('s7-b-body').innerHTML=`<div class="s7-error"><p>⚠️ ニュース収集に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+    document.getElementById('s7-b-body').innerHTML=`<div class="s7-error"><p>⚠️ News collection failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
 
   // ─ CALL 3: Email ─
@@ -2100,7 +2097,7 @@ Headoutの説明として使う数字：
     document.getElementById('s7-card-c').style.display='block';
   }catch(e){
     document.getElementById('s7-card-c').style.display='block';
-    document.getElementById('s7-c-body').innerHTML=`<div class="s7-error"><p>⚠️ メール生成に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+    document.getElementById('s7-c-body').innerHTML=`<div class="s7-error"><p>⚠️ Email drafting failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
 
   // ─ CALL 4: Contacts ─
@@ -2135,7 +2132,7 @@ Step 3: アプローチすべき役職をアドバイスする
     document.getElementById('s7-card-d').style.display='block';
   }catch(e){
     document.getElementById('s7-card-d').style.display='block';
-    document.getElementById('s7-d-body').innerHTML=`<div class="s7-error"><p>⚠️ コンタクト検索に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+    document.getElementById('s7-d-body').innerHTML=`<div class="s7-error"><p>⚠️ Contact research failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
 
   s7SetDone();
