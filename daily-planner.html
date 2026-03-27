@@ -74,13 +74,10 @@ textarea{resize:vertical;line-height:1.6}
 .btn:disabled{opacity:.4;cursor:not-allowed}
 .btn-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
-/* ── CALENDAR EVENTS ── */
-.cal-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}
-.cal-event{background:var(--card2);border-radius:8px;border:1px solid var(--border);
-  padding:8px 12px;display:flex;align-items:center;gap:10px;font-size:12px}
-.cal-time{color:var(--muted);font-family:monospace;font-size:11px;white-space:nowrap}
-.cal-title{flex:1;font-weight:500}
-.cal-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
+/* ── DRIVE BAR ── */
+.drive-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--card2);
+  border-radius:9px;border:1px solid var(--border);margin-bottom:12px;flex-wrap:wrap}
+.drive-stat{font-size:12px;color:var(--muted);flex:1}
 
 /* ── TODO PROPOSAL CARDS ── */
 .todo-cards{display:flex;flex-direction:column;gap:10px;margin-top:14px}
@@ -123,9 +120,20 @@ textarea{resize:vertical;line-height:1.6}
 .approve-row-title{flex:1;font-size:13px;font-weight:600}
 .time-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .time-row input[type=time]{width:100px;padding:5px 8px;font-size:12px}
-.cal-toggle{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);
-  cursor:pointer;user-select:none}
-.cal-toggle input{width:auto;margin:0}
+
+/* ── PAST LOGS ── */
+.past-logs{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.past-log-card{background:var(--card2);border-radius:10px;border:1px solid var(--border);overflow:hidden}
+.past-log-header{padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
+.past-log-header:hover{background:#2d3f56}
+.past-log-date{font-weight:700;font-size:13px;flex:1}
+.past-log-energy{font-size:12px;color:var(--muted);white-space:nowrap}
+.past-log-arr{font-size:11px;color:var(--muted2);margin-left:4px}
+.past-log-body{padding:0 16px 14px;border-top:1px solid var(--border);display:none}
+.past-log-row{margin-top:10px}
+.past-log-label{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:3px}
+.past-log-text{font-size:12px;line-height:1.5;color:var(--muted)}
 
 /* ── EOD LOG ── */
 .energy-row{display:flex;align-items:center;gap:12px}
@@ -259,16 +267,6 @@ textarea{resize:vertical;line-height:1.6}
       </div>
     </div>
 
-    <div class="btn-row" style="margin-top:14px">
-      <button class="btn btn-blue" onclick="loadCalendar()">📅 カレンダーを読み込む</button>
-      <span id="cal-status-inline" style="font-size:12px;color:var(--muted)"></span>
-      <button id="google-signout-btn" onclick="googleSignOut()" style="display:none;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;margin-left:4px">🚪 切断</button>
-    </div>
-
-    <div id="cal-events-wrap" class="hidden">
-      <div class="cal-list" id="cal-list"></div>
-    </div>
-    <div class="status" id="cal-status"></div>
   </div>
 
   <!-- ══════════════════════════════
@@ -309,14 +307,14 @@ textarea{resize:vertical;line-height:1.6}
       <div class="step-num" id="step3-num">3</div>
       <div>
         <div class="step-title">Step 3: 承認 &amp; 追加</div>
-        <div class="step-sub">Todo.html に追加 + Googleカレンダーに予定を入れる</div>
+        <div class="step-sub">Todo.html に追加する</div>
       </div>
     </div>
 
     <div id="approve-rows"></div>
 
     <div class="btn-row" style="margin-top:14px">
-      <button class="btn btn-green" id="execute-btn" onclick="executeApproval()">🚀 実行する</button>
+      <button class="btn btn-green" id="execute-btn" onclick="executeApproval()">✅ Todo.htmlに追加する</button>
     </div>
     <div class="status" id="approve-status"></div>
   </div>
@@ -365,117 +363,148 @@ textarea{resize:vertical;line-height:1.6}
     <div id="advice-loading" class="loading hidden">🤖 AIが分析中...</div>
     <div id="advice-output" class="advice-box hidden"></div>
 
-    <div class="btn-row" style="margin-top:14px">
-      <button class="btn btn-green" id="save-btn" onclick="saveLog()">💾 ログを保存 → Google Drive</button>
+    <div class="drive-bar" id="drive-bar">
+      <span id="drive-stat" class="drive-stat">☁️ Google Drive: 未接続</span>
+      <button class="btn btn-sm btn-outline" id="drive-conn-btn" onclick="driveConnect()">接続する</button>
+      <button class="btn btn-sm btn-outline" id="drive-disc-btn" onclick="driveSignOut()" style="display:none">切断</button>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-green" id="save-btn" onclick="saveLog()">💾 ログを保存</button>
       <span id="save-inline" style="font-size:12px;color:var(--muted)"></span>
     </div>
     <div class="status" id="save-status"></div>
   </div>
 
+  <!-- ══════════════════════════════
+       PAST LOGS (DIARY)
+  ══════════════════════════════ -->
+  <div class="step-card">
+    <div class="step-header">
+      <div class="step-num" style="background:var(--muted2);font-size:16px">📖</div>
+      <div>
+        <div class="step-title">Past Log — Diary</div>
+        <div class="step-sub">過去14日間の記録</div>
+      </div>
+    </div>
+    <div id="past-logs-empty" style="color:var(--muted);font-size:13px;padding:4px 0">ログデータがありません。Step 4でログを保存してください。</div>
+    <div id="past-logs" class="past-logs"></div>
+  </div>
+
 </div><!-- /main -->
 
-<!-- Google APIs -->
-<script src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<!-- Google Identity Services (Drive auth only) -->
 <script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 
 <script>
 // ═══════════════════════════════════════════
 // CONSTANTS
 // ═══════════════════════════════════════════
-const CLIENT_ID   = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
-const SCOPES      = 'https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive.file';
-const TZ          = 'Asia/Tokyo';
-const DRIVE_FILE  = 'sabbatical_daily_planner.json';
-const WEEK_THEME  = 'W2 RAG + Agents (AIエージェント、RAG、CLAUDE.md、Claude Code SDK)';
-const CAT_COLORS  = { 'AI Literacy':'9', 'Vibe Coding':'3', 'Job Search':'10', 'Personal':'8' };
+const CLIENT_ID  = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+const SCOPES     = 'https://www.googleapis.com/auth/drive.file';
+const TZ         = 'Asia/Tokyo';
+const DRIVE_FILE = 'sabbatical_daily_planner.json';
+const LS_KEY     = 'daily_planner_logs';
+const WEEK_THEME = 'W2 RAG + Agents (AIエージェント、RAG、CLAUDE.md、Claude Code SDK)';
 
 // ═══════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════
-let gapiReady   = false;
-let gisReady    = false;
-let tokenClient = null;
-let accessToken = null;
-let calEvents   = [];       // [{title, start, end, durationMin}]
-let proposedTodos  = [];    // from AI
-let approvedTodos  = [];    // selected by user
-let plannerData = { logs: [] };
-let driveFileId = null;
+let gisReady      = false;
+let tokenClient   = null;
+let accessToken   = null;
+let proposedTodos = [];
+let approvedTodos = [];
+let plannerData   = { logs: [] };
+let driveFileId   = null;
 let aiAdviceResult = null;
 
 // ═══════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', function() {
-  // Header date
   const now = new Date();
   document.getElementById('header-date').textContent =
     now.toLocaleDateString('ja-JP', { timeZone: TZ, weekday:'long', year:'numeric', month:'long', day:'numeric' });
 
-  // Default start time to current Tokyo time rounded to nearest 30min
   const tokyoTime = now.toLocaleString('en-US', { timeZone: TZ, hour:'2-digit', minute:'2-digit', hour12: false });
   const [h, m] = tokyoTime.split(':').map(Number);
   const rm = m < 30 ? '00' : '30';
   document.getElementById('start-time-input').value = `${String(h).padStart(2,'0')}:${rm}`;
+
+  // Load from localStorage as fallback
+  const ls = localStorage.getItem(LS_KEY);
+  if (ls) {
+    try {
+      plannerData = JSON.parse(ls);
+      showYesterdayBanner();
+      renderPastLogs();
+    } catch(e) {}
+  }
+
+  // Auto-restore Drive token if valid
+  const tok = localStorage.getItem('planner_tok');
+  const exp = localStorage.getItem('planner_exp');
+  if (tok && exp && Date.now() < parseInt(exp) - 60000) {
+    accessToken = tok;
+    updateDriveUI(true);
+    loadFromDrive();
+  }
 });
 
 // ═══════════════════════════════════════════
-// GOOGLE API INIT
+// GOOGLE DRIVE AUTH (GSI only, no gapi)
 // ═══════════════════════════════════════════
-function gapiLoaded() {
-  gapi.load('client', async () => {
-    await gapi.client.init({});
-    try {
-      await gapi.client.load('https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest');
-    } catch(e) { console.warn('[gapi] calendar load:', e); }
-    gapiReady = true;
-
-    // Try to restore token from localStorage
-    const tok = localStorage.getItem('planner_tok');
-    const exp = localStorage.getItem('planner_exp');
-    if (tok && exp && Date.now() < parseInt(exp) - 60000) {
-      accessToken = tok;
-      gapi.client.setToken({ access_token: tok });
-      document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
-      const soBtn = document.getElementById('google-signout-btn');
-      if (soBtn) soBtn.style.display = 'inline-block';
-      // Auto-load yesterday's data from Drive
-      loadYesterdayFromDrive();
-    }
-  });
-}
-
 function gisLoaded() {
   tokenClient = google.accounts.oauth2.initTokenClient({
     client_id: CLIENT_ID,
     scope: SCOPES,
     callback: (r) => {
       if (r.error) {
-        showStatus('cal-status', '⚠️ Google認証エラー: ' + r.error, 'error');
+        showStatus('save-status', '⚠️ Google認証エラー: ' + r.error, 'error');
         return;
       }
       accessToken = r.access_token;
       localStorage.setItem('planner_tok', r.access_token);
       localStorage.setItem('planner_exp', String(Date.now() + (r.expires_in || 3600) * 1000));
-      gapi.client.setToken(r);
-      document.getElementById('cal-status-inline').textContent = '✓ Google接続済み';
-      const soBtn = document.getElementById('google-signout-btn');
-      if (soBtn) soBtn.style.display = 'inline-block';
-      doLoadCalendar();
-      loadYesterdayFromDrive();
+      updateDriveUI(true);
+      loadFromDrive();
     }
   });
   gisReady = true;
 }
 
-function requireAuth(callback) {
-  if (!gisReady || !gapiReady) {
-    showStatus('cal-status', 'Google APIを読み込み中...しばらくお待ちください', 'info');
-    setTimeout(() => requireAuth(callback), 800);
+function driveConnect() {
+  if (!gisReady) {
+    showStatus('save-status', 'Google APIを読み込み中...しばらくお待ちください', 'info');
+    setTimeout(driveConnect, 800);
     return;
   }
-  if (accessToken) { callback(); return; }
+  if (accessToken) { loadFromDrive(); return; }
   tokenClient.requestAccessToken({ prompt: '' });
+}
+
+function driveSignOut() {
+  localStorage.removeItem('planner_tok');
+  localStorage.removeItem('planner_exp');
+  accessToken = null;
+  driveFileId = null;
+  updateDriveUI(false);
+}
+
+function updateDriveUI(connected) {
+  const stat = document.getElementById('drive-stat');
+  const conn = document.getElementById('drive-conn-btn');
+  const disc = document.getElementById('drive-disc-btn');
+  if (connected) {
+    stat.textContent = '☁️ Google Drive: 接続済み';
+    conn.style.display = 'none';
+    disc.style.display = 'inline-flex';
+  } else {
+    stat.textContent = '☁️ Google Drive: 未接続';
+    conn.style.display = 'inline-flex';
+    disc.style.display = 'none';
+  }
 }
 
 // ═══════════════════════════════════════════
@@ -488,22 +517,12 @@ async function driveFetch(path, opts = {}) {
     ...opts,
     headers: { 'Authorization': 'Bearer ' + accessToken, ...(opts.headers || {}) }
   });
-  if (res.status === 401) { googleSignOut(); throw new Error('セッションが期限切れです。再接続してください'); }
+  if (res.status === 401) { driveSignOut(); throw new Error('セッションが期限切れです。再接続してください'); }
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error((err.error && err.error.message) || 'Drive API ' + res.status);
   }
   return res;
-}
-
-function googleSignOut() {
-  localStorage.removeItem('planner_tok');
-  localStorage.removeItem('planner_exp');
-  accessToken = null;
-  if (gapi && gapi.client) gapi.client.setToken(null);
-  document.getElementById('cal-status-inline').textContent = '';
-  const soBtn = document.getElementById('google-signout-btn');
-  if (soBtn) soBtn.style.display = 'none';
 }
 
 async function findDriveFile() {
@@ -547,83 +566,29 @@ async function writeDriveFile(data) {
 }
 
 // ═══════════════════════════════════════════
-// YESTERDAY'S DATA
+// LOAD DATA
 // ═══════════════════════════════════════════
-async function loadYesterdayFromDrive() {
+async function loadFromDrive() {
   try {
     const data = await readDriveFile();
     if (data && data.logs) {
       plannerData = data;
-      const yesterday = tokyoDateStr(-1);
-      const yLog = data.logs.find(l => l.date === yesterday);
-      if (yLog && yLog.missed && yLog.missed.trim()) {
-        document.getElementById('missed-text').textContent = yLog.missed;
-        document.getElementById('missed-banner').classList.remove('hidden');
-      }
+      localStorage.setItem(LS_KEY, JSON.stringify(data));
+      showYesterdayBanner();
+      renderPastLogs();
     }
   } catch(e) {
-    console.warn('[Drive] load yesterday failed:', e.message);
+    console.warn('[Drive] load failed:', e.message);
   }
 }
 
-// ═══════════════════════════════════════════
-// STEP 1: CALENDAR
-// ═══════════════════════════════════════════
-function loadCalendar() {
-  requireAuth(doLoadCalendar);
-}
-
-async function doLoadCalendar() {
-  showStatus('cal-status', '📅 カレンダーを読み込み中...', 'info');
-  try {
-    const dateStr = tokyoDateStr();
-    const tzOffset = '+09:00';
-    const timeMin = `${dateStr}T00:00:00${tzOffset}`;
-    const timeMax = `${dateStr}T23:59:59${tzOffset}`;
-
-    const resp = await gapi.client.calendar.events.list({
-      calendarId: 'primary',
-      timeMin, timeMax,
-      singleEvents: true,
-      orderBy: 'startTime',
-      maxResults: 20
-    });
-
-    const items = resp.result.items || [];
-    calEvents = items.map(ev => {
-      const start = ev.start.dateTime ? ev.start.dateTime.slice(11, 16) : '終日';
-      const end   = ev.end.dateTime   ? ev.end.dateTime.slice(11, 16)   : '';
-      const dMin  = ev.start.dateTime && ev.end.dateTime
-        ? Math.round((new Date(ev.end.dateTime) - new Date(ev.start.dateTime)) / 60000)
-        : 60;
-      return { title: ev.summary || '(無題)', start, end, durationMin: dMin };
-    });
-
-    renderCalendarEvents();
-    showStatus('cal-status', `✅ ${calEvents.length}件の予定を読み込みました`, 'success');
-  } catch(err) {
-    showStatus('cal-status', '⚠️ カレンダーの読み込みに失敗: ' + err.message, 'error');
+function showYesterdayBanner() {
+  const yesterday = tokyoDateStr(-1);
+  const yLog = plannerData.logs && plannerData.logs.find(l => l.date === yesterday);
+  if (yLog && yLog.missed && yLog.missed.trim()) {
+    document.getElementById('missed-text').textContent = yLog.missed;
+    document.getElementById('missed-banner').classList.remove('hidden');
   }
-}
-
-function renderCalendarEvents() {
-  const wrap = document.getElementById('cal-events-wrap');
-  const list = document.getElementById('cal-list');
-
-  if (!calEvents.length) {
-    wrap.classList.add('hidden');
-    return;
-  }
-
-  list.innerHTML = calEvents.map(ev => `
-    <div class="cal-event">
-      <div class="cal-dot"></div>
-      <div class="cal-time">${ev.start}${ev.end ? '–' + ev.end : ''}</div>
-      <div class="cal-title">${escHtml(ev.title)}</div>
-      <span class="badge badge-dur">${ev.durationMin}分</span>
-    </div>
-  `).join('');
-  wrap.classList.remove('hidden');
 }
 
 // ═══════════════════════════════════════════
@@ -641,10 +606,6 @@ async function proposeTodos() {
   showStatus('propose-status', '', '');
 
   try {
-    const calStr = calEvents.length
-      ? calEvents.map(e => `${e.start}–${e.end}: ${e.title} (${e.durationMin}分)`).join('\n')
-      : '（本日のFixed予定なし）';
-
     const missedStr = document.getElementById('missed-text').textContent || '（昨日のデータなし）';
 
     const raw = await claudeCall({
@@ -663,8 +624,6 @@ JSONの前後に文章を一切含めないでください。
 今日の目標: ${goals || '（未入力）'}
 利用可能時間: ${hours}時間
 開始時間: ${startT}
-今日のFixed予定:
-${calStr}
 昨日できなかったこと: ${missedStr}
 今週の学習テーマ: ${WEEK_THEME}
 </context>
@@ -778,32 +737,24 @@ function renderStep3(todos) {
         <span class="approve-row-title">${escHtml(t.title)} <span style="color:var(--muted);font-size:11px">(${t.duration}分)</span></span>
       </div>
       <div class="time-row">
-        <label class="cal-toggle">
-          <input type="checkbox" id="cal-chk-${i}" checked>
-          📅 カレンダーに追加
-        </label>
-        <span style="margin-left:auto">開始:</span>
+        <span>開始:</span>
         <input type="time" id="ts-${i}" value="${tStart}">
         <span>〜</span>
         <input type="time" id="te-${i}" value="${tEnd}">
       </div>
-      <div id="arow-status-${i}" class="status" style="margin-top:6px"></div>
     </div>`;
   }).join('');
 }
 
-async function executeApproval() {
+function executeApproval() {
   const btn = document.getElementById('execute-btn');
   btn.disabled = true;
-  showStatus('approve-status', '⟳ 実行中...', 'info');
 
-  // Action A: Add to tasks localStorage
   const dateStr = tokyoDateStr();
-  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-  let added = 0;
+  const todos = JSON.parse(localStorage.getItem('todos') || '[]');
 
   approvedTodos.forEach((t, i) => {
-    tasks.push({
+    todos.push({
       id: Date.now() + i,
       text: `${t.title} (${t.duration}分)`,
       done: false,
@@ -812,56 +763,12 @@ async function executeApproval() {
       createdAt: dateStr,
       completedAt: null,
     });
-    added++;
   });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem('todos', JSON.stringify(todos));
 
-  // Action B: Add to Google Calendar
-  let calAdded = 0, calFail = 0;
-  for (let i = 0; i < approvedTodos.length; i++) {
-    const chk = document.getElementById('cal-chk-' + i);
-    if (!chk || !chk.checked) continue;
-
-    const tStart = document.getElementById('ts-' + i).value;
-    const tEnd   = document.getElementById('te-' + i).value;
-    if (!tStart || !tEnd) continue;
-
-    try {
-      await ensureCalendarAuth();
-      await gapi.client.calendar.events.insert({
-        calendarId: 'primary',
-        resource: {
-          summary: approvedTodos[i].title,
-          start: { dateTime: `${dateStr}T${tStart}:00+09:00`, timeZone: TZ },
-          end:   { dateTime: `${dateStr}T${tEnd}:00+09:00`,   timeZone: TZ },
-          colorId: CAT_COLORS[approvedTodos[i].category] || '8'
-        }
-      });
-      showStatus('arow-status-' + i, '✓ カレンダーに追加済み', 'success');
-      calAdded++;
-    } catch(err) {
-      showStatus('arow-status-' + i, '✗ ' + err.message, 'error');
-      calFail++;
-    }
-  }
-
-  const msg = `✅ todo.htmlに${added}件追加 / カレンダー: ${calAdded}件追加${calFail ? ` (${calFail}件失敗)` : ''}`;
-  showStatus('approve-status', msg, 'success');
+  showStatus('approve-status', `✅ todo.htmlに${approvedTodos.length}件追加しました`, 'success');
   document.getElementById('step3-num').classList.add('done');
   btn.disabled = false;
-}
-
-async function ensureCalendarAuth() {
-  if (accessToken) return;
-  return new Promise((resolve, reject) => {
-    tokenClient.callback = (r) => {
-      if (r.error) { reject(new Error(r.error)); return; }
-      accessToken = r.access_token;
-      gapi.client.setToken(r);
-      resolve();
-    };
-    tokenClient.requestAccessToken({ prompt: '' });
-  });
 }
 
 // ═══════════════════════════════════════════
@@ -944,47 +851,100 @@ async function saveLog() {
   const btn = document.getElementById('save-btn');
   btn.disabled = true;
 
-  if (!accessToken) {
-    showStatus('save-status', '先にGoogleカレンダーを読み込んでGoogle接続してください', 'error');
-    btn.disabled = false;
-    return;
-  }
-
   const entry = {
-    date:         tokyoDateStr(),
-    accomplished: document.getElementById('eod-accomplished').value.trim(),
-    went_well:    document.getElementById('eod-well').value.trim(),
-    missed:       document.getElementById('eod-missed').value.trim(),
-    improvement:  document.getElementById('eod-improve').value.trim(),
-    energy:       parseInt(document.getElementById('eod-energy').value),
-    ai_advice:    aiAdviceResult || null,
-    approved_todos: approvedTodos,
-    goals:        document.getElementById('goals-input').value.trim(),
-    saved_at:     new Date().toISOString(),
+    date:            tokyoDateStr(),
+    goals:           document.getElementById('goals-input').value.trim(),
+    available_hours: parseFloat(document.getElementById('hours-input').value) || 8,
+    start_time:      document.getElementById('start-time-input').value || '09:00',
+    todos:           approvedTodos.map(t => ({ title: t.title, category: t.category, duration: t.duration, completed: false })),
+    accomplished:    document.getElementById('eod-accomplished').value.trim(),
+    went_well:       document.getElementById('eod-well').value.trim(),
+    missed:          document.getElementById('eod-missed').value.trim(),
+    improvement:     document.getElementById('eod-improve').value.trim(),
+    energy:          parseInt(document.getElementById('eod-energy').value),
+    ai_advice:       aiAdviceResult || null,
+    saved_at:        new Date().toISOString(),
   };
 
-  try {
-    showStatus('save-status', '⟳ Drive に保存中...', 'info');
+  if (!plannerData.logs) plannerData.logs = [];
+  const existing = plannerData.logs.findIndex(l => l.date === entry.date);
+  if (existing >= 0) plannerData.logs[existing] = entry;
+  else plannerData.logs.push(entry);
 
-    // Ensure we have latest plannerData
-    if (!plannerData.logs) plannerData.logs = [];
-    const existing = plannerData.logs.findIndex(l => l.date === entry.date);
-    if (existing >= 0) plannerData.logs[existing] = entry;
-    else plannerData.logs.push(entry);
+  plannerData.logs.sort((a, b) => b.date.localeCompare(a.date));
+  plannerData.logs = plannerData.logs.slice(0, 90);
 
-    // Keep last 90 days
-    plannerData.logs.sort((a, b) => b.date.localeCompare(a.date));
-    plannerData.logs = plannerData.logs.slice(0, 90);
+  // Always save to localStorage
+  localStorage.setItem(LS_KEY, JSON.stringify(plannerData));
+  renderPastLogs();
 
-    await writeDriveFile(plannerData);
-    showStatus('save-status', '✅ Google Driveに保存しました！', 'success');
+  const inlineEl = document.getElementById('save-inline');
+  if (accessToken) {
+    try {
+      showStatus('save-status', '⟳ Drive に保存中...', 'info');
+      await writeDriveFile(plannerData);
+      showStatus('save-status', '', '');
+      inlineEl.textContent = '☁️ Saved to Drive ✓';
+      inlineEl.style.color = 'var(--green)';
+      document.getElementById('step4-num').classList.add('done');
+    } catch(err) {
+      showStatus('save-status', '⚠️ Drive保存失敗: ' + err.message + '（ローカルには保存済み）', 'error');
+      inlineEl.textContent = '💾 Saved locally ✓';
+      inlineEl.style.color = 'var(--muted)';
+    }
+  } else {
+    showStatus('save-status', '', '');
+    inlineEl.textContent = '💾 Saved locally ✓ (Drive未接続)';
+    inlineEl.style.color = 'var(--muted)';
     document.getElementById('step4-num').classList.add('done');
-  } catch(err) {
-    showStatus('save-status', '⚠️ 保存失敗: ' + err.message, 'error');
-    console.error('[saveLog]', err);
-  } finally {
-    btn.disabled = false;
   }
+
+  btn.disabled = false;
+}
+
+// ═══════════════════════════════════════════
+// PAST LOGS (DIARY VIEW)
+// ═══════════════════════════════════════════
+function renderPastLogs() {
+  const container = document.getElementById('past-logs');
+  const emptyEl   = document.getElementById('past-logs-empty');
+  if (!container) return;
+
+  const logs = (plannerData.logs || []).slice(0, 14);
+  if (!logs.length) {
+    emptyEl.style.display = 'block';
+    container.innerHTML = '';
+    return;
+  }
+  emptyEl.style.display = 'none';
+
+  container.innerHTML = logs.map((log, i) => {
+    const energy = log.energy || '?';
+    const energyEmoji = energy >= 8 ? '⚡' : energy >= 5 ? '😊' : '😴';
+    const adv = log.ai_advice || {};
+    return `
+    <div class="past-log-card">
+      <div class="past-log-header" onclick="togglePastLog(${i})">
+        <div class="past-log-date">${log.date}</div>
+        <div class="past-log-energy">${energyEmoji} ${energy}/10</div>
+        <span class="past-log-arr" id="pla-${i}">▶</span>
+      </div>
+      <div class="past-log-body" id="plb-${i}">
+        ${log.accomplished ? `<div class="past-log-row"><div class="past-log-label">✅ できたこと</div><div class="past-log-text">${escHtml(log.accomplished)}</div></div>` : ''}
+        ${log.missed ? `<div class="past-log-row"><div class="past-log-label">📋 できなかったこと</div><div class="past-log-text">${escHtml(log.missed)}</div></div>` : ''}
+        ${adv.summary ? `<div class="past-log-row"><div class="past-log-label">🤖 AIまとめ</div><div class="past-log-text">${escHtml(adv.summary)}</div></div>` : ''}
+        ${adv.encouragement ? `<div class="past-log-row"><div class="past-log-label">💪 励まし</div><div class="past-log-text" style="color:#6ee7b7">${escHtml(adv.encouragement)}</div></div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function togglePastLog(i) {
+  const body = document.getElementById('plb-' + i);
+  const arr  = document.getElementById('pla-' + i);
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  arr.textContent = open ? '▶' : '▼';
 }
 
 // ═══════════════════════════════════════════
@@ -996,9 +956,9 @@ async function claudeCall(payload) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
+      'Content-Type': 'application/json',
       'x-api-key': apiKey,
       'anthropic-version': '2023-06-01',
-      'content-type': 'application/json',
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify(payload)
