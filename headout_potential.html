@@ -244,6 +244,107 @@ td{padding:9px 12px;vertical-align:middle}
 .s6-add-btn{padding:10px 18px;background:var(--yes-c);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s all}
 .s6-add-btn:hover{background:#166534}
 .s6-port-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+/* ── S7 OPERATOR RESEARCH (dark navy) ── */
+.s7-wrap{background:#0f172a;border-radius:16px;padding:28px 24px;min-height:400px}
+.s7-intro{margin-bottom:28px}
+.s7-intro h2{font-size:20px;font-weight:800;color:#f1f5f9;margin-bottom:4px}
+.s7-intro p{font-size:13px;color:#94a3b8}
+.s7-search-box{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:16px}
+.s7-input-row{display:flex;gap:10px;align-items:stretch}
+.s7-input{flex:1;padding:13px 16px;background:#0f172a;border:1.5px solid #475569;border-radius:10px;font-size:14px;color:#f1f5f9;outline:none;transition:.15s border-color;font-family:inherit}
+.s7-input::placeholder{color:#64748b}
+.s7-input:focus{border-color:#e8174a}
+.s7-btn{padding:13px 22px;background:linear-gradient(135deg,#e8174a,#b8103a);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s all;box-shadow:0 4px 12px rgba(232,23,74,.35)}
+.s7-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(232,23,74,.45)}
+.s7-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.s7-history{margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.s7-hist-label{font-size:11px;color:#64748b;white-space:nowrap}
+.s7-hist-chip{padding:5px 12px;background:#0f172a;border:1px solid #334155;border-radius:20px;font-size:12px;color:#94a3b8;cursor:pointer;transition:.15s all;white-space:nowrap}
+.s7-hist-chip:hover{border-color:#e8174a;color:#f1f5f9}
+/* Progress */
+.s7-progress-wrap{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px 20px;margin-bottom:20px}
+.s7-progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.s7-progress-label{font-size:13px;font-weight:600;color:#f1f5f9}
+.s7-progress-pct{font-size:12px;color:#94a3b8}
+.s7-progress-track{background:#0f172a;border-radius:20px;height:8px;overflow:hidden;margin-bottom:12px}
+.s7-progress-bar{background:linear-gradient(90deg,#e8174a,#b8103a);height:100%;border-radius:20px;transition:width .4s ease}
+.s7-steps{display:flex;gap:8px}
+.s7-step{flex:1;text-align:center;font-size:11px;padding:6px 4px;border-radius:8px;border:1px solid #334155;color:#64748b;transition:.2s all}
+.s7-step.active{border-color:#e8174a;color:#e8174a;background:rgba(232,23,74,.1)}
+.s7-step.done{border-color:#15803d;color:#4ade80;background:rgba(21,128,61,.1)}
+/* Result Cards */
+.s7-card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:16px;animation:s7fadeIn .3s ease}
+@keyframes s7fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.s7-card-hdr{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #334155}
+.s7-card-hdr h3{font-size:15px;font-weight:700;color:#f1f5f9;flex:1}
+.s7-cat-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(232,23,74,.2);color:#fca5a5;border:1px solid rgba(232,23,74,.3)}
+.s7-company{font-size:22px;font-weight:900;color:#f1f5f9;margin-bottom:4px}
+.s7-summary{font-size:13px;color:#cbd5e1;line-height:1.6;margin-bottom:14px}
+.s7-row-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:6px;margin-top:14px}
+.s7-usp-list{list-style:none;padding:0}
+.s7-usp-list li{padding:5px 0;padding-left:16px;font-size:13px;color:#cbd5e1;position:relative}
+.s7-usp-list li::before{content:"✦";position:absolute;left:0;color:#e8174a;font-size:10px}
+.s7-highlight{background:rgba(232,23,74,.12);border:1px solid rgba(232,23,74,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#fca5a5;line-height:1.6;margin-top:6px}
+.s7-meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.s7-meta{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 14px;flex:1;min-width:140px}
+.s7-meta-v{font-size:16px;font-weight:800;color:#e8174a}
+.s7-meta-l{font-size:11px;color:#64748b;margin-top:2px}
+/* News card */
+.s7-news-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #1e3a5f}
+.s7-news-item:last-child{border-bottom:none}
+.s7-news-num{width:24px;height:24px;background:#e8174a;color:#fff;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.s7-news-body{flex:1;min-width:0}
+.s7-news-title{font-size:13px;font-weight:600;color:#f1f5f9;margin-bottom:3px}
+.s7-news-summary{font-size:12px;color:#94a3b8;line-height:1.5;margin-bottom:6px}
+.s7-news-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.s7-news-date{font-size:11px;color:#64748b}
+.s7-rel-badge{padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.s7-rel-high{background:rgba(220,38,38,.2);color:#fca5a5;border:1px solid rgba(220,38,38,.3)}
+.s7-rel-medium{background:rgba(217,119,6,.2);color:#fcd34d;border:1px solid rgba(217,119,6,.3)}
+.s7-rel-low{background:rgba(22,163,74,.2);color:#4ade80;border:1px solid rgba(22,163,74,.3)}
+.s7-news-link{padding:3px 10px;background:#0f172a;border:1px solid #334155;border-radius:6px;font-size:11px;color:#94a3b8;text-decoration:none;transition:.15s all;white-space:nowrap}
+.s7-news-link:hover{border-color:#e8174a;color:#e8174a}
+/* Email card */
+.s7-subject-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.s7-subject-label{font-size:11px;font-weight:700;color:#64748b;white-space:nowrap}
+.s7-subject-val{flex:1;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:8px 12px;font-size:13px;color:#f1f5f9;font-family:inherit}
+.s7-email-body{width:100%;background:#0f172a;border:1px solid #334155;border-radius:10px;padding:14px;font-size:13px;color:#f1f5f9;line-height:1.7;font-family:inherit;resize:vertical;min-height:240px;outline:none}
+.s7-email-body:focus{border-color:#e8174a}
+.s7-key-msg{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#93c5fd;margin:14px 0}
+.s7-action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.s7-action-btn{padding:10px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s all;white-space:nowrap}
+.s7-copy-btn{background:#0f172a;border:1.5px solid #475569;color:#f1f5f9}
+.s7-copy-btn:hover{border-color:#e8174a;color:#e8174a}
+.s7-copy-btn.copied{background:#15803d;border-color:#15803d;color:#fff}
+.s7-gmail-btn{background:linear-gradient(135deg,#4285f4,#1967d2);border:none;color:#fff}
+.s7-gmail-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(66,133,244,.4)}
+/* Contact card */
+.s7-rec-title{font-size:16px;font-weight:800;color:#f1f5f9;margin-bottom:4px}
+.s7-rec-reason{font-size:13px;color:#94a3b8;line-height:1.5;margin-bottom:16px}
+.s7-contact-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:16px}
+.s7-contact-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:14px}
+.s7-contact-name{font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:2px}
+.s7-contact-title{font-size:12px;color:#94a3b8;margin-bottom:10px}
+.s7-contact-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.s7-linkedin-btn{padding:5px 12px;background:rgba(10,102,194,.2);border:1px solid rgba(10,102,194,.4);border-radius:6px;font-size:11px;color:#60a5fa;text-decoration:none;font-weight:600;transition:.15s all}
+.s7-linkedin-btn:hover{background:rgba(10,102,194,.35)}
+.s7-conf-badge{padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.s7-conf-high{background:rgba(21,128,61,.2);color:#4ade80;border:1px solid rgba(21,128,61,.3)}
+.s7-conf-medium{background:rgba(217,119,6,.2);color:#fcd34d;border:1px solid rgba(217,119,6,.3)}
+.s7-conf-low{background:rgba(100,116,139,.2);color:#94a3b8;border:1px solid rgba(100,116,139,.3)}
+.s7-channel{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.25);border-radius:10px;padding:12px 14px;font-size:13px;color:#c4b5fd}
+.s7-advice{font-size:13px;color:#cbd5e1;line-height:1.6;margin-top:10px}
+/* Error state */
+.s7-error{background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.25);border-radius:10px;padding:16px;text-align:center}
+.s7-error p{font-size:13px;color:#fca5a5;margin-bottom:10px}
+.s7-retry-btn{padding:8px 18px;background:rgba(220,38,38,.2);border:1px solid rgba(220,38,38,.4);border-radius:8px;font-size:12px;color:#fca5a5;cursor:pointer;font-weight:600}
+.s7-retry-btn:hover{background:rgba(220,38,38,.35)}
+@media(max-width:700px){
+  .s7-wrap{padding:16px 12px}
+  .s7-input-row{flex-direction:column}
+  .s7-steps{display:none}
+  .s7-contact-cards{grid-template-columns:1fr}
+}
 @media print{
   .hdr,.tabs,.toolbar,.stats{display:none!important}
   .sec{display:block!important}#s1,#s2,#s3,#s4{display:none!important}#s5{display:block!important}
@@ -280,6 +381,7 @@ td{padding:9px 12px;vertical-align:middle}
     <button class="tab" onclick="show('s4',this)">§4 — 90-Day Plan (103 Partners)</button>
     <button class="tab" onclick="show('s5',this)">§5 — Japan Market Data 📊</button>
     <button class="tab" onclick="show('s6',this)">§6 — GOV Calculator 🧮</button>
+    <button class="tab" onclick="show('s7',this)">🎯 オペレーター開拓</button>
   </div>
 </div>
 
@@ -649,6 +751,80 @@ td{padding:9px 12px;vertical-align:middle}
         </div>
       </div>
       <div class="portfolio-list" id="s6-portfolio"></div>
+    </div>
+  </div>
+</div>
+
+<!-- S7 OPERATOR RESEARCH -->
+<div id="s7" class="sec">
+  <div class="s7-wrap">
+    <div class="s7-intro">
+      <h2>🎯 オペレーター開拓ツール</h2>
+      <p>日本のエクスペリエンス事業者をAIでリサーチし、コールドメールを自動生成します</p>
+    </div>
+
+    <!-- Search Box -->
+    <div class="s7-search-box">
+      <div class="s7-input-row">
+        <input id="s7-input" class="s7-input" type="text"
+          placeholder="会社名またはサービス名を入力　例：浅草 人力車、teamLab、東京スカイツリー"
+          onkeydown="if(event.key==='Enter')s7StartSearch()">
+        <button id="s7-btn" class="s7-btn" onclick="s7StartSearch()">🔍 リサーチ開始</button>
+      </div>
+      <div id="s7-history" class="s7-history"></div>
+    </div>
+
+    <!-- Progress -->
+    <div id="s7-progress-wrap" class="s7-progress-wrap" style="display:none">
+      <div class="s7-progress-top">
+        <span id="s7-progress-label" class="s7-progress-label">🔍 サービスを調査中...</span>
+        <span id="s7-progress-pct" class="s7-progress-pct">0%</span>
+      </div>
+      <div class="s7-progress-track">
+        <div id="s7-progress-bar" class="s7-progress-bar" style="width:0%"></div>
+      </div>
+      <div class="s7-steps">
+        <div id="s7-step-1" class="s7-step">① リサーチ</div>
+        <div id="s7-step-2" class="s7-step">② ニュース</div>
+        <div id="s7-step-3" class="s7-step">③ メール</div>
+        <div id="s7-step-4" class="s7-step">④ コンタクト</div>
+      </div>
+    </div>
+
+    <!-- Results Container -->
+    <div id="s7-results">
+      <!-- Card A: Research Summary -->
+      <div id="s7-card-a" class="s7-card" style="display:none">
+        <div class="s7-card-hdr">
+          <h3>📊 サービスリサーチサマリー</h3>
+          <span id="s7-a-cat" class="s7-cat-badge"></span>
+        </div>
+        <div id="s7-a-body"></div>
+      </div>
+
+      <!-- Card B: News -->
+      <div id="s7-card-b" class="s7-card" style="display:none">
+        <div class="s7-card-hdr">
+          <h3>📰 最新ニュース TOP10</h3>
+        </div>
+        <div id="s7-b-body"></div>
+      </div>
+
+      <!-- Card C: Cold Email -->
+      <div id="s7-card-c" class="s7-card" style="display:none">
+        <div class="s7-card-hdr">
+          <h3>📧 コールドメール下書き</h3>
+        </div>
+        <div id="s7-c-body"></div>
+      </div>
+
+      <!-- Card D: Contacts -->
+      <div id="s7-card-d" class="s7-card" style="display:none">
+        <div class="s7-card-hdr">
+          <h3>👤 コンタクト先候補</h3>
+        </div>
+        <div id="s7-d-body"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -1583,6 +1759,394 @@ buildS2();
 buildS3Stats();renderS3(D3);
 buildS4Stats();renderS4(D4);
 buildS5();
+
+/* ── S7: OPERATOR RESEARCH ── */
+(function(){
+
+const SYS_RESEARCH=`あなたはHeadoutのJapan BD担当者です。
+日本のインバウンド旅行市場における
+オペレーターのリサーチを行います。
+必ずJSON形式のみで回答してください。
+JSONの前後に文章を一切含めないでください。`;
+
+const SYS_EMAIL=`あなたはHeadoutのJapan BD担当者です。
+日本語で丁寧なビジネスメールを書きます。
+必ずJSON形式のみで回答してください。`;
+
+let s7State={research:null,news:null,email:null,contact:null};
+let s7CurrentQuery='';
+let s7IsRunning=false;
+
+/* ── Helpers ── */
+function s7ParseJSON(txt){
+  const c=txt.replace(/```json\s*/g,'').replace(/```\s*/g,'').trim();
+  // Find first { or [ and last } or ]
+  const start=Math.min(
+    c.indexOf('{')>=0?c.indexOf('{'):Infinity,
+    c.indexOf('[')>=0?c.indexOf('['):Infinity
+  );
+  const end=Math.max(c.lastIndexOf('}'),c.lastIndexOf(']'));
+  if(start===Infinity||end===-1) throw new Error('JSON not found in response');
+  return JSON.parse(c.slice(start,end+1));
+}
+
+async function s7ApiCall(system,userMsg,webSearch){
+  const key=localStorage.getItem('ja2_apikey');
+  if(!key) throw new Error('APIキーが設定されていません。LocalStorageに "ja2_apikey" を設定してください。');
+  const body={
+    model:'claude-sonnet-4-6',
+    max_tokens:4096,
+    system:system,
+    messages:[{role:'user',content:userMsg}]
+  };
+  if(webSearch) body.tools=[{type:'web_search_20250305',name:'web_search'}];
+  const headers={
+    'Content-Type':'application/json',
+    'x-api-key':key,
+    'anthropic-version':'2023-06-01'
+  };
+  if(webSearch) headers['anthropic-beta']='web-search-2025-03-05';
+  const resp=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',headers,body:JSON.stringify(body)
+  });
+  if(!resp.ok){
+    let msg='API Error '+resp.status;
+    try{const e=await resp.json();msg=e.error?.message||msg;}catch(x){}
+    throw new Error(msg);
+  }
+  const data=await resp.json();
+  const text=data.content.filter(c=>c.type==='text').map(c=>c.text).join('');
+  return text;
+}
+
+/* ── Progress ── */
+function s7SetStep(n){
+  // n=1..4
+  const labels=['🔍 サービスを調査中...','📰 ニュースを収集中...','📧 メールを作成中...','👤 担当者を検索中...'];
+  const pct=((n-1)/4*100).toFixed(0);
+  document.getElementById('s7-progress-label').textContent=labels[n-1];
+  document.getElementById('s7-progress-pct').textContent=pct+'%';
+  document.getElementById('s7-progress-bar').style.width=pct+'%';
+  for(let i=1;i<=4;i++){
+    const el=document.getElementById('s7-step-'+i);
+    el.className='s7-step'+(i<n?' done':i===n?' active':'');
+  }
+}
+
+function s7SetDone(){
+  document.getElementById('s7-progress-label').textContent='✅ 完了！';
+  document.getElementById('s7-progress-pct').textContent='100%';
+  document.getElementById('s7-progress-bar').style.width='100%';
+  for(let i=1;i<=4;i++) document.getElementById('s7-step-'+i).className='s7-step done';
+}
+
+/* ── History ── */
+function s7RenderHistory(){
+  const hist=JSON.parse(localStorage.getItem('operator_searches')||'[]');
+  const el=document.getElementById('s7-history');
+  if(!hist.length){el.innerHTML='';return;}
+  el.innerHTML='<span class="s7-hist-label">最近の検索:</span>'+
+    hist.slice(0,5).map(q=>`<button class="s7-hist-chip" onclick="s7StartSearch(${JSON.stringify(q)})">${q}</button>`).join('');
+}
+
+function s7AddHistory(q){
+  let hist=JSON.parse(localStorage.getItem('operator_searches')||'[]');
+  hist=[q,...hist.filter(x=>x!==q)].slice(0,5);
+  localStorage.setItem('operator_searches',JSON.stringify(hist));
+  s7RenderHistory();
+}
+
+/* ── Render Cards ── */
+function s7RenderA(d){
+  document.getElementById('s7-a-cat').textContent=d.category||'';
+  document.getElementById('s7-a-body').innerHTML=`
+    <div class="s7-company">${d.company_name||''}</div>
+    <div class="s7-summary">${d.service_summary||''}</div>
+    <div class="s7-row-label">ターゲット客層</div>
+    <div style="font-size:13px;color:#cbd5e1">${d.target_audience||''}</div>
+    <div class="s7-row-label">セールスポイント</div>
+    <ul class="s7-usp-list">${(d.unique_selling_points||[]).map(u=>`<li>${u}</li>`).join('')}</ul>
+    <div class="s7-row-label">インバウンド戦略</div>
+    <div style="font-size:13px;color:#cbd5e1">${d.inbound_strategy||''}</div>
+    <div class="s7-row-label">Headoutとのシナジー</div>
+    <div class="s7-highlight">${d.headout_synergy||''}</div>
+    <div class="s7-meta-row">
+      <div class="s7-meta"><div class="s7-meta-v">${d.estimated_ticket_price||'—'}</div><div class="s7-meta-l">推定チケット価格</div></div>
+      <div class="s7-meta"><div class="s7-meta-v">${d.potential_monthly_bookings||'—'}</div><div class="s7-meta-l">月間推定予約数</div></div>
+    </div>`;
+}
+
+function s7RelBadge(r){
+  if(r==='high') return '<span class="s7-rel-badge s7-rel-high">🔴 High</span>';
+  if(r==='medium') return '<span class="s7-rel-badge s7-rel-medium">🟡 Medium</span>';
+  return '<span class="s7-rel-badge s7-rel-low">🟢 Low</span>';
+}
+
+function s7RenderB(d){
+  const news=d.news||[];
+  document.getElementById('s7-b-body').innerHTML=news.map((n,i)=>`
+    <div class="s7-news-item">
+      <div class="s7-news-num">${i+1<=3?['🥇','🥈','🥉'][i]:i+1}</div>
+      <div class="s7-news-body">
+        <div class="s7-news-title">${n.title||''}</div>
+        <div class="s7-news-summary">${n.summary||''}</div>
+        <div class="s7-news-meta">
+          <span class="s7-news-date">${n.date||''}</span>
+          ${s7RelBadge(n.relevance)}
+          ${n.url&&n.url!=='N/A'?`<a href="${n.url}" target="_blank" class="s7-news-link">🔗 記事を読む</a>`:''}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function s7RenderC(d){
+  const subject=d.subject||'';
+  const body=d.body||'';
+  document.getElementById('s7-c-body').innerHTML=`
+    <div class="s7-subject-row">
+      <span class="s7-subject-label">件名</span>
+      <input class="s7-subject-val" id="s7-email-subject" type="text" value="${subject.replace(/"/g,'&quot;')}" style="flex:1;outline:none">
+    </div>
+    <textarea class="s7-email-body" id="s7-email-body">${body}</textarea>
+    <div class="s7-row-label">キーメッセージ</div>
+    <div class="s7-key-msg">${d.key_message||''}</div>
+    <div class="s7-row-label">求めるアクション</div>
+    <div style="font-size:13px;color:#cbd5e1;margin-bottom:14px">${d.call_to_action||''}</div>
+    <div class="s7-action-row">
+      <button class="s7-action-btn s7-copy-btn" id="s7-copy-email-btn" onclick="s7CopyEmail()">📋 メールをコピー</button>
+      <button class="s7-action-btn s7-gmail-btn" onclick="s7OpenGmail()">✉️ Gmailで開く</button>
+    </div>`;
+}
+
+function s7ConfBadge(c){
+  if(c==='high') return '<span class="s7-conf-badge s7-conf-high">● High</span>';
+  if(c==='medium') return '<span class="s7-conf-badge s7-conf-medium">● Medium</span>';
+  return '<span class="s7-conf-badge s7-conf-low">● Low</span>';
+}
+
+function s7RenderD(d){
+  const contacts=d.contacts||[];
+  document.getElementById('s7-d-body').innerHTML=`
+    <div class="s7-rec-title">${d.recommended_title||''}</div>
+    <div class="s7-rec-reason">${d.reason||''}</div>
+    <div class="s7-contact-cards">
+      ${contacts.map(c=>`
+        <div class="s7-contact-card">
+          <div class="s7-contact-name">${c.name||'調査中'}</div>
+          <div class="s7-contact-title">${c.title||''}</div>
+          <div class="s7-contact-actions">
+            ${c.linkedin_url&&c.linkedin_url!=='N/A'?`<a href="${c.linkedin_url}" target="_blank" class="s7-linkedin-btn">💼 LinkedIn</a>`:''}
+            ${s7ConfBadge(c.confidence)}
+          </div>
+        </div>`).join('')}
+    </div>
+    <div class="s7-row-label">最適な連絡手段</div>
+    <div class="s7-channel">${d.best_channel||''}</div>
+    <div class="s7-advice">${d.approach_advice||''}</div>`;
+}
+
+function s7ShowError(cardId,label,err,retryFn){
+  document.getElementById(cardId).style.display='block';
+  const body=cardId.replace('s7-card-','s7-').replace('-','')+'body';
+  const existing=document.getElementById(body);
+  if(existing) existing.innerHTML=`
+    <div class="s7-error">
+      <p>⚠️ ${label}の取得に失敗しました。しばらくしてから再試行してください。</p>
+      <button class="s7-retry-btn" onclick="(${retryFn.toString()})()">🔄 再試行</button>
+    </div>`;
+}
+
+/* ── Email actions ── */
+window.s7CopyEmail=function(){
+  const subj=document.getElementById('s7-email-subject')?.value||'';
+  const body=document.getElementById('s7-email-body')?.value||'';
+  navigator.clipboard.writeText('件名: '+subj+'\n\n'+body).then(()=>{
+    const btn=document.getElementById('s7-copy-email-btn');
+    btn.textContent='✅ コピーしました！';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 メールをコピー';btn.classList.remove('copied');},2000);
+  });
+};
+
+window.s7OpenGmail=function(){
+  const subj=encodeURIComponent(document.getElementById('s7-email-subject')?.value||'');
+  const body=encodeURIComponent(document.getElementById('s7-email-body')?.value||'');
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&su=${subj}&body=${body}`,'_blank');
+};
+
+/* ── Main Search ── */
+window.s7StartSearch=async function(forcedQuery){
+  const q=(forcedQuery||document.getElementById('s7-input').value).trim();
+  if(!q){document.getElementById('s7-input').focus();return;}
+  if(s7IsRunning) return;
+  s7IsRunning=true;
+  s7CurrentQuery=q;
+  document.getElementById('s7-input').value=q;
+  document.getElementById('s7-btn').disabled=true;
+  s7AddHistory(q);
+
+  // Reset cards
+  ['s7-card-a','s7-card-b','s7-card-c','s7-card-d'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('s7-a-body').innerHTML='';
+  document.getElementById('s7-b-body').innerHTML='';
+  document.getElementById('s7-c-body').innerHTML='';
+  document.getElementById('s7-d-body').innerHTML='';
+
+  // Show progress
+  document.getElementById('s7-progress-wrap').style.display='block';
+  s7SetStep(1);
+  s7State={research:null,news:null,email:null,contact:null};
+
+  // ─ CALL 1: Research ─
+  try{
+    const r1=await s7ApiCall(SYS_RESEARCH,
+`<task>
+以下の会社・サービスについてリサーチしてください：
+${q}
+
+Step 1: このサービスの基本情報を把握する
+Step 2: 訪日外国人向けの戦略を分析する
+Step 3: HeadoutとのSynergyを考える
+
+以下のJSON形式で回答してください：
+{
+  "company_name": "正式名称",
+  "service_summary": "サービスの概要（3文以内）",
+  "target_audience": "主なターゲット客層",
+  "unique_selling_points": ["USP1","USP2","USP3"],
+  "inbound_strategy": "現在の訪日外国人向け戦略",
+  "headout_synergy": "Headoutがどう貢献できるか（具体的に）",
+  "category": "Food/Tour/Attraction/Activity/Other",
+  "estimated_ticket_price": "推定チケット価格帯（例：¥5,000-¥15,000）",
+  "potential_monthly_bookings": "月間推定予約数（例：50-100件）"
+}
+</task>`,true);
+    s7State.research=s7ParseJSON(r1);
+    s7RenderA(s7State.research);
+    document.getElementById('s7-card-a').style.display='block';
+  }catch(e){
+    document.getElementById('s7-card-a').style.display='block';
+    document.getElementById('s7-a-body').innerHTML=`<div class="s7-error"><p>⚠️ サービスリサーチに失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+  }
+
+  // ─ CALL 2: News ─
+  s7SetStep(2);
+  try{
+    const r2=await s7ApiCall(SYS_RESEARCH,
+`<task>
+${q}に関する最新ニュースを10件収集してください。
+訪日外国人・インバウンド関連を優先してください。
+
+必ずJSON形式のみで回答してください：
+{
+  "news": [
+    {
+      "title": "ニュースタイトル",
+      "summary": "1文要約",
+      "url": "記事URL",
+      "date": "日付",
+      "relevance": "インバウンド関連度（high/medium/low）"
+    }
+  ]
+}
+</task>`,true);
+    s7State.news=s7ParseJSON(r2);
+    s7RenderB(s7State.news);
+    document.getElementById('s7-card-b').style.display='block';
+  }catch(e){
+    document.getElementById('s7-card-b').style.display='block';
+    document.getElementById('s7-b-body').innerHTML=`<div class="s7-error"><p>⚠️ ニュース収集に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+  }
+
+  // ─ CALL 3: Email ─
+  s7SetStep(3);
+  const top3news=s7State.news?(s7State.news.news||[]).slice(0,3).map(n=>n.title+': '+n.summary).join('\n'):'ニュースなし';
+  try{
+    const r3=await s7ApiCall(SYS_EMAIL,
+`<context>
+会社・サービス: ${q}
+リサーチ結果: ${s7State.research?JSON.stringify(s7State.research):'情報なし'}
+最新ニュース（上位3件）: ${top3news}
+</context>
+
+<task>
+Step 1: 相手のビジネス状況を理解する
+Step 2: Headoutとの接点を見つける
+Step 3: 相手にとってのメリットを明確にする
+Step 4: 日本語で丁寧なビジネスメールを書く
+
+以下のJSON形式で回答してください：
+{
+  "subject": "件名",
+  "body": "メール本文（日本語・丁寧語）",
+  "key_message": "このメールで最も伝えたいこと",
+  "call_to_action": "求めるアクション"
+}
+
+メールの構成：
+1. 書き出し（自己紹介・Headoutの説明）
+2. なぜこの会社に連絡したか（ニュースや実績に言及）
+3. Headoutがもたらすベネフィット（具体的な数字を含む）
+4. 次のアクション提案（30分の面談依頼）
+5. 丁寧な締め
+
+Headoutの説明として使う数字：
+・43M+ 訪日外国人（2025年）
+・西洋人旅行者の急増（最も購買力が高い層）
+・Klookにない西洋人向けプラットフォーム
+・初期リスクなし・手数料型
+</task>`,false);
+    s7State.email=s7ParseJSON(r3);
+    s7RenderC(s7State.email);
+    document.getElementById('s7-card-c').style.display='block';
+  }catch(e){
+    document.getElementById('s7-card-c').style.display='block';
+    document.getElementById('s7-c-body').innerHTML=`<div class="s7-error"><p>⚠️ メール生成に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+  }
+
+  // ─ CALL 4: Contacts ─
+  s7SetStep(4);
+  try{
+    const r4=await s7ApiCall(SYS_RESEARCH,
+`<task>
+${q}のコンタクト先をリサーチしてください。
+
+Step 1: この会社の意思決定者を特定する
+Step 2: LinkedInやWantedlyで担当者を探す
+Step 3: アプローチすべき役職をアドバイスする
+
+以下のJSON形式で回答してください：
+{
+  "recommended_title": "アプローチすべき役職（例：営業部長、代表取締役）",
+  "reason": "この役職をターゲットにする理由",
+  "contacts": [
+    {
+      "name": "氏名（不明な場合は「調査中」）",
+      "title": "役職",
+      "linkedin_url": "LinkedInのURL（見つかった場合）",
+      "confidence": "high/medium/low"
+    }
+  ],
+  "approach_advice": "アプローチ方法のアドバイス",
+  "best_channel": "最適な連絡手段（例：LinkedIn DM、メール、電話）"
+}
+</task>`,true);
+    s7State.contact=s7ParseJSON(r4);
+    s7RenderD(s7State.contact);
+    document.getElementById('s7-card-d').style.display='block';
+  }catch(e){
+    document.getElementById('s7-card-d').style.display='block';
+    document.getElementById('s7-d-body').innerHTML=`<div class="s7-error"><p>⚠️ コンタクト検索に失敗しました。</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 再試行</button></div>`;
+  }
+
+  s7SetDone();
+  s7IsRunning=false;
+  document.getElementById('s7-btn').disabled=false;
+};
+
+// Init
+s7RenderHistory();
+
+})();
 </script>
 </body>
 </html>
