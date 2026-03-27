@@ -248,11 +248,11 @@ td{padding:9px 12px;vertical-align:middle}
 .s7-search-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:var(--sh)}
 .s7-input-row{display:flex;gap:10px;align-items:stretch}
 .s7-input{flex:1;padding:10px 13px;background:var(--card);border:1.5px solid var(--border);border-radius:8px;font-size:13px;color:#111827;outline:none;transition:.15s border-color;font-family:inherit}
-.s7-input::placeholder{color:#9ca3af}
+.s7-input::placeholder{color:#6b7280}
 .s7-input:focus{border-color:#6b7280}
 .s7-btn{padding:10px 18px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s all}
 .s7-btn:hover{opacity:.9}
-.s7-btn:disabled{opacity:.5;cursor:not-allowed}
+.s7-btn:disabled{background:#93c5fd;cursor:not-allowed}
 .s7-history{margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .s7-hist-label{font-size:11px;color:#6b7280;white-space:nowrap}
 .s7-hist-chip{padding:4px 10px;background:var(--bg);border:1px solid var(--border);border-radius:20px;font-size:12px;color:#374151;cursor:pointer;transition:.15s all;white-space:nowrap}
@@ -344,27 +344,27 @@ td{padding:9px 12px;vertical-align:middle}
 .s7-drive-btn:disabled{opacity:.5;cursor:not-allowed}
 .s7-drive-stat{font-size:12px;color:#6b7280;flex:1}
 .s7-drive-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
-.s7-drive-dot.synced{background:#22c55e}.s7-drive-dot.saving{background:#eab308;animation:s7dp .8s infinite}.s7-drive-dot.error{background:#9ca3af}
+.s7-drive-dot.synced{background:#22c55e}.s7-drive-dot.saving{background:#eab308;animation:s7dp .8s infinite}.s7-drive-dot.error{background:#6b7280}
 @keyframes s7dp{0%,100%{opacity:1}50%{opacity:.35}}
-.s7-drive-so{padding:4px 10px;background:none;border:1px solid var(--border);border-radius:6px;font-size:11px;color:#9ca3af;cursor:pointer;display:none}
-.s7-drive-so:hover{border-color:#9ca3af;color:#374151}
+.s7-drive-so{padding:4px 10px;background:none;border:1px solid var(--border);border-radius:6px;font-size:11px;color:#374151;cursor:pointer;display:none}
+.s7-drive-so:hover{border-color:#6b7280;color:#111827}
 /* S7 History panel */
 .s7-hist-panel{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;box-shadow:var(--sh);overflow:hidden}
 .s7-hist-toggle{width:100%;padding:11px 16px;background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#374151;text-align:left}
 .s7-hist-toggle:hover{background:#f9fafb}
 .s7-hist-cnt{background:#e5e7eb;color:#374151;border-radius:20px;padding:1px 8px;font-size:11px;font-weight:700;margin-left:2px}
-.s7-hist-arr{margin-left:auto;font-size:11px;color:#9ca3af;transition:.2s transform}
+.s7-hist-arr{margin-left:auto;font-size:11px;color:#374151;transition:.2s transform}
 .s7-hist-arr.open{transform:rotate(90deg)}
 .s7-hist-list{border-top:1px solid var(--border);padding:6px}
 .s7-hist-entry{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px}
 .s7-hist-entry:hover{background:#f9fafb}
 .s7-hist-ename{font-size:13px;font-weight:600;color:#111827;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.s7-hist-edate{font-size:11px;color:#9ca3af;white-space:nowrap;flex-shrink:0}
+.s7-hist-edate{font-size:11px;color:#374151;white-space:nowrap;flex-shrink:0}
 .s7-hist-load{padding:4px 10px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;font-size:11px;color:#1d4ed8;font-weight:600;cursor:pointer;transition:.15s;white-space:nowrap}
 .s7-hist-load:hover{background:#dbeafe}
-.s7-hist-del{padding:4px 8px;background:none;border:1px solid #e5e7eb;border-radius:6px;font-size:11px;color:#9ca3af;cursor:pointer;transition:.15s;flex-shrink:0}
+.s7-hist-del{padding:4px 8px;background:none;border:1px solid #e5e7eb;border-radius:6px;font-size:11px;color:#374151;cursor:pointer;transition:.15s;flex-shrink:0}
 .s7-hist-del:hover{border-color:#6b7280;color:#374151}
-.s7-hist-empty{padding:16px;text-align:center;font-size:12px;color:#9ca3af}
+.s7-hist-empty{padding:16px;text-align:center;font-size:12px;color:#374151}
 @media(max-width:700px){
   .s7-input-row{flex-direction:column}
   .s7-steps{display:none}
@@ -1805,15 +1805,8 @@ buildS5();
 /* ── S7: OPERATOR RESEARCH ── */
 (function(){
 
-const SYS_RESEARCH=`あなたはHeadoutのJapan BD担当者です。
-日本のインバウンド旅行市場における
-オペレーターのリサーチを行います。
-必ずJSON形式のみで回答してください。
-JSONの前後に文章を一切含めないでください。`;
-
-const SYS_EMAIL=`あなたはHeadoutのJapan BD担当者です。
-日本語で丁寧なビジネスメールを書きます。
-必ずJSON形式のみで回答してください。`;
+const SYS_RESEARCH=`日本語で回答。必ずJSONのみ。前後に文章不要。`;
+const SYS_EMAIL=`日本語で回答。必ずJSONのみ。前後に文章不要。`;
 
 let s7State={research:null,news:null,email:null,contact:null};
 let s7CurrentQuery='';
@@ -1849,7 +1842,7 @@ async function s7ApiCall(system,userMsg,webSearch){
   if(!key) throw new Error('API key not found. Please set ja2_apikey in localStorage.');
   const body={
     model:'claude-sonnet-4-6',
-    max_tokens:4096,
+    max_tokens:1000,
     system:system,
     messages:[{role:'user',content:userMsg}]
   };
@@ -1918,11 +1911,11 @@ function s7RenderA(d){
     <div class="s7-company">${d.company_name||''}</div>
     <div class="s7-summary">${d.service_summary||''}</div>
     <div class="s7-row-label">ターゲット客層</div>
-    <div style="font-size:13px;color:#cbd5e1">${d.target_audience||''}</div>
+    <div style="font-size:13px;color:#374151">${d.target_audience||''}</div>
     <div class="s7-row-label">セールスポイント</div>
     <ul class="s7-usp-list">${(d.unique_selling_points||[]).map(u=>`<li>${u}</li>`).join('')}</ul>
     <div class="s7-row-label">インバウンド戦略</div>
-    <div style="font-size:13px;color:#cbd5e1">${d.inbound_strategy||''}</div>
+    <div style="font-size:13px;color:#374151">${d.inbound_strategy||''}</div>
     <div class="s7-row-label">Headoutとのシナジー</div>
     <div class="s7-highlight">${d.headout_synergy||''}</div>
     <div class="s7-meta-row">
@@ -1966,7 +1959,7 @@ function s7RenderC(d){
     <div class="s7-row-label">キーメッセージ</div>
     <div class="s7-key-msg">${d.key_message||''}</div>
     <div class="s7-row-label">求めるアクション</div>
-    <div style="font-size:13px;color:#cbd5e1;margin-bottom:14px">${d.call_to_action||''}</div>
+    <div style="font-size:13px;color:#374151;margin-bottom:14px">${d.call_to_action||''}</div>
     <div class="s7-action-row">
       <button class="s7-action-btn s7-copy-btn" id="s7-copy-email-btn" onclick="s7CopyEmail()">📋 Copy Email</button>
       <button class="s7-action-btn s7-gmail-btn" onclick="s7OpenGmail()">✉️ Open in Gmail</button>
@@ -2061,27 +2054,8 @@ window.s7StartSearch=async function(forcedQuery){
   // ─ CALL 1: Research ─
   try{
     const r1=await s7ApiCall(SYS_RESEARCH,
-`<task>
-以下の会社・サービスについてリサーチしてください：
-${q}
-
-Step 1: このサービスの基本情報を把握する
-Step 2: 訪日外国人向けの戦略を分析する
-Step 3: HeadoutとのSynergyを考える
-
-以下のJSON形式で回答してください：
-{
-  "company_name": "正式名称",
-  "service_summary": "サービスの概要（3文以内）",
-  "target_audience": "主なターゲット客層",
-  "unique_selling_points": ["USP1","USP2","USP3"],
-  "inbound_strategy": "現在の訪日外国人向け戦略",
-  "headout_synergy": "Headoutがどう貢献できるか（具体的に）",
-  "category": "Food/Tour/Attraction/Activity/Other",
-  "estimated_ticket_price": "推定チケット価格帯（例：¥5,000-¥15,000）",
-  "potential_monthly_bookings": "月間推定予約数（例：50-100件）"
-}
-</task>`,true);
+`${q}についてJSONで回答:
+{"company_name":"","service_summary":"","target_audience":"","unique_selling_points":[],"inbound_strategy":"","headout_synergy":"","category":"Food/Tour/Attraction/Activity/Other","estimated_ticket_price":"","potential_monthly_bookings":""}`,true);
     s7State.research=s7ParseJSON(r1);
     s7RenderA(s7State.research);
     document.getElementById('s7-card-a').style.display='block';
@@ -2089,29 +2063,14 @@ Step 3: HeadoutとのSynergyを考える
     document.getElementById('s7-card-a').style.display='block';
     document.getElementById('s7-a-body').innerHTML=`<div class="s7-error"><p>⚠️ Service research failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(1000);
+  await s7Delay(3000);
 
   // ─ CALL 2: News ─
   s7SetStep(2);
   try{
     const r2=await s7ApiCall(SYS_RESEARCH,
-`<task>
-${q}に関する最新ニュースを10件収集してください。
-訪日外国人・インバウンド関連を優先してください。
-
-必ずJSON形式のみで回答してください：
-{
-  "news": [
-    {
-      "title": "ニュースタイトル",
-      "summary": "1文要約",
-      "url": "記事URL",
-      "date": "日付",
-      "relevance": "インバウンド関連度（high/medium/low）"
-    }
-  ]
-}
-</task>`,true);
+`${q}の最新ニュース10件をJSONで:
+{"news":[{"title":"","summary":"","url":"","date":"","relevance":"high/medium/low"}]}`,true);
     s7State.news=s7ParseJSON(r2);
     s7RenderB(s7State.news);
     document.getElementById('s7-card-b').style.display='block';
@@ -2119,7 +2078,7 @@ ${q}に関する最新ニュースを10件収集してください。
     document.getElementById('s7-card-b').style.display='block';
     document.getElementById('s7-b-body').innerHTML=`<div class="s7-error"><p>⚠️ News collection failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(1000);
+  await s7Delay(3000);
 
   // ─ CALL 3: Email ─
   s7SetStep(3);
@@ -2129,39 +2088,9 @@ ${q}に関する最新ニュースを10件収集してください。
   console.log('CALL 3 input - research:',safeResearch,'news items:',safeNews.length);
   try{
     const r3=await s7ApiCall(SYS_EMAIL,
-`<context>
-会社・サービス: ${q}
-リサーチ結果: ${Object.keys(safeResearch).length?JSON.stringify(safeResearch):'情報なし'}
-最新ニュース（上位3件）: ${top3news}
-</context>
-
-<task>
-Step 1: 相手のビジネス状況を理解する
-Step 2: Headoutとの接点を見つける
-Step 3: 相手にとってのメリットを明確にする
-Step 4: 日本語で丁寧なビジネスメールを書く
-
-以下のJSON形式で回答してください：
-{
-  "subject": "件名",
-  "body": "メール本文（日本語・丁寧語）",
-  "key_message": "このメールで最も伝えたいこと",
-  "call_to_action": "求めるアクション"
-}
-
-メールの構成：
-1. 書き出し（自己紹介・Headoutの説明）
-2. なぜこの会社に連絡したか（ニュースや実績に言及）
-3. Headoutがもたらすベネフィット（具体的な数字を含む）
-4. 次のアクション提案（30分の面談依頼）
-5. 丁寧な締め
-
-Headoutの説明として使う数字：
-・43M+ 訪日外国人（2025年）
-・西洋人旅行者の急増（最も購買力が高い層）
-・Klookにない西洋人向けプラットフォーム
-・初期リスクなし・手数料型
-</task>`,false);
+`${q}へHeadout紹介メールをJSONで:
+{"subject":"","body":"","call_to_action":""}
+メールは日本語・丁寧語。Headout情報:43M訪日客・西洋人向けOTA・手数料型`,false);
     console.log('CALL 3 raw response:',r3);
     s7State.email=s7ParseJSON(r3);
     s7RenderC(s7State.email);
@@ -2171,36 +2100,15 @@ Headoutの説明として使う数字：
     document.getElementById('s7-card-c').style.display='block';
     document.getElementById('s7-c-body').innerHTML=`<div class="s7-error"><p>⚠️ Email drafting failed. Please try again.</p><button class="s7-retry-btn" onclick="s7StartSearch(${JSON.stringify(q)})">🔄 Retry</button></div>`;
   }
-  await s7Delay(1000);
+  await s7Delay(3000);
 
   // ─ CALL 4: Contacts ─
   s7SetStep(4);
   console.log('CALL 4 input - research:',s7State.research?'ok':'missing','news:',s7State.news?'ok':'missing','email:',s7State.email?'ok':'missing');
   try{
     const r4=await s7ApiCall(SYS_RESEARCH,
-`<task>
-${q}のコンタクト先をリサーチしてください。
-
-Step 1: この会社の意思決定者を特定する
-Step 2: LinkedInやWantedlyで担当者を探す
-Step 3: アプローチすべき役職をアドバイスする
-
-以下のJSON形式で回答してください：
-{
-  "recommended_title": "アプローチすべき役職（例：営業部長、代表取締役）",
-  "reason": "この役職をターゲットにする理由",
-  "contacts": [
-    {
-      "name": "氏名（不明な場合は「調査中」）",
-      "title": "役職",
-      "linkedin_url": "LinkedInのURL（見つかった場合）",
-      "confidence": "high/medium/low"
-    }
-  ],
-  "approach_advice": "アプローチ方法のアドバイス",
-  "best_channel": "最適な連絡手段（例：LinkedIn DM、メール、電話）"
-}
-</task>`,true);
+`${q}のコンタクト先をJSONで:
+{"recommended_title":"","reason":"","contacts":[{"name":"","title":"","linkedin_url":"","confidence":""}],"approach_advice":"","best_channel":""}`,false);
     console.log('CALL 4 raw response:',r4);
     s7State.contact=s7ParseJSON(r4);
     s7RenderD(s7State.contact);
