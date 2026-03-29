@@ -1532,7 +1532,6 @@ function parseJSON(raw) {
     return JSON.parse(fixCommas(cleaned));
   } catch (e1) {
     console.error('[parseJSON] attempt 1 failed:', e1.message);
-    console.error('[parseJSON] raw (first 400):', raw.slice(0, 400));
   }
 
   // Attempt 2: extract outermost {...} block
@@ -1545,8 +1544,26 @@ function parseJSON(raw) {
     }
   }
 
-  // Both failed — throw with raw snippet for debugging
-  throw new Error('__PARSE_FAIL__' + raw.slice(0, 200));
+  // Attempt 3: close unclosed braces (truncated response)
+  let attempt = m ? m[0] : cleaned;
+  // Remove trailing incomplete string/value
+  attempt = attempt.replace(/,\s*"[^"]*$/, '').replace(/:\s*"[^"]*$/, ': ""');
+  const openB = (attempt.match(/\{/g) || []).length;
+  const closeB = (attempt.match(/\}/g) || []).length;
+  const openA = (attempt.match(/\[/g) || []).length;
+  const closeA = (attempt.match(/\]/g) || []).length;
+  let patched = attempt;
+  for (let i = 0; i < openA - closeA; i++) patched += ']';
+  for (let i = 0; i < openB - closeB; i++) patched += '}';
+  try {
+    return JSON.parse(fixCommas(patched));
+  } catch (e3) {
+    console.error('[parseJSON] attempt 3 (patch truncated) failed:', e3.message);
+  }
+
+  // All failed — throw with raw snippet for debugging
+  console.error('[parseJSON] raw (first 300):', raw.slice(0, 300));
+  throw new Error('__PARSE_FAIL__' + raw.slice(0, 300));
 }
 
 // ── Two-step AI flow ──────────────────────────────────────────────
@@ -1676,11 +1693,11 @@ async function runStep2() {
   const doAnalysis = async () => {
     return await claudeCall(apiKey, {
       model: 'claude-sonnet-4-6',
-      max_tokens: 1000,
-      system: 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを詳細に分析してください。',
+      max_tokens: 2000,
+      system: 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを分析してください。',
       messages: [{
         role: 'user',
-        content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\nAdvisorとして詳細に分析し、以下のJSON形式のみで回答してください。\n必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n{\n  "aggressive": {\n    "score": 0-100の数値,\n    "good": ["良かった点1","良かった点2","良かった点3","良かった点4","良かった点5"],\n    "bad": ["改善点1","改善点2","改善点3","改善点4","改善点5"],\n    "advice": "詳細なアドバイス（市場環境と取引の関連性を含む）",\n    "nextAction": "明日の具体的なアクション"\n  }\n}\n</instructions>`
+        content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n以下のJSON形式で回答してください。各テキストフィールドは最大100文字以内：\n{"aggressive":{"score":数値のみ,"good":["各項目50文字以内","最大3つ","3つ目"],"bad":["各項目50文字以内","最大3つ","3つ目"],"advice":"150文字以内のアドバイス","nextAction":"100文字以内の明日のアクション"}}\nJSONのみ。コードブロック不要。\n</instructions>`
       }]
     });
   };
@@ -1705,9 +1722,10 @@ async function runStep2() {
     console.error('[AI] step2 error:', err);
     const isParseError = err.message && err.message.startsWith('__PARSE_FAIL__');
     const rawSnippet = isParseError ? err.message.slice('__PARSE_FAIL__'.length) : '';
-    const userMsg = isParseError ? 'AIの回答形式が正しくありませんでした。もう一度試してください。' : (err.message || String(err));
+    const userMsg = isParseError ? 'JSONパースに失敗しました。もう一度試してください。' : (err.message || String(err));
+    const looksLikeJson = rawSnippet && rawSnippet.trimStart().startsWith('{');
     const debugHtml = rawSnippet
-      ? `<div style="margin-top:8px"><span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline">詳細 ▼</span><pre style="display:none;margin-top:6px;font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:6px">${rawSnippet.replace(/</g,'&lt;')}</pre></div>` : '';
+      ? `<div style="margin-top:8px"><span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline">詳細 ▼</span><div style="display:none;margin-top:6px"><div style="font-size:10px;color:var(--muted);margin-bottom:4px">${looksLikeJson?'✅ JSONとして開始されています（途中で切れた可能性）':'❌ JSONとして開始されていません'}</div><pre style="font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:6px">${rawSnippet.replace(/</g,'&lt;')}</pre></div></div>` : '';
     document.getElementById('advisor-body').innerHTML =
       `<div style="padding:12px;font-size:13px;line-height:1.6;"><span style="color:var(--red)">⚠️ 再度お試しください</span><div style="color:var(--muted);font-size:12px;margin-top:4px">${userMsg}</div>${debugHtml}</div>`;
     setStepState('step1-done');
