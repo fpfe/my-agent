@@ -206,14 +206,25 @@ body {
 /* ── AI ADVISORS ── */
 .ai-col { max-height: 680px; overflow-y: auto; }
 
+.step-btns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
 .analyze-btn {
   width: 100%; background: linear-gradient(135deg, var(--indigo) 0%, #8b5cf6 100%);
   color: white; border: none; padding: 10px; border-radius: 8px;
-  cursor: pointer; font-size: 13px; font-weight: 700; margin-bottom: 14px;
-  transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; font-size: 13px; font-weight: 700;
+  transition: background 0.2s, opacity 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
 }
-.analyze-btn:hover { opacity: 0.88; }
-.analyze-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.analyze-btn:hover:not(:disabled) { opacity: 0.88; }
+.analyze-btn:disabled { cursor: not-allowed; }
+.ai-countdown { margin-bottom: 12px; }
+.ai-countdown-row { display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 6px; font-size: 12px; color: var(--muted); }
+.ai-countdown-time { font-family: monospace; font-weight: 700; color: var(--blue); }
+.ai-countdown-track { background: var(--border); border-radius: 20px; height: 5px; overflow: hidden; }
+.ai-countdown-bar { height: 100%; border-radius: 20px;
+  background: linear-gradient(90deg, var(--indigo), var(--purple));
+  transition: width .9s linear; }
+.step-msg { font-size: 12px; padding: 6px 0 10px; }
 
 .news-section { margin-bottom: 16px; }
 .news-header { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 8px; }
@@ -444,9 +455,20 @@ body {
     <div class="card ai-col">
       <div class="card-header"><span class="card-title">🤖 AI Investment Advisors</span></div>
 
-      <button class="analyze-btn" id="analyze-btn" onclick="runAI()">
-        📊 今日のトレードを分析する
-      </button>
+      <div class="step-btns">
+        <button class="analyze-btn" id="step1-btn" onclick="runStep1()" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">📰 Step 1: Get News</button>
+        <button class="analyze-btn" id="step2-btn" onclick="runStep2()" disabled>🤖 Step 2: Get AI Advice</button>
+      </div>
+      <div id="step-msg" class="step-msg" style="display:none"></div>
+      <div id="ai-countdown" class="ai-countdown" style="display:none">
+        <div class="ai-countdown-row">
+          <span id="ai-countdown-label">⏱️ Waiting to avoid rate limit:</span>
+          <span id="ai-countdown-time" class="ai-countdown-time">1:05</span>
+        </div>
+        <div class="ai-countdown-track">
+          <div id="ai-countdown-bar" class="ai-countdown-bar" style="width:100%"></div>
+        </div>
+      </div>
 
       <div id="news-section" style="display:none" class="news-section">
         <div class="news-header">📰 直近12時間のニュース</div>
@@ -1484,6 +1506,7 @@ async function claudeCall(apiKey, payload, options = {}) {
     headers,
     body: JSON.stringify(payload)
   });
+  if (res.status === 429) { const e = new Error('429 Rate limit exceeded'); e.status = 429; throw e; }
   const data = await res.json();
   if (data.error) throw new Error(data.error.message || 'API error');
   let text = '';
@@ -1526,109 +1549,168 @@ function parseJSON(raw) {
   throw new Error('__PARSE_FAIL__' + raw.slice(0, 200));
 }
 
-async function runAI() {
-  const apiKey = localStorage.getItem('ja2_apikey');
-  if (!apiKey) {
-    document.getElementById('apikey-section').style.display = 'block';
-    return;
+// ── Two-step AI flow ──────────────────────────────────────────────
+window.fetchedNews = [];
+
+function getTodayTradesString() {
+  const today = getLatestDate();
+  const trades = today ? allTrades.filter(t => t.約定日 === today) : allTrades.slice(0, 10);
+  return trades.map(t =>
+    `${t.約定日} [${t.銘柄コード}]${t.銘柄名称} ${t.商品 === '株式' ? '現物' : '信用'} ${t.取引種別} ` +
+    `数量${t.数量} 単価¥${t.単価.toLocaleString()} ` +
+    `損益:${t._pnl !== undefined ? fmtPnL(t._pnl) : '—'}`
+  ).join('\n') || '（本日の取引なし）';
+}
+
+function aiCountdownWait(seconds, label) {
+  return new Promise(resolve => {
+    const wrap = document.getElementById('ai-countdown');
+    const labelEl = document.getElementById('ai-countdown-label');
+    const timeEl = document.getElementById('ai-countdown-time');
+    const barEl = document.getElementById('ai-countdown-bar');
+    let remaining = seconds;
+    function fmt(s) { const m = Math.floor(s / 60); return m + ':' + (s % 60 < 10 ? '0' : '') + (s % 60); }
+    function tick() { timeEl.textContent = fmt(remaining); barEl.style.width = (remaining / seconds * 100) + '%'; }
+    if (label) labelEl.textContent = label;
+    wrap.style.display = 'block';
+    tick();
+    const iv = setInterval(() => {
+      remaining--;
+      tick();
+      if (remaining <= 0) { clearInterval(iv); wrap.style.display = 'none'; resolve(); }
+    }, 1000);
+  });
+}
+
+function setStepState(state) {
+  // state: 'initial' | 'step1-done' | 'step2-loading' | 'complete'
+  const s1 = document.getElementById('step1-btn');
+  const s2 = document.getElementById('step2-btn');
+  const msg = document.getElementById('step-msg');
+  if (state === 'initial') {
+    s1.disabled = false; s1.textContent = '📰 Step 1: Get News';
+    s2.disabled = true;  s2.textContent = '🤖 Step 2: Get AI Advice';
+    msg.style.display = 'none';
+  } else if (state === 'step1-done') {
+    s1.disabled = false; s1.textContent = '📰 Step 1: Get News ✓';
+    s2.disabled = false; s2.textContent = '🤖 Step 2: Get AI Advice';
+    msg.style.display = 'block'; msg.style.color = 'var(--green)';
+    msg.textContent = '✅ ニュース取得完了。Step 2 を実行できます。';
+  } else if (state === 'step2-loading') {
+    s1.disabled = true;
+    s2.disabled = true; s2.textContent = '⟳ 分析中...';
+    msg.style.display = 'block'; msg.style.color = 'var(--muted)';
+    msg.textContent = 'Advisorが分析中です...';
+  } else if (state === 'complete') {
+    s1.disabled = false; s1.textContent = '📰 Step 1: Get News';
+    s2.disabled = true;  s2.textContent = '🤖 Step 2: Get AI Advice';
+    msg.style.display = 'block'; msg.style.color = 'var(--muted)';
+    msg.innerHTML = '分析完了。 <a href="#" onclick="resetSteps();return false" style="color:var(--blue)">🔄 Start Over</a>';
   }
+}
+
+function resetSteps() {
+  window.fetchedNews = [];
+  setStepState('initial');
+  document.getElementById('news-section').style.display = 'none';
+  document.getElementById('news-list').innerHTML = '';
+  document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 1 でニュースを取得してから Step 2 を実行してください。</div>';
+}
+
+async function runStep1() {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) { document.getElementById('apikey-section').style.display = 'block'; return; }
   document.getElementById('apikey-section').style.display = 'none';
 
-  const btn = document.getElementById('analyze-btn');
-  btn.disabled = true;
-  btn.textContent = '⟳ 分析中...';
+  const btn = document.getElementById('step1-btn');
+  btn.disabled = true; btn.textContent = '⟳ ニュース取得中...';
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    // ── CALL 1: Fetch market news with web_search ──────────────────
-    let newsItems = [];
-    try {
-      const today = new Date().toLocaleDateString('ja-JP');
-      const currentTime = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
-      const newsRaw = await claudeCall(apiKey, {
-        model: 'claude-sonnet-4-6',
-        max_tokens: 500,
-        system: '株式市場ニュースの要約専門家。JSONのみ回答。',
-        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-        messages: [
-          {
-            role: 'user',
-            content: '日本株式市場の直近12時間以内のニュースTOP5。\n今日: ' + today + ' ' + currentTime + '\n\nJSONのみ：\n{"news":[{"title":"","time":""}]}\n※必ず12時間以内のものだけ\n※最大5件のみ'
-          }
-        ]
-      }, { webSearch: true });
-      const newsResult = parseJSON(newsRaw);
-      if (Array.isArray(newsResult.news)) {
-        newsItems = newsResult.news.slice(0, 5);
-      }
-    } catch(e) {
-      console.warn('[AI] news call failed:', e.message);
-    }
-
-    // Show news panel — only items with a time field
-    document.getElementById('news-section').style.display = 'block';
-    const timedItems = newsItems.filter(n => n && n.time && String(n.time).trim());
-    document.getElementById('news-list').innerHTML = timedItems.length
-      ? timedItems.map(n => `<div class="news-item">
-          <div class="news-item-title">
-            <span class="news-time">${n.time}</span>${n.title || ''}
-          </div>
-        </div>`).join('')
-      : '<div class="news-item" style="color:var(--muted)">最新情報を取得中...</div>';
-
-    // 5s delay before advisor call to avoid rate limiting
-    await new Promise(r => setTimeout(r, 5000));
-
-    // ── CALL 2: Advisor analysis (no web_search) ────────────────────
-    document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 積極派アドバイザーが分析中...</div>';
-
-    const today = getLatestDate();
-    const todayTrades = today ? allTrades.filter(t => t.約定日 === today) : allTrades.slice(0, 10);
-
-    const tradeStr = todayTrades.map(t =>
-      `${t.約定日} [${t.銘柄コード}]${t.銘柄名称} ${t.商品 === '株式' ? '現物' : '信用'} ${t.取引種別} ` +
-      `数量${t.数量} 単価¥${t.単価.toLocaleString()} ` +
-      `損益:${t._pnl !== undefined ? fmtPnL(t._pnl) : '—'}`
-    ).join('\n') || '（本日の取引なし）';
-
-    const newsStr = newsItems.map(n => typeof n === 'string' ? n : n.title).filter(Boolean).join('\n') || '（ニュースなし）';
-
-    const analysisRaw = await claudeCall(apiKey, {  // no web_search
+    const today = new Date().toLocaleDateString('ja-JP');
+    const currentTime = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+    const newsRaw = await claudeCall(apiKey, {
       model: 'claude-sonnet-4-6',
-      max_tokens: 2048,
-      system: `あなたは積極的な投資アドバイザーです。取引データと市場ニュースを詳細に分析してください。`,
-      messages: [
-        {
-          role: 'user',
-          content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n積極派アドバイザーとして詳細に分析し、以下のJSON形式のみで回答してください。\n必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n{\n  "aggressive": {\n    "score": 0-100の数値,\n    "good": ["良かった点1","良かった点2","良かった点3","良かった点4","良かった点5"],\n    "bad": ["改善点1","改善点2","改善点3","改善点4","改善点5"],\n    "advice": "詳細なアドバイス（市場環境と取引の関連性を含む）",\n    "nextAction": "明日の具体的なアクション"\n  }\n}\n</instructions>`
-        }
-      ]
-    });
+      max_tokens: 500,
+      system: '株式市場ニュースの要約専門家。JSONのみ回答。',
+      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+      messages: [{
+        role: 'user',
+        content: '日本株式市場の直近12時間以内のニュースTOP5。\n今日: ' + today + ' ' + currentTime + '\n\nJSONのみ：\n{"news":[{"title":"","time":""}]}\n※必ず12時間以内のものだけ\n※最大5件のみ'
+      }]
+    }, { webSearch: true });
+    const newsResult = parseJSON(newsRaw);
+    window.fetchedNews = Array.isArray(newsResult.news) ? newsResult.news.slice(0, 5) : [];
+  } catch(e) {
+    console.warn('[AI] news call failed:', e.message);
+    window.fetchedNews = [];
+  }
 
+  // Show news panel
+  document.getElementById('news-section').style.display = 'block';
+  const timedItems = window.fetchedNews.filter(n => n && n.time && String(n.time).trim());
+  document.getElementById('news-list').innerHTML = timedItems.length
+    ? timedItems.map(n => `<div class="news-item"><div class="news-item-title"><span class="news-time">${n.time}</span>${n.title || ''}</div></div>`).join('')
+    : '<div class="news-item" style="color:var(--muted)">最新情報を取得中...</div>';
+
+  document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。</div>';
+  setStepState('step1-done');
+}
+
+async function runStep2() {
+  const apiKey = localStorage.getItem('ja2_apikey');
+  if (!apiKey) { document.getElementById('apikey-section').style.display = 'block'; return; }
+  document.getElementById('apikey-section').style.display = 'none';
+
+  setStepState('step2-loading');
+  document.getElementById('advisor-body').innerHTML = '<div class="spinner">⏱️ レート制限を回避するため待機中...</div>';
+
+  // 65s countdown
+  await aiCountdownWait(65, '⏱️ Waiting to avoid rate limit:');
+
+  document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 Advisorが分析中...</div>';
+
+  const tradeStr = getTodayTradesString();
+  const newsStr = window.fetchedNews.map(n => typeof n === 'string' ? n : n.title).filter(Boolean).join('\n') || '（ニュースなし）';
+
+  const doAnalysis = async () => {
+    return await claudeCall(apiKey, {
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1000,
+      system: 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを詳細に分析してください。',
+      messages: [{
+        role: 'user',
+        content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\nAdvisorとして詳細に分析し、以下のJSON形式のみで回答してください。\n必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n{\n  "aggressive": {\n    "score": 0-100の数値,\n    "good": ["良かった点1","良かった点2","良かった点3","良かった点4","良かった点5"],\n    "bad": ["改善点1","改善点2","改善点3","改善点4","改善点5"],\n    "advice": "詳細なアドバイス（市場環境と取引の関連性を含む）",\n    "nextAction": "明日の具体的なアクション"\n  }\n}\n</instructions>`
+      }]
+    });
+  };
+
+  try {
+    let analysisRaw;
+    try {
+      analysisRaw = await doAnalysis();
+    } catch(e) {
+      if (e.status === 429 || (e.message && e.message.includes('429'))) {
+        document.getElementById('advisor-body').innerHTML = '<div class="spinner">⚠️ Rate limit hit. 120秒後に再試行...</div>';
+        await aiCountdownWait(120, '⏱️ 429 Rate limit — retrying in:');
+        analysisRaw = await doAnalysis();
+      } else {
+        throw e;
+      }
+    }
     const result = parseJSON(analysisRaw);
     renderAdvisors(result);
-
+    setStepState('complete');
   } catch(err) {
-    console.error('[AI] error:', err);
-    const isParseError = err.message.startsWith('__PARSE_FAIL__');
+    console.error('[AI] step2 error:', err);
+    const isParseError = err.message && err.message.startsWith('__PARSE_FAIL__');
     const rawSnippet = isParseError ? err.message.slice('__PARSE_FAIL__'.length) : '';
-    const userMsg = isParseError ? 'AIの回答形式が正しくありませんでした。もう一度試してください。' : err.message;
+    const userMsg = isParseError ? 'AIの回答形式が正しくありませんでした。もう一度試してください。' : (err.message || String(err));
     const debugHtml = rawSnippet
-      ? `<div style="margin-top:8px">
-           <span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'"
-                 style="font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline">詳細 ▼</span>
-           <pre style="display:none;margin-top:6px;font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:6px">${rawSnippet.replace(/</g,'&lt;')}</pre>
-         </div>`
-      : '';
+      ? `<div style="margin-top:8px"><span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline">詳細 ▼</span><pre style="display:none;margin-top:6px;font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:6px">${rawSnippet.replace(/</g,'&lt;')}</pre></div>` : '';
     document.getElementById('advisor-body').innerHTML =
-      `<div style="padding:12px;font-size:13px;line-height:1.6;">
-         <span style="color:var(--red)">⚠️ 再度お試しください</span>
-         <div style="color:var(--muted);font-size:12px;margin-top:4px">${userMsg}</div>
-         ${debugHtml}
-       </div>`;
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '📊 今日のトレードを分析する';
+      `<div style="padding:12px;font-size:13px;line-height:1.6;"><span style="color:var(--red)">⚠️ 再度お試しください</span><div style="color:var(--muted);font-size:12px;margin-top:4px">${userMsg}</div>${debugHtml}</div>`;
+    setStepState('step1-done');
   }
 }
 
@@ -1649,7 +1731,7 @@ function renderAdvisors(data) {
       <div class="advisor-head">
         <div class="score-circle ${sc}">${score}</div>
         <div style="flex:1">
-          <div class="advisor-name" style="font-size:15px">🔥 積極派アドバイザー</div>
+          <div class="advisor-name" style="font-size:15px">🔥 Advisor</div>
           <div style="font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5">${d.advice || ''}</div>
         </div>
       </div>
