@@ -520,19 +520,101 @@ body {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    FAB
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.fab {
-  position:fixed; bottom:28px; right:28px;
-  width:52px; height:52px; border-radius:50%;
-  background:var(--primary); color:#fff;
-  border:none; cursor:pointer; font-size:20px;
+.fab-csv {
+  position:fixed; bottom:24px; right:24px;
+  width:56px; height:56px; border-radius:50%;
+  background:#0066CC; color:#fff;
+  border:none; cursor:pointer; font-size:22px;
   display:flex; align-items:center; justify-content:center;
-  box-shadow:0 4px 20px rgba(0,102,204,.5);
-  transition:all .2s; z-index:50;
+  box-shadow:0 8px 24px rgba(0,102,204,.4);
+  transition:all .2s ease; z-index:1000;
 }
-.fab:hover { transform:scale(1.08); box-shadow:0 6px 28px rgba(0,102,204,.6); }
+.fab-csv:hover { transform:scale(1.1); box-shadow:0 12px 32px rgba(0,102,204,.6); }
+
+/* header import button */
+.header-import-btn {
+  font-size:12px; padding:5px 14px; border-radius:9999px;
+  border:1px solid rgba(0,102,204,.4); color:var(--primary);
+  background:rgba(0,102,204,.08);
+  cursor:pointer; white-space:nowrap; transition:all .2s; font-family:inherit;
+}
+.header-import-btn:hover { background:rgba(0,102,204,.16); border-color:var(--primary); }
 
 /* hidden upload-btn shim */
 .upload-btn { display:none; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CSV IMPORT MODAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.csv-modal-backdrop {
+  display:none; position:fixed; inset:0; z-index:500;
+  background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
+  align-items:center; justify-content:center;
+}
+.csv-modal-backdrop.open { display:flex; }
+.csv-modal-box {
+  background:rgba(36,36,38,.95); backdrop-filter:blur(24px);
+  border:1px solid var(--border); border-radius:24px;
+  padding:28px; width:480px; max-width:calc(100vw - 40px);
+  box-shadow:0 32px 64px rgba(0,0,0,.6);
+}
+.csv-modal-header {
+  display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px;
+}
+.csv-modal-title { font-size:20px; font-weight:600; letter-spacing:-.02em; }
+.csv-modal-sub   { font-size:12px; color:var(--muted2); margin-top:3px; }
+.csv-modal-close {
+  background:transparent; border:none; color:var(--muted2);
+  font-size:18px; cursor:pointer; padding:2px 6px; border-radius:6px;
+  transition:color .15s; line-height:1;
+}
+.csv-modal-close:hover { color:var(--text); }
+.csv-dropzone {
+  border:2px dashed rgba(0,102,204,.4); background:rgba(0,102,204,.04);
+  border-radius:16px; height:200px; cursor:pointer;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:8px; transition:all .2s; user-select:none; margin-bottom:16px;
+}
+.csv-dropzone:hover, .csv-dropzone.drag-over {
+  border-color:rgba(0,102,204,.7); background:rgba(0,102,204,.09);
+}
+.csv-dropzone-icon { font-size:36px; }
+.csv-dropzone-text { font-size:14px; font-weight:500; color:var(--text); }
+.csv-dropzone-sub  { font-size:12px; color:var(--muted2); }
+.csv-pick-btn {
+  background:var(--surface-high); border:1px solid var(--border);
+  color:var(--muted); padding:7px 18px; border-radius:9999px;
+  cursor:pointer; font-size:12px; font-family:inherit; transition:all .2s; margin-top:4px;
+}
+.csv-pick-btn:hover { color:var(--text); border-color:rgba(255,255,255,.2); }
+.csv-filename {
+  font-size:12px; color:var(--primary); background:rgba(0,102,204,.08);
+  border:1px solid rgba(0,102,204,.2); border-radius:8px;
+  padding:8px 12px; margin-bottom:12px; word-break:break-all;
+}
+.csv-result {
+  font-size:13px; padding:10px 14px; border-radius:10px;
+  background:rgba(48,209,88,.07); border:1px solid rgba(48,209,88,.2);
+  color:var(--green); margin-bottom:12px; line-height:1.6;
+}
+.csv-result.error { background:rgba(255,69,58,.07); border-color:rgba(255,69,58,.2); color:var(--red); }
+.csv-modal-footer {
+  display:flex; justify-content:flex-end; gap:10px; padding-top:16px;
+  border-top:1px solid var(--border); margin-top:4px;
+}
+.csv-cancel-btn {
+  background:transparent; border:1px solid var(--border); color:var(--muted);
+  padding:8px 20px; border-radius:9999px; cursor:pointer;
+  font-size:13px; font-family:inherit; transition:all .2s;
+}
+.csv-cancel-btn:hover { color:var(--text); border-color:rgba(255,255,255,.2); }
+.csv-import-btn {
+  background:var(--primary); color:#fff; border:none;
+  padding:8px 22px; border-radius:9999px; cursor:pointer;
+  font-size:13px; font-weight:600; font-family:inherit; transition:all .2s;
+}
+.csv-import-btn:hover:not(:disabled) { background:#0075e0; box-shadow:0 0 16px rgba(0,102,204,.4); }
+.csv-import-btn:disabled { opacity:.4; cursor:not-allowed; }
 
 /* buy/sell row compat */
 .buy-row  { background:rgba(0,102,204,.03); }
@@ -554,6 +636,7 @@ body {
     <span id="header-datetime" class="header-datetime"></span>
   </div>
   <div class="header-right">
+    <button class="header-import-btn" onclick="openCsvModal()">📂 Import CSV</button>
     <span class="drive-badge" id="drive-badge" onclick="GDRIVE.connect()">☁️ Drive: 未接続</span>
     <button id="drive-signout-btn" onclick="GDRIVE.signOut()"
       style="display:none;font-size:11px;padding:5px 12px;border-radius:9999px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:inherit">切断</button>
@@ -799,13 +882,41 @@ body {
 </div>
 
 <!-- FAB CSV Upload -->
-<button class="fab" onclick="document.getElementById('csv-input').click()" title="CSVアップロード">↑</button>
+<button class="fab-csv" onclick="openCsvModal()" title="CSVアップロード">↑</button>
 
 <!-- Legacy shim -->
-<button class="upload-btn" onclick="document.getElementById('csv-input').click()">📂 CSV</button>
+<button class="upload-btn" onclick="openCsvModal()">📂 CSV</button>
 
-<!-- FILE INPUT -->
+<!-- FILE INPUT (hidden, used by modal) -->
 <input type="file" id="csv-input" accept=".csv" multiple hidden>
+
+<!-- CSV IMPORT MODAL -->
+<div class="csv-modal-backdrop" id="csv-modal">
+  <div class="csv-modal-box">
+    <div class="csv-modal-header">
+      <div>
+        <div class="csv-modal-title">Import CSV</div>
+        <div class="csv-modal-sub">SBIネオトレード 取引履歴CSV（Shift-JIS）</div>
+      </div>
+      <button class="csv-modal-close" onclick="closeCsvModal()">✕</button>
+    </div>
+
+    <div class="csv-dropzone" id="csv-dropzone" onclick="document.getElementById('csv-input').click()">
+      <div class="csv-dropzone-icon">📂</div>
+      <div class="csv-dropzone-text">ファイルをドラッグ＆ドロップ</div>
+      <div class="csv-dropzone-sub">または</div>
+      <button class="csv-pick-btn" onclick="event.stopPropagation();document.getElementById('csv-input').click()">📂 ファイルを選択</button>
+    </div>
+
+    <div id="csv-filename" class="csv-filename" style="display:none"></div>
+    <div id="csv-result"   class="csv-result"   style="display:none"></div>
+
+    <div class="csv-modal-footer">
+      <button class="csv-cancel-btn" onclick="closeCsvModal()">キャンセル</button>
+      <button class="csv-import-btn" id="csv-import-btn" onclick="csvModalImport()" disabled>⬆️ Import</button>
+    </div>
+  </div>
+</div>
 
 <script>
 // ═══════════════════════════════════════════
@@ -935,22 +1046,85 @@ function fmtDate(s) {
 // ═══════════════════════════════════════════
 // FILE UPLOAD
 // ═══════════════════════════════════════════
-document.getElementById('csv-input').addEventListener('change', e => {
-  if (e.target.files.length) {
-    processFiles(Array.from(e.target.files));
-    e.target.value = '';
-  }
+// ── CSV Modal ─────────────────────────────────────────────────────
+let pendingCsvFiles = [];
+
+function openCsvModal() {
+  pendingCsvFiles = [];
+  document.getElementById('csv-filename').style.display = 'none';
+  document.getElementById('csv-result').style.display = 'none';
+  document.getElementById('csv-import-btn').disabled = true;
+  document.getElementById('csv-modal').classList.add('open');
+}
+
+function closeCsvModal() {
+  document.getElementById('csv-modal').classList.remove('open');
+  document.getElementById('csv-input').value = '';
+  pendingCsvFiles = [];
+}
+
+// Close modal on backdrop click
+document.addEventListener('click', e => {
+  if (e.target.id === 'csv-modal') closeCsvModal();
 });
 
-// Drag-and-drop
+async function csvModalImport() {
+  if (!pendingCsvFiles.length) return;
+  const btn = document.getElementById('csv-import-btn');
+  btn.disabled = true; btn.textContent = '⟳ Importing...';
+  const { newCount, dupCount } = await processFiles(pendingCsvFiles);
+  const resEl = document.getElementById('csv-result');
+  resEl.className = 'csv-result';
+  resEl.style.display = 'block';
+  resEl.innerHTML = `✅ <strong>${newCount}件</strong> imported &nbsp;/&nbsp; <strong>${dupCount}件</strong> duplicates skipped`;
+  btn.textContent = '✓ Done';
+  setTimeout(closeCsvModal, 1800);
+}
+
+// File input change → populate modal
+document.getElementById('csv-input').addEventListener('change', e => {
+  if (!e.target.files.length) return;
+  pendingCsvFiles = Array.from(e.target.files).filter(f => f.name.toLowerCase().endsWith('.csv'));
+  e.target.value = '';
+  if (!pendingCsvFiles.length) return;
+  const fnEl = document.getElementById('csv-filename');
+  fnEl.textContent = pendingCsvFiles.map(f => f.name).join(', ');
+  fnEl.style.display = 'block';
+  document.getElementById('csv-result').style.display = 'none';
+  document.getElementById('csv-import-btn').disabled = false;
+  document.getElementById('csv-import-btn').textContent = '⬆️ Import';
+});
+
+// Modal dropzone drag-and-drop
+const csvDropzone = document.getElementById('csv-dropzone');
+csvDropzone.addEventListener('dragover', e => { e.preventDefault(); csvDropzone.classList.add('drag-over'); });
+csvDropzone.addEventListener('dragleave', () => csvDropzone.classList.remove('drag-over'));
+csvDropzone.addEventListener('drop', e => {
+  e.preventDefault(); e.stopPropagation();
+  csvDropzone.classList.remove('drag-over');
+  pendingCsvFiles = Array.from(e.dataTransfer.files).filter(f => f.name.toLowerCase().endsWith('.csv'));
+  if (!pendingCsvFiles.length) return;
+  const fnEl = document.getElementById('csv-filename');
+  fnEl.textContent = pendingCsvFiles.map(f => f.name).join(', ');
+  fnEl.style.display = 'block';
+  document.getElementById('csv-result').style.display = 'none';
+  document.getElementById('csv-import-btn').disabled = false;
+  document.getElementById('csv-import-btn').textContent = '⬆️ Import';
+});
+
+// Global drag-drop (shows drop overlay, still works outside modal)
 const dropEl = document.getElementById('drop-overlay');
-document.addEventListener('dragover', e => { e.preventDefault(); dropEl.classList.add('active'); });
+document.addEventListener('dragover', e => {
+  if (document.getElementById('csv-modal').classList.contains('open')) return;
+  e.preventDefault(); dropEl.classList.add('active');
+});
 document.addEventListener('dragleave', e => { if (!e.relatedTarget) dropEl.classList.remove('active'); });
 document.addEventListener('drop', e => {
+  if (document.getElementById('csv-modal').classList.contains('open')) return;
   e.preventDefault();
   dropEl.classList.remove('active');
   const files = Array.from(e.dataTransfer.files).filter(f => f.name.toLowerCase().endsWith('.csv'));
-  if (files.length) processFiles(files);
+  if (files.length) { pendingCsvFiles = files; openCsvModal(); csvModalImport(); }
 });
 
 async function processFiles(files) {
@@ -1346,43 +1520,40 @@ function getTargetRate() {
 // 信用買/売残高は参考表示するが総資産に含めない
 // ─────────────────────────────────────────────────────
 function calcOpenPositions() {
-  // Returns { spot: [{code,name,qty,price,value}], marginLong: [...], marginShort: [...] }
-  const spot = {};       // 現物: 買付 - 売付
-  const mLong = {};      // 信用買: 新規買 - 返済売
-  const mShort = {};     // 信用売: 新規売 - 返済買
+  // Cumulative accumulation across ALL trades (no same-day pairing).
+  // allTrades is sorted DESC so first-encounter = latest price per code.
+  // Returns { spot, marginLong, marginShort } each as [{code,name,qty,price,value}]
+
+  const spot   = {};  // 現物:  buyQty=買付合計, sellQty=売付合計
+  const mLong  = {};  // 信用買: buyQty=新規買合計, sellQty=返済売合計
+  const mShort = {};  // 信用売: buyQty=新規売合計, sellQty=返済買合計
 
   for (const t of allTrades) {
     const code = t.銘柄コード;
-    const name = t.銘柄名称;
-    const qty  = t.数量;
-    const price = t.単価;
-    const date  = t.約定日;
 
     if (t.商品 === '株式') {
-      if (!spot[code]) spot[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
-      if (t.取引種別 === '買付') spot[code].qty += qty;
-      if (t.取引種別 === '売付') spot[code].qty -= qty;
-      if (date >= spot[code].latestDate) { spot[code].latestDate = date; spot[code].latestPrice = price; spot[code].name = name; }
+      if (!spot[code]) spot[code] = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
+      // first-encounter already set the latest price (allTrades sorted DESC)
+      if (t.取引種別 === '買付') spot[code].buyQty  += t.数量;
+      if (t.取引種別 === '売付') spot[code].sellQty += t.数量;
     }
 
     if (t.商品 === '制度信用') {
-      // Margin long: 新規買 - 返済売
-      if (!mLong[code]) mLong[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
-      if (t.取引種別 === '新規買') mLong[code].qty += qty;
-      if (t.取引種別 === '返済売') mLong[code].qty -= qty;
-      if (date >= mLong[code].latestDate) { mLong[code].latestDate = date; mLong[code].latestPrice = price; mLong[code].name = name; }
-
-      // Margin short: 新規売 - 返済買
-      if (!mShort[code]) mShort[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
-      if (t.取引種別 === '新規売') mShort[code].qty += qty;
-      if (t.取引種別 === '返済買') mShort[code].qty -= qty;
-      if (date >= mShort[code].latestDate) { mShort[code].latestDate = date; mShort[code].latestPrice = price; mShort[code].name = name; }
+      if (!mLong[code])  mLong[code]  = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
+      if (!mShort[code]) mShort[code] = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
+      if (t.取引種別 === '新規買') mLong[code].buyQty   += t.数量;
+      if (t.取引種別 === '返済売') mLong[code].sellQty  += t.数量;
+      if (t.取引種別 === '新規売') mShort[code].buyQty  += t.数量;
+      if (t.取引種別 === '返済買') mShort[code].sellQty += t.数量;
     }
   }
 
   const toArr = (map) => Object.entries(map)
-    .filter(([, v]) => v.qty > 0)
-    .map(([code, v]) => ({ code, name: v.name, qty: v.qty, price: v.latestPrice, value: v.qty * v.latestPrice }));
+    .map(([code, v]) => {
+      const qty = v.buyQty - v.sellQty;
+      return { code, name: v.name, qty, price: v.price, value: qty * v.price };
+    })
+    .filter(p => p.qty > 0);
 
   return { spot: toArr(spot), marginLong: toArr(mLong), marginShort: toArr(mShort) };
 }
