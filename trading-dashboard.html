@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 (function(){
   const key = 'scc_auth';
@@ -14,365 +18,477 @@
     document.documentElement.style.visibility = 'visible';
   } else {
     document.documentElement.style.visibility = 'visible';
-    document.write('<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#0f172a;color:#ef4444;gap:16px"><div style="font-size:48px">🔒</div><div style="font-size:20px;font-weight:bold">Incorrect password</div><div style="font-size:14px;color:#94a3b8">Access denied</div></div>');
+    document.write('<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#131315;color:#FF453A;gap:16px"><div style="font-size:48px">🔒</div><div style="font-size:20px;font-weight:bold">Incorrect password</div><div style="font-size:14px;color:#8A8A8E">Access denied</div></div>');
     document.close();
     throw new Error('auth failed');
   }
 })();
 </script>
-<title>📈 Trading Dashboard — SBIネオトレード</title>
+<title>TRADEX — Trading Dashboard</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DESIGN TOKENS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --bg: #0f172a;
-  --card: #1e293b;
-  --card2: #263347;
-  --border: #334155;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-  --muted2: #64748b;
-  --green: #22c55e;
-  --red: #ef4444;
-  --blue: #3b82f6;
-  --indigo: #6366f1;
-  --yellow: #f59e0b;
-  --purple: #a855f7;
+  --bg: #131315;
+  --surface: #1D1D1F;
+  --surface-low: #242426;
+  --surface-high: #2C2C2E;
+  --primary: #0066CC;
+  --primary-glow: rgba(0,102,204,0.3);
+  --text: #E4E2E4;
+  --muted: #C1C6D5;
+  --muted2: #8A8A8E;
+  --green: #30D158;
+  --red: #FF453A;
+  --yellow: #FF9F0A;
+  --border: rgba(255,255,255,0.08);
+  /* aliases kept for JS-generated HTML */
+  --card: #1D1D1F;
+  --card2: #2C2C2E;
+  --blue: #0066CC;
+  --indigo: #0066CC;
+  --purple: #5E5CE6;
 }
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
   font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.12); border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background:rgba(255,255,255,0.22); }
 
-/* ── HEADER ── */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .header {
-  background: #1a2332;
-  padding: 0 24px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: sticky; top:0; z-index:100;
+  height: 60px; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: rgba(19,19,21,0.88);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 100;
-  gap: 16px;
 }
-.header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.header-left { display:flex; align-items:center; gap:14px; min-width:0; }
 .home-link {
-  color: var(--muted); text-decoration: none; font-size: 12px;
-  display: flex; align-items: center; gap: 4px; flex-shrink: 0;
-  padding: 5px 10px; border-radius: 6px; border: 1px solid var(--border);
-  transition: all 0.2s; white-space: nowrap;
+  color: var(--muted); text-decoration:none; font-size:12px;
+  display:flex; align-items:center; gap:4px;
+  padding:5px 12px; border-radius:9999px; border:1px solid var(--border);
+  transition:all .2s; white-space:nowrap; flex-shrink:0;
 }
-.home-link:hover { color: var(--text); border-color: var(--muted); }
-.header-title { font-size: 17px; font-weight: 700; white-space: nowrap; }
-.header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.home-link:hover { color:var(--text); border-color:rgba(255,255,255,.2); }
+.brand-logo { font-size:16px; font-weight:700; letter-spacing:-.02em; color:var(--text); }
+.brand-sub  { font-size:10px; color:var(--muted2); letter-spacing:.04em; }
+.header-center { flex:1; text-align:center; }
+.header-datetime { font-size:12px; color:var(--muted); font-weight:500; font-variant-numeric:tabular-nums; }
+.header-right { display:flex; align-items:center; gap:10px; flex-shrink:0; }
 
-/* DRIVE BADGE */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DRIVE BADGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .drive-badge {
-  font-size: 12px; padding: 4px 10px; border-radius: 20px;
-  border: 1px solid var(--border); color: var(--muted);
-  cursor: pointer; white-space: nowrap; transition: all 0.2s;
+  font-size:12px; padding:4px 12px; border-radius:9999px;
+  border:1px solid var(--border); color:var(--muted);
+  cursor:pointer; white-space:nowrap; transition:all .2s;
 }
-.drive-badge:hover { border-color: var(--muted); }
-.drive-badge.connected { border-color: var(--green); color: var(--green); }
-.drive-badge.syncing { border-color: var(--yellow); color: var(--yellow); }
-.drive-badge.error { border-color: var(--red); color: var(--red); }
+.drive-badge:hover { border-color:rgba(255,255,255,.2); color:var(--text); }
+.drive-badge.connected { border-color:rgba(48,209,88,.4); color:var(--green); background:rgba(48,209,88,.06); }
+.drive-badge.syncing   { border-color:rgba(255,159,10,.4); color:var(--yellow); }
+.drive-badge.error     { border-color:rgba(255,69,58,.4);  color:var(--red); }
 
-/* UPLOAD BUTTON */
-.upload-btn {
-  background: var(--indigo); color: white; border: none;
-  padding: 7px 14px; border-radius: 8px; cursor: pointer;
-  font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px;
-  transition: opacity 0.2s; white-space: nowrap;
-}
-.upload-btn:hover { opacity: 0.85; }
-
-/* DROP OVERLAY */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DROP OVERLAY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .drop-overlay {
-  display: none; position: fixed; inset: 0; z-index: 200;
-  background: rgba(99,102,241,0.15); border: 3px dashed var(--indigo);
-  backdrop-filter: blur(4px);
-  align-items: center; justify-content: center; flex-direction: column; gap: 16px;
-  pointer-events: none;
+  display:none; position:fixed; inset:0; z-index:200;
+  background:rgba(0,102,204,.07); border:2px dashed rgba(0,102,204,.45);
+  backdrop-filter:blur(8px);
+  align-items:center; justify-content:center; flex-direction:column; gap:16px;
+  pointer-events:none;
 }
-.drop-overlay.active { display: flex; pointer-events: all; }
-.drop-overlay-text { font-size: 20px; font-weight: 700; color: #a5b4fc; }
+.drop-overlay.active { display:flex; pointer-events:all; }
+.drop-overlay-text { font-size:20px; font-weight:600; color:var(--primary); }
 
-/* STATUS BAR */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STATUS BAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .status-bar {
-  display: none; margin: 10px 24px 0; padding: 10px 14px;
-  background: var(--card); border-radius: 8px; border-left: 3px solid var(--indigo);
-  font-size: 13px; color: var(--muted); border: 1px solid var(--border);
-  border-left: 3px solid var(--indigo);
+  display:none; margin:10px 24px 0; padding:10px 16px;
+  background:rgba(0,102,204,.07); border-radius:12px;
+  border:1px solid rgba(0,102,204,.18); border-left:3px solid var(--primary);
+  font-size:13px; color:var(--muted);
 }
-.status-bar.show { display: block; }
+.status-bar.show { display:block; }
 
-/* MAIN */
-.main { padding: 16px 24px 48px; max-width: 1900px; margin: 0 auto; }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   MAIN & BENTO GRID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.main { padding:18px 24px 64px; max-width:1900px; margin:0 auto; }
 
-/* 3-COLUMN GRID */
-.three-col {
-  display: grid;
-  grid-template-columns: 35% 1fr 35%;
-  gap: 16px;
-  margin-bottom: 16px;
-  align-items: start;
+.bento {
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:16px;
 }
 
-/* CARD */
-.card {
-  background: var(--card);
-  border-radius: 12px;
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE BASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.tile {
+  background: var(--surface);
+  border-radius: 24px;
   border: 1px solid var(--border);
-  padding: 16px;
+  padding: 22px;
+  box-shadow: 0 24px 48px rgba(0,0,0,.4);
+  transition: all .2s ease;
 }
-.card-header {
-  font-size: 13px; font-weight: 700; color: var(--text);
-  margin-bottom: 14px; padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
+.tile:hover {
+  transform: scale(1.003);
+  box-shadow: 0 0 24px rgba(0,102,204,.1), 0 24px 48px rgba(0,0,0,.4);
+  border-color: rgba(0,102,204,.12);
 }
-.card-title { display: flex; align-items: center; gap: 6px; }
+.tile-8  { grid-column: span 8; }
+.tile-4  { grid-column: span 4; }
+.tile-12 { grid-column: span 12; }
 
-/* ── TODAY'S TRADES ── */
-.today-col { max-height: 680px; overflow-y: auto; }
-.today-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE HEADER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.tile-hd {
+  display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:18px;
+}
+.tile-title { font-size:1.25rem; font-weight:600; letter-spacing:-.02em; color:var(--text); }
+.tile-sub   { font-size:11px; color:var(--muted2); margin-top:2px; }
+
+/* LIVE DOT */
+.live-dot {
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:11px; color:var(--green);
+  padding:3px 10px; border-radius:9999px;
+  background:rgba(48,209,88,.07); border:1px solid rgba(48,209,88,.2);
+}
+.live-dot::before {
+  content:''; width:6px; height:6px; border-radius:50%; background:var(--green);
+  animation: livepulse 2s infinite;
+}
+@keyframes livepulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%      { opacity:.45; transform:scale(.75); }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE 1: TODAY'S TRADES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.today-col { max-height:560px; overflow-y:auto; }
+
+/* table generated by renderToday() */
+.today-table { width:100%; border-collapse:collapse; font-size:12.5px; }
 .today-table th {
-  color: var(--muted2); font-weight: 600; text-align: left;
-  padding: 6px 8px; border-bottom: 1px solid var(--border); font-size: 11px;
-  text-transform: uppercase; letter-spacing: 0.3px;
+  color:var(--muted2); font-weight:500; text-align:left;
+  padding:7px 10px; border-bottom:1px solid var(--border);
+  font-size:11px; text-transform:uppercase; letter-spacing:.05em;
 }
-.today-table td { padding: 7px 8px; border-bottom: 1px solid rgba(51,65,85,0.4); vertical-align: middle; }
-.today-table tr:last-child td { border-bottom: none; }
-.today-table tr.buy-row { background: rgba(59,130,246,0.04); }
-.today-table tr.buy-row:hover { background: rgba(59,130,246,0.09); }
-.today-table tr.sell-row:hover { background: rgba(255,255,255,0.02); }
-
-.badge {
-  display: inline-block; padding: 2px 7px; border-radius: 4px;
-  font-size: 11px; font-weight: 700; line-height: 1.5;
+.today-table td {
+  padding:10px 10px; border-bottom:1px solid rgba(255,255,255,.04);
+  vertical-align:middle;
 }
-.badge-buy { background: rgba(59,130,246,0.18); color: #60a5fa; }
-.badge-sell { background: rgba(34,197,94,0.15); color: #4ade80; }
-.badge-new { background: rgba(245,158,11,0.15); color: #fbbf24; }
-.badge-return { background: rgba(168,85,247,0.18); color: #c084fc; }
-.badge-spot { background: rgba(51,65,85,0.5); color: var(--muted); font-size: 10px; }
-.badge-margin { background: rgba(99,102,241,0.15); color: #a5b4fc; font-size: 10px; }
+.today-table tr:last-child td { border-bottom:none; }
+.today-table tr.buy-row { background:rgba(0,102,204,.03); }
+.today-table tr:hover td { background:rgba(255,255,255,.03); }
 
 .today-footer {
-  margin-top: 14px; padding-top: 12px; border-top: 2px solid var(--border);
+  margin-top:16px; padding-top:14px;
+  border-top:1px solid var(--border);
 }
-.today-footer-row {
-  display: flex; align-items: center; justify-content: space-between;
-}
-.today-total-pnl { font-size: 24px; font-weight: 800; }
-.today-counts { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.today-footer-row { display:flex; align-items:center; justify-content:space-between; }
+.today-total-pnl { font-size:2rem; font-weight:700; letter-spacing:-.02em; }
+.today-counts { font-size:11px; color:var(--muted2); margin-top:3px; }
 
-/* ── CENTER COLUMN ── */
-.center-col { display: flex; flex-direction: column; gap: 12px; }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SHARED P&L COLOR CLASSES  (used by all JS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.pos { color:var(--green); }
+.neg { color:var(--red); }
+.neu { color:var(--text); }
+.pnl-pos { color:var(--green); font-weight:600; }
+.pnl-neg { color:var(--red);   font-weight:600; }
+.pnl-dash { color:var(--muted2); }
 
-.stats2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.mini-stat {
-  background: var(--card2); border-radius: 8px; border: 1px solid var(--border);
-  padding: 12px 14px;
+/* BADGES */
+.badge {
+  display:inline-block; padding:2px 8px; border-radius:9999px;
+  font-size:11px; font-weight:600; line-height:1.5;
 }
-.mini-stat-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
-.mini-stat-val { font-size: 17px; font-weight: 700; }
-.pos { color: var(--green); }
-.neg { color: var(--red); }
-.neu { color: var(--text); }
+.badge-buy    { background:rgba(0,102,204,.14); color:#5AADFF; }
+.badge-sell   { background:rgba(48,209,88,.12); color:var(--green); }
+.badge-new    { background:rgba(255,159,10,.12); color:var(--yellow); }
+.badge-return { background:rgba(94,92,230,.14); color:#9D9AF0; }
+.badge-spot   { background:rgba(255,255,255,.06); color:var(--muted2); font-size:10px; }
+.badge-margin { background:rgba(0,102,204,.1);  color:var(--primary); font-size:10px; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE 2: FINANCIAL HEALTH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.fin-label {
+  font-size:11px; font-weight:400; color:var(--muted2);
+  text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px;
+}
+.fin-display {
+  font-size:2.6rem; font-weight:700; letter-spacing:-.03em; line-height:1; margin-bottom:4px;
+}
+.fin-headline {
+  font-size:1.5rem; font-weight:600; letter-spacing:-.02em; margin-bottom:4px;
+}
+.fin-title-lg {
+  font-size:1.1rem; font-weight:500; color:var(--muted); margin-bottom:18px;
+}
+
+/* mini-stat-val: used by setMiniStat — just inline color holder */
+.mini-stat-val { /* color set by JS via .pos/.neg/.neu */ }
+/* stat-big-val: hidden compat stubs */
+.stat-big-val { display:none; }
 
 /* Target */
-.target-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.target-row label { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.target-row { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+.target-row label { font-size:11px; color:var(--muted); white-space:nowrap; }
 .target-input {
-  background: var(--card2); border: 1px solid var(--border);
-  color: var(--text); padding: 6px 10px; border-radius: 6px;
-  font-size: 13px; width: 72px; text-align: right;
+  background:var(--surface-low); border:1px solid var(--border);
+  color:var(--text); padding:6px 10px; border-radius:10px;
+  font-size:13px; width:72px; text-align:right;
+  font-family:inherit; transition:border-color .2s;
 }
-.target-input:focus { outline: none; border-color: var(--indigo); }
-.target-pct { font-size: 12px; color: var(--muted); }
+.target-input:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(0,102,204,.15); }
+.target-pct { font-size:12px; color:var(--muted); }
 .save-btn {
-  background: var(--indigo); color: white; border: none;
-  padding: 6px 12px; border-radius: 6px; cursor: pointer;
-  font-size: 12px; font-weight: 600; transition: opacity 0.2s;
+  background:transparent; color:var(--primary);
+  border:1px solid rgba(0,102,204,.4);
+  padding:5px 14px; border-radius:9999px;
+  cursor:pointer; font-size:12px; font-weight:600; font-family:inherit;
+  transition:all .2s;
 }
-.save-btn:hover { opacity: 0.85; }
-.target-info { font-size: 12px; color: var(--muted); }
-.target-info strong { color: var(--text); }
+.save-btn:hover { background:rgba(0,102,204,.1); border-color:var(--primary); }
+.target-info { font-size:12px; color:var(--muted); line-height:1.6; }
+.target-info strong { color:var(--text); }
 
-/* ── AI ADVISORS ── */
-.ai-col { max-height: 680px; overflow-y: auto; }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE 3: AI INTELLIGENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ai-col { max-height:680px; overflow-y:auto; }
 
-.step-btns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.step-btns { display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+
 .analyze-btn {
-  width: 100%; background: linear-gradient(135deg, var(--indigo) 0%, #8b5cf6 100%);
-  color: white; border: none; padding: 10px; border-radius: 8px;
-  cursor: pointer; font-size: 13px; font-weight: 700;
-  transition: background 0.2s, opacity 0.2s;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
+  width:100%; border:none; padding:11px 16px; border-radius:16px;
+  cursor:pointer; font-size:13px; font-weight:600; font-family:inherit;
+  display:flex; align-items:center; justify-content:center; gap:7px;
+  transition:all .2s ease;
 }
-.analyze-btn:hover:not(:disabled) { opacity: 0.88; }
-.analyze-btn:disabled { cursor: not-allowed; }
-.ai-countdown { margin-bottom: 12px; }
-.ai-countdown-row { display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 6px; font-size: 12px; color: var(--muted); }
-.ai-countdown-time { font-family: monospace; font-weight: 700; color: var(--blue); }
-.ai-countdown-track { background: var(--border); border-radius: 20px; height: 5px; overflow: hidden; }
-.ai-countdown-bar { height: 100%; border-radius: 20px;
-  background: linear-gradient(90deg, var(--indigo), var(--purple));
-  transition: width .9s linear; }
-.step-msg { font-size: 12px; padding: 6px 0 10px; }
+#step1-btn {
+  background:rgba(0,102,204,.1); color:var(--primary);
+  border:1px solid rgba(0,102,204,.35) !important;
+}
+#step1-btn:hover:not(:disabled) {
+  background:rgba(0,102,204,.18);
+  box-shadow:0 0 20px rgba(0,102,204,.22);
+}
+#step1-btn:disabled { opacity:.4; cursor:not-allowed; }
+#step2-btn { background:var(--primary); color:#fff; }
+#step2-btn:hover:not(:disabled) {
+  background:#0075e0;
+  box-shadow:0 0 22px rgba(0,102,204,.4);
+}
+#step2-btn:disabled { opacity:.35; cursor:not-allowed; }
+.analyze-btn:hover:not(:disabled) { opacity:inherit; }
+.analyze-btn:disabled { cursor:not-allowed; }
 
-.news-section { margin-bottom: 16px; }
-.news-header { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 8px; }
-.news-list { max-height: 140px; overflow-y: auto; }
+.step-msg { font-size:12px; padding:5px 0 10px; }
+
+.ai-countdown {
+  margin-bottom:14px; padding:12px 14px;
+  background:var(--surface-low); border-radius:12px; border:1px solid var(--border);
+}
+.ai-countdown-row {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:8px; font-size:12px; color:var(--muted);
+}
+.ai-countdown-time {
+  font-family:'SF Mono','Fira Code',monospace;
+  font-weight:700; font-size:18px; color:var(--primary);
+}
+.ai-countdown-track { background:var(--border); border-radius:9999px; height:4px; overflow:hidden; }
+.ai-countdown-bar {
+  height:100%; border-radius:9999px;
+  background:linear-gradient(90deg,var(--primary),#5E5CE6);
+  transition:width .9s linear;
+}
+
+.news-section { margin-bottom:14px; }
+.news-header {
+  font-size:11px; font-weight:600; color:var(--muted2);
+  text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;
+}
+.news-list { max-height:130px; overflow-y:auto; }
 .news-item {
-  font-size: 11px; color: #cbd5e1; padding: 6px 0;
-  border-bottom: 1px solid rgba(51,65,85,0.3); line-height: 1.5;
+  font-size:11px; color:var(--muted); padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,.04); line-height:1.5;
 }
-.news-item:last-child { border-bottom: none; }
-.news-item-title { font-weight: 600; margin-bottom: 2px; }
-.news-item-summary { color: var(--muted); font-size: 10.5px; }
-.news-time { display: inline-block; background: rgba(99,102,241,0.15); color: #a5b4fc;
-  font-size: 10px; padding: 1px 5px; border-radius: 3px; margin-right: 5px;
-  font-weight: 700; white-space: nowrap; vertical-align: middle; }
+.news-item:last-child { border-bottom:none; }
+.news-item-title { font-weight:500; color:var(--text); margin-bottom:2px; }
+.news-time {
+  display:inline-block; background:rgba(0,102,204,.12); color:var(--primary);
+  font-size:10px; padding:1px 7px; border-radius:9999px; margin-right:6px;
+  font-weight:600; white-space:nowrap; vertical-align:middle;
+}
 
+/* Advisor output (class names used by renderAdvisors JS) */
 .advisor-card {
-  background: var(--card2); border-radius: 10px; border: 1px solid var(--border);
-  padding: 16px; margin-bottom: 10px;
+  background:var(--surface-low); border-radius:16px;
+  border:1px solid var(--border); padding:16px; margin-bottom:10px;
 }
-.advisor-card:last-child { margin-bottom: 0; }
-.advisor-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+.advisor-card:last-child { margin-bottom:0; }
+.advisor-head { display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
 .score-circle {
-  width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 800; border: 3px solid;
+  width:64px; height:64px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; font-weight:700; border:2px solid;
 }
-.sc-high { border-color: var(--green); color: var(--green); background: rgba(34,197,94,0.08); }
-.sc-mid { border-color: var(--yellow); color: var(--yellow); background: rgba(245,158,11,0.08); }
-.sc-low { border-color: var(--red); color: var(--red); background: rgba(239,68,68,0.08); }
-.advisor-name { font-size: 13px; font-weight: 700; }
-.advisor-advice { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
-.adv-section { margin-bottom: 6px; }
-.adv-section-label { font-size: 10px; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 700; }
-.adv-points { padding-left: 14px; margin-top: 2px; }
-.adv-points li { font-size: 11px; color: #cbd5e1; line-height: 1.55; }
+.sc-high { border-color:var(--green); color:var(--green); background:rgba(48,209,88,.08); }
+.sc-mid  { border-color:var(--yellow); color:var(--yellow); background:rgba(255,159,10,.08); }
+.sc-low  { border-color:var(--red);   color:var(--red);   background:rgba(255,69,58,.08); }
+.advisor-name { font-size:14px; font-weight:600; }
+.advisor-advice { font-size:11px; color:var(--muted); margin-top:3px; line-height:1.4; }
+.adv-section { margin-bottom:7px; }
+.adv-section-label {
+  font-size:10px; color:var(--muted2); text-transform:uppercase;
+  letter-spacing:.05em; font-weight:600; margin-bottom:3px;
+}
+.adv-points { padding-left:14px; margin-top:2px; }
+.adv-points li { font-size:11.5px; color:var(--muted); line-height:1.6; }
 .adv-action {
-  margin-top: 8px; padding: 6px 10px; border-radius: 6px;
-  background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2);
-  font-size: 11px; color: #a5b4fc; line-height: 1.4;
-}
-.ai-placeholder {
-  text-align: center; padding: 24px 16px; color: var(--muted); font-size: 13px; line-height: 1.6;
-}
-.spinner { color: var(--muted); text-align: center; padding: 24px; font-size: 13px; }
-
-/* ── FULL-WIDTH SECTIONS ── */
-.full-section { margin-bottom: 16px; }
-
-/* ASSET SPLIT LAYOUT */
-.asset-section {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 16px;
-  align-items: start;
+  margin-top:8px; padding:8px 12px; border-radius:10px;
+  background:rgba(0,102,204,.06); border:1px solid rgba(0,102,204,.15);
+  font-size:11.5px; color:var(--muted); line-height:1.5;
 }
 
-/* DAILY RESULTS */
+.ai-placeholder { text-align:center; padding:24px 16px; color:var(--muted2); font-size:13px; line-height:1.7; }
+.spinner { color:var(--muted); text-align:center; padding:24px; font-size:13px; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE 4: ASSET TREND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.asset-inner { display:grid; grid-template-columns:1fr 2fr; gap:20px; align-items:start; }
+
+.recent-label {
+  font-size:11px; font-weight:600; color:var(--muted2);
+  text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px;
+}
+
 .daily-result-card {
-  border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid;
-  padding: 10px 14px; margin-bottom: 8px;
-  background: var(--card2);
+  border-radius:12px; border:1px solid var(--border); border-left:3px solid;
+  padding:10px 14px; margin-bottom:8px; background:var(--surface-low);
+  transition:background .15s;
 }
-.daily-result-card:last-child { margin-bottom: 0; }
-.daily-result-date { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-.daily-result-pnl { font-size: 20px; font-weight: 800; margin-bottom: 3px; }
-.daily-result-count { font-size: 11px; color: var(--muted); }
+.daily-result-card:last-child { margin-bottom:0; }
+.daily-result-card:hover { background:var(--surface-high); }
+.daily-result-date { font-size:12px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.daily-result-pnl  { font-size:18px; font-weight:700; letter-spacing:-.02em; margin-bottom:3px; }
+.daily-result-count { font-size:11px; color:var(--muted2); }
 
-/* CHART */
-.chart-wrap { position: relative; height: 250px; }
-#chartCanvas { display: block; width: 100%; height: 100%; }
+.chart-wrap { position:relative; height:250px; }
+#chartCanvas { display:block; width:100%; height:100%; }
 .chart-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-top: 10px; font-size: 12px; color: var(--muted);
+  display:flex; align-items:center; justify-content:space-between;
+  margin-top:10px; font-size:12px; color:var(--muted);
 }
-.chart-legend { display: flex; gap: 18px; }
-.leg-item { display: flex; align-items: center; gap: 6px; }
-.leg-line { width: 20px; height: 2.5px; border-radius: 2px; }
-.leg-dashed { width: 20px; height: 0; border-top: 2.5px dashed; border-radius: 2px; }
-.chart-gap { font-size: 13px; }
+.chart-legend { display:flex; gap:16px; }
+.leg-item { display:flex; align-items:center; gap:6px; }
+.leg-line { width:18px; height:2px; border-radius:2px; }
+.leg-dashed { width:18px; height:0; border-top:2px dashed; }
+.chart-gap { font-size:12px; }
 
-/* STATS ROW */
-.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.stat-big {
-  background: var(--card); border-radius: 12px; border: 1px solid var(--border);
-  padding: 18px 20px;
-}
-.stat-big-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
-.stat-big-val { font-size: 22px; font-weight: 800; }
-
-/* HISTORY TABLE */
-.history-controls {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
-}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TILE 5: TRADE HISTORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.history-controls { display:flex; align-items:center; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
 .search-box {
-  background: var(--card2); border: 1px solid var(--border);
-  color: var(--text); padding: 7px 12px; border-radius: 8px;
-  font-size: 13px; width: 200px; transition: border-color 0.2s;
+  background:var(--surface-low); border:1px solid var(--border);
+  color:var(--text); padding:8px 16px; border-radius:9999px;
+  font-size:13px; font-family:inherit; width:220px; transition:all .2s;
 }
-.search-box:focus { outline: none; border-color: var(--indigo); }
-.filter-grp { display: flex; gap: 6px; }
+.search-box:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(0,102,204,.12); }
+.search-box::placeholder { color:var(--muted2); }
+.filter-grp { display:flex; gap:6px; }
 .flt-btn {
-  padding: 6px 13px; border-radius: 6px; border: 1px solid var(--border);
-  background: transparent; color: var(--muted); cursor: pointer; font-size: 12px;
-  font-weight: 600; transition: all 0.18s;
+  padding:6px 16px; border-radius:9999px; border:1px solid var(--border);
+  background:transparent; color:var(--muted);
+  cursor:pointer; font-size:12px; font-weight:500; font-family:inherit; transition:all .18s;
 }
-.flt-btn.on { background: var(--indigo); border-color: var(--indigo); color: white; }
-.flt-btn:hover:not(.on) { border-color: var(--muted); color: var(--text); }
-.hist-count { margin-left: auto; font-size: 12px; color: var(--muted); }
+.flt-btn.on { background:var(--primary); border-color:var(--primary); color:#fff; }
+.flt-btn:hover:not(.on) { border-color:rgba(255,255,255,.2); color:var(--text); }
+.hist-count { margin-left:auto; font-size:12px; color:var(--muted2); }
 
-.tbl-wrap { overflow-x: auto; }
-.hist-table { width: 100%; border-collapse: collapse; font-size: 12px; white-space: nowrap; }
+.tbl-wrap { overflow-x:auto; }
+.hist-table { width:100%; border-collapse:collapse; font-size:12.5px; white-space:nowrap; }
 .hist-table th {
-  color: var(--muted2); font-weight: 600; text-align: left; padding: 8px 10px;
-  border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px;
+  color:var(--muted2); font-weight:500; text-align:left; padding:8px 12px;
+  border-bottom:1px solid var(--border); cursor:pointer; user-select:none;
+  font-size:11px; text-transform:uppercase; letter-spacing:.05em;
 }
-.hist-table th:hover { color: var(--text); }
-.hist-table td { padding: 8px 10px; border-bottom: 1px solid rgba(51,65,85,0.35); }
-.hist-table tr:last-child td { border-bottom: none; }
-.hist-table tr:hover td { background: rgba(255,255,255,0.02); }
-.pnl-pos { color: var(--green); font-weight: 600; }
-.pnl-neg { color: var(--red); font-weight: 600; }
-.pnl-dash { color: var(--muted2); }
-.code-cell { font-weight: 700; font-family: monospace; font-size: 13px; }
-.name-cell { color: var(--muted); font-size: 11px; max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+.hist-table th:hover { color:var(--text); }
+.hist-table td {
+  padding:9px 12px; border-bottom:1px solid rgba(255,255,255,.032);
+  vertical-align:middle;
+}
+.hist-table tr:last-child td { border-bottom:none; }
+.hist-table tr:hover td { background:rgba(255,255,255,.025); }
+.hist-table tr:nth-child(even) td { background:rgba(255,255,255,.012); }
+.code-cell { font-weight:700; font-family:'SF Mono','Fira Code',monospace; font-size:13px; }
+.name-cell { color:var(--muted); font-size:11px; max-width:130px; overflow:hidden; text-overflow:ellipsis; }
 
 .pagination {
-  display: flex; align-items: center; justify-content: center;
-  gap: 6px; margin-top: 14px; flex-wrap: wrap;
+  display:flex; align-items:center; justify-content:center;
+  gap:5px; margin-top:16px; flex-wrap:wrap;
 }
 .pg-btn {
-  padding: 5px 10px; border-radius: 6px; border: 1px solid var(--border);
-  background: transparent; color: var(--muted); cursor: pointer; font-size: 12px;
-  transition: all 0.15s;
+  padding:5px 11px; border-radius:10px; border:1px solid var(--border);
+  background:transparent; color:var(--muted);
+  cursor:pointer; font-size:12px; font-family:inherit; transition:all .15s;
 }
-.pg-btn:hover:not(:disabled) { border-color: var(--muted); color: var(--text); }
-.pg-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-.pg-btn.on { background: var(--indigo); border-color: var(--indigo); color: white; }
-.pg-info { font-size: 12px; color: var(--muted); padding: 0 6px; }
+.pg-btn:hover:not(:disabled) { border-color:rgba(255,255,255,.2); color:var(--text); }
+.pg-btn:disabled { opacity:.3; cursor:not-allowed; }
+.pg-btn.on { background:var(--primary); border-color:var(--primary); color:#fff; }
+.pg-info { font-size:12px; color:var(--muted2); padding:0 8px; }
 
-.empty { text-align: center; padding: 36px 16px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-.empty-ico { font-size: 36px; display: block; margin-bottom: 8px; }
+.empty { text-align:center; padding:36px 16px; color:var(--muted2); font-size:13px; line-height:1.8; }
+.empty-ico { font-size:34px; display:block; margin-bottom:8px; }
 
-/* scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--muted2); }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FAB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.fab {
+  position:fixed; bottom:28px; right:28px;
+  width:52px; height:52px; border-radius:50%;
+  background:var(--primary); color:#fff;
+  border:none; cursor:pointer; font-size:20px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 20px rgba(0,102,204,.5);
+  transition:all .2s; z-index:50;
+}
+.fab:hover { transform:scale(1.08); box-shadow:0 6px 28px rgba(0,102,204,.6); }
+
+/* hidden upload-btn shim */
+.upload-btn { display:none; }
+
+/* buy/sell row compat */
+.buy-row  { background:rgba(0,102,204,.03); }
+.sell-row { }
 </style>
 </head>
 <body>
@@ -381,88 +497,103 @@ body {
 <header class="header">
   <div class="header-left">
     <a href="index.html" class="home-link">← Home</a>
-    <span class="header-title">📈 Trading Dashboard — SBIネオトレード</span>
+    <div>
+      <div class="brand-logo">TRADEX</div>
+      <div class="brand-sub">SBIネオトレード</div>
+    </div>
+  </div>
+  <div class="header-center">
+    <span id="header-datetime" class="header-datetime"></span>
   </div>
   <div class="header-right">
     <span class="drive-badge" id="drive-badge" onclick="GDRIVE.connect()">☁️ Drive: 未接続</span>
-    <button id="drive-signout-btn" onclick="GDRIVE.signOut()" style="display:none;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer">🚪 切断</button>
-    <button class="upload-btn" onclick="document.getElementById('csv-input').click()">📂 CSVアップロード</button>
+    <button id="drive-signout-btn" onclick="GDRIVE.signOut()"
+      style="display:none;font-size:11px;padding:5px 12px;border-radius:9999px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:inherit">切断</button>
   </div>
 </header>
 
 <!-- DROP OVERLAY -->
 <div class="drop-overlay" id="drop-overlay">
   <div style="font-size:52px">📂</div>
-  <div class="drop-overlay-text">CSVファイルをドロップしてアップロード</div>
+  <div class="drop-overlay-text">CSVファイルをドロップ</div>
 </div>
 
 <!-- STATUS BAR -->
 <div class="status-bar" id="status-bar"></div>
 
-<!-- MAIN -->
+<!-- MAIN BENTO -->
 <div class="main">
+<div class="bento">
 
-  <!-- 3-COLUMN ROW -->
-  <div class="three-col">
+  <!-- ══ ROW 1 ══════════════════════════════════════════ -->
 
-    <!-- LEFT: TODAY'S TRADES -->
-    <div class="card today-col">
-      <div class="card-header">
-        <span class="card-title">今日の取引</span>
-        <span id="today-date-lbl" style="font-size:12px;color:var(--muted);font-weight:400"></span>
+  <!-- TILE 1: TODAY'S TRADES (8col) -->
+  <div class="tile tile-8">
+    <div class="tile-hd">
+      <div>
+        <div class="tile-title">Today's Activity</div>
+        <div class="tile-sub" id="today-date-lbl">—</div>
       </div>
-      <div id="today-body">
-        <div class="empty"><span class="empty-ico">📊</span>CSVをアップロードしてください</div>
+      <div class="live-dot">Live</div>
+    </div>
+    <div id="today-body" class="today-col">
+      <div class="empty"><span class="empty-ico">📊</span>CSVをアップロードしてください</div>
+    </div>
+  </div>
+
+  <!-- TILE 2: FINANCIAL HEALTH (4col) -->
+  <div class="tile tile-4">
+    <div class="tile-hd">
+      <div>
+        <div class="tile-title">Financial Health</div>
+        <div class="tile-sub">Portfolio Overview</div>
       </div>
     </div>
 
-    <!-- CENTER: STATS + TARGET -->
-    <div class="center-col">
-      <div class="card">
-        <div class="card-header"><span class="card-title">📊 損益サマリー</span></div>
-        <div class="stats2x2">
-          <div class="mini-stat">
-            <div class="mini-stat-label">今日の損益</div>
-            <div class="mini-stat-val neu" id="ms-today">—</div>
-          </div>
-          <div class="mini-stat">
-            <div class="mini-stat-label">今月の損益</div>
-            <div class="mini-stat-val neu" id="ms-month">—</div>
-          </div>
-          <div class="mini-stat">
-            <div class="mini-stat-label">累計損益</div>
-            <div class="mini-stat-val neu" id="ms-total">—</div>
-          </div>
-          <div class="mini-stat">
-            <div class="mini-stat-label">最新口座残高</div>
-            <div class="mini-stat-val neu" id="ms-balance">—</div>
-          </div>
-        </div>
+    <div class="fin-label">今月の損益</div>
+    <div class="fin-display"><span id="ms-month" class="mini-stat-val neu">—</span></div>
+
+    <div class="fin-label" style="margin-top:12px">累計損益</div>
+    <div class="fin-headline"><span id="ms-total" class="mini-stat-val neu">—</span></div>
+
+    <div class="fin-label" style="margin-top:10px">口座残高</div>
+    <div class="fin-title-lg"><span id="ms-balance" class="mini-stat-val neu">—</span></div>
+
+    <!-- today hidden (JS needs the ID) -->
+    <span id="ms-today" class="mini-stat-val neu" style="display:none">—</span>
+
+    <div style="padding-top:16px; border-top:1px solid var(--border)">
+      <div class="fin-label" style="margin-bottom:10px">Daily Target</div>
+      <div class="target-row">
+        <label>リターン目標:</label>
+        <input type="number" id="target-pct" class="target-input" value="0.1" step="0.01" min="0.01">
+        <span class="target-pct">%</span>
+        <button class="save-btn" onclick="saveTarget()">保存</button>
       </div>
-      <div class="card">
-        <div class="card-header"><span class="card-title">🎯 目標設定</span></div>
-        <div class="target-row">
-          <label>日次リターン目標:</label>
-          <input type="number" id="target-pct" class="target-input" value="0.1" step="0.01" min="0.01">
-          <span class="target-pct">%</span>
-          <button class="save-btn" onclick="saveTarget()">保存</button>
-        </div>
-        <div class="target-info" id="target-info">目標額: —</div>
+      <div class="target-info" id="target-info">目標額: —</div>
+    </div>
+  </div>
+
+  <!-- ══ ROW 2 ══════════════════════════════════════════ -->
+
+  <!-- TILE 3: AI INTELLIGENCE (4col) -->
+  <div class="tile tile-4">
+    <div class="tile-hd">
+      <div>
+        <div class="tile-title">AI Intelligence</div>
+        <div class="tile-sub">Powered by Claude</div>
       </div>
     </div>
 
-    <!-- RIGHT: AI ADVISORS -->
-    <div class="card ai-col">
-      <div class="card-header"><span class="card-title">🤖 AI Investment Advisors</span></div>
-
+    <div class="ai-col">
       <div class="step-btns">
-        <button class="analyze-btn" id="step1-btn" onclick="runStep1()" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">📰 Step 1: Get News</button>
+        <button class="analyze-btn" id="step1-btn" onclick="runStep1()">📰 Step 1: Get Market News</button>
         <button class="analyze-btn" id="step2-btn" onclick="runStep2()" disabled>🤖 Step 2: Get AI Advice</button>
       </div>
       <div id="step-msg" class="step-msg" style="display:none"></div>
       <div id="ai-countdown" class="ai-countdown" style="display:none">
         <div class="ai-countdown-row">
-          <span id="ai-countdown-label">⏱️ Waiting to avoid rate limit:</span>
+          <span id="ai-countdown-label">⏱️ Rate limit prevention</span>
           <span id="ai-countdown-time" class="ai-countdown-time">1:05</span>
         </div>
         <div class="ai-countdown-track">
@@ -471,95 +602,92 @@ body {
       </div>
 
       <div id="news-section" style="display:none" class="news-section">
-        <div class="news-header">📰 直近12時間のニュース</div>
+        <div class="news-header">📰 Last 12h News</div>
         <div class="news-list" id="news-list"></div>
       </div>
 
-      <div id="apikey-section" style="display:none;margin-bottom:14px;padding:12px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:8px;">
-        <div style="color:#fca5a5;font-size:12px;font-weight:700;margin-bottom:6px;">⚠️ APIキーが未設定です</div>
-        <div style="color:var(--muted);font-size:11px;line-height:1.7;margin-bottom:10px;">
+      <div id="apikey-section" style="display:none;margin-bottom:14px;padding:14px;background:rgba(255,69,58,.06);border:1px solid rgba(255,69,58,.2);border-radius:12px;">
+        <div style="color:#FF7B70;font-size:12px;font-weight:700;margin-bottom:6px;">⚠️ APIキーが未設定です</div>
+        <div style="color:var(--muted2);font-size:11px;line-height:1.7;margin-bottom:10px;">
           設定方法：ブラウザのコンソール（F12）で以下を実行してください：<br>
-          <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:#a5b4fc;font-size:11px;">localStorage.setItem('ja2_apikey', 'YOUR_KEY')</code><br>
-          その後ページを再読み込みしてください。<br>
+          <code style="background:var(--bg);padding:2px 6px;border-radius:6px;color:#5AADFF;font-size:11px;">localStorage.setItem('ja2_apikey', 'YOUR_KEY')</code><br>
           またはこちらから直接設定：
         </div>
         <div style="display:flex;gap:8px;align-items:center;">
-          <input type="password" id="apikey-input" placeholder="sk-ant-..." style="flex:1;background:var(--card2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;">
-          <button onclick="saveApiKey()" style="background:var(--indigo);color:white;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;">保存</button>
+          <input type="password" id="apikey-input" placeholder="sk-ant-..."
+            style="flex:1;background:var(--surface-low);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:10px;font-size:12px;font-family:inherit;">
+          <button onclick="saveApiKey()"
+            style="background:var(--primary);color:#fff;border:none;padding:7px 14px;border-radius:10px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;font-family:inherit;">保存</button>
         </div>
       </div>
 
       <div id="advisor-body">
         <div class="ai-placeholder">
-          分析ボタンを押してAIアドバイスを取得してください。<br>
-          <span style="font-size:11px;color:var(--muted2)">Anthropic APIキーが必要です (localStorage: ja2_apikey)</span>
+          Step 1 でニュースを取得し<br>Step 2 でAIアドバイスを取得。<br>
+          <span style="font-size:11px;color:var(--muted2)">(localStorage: ja2_apikey)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TILE 4: ASSET TREND (8col) -->
+  <div class="tile tile-8">
+    <div class="tile-hd">
+      <div>
+        <div class="tile-title">Asset Trend</div>
+        <div class="tile-sub">Balance & Performance</div>
+      </div>
+      <div class="chart-legend">
+        <div class="leg-item">
+          <div class="leg-line" style="background:var(--primary)"></div>
+          <span style="font-size:11px;color:var(--muted2)">実績</span>
+        </div>
+        <div class="leg-item">
+          <div class="leg-dashed" style="border-color:var(--yellow)"></div>
+          <span style="font-size:11px;color:var(--muted2)">目標</span>
         </div>
       </div>
     </div>
 
-  </div><!-- /three-col -->
-
-  <!-- ASSET SECTION: SPLIT LAYOUT -->
-  <div class="asset-section full-section">
-
-    <!-- LEFT: 直近5営業日 -->
-    <div class="card">
-      <div class="card-header"><span class="card-title">📅 直近5営業日</span></div>
-      <div id="daily-results-body">
-        <div class="empty"><span class="empty-ico">📊</span>CSVをアップロードしてください</div>
-      </div>
-    </div>
-
-    <!-- RIGHT: Asset Chart -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-title">📈 資産推移チャート</span>
-        <div class="chart-legend">
-          <div class="leg-item"><div class="leg-line" style="background:var(--indigo)"></div><span style="font-size:12px;color:var(--muted)">実績</span></div>
-          <div class="leg-item"><div class="leg-dashed" style="border-color:var(--yellow)"></div><span style="font-size:12px;color:var(--muted)">目標</span></div>
+    <div class="asset-inner">
+      <!-- LEFT: Recent 5 days -->
+      <div>
+        <div class="recent-label">Last 5 Trading Days</div>
+        <div id="daily-results-body">
+          <div class="empty" style="padding:20px 0"><span class="empty-ico" style="font-size:24px">📊</span>データなし</div>
         </div>
       </div>
-      <div class="chart-wrap">
-        <canvas id="chartCanvas"></canvas>
+      <!-- RIGHT: Chart -->
+      <div>
+        <div class="chart-wrap">
+          <canvas id="chartCanvas"></canvas>
+        </div>
+        <div class="chart-footer">
+          <div id="chart-gap" class="chart-gap"></div>
+        </div>
       </div>
-      <div class="chart-footer">
-        <div id="chart-gap" class="chart-gap"></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- STATS ROW (4 cards) -->
-  <div class="stats-row full-section">
-    <div class="stat-big">
-      <div class="stat-big-label">今日の損益</div>
-      <div class="stat-big-val neu" id="sb-today">—</div>
-    </div>
-    <div class="stat-big">
-      <div class="stat-big-label">今月の損益</div>
-      <div class="stat-big-val neu" id="sb-month">—</div>
-    </div>
-    <div class="stat-big">
-      <div class="stat-big-label">累計損益</div>
-      <div class="stat-big-val neu" id="sb-total">—</div>
-    </div>
-    <div class="stat-big">
-      <div class="stat-big-label">最新口座残高</div>
-      <div class="stat-big-val neu" id="sb-balance">—</div>
     </div>
   </div>
 
-  <!-- TRADE HISTORY -->
-  <div class="card full-section">
-    <div class="card-header"><span class="card-title">📋 取引履歴</span></div>
+  <!-- ══ ROW 3 ══════════════════════════════════════════ -->
+
+  <!-- TILE 5: TRADE HISTORY (12col) -->
+  <div class="tile tile-12">
+    <div class="tile-hd">
+      <div>
+        <div class="tile-title">Trade History</div>
+        <div class="tile-sub">全取引履歴</div>
+      </div>
+      <span class="hist-count" id="hist-count"></span>
+    </div>
     <div class="history-controls">
-      <input type="text" id="search-box" class="search-box" placeholder="🔍 銘柄コード・名称で検索..." oninput="renderHist()">
+      <input type="text" id="search-box" class="search-box"
+        placeholder="🔍 銘柄コード・名称で検索..." oninput="renderHist()">
       <div class="filter-grp">
         <button class="flt-btn on" onclick="setFilter('all',this)">全て</button>
         <button class="flt-btn" onclick="setFilter('現物',this)">現物</button>
         <button class="flt-btn" onclick="setFilter('信用',this)">信用</button>
       </div>
-      <span class="hist-count" id="hist-count"></span>
     </div>
     <div class="tbl-wrap">
       <table class="hist-table">
@@ -581,7 +709,22 @@ body {
     <div class="pagination" id="pagination"></div>
   </div>
 
+</div><!-- /bento -->
 </div><!-- /main -->
+
+<!-- Hidden stat-big stubs (JS writes to these IDs) -->
+<div style="display:none">
+  <span id="sb-today"   class="stat-big-val neu"></span>
+  <span id="sb-month"   class="stat-big-val neu"></span>
+  <span id="sb-total"   class="stat-big-val neu"></span>
+  <span id="sb-balance" class="stat-big-val neu"></span>
+</div>
+
+<!-- FAB CSV Upload -->
+<button class="fab" onclick="document.getElementById('csv-input').click()" title="CSVアップロード">↑</button>
+
+<!-- Legacy shim -->
+<button class="upload-btn" onclick="document.getElementById('csv-input').click()">📂 CSV</button>
 
 <!-- FILE INPUT -->
 <input type="file" id="csv-input" accept=".csv" multiple hidden>
@@ -1008,8 +1151,8 @@ function renderToday() {
 
     rows += `<tr class="${isBuy ? 'buy-row' : 'sell-row'}">
       <td>
-        <strong style="font-size:13px;font-family:monospace">${t.銘柄コード}</strong>
-        <div style="font-size:10px;color:var(--muted);margin-top:1px">${t.銘柄名称.slice(0,10)}</div>
+        <strong style="font-size:13px;font-family:'SF Mono','Fira Code',monospace">${t.銘柄コード}</strong>
+        <div style="font-size:10px;color:var(--muted2);margin-top:1px">${t.銘柄名称.slice(0,10)}</div>
       </td>
       <td>${tradeBadge}</td>
       <td>${typeBadge}</td>
@@ -1191,7 +1334,7 @@ function drawChart() {
 
   const dates = Object.keys(dayBal).sort();
   if (dates.length < 2) {
-    ctx.fillStyle = '#64748b';
+    ctx.fillStyle = '#8A8A8E';
     ctx.font = '13px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('データが2日分以上になると資産推移チャートが表示されます', W/2, H/2);
@@ -1223,25 +1366,25 @@ function drawChart() {
   const yOf = v => PAD.t + cH - ((v - (yMin - yPad)) / (yRange + 2 * yPad)) * cH;
 
   // Background
-  ctx.fillStyle = '#1e293b';
+  ctx.fillStyle = '#1D1D1F';
   ctx.fillRect(0, 0, W, H);
 
   // Grid
-  ctx.strokeStyle = 'rgba(51,65,85,0.6)';
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
   ctx.lineWidth = 1;
   const GRIDS = 5;
   for (let g = 0; g <= GRIDS; g++) {
     const y = PAD.t + (g / GRIDS) * cH;
     ctx.beginPath(); ctx.moveTo(PAD.l, y); ctx.lineTo(W - PAD.r, y); ctx.stroke();
     const v = (yMax + yPad) - (g / GRIDS) * (yRange + 2 * yPad);
-    ctx.fillStyle = '#64748b';
+    ctx.fillStyle = '#8A8A8E';
     ctx.font = '11px -apple-system, sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText('¥' + Math.round(v / 10000) + '万', PAD.l - 4, y + 4);
   }
 
   // X labels
-  ctx.fillStyle = '#64748b';
+  ctx.fillStyle = '#8A8A8E';
   ctx.font = '11px -apple-system, sans-serif';
   ctx.textAlign = 'center';
   const step = Math.max(1, Math.floor(n / 8));
@@ -1250,7 +1393,7 @@ function drawChart() {
   }
 
   // Target line (dashed)
-  ctx.strokeStyle = '#f59e0b';
+  ctx.strokeStyle = '#FF9F0A';
   ctx.lineWidth = 2;
   ctx.setLineDash([6, 5]);
   ctx.beginPath();
@@ -1260,8 +1403,8 @@ function drawChart() {
 
   // Actual fill gradient
   const grad = ctx.createLinearGradient(0, PAD.t, 0, H - PAD.b);
-  grad.addColorStop(0, 'rgba(99,102,241,0.28)');
-  grad.addColorStop(1, 'rgba(99,102,241,0.02)');
+  grad.addColorStop(0, 'rgba(0,102,204,0.25)');
+  grad.addColorStop(1, 'rgba(0,102,204,0.02)');
 
   ctx.beginPath();
   actuals.forEach((v, i) => { i === 0 ? ctx.moveTo(xOf(i), yOf(v)) : ctx.lineTo(xOf(i), yOf(v)); });
@@ -1272,14 +1415,14 @@ function drawChart() {
   ctx.fill();
 
   // Actual line
-  ctx.strokeStyle = '#6366f1';
+  ctx.strokeStyle = '#0066CC';
   ctx.lineWidth = 2.5;
   ctx.beginPath();
   actuals.forEach((v, i) => { i === 0 ? ctx.moveTo(xOf(i), yOf(v)) : ctx.lineTo(xOf(i), yOf(v)); });
   ctx.stroke();
 
   // Dots
-  ctx.fillStyle = '#818cf8';
+  ctx.fillStyle = '#4da3ff';
   actuals.forEach((v, i) => {
     ctx.beginPath(); ctx.arc(xOf(i), yOf(v), 3, 0, Math.PI*2); ctx.fill();
   });
@@ -1288,9 +1431,9 @@ function drawChart() {
   const lastAct = actuals[n-1];
   const lastTgt = targets[n-1];
   const gap = lastAct - lastTgt;
-  const gapColor = gap >= 0 ? '#22c55e' : '#ef4444';
+  const gapColor = gap >= 0 ? '#30D158' : '#FF453A';
   document.getElementById('chart-gap').innerHTML =
-    `現在の残高: <strong style="color:#f1f5f9">${fmtBal(lastAct)}</strong>　|　` +
+    `現在の残高: <strong style="color:#E4E2E4">${fmtBal(lastAct)}</strong>　|　` +
     `目標との差: <strong style="color:${gapColor}">${fmtPnL(gap)}</strong>`;
 }
 
@@ -1605,7 +1748,7 @@ function setStepState(state) {
   const s2 = document.getElementById('step2-btn');
   const msg = document.getElementById('step-msg');
   if (state === 'initial') {
-    s1.disabled = false; s1.textContent = '📰 Step 1: Get News';
+    s1.disabled = false; s1.textContent = '📰 Step 1: Get Market News';
     s2.disabled = true;  s2.textContent = '🤖 Step 2: Get AI Advice';
     msg.style.display = 'none';
   } else if (state === 'step1-done') {
@@ -1619,7 +1762,7 @@ function setStepState(state) {
     msg.style.display = 'block'; msg.style.color = 'var(--muted)';
     msg.textContent = 'Advisorが分析中です...';
   } else if (state === 'complete') {
-    s1.disabled = false; s1.textContent = '📰 Step 1: Get News';
+    s1.disabled = false; s1.textContent = '📰 Step 1: Get Market News';
     s2.disabled = true;  s2.textContent = '🤖 Step 2: Get AI Advice';
     msg.style.display = 'block'; msg.style.color = 'var(--muted)';
     msg.innerHTML = '分析完了。 <a href="#" onclick="resetSteps();return false" style="color:var(--blue)">🔄 Start Over</a>';
@@ -1668,7 +1811,7 @@ async function runStep1() {
   const timedItems = window.fetchedNews.filter(n => n && n.time && String(n.time).trim());
   document.getElementById('news-list').innerHTML = timedItems.length
     ? timedItems.map(n => `<div class="news-item"><div class="news-item-title"><span class="news-time">${n.time}</span>${n.title || ''}</div></div>`).join('')
-    : '<div class="news-item" style="color:var(--muted)">最新情報を取得中...</div>';
+    : '<div class="news-item" style="color:var(--muted2)">最新情報を取得中...</div>';
 
   document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。</div>';
   setStepState('step1-done');
@@ -1725,9 +1868,9 @@ async function runStep2() {
     const userMsg = isParseError ? 'JSONパースに失敗しました。もう一度試してください。' : (err.message || String(err));
     const looksLikeJson = rawSnippet && rawSnippet.trimStart().startsWith('{');
     const debugHtml = rawSnippet
-      ? `<div style="margin-top:8px"><span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline">詳細 ▼</span><div style="display:none;margin-top:6px"><div style="font-size:10px;color:var(--muted);margin-bottom:4px">${looksLikeJson?'✅ JSONとして開始されています（途中で切れた可能性）':'❌ JSONとして開始されていません'}</div><pre style="font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:6px">${rawSnippet.replace(/</g,'&lt;')}</pre></div></div>` : '';
+      ? `<div style="margin-top:8px"><span onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="font-size:11px;color:var(--muted2);cursor:pointer;text-decoration:underline">詳細 ▼</span><div style="display:none;margin-top:6px"><div style="font-size:10px;color:var(--muted2);margin-bottom:4px">${looksLikeJson?'✅ JSONとして開始されています（途中で切れた可能性）':'❌ JSONとして開始されていません'}</div><pre style="font-size:10px;color:var(--muted2);white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:8px;border-radius:8px">${rawSnippet.replace(/</g,'&lt;')}</pre></div></div>` : '';
     document.getElementById('advisor-body').innerHTML =
-      `<div style="padding:12px;font-size:13px;line-height:1.6;"><span style="color:var(--red)">⚠️ 再度お試しください</span><div style="color:var(--muted);font-size:12px;margin-top:4px">${userMsg}</div>${debugHtml}</div>`;
+      `<div style="padding:12px;font-size:13px;line-height:1.6;"><span style="color:var(--red)">⚠️ 再度お試しください</span><div style="color:var(--muted2);font-size:12px;margin-top:4px">${userMsg}</div>${debugHtml}</div>`;
     setStepState('step1-done');
   }
 }
@@ -1780,6 +1923,18 @@ window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(drawChart, 200);
 });
+
+// Header clock
+(function updateClock() {
+  const el = document.getElementById('header-datetime');
+  if (el) {
+    const now = new Date();
+    el.textContent = now.toLocaleDateString('ja-JP', { year:'numeric', month:'2-digit', day:'2-digit', weekday:'short' })
+      + '　' + now.toLocaleTimeString('ja-JP', { hour:'2-digit', minute:'2-digit', second:'2-digit' })
+      + ' JST';
+  }
+  setTimeout(updateClock, 1000);
+})();
 </script>
 </body>
 </html>
