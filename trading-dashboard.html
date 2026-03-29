@@ -527,7 +527,7 @@ body {
   border:none; cursor:pointer; font-size:22px;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 8px 24px rgba(0,102,204,.4);
-  transition:all .2s ease; z-index:1000;
+  transition:all .2s ease; z-index:9999;
 }
 .fab-csv:hover { transform:scale(1.1); box-shadow:0 12px 32px rgba(0,102,204,.6); }
 
@@ -547,7 +547,7 @@ body {
    CSV IMPORT MODAL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .csv-modal-backdrop {
-  display:none; position:fixed; inset:0; z-index:500;
+  display:none; position:fixed; inset:0; z-index:10000;
   background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
   align-items:center; justify-content:center;
 }
@@ -1520,42 +1520,77 @@ function getTargetRate() {
 // 信用買/売残高は参考表示するが総資産に含めない
 // ─────────────────────────────────────────────────────
 function calcOpenPositions() {
-  // Cumulative accumulation across ALL trades (no same-day pairing).
-  // allTrades is sorted DESC so first-encounter = latest price per code.
-  // Returns { spot, marginLong, marginShort } each as [{code,name,qty,price,value}]
+  // Cumulative accumulation across ALL trades using .includes() matching
+  // to handle CSV product name variations (e.g. '株式（現物）', '制度信用買').
+  // allTrades sorted DESC → first encounter = latest price for each code.
 
-  const spot   = {};  // 現物:  buyQty=買付合計, sellQty=売付合計
-  const mLong  = {};  // 信用買: buyQty=新規買合計, sellQty=返済売合計
-  const mShort = {};  // 信用売: buyQty=新規売合計, sellQty=返済買合計
-
-  for (const t of allTrades) {
-    const code = t.銘柄コード;
-
-    if (t.商品 === '株式') {
-      if (!spot[code]) spot[code] = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
-      // first-encounter already set the latest price (allTrades sorted DESC)
-      if (t.取引種別 === '買付') spot[code].buyQty  += t.数量;
-      if (t.取引種別 === '売付') spot[code].sellQty += t.数量;
-    }
-
-    if (t.商品 === '制度信用') {
-      if (!mLong[code])  mLong[code]  = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
-      if (!mShort[code]) mShort[code] = { name: t.銘柄名称, buyQty: 0, sellQty: 0, price: t.単価 };
-      if (t.取引種別 === '新規買') mLong[code].buyQty   += t.数量;
-      if (t.取引種別 === '返済売') mLong[code].sellQty  += t.数量;
-      if (t.取引種別 === '新規売') mShort[code].buyQty  += t.数量;
-      if (t.取引種別 === '返済買') mShort[code].sellQty += t.数量;
-    }
-  }
-
-  const toArr = (map) => Object.entries(map)
-    .map(([code, v]) => {
-      const qty = v.buyQty - v.sellQty;
-      return { code, name: v.name, qty, price: v.price, value: qty * v.price };
-    })
+  // === 現物買残高 ===
+  const spotMap = {};
+  allTrades
+    .filter(t => t.商品.includes('株式'))
+    .forEach(t => {
+      const code = t.銘柄コード.trim();
+      if (!spotMap[code]) spotMap[code] = { name: t.銘柄名称.trim(), buyQty: 0, sellQty: 0, lastPrice: t.単価 };
+      const qty = parseFloat(t.数量) || 0;
+      const price = parseFloat(t.単価) || 0;
+      if (t.取引種別.includes('買付')) {
+        spotMap[code].buyQty += qty;
+        if (price > 0 && spotMap[code].lastPrice === 0) spotMap[code].lastPrice = price;
+      }
+      if (t.取引種別.includes('売付')) {
+        spotMap[code].sellQty += qty;
+        if (price > 0 && spotMap[code].lastPrice === 0) spotMap[code].lastPrice = price;
+      }
+    });
+  const openSpot = Object.entries(spotMap)
+    .map(([code, v]) => ({ code, name: v.name, qty: v.buyQty - v.sellQty, price: v.lastPrice, value: (v.buyQty - v.sellQty) * v.lastPrice }))
     .filter(p => p.qty > 0);
 
-  return { spot: toArr(spot), marginLong: toArr(mLong), marginShort: toArr(mShort) };
+  // === 信用買残高 ===
+  const mLongMap = {};
+  allTrades
+    .filter(t => t.商品.includes('信用') || t.商品.includes('制度'))
+    .forEach(t => {
+      const code = t.銘柄コード.trim();
+      if (!mLongMap[code]) mLongMap[code] = { name: t.銘柄名称.trim(), buyQty: 0, sellQty: 0, lastPrice: t.単価 };
+      const qty = parseFloat(t.数量) || 0;
+      const price = parseFloat(t.単価) || 0;
+      if (t.取引種別.includes('新規買')) {
+        mLongMap[code].buyQty += qty;
+        if (price > 0 && mLongMap[code].lastPrice === 0) mLongMap[code].lastPrice = price;
+      }
+      if (t.取引種別.includes('返済売')) {
+        mLongMap[code].sellQty += qty;
+        if (price > 0 && mLongMap[code].lastPrice === 0) mLongMap[code].lastPrice = price;
+      }
+    });
+  const openMarginLong = Object.entries(mLongMap)
+    .map(([code, v]) => ({ code, name: v.name, qty: v.buyQty - v.sellQty, price: v.lastPrice, value: (v.buyQty - v.sellQty) * v.lastPrice }))
+    .filter(p => p.qty > 0);
+
+  // === 信用売残高（空売り）===
+  const mShortMap = {};
+  allTrades
+    .filter(t => t.商品.includes('信用') || t.商品.includes('制度'))
+    .forEach(t => {
+      const code = t.銘柄コード.trim();
+      if (!mShortMap[code]) mShortMap[code] = { name: t.銘柄名称.trim(), sellQty: 0, buyQty: 0, lastPrice: t.単価 };
+      const qty = parseFloat(t.数量) || 0;
+      const price = parseFloat(t.単価) || 0;
+      if (t.取引種別.includes('新規売')) {
+        mShortMap[code].sellQty += qty;
+        if (price > 0 && mShortMap[code].lastPrice === 0) mShortMap[code].lastPrice = price;
+      }
+      if (t.取引種別.includes('返済買')) {
+        mShortMap[code].buyQty += qty;
+        if (price > 0 && mShortMap[code].lastPrice === 0) mShortMap[code].lastPrice = price;
+      }
+    });
+  const openMarginShort = Object.entries(mShortMap)
+    .map(([code, v]) => ({ code, name: v.name, qty: v.sellQty - v.buyQty, price: v.lastPrice, value: (v.sellQty - v.buyQty) * v.lastPrice }))
+    .filter(p => p.qty > 0);
+
+  return { spot: openSpot, marginLong: openMarginLong, marginShort: openMarginShort };
 }
 
 function calcTotalAssets(latestBal) {
