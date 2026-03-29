@@ -1470,15 +1470,18 @@ function saveApiKey() {
 }
 
 // Helper: call Anthropic API and return raw text from response
-async function claudeCall(apiKey, payload) {
+// options.webSearch = true → adds anthropic-beta header for web_search tool
+async function claudeCall(apiKey, payload, options = {}) {
+  const headers = {
+    'x-api-key': apiKey,
+    'anthropic-version': '2023-06-01',
+    'content-type': 'application/json',
+    'anthropic-dangerous-direct-browser-access': 'true'
+  };
+  if (options.webSearch) headers['anthropic-beta'] = 'web-search-2025-03-05';
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
-    headers: {
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
-      'content-type': 'application/json',
-      'anthropic-dangerous-direct-browser-access': 'true'
-    },
+    headers,
     body: JSON.stringify(payload)
   });
   const data = await res.json();
@@ -1537,42 +1540,46 @@ async function runAI() {
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    // ── CALL 1: Fetch market news as JSON ──────────────────────────
+    // ── CALL 1: Fetch market news with web_search ──────────────────
     let newsItems = [];
     try {
+      const today = new Date().toLocaleDateString('ja-JP');
+      const currentTime = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
       const newsRaw = await claudeCall(apiKey, {
         model: 'claude-sonnet-4-6',
-        max_tokens: 1024,
-        system: '日本株式市場の金融ニュースアナリスト。JSONのみ回答。',
+        max_tokens: 500,
+        system: '株式市場ニュースの要約専門家。JSONのみ回答。',
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         messages: [
           {
             role: 'user',
-            content: '今日の日本株式市場のニュースを教えてください。\n必ず過去12時間以内の最新情報のみを使用してください。\n古い情報や日付不明の情報は含めないでください。\n今日の日付: ' + new Date().toLocaleDateString('ja-JP') + '\n現在時刻: ' + new Date().toLocaleTimeString('ja-JP') + '\n\n以下のJSON形式のみで回答してください：\n{"news":[{"title":"","summary":"","time":"何時間前 or 何分前","isRecent":true}]}\n\n各ニュースに必ずisRecentフラグを付けてください：\n- 12時間以内 → isRecent: true\n- それ以降 → isRecent: false（リストに含めない）'
+            content: '日本株式市場の直近12時間以内のニュースTOP5。\n今日: ' + today + ' ' + currentTime + '\n\nJSONのみ：\n{"news":[{"title":"","time":""}]}\n※必ず12時間以内のものだけ\n※最大5件のみ'
           }
         ]
-      });
+      }, { webSearch: true });
       const newsResult = parseJSON(newsRaw);
       if (Array.isArray(newsResult.news)) {
-        newsItems = newsResult.news.filter(n => n.isRecent !== false).slice(0, 10);
+        newsItems = newsResult.news.slice(0, 5);
       }
     } catch(e) {
       console.warn('[AI] news call failed:', e.message);
-      newsItems = ['市場ニュースの取得に失敗しました'];
     }
 
-    // Show news panel
+    // Show news panel — only items with a time field
     document.getElementById('news-section').style.display = 'block';
-    document.getElementById('news-list').innerHTML = newsItems.map(n => {
-      if (typeof n === 'string') return `<div class="news-item">${n}</div>`;
-      return `<div class="news-item">
-        <div class="news-item-title">
-          ${n.time ? `<span class="news-time">${n.time}</span>` : ''}${n.title || ''}
-        </div>
-        ${n.summary ? `<div class="news-item-summary">${n.summary}</div>` : ''}
-      </div>`;
-    }).join('');
+    const timedItems = newsItems.filter(n => n && n.time && String(n.time).trim());
+    document.getElementById('news-list').innerHTML = timedItems.length
+      ? timedItems.map(n => `<div class="news-item">
+          <div class="news-item-title">
+            <span class="news-time">${n.time}</span>${n.title || ''}
+          </div>
+        </div>`).join('')
+      : '<div class="news-item" style="color:var(--muted)">最新情報を取得中...</div>';
 
-    // ── CALL 2: Advisor analysis ────────────────────────────────────
+    // 5s delay before advisor call to avoid rate limiting
+    await new Promise(r => setTimeout(r, 5000));
+
+    // ── CALL 2: Advisor analysis (no web_search) ────────────────────
     document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 積極派アドバイザーが分析中...</div>';
 
     const today = getLatestDate();
@@ -1584,9 +1591,9 @@ async function runAI() {
       `損益:${t._pnl !== undefined ? fmtPnL(t._pnl) : '—'}`
     ).join('\n') || '（本日の取引なし）';
 
-    const newsStr = newsItems.join('\n');
+    const newsStr = newsItems.map(n => typeof n === 'string' ? n : n.title).filter(Boolean).join('\n') || '（ニュースなし）';
 
-    const analysisRaw = await claudeCall(apiKey, {
+    const analysisRaw = await claudeCall(apiKey, {  // no web_search
       model: 'claude-sonnet-4-6',
       max_tokens: 2048,
       system: `あなたは積極的な投資アドバイザーです。取引データと市場ニュースを詳細に分析してください。`,
