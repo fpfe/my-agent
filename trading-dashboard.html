@@ -1151,6 +1151,7 @@ async function processFiles(files) {
   showStatus(`✅ 読み込み完了 — 新規: ${newCount}件 / 重複スキップ: ${dupCount}件`);
   saveData();
   renderAll();
+  return { newCount, dupCount };
 }
 
 function showStatus(msg, ms = 6000) {
