@@ -801,7 +801,7 @@ body {
       <div class="chart-legend">
         <div class="leg-item">
           <div class="leg-line" style="background:var(--primary)"></div>
-          <span style="font-size:11px;color:var(--muted2)">実績</span>
+          <span style="font-size:11px;color:var(--muted2)">実績（総資産）</span>
         </div>
         <div class="leg-item">
           <div class="leg-dashed" style="border-color:var(--yellow)"></div>
@@ -1699,6 +1699,31 @@ function updateTargetInfo(bal) {
 // ═══════════════════════════════════════════
 // CHART (Canvas)
 // ═══════════════════════════════════════════
+function calcSpotValueAsOf(dateStr) {
+  // FIFO: process all 株式 trades up to dateStr (inclusive), return total spot value
+  const qty = {};
+  const lastPrice = {};
+  allTrades
+    .filter(t => t.商品.includes('株式') && t.約定日 <= dateStr)
+    .sort((a, b) => (a.約定日 || '').localeCompare(b.約定日 || ''))
+    .forEach(t => {
+      const code = t.銘柄コード.trim();
+      if (!code) return;
+      if (qty[code] === undefined) qty[code] = 0;
+      const q = parseFloat(t.数量) || 0;
+      const p = parseFloat(t.単価) || 0;
+      if (t.取引種別.includes('買付')) {
+        qty[code] += q;
+        if (p > 0) lastPrice[code] = p;
+      }
+      if (t.取引種別.includes('売付')) {
+        qty[code] = Math.max(0, qty[code] - q);
+        if (p > 0) lastPrice[code] = p;
+      }
+    });
+  return Object.keys(qty).reduce((sum, code) => sum + (qty[code] * (lastPrice[code] || 0)), 0);
+}
+
 function drawChart() {
   const canvas = document.getElementById('chartCanvas');
   const wrap = canvas.parentElement;
@@ -1725,7 +1750,7 @@ function drawChart() {
     return;
   }
 
-  const actuals = dates.map(d => dayBal[d]);
+  const actuals = dates.map(d => dayBal[d] + calcSpotValueAsOf(d));
   const startBal = actuals[0];
   const rate = getTargetRate();
   const startMs = new Date(dates[0].replace(/\//g, '-')).getTime();
@@ -1816,8 +1841,13 @@ function drawChart() {
   const lastTgt = targets[n-1];
   const gap = lastAct - lastTgt;
   const gapColor = gap >= 0 ? '#30D158' : '#FF453A';
+  const lastDate = dates[n-1];
+  const lastBal = dayBal[lastDate];
+  const lastSpot = calcSpotValueAsOf(lastDate);
   document.getElementById('chart-gap').innerHTML =
-    `現在の残高: <strong style="color:#E4E2E4">${fmtBal(lastAct)}</strong>　|　` +
+    `口座残高: <strong style="color:#E4E2E4">${fmtBal(lastBal)}</strong>　|　` +
+    `現物評価額: <strong style="color:#E4E2E4">${fmtBal(lastSpot)}</strong>　|　` +
+    `総資産: <strong style="color:#E4E2E4">${fmtBal(lastAct)}</strong>　|　` +
     `目標との差: <strong style="color:${gapColor}">${fmtPnL(gap)}</strong>`;
 }
 
@@ -1974,10 +2004,23 @@ function renderDailyResults() {
     const dow = DOW[d.getDay()];
     const trades = byDay[dateStr] || [];
 
+    // Build 総資産 for this date
+    const dayBalForDate = (() => {
+      // find latest 口座残高 on or before this date
+      const t = allTrades.find(t => t.約定日 <= dateStr && t.口座残高);
+      return t ? t.口座残高 : 0;
+    })();
+    const daySpot = calcSpotValueAsOf(dateStr);
+    const dayTotal = dayBalForDate + daySpot;
+    const totalLine = dayTotal > 0
+      ? `<div style="font-size:11px;color:var(--muted2);margin-top:2px">総資産: ${fmtBal(dayTotal)}</div>`
+      : '';
+
     if (!trades.length) {
       return `<div class="daily-result-card" style="border-left-color:var(--muted2)">
         <div class="daily-result-date">${mmdd} (${dow})</div>
         <div style="color:var(--muted2);font-size:12px">取引なし</div>
+        ${totalLine}
       </div>`;
     }
 
@@ -1991,6 +2034,7 @@ function renderDailyResults() {
       <div class="daily-result-date">${mmdd} (${dow})</div>
       <div class="daily-result-pnl" style="color:${color}">${fmtPnL(dayPnL)}</div>
       <div class="daily-result-count">取引: ${trades.length}件</div>
+      ${totalLine}
     </div>`;
   }).join('');
 }
