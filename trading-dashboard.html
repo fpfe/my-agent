@@ -219,21 +219,26 @@ body {
 .news-header { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 8px; }
 .news-list { max-height: 140px; overflow-y: auto; }
 .news-item {
-  font-size: 11px; color: #cbd5e1; padding: 5px 0;
+  font-size: 11px; color: #cbd5e1; padding: 6px 0;
   border-bottom: 1px solid rgba(51,65,85,0.3); line-height: 1.5;
 }
 .news-item:last-child { border-bottom: none; }
+.news-item-title { font-weight: 600; margin-bottom: 2px; }
+.news-item-summary { color: var(--muted); font-size: 10.5px; }
+.news-time { display: inline-block; background: rgba(99,102,241,0.15); color: #a5b4fc;
+  font-size: 10px; padding: 1px 5px; border-radius: 3px; margin-right: 5px;
+  font-weight: 700; white-space: nowrap; vertical-align: middle; }
 
 .advisor-card {
   background: var(--card2); border-radius: 10px; border: 1px solid var(--border);
-  padding: 12px; margin-bottom: 10px;
+  padding: 16px; margin-bottom: 10px;
 }
 .advisor-card:last-child { margin-bottom: 0; }
-.advisor-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.advisor-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
 .score-circle {
-  width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+  width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  font-size: 15px; font-weight: 800; border: 2.5px solid;
+  font-size: 20px; font-weight: 800; border: 3px solid;
 }
 .sc-high { border-color: var(--green); color: var(--green); background: rgba(34,197,94,0.08); }
 .sc-mid { border-color: var(--yellow); color: var(--yellow); background: rgba(245,158,11,0.08); }
@@ -256,6 +261,25 @@ body {
 
 /* ── FULL-WIDTH SECTIONS ── */
 .full-section { margin-bottom: 16px; }
+
+/* ASSET SPLIT LAYOUT */
+.asset-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* DAILY RESULTS */
+.daily-result-card {
+  border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid;
+  padding: 10px 14px; margin-bottom: 8px;
+  background: var(--card2);
+}
+.daily-result-card:last-child { margin-bottom: 0; }
+.daily-result-date { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.daily-result-pnl { font-size: 20px; font-weight: 800; margin-bottom: 3px; }
+.daily-result-count { font-size: 11px; color: var(--muted); }
 
 /* CHART */
 .chart-wrap { position: relative; height: 250px; }
@@ -425,7 +449,7 @@ body {
       </button>
 
       <div id="news-section" style="display:none" class="news-section">
-        <div class="news-header">📰 市場ニュース TOP10</div>
+        <div class="news-header">📰 直近12時間のニュース</div>
         <div class="news-list" id="news-list"></div>
       </div>
 
@@ -453,21 +477,34 @@ body {
 
   </div><!-- /three-col -->
 
-  <!-- ASSET CHART -->
-  <div class="card full-section">
-    <div class="card-header">
-      <span class="card-title">📈 資産推移チャート</span>
-      <div class="chart-legend">
-        <div class="leg-item"><div class="leg-line" style="background:var(--indigo)"></div><span style="font-size:12px;color:var(--muted)">実績</span></div>
-        <div class="leg-item"><div class="leg-dashed" style="border-color:var(--yellow)"></div><span style="font-size:12px;color:var(--muted)">目標</span></div>
+  <!-- ASSET SECTION: SPLIT LAYOUT -->
+  <div class="asset-section full-section">
+
+    <!-- LEFT: 直近5営業日 -->
+    <div class="card">
+      <div class="card-header"><span class="card-title">📅 直近5営業日</span></div>
+      <div id="daily-results-body">
+        <div class="empty"><span class="empty-ico">📊</span>CSVをアップロードしてください</div>
       </div>
     </div>
-    <div class="chart-wrap">
-      <canvas id="chartCanvas"></canvas>
+
+    <!-- RIGHT: Asset Chart -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">📈 資産推移チャート</span>
+        <div class="chart-legend">
+          <div class="leg-item"><div class="leg-line" style="background:var(--indigo)"></div><span style="font-size:12px;color:var(--muted)">実績</span></div>
+          <div class="leg-item"><div class="leg-dashed" style="border-color:var(--yellow)"></div><span style="font-size:12px;color:var(--muted)">目標</span></div>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="chartCanvas"></canvas>
+      </div>
+      <div class="chart-footer">
+        <div id="chart-gap" class="chart-gap"></div>
+      </div>
     </div>
-    <div class="chart-footer">
-      <div id="chart-gap" class="chart-gap"></div>
-    </div>
+
   </div>
 
   <!-- STATS ROW (4 cards) -->
@@ -1342,11 +1379,80 @@ function goPage(p) {
 }
 
 // ═══════════════════════════════════════════
+// RENDER: DAILY RESULTS (last 5 business days)
+// ═══════════════════════════════════════════
+function renderDailyResults() {
+  const el = document.getElementById('daily-results-body');
+  if (!el) return;
+
+  if (!allTrades.length) {
+    el.innerHTML = '<div class="empty"><span class="empty-ico">📊</span>CSVをアップロードしてください</div>';
+    return;
+  }
+
+  // Get last N business days (Mon–Fri) counting backwards
+  function lastBizDays(n) {
+    const days = [];
+    const d = new Date();
+    while (days.length < n) {
+      const dow = d.getDay();
+      if (dow !== 0 && dow !== 6) {
+        days.push(
+          d.getFullYear() + '/' +
+          String(d.getMonth() + 1).padStart(2, '0') + '/' +
+          String(d.getDate()).padStart(2, '0')
+        );
+      }
+      d.setDate(d.getDate() - 1);
+    }
+    return days; // newest first
+  }
+
+  const bizDays = lastBizDays(5);
+  const DOW = ['日', '月', '火', '水', '木', '金', '土'];
+
+  // Group trades by 約定日
+  const byDay = {};
+  for (const t of allTrades) {
+    if (!byDay[t.約定日]) byDay[t.約定日] = [];
+    byDay[t.約定日].push(t);
+  }
+
+  el.innerHTML = bizDays.map(dateStr => {
+    const parts = dateStr.split('/');
+    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+    const mmdd = parts[1] + '/' + parts[2];
+    const dow = DOW[d.getDay()];
+    const trades = byDay[dateStr] || [];
+
+    if (!trades.length) {
+      return `<div class="daily-result-card" style="border-left-color:var(--muted2)">
+        <div class="daily-result-date">${mmdd} (${dow})</div>
+        <div style="color:var(--muted2);font-size:12px">取引なし</div>
+      </div>`;
+    }
+
+    let dayPnL = 0;
+    for (const t of trades) {
+      if (t._pnl !== undefined) dayPnL += t._pnl;
+    }
+
+    const color = dayPnL >= 0 ? 'var(--green)' : 'var(--red)';
+    return `<div class="daily-result-card" style="border-left-color:${color}">
+      <div class="daily-result-date">${mmdd} (${dow})</div>
+      <div class="daily-result-pnl" style="color:${color}">${fmtPnL(dayPnL)}</div>
+      <div class="daily-result-count">取引: ${trades.length}件</div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════
 // RENDER ALL
 // ═══════════════════════════════════════════
 function renderAll() {
   renderToday();
   renderStats();
+  renderDailyResults();
   renderHist();
   setTimeout(drawChart, 50);
 }
@@ -1437,16 +1543,18 @@ async function runAI() {
       const newsRaw = await claudeCall(apiKey, {
         model: 'claude-sonnet-4-6',
         max_tokens: 1024,
-        system: 'You are a Japanese financial news summarizer.',
+        system: '日本株式市場の金融ニュースアナリスト。JSONのみ回答。',
         messages: [
           {
             role: 'user',
-            content: '今日の日本株式市場のニュースTOP10を教えてください。\n必ずJSON形式のみで回答してください。前置きや説明は一切不要です。マークダウンのコードブロック（```json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n形式: {"news":["ニュース1","ニュース2","ニュース3","ニュース4","ニュース5","ニュース6","ニュース7","ニュース8","ニュース9","ニュース10"]}'
+            content: '今日の日本株式市場のニュースを教えてください。\n必ず過去12時間以内の最新情報のみを使用してください。\n古い情報や日付不明の情報は含めないでください。\n今日の日付: ' + new Date().toLocaleDateString('ja-JP') + '\n現在時刻: ' + new Date().toLocaleTimeString('ja-JP') + '\n\n以下のJSON形式のみで回答してください：\n{"news":[{"title":"","summary":"","time":"何時間前 or 何分前","isRecent":true}]}\n\n各ニュースに必ずisRecentフラグを付けてください：\n- 12時間以内 → isRecent: true\n- それ以降 → isRecent: false（リストに含めない）'
           }
         ]
       });
       const newsResult = parseJSON(newsRaw);
-      if (Array.isArray(newsResult.news)) newsItems = newsResult.news.slice(0, 10);
+      if (Array.isArray(newsResult.news)) {
+        newsItems = newsResult.news.filter(n => n.isRecent !== false).slice(0, 10);
+      }
     } catch(e) {
       console.warn('[AI] news call failed:', e.message);
       newsItems = ['市場ニュースの取得に失敗しました'];
@@ -1454,12 +1562,18 @@ async function runAI() {
 
     // Show news panel
     document.getElementById('news-section').style.display = 'block';
-    document.getElementById('news-list').innerHTML = newsItems.map(n =>
-      `<div class="news-item">${n}</div>`
-    ).join('');
+    document.getElementById('news-list').innerHTML = newsItems.map(n => {
+      if (typeof n === 'string') return `<div class="news-item">${n}</div>`;
+      return `<div class="news-item">
+        <div class="news-item-title">
+          ${n.time ? `<span class="news-time">${n.time}</span>` : ''}${n.title || ''}
+        </div>
+        ${n.summary ? `<div class="news-item-summary">${n.summary}</div>` : ''}
+      </div>`;
+    }).join('');
 
     // ── CALL 2: Advisor analysis ────────────────────────────────────
-    document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 3名のアドバイザーが分析中...</div>';
+    document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 積極派アドバイザーが分析中...</div>';
 
     const today = getLatestDate();
     const todayTrades = today ? allTrades.filter(t => t.約定日 === today) : allTrades.slice(0, 10);
@@ -1475,11 +1589,11 @@ async function runAI() {
     const analysisRaw = await claudeCall(apiKey, {
       model: 'claude-sonnet-4-6',
       max_tokens: 2048,
-      system: `あなたは3名の投資アドバイザーチームです。取引データと市場ニュースを分析してください。`,
+      system: `あなたは積極的な投資アドバイザーです。取引データと市場ニュースを詳細に分析してください。`,
       messages: [
         {
           role: 'user',
-          content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n3名のアドバイザー（積極派・バランス派・堅実派）として分析し、以下のJSON形式のみで回答してください。\n必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n{\n  "aggressive": {\n    "score": 数値,\n    "good": ["良かった点"],\n    "bad": ["改善点"],\n    "advice": "アドバイス",\n    "nextAction": "明日のアクション"\n  },\n  "intermediate": { 同じ構造 },\n  "conservative": { 同じ構造 }\n}\n</instructions>`
+          content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n積極派アドバイザーとして詳細に分析し、以下のJSON形式のみで回答してください。\n必ずJSON形式のみで回答してください。JSONの前後に文章を一切含めないでください。マークダウンのコードブロック（\`\`\`json）も使わないでください。最初の文字は { 最後の文字は } にしてください。\n\n{\n  "aggressive": {\n    "score": 0-100の数値,\n    "good": ["良かった点1","良かった点2","良かった点3","良かった点4","良かった点5"],\n    "bad": ["改善点1","改善点2","改善点3","改善点4","改善点5"],\n    "advice": "詳細なアドバイス（市場環境と取引の関連性を含む）",\n    "nextAction": "明日の具体的なアクション"\n  }\n}\n</instructions>`
         }
       ]
     });
@@ -1512,33 +1626,39 @@ async function runAI() {
 }
 
 function renderAdvisors(data) {
-  const defs = [
-    { key: 'aggressive',   label: '🔥 積極派アドバイザー',   d: data.aggressive },
-    { key: 'intermediate', label: '⚖️ バランス派アドバイザー', d: data.intermediate },
-    { key: 'conservative', label: '🛡️ 堅実派アドバイザー',   d: data.conservative },
-  ];
+  const d = data.aggressive;
+  if (!d) {
+    document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">データなし</div>';
+    return;
+  }
 
-  const html = defs.map(({ label, d }) => {
-    if (!d) return '';
-    const score = d.score || 0;
-    const sc = score >= 70 ? 'sc-high' : score >= 40 ? 'sc-mid' : 'sc-low';
-    const goodHtml = (d.good||[]).map(x => `<li>${x}</li>`).join('');
-    const badHtml  = (d.bad||[]).map(x => `<li>${x}</li>`).join('');
-    return `<div class="advisor-card">
+  const score = d.score || 0;
+  const sc = score >= 70 ? 'sc-high' : score >= 40 ? 'sc-mid' : 'sc-low';
+  const goodHtml = (d.good || []).slice(0, 5).map(x => `<li>${x}</li>`).join('');
+  const badHtml  = (d.bad  || []).slice(0, 5).map(x => `<li>${x}</li>`).join('');
+
+  document.getElementById('advisor-body').innerHTML = `
+    <div class="advisor-card">
       <div class="advisor-head">
         <div class="score-circle ${sc}">${score}</div>
-        <div>
-          <div class="advisor-name">${label}</div>
-          <div class="advisor-advice">${d.advice || ''}</div>
+        <div style="flex:1">
+          <div class="advisor-name" style="font-size:15px">🔥 積極派アドバイザー</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5">${d.advice || ''}</div>
         </div>
       </div>
-      ${goodHtml ? `<div class="adv-section"><div class="adv-section-label">✅ 良かった点</div><ul class="adv-points">${goodHtml}</ul></div>` : ''}
-      ${badHtml  ? `<div class="adv-section"><div class="adv-section-label">⚠️ 改善点</div><ul class="adv-points">${badHtml}</ul></div>`   : ''}
-      ${d.nextAction ? `<div class="adv-action">📌 明日のアクション: ${d.nextAction}</div>` : ''}
+      ${goodHtml ? `<div class="adv-section">
+        <div class="adv-section-label">✅ 良かった点</div>
+        <ul class="adv-points">${goodHtml}</ul>
+      </div>` : ''}
+      ${badHtml ? `<div class="adv-section">
+        <div class="adv-section-label">⚠️ 改善点</div>
+        <ul class="adv-points">${badHtml}</ul>
+      </div>` : ''}
+      ${d.nextAction ? `<div class="adv-action" style="font-size:12px;padding:10px 14px">
+        📌 <strong>明日のアクション</strong><br>
+        <span style="margin-top:4px;display:block">${d.nextAction}</span>
+      </div>` : ''}
     </div>`;
-  }).join('');
-
-  document.getElementById('advisor-body').innerHTML = html || '<div class="ai-placeholder">データなし</div>';
 }
 
 // ═══════════════════════════════════════════
