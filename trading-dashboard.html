@@ -255,6 +255,54 @@ body {
 /* stat-big-val: hidden compat stubs */
 .stat-big-val { display:none; }
 
+/* Open positions */
+.pos-section { margin-top:14px; }
+.pos-section-header {
+  display:flex; align-items:center; gap:8px; margin-bottom:8px;
+}
+.pos-badge {
+  font-size:10px; font-weight:600; padding:2px 8px; border-radius:9999px;
+}
+.pos-badge-spot   { background:rgba(0,102,204,.15); color:#5AADFF; }
+.pos-badge-long   { background:rgba(94,92,230,.15); color:#9D9AF0; }
+.pos-badge-short  { background:rgba(255,159,10,.15); color:var(--yellow); }
+.pos-note { font-size:10px; color:var(--muted2); margin-left:auto; }
+.pos-table { width:100%; border-collapse:collapse; font-size:11.5px; margin-bottom:6px; }
+.pos-table th {
+  color:var(--muted2); font-weight:500; text-align:right;
+  padding:4px 8px; font-size:10px; text-transform:uppercase; letter-spacing:.04em;
+  border-bottom:1px solid var(--border);
+}
+.pos-table th:first-child { text-align:left; }
+.pos-table td {
+  padding:6px 8px; text-align:right;
+  border-bottom:1px solid rgba(255,255,255,.03);
+  color:var(--muted);
+}
+.pos-table td:first-child { text-align:left; color:var(--text); font-weight:600; font-family:'SF Mono','Fira Code',monospace; }
+.pos-table tr:last-child td { border-bottom:none; }
+.pos-subtotal {
+  font-size:12px; text-align:right; color:var(--text); font-weight:600;
+  padding:4px 8px 8px; border-bottom:1px solid var(--border); margin-bottom:4px;
+}
+.pos-subtotal span { color:var(--muted2); font-weight:400; margin-right:6px; }
+
+/* Total assets summary box */
+.assets-box {
+  margin-top:16px; padding:14px;
+  background:var(--surface-low); border-radius:14px; border:1px solid var(--border);
+}
+.assets-box-row {
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:12px; padding:3px 0; color:var(--muted);
+}
+.assets-box-row.total-row {
+  font-size:14px; font-weight:700; color:var(--text);
+  border-top:1px solid var(--border); margin-top:6px; padding-top:8px;
+}
+.assets-box-row.ref-row { color:var(--muted2); font-size:11px; }
+.assets-box-divider { border:none; border-top:1px solid var(--border); margin:6px 0; }
+
 /* Target */
 .target-row { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
 .target-row label { font-size:11px; color:var(--muted); white-space:nowrap; }
@@ -562,7 +610,37 @@ body {
     <!-- today hidden (JS needs the ID) -->
     <span id="ms-today" class="mini-stat-val neu" style="display:none">—</span>
 
-    <div style="padding-top:16px; border-top:1px solid var(--border)">
+    <!-- Open positions -->
+    <div id="open-positions-section" style="display:none">
+      <!-- Spot positions -->
+      <div class="pos-section" id="spot-pos-section">
+        <div class="pos-section-header">
+          <span class="pos-badge pos-badge-spot">現物保有残高</span>
+          <span class="pos-note">✅ 総資産に含む</span>
+        </div>
+        <div id="spot-pos-body"></div>
+      </div>
+      <!-- Margin long positions -->
+      <div class="pos-section" id="margin-long-section" style="display:none">
+        <div class="pos-section-header">
+          <span class="pos-badge pos-badge-long">信用買残高</span>
+          <span class="pos-note">※総資産に含まず</span>
+        </div>
+        <div id="margin-long-body"></div>
+      </div>
+      <!-- Margin short positions -->
+      <div class="pos-section" id="margin-short-section" style="display:none">
+        <div class="pos-section-header">
+          <span class="pos-badge pos-badge-short">信用売残高</span>
+          <span class="pos-note">※総資産に含まず</span>
+        </div>
+        <div id="margin-short-body"></div>
+      </div>
+      <!-- Total Assets summary box -->
+      <div class="assets-box" id="assets-box"></div>
+    </div>
+
+    <div style="padding-top:16px; border-top:1px solid var(--border); margin-top:16px">
       <div class="fin-label" style="margin-bottom:10px">Daily Target</div>
       <div class="target-row">
         <label>リターン目標:</label>
@@ -1221,6 +1299,9 @@ function renderStats() {
 
   // Target display
   updateTargetInfo(latestBal);
+
+  // Open positions
+  renderOpenPositions(latestBal || 0);
 }
 
 function setMiniStat(id, val, isPnL) {
@@ -1258,43 +1339,130 @@ function getTargetRate() {
   return parseFloat(localStorage.getItem('trading_target_pct') || '0.1') / 100;
 }
 
-// Calculate total assets = 口座残高 + open position value
-// Open position: 買付 rows where no 売付 of same 銘柄コード exists on same or later date
+// ─────────────────────────────────────────────────────
+// OPEN POSITION CALCULATION
+//
+// Total Assets = 口座残高 + 現物評価額のみ
+// 信用買/売残高は参考表示するが総資産に含めない
+// ─────────────────────────────────────────────────────
+function calcOpenPositions() {
+  // Returns { spot: [{code,name,qty,price,value}], marginLong: [...], marginShort: [...] }
+  const spot = {};       // 現物: 買付 - 売付
+  const mLong = {};      // 信用買: 新規買 - 返済売
+  const mShort = {};     // 信用売: 新規売 - 返済買
+
+  for (const t of allTrades) {
+    const code = t.銘柄コード;
+    const name = t.銘柄名称;
+    const qty  = t.数量;
+    const price = t.単価;
+    const date  = t.約定日;
+
+    if (t.商品 === '株式') {
+      if (!spot[code]) spot[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
+      if (t.取引種別 === '買付') spot[code].qty += qty;
+      if (t.取引種別 === '売付') spot[code].qty -= qty;
+      if (date >= spot[code].latestDate) { spot[code].latestDate = date; spot[code].latestPrice = price; spot[code].name = name; }
+    }
+
+    if (t.商品 === '制度信用') {
+      // Margin long: 新規買 - 返済売
+      if (!mLong[code]) mLong[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
+      if (t.取引種別 === '新規買') mLong[code].qty += qty;
+      if (t.取引種別 === '返済売') mLong[code].qty -= qty;
+      if (date >= mLong[code].latestDate) { mLong[code].latestDate = date; mLong[code].latestPrice = price; mLong[code].name = name; }
+
+      // Margin short: 新規売 - 返済買
+      if (!mShort[code]) mShort[code] = { name, qty: 0, latestPrice: 0, latestDate: '' };
+      if (t.取引種別 === '新規売') mShort[code].qty += qty;
+      if (t.取引種別 === '返済買') mShort[code].qty -= qty;
+      if (date >= mShort[code].latestDate) { mShort[code].latestDate = date; mShort[code].latestPrice = price; mShort[code].name = name; }
+    }
+  }
+
+  const toArr = (map) => Object.entries(map)
+    .filter(([, v]) => v.qty > 0)
+    .map(([code, v]) => ({ code, name: v.name, qty: v.qty, price: v.latestPrice, value: v.qty * v.latestPrice }));
+
+  return { spot: toArr(spot), marginLong: toArr(mLong), marginShort: toArr(mShort) };
+}
+
 function calcTotalAssets(latestBal) {
+  // Total Assets = 口座残高 + 現物評価額のみ (信用は含まない)
   if (!latestBal && latestBal !== 0) return null;
   if (!allTrades.length) return latestBal;
+  const pos = calcOpenPositions();
+  const spotValue = pos.spot.reduce((s, p) => s + p.value, 0);
+  return latestBal + spotValue;
+}
 
-  // For each 銘柄コード, find 買付 rows without a later-or-same-date 売付
-  // Group buys and sells by 銘柄コード
-  const byCode = {};
-  for (const t of allTrades) {
-    if (t.商品 !== '株式') continue; // only 現物 open positions
-    if (!byCode[t.銘柄コード]) byCode[t.銘柄コード] = { buys: [], sells: [] };
-    if (t.取引種別 === '買付') byCode[t.銘柄コード].buys.push(t);
-    if (t.取引種別 === '売付') byCode[t.銘柄コード].sells.push(t);
+function renderOpenPositions(bal) {
+  const section = document.getElementById('open-positions-section');
+  if (!allTrades.length || (!bal && bal !== 0)) { section.style.display = 'none'; return; }
+
+  const pos = calcOpenPositions();
+  const spotTotal   = pos.spot.reduce((s, p) => s + p.value, 0);
+  const mLongTotal  = pos.marginLong.reduce((s, p) => s + p.value, 0);
+  const mShortTotal = pos.marginShort.reduce((s, p) => s + p.value, 0);
+  const totalAssets = bal + spotTotal;
+
+  section.style.display = 'block';
+
+  // Render a position table
+  function posTable(items) {
+    if (!items.length) return '<div style="font-size:12px;color:var(--muted2);padding:4px 0 8px">ポジションなし</div>';
+    const rows = items.map(p =>
+      `<tr>
+        <td>${p.code}<div style="font-size:10px;color:var(--muted2);font-weight:400">${p.name.slice(0,8)}</div></td>
+        <td>${p.qty.toLocaleString()}株</td>
+        <td>¥${p.price.toLocaleString()}</td>
+        <td style="color:var(--text);font-weight:600">¥${p.value.toLocaleString()}</td>
+      </tr>`
+    ).join('');
+    return `<table class="pos-table">
+      <thead><tr><th>銘柄</th><th>残高</th><th>最終単価</th><th>評価額</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
   }
 
-  let openValue = 0;
-  for (const code of Object.keys(byCode)) {
-    const { buys, sells } = byCode[code];
-    if (!buys.length) continue;
+  // Spot section
+  const spotSec = document.getElementById('spot-pos-section');
+  const spotBody = document.getElementById('spot-pos-body');
+  spotBody.innerHTML = posTable(pos.spot) +
+    (pos.spot.length ? `<div class="pos-subtotal"><span>現物評価額合計:</span>¥${spotTotal.toLocaleString()}</div>` : '');
+  spotSec.style.display = 'block';
 
-    // Total bought qty
-    const totalBought = buys.reduce((s, t) => s + t.数量, 0);
-    // Total sold qty (all sells, any date)
-    const totalSold = sells.reduce((s, t) => s + t.数量, 0);
-    const openQty = totalBought - totalSold;
-
-    if (openQty <= 0) continue;
-
-    // Use the latest recorded 単価 for this code (most recent buy or sell)
-    const allTrades_code = [...buys, ...sells].sort((a, b) => b.約定日.localeCompare(a.約定日));
-    const latestPrice = allTrades_code[0].単価;
-
-    openValue += openQty * latestPrice;
+  // Margin long section
+  const mlSec = document.getElementById('margin-long-section');
+  if (pos.marginLong.length) {
+    document.getElementById('margin-long-body').innerHTML = posTable(pos.marginLong) +
+      `<div class="pos-subtotal"><span>信用買残高合計:</span>¥${mLongTotal.toLocaleString()}</div>`;
+    mlSec.style.display = 'block';
+  } else {
+    mlSec.style.display = 'none';
   }
 
-  return latestBal + openValue;
+  // Margin short section
+  const msSec = document.getElementById('margin-short-section');
+  if (pos.marginShort.length) {
+    document.getElementById('margin-short-body').innerHTML = posTable(pos.marginShort) +
+      `<div class="pos-subtotal"><span>信用売残高合計:</span>¥${mShortTotal.toLocaleString()}</div>`;
+    msSec.style.display = 'block';
+  } else {
+    msSec.style.display = 'none';
+  }
+
+  // Assets summary box
+  const refRows = [];
+  if (mLongTotal > 0) refRows.push(`<div class="assets-box-row ref-row"><span>信用買残高</span><span>¥${mLongTotal.toLocaleString()}</span></div>`);
+  if (mShortTotal > 0) refRows.push(`<div class="assets-box-row ref-row"><span>信用売残高</span><span>¥${mShortTotal.toLocaleString()}</span></div>`);
+
+  document.getElementById('assets-box').innerHTML =
+    `<div style="font-size:11px;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">総資産</div>
+     <div class="assets-box-row"><span>口座残高</span><span>¥${bal.toLocaleString()}</span></div>
+     <div class="assets-box-row"><span>現物評価額</span><span>¥${spotTotal.toLocaleString()}</span></div>
+     <div class="assets-box-row total-row"><span>合計 ✅</span><span>¥${totalAssets.toLocaleString()}</span></div>
+     ${refRows.length ? `<hr class="assets-box-divider"><div style="font-size:10px;color:var(--muted2);margin-bottom:4px">参考（総資産に含まず）</div>${refRows.join('')}` : ''}`;
 }
 
 function updateTargetInfo(bal) {
@@ -1309,7 +1477,7 @@ function updateTargetInfo(bal) {
   const pct = (rate * 100).toFixed(2).replace(/\.?0+$/, '');
   el.innerHTML =
     `目標額: <strong>¥${daily.toLocaleString()}/日</strong>` +
-    `<div style="font-size:11px;color:var(--muted2);margin-top:2px">（総資産 ¥${totalAssets.toLocaleString()} × ${pct}%）</div>`;
+    `<div style="font-size:11px;color:var(--muted2);margin-top:2px">（総資産 ¥${totalAssets.toLocaleString()} × ${pct}%）<br>※現物評価額ベース</div>`;
 }
 
 // ═══════════════════════════════════════════
