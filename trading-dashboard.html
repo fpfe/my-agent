@@ -2210,50 +2210,64 @@ function resetSteps() {
   document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 1 でニュースを取得してから Step 2 を実行してください。</div>';
 }
 
-async function fetchMarketNews() {
-  const newsApiKey = 'e2efaa0b92314c52a64058b0783d2d6b';
-  const today = new Date();
-  const yesterday = new Date(today);
-  yesterday.setDate(yesterday.getDate() - 1);
-  const fromDate = yesterday.toISOString().split('T')[0];
-
-  const params = new URLSearchParams({
-    q: '日経平均 OR 株式市場 OR 日本株',
-    language: 'jp',
-    sortBy: 'publishedAt',
-    pageSize: 10,
-    from: fromDate,
-    apiKey: newsApiKey
-  });
-
-  const response = await fetch(`https://newsapi.org/v2/everything?${params}`);
-  const data = await response.json();
-
-  if (data.status !== 'ok') {
-    const params2 = new URLSearchParams({
-      q: 'Japan stock market Nikkei',
-      language: 'en',
-      sortBy: 'publishedAt',
-      pageSize: 10,
-      from: fromDate,
-      apiKey: newsApiKey
-    });
-    const response2 = await fetch(`https://newsapi.org/v2/everything?${params2}`);
-    const data2 = await response2.json();
-    return data2.articles || [];
-  }
-
-  return data.articles || [];
+function showNewsStatus(msg) {
+  document.getElementById('advisor-body').innerHTML = `<div class="spinner">${msg}</div>`;
 }
 
-function timeAgo(publishedAt) {
-  const published = new Date(publishedAt);
-  const diffMs = Date.now() - published.getTime();
-  const diffH = Math.floor(diffMs / 3600000);
-  const diffM = Math.floor(diffMs / 60000);
-  if (diffH >= 1) return diffH + '時間前';
-  if (diffM >= 1) return diffM + '分前';
-  return 'たった今';
+async function fetchMarketNews() {
+  showNewsStatus('📰 ニュースを取得中...');
+
+  try {
+    const apiKey = 'f4b23c5ee47e9f8cbe13202a72484e54';
+
+    const url = `https://gnews.io/api/v4/search?` +
+      `q=日経平均 OR 株式市場 OR 日本株&` +
+      `lang=ja&` +
+      `country=jp&` +
+      `max=10&` +
+      `sortby=publishedAt&` +
+      `token=${apiKey}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data.articles || data.articles.length === 0) {
+      const url2 = `https://gnews.io/api/v4/search?` +
+        `q=Nikkei OR Japan stock market&` +
+        `lang=en&` +
+        `max=10&` +
+        `sortby=publishedAt&` +
+        `token=${apiKey}`;
+
+      const response2 = await fetch(url2);
+      const data2 = await response2.json();
+      return data2.articles || [];
+    }
+
+    return data.articles || [];
+
+  } catch(err) {
+    console.error('GNews fetch error:', err);
+    showNewsStatus(`⚠️ ニュース取得失敗: ${err.message}`);
+    return [];
+  }
+}
+
+function timeAgo(dateString) {
+  const now = new Date();
+  const published = new Date(dateString);
+  const diffMs = now - published;
+  const diffHours = Math.floor(diffMs / 3600000);
+  const diffMins = Math.floor(diffMs / 60000);
+
+  if (diffMins < 60) return `${diffMins}分前`;
+  if (diffHours < 24) return `${diffHours}時間前`;
+  return `${Math.floor(diffHours / 24)}日前`;
 }
 
 async function runStep1() {
@@ -2263,18 +2277,23 @@ async function runStep1() {
 
   try {
     const articles = await fetchMarketNews();
-    window.fetchedNews = articles.slice(0, 10);
+    window.fetchedNews = articles.slice(0, 5).map(a => ({
+      title: a.title,
+      source: a.source.name,
+      publishedAt: a.publishedAt,
+      url: a.url
+    }));
 
     document.getElementById('news-section').style.display = 'block';
     document.getElementById('news-list').innerHTML = window.fetchedNews.length
-      ? window.fetchedNews.map(a => `<div class="news-item"><div class="news-item-title"><span class="news-time">${timeAgo(a.publishedAt)}</span>${a.title || ''}</div><div style="display:flex;gap:8px;align-items:center;margin-top:4px"><span style="font-size:10px;color:var(--muted2)">${a.source?.name || ''}</span><a href="${a.url}" target="_blank" style="font-size:10px;color:var(--blue);text-decoration:none;">🔗 Read</a></div></div>`).join('')
+      ? window.fetchedNews.map(a => `<div class="news-item"><div class="news-item-title"><span class="news-time">${timeAgo(a.publishedAt)}</span><a href="${a.url}" target="_blank" style="color:inherit;text-decoration:none;">${a.title || ''}</a></div><div style="font-size:10px;color:var(--muted2);margin-top:2px;">${a.source || ''}</div></div>`).join('')
       : '<div class="news-item" style="color:var(--muted2)">ニュースが見つかりませんでした</div>';
 
     document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。<br><span style="font-size:11px;color:var(--muted2)">⏱️ Step 2では約10秒お待ちください</span></div>';
     setStepState('step1-done');
     document.getElementById('step-msg').textContent = `✅ ${window.fetchedNews.length}件のニュースを取得しました`;
   } catch(e) {
-    console.warn('[NewsAPI] fetch failed:', e.message);
+    console.warn('[GNews] fetch failed:', e.message);
     window.fetchedNews = [];
     btn.disabled = false; btn.textContent = '📰 Step 1: Get Market News';
     const msgEl = document.getElementById('step-msg');
@@ -2294,7 +2313,7 @@ async function runStep2() {
 
   const tradeStr = getTodayTradesString();
   const newsStr = window.fetchedNews.slice(0, 5).map((a, i) =>
-    `${i + 1}. ${a.title || a} (${a.source?.name || ''})`
+    `${i + 1}. ${a.title || a} (${a.source || ''})`
   ).filter(Boolean).join('\n') || '（ニュースなし）';
 
   const doAnalysis = async () => {
