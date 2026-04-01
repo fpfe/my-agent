@@ -393,9 +393,6 @@ textarea{resize:vertical;line-height:1.6}
 
 </div><!-- /main -->
 
-<!-- Google Identity Services (Drive auth only) -->
-<script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
-
 <script>
 // ═══════════════════════════════════════════
 // CONSTANTS
@@ -1025,5 +1022,9 @@ function showStatus(id, msg, type) {
   else el.classList.remove('show');
 }
 </script>
+
+<!-- Google Identity Services (Drive auth only) -->
+<!-- Loaded after main script so gisLoaded() is already defined -->
+<script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </body>
 </html>
