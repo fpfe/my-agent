@@ -1,0 +1,115 @@
+name: Fetch NHK News
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch NHK RSS and save JSON
+        run: |
+          python3 << 'EOF'
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          import json
+          from datetime import datetime, timezone, timedelta
+          import os
+
+          JST = timezone(timedelta(hours=9))
+          now = datetime.now(JST)
+          twelve_hours_ago = now - timedelta(hours=12)
+
+          feeds = [
+            {
+              'name': 'NHK ビジネス',
+              'url': 'https://www3.nhk.or.jp/rss/news/cat5.xml'
+            },
+            {
+              'name': 'NHK 主要ニュース',
+              'url': 'https://www3.nhk.or.jp/rss/news/cat0.xml'
+            }
+          ]
+
+          all_articles = []
+
+          for feed in feeds:
+            try:
+              req = urllib.request.Request(
+                feed['url'],
+                headers={'User-Agent': 'Mozilla/5.0'}
+              )
+              with urllib.request.urlopen(req, timeout=10) as r:
+                xml_data = r.read()
+
+              root = ET.fromstring(xml_data)
+
+              for item in root.findall('.//item'):
+                title = item.findtext('title', '').strip()
+                link = item.findtext('link', '').strip()
+                pub_date_str = item.findtext('pubDate', '').strip()
+
+                if not title or not pub_date_str:
+                  continue
+
+                try:
+                  from email.utils import parsedate_to_datetime
+                  pub_date = parsedate_to_datetime(pub_date_str)
+                  pub_date_jst = pub_date.astimezone(JST)
+                except:
+                  continue
+
+                if pub_date_jst < twelve_hours_ago:
+                  continue
+
+                hours_ago = int(
+                  (now - pub_date_jst).total_seconds() / 3600
+                )
+
+                all_articles.append({
+                  'title': title,
+                  'url': link,
+                  'source': feed['name'],
+                  'publishedAt': pub_date_jst.isoformat(),
+                  'hoursAgo': hours_ago
+                })
+
+            except Exception as e:
+              print(f"Error fetching {feed['name']}: {e}")
+
+          all_articles.sort(
+            key=lambda x: x['publishedAt'],
+            reverse=True
+          )
+
+          os.makedirs('data', exist_ok=True)
+
+          output = {
+            'updatedAt': now.isoformat(),
+            'updatedAtJST': now.strftime('%Y/%m/%d %H:%M JST'),
+            'totalArticles': len(all_articles),
+            'articles': all_articles
+          }
+
+          with open('data/news.json', 'w', encoding='utf-8') as f:
+            json.dump(output, f, ensure_ascii=False, indent=2)
+
+          print(f"Saved {len(all_articles)} articles to data/news.json")
+          EOF
+
+      - name: Commit and push news.json
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/news.json
+          git diff --staged --quiet || \
+            git commit -m "chore: update news $(date +'%Y-%m-%d %H:%M JST')"
+          git push
