@@ -742,14 +742,20 @@ body {
     <div class="tile-hd">
       <div>
         <div class="tile-title">AI Intelligence</div>
-        <div class="tile-sub">Powered by Claude</div>
+        <div class="tile-sub">NewsAPI + Claude</div>
       </div>
     </div>
 
     <div class="ai-col">
       <div class="step-btns">
-        <button class="analyze-btn" id="step1-btn" onclick="runStep1()">📰 Step 1: Get Market News</button>
-        <button class="analyze-btn" id="step2-btn" onclick="runStep2()" disabled>🤖 Step 2: Get AI Advice</button>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <button class="analyze-btn" id="step1-btn" onclick="runStep1()">📰 Step 1: Get Market News</button>
+          <div style="font-size:10px;color:var(--muted2);text-align:center;">NewsAPI (no AI token used)</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <button class="analyze-btn" id="step2-btn" onclick="runStep2()" disabled>🤖 Step 2: Get AI Advice</button>
+          <div style="font-size:10px;color:var(--muted2);text-align:center;">Claude analyzes news + your trades</div>
+        </div>
       </div>
       <div id="step-msg" class="step-msg" style="display:none"></div>
       <div id="ai-countdown" class="ai-countdown" style="display:none">
@@ -2183,7 +2189,6 @@ function setStepState(state) {
     s1.disabled = false; s1.textContent = '📰 Step 1: Get News ✓';
     s2.disabled = false; s2.textContent = '🤖 Step 2: Get AI Advice';
     msg.style.display = 'block'; msg.style.color = 'var(--green)';
-    msg.textContent = '✅ ニュース取得完了。Step 2 を実行できます。';
   } else if (state === 'step2-loading') {
     s1.disabled = true;
     s2.disabled = true; s2.textContent = '⟳ 分析中...';
@@ -2205,44 +2210,78 @@ function resetSteps() {
   document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 1 でニュースを取得してから Step 2 を実行してください。</div>';
 }
 
-async function runStep1() {
-  const apiKey = localStorage.getItem('ja2_apikey');
-  if (!apiKey) { document.getElementById('apikey-section').style.display = 'block'; return; }
-  document.getElementById('apikey-section').style.display = 'none';
+async function fetchMarketNews() {
+  const newsApiKey = 'e2efaa0b92314c52a64058b0783d2d6b';
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const fromDate = yesterday.toISOString().split('T')[0];
 
+  const params = new URLSearchParams({
+    q: '日経平均 OR 株式市場 OR 日本株',
+    language: 'jp',
+    sortBy: 'publishedAt',
+    pageSize: 10,
+    from: fromDate,
+    apiKey: newsApiKey
+  });
+
+  const response = await fetch(`https://newsapi.org/v2/everything?${params}`);
+  const data = await response.json();
+
+  if (data.status !== 'ok') {
+    const params2 = new URLSearchParams({
+      q: 'Japan stock market Nikkei',
+      language: 'en',
+      sortBy: 'publishedAt',
+      pageSize: 10,
+      from: fromDate,
+      apiKey: newsApiKey
+    });
+    const response2 = await fetch(`https://newsapi.org/v2/everything?${params2}`);
+    const data2 = await response2.json();
+    return data2.articles || [];
+  }
+
+  return data.articles || [];
+}
+
+function timeAgo(publishedAt) {
+  const published = new Date(publishedAt);
+  const diffMs = Date.now() - published.getTime();
+  const diffH = Math.floor(diffMs / 3600000);
+  const diffM = Math.floor(diffMs / 60000);
+  if (diffH >= 1) return diffH + '時間前';
+  if (diffM >= 1) return diffM + '分前';
+  return 'たった今';
+}
+
+async function runStep1() {
   const btn = document.getElementById('step1-btn');
   btn.disabled = true; btn.textContent = '⟳ ニュース取得中...';
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    const today = new Date().toLocaleDateString('ja-JP');
-    const currentTime = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
-    const newsRaw = await claudeCall(apiKey, {
-      model: 'claude-sonnet-4-6',
-      max_tokens: 500,
-      system: '株式市場ニュースの要約専門家。JSONのみ回答。',
-      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-      messages: [{
-        role: 'user',
-        content: '日本株式市場の直近12時間以内のニュースTOP5。\n今日: ' + today + ' ' + currentTime + '\n\nJSONのみ：\n{"news":[{"title":"","time":""}]}\n※必ず12時間以内のものだけ\n※最大5件のみ'
-      }]
-    }, { webSearch: true });
-    const newsResult = parseJSON(newsRaw);
-    window.fetchedNews = Array.isArray(newsResult.news) ? newsResult.news.slice(0, 5) : [];
+    const articles = await fetchMarketNews();
+    window.fetchedNews = articles.slice(0, 10);
+
+    document.getElementById('news-section').style.display = 'block';
+    document.getElementById('news-list').innerHTML = window.fetchedNews.length
+      ? window.fetchedNews.map(a => `<div class="news-item"><div class="news-item-title"><span class="news-time">${timeAgo(a.publishedAt)}</span>${a.title || ''}</div><div style="display:flex;gap:8px;align-items:center;margin-top:4px"><span style="font-size:10px;color:var(--muted2)">${a.source?.name || ''}</span><a href="${a.url}" target="_blank" style="font-size:10px;color:var(--blue);text-decoration:none;">🔗 Read</a></div></div>`).join('')
+      : '<div class="news-item" style="color:var(--muted2)">ニュースが見つかりませんでした</div>';
+
+    document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。<br><span style="font-size:11px;color:var(--muted2)">⏱️ Step 2では約10秒お待ちください</span></div>';
+    setStepState('step1-done');
+    document.getElementById('step-msg').textContent = `✅ ${window.fetchedNews.length}件のニュースを取得しました`;
   } catch(e) {
-    console.warn('[AI] news call failed:', e.message);
+    console.warn('[NewsAPI] fetch failed:', e.message);
     window.fetchedNews = [];
+    btn.disabled = false; btn.textContent = '📰 Step 1: Get Market News';
+    const msgEl = document.getElementById('step-msg');
+    msgEl.style.display = 'block';
+    msgEl.style.color = 'var(--red)';
+    msgEl.textContent = '❌ ニュース取得に失敗しました: ' + e.message;
   }
-
-  // Show news panel
-  document.getElementById('news-section').style.display = 'block';
-  const timedItems = window.fetchedNews.filter(n => n && n.time && String(n.time).trim());
-  document.getElementById('news-list').innerHTML = timedItems.length
-    ? timedItems.map(n => `<div class="news-item"><div class="news-item-title"><span class="news-time">${n.time}</span>${n.title || ''}</div></div>`).join('')
-    : '<div class="news-item" style="color:var(--muted2)">最新情報を取得中...</div>';
-
-  document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。</div>';
-  setStepState('step1-done');
 }
 
 async function runStep2() {
@@ -2251,15 +2290,12 @@ async function runStep2() {
   document.getElementById('apikey-section').style.display = 'none';
 
   setStepState('step2-loading');
-  document.getElementById('advisor-body').innerHTML = '<div class="spinner">⏱️ レート制限を回避するため待機中...</div>';
-
-  // 65s countdown
-  await aiCountdownWait(65, '⏱️ Waiting to avoid rate limit:');
-
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 Advisorが分析中...</div>';
 
   const tradeStr = getTodayTradesString();
-  const newsStr = window.fetchedNews.map(n => typeof n === 'string' ? n : n.title).filter(Boolean).join('\n') || '（ニュースなし）';
+  const newsStr = window.fetchedNews.slice(0, 5).map((a, i) =>
+    `${i + 1}. ${a.title || a} (${a.source?.name || ''})`
+  ).filter(Boolean).join('\n') || '（ニュースなし）';
 
   const doAnalysis = async () => {
     return await claudeCall(apiKey, {
@@ -2268,7 +2304,7 @@ async function runStep2() {
       system: 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを分析してください。',
       messages: [{
         role: 'user',
-        content: `<trade_data>\n${tradeStr}\n</trade_data>\n<market_news>\n${newsStr}\n</market_news>\n<instructions>\n以下のJSON形式で回答してください。各テキストフィールドは最大100文字以内：\n{"aggressive":{"score":数値のみ,"good":["各項目50文字以内","最大3つ","3つ目"],"bad":["各項目50文字以内","最大3つ","3つ目"],"advice":"150文字以内のアドバイス","nextAction":"100文字以内の明日のアクション"}}\nJSONのみ。コードブロック不要。\n</instructions>`
+        content: `<market_news>\n${newsStr}\n</market_news>\n\n<trade_data>\n${tradeStr}\n</trade_data>\n\n<instructions>\n上記の市場ニュースと取引データを分析してAdvisorとして以下のJSONで回答してください：\n{"aggressive":{"score":数値,"good":["良かった点（最大3つ）"],"bad":["改善点（最大3つ）"],"advice":"市場ニュースと取引を結びつけた具体的なアドバイス","nextAction":"明日の具体的なアクション"}}\n必ずJSONのみで回答してください。\n</instructions>`
       }]
     });
   };
