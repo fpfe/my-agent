@@ -2215,47 +2215,26 @@ function showNewsStatus(msg) {
 }
 
 async function fetchMarketNews() {
-  const RSS_FEEDS = [
-    { name: 'NHK Business', url: 'https://www3.nhk.or.jp/rss/news/cat5.xml' },
-    { name: 'NHK Top News', url: 'https://www3.nhk.or.jp/rss/news/cat0.xml' }
-  ];
+  const response = await fetch('./data/news.json?' + new Date().getTime());
 
-  const allArticles = [];
-
-  for (const feed of RSS_FEEDS) {
-    try {
-      const proxyUrl = 'https://api.allorigins.win/get?url=' +
-        encodeURIComponent(feed.url);
-
-      const response = await fetch(proxyUrl);
-      const data = await response.json();
-
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(data.contents, 'text/xml');
-      const items = xml.querySelectorAll('item');
-
-      items.forEach(item => {
-        const pubDate = item.querySelector('pubDate')?.textContent;
-        const published = pubDate ? new Date(pubDate) : new Date();
-        const hoursAgo = (Date.now() - published.getTime()) / 3600000;
-        if (hoursAgo <= 24) {
-          allArticles.push({
-            title: item.querySelector('title')?.textContent || '',
-            url: item.querySelector('link')?.textContent || '',
-            source: { name: feed.name },
-            publishedAt: published.toISOString(),
-            hoursAgo: Math.round(hoursAgo)
-          });
-        }
-      });
-    } catch(err) {
-      console.warn('[RSS] Feed failed:', feed.name, err.message);
-    }
+  if (!response.ok) {
+    throw new Error('news.json not found: ' + response.status);
   }
 
-  allArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-  console.log('[RSS] Total articles:', allArticles.length);
-  return allArticles.slice(0, 10);
+  const data = await response.json();
+
+  if (!data.articles || data.articles.length === 0) {
+    showNewsStatus(
+      '⚠️ 直近12時間のニュースがありません\n最終更新: ' +
+      (data.updatedAtJST || '不明')
+    );
+    return { articles: [], updatedAtJST: data.updatedAtJST || '' };
+  }
+
+  console.log('[News] Last updated:', data.updatedAtJST);
+  console.log('[News] Articles:', data.totalArticles);
+
+  return { articles: data.articles, updatedAtJST: data.updatedAtJST || '' };
 }
 
 function timeAgo(dateString) {
@@ -2276,7 +2255,7 @@ async function runStep1() {
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    const articles = await fetchMarketNews();
+    const { articles, updatedAtJST } = await fetchMarketNews();
     window.fetchedNews = articles.slice(0, 5).map(a => ({
       title: a.title,
       source: a.source.name,
@@ -2285,10 +2264,11 @@ async function runStep1() {
     }));
 
     document.getElementById('news-section').style.display = 'block';
-    document.querySelector('.news-header').textContent = '📰 直近24時間のニュース';
-    document.getElementById('news-list').innerHTML = window.fetchedNews.length
+    document.querySelector('.news-header').textContent = '📰 直近12時間のニュース';
+    document.getElementById('news-list').innerHTML = (window.fetchedNews.length
       ? window.fetchedNews.map(a => `<div class="news-item"><div class="news-item-title"><span class="news-time">${timeAgo(a.publishedAt)}</span><a href="${a.url}" target="_blank" style="color:inherit;text-decoration:none;">${a.title || ''}</a></div><div style="font-size:10px;color:var(--muted2);margin-top:2px;">${a.source || ''}</div></div>`).join('')
-      : '<div class="news-item" style="color:var(--muted2)">本日のリクエスト上限（10回/日）に達した可能性があります。<br>明日また試してください。</div>';
+      : '<div class="news-item" style="color:var(--muted2)">直近12時間のニュースがありません。</div>') +
+      (updatedAtJST ? `<div style="font-size:10px;color:var(--muted2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);">最終更新: ${updatedAtJST}（1時間ごとに自動更新）</div>` : '');
 
     document.getElementById('advisor-body').innerHTML = '<div class="ai-placeholder">Step 2 でアドバイザー分析を実行してください。<br><span style="font-size:11px;color:var(--muted2)">⏱️ Step 2では約10秒お待ちください</span></div>';
     setStepState('step1-done');
