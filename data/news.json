@@ -1,146 +1,139 @@
 {
-  "updatedAt": "2026-04-01T23:27:48.674292+09:00",
-  "updatedAtJST": "2026/04/01 23:27 JST",
-  "totalArticles": 20,
+  "updatedAt": "2026-04-02T01:05:39.147820+09:00",
+  "updatedAtJST": "2026/04/02 01:05 JST",
+  "totalArticles": 19,
   "articles": [
+    {
+      "title": "日仏首脳会談 イラン情勢 引き続き緊密に意思疎通で一致",
+      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089651000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T00:15:15+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "中国 武漢 自動運転タクシーが走行中に突然停止するトラブル",
+      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090291000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-01T23:51:37+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "“イランが停戦を求めてきた”トランプ大統領がSNS投稿",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090231000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T22:37:09+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "男女雇用機会均等法 施行から4月で40年 取り組みは道半ば",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:59:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "日銀 浅田統一郎 新審議委員“バランスを考慮し政策判断”",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:54:50+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日銀 浅田統一郎 新審議委員“バランスを考慮し政策判断”",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090211000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-01T21:54:50+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "仏大統領 「大国に技術依存 望まず」日本と連携深める考え示す",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090191000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:17:05+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "給付付き税額控除試算 平均年収下回る子育て世帯で負担率高く",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090151000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T21:15:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "全銀協会長“企業の資金繰りや経営安定化へ支援” イラン情勢",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090101000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:02:34+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "仏マクロン大統領にNW9広内キャスターが問う 国際社会での役割",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089981000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T20:59:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "各地の企業で入社式 リーダーが新入社員を激励",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089811000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T19:44:20+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "イラン情勢 トランプ大統領 日本時間2日 国民向けに演説",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089331000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T19:39:06+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "日本で働く外国人増 入社式も様変わり ルールは？【Q＆A】",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089831000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T19:32:08+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "日仏首脳会談 イラン情勢 引き続き緊密に意思疎通で一致",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089651000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-01T19:27:27+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "全日空と日本航空 燃油サーチャージ 6月発券分から最大約2倍に",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089741000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T18:54:39+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "新年度スタート 制度や税制で変わったことは？【詳しく】",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089621000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T18:43:26+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "円相場 値上がり イラン情勢の長期化懸念和らぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090081000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T18:35:04+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "日銀短観 大企業製造業 先行き悪化 各企業の現状は？",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089451000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T17:48:29+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "ガソリン価格 全国平均1リットル170.2円 2週連続値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089841000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T17:36:47+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "株価 値上がり幅2600円超 ことしに入り最大",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089481000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T16:43:57+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日仏両政府 仏のレアアース工場の原料調達で協力 合意",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089761000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T14:00:46+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "きょうのおはBiz 4月1日(水)独自調査で迫るホルムズ海峡の実態",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089591000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-01T11:46:06+09:00",
       "hoursAgo": 11
     }
   ]
