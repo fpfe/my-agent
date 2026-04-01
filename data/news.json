@@ -1,27 +1,41 @@
 {
-  "updatedAt": "2026-04-02T06:41:04.826475+09:00",
-  "updatedAtJST": "2026/04/02 06:41 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-04-02T07:37:05.006729+09:00",
+  "updatedAtJST": "2026/04/02 07:37 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "「アルテミス計画」きょう打ち上げ 人類 約半世紀ぶりに月へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090271000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T07:34:18+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ブルージェイズ 岡本和真 デビュー戦からの連続試合ヒット6に",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090371000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T07:05:21+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NY原油市場 先物価格 一時1バレル＝96ドル台まで値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090351000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T06:55:45+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "トランプ大統領 国民向け演説“軍事作戦終了 あと2～3週間”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090261000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T06:35:31+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "京王線運転見合わせ 飛田給～府中 東府中～府中競馬正門前",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090341000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T06:04:06+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "「アルテミス計画」きょう打ち上げ 人類 約半世紀ぶりに月へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090271000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T05:37:21+09:00",
       "hoursAgo": 1
     },
     {
@@ -29,76 +43,48 @@
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090251000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T05:29:46+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "ロシア国防省“ウクライナ東部ルハンシク州を完全掌握”と発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090311000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T05:17:09+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "“イランが停戦を求めてきた”トランプ大統領がSNS投稿",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090231000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-01T22:37:09+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 2
     },
     {
       "title": "男女雇用機会均等法 施行から4月で40年 取り組みは道半ば",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:59:41+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "日銀 浅田統一郎 新審議委員“バランスを考慮し政策判断”",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:54:50+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "仏大統領 「大国に技術依存 望まず」日本と連携深める考え示す",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090191000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:17:05+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "全銀協会長“企業の資金繰りや経営安定化へ支援” イラン情勢",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090101000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:02:34+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "仏マクロン大統領にNW9広内キャスターが問う 国際社会での役割",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089981000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T20:59:24+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "各地の企業で入社式 リーダーが新入社員を激励",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089811000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T19:44:20+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日本で働く外国人増 入社式も様変わり ルールは？【Q＆A】",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089831000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-01T19:32:08+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "全日空と日本航空 燃油サーチャージ 6月発券分から最大約2倍に",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089741000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-01T18:54:39+09:00",
       "hoursAgo": 11
     }
   ]
