@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-02T07:37:05.006729+09:00",
-  "updatedAtJST": "2026/04/02 07:37 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-04-02T08:35:33.660939+09:00",
+  "updatedAtJST": "2026/04/02 08:35 JST",
+  "totalArticles": 11,
   "articles": [
     {
-      "title": "「アルテミス計画」きょう打ち上げ 人類 約半世紀ぶりに月へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090271000.html",
+      "title": "「アルテミス計画」 初めて宇宙飛行士乗せた宇宙船打ち上げ",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090331000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T07:34:18+09:00",
+      "publishedAt": "2026-04-02T08:17:01+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,76 +15,69 @@
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090371000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T07:05:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "NY原油市場 先物価格 一時1バレル＝96ドル台まで値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090351000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T06:55:45+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
-      "title": "トランプ大統領 国民向け演説“軍事作戦終了 あと2～3週間”",
+      "title": "トランプ大統領 国民向け演説へ “軍事作戦終了あと2～3週間”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090261000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T06:35:31+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "京王線運転見合わせ 飛田給～府中 東府中～府中競馬正門前",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090341000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T06:04:06+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "今年度予算案 参院 野党側“首相出席の集中審議が採決の条件”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090251000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T05:29:46+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "男女雇用機会均等法 施行から4月で40年 取り組みは道半ば",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:59:41+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "日銀 浅田統一郎 新審議委員“バランスを考慮し政策判断”",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:54:50+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "仏大統領 「大国に技術依存 望まず」日本と連携深める考え示す",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090191000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:17:05+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "全銀協会長“企業の資金繰りや経営安定化へ支援” イラン情勢",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015090101000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-01T21:02:34+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "仏マクロン大統領にNW9広内キャスターが問う 国際社会での役割",
       "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089981000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-01T20:59:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "各地の企業で入社式 リーダーが新入社員を激励",
-      "url": "http://www3.nhk.or.jp/news/html/20260401/k10015089811000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-01T19:44:20+09:00",
       "hoursAgo": 11
     }
   ]
