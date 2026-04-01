@@ -2215,46 +2215,59 @@ function showNewsStatus(msg) {
 }
 
 async function fetchMarketNews() {
-  showNewsStatus('📰 ニュースを取得中...');
+  const GNEWS_TOKEN = 'f4b23c5ee47e9f8cbe13202a72484e54';
+  const BASE_URL = 'https://gnews.io/api/v4/search';
+
+  const url = BASE_URL +
+    '?q=' + encodeURIComponent('日経平均 株式市場') +
+    '&lang=ja' +
+    '&country=jp' +
+    '&max=10' +
+    '&sortby=publishedAt' +
+    '&token=' + GNEWS_TOKEN;
+
+  console.log('Fetching GNews URL:', url);
 
   try {
-    const apiKey = 'f4b23c5ee47e9f8cbe13202a72484e54';
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    });
 
-    const url = `https://gnews.io/api/v4/search?` +
-      `q=日経平均 OR 株式市場 OR 日本株&` +
-      `lang=ja&` +
-      `country=jp&` +
-      `max=10&` +
-      `sortby=publishedAt&` +
-      `token=${apiKey}`;
-
-    const response = await fetch(url);
+    console.log('GNews response status:', response.status);
 
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+      const errorText = await response.text();
+      console.error('GNews error response:', errorText);
+      throw new Error(`GNews API error: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log('GNews data:', data);
 
-    if (!data.articles || data.articles.length === 0) {
-      const url2 = `https://gnews.io/api/v4/search?` +
-        `q=Nikkei OR Japan stock market&` +
-        `lang=en&` +
-        `max=10&` +
-        `sortby=publishedAt&` +
-        `token=${apiKey}`;
-
-      const response2 = await fetch(url2);
-      const data2 = await response2.json();
-      return data2.articles || [];
+    if (data.articles && data.articles.length > 0) {
+      return data.articles;
     }
 
-    return data.articles || [];
+    console.log('No Japanese results, trying English...');
+    const url2 = BASE_URL +
+      '?q=' + encodeURIComponent('Nikkei Japan stock') +
+      '&lang=en' +
+      '&max=10' +
+      '&sortby=publishedAt' +
+      '&token=' + GNEWS_TOKEN;
+
+    const response2 = await fetch(url2, {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    });
+
+    const data2 = await response2.json();
+    return data2.articles || [];
 
   } catch(err) {
-    console.error('GNews fetch error:', err);
-    showNewsStatus(`⚠️ ニュース取得失敗: ${err.message}`);
-    return [];
+    console.error('GNews fetch error details:', err);
+    throw err;
   }
 }
 
