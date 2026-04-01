@@ -2216,16 +2216,21 @@ function showNewsStatus(msg) {
 
 async function fetchMarketNews() {
   const APIKEY = 'f4b23c5ee47e9f8cbe13202a72484e54';
+  const now = new Date();
+
+  const twelveHoursAgo = new Date(now.getTime() - 12 * 60 * 60 * 1000);
+  const fromDate = twelveHoursAgo.toISOString().replace(/\.\d{3}Z$/, 'Z');
+  console.log('[GNews] From date:', fromDate);
 
   const gnewsUrl = 'https://gnews.io/api/v4/search' +
     '?q=' + encodeURIComponent('Nikkei Japan stock market') +
     '&lang=en' +
     '&max=10' +
     '&sortby=publishedAt' +
+    '&from=' + fromDate +
     '&apikey=' + APIKEY;
 
   const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(gnewsUrl);
-
   console.log('[GNews] Proxied URL:', proxyUrl);
 
   try {
@@ -2239,22 +2244,30 @@ async function fetchMarketNews() {
     const data = await response.json();
     console.log('[GNews] Articles:', data.totalArticles);
 
-    if (!data.articles || data.articles.length === 0) {
-      const gnewsUrl2 = 'https://gnews.io/api/v4/search' +
-        '?q=' + encodeURIComponent('日経平均 株式') +
-        '&lang=ja' +
-        '&max=10' +
-        '&sortby=publishedAt' +
-        '&apikey=' + APIKEY;
-
-      const proxyUrl2 = 'https://corsproxy.io/?' + encodeURIComponent(gnewsUrl2);
-
-      const r2 = await fetch(proxyUrl2);
-      const d2 = await r2.json();
-      return d2.articles || [];
+    if (data.articles && data.articles.length > 0) {
+      return { articles: data.articles, label: '📰 LAST 12H NEWS' };
     }
 
-    return data.articles;
+    // Fallback: 24 hours
+    const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    const fromDate24 = twentyFourHoursAgo.toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+    const url24 = 'https://gnews.io/api/v4/search' +
+      '?q=' + encodeURIComponent('Nikkei Japan stock market') +
+      '&lang=en' +
+      '&max=10' +
+      '&sortby=publishedAt' +
+      '&from=' + fromDate24 +
+      '&apikey=' + APIKEY;
+
+    const r24 = await fetch('https://corsproxy.io/?' + encodeURIComponent(url24));
+    const d24 = await r24.json();
+
+    if (d24.articles && d24.articles.length > 0) {
+      return { articles: d24.articles, label: '📰 LAST 24H NEWS (12時間以内のニュースなし)' };
+    }
+
+    return { articles: [], label: '📰 Last 12h News' };
 
   } catch(err) {
     console.error('[GNews] Error:', err.message);
@@ -2280,7 +2293,7 @@ async function runStep1() {
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">📰 ニュースを取得中...</div>';
 
   try {
-    const articles = await fetchMarketNews();
+    const { articles, label } = await fetchMarketNews();
     window.fetchedNews = articles.slice(0, 5).map(a => ({
       title: a.title,
       source: a.source.name,
@@ -2289,6 +2302,7 @@ async function runStep1() {
     }));
 
     document.getElementById('news-section').style.display = 'block';
+    document.querySelector('.news-header').textContent = label;
     document.getElementById('news-list').innerHTML = window.fetchedNews.length
       ? window.fetchedNews.map(a => `<div class="news-item"><div class="news-item-title"><span class="news-time">${timeAgo(a.publishedAt)}</span><a href="${a.url}" target="_blank" style="color:inherit;text-decoration:none;">${a.title || ''}</a></div><div style="font-size:10px;color:var(--muted2);margin-top:2px;">${a.source || ''}</div></div>`).join('')
       : '<div class="news-item" style="color:var(--muted2)">本日のリクエスト上限（10回/日）に達した可能性があります。<br>明日また試してください。</div>';
