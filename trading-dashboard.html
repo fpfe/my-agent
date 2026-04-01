@@ -2217,39 +2217,47 @@ function showNewsStatus(msg) {
 async function fetchMarketNews() {
   const APIKEY = 'f4b23c5ee47e9f8cbe13202a72484e54';
 
-  const url = 'https://gnews.io/api/v4/search' +
+  const gnewsUrl = 'https://gnews.io/api/v4/search' +
     '?q=' + encodeURIComponent('Nikkei Japan stock market') +
     '&lang=en' +
     '&max=10' +
     '&sortby=publishedAt' +
     '&apikey=' + APIKEY;
 
-  console.log('[GNews] Fetching:', url);
+  const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(gnewsUrl);
+
+  console.log('[GNews] Proxied URL:', proxyUrl);
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(proxyUrl);
     console.log('[GNews] Status:', response.status);
 
-    const text = await response.text();
-    console.log('[GNews] Raw response:', text.substring(0, 300));
-
     if (!response.ok) {
-      console.error('[GNews] Error:', response.status, text);
-      throw new Error(`GNews ${response.status}: ${text.substring(0, 100)}`);
+      throw new Error('GNews error: ' + response.status);
     }
 
-    const data = JSON.parse(text);
+    const data = await response.json();
+    console.log('[GNews] Articles:', data.totalArticles);
 
     if (!data.articles || data.articles.length === 0) {
-      console.warn('[GNews] No articles returned');
-      return [];
+      const gnewsUrl2 = 'https://gnews.io/api/v4/search' +
+        '?q=' + encodeURIComponent('日経平均 株式') +
+        '&lang=ja' +
+        '&max=10' +
+        '&sortby=publishedAt' +
+        '&apikey=' + APIKEY;
+
+      const proxyUrl2 = 'https://corsproxy.io/?' + encodeURIComponent(gnewsUrl2);
+
+      const r2 = await fetch(proxyUrl2);
+      const d2 = await r2.json();
+      return d2.articles || [];
     }
 
-    console.log('[GNews] Got', data.totalArticles, 'articles');
     return data.articles;
 
   } catch(err) {
-    console.error('[GNews] Fetch failed:', err.message);
+    console.error('[GNews] Error:', err.message);
     throw err;
   }
 }
