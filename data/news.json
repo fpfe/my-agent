@@ -1,70 +1,77 @@
 {
-  "updatedAt": "2026-04-02T11:12:39.487608+09:00",
-  "updatedAtJST": "2026/04/02 11:12 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-04-02T14:02:35.248660+09:00",
+  "updatedAtJST": "2026/04/02 14:02 JST",
+  "totalArticles": 10,
   "articles": [
     {
-      "title": "【速報中】トランプ大統領が演説“2～3週間激しい攻撃行う”",
+      "title": "【解説】トランプ大統領演説 日本経済への影響は",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T13:46:02+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【解説】トランプ大統領演説 日本経済への影響は",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T13:46:02+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【演説詳細】トランプ大統領 “今後2～3週間 激しい攻撃行う”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090401000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T11:10:50+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-04-02T12:59:31+09:00",
+      "hoursAgo": 1
     },
     {
-      "title": "【解説】トランプ大統領演説 経済の注目点は",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
+      "title": "米中央軍“1万2300か所余の標的攻撃” イランは徹底抗戦の構え",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090571000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T12:49:20+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "【きょうのおはBiz 4月2日(木)】原油価格上昇 物価への影響は",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090491000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T11:10:13+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-04-02T11:55:32+09:00",
+      "hoursAgo": 2
     },
     {
-      "title": "【解説】トランプ大統領演説 経済の注目点は",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T11:10:13+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "【記者解説】トランプ大統領演説 世界の受け止めは",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090481000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T11:00:24+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 トランプ大統領の演説受け下落 一時900円超値下がり",
+      "title": "株価1300円超値下がり 原油価格高騰続く懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T10:52:27+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-04-02T11:54:58+09:00",
+      "hoursAgo": 2
     },
     {
-      "title": "株価 トランプ大統領の演説受け下落 一時900円超値下がり",
+      "title": "株価1300円超値下がり 原油価格高騰続く懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T10:52:27+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-04-02T11:54:58+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "トランプ氏 ホルムズ海峡安全確保 “日本なども役割担うべき”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090471000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T10:41:27+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "「アルテミス計画」打ち上げ成功 人類 約半世紀ぶり月へ",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090331000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T09:03:11+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "今年度予算案 参院 野党側“首相出席の集中審議が採決の条件”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090251000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T05:29:46+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     }
   ]
 }
