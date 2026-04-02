@@ -49,18 +49,16 @@ body{
 .card{background:var(--navy-light);border-radius:16px;padding:20px;border:1px solid var(--border);box-shadow:var(--shadow)}
 .card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-bottom:14px}
 
-/* ── SETTINGS ── */
-.setting-row{display:flex;gap:8px;margin-bottom:6px}
-.setting-label{font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:4px}
-.key-input{
-  flex:1;background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
-  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;
+/* ── SERVER NOTICE ── */
+.server-notice{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(79,126,248,.1);border:1px solid rgba(79,126,248,.35);
+  border-radius:10px;padding:12px 14px;font-size:13px;color:var(--blue-light);
 }
-.key-input:focus{border-color:var(--blue)}
-.key-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
-.key-status{font-size:11px;margin-top:5px}
-.key-status.ok{color:var(--green)}
-.key-status.empty{color:var(--text-muted)}
+.server-notice code{
+  background:rgba(0,0,0,.25);border-radius:5px;padding:1px 6px;
+  font-family:'SF Mono',Menlo,monospace;font-size:12px;color:#93c5fd;
+}
 
 /* ── UPLOAD ZONE ── */
 .upload-zone{
@@ -195,7 +193,7 @@ body{
     <div class="header-icon">🎧</div>
     <div>
       <div class="header-title">Whisper Transcriber</div>
-      <div class="header-sub">Upload audio → get text with OpenAI Whisper</div>
+      <div class="header-sub">Local transcription via whisper_server.py</div>
     </div>
   </div>
   <a class="back-link" href="index.html">← Back</a>
@@ -204,16 +202,10 @@ body{
 <!-- ── MAIN ── -->
 <div class="main">
 
-  <!-- ── SETTINGS ── -->
-  <div class="card">
-    <div class="card-title">Settings</div>
-    <div class="setting-label">OpenAI API Key</div>
-    <div class="setting-row">
-      <input id="apiKeyInput" class="key-input" type="password" placeholder="sk-..." autocomplete="off" oninput="saveKey()">
-      <button class="btn btn-ghost btn-sm" onclick="toggleKeyVisibility()">👁</button>
-    </div>
-    <div class="key-hint">Stored locally in your browser. Never sent anywhere except OpenAI.</div>
-    <div class="key-status empty" id="keyStatus">No key saved</div>
+  <!-- ── SERVER NOTICE ── -->
+  <div class="server-notice">
+    <span>🖥️</span>
+    <span>Make sure <code>whisper_server.py</code> is running locally — <code>python whisper_server.py</code></span>
   </div>
 
   <!-- ── UPLOAD ── -->
@@ -223,7 +215,7 @@ body{
     <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
       <div class="upload-icon">🎵</div>
       <div class="upload-label">Click to choose audio file</div>
-      <div class="upload-hint">Supports .m4a, .mp3, .wav, .mp4 · Max 25 MB</div>
+      <div class="upload-hint">Supports .m4a, .mp3, .wav, .mp4</div>
     </div>
     <input id="fileInput" type="file" accept=".m4a,.mp3,.wav,.mp4,audio/*" onchange="onFileChange(event)">
 
@@ -290,52 +282,15 @@ body{
 
 <script>
 const STORAGE_KEY = 'whisper_transcripts';
-const API_KEY_KEY = 'whisper_openai_key';
+const SERVER_URL = 'http://localhost:5001/transcribe';
 
 let currentFile = null;
 let currentTranscript = '';
 
 // ── Init ──────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
-  const savedKey = localStorage.getItem(API_KEY_KEY) || '';
-  if (savedKey) {
-    document.getElementById('apiKeyInput').value = savedKey;
-    updateKeyStatus(savedKey);
-  }
   renderHistory();
 });
-
-// ── API Key ───────────────────────────────────
-function saveKey() {
-  const val = document.getElementById('apiKeyInput').value.trim();
-  if (val) {
-    localStorage.setItem(API_KEY_KEY, val);
-  } else {
-    localStorage.removeItem(API_KEY_KEY);
-  }
-  updateKeyStatus(val);
-  updateTranscribeBtn();
-}
-
-function updateKeyStatus(val) {
-  const el = document.getElementById('keyStatus');
-  if (val && val.startsWith('sk-')) {
-    el.textContent = '✓ Key saved';
-    el.className = 'key-status ok';
-  } else if (val) {
-    el.textContent = '⚠ Key looks unusual (should start with sk-)';
-    el.className = 'key-status ok';
-  } else {
-    el.textContent = 'No key saved';
-    el.className = 'key-status empty';
-  }
-}
-
-let keyVisible = false;
-function toggleKeyVisibility() {
-  keyVisible = !keyVisible;
-  document.getElementById('apiKeyInput').type = keyVisible ? 'text' : 'password';
-}
 
 // ── File Handling ─────────────────────────────
 function onFileChange(e) {
@@ -367,8 +322,8 @@ function setFile(file) {
     toast('Unsupported file type. Use .mp3, .mp4, .m4a, or .wav', 'red');
     return;
   }
-  if (file.size > 25 * 1024 * 1024) {
-    toast('File too large. OpenAI limit is 25 MB.', 'red');
+  if (file.size > 2 * 1024 * 1024 * 1024) {
+    toast('File too large.', 'red');
     return;
   }
   currentFile = file;
@@ -391,8 +346,7 @@ function clearFile() {
 }
 
 function updateTranscribeBtn() {
-  const key = localStorage.getItem(API_KEY_KEY);
-  document.getElementById('transcribeBtn').disabled = !currentFile || !key;
+  document.getElementById('transcribeBtn').disabled = !currentFile;
 }
 
 function formatSize(bytes) {
@@ -402,8 +356,7 @@ function formatSize(bytes) {
 
 // ── Transcribe ────────────────────────────────
 async function transcribe() {
-  const key = localStorage.getItem(API_KEY_KEY);
-  if (!key || !currentFile) return;
+  if (!currentFile) return;
 
   const btn = document.getElementById('transcribeBtn');
   btn.disabled = true;
@@ -414,9 +367,9 @@ async function transcribe() {
   const progressLabel = document.getElementById('progressLabel');
   progressWrap.style.display = '';
   progressBar.style.width = '0%';
-  progressLabel.textContent = 'Uploading to OpenAI…';
+  progressLabel.textContent = 'Sending to local server…';
 
-  // Fake progress animation while we wait
+  // Animated progress while waiting for the model
   let pct = 0;
   const ticker = setInterval(() => {
     pct = Math.min(pct + (pct < 60 ? 3 : pct < 85 ? 1 : 0.3), 90);
@@ -426,11 +379,9 @@ async function transcribe() {
   try {
     const form = new FormData();
     form.append('file', currentFile, currentFile.name);
-    form.append('model', 'whisper-1');
 
-    const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+    const res = await fetch(SERVER_URL, {
       method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + key },
       body: form,
     });
 
@@ -438,7 +389,7 @@ async function transcribe() {
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `API error ${res.status}`);
+      throw new Error(err?.error || `Server error ${res.status}`);
     }
 
     const data = await res.json();
@@ -459,7 +410,10 @@ async function transcribe() {
   } catch (e) {
     clearInterval(ticker);
     progressWrap.style.display = 'none';
-    toast('Error: ' + e.message, 'red');
+    const msg = e instanceof TypeError
+      ? 'Cannot connect to local server. Is whisper_server.py running?'
+      : 'Error: ' + e.message;
+    toast(msg, 'red');
   } finally {
     btn.disabled = false;
     btn.textContent = 'Transcribe';
