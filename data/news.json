@@ -1,34 +1,76 @@
 {
-  "updatedAt": "2026-04-02T14:02:35.248660+09:00",
-  "updatedAtJST": "2026/04/02 14:02 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-02T16:12:31.545383+09:00",
+  "updatedAtJST": "2026/04/02 16:12 JST",
+  "totalArticles": 12,
   "articles": [
     {
-      "title": "【解説】トランプ大統領演説 日本経済への影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T13:46:02+09:00",
+      "title": "今年度予算案 参院自民・立民 6日に集中審議開催で合意",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090671000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T16:10:41+09:00",
       "hoursAgo": 0
     },
     {
       "title": "【解説】トランプ大統領演説 日本経済への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T13:46:02+09:00",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T15:56:31+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "NBA ブルズ 河村勇輝 アシスト3つマークするなど持ち味発揮",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090711000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T15:30:19+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "桜の名所 東京 千代田区の千鳥ケ淵で桜の木倒れる けが人なし",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090681000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T15:11:34+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "カンパチ輸入で特例 関税なしで輸入できる範囲広げる方針 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090691000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T15:09:08+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "辺野古沖転覆事故受け自民が会合 議員“責任の所在明らかに”",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090611000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T14:59:54+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "10年ものの国債 表面利率 2.4％に引き上げ 1997年7月以来水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090651000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T14:57:19+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "10年ものの国債 表面利率 2.4％に引き上げ 1997年7月以来水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090651000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T14:57:19+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "【演説詳細】トランプ大統領 “今後2～3週間 激しい攻撃行う”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090401000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T12:59:31+09:00",
+      "publishedAt": "2026-04-02T14:39:47+09:00",
       "hoursAgo": 1
     },
     {
       "title": "米中央軍“1万2300か所余の標的攻撃” イランは徹底抗戦の構え",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090571000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T12:49:20+09:00",
+      "publishedAt": "2026-04-02T14:36:16+09:00",
       "hoursAgo": 1
     },
     {
@@ -36,42 +78,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090491000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T11:55:32+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "株価1300円超値下がり 原油価格高騰続く懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T11:54:58+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "株価1300円超値下がり 原油価格高騰続く懸念",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T11:54:58+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "トランプ氏 ホルムズ海峡安全確保 “日本なども役割担うべき”",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090471000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T10:41:27+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "「アルテミス計画」打ち上げ成功 人類 約半世紀ぶり月へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090331000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T09:03:11+09:00",
       "hoursAgo": 4
-    },
-    {
-      "title": "今年度予算案 参院 野党側“首相出席の集中審議が採決の条件”",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090251000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T05:29:46+09:00",
-      "hoursAgo": 8
     }
   ]
 }
