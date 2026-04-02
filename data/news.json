@@ -1,13 +1,20 @@
 {
-  "updatedAt": "2026-04-03T04:52:07.976083+09:00",
-  "updatedAtJST": "2026/04/03 04:52 JST",
+  "updatedAt": "2026-04-03T05:35:18.880491+09:00",
+  "updatedAtJST": "2026/04/03 05:35 JST",
   "totalArticles": 14,
   "articles": [
     {
-      "title": "NY原油市場 WTI先物価格 一時1バレル113ドル台まで上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091111000.html",
+      "title": "トランプ大統領 激しい攻撃を示唆 イラン側 徹底抗戦の構え",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T04:33:45+09:00",
+      "publishedAt": "2026-04-03T05:19:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "国家情報局法案 衆院審議入り 野党 必要の意見の一方で懸念も",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091091000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T05:01:19+09:00",
       "hoursAgo": 0
     },
     {
@@ -22,21 +29,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015090961000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T00:17:40+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "日英伊の次期戦闘機 国際機関が開発合弁企業と初契約",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091071000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T00:16:50+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "鹿児島 恒例の「カンパチ祭」延期へ 船の燃料高騰などで",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090991000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T23:57:07+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "横浜 交差点で小学生が車にはねられ死亡 ドライバーを逮捕",
@@ -50,49 +57,42 @@
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T22:04:30+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "「ヘリウム」米から代替調達へ “安定供給に支障なし”経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090971000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T20:01:25+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "カンパチ輸入で特例 関税なしで輸入できる範囲広げる方針 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090691000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T19:30:47+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "「国家情報局」新設置するための法案 衆議院で審議入り",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090911000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T19:23:34+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "今年度予算案 参院自民・立民 6日に集中審議開催で合意",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090671000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T18:26:03+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "円相場 値下がり トランプ大統領演説受けイラン情勢長期化見方",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090891000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T18:15:45+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "イラン情勢 カンパチやランドセルにも影響が…",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T18:14:04+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "石油原料の医療用物資など 海外含めた供給網の実態把握へ 政府",
