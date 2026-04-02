@@ -1,118 +1,111 @@
 {
-  "updatedAt": "2026-04-03T02:49:34.894911+09:00",
-  "updatedAtJST": "2026/04/03 02:49 JST",
-  "totalArticles": 16,
+  "updatedAt": "2026-04-03T03:56:46.930613+09:00",
+  "updatedAtJST": "2026/04/03 03:56 JST",
+  "totalArticles": 15,
   "articles": [
     {
       "title": "京都 南丹 男児不明 地元消防団長「一刻も早く保護したい」",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091081000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T00:36:06+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "春の園遊会 “りくりゅう”ペアなど1700人余が招待される",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015090961000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T00:17:40+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
+    },
+    {
+      "title": "日英伊の次期戦闘機 国際機関が開発合弁企業と初契約",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091071000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T00:16:50+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "鹿児島 恒例の「カンパチ祭」延期へ 船の燃料高騰などで",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090991000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T23:57:07+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "横浜 交差点で小学生が車にはねられ死亡 ドライバーを逮捕",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090931000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T22:38:35+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "【解説】トランプ大統領演説 日本経済への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T22:04:30+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "「ヘリウム」米から代替調達へ “安定供給に支障なし”経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090971000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T20:01:25+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "東京 砧公園でサクラの木倒れる 先月も 管理事務所が原因調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090881000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T19:59:09+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "カンパチ輸入で特例 関税なしで輸入できる範囲広げる方針 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090691000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T19:30:47+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "「国家情報局」新設置するための法案 衆議院で審議入り",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090911000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T19:23:34+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "「アルテミス計画」打ち上げ成功 人類 約半世紀ぶり月へ",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090331000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T18:55:25+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "今年度予算案 参院自民・立民 6日に集中審議開催で合意",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090671000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-02T18:26:03+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "円相場 値下がり トランプ大統領演説受けイラン情勢長期化見方",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090891000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T18:15:45+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "イラン情勢 カンパチやランドセルにも影響が…",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T18:14:04+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "石油原料の医療用物資など 海外含めた供給網の実態把握へ 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090811000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T17:49:01+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "株価 トランプ大統領の演説受けて一時1400円以上値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T16:44:00+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "10年ものの国債 表面利率 2.4％に引き上げ 1997年7月以来水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090651000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T14:57:19+09:00",
       "hoursAgo": 11
     }
   ]
