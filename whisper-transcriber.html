@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whisper Transcriber</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1a2332;--navy-light:#243447;--navy-muted:#2d3f55;
+  --blue:#4f7ef8;--blue-light:#6b94ff;
+  --green:#10b981;--red:#ef4444;
+  --orange:#f59e0b;--purple:#7c3aed;
+  --gray-400:#94a3b8;--gray-500:#64748b;
+  --text:#e2e8f0;--text-muted:#94a3b8;
+  --border:#2d3f55;
+  --shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif;
+  background:var(--navy);color:var(--text);min-height:100vh;display:flex;flex-direction:column;
+}
+
+/* ── HEADER ── */
+.header{
+  background:var(--navy-light);padding:0 20px;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,0.4);position:sticky;top:0;z-index:100;
+  border-bottom:1px solid var(--border);
+}
+.header-left{display:flex;align-items:center;gap:12px}
+.header-icon{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(135deg,var(--blue),#3b60d4);
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+}
+.header-title{font-size:17px;font-weight:700;color:white}
+.header-sub{font-size:11px;color:var(--text-muted)}
+.back-link{
+  font-size:12px;color:var(--text-muted);text-decoration:none;
+  padding:5px 10px;border-radius:7px;border:1px solid var(--border);transition:all .15s;
+}
+.back-link:hover{color:var(--text);border-color:var(--gray-400)}
+
+/* ── MAIN ── */
+.main{max-width:760px;margin:0 auto;padding:24px 16px 60px;width:100%;display:flex;flex-direction:column;gap:16px}
+
+/* ── CARD ── */
+.card{background:var(--navy-light);border-radius:16px;padding:20px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-bottom:14px}
+
+/* ── SETTINGS ── */
+.setting-row{display:flex;gap:8px;margin-bottom:6px}
+.setting-label{font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:4px}
+.key-input{
+  flex:1;background:var(--navy-muted);color:var(--text);border:1px solid var(--border);
+  border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;outline:none;
+}
+.key-input:focus{border-color:var(--blue)}
+.key-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
+.key-status{font-size:11px;margin-top:5px}
+.key-status.ok{color:var(--green)}
+.key-status.empty{color:var(--text-muted)}
+
+/* ── UPLOAD ZONE ── */
+.upload-zone{
+  border:2px dashed var(--border);border-radius:12px;padding:32px 20px;
+  text-align:center;cursor:pointer;transition:all .2s;background:var(--navy-muted);
+  position:relative;
+}
+.upload-zone:hover,.upload-zone.drag-over{
+  border-color:var(--blue);background:rgba(79,126,248,.07);
+}
+.upload-icon{font-size:36px;margin-bottom:10px}
+.upload-label{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.upload-hint{font-size:12px;color:var(--text-muted)}
+#fileInput{display:none}
+.file-chosen{
+  background:rgba(79,126,248,.12);border:1px solid rgba(79,126,248,.4);
+  border-radius:8px;padding:10px 14px;font-size:13px;color:var(--blue-light);
+  display:flex;align-items:center;gap:8px;margin-top:12px;
+}
+.file-chosen-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ── BUTTONS ── */
+.btn{
+  padding:10px 20px;border-radius:10px;border:none;font-size:14px;font-weight:600;
+  font-family:inherit;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:7px;
+}
+.btn-sm{padding:7px 14px;font-size:12px;border-radius:8px}
+.btn-primary{background:var(--blue);color:white}
+.btn-primary:hover{background:var(--blue-light)}
+.btn-ghost{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
+.btn-ghost:hover{color:var(--text);border-color:var(--gray-400)}
+.btn-success{background:#059669;color:white}
+.btn-success:hover{background:var(--green)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* ── TRANSCRIBE ROW ── */
+.transcribe-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
+
+/* ── PROGRESS ── */
+.progress-wrap{margin-top:12px}
+.progress-bar-bg{
+  background:var(--navy-muted);border-radius:99px;height:6px;overflow:hidden;
+}
+.progress-bar{
+  height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-light));
+  border-radius:99px;transition:width .3s;width:0%;
+}
+.progress-label{font-size:11px;color:var(--text-muted);margin-top:5px}
+
+/* ── TRANSCRIPT OUTPUT ── */
+.transcript-wrap{margin-top:4px}
+.transcript-box{
+  width:100%;min-height:180px;background:var(--navy-muted);border:1px solid var(--border);
+  border-radius:10px;padding:14px;color:var(--text);font-size:14px;line-height:1.7;
+  font-family:inherit;resize:vertical;outline:none;transition:border-color .15s;
+}
+.transcript-box:focus{border-color:var(--blue)}
+.transcript-box::placeholder{color:var(--text-muted)}
+.transcript-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
+.transcript-meta{font-size:11px;color:var(--text-muted);margin-left:auto}
+
+/* ── HISTORY ── */
+.history-list{display:flex;flex-direction:column;gap:8px}
+.history-item{
+  background:var(--navy-muted);border-radius:10px;padding:12px 14px;
+  border:1px solid var(--border);transition:all .15s;
+  display:flex;align-items:center;gap:10px;
+}
+.history-item:hover{border-color:var(--blue)}
+.history-info{flex:1;min-width:0;cursor:pointer}
+.history-date{font-size:12px;font-weight:700;color:var(--blue)}
+.history-filename{font-size:11px;color:var(--text-muted);margin:1px 0}
+.history-preview{font-size:12px;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.history-delete{
+  background:transparent;border:none;color:var(--text-muted);cursor:pointer;
+  font-size:16px;padding:2px 6px;border-radius:5px;transition:all .15s;flex-shrink:0;
+}
+.history-delete:hover{color:var(--red);background:rgba(239,68,68,.1)}
+.empty-state{text-align:center;color:var(--text-muted);font-size:13px;padding:20px 0}
+
+/* ── MODAL ── */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;
+  align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;
+}
+.modal-overlay.open{display:flex}
+.modal{
+  background:var(--navy-light);border-radius:16px;padding:22px;width:100%;max-width:680px;
+  border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,.5);margin:auto;
+}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.modal-title{font-size:15px;font-weight:700}
+.modal-close{background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:20px;line-height:1;padding:4px 8px;border-radius:6px}
+.modal-close:hover{color:var(--text);background:var(--navy-muted)}
+.modal-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--text-muted);margin-bottom:6px}
+.modal-text{font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;background:var(--navy-muted);border-radius:8px;padding:12px;border:1px solid var(--border);min-height:120px;resize:vertical;overflow-y:auto;max-height:400px}
+.modal-actions{display:flex;gap:8px;margin-top:14px;justify-content:flex-end;flex-wrap:wrap}
+
+/* ── LOADING DOTS ── */
+.dots{display:inline-flex;gap:4px;align-items:center;vertical-align:middle}
+.dots span{width:6px;height:6px;border-radius:50%;background:currentColor;animation:bounce 1.2s infinite}
+.dots span:nth-child(2){animation-delay:.2s}
+.dots span:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);
+  background:var(--navy-light);color:var(--text);border:1px solid var(--border);
+  border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);z-index:999;opacity:0;transition:all .22s;
+  pointer-events:none;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.green{border-color:var(--green);color:var(--green)}
+.toast.red{border-color:var(--red);color:var(--red)}
+
+/* ── MOBILE ── */
+@media(max-width:500px){
+  .main{padding:16px 12px 50px}
+  .card{padding:16px}
+  .btn{padding:9px 16px;font-size:13px}
+  .transcript-meta{margin-left:0;width:100%;text-align:right}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="header">
+  <div class="header-left">
+    <div class="header-icon">🎧</div>
+    <div>
+      <div class="header-title">Whisper Transcriber</div>
+      <div class="header-sub">Upload audio → get text with OpenAI Whisper</div>
+    </div>
+  </div>
+  <a class="back-link" href="index.html">← Back</a>
+</div>
+
+<!-- ── MAIN ── -->
+<div class="main">
+
+  <!-- ── SETTINGS ── -->
+  <div class="card">
+    <div class="card-title">Settings</div>
+    <div class="setting-label">OpenAI API Key</div>
+    <div class="setting-row">
+      <input id="apiKeyInput" class="key-input" type="password" placeholder="sk-..." autocomplete="off" oninput="saveKey()">
+      <button class="btn btn-ghost btn-sm" onclick="toggleKeyVisibility()">👁</button>
+    </div>
+    <div class="key-hint">Stored locally in your browser. Never sent anywhere except OpenAI.</div>
+    <div class="key-status empty" id="keyStatus">No key saved</div>
+  </div>
+
+  <!-- ── UPLOAD ── -->
+  <div class="card">
+    <div class="card-title">Transcribe Audio</div>
+
+    <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
+      <div class="upload-icon">🎵</div>
+      <div class="upload-label">Click to choose audio file</div>
+      <div class="upload-hint">Supports .m4a, .mp3, .wav, .mp4 · Max 25 MB</div>
+    </div>
+    <input id="fileInput" type="file" accept=".m4a,.mp3,.wav,.mp4,audio/*" onchange="onFileChange(event)">
+
+    <div id="fileChosen" style="display:none" class="file-chosen">
+      <span>🎵</span>
+      <span class="file-chosen-name" id="fileChosenName"></span>
+      <span id="fileChosenSize" style="flex-shrink:0;font-size:11px;color:var(--text-muted)"></span>
+    </div>
+
+    <div class="transcribe-row">
+      <button class="btn btn-primary" id="transcribeBtn" onclick="transcribe()" disabled>
+        Transcribe
+      </button>
+      <button class="btn btn-ghost btn-sm" onclick="clearFile()" id="clearBtn" style="display:none">Clear</button>
+    </div>
+
+    <div id="progressWrap" class="progress-wrap" style="display:none">
+      <div class="progress-bar-bg"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="progress-label" id="progressLabel">Uploading…</div>
+    </div>
+  </div>
+
+  <!-- ── TRANSCRIPT OUTPUT ── -->
+  <div class="card" id="outputCard" style="display:none">
+    <div class="card-title">Transcript</div>
+    <div class="transcript-wrap">
+      <textarea class="transcript-box" id="transcriptOutput" placeholder="Transcribed text will appear here…" readonly></textarea>
+    </div>
+    <div class="transcript-actions">
+      <button class="btn btn-success btn-sm" onclick="copyTranscript()">📋 Copy</button>
+      <button class="btn btn-ghost btn-sm" onclick="saveToHistory()">💾 Save to History</button>
+      <div class="transcript-meta" id="transcriptMeta"></div>
+    </div>
+  </div>
+
+  <!-- ── HISTORY ── -->
+  <div class="card">
+    <div class="card-title">History</div>
+    <div class="history-list" id="historyList">
+      <div class="empty-state">No saved transcripts yet</div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- ── MODAL (view saved transcript) ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">Transcript</div>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-section-label" id="modalMeta"></div>
+    <div class="modal-text" id="modalText"></div>
+    <div class="modal-actions">
+      <button class="btn btn-success btn-sm" onclick="copyModal()">📋 Copy</button>
+      <button class="btn btn-ghost btn-sm" onclick="closeModalDirect()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script>
+const STORAGE_KEY = 'whisper_transcripts';
+const API_KEY_KEY = 'whisper_openai_key';
+
+let currentFile = null;
+let currentTranscript = '';
+
+// ── Init ──────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  const savedKey = localStorage.getItem(API_KEY_KEY) || '';
+  if (savedKey) {
+    document.getElementById('apiKeyInput').value = savedKey;
+    updateKeyStatus(savedKey);
+  }
+  renderHistory();
+});
+
+// ── API Key ───────────────────────────────────
+function saveKey() {
+  const val = document.getElementById('apiKeyInput').value.trim();
+  if (val) {
+    localStorage.setItem(API_KEY_KEY, val);
+  } else {
+    localStorage.removeItem(API_KEY_KEY);
+  }
+  updateKeyStatus(val);
+  updateTranscribeBtn();
+}
+
+function updateKeyStatus(val) {
+  const el = document.getElementById('keyStatus');
+  if (val && val.startsWith('sk-')) {
+    el.textContent = '✓ Key saved';
+    el.className = 'key-status ok';
+  } else if (val) {
+    el.textContent = '⚠ Key looks unusual (should start with sk-)';
+    el.className = 'key-status ok';
+  } else {
+    el.textContent = 'No key saved';
+    el.className = 'key-status empty';
+  }
+}
+
+let keyVisible = false;
+function toggleKeyVisibility() {
+  keyVisible = !keyVisible;
+  document.getElementById('apiKeyInput').type = keyVisible ? 'text' : 'password';
+}
+
+// ── File Handling ─────────────────────────────
+function onFileChange(e) {
+  const file = e.target.files[0];
+  if (file) setFile(file);
+}
+
+function onDragOver(e) {
+  e.preventDefault();
+  document.getElementById('uploadZone').classList.add('drag-over');
+}
+
+function onDragLeave(e) {
+  document.getElementById('uploadZone').classList.remove('drag-over');
+}
+
+function onDrop(e) {
+  e.preventDefault();
+  document.getElementById('uploadZone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) setFile(file);
+}
+
+function setFile(file) {
+  const allowed = ['audio/mpeg', 'audio/mp4', 'audio/wav', 'audio/x-m4a', 'audio/m4a', 'video/mp4'];
+  const ext = file.name.split('.').pop().toLowerCase();
+  const allowedExts = ['mp3', 'mp4', 'm4a', 'wav'];
+  if (!allowedExts.includes(ext)) {
+    toast('Unsupported file type. Use .mp3, .mp4, .m4a, or .wav', 'red');
+    return;
+  }
+  if (file.size > 25 * 1024 * 1024) {
+    toast('File too large. OpenAI limit is 25 MB.', 'red');
+    return;
+  }
+  currentFile = file;
+  document.getElementById('fileChosen').style.display = 'flex';
+  document.getElementById('fileChosenName').textContent = file.name;
+  document.getElementById('fileChosenSize').textContent = formatSize(file.size);
+  document.getElementById('clearBtn').style.display = '';
+  document.getElementById('outputCard').style.display = 'none';
+  currentTranscript = '';
+  updateTranscribeBtn();
+}
+
+function clearFile() {
+  currentFile = null;
+  document.getElementById('fileInput').value = '';
+  document.getElementById('fileChosen').style.display = 'none';
+  document.getElementById('clearBtn').style.display = 'none';
+  document.getElementById('progressWrap').style.display = 'none';
+  updateTranscribeBtn();
+}
+
+function updateTranscribeBtn() {
+  const key = localStorage.getItem(API_KEY_KEY);
+  document.getElementById('transcribeBtn').disabled = !currentFile || !key;
+}
+
+function formatSize(bytes) {
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+// ── Transcribe ────────────────────────────────
+async function transcribe() {
+  const key = localStorage.getItem(API_KEY_KEY);
+  if (!key || !currentFile) return;
+
+  const btn = document.getElementById('transcribeBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'Transcribing <span class="dots"><span></span><span></span><span></span></span>';
+
+  const progressWrap = document.getElementById('progressWrap');
+  const progressBar = document.getElementById('progressBar');
+  const progressLabel = document.getElementById('progressLabel');
+  progressWrap.style.display = '';
+  progressBar.style.width = '0%';
+  progressLabel.textContent = 'Uploading to OpenAI…';
+
+  // Fake progress animation while we wait
+  let pct = 0;
+  const ticker = setInterval(() => {
+    pct = Math.min(pct + (pct < 60 ? 3 : pct < 85 ? 1 : 0.3), 90);
+    progressBar.style.width = pct + '%';
+  }, 300);
+
+  try {
+    const form = new FormData();
+    form.append('file', currentFile, currentFile.name);
+    form.append('model', 'whisper-1');
+
+    const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + key },
+      body: form,
+    });
+
+    clearInterval(ticker);
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `API error ${res.status}`);
+    }
+
+    const data = await res.json();
+    currentTranscript = data.text || '';
+
+    progressBar.style.width = '100%';
+    progressLabel.textContent = 'Done!';
+    setTimeout(() => { progressWrap.style.display = 'none'; }, 1200);
+
+    const outputCard = document.getElementById('outputCard');
+    const box = document.getElementById('transcriptOutput');
+    box.value = currentTranscript;
+    document.getElementById('transcriptMeta').textContent =
+      currentFile.name + ' · ' + formatSize(currentFile.size) + ' · ' + new Date().toLocaleTimeString();
+    outputCard.style.display = '';
+    outputCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    toast('Transcription complete!', 'green');
+  } catch (e) {
+    clearInterval(ticker);
+    progressWrap.style.display = 'none';
+    toast('Error: ' + e.message, 'red');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Transcribe';
+    updateTranscribeBtn();
+  }
+}
+
+// ── Copy ──────────────────────────────────────
+function copyTranscript() {
+  const text = document.getElementById('transcriptOutput').value;
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => toast('Copied!', 'green'));
+}
+
+// ── History ───────────────────────────────────
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+  catch { return []; }
+}
+
+function saveToHistory() {
+  if (!currentTranscript) return;
+  const history = loadHistory();
+  history.unshift({
+    id: Date.now(),
+    filename: currentFile ? currentFile.name : 'unknown',
+    text: currentTranscript,
+    date: new Date().toISOString(),
+  });
+  // Keep max 50 entries
+  if (history.length > 50) history.length = 50;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+  renderHistory();
+  toast('Saved to history', 'green');
+}
+
+function deleteHistory(id) {
+  const history = loadHistory().filter(h => h.id !== id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+  renderHistory();
+  toast('Deleted');
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  const history = loadHistory();
+  if (!history.length) {
+    list.innerHTML = '<div class="empty-state">No saved transcripts yet</div>';
+    return;
+  }
+  list.innerHTML = history.map(h => {
+    const d = new Date(h.date);
+    const dateStr = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const preview = h.text.slice(0, 80) + (h.text.length > 80 ? '…' : '');
+    return `
+      <div class="history-item">
+        <div class="history-info" onclick="openModal(${h.id})">
+          <div class="history-date">${dateStr}</div>
+          <div class="history-filename">${escHtml(h.filename)}</div>
+          <div class="history-preview">${escHtml(preview)}</div>
+        </div>
+        <button class="history-delete" onclick="deleteHistory(${h.id})" title="Delete">🗑</button>
+      </div>
+    `;
+  }).join('');
+}
+
+// ── Modal ─────────────────────────────────────
+function openModal(id) {
+  const history = loadHistory();
+  const entry = history.find(h => h.id === id);
+  if (!entry) return;
+  const d = new Date(entry.date);
+  document.getElementById('modalTitle').textContent = entry.filename;
+  document.getElementById('modalMeta').textContent =
+    d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  document.getElementById('modalText').textContent = entry.text;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+}
+
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+function copyModal() {
+  const text = document.getElementById('modalText').textContent;
+  navigator.clipboard.writeText(text).then(() => toast('Copied!', 'green'));
+}
+
+// ── Toast ─────────────────────────────────────
+let toastTimer = null;
+function toast(msg, type = '') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast show' + (type ? ' ' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = 'toast'; }, 2800);
+}
+
+// ── Util ──────────────────────────────────────
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
