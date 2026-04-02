@@ -1,76 +1,97 @@
 {
-  "updatedAt": "2026-04-02T19:04:21.964081+09:00",
-  "updatedAtJST": "2026/04/02 19:04 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-04-02T20:44:45.549622+09:00",
+  "updatedAtJST": "2026/04/02 20:44 JST",
+  "totalArticles": 16,
   "articles": [
     {
-      "title": "【解説】トランプ大統領演説 日本経済への影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
+      "title": "「ヘリウム」米から代替調達へ “安定供給に支障なし”経産省",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090971000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T18:56:42+09:00",
+      "publishedAt": "2026-04-02T20:01:25+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "今年度予算案 参院自民・立民 6日に集中審議開催で合意",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090671000.html",
+      "title": "東京 公園でサクラの木倒れる 先月にも 管理事務所が原因調査",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090881000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T18:26:03+09:00",
+      "publishedAt": "2026-04-02T19:59:09+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "トランプ大統領演説 イランをめぐる主張の事実関係を検証",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090631000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T18:21:22+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "円相場 値下がり トランプ大統領演説受けイラン情勢長期化見方",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090891000.html",
+      "title": "カンパチ輸入で特例 関税なしで輸入できる範囲広げる方針 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090691000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T18:15:45+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "イラン情勢 カンパチやランドセルにも影響が…",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T18:14:04+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "イラン情勢 カンパチやランドセルにも影響が…",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T18:14:04+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "ロコ・ソラーレ 日本選手権のメンバーに小穴桃里ら2人を登録",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090871000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T18:05:58+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "石油原料の医療用物資など 海外含めた供給網の実態把握へ 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090811000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T17:49:01+09:00",
+      "publishedAt": "2026-04-02T19:30:47+09:00",
       "hoursAgo": 1
     },
     {
       "title": "【演説詳細】トランプ大統領 “今後2～3週間 激しい攻撃行う”",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090401000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T17:36:03+09:00",
+      "publishedAt": "2026-04-02T19:30:02+09:00",
       "hoursAgo": 1
     },
     {
-      "title": "大麻使用などで検挙 去年6800人余過去最多 10代20代7割占める",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090791000.html",
+      "title": "横浜 交差点で女児が車にはねられ意識不明 ドライバーを逮捕",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090931000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T16:50:20+09:00",
+      "publishedAt": "2026-04-02T19:25:38+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「国家情報局」新設置するための法案 衆議院で審議入り",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090911000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T19:23:34+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "【解説】トランプ大統領演説 日本経済への影響は",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T19:23:05+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "今年度予算案 参院自民・立民 6日に集中審議開催で合意",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090671000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T18:26:03+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "トランプ大統領演説 イランをめぐる主張の事実関係を検証",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090631000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T18:21:22+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "円相場 値下がり トランプ大統領演説受けイラン情勢長期化見方",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090891000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T18:15:45+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "イラン情勢 カンパチやランドセルにも影響が…",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T18:14:04+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "イラン情勢 カンパチやランドセルにも影響が…",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090761000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-02T18:14:04+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "石油原料の医療用物資など 海外含めた供給網の実態把握へ 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090811000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-02T17:49:01+09:00",
       "hoursAgo": 2
     },
     {
@@ -78,35 +99,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090511000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T16:44:00+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "桜の名所 東京 千代田区の千鳥ケ淵で桜の木倒れる けが人なし",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090681000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-02T15:11:34+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "カンパチ輸入で特例 関税なしで輸入できる範囲広げる方針 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090691000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T15:09:08+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "10年ものの国債 表面利率 2.4％に引き上げ 1997年7月以来水準",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090651000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T14:57:19+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "【きょうのおはBiz 4月2日(木)】原油価格上昇 物価への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090491000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T11:55:32+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     }
   ]
 }
