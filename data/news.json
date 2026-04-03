@@ -1,77 +1,84 @@
 {
-  "updatedAt": "2026-04-03T08:34:28.672450+09:00",
-  "updatedAtJST": "2026/04/03 08:34 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-03T11:13:50.342142+09:00",
+  "updatedAtJST": "2026/04/03 11:13 JST",
+  "totalArticles": 11,
   "articles": [
+    {
+      "title": "トランプ大統領 輸入医薬品に100％の追加関税 署名 日本は15％",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091221000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T11:11:42+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トランプ大統領 激しい攻撃を示唆 イラン側 徹底抗戦の構え",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T11:10:17+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "政府 成年後見制度の見直しを柱とした民法などの改正案を決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091241000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T11:00:02+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T10:48:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T10:48:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T10:30:01+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T10:30:01+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "“イラン革命防衛隊 米IT大手アマゾンの関連施設を攻撃”報道",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091141000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T07:56:35+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "米テスラ 1～3月の販売台数 前年同期比6.3％増 欧州で販売回復",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T07:09:54+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "トランプ大統領 激しい攻撃を示唆 イラン側 徹底抗戦の構え",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T06:14:23+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "トランプ大統領 司法長官を解任 エプスタイン文書めぐり不満か",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091121000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T05:55:48+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "日本など40か国以上の外相会議 英“イランに制裁などを議論”",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091041000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T05:33:02+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "国家情報局法案 衆院審議入り 野党 必要の意見の一方で懸念も",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091091000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T05:01:19+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "春の園遊会 “りくりゅう”ペアなど1700人余が招待される",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015090961000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T00:17:40+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "日英伊の次期戦闘機 国際機関が開発合弁企業と初契約",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091071000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T00:16:50+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 5
     },
     {
       "title": "鹿児島 恒例の「カンパチ祭」延期へ 船の燃料高騰などで",
       "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090991000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-02T23:57:07+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "【解説】トランプ大統領演説 日本経済への影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090461000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T22:04:30+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
