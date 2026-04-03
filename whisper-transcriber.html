@@ -183,7 +183,14 @@ body{
   .btn{padding:9px 16px;font-size:13px}
   .transcript-meta{margin-left:0;width:100%;text-align:right}
 }
+/* ── DRIVE ── */
+.drive-link{
+  font-size:12px;color:var(--blue-light);text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;margin-top:8px;
+}
+.drive-link:hover{text-decoration:underline}
 </style>
+<script src="google-drive-auth.js"></script>
 </head>
 <body>
 
@@ -247,7 +254,11 @@ body{
     <div class="transcript-actions">
       <button class="btn btn-success btn-sm" onclick="copyTranscript()">📋 Copy</button>
       <button class="btn btn-ghost btn-sm" onclick="saveToHistory()">💾 Save to History</button>
+      <button class="btn btn-ghost btn-sm" id="driveBtn" onclick="saveToDrive()">☁️ Save to Drive</button>
       <div class="transcript-meta" id="transcriptMeta"></div>
+    </div>
+    <div id="driveLinkWrap" style="display:none">
+      <a class="drive-link" id="driveLink" href="#" target="_blank">📄 View in Google Drive →</a>
     </div>
   </div>
 
@@ -515,6 +526,33 @@ function toast(msg, type = '') {
   el.className = 'toast show' + (type ? ' ' + type : '');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => { el.className = 'toast'; }, 2800);
+}
+
+// ── Google Drive ──────────────────────────────
+const DRIVE_CLIENT_ID = '222500308682-9eivs5899jtojlqfp2opado9efraf73m.apps.googleusercontent.com';
+const DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive.file';
+
+async function saveToDrive() {
+  if (!currentTranscript) return;
+  const btn = document.getElementById('driveBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Connecting…';
+  try {
+    await initGoogleDrive(DRIVE_CLIENT_ID, DRIVE_SCOPE);
+    btn.textContent = '⬆️ Uploading…';
+    const filename = currentFile
+      ? currentFile.name.replace(/\.[^.]+$/, '') + '_transcript.txt'
+      : 'whisper_transcript_' + Date.now() + '.txt';
+    const url = await uploadToDrive(filename, currentTranscript, 'text/plain');
+    document.getElementById('driveLink').href = url;
+    document.getElementById('driveLinkWrap').style.display = '';
+    toast('Saved to Google Drive!', 'green');
+    btn.textContent = '✓ Saved';
+  } catch (e) {
+    toast('Drive error: ' + e.message, 'red');
+    btn.disabled = false;
+    btn.textContent = '☁️ Save to Drive';
+  }
 }
 
 // ── Util ──────────────────────────────────────
