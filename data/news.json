@@ -1,147 +1,161 @@
 {
-  "updatedAt": "2026-04-03T20:37:09.621548+09:00",
-  "updatedAtJST": "2026/04/03 20:37 JST",
-  "totalArticles": 20,
+  "updatedAt": "2026-04-03T22:02:57.417523+09:00",
+  "updatedAtJST": "2026/04/03 22:02 JST",
+  "totalArticles": 22,
   "articles": [
+    {
+      "title": "米 3月雇用統計 就業者は前月比17万8000人増 減速懸念和らぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091911000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T22:01:46+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "渋谷スクランブル交差点「何者か液体まきライターで火つけた」",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091871000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T21:52:40+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T21:24:07+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T21:24:07+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "企業向け高圧の電力供給 新たな契約一時停止も イラン情勢で",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091781000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T20:35:40+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "米軍がテヘラン郊外の橋を攻撃 イラン側反発 徹底抗戦の構え",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T20:22:51+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "北海道 フェリーにも「燃料サーチャージ」導入 原油価格高騰で",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091721000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T19:25:57+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "旧統一教会 解散命令1か月 清算手続き進む 教会を使えず信者は",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091291000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T19:25:14+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "沖縄 辺野古沖の転覆事故 海上保安本部が転覆した船2隻を押収",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091741000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T19:17:58+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "円相場 1ドル＝159円台半ば中心に小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091351000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:47:18+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "京都 南丹 男児不明 ため池捜索も新たな手がかり見つからず",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091531000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T18:39:38+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "春闘 平均賃上げ率は5％超の水準を維持 連合が集計",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091661000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:31:26+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3935円 7週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091621000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:27:34+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "スーパーのコメ平均価格 5キロ 3935円 7週連続で値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091621000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T18:27:34+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "代替ルートで調達の原油 来月から本格的に到着の見通し 経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091651000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:02:49+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "“ホルムズ海峡 イラン側が一部の船舶から通航料徴収”米報道",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091641000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T17:57:38+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T17:20:55+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T17:20:55+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "株価 一時900円余値上がり 前日値下がりの銘柄買い戻す動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091341000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T16:29:06+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "フェリー減便 国交相“燃料流通の目詰まり解消に取り組む”",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091441000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T14:00:53+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "給付付き税額控除の制度設計 中道 立民 公明 作業チーム初会合",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091421000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T13:40:15+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "きょうのおはBiz 4月3日(金) カンパチ 養殖業者を支援",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091271000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T12:12:12+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:48:12+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:30:01+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
