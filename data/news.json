@@ -1,132 +1,125 @@
 {
-  "updatedAt": "2026-04-04T04:37:35.463462+09:00",
-  "updatedAtJST": "2026/04/04 04:37 JST",
-  "totalArticles": 18,
+  "updatedAt": "2026-04-04T05:35:54.498874+09:00",
+  "updatedAtJST": "2026/04/04 05:35 JST",
+  "totalArticles": 17,
   "articles": [
+    {
+      "title": "ドジャース 大谷翔平 今季初ホームラン 開幕7試合目で",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091961000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T05:32:45+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "安全保障関連3文書改定 有識者会議メンバーに佐々江氏ら起用へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091801000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T05:11:46+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "今年度予算案 与党側は来週前半にも採決行いたい考え",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091931000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T05:06:52+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "フィギュア “りくりゅう”ペアがオリンピック後初の演技披露",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092001000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T04:48:41+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "北九州 若松区 3歳女児が車にはねられ死亡",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092021000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T01:43:31+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
+    },
+    {
+      "title": "WFP事務局次長 イラン情勢で「支援できる人数減る」と危機感",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091981000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T00:07:09+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "米 3月雇用統計 就業者は前月比17万8000人増 減速懸念和らぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091911000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T23:52:04+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "米 3月雇用統計 就業者は前月比17万8000人増 減速懸念和らぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091911000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T23:52:04+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "スカイマーク 来年春にも国内線に燃油サーチャージ導入を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091991000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T23:50:56+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "スカイマーク 来年春にも国内線に燃油サーチャージ導入を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091991000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T23:50:56+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "渋谷スクランブル交差点 路上に火 50代男が警察署に出頭",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091871000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T23:50:21+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "発電向け燃料確保に懸念 夏に向け需給見通し示す取り組み開始",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091901000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T22:17:52+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "発電向け燃料確保に懸念 夏に向け需給見通し示す取り組み開始",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091901000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T22:17:52+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T21:24:07+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T21:24:07+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "毎日新聞社 元取締役のセクハラ行為を発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091791000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T20:47:48+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "企業向け高圧の電力供給 新たな契約一時停止も イラン情勢で",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091781000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T20:35:40+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "北海道 フェリーにも「燃料サーチャージ」導入 原油価格高騰で",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091721000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T19:25:57+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "円相場 1ドル＝159円台半ば中心に小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091351000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:47:18+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "春闘 平均賃上げ率は5％超の水準を維持 連合が集計",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091661000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:31:26+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3935円 7週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091621000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:27:34+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "代替ルートで調達の原油 来月から本格的に到着の見通し 経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091651000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T18:02:49+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-03T17:20:55+09:00",
       "hoursAgo": 11
     }
   ]
