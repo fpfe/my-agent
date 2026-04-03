@@ -1,48 +1,48 @@
 {
-  "updatedAt": "2026-04-04T07:33:01.550528+09:00",
-  "updatedAtJST": "2026/04/04 07:33 JST",
+  "updatedAt": "2026-04-04T08:33:40.804836+09:00",
+  "updatedAtJST": "2026/04/04 08:33 JST",
   "totalArticles": 12,
   "articles": [
+    {
+      "title": "ドジャース 大谷翔平 今季初ホームラン 開幕7試合目で",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091961000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T08:31:11+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "レバノン イラン支援組織とイスラエルの戦闘続く 人道状況悪化",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091821000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T07:33:10+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "“米軍戦闘機を撃墜”イランメディア伝える 攻撃の応酬続く",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T07:04:22+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "沖縄 辺野古沖の転覆事故 生徒の遺族が娘への思いなど情報発信",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092031000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T06:42:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "渋谷スクランブル交差点 路上に火 自首してきた50代男を逮捕",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091871000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T06:21:19+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "終末期に在宅医療受けた人 推計1割近くにとどまる 専門家分析",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091881000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T05:50:40+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "ドジャース 大谷翔平 今季初ホームラン 開幕7試合目で",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091961000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T05:32:45+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "今年度予算案 与党側は来週前半にも採決行いたい考え",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091931000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T05:06:52+09:00",
       "hoursAgo": 2
     },
     {
@@ -50,42 +50,42 @@
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091911000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T23:52:04+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "スカイマーク 来年春にも国内線に燃油サーチャージ導入を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091991000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T23:50:56+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "発電向け燃料確保に懸念 夏に向け需給見通し示す取り組み開始",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091901000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T22:17:52+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T21:24:07+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "商船三井LNG運搬船 ホルムズ海峡通過 軍事作戦後 日本関係で初",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091851000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T21:24:07+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "企業向け高圧の電力供給 新たな契約一時停止も イラン情勢で",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091781000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T20:35:40+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
