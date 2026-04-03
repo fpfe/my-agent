@@ -1,62 +1,111 @@
 {
-  "updatedAt": "2026-04-03T11:13:50.342142+09:00",
-  "updatedAtJST": "2026/04/03 11:13 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-04-03T14:04:43.117763+09:00",
+  "updatedAtJST": "2026/04/03 14:04 JST",
+  "totalArticles": 16,
   "articles": [
+    {
+      "title": "フェリー減便 国交相“燃料流通の目詰まり解消に取り組む”",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091441000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T14:00:53+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "フェリー減便 国交相“燃料流通の目詰まり解消に取り組む”",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091441000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T14:00:53+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【Q＆Aで詳しく】「こども誰でも通園制度」開始 どんな制度?",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091251000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T13:49:42+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "給付付き税額控除の制度設計 中道 立民 公明 作業チーム初会合",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091421000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T13:40:15+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T12:23:03+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T12:23:03+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時 900円以上値上がり 値下がりした銘柄買い戻す動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091341000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T12:17:09+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「アルテミス計画」の宇宙船 地球回る軌道外れ 月への飛行開始",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091311000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T12:14:33+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 1ドル＝159円台後半 円安続く 財務相 市場の動きけん制",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091351000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T12:12:36+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "きょうのおはBiz 4月3日(金) カンパチ 養殖業者を支援",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091271000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T12:12:12+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "“取り調べで反社発言”検事不起訴に不服 被告側が付審判請求",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091331000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T12:06:40+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "米軍がテヘラン郊外の橋を攻撃 イラン側は徹底抗戦続ける構え",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T12:00:52+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "トランプ大統領 輸入医薬品に100％の追加関税 署名 日本は15％",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091221000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T11:11:42+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ大統領 激しい攻撃を示唆 イラン側 徹底抗戦の構え",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T11:10:17+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "政府 成年後見制度の見直しを柱とした民法などの改正案を決定",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091241000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T11:00:02+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:48:12+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T10:48:12+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:30:01+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T10:30:01+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "“イラン革命防衛隊 米IT大手アマゾンの関連施設を攻撃”報道",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091141000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T07:56:35+09:00",
       "hoursAgo": 3
     },
     {
@@ -64,21 +113,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T07:09:54+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "トランプ大統領 司法長官を解任 エプスタイン文書めぐり不満か",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091121000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T05:55:48+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "鹿児島 恒例の「カンパチ祭」延期へ 船の燃料高騰などで",
-      "url": "http://www3.nhk.or.jp/news/html/20260402/k10015090991000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-02T23:57:07+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
