@@ -120,42 +120,44 @@ body{
 .transcript-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
 .transcript-meta{font-size:11px;color:var(--text-muted);margin-left:auto}
 
-/* ── HISTORY ── */
-.history-list{display:flex;flex-direction:column;gap:8px}
-.history-item{
-  background:var(--navy-muted);border-radius:10px;padding:12px 14px;
-  border:1px solid var(--border);transition:all .15s;
-  display:flex;align-items:center;gap:10px;
+/* ── SYNC LOG ── */
+.log-list{display:flex;flex-direction:column;gap:8px}
+.log-item{
+  background:var(--navy-muted);border-radius:10px;
+  border:1px solid var(--border);transition:border-color .15s;overflow:hidden;
 }
-.history-item:hover{border-color:var(--blue)}
-.history-info{flex:1;min-width:0;cursor:pointer}
-.history-date{font-size:12px;font-weight:700;color:var(--blue)}
-.history-filename{font-size:11px;color:var(--text-muted);margin:1px 0}
-.history-preview{font-size:12px;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.history-delete{
+.log-item:hover{border-color:var(--blue)}
+.log-summary{
+  display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;
+}
+.log-status{font-size:15px;flex-shrink:0}
+.log-info{flex:1;min-width:0}
+.log-filename{font-size:13px;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.log-date-preview{font-size:11px;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
+.log-btns{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.log-icon-btn{
   background:transparent;border:none;color:var(--text-muted);cursor:pointer;
-  font-size:16px;padding:2px 6px;border-radius:5px;transition:all .15s;flex-shrink:0;
+  font-size:15px;padding:3px 6px;border-radius:5px;transition:all .15s;
 }
-.history-delete:hover{color:var(--red);background:rgba(239,68,68,.1)}
+.log-icon-btn:hover{color:var(--text);background:rgba(255,255,255,.07)}
+.log-icon-btn.del:hover{color:var(--red);background:rgba(239,68,68,.1)}
+.log-chevron{font-size:10px;color:var(--text-muted);padding:3px 4px}
+.log-expanded{
+  border-top:1px solid var(--border);padding:14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.log-full-text{
+  background:var(--navy-light);border:1px solid var(--border);border-radius:8px;
+  padding:12px;font-size:13px;line-height:1.7;color:var(--text);
+  white-space:pre-wrap;max-height:260px;overflow-y:auto;
+}
+.log-expand-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.log-drive-link{
+  font-size:12px;color:var(--blue-light);text-decoration:none;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.log-drive-link:hover{text-decoration:underline}
 .empty-state{text-align:center;color:var(--text-muted);font-size:13px;padding:20px 0}
-
-/* ── MODAL ── */
-.modal-overlay{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;
-  align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;
-}
-.modal-overlay.open{display:flex}
-.modal{
-  background:var(--navy-light);border-radius:16px;padding:22px;width:100%;max-width:680px;
-  border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,.5);margin:auto;
-}
-.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.modal-title{font-size:15px;font-weight:700}
-.modal-close{background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:20px;line-height:1;padding:4px 8px;border-radius:6px}
-.modal-close:hover{color:var(--text);background:var(--navy-muted)}
-.modal-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--text-muted);margin-bottom:6px}
-.modal-text{font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;background:var(--navy-muted);border-radius:8px;padding:12px;border:1px solid var(--border);min-height:120px;resize:vertical;overflow-y:auto;max-height:400px}
-.modal-actions{display:flex;gap:8px;margin-top:14px;justify-content:flex-end;flex-wrap:wrap}
 
 /* ── LOADING DOTS ── */
 .dots{display:inline-flex;gap:4px;align-items:center;vertical-align:middle}
@@ -262,31 +264,15 @@ body{
     </div>
   </div>
 
-  <!-- ── HISTORY ── -->
+  <!-- ── SYNC LOG ── -->
   <div class="card">
-    <div class="card-title">History</div>
-    <div class="history-list" id="historyList">
+    <div class="card-title">Google Drive Sync Log</div>
+    <div class="log-list" id="historyList">
       <div class="empty-state">No saved transcripts yet</div>
     </div>
   </div>
 
 </div><!-- /main -->
-
-<!-- ── MODAL (view saved transcript) ── -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title" id="modalTitle">Transcript</div>
-      <button class="modal-close" onclick="closeModalDirect()">✕</button>
-    </div>
-    <div class="modal-section-label" id="modalMeta"></div>
-    <div class="modal-text" id="modalText"></div>
-    <div class="modal-actions">
-      <button class="btn btn-success btn-sm" onclick="copyModal()">📋 Copy</button>
-      <button class="btn btn-ghost btn-sm" onclick="closeModalDirect()">Close</button>
-    </div>
-  </div>
-</div>
 
 <!-- ── TOAST ── -->
 <div class="toast" id="toast"></div>
@@ -453,19 +439,65 @@ function saveToHistory() {
     filename: currentFile ? currentFile.name : 'unknown',
     text: currentTranscript,
     date: new Date().toISOString(),
+    driveUrl: null,
   });
-  // Keep max 50 entries
   if (history.length > 50) history.length = 50;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
   renderHistory();
-  toast('Saved to history', 'green');
+  toast('Saved to log', 'green');
 }
 
-function deleteHistory(id) {
-  const history = loadHistory().filter(h => h.id !== id);
+function updateHistoryWithDriveUrl(text, url) {
+  const history = loadHistory();
+  const entry = history.find(h => h.text === text);
+  if (entry) {
+    entry.driveUrl = url;
+  } else {
+    history.unshift({
+      id: Date.now(),
+      filename: currentFile ? currentFile.name : 'unknown',
+      text: text,
+      date: new Date().toISOString(),
+      driveUrl: url,
+    });
+    if (history.length > 50) history.length = 50;
+  }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
   renderHistory();
+}
+
+function deleteHistory(e, id) {
+  e.stopPropagation();
+  const history = loadHistory().filter(h => h.id !== id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+  if (expandedId === id) expandedId = null;
+  renderHistory();
   toast('Deleted');
+}
+
+function downloadTranscript(e, id) {
+  e.stopPropagation();
+  const entry = loadHistory().find(h => h.id === id);
+  if (!entry) return;
+  const blob = new Blob([entry.text], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = entry.filename.replace(/\.[^.]+$/, '') + '_transcript.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+let expandedId = null;
+
+function toggleExpand(id) {
+  expandedId = expandedId === id ? null : id;
+  renderHistory();
+}
+
+function copyLogEntry(id) {
+  const entry = loadHistory().find(h => h.id === id);
+  if (!entry) return;
+  navigator.clipboard.writeText(entry.text).then(() => toast('Copied!', 'green'));
 }
 
 function renderHistory() {
@@ -479,43 +511,37 @@ function renderHistory() {
     const d = new Date(h.date);
     const dateStr = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const preview = h.text.slice(0, 80) + (h.text.length > 80 ? '…' : '');
-    return `
-      <div class="history-item">
-        <div class="history-info" onclick="openModal(${h.id})">
-          <div class="history-date">${dateStr}</div>
-          <div class="history-filename">${escHtml(h.filename)}</div>
-          <div class="history-preview">${escHtml(preview)}</div>
+    const synced = !!h.driveUrl;
+    const isOpen = expandedId === h.id;
+    const driveLink = synced
+      ? `<a class="log-drive-link" href="${escHtml(h.driveUrl)}" target="_blank" onclick="event.stopPropagation()">📄 View in Google Drive</a>`
+      : '';
+    const expandedPanel = isOpen ? `
+      <div class="log-expanded">
+        <div class="log-full-text">${escHtml(h.text)}</div>
+        <div class="log-expand-actions">
+          <button class="btn btn-success btn-sm" onclick="copyLogEntry(${h.id})">📋 Copy</button>
+          ${driveLink}
+          <button class="btn btn-ghost btn-sm" onclick="toggleExpand(${h.id})">✕ Close</button>
         </div>
-        <button class="history-delete" onclick="deleteHistory(${h.id})" title="Delete">🗑</button>
-      </div>
-    `;
+      </div>` : '';
+    return `
+      <div class="log-item">
+        <div class="log-summary" onclick="toggleExpand(${h.id})">
+          <div class="log-status" title="${synced ? 'Saved to Google Drive' : 'Local only'}">${synced ? '☁️' : '💾'}</div>
+          <div class="log-info">
+            <div class="log-filename">${escHtml(h.filename)}</div>
+            <div class="log-date-preview">${dateStr} · ${escHtml(preview)}</div>
+          </div>
+          <div class="log-btns">
+            <button class="log-icon-btn" onclick="downloadTranscript(event, ${h.id})" title="Download .txt">⬇</button>
+            <button class="log-icon-btn del" onclick="deleteHistory(event, ${h.id})" title="Delete">🗑</button>
+            <span class="log-chevron">${isOpen ? '▲' : '▼'}</span>
+          </div>
+        </div>
+        ${expandedPanel}
+      </div>`;
   }).join('');
-}
-
-// ── Modal ─────────────────────────────────────
-function openModal(id) {
-  const history = loadHistory();
-  const entry = history.find(h => h.id === id);
-  if (!entry) return;
-  const d = new Date(entry.date);
-  document.getElementById('modalTitle').textContent = entry.filename;
-  document.getElementById('modalMeta').textContent =
-    d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  document.getElementById('modalText').textContent = entry.text;
-  document.getElementById('modalOverlay').classList.add('open');
-}
-
-function closeModal(e) {
-  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
-}
-
-function closeModalDirect() {
-  document.getElementById('modalOverlay').classList.remove('open');
-}
-
-function copyModal() {
-  const text = document.getElementById('modalText').textContent;
-  navigator.clipboard.writeText(text).then(() => toast('Copied!', 'green'));
 }
 
 // ── Toast ─────────────────────────────────────
@@ -546,6 +572,7 @@ async function saveToDrive() {
     const url = await uploadToDrive(filename, currentTranscript, 'text/plain');
     document.getElementById('driveLink').href = url;
     document.getElementById('driveLinkWrap').style.display = '';
+    updateHistoryWithDriveUrl(currentTranscript, url);
     toast('Saved to Google Drive!', 'green');
     btn.textContent = '✓ Saved';
   } catch (e) {
