@@ -1,27 +1,69 @@
 {
-  "updatedAt": "2026-04-03T17:54:04.235649+09:00",
-  "updatedAtJST": "2026/04/03 17:54 JST",
-  "totalArticles": 17,
+  "updatedAt": "2026-04-03T18:52:57.630099+09:00",
+  "updatedAtJST": "2026/04/03 18:52 JST",
+  "totalArticles": 19,
   "articles": [
     {
-      "title": "イラン情勢 自民“石油製品や燃料安定供給 国民へ情報提供を”",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091611000.html",
+      "title": "円相場 1ドル＝159円台半ば中心に小幅な値動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091351000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T18:47:18+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "京都 南丹 男児不明 ため池捜索も新たな手がかり見つからず",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091531000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T17:41:43+09:00",
+      "publishedAt": "2026-04-03T18:39:38+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "春闘 平均賃上げ率は5％超の水準を維持 連合が集計",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091661000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T18:31:26+09:00",
       "hoursAgo": 0
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3935円 7週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091621000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-03T17:32:52+09:00",
+      "publishedAt": "2026-04-03T18:27:34+09:00",
       "hoursAgo": 0
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3935円 7週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091621000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T17:32:52+09:00",
+      "publishedAt": "2026-04-03T18:27:34+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "「アルテミス計画」宇宙船が出す電波追跡に福井の大学が参加",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091591000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T18:11:00+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "代替ルートで調達の原油 来月から本格的に到着の見通し 経産省",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091651000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-03T18:02:49+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "代替ルートで調達の原油 来月から本格的に到着の見通し 経産省",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091651000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T18:02:49+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "“ホルムズ海峡 イラン側が一部の船舶から通航料徴収”米報道",
+      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091641000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-03T17:57:38+09:00",
       "hoursAgo": 0
     },
     {
@@ -29,69 +71,41 @@
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T17:20:55+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "マイクロソフト 日本国内でのAI開発に約1兆6000億円投資",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091261000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T17:20:55+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "第2次高市内閣 閣僚の資産公開 平均6591万円 1億円超は5人",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091551000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T17:00:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "株価 一時900円余値上がり 前日値下がりの銘柄買い戻す動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091341000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T16:29:06+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "米軍がテヘラン郊外の橋を攻撃 イラン側は徹底抗戦続ける構え",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091101000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-03T15:47:31+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "京都 南丹 男児不明 リュックが見つかった付近のため池を捜索",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091531000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T15:44:59+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "トランプ大統領 輸入医薬品に100％の追加関税 署名 日本は15％",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091221000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-03T15:06:53+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "フェリー減便 国交相“燃料流通の目詰まり解消に取り組む”",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091441000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T14:00:53+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "給付付き税額控除の制度設計 中道 立民 公明 作業チーム初会合",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091421000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T13:40:15+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "円相場 1ドル＝159円台後半 円安続く 財務相 市場の動きけん制",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091351000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-03T12:12:36+09:00",
       "hoursAgo": 5
     },
     {
@@ -99,28 +113,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091271000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T12:12:12+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "長期金利 一時2.395％まで上昇 約27年ぶりの高い水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091281000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:48:12+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "“備蓄米保有を民間業者に義務づけ” 食糧法改正案を閣議決定",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T10:30:01+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "米テスラ 1～3月の販売台数 前年同期比6.3％増 欧州で販売回復",
       "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-03T07:09:54+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
