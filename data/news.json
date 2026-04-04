@@ -1,63 +1,63 @@
 {
-  "updatedAt": "2026-04-05T02:29:47.276245+09:00",
-  "updatedAtJST": "2026/04/05 02:29 JST",
+  "updatedAt": "2026-04-05T03:41:56.460119+09:00",
+  "updatedAtJST": "2026/04/05 03:41 JST",
   "totalArticles": 8,
   "articles": [
+    {
+      "title": "トランプ大統領「あと48時間」 イラン「新防空システム導入」",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T02:29:16+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "強風など各地で大荒れの天気 東・北日本は明け方にかけ警戒を",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T23:00:20+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "“米軍戦闘機など2機 イランの攻撃で墜落 1人行方不明” 報道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T22:25:11+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "トリカブトを誤食 80代男性が死亡 北海道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092221000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T17:59:49+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "東大 特任准教授ら21人処分 5万円の飲食接待も 不祥事受け調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092191000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T15:34:20+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 9
     }
   ]
 }
