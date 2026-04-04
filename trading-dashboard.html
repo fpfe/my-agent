@@ -1564,6 +1564,13 @@ function calcOpenPositions() {
     (a.約定日 || '').localeCompare(b.約定日 || '')
   );
 
+  // TEMP DEBUG: print all 2579 trades in the order they are processed
+  console.log('[2579 trades in tradesAsc order]',
+    tradesAsc
+      .filter(t => t.銘柄コード.trim() === '2579')
+      .map(t => `${t.約定日} ${t.取引種別} ${t.数量}株 @${t.単価} key=${t._key}`)
+  );
+
   // === 現物買残高 (FIFO) ===
   const spotMap = {};
   tradesAsc
@@ -1602,7 +1609,7 @@ function calcOpenPositions() {
         if (price > 0) mLongMap[code].lastPrice = price;
       }
       if (t.取引種別.includes('返済売')) {
-        mLongMap[code].qty = Math.max(0, mLongMap[code].qty - qty);
+        mLongMap[code].qty = mLongMap[code].qty - qty;
         if (price > 0) mLongMap[code].lastPrice = price;
       }
     });
@@ -1625,7 +1632,7 @@ function calcOpenPositions() {
         if (price > 0) mShortMap[code].lastPrice = price;
       }
       if (t.取引種別.includes('返済買')) {
-        mShortMap[code].qty = Math.max(0, mShortMap[code].qty - qty);
+        mShortMap[code].qty = mShortMap[code].qty - qty;
         if (price > 0) mShortMap[code].lastPrice = price;
       }
     });
