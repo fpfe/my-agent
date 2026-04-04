@@ -1,27 +1,27 @@
 {
-  "updatedAt": "2026-04-04T17:39:53.630625+09:00",
-  "updatedAtJST": "2026/04/04 17:39 JST",
+  "updatedAt": "2026-04-04T18:37:48.045671+09:00",
+  "updatedAtJST": "2026/04/04 18:37 JST",
   "totalArticles": 7,
   "articles": [
+    {
+      "title": "西日本 沿岸中心に大荒れ 東・北日本でも雨や風強まる見込み",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T18:11:32+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トリカブトを誤食 80代男性が死亡 北海道",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092221000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T17:59:49+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "“米軍戦闘機 イラン上空で撃墜”報道 別の攻撃機も墜落報道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T17:35:10+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "西日本で非常に激しい雨 東・北日本でも今夜以降荒れた天気に",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T17:29:54+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "北陸新幹線 強風の影響 長野～富山 上下線で運転見合わせ",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092211000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T16:19:45+09:00",
       "hoursAgo": 1
     },
     {
@@ -29,28 +29,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T16:13:12+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "東大 特任准教授ら21人処分 5万円の飲食接待も 不祥事受け調査",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092191000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T15:34:20+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
-      "title": "駿河湾特産のサクラエビ 春の漁始まり初競り 静岡",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092181000.html",
+      "title": "大阪松竹座「さよなら公演」始まる 道頓堀のシンボル5月に閉館",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092131000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T15:05:07+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-04-04T14:20:22+09:00",
+      "hoursAgo": 4
     },
     {
       "title": "ノロウイルス 新たな変異ウイルスが国内外で拡大 研究グループ",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092091000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:55:01+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     }
   ]
 }
