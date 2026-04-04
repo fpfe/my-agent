@@ -1,13 +1,34 @@
 {
-  "updatedAt": "2026-04-04T18:37:48.045671+09:00",
-  "updatedAtJST": "2026/04/04 18:37 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-04T19:33:21.617905+09:00",
+  "updatedAtJST": "2026/04/04 19:33 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "原油 来年の年明けまで確保できると見込む 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-04T19:23:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "原油 来年の年明けまで確保できると見込む 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T19:23:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ダイビング中の9人が一時行方不明 約2時間後に全員救助 北海道",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T18:44:39+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "西日本 沿岸中心に大荒れ 東・北日本でも雨や風強まる見込み",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T18:11:32+09:00",
+      "publishedAt": "2026-04-04T18:42:29+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,7 +36,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092221000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T17:59:49+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "“米軍戦闘機 イラン上空で撃墜”報道 別の攻撃機も墜落報道",
@@ -25,13 +46,6 @@
       "hoursAgo": 1
     },
     {
-      "title": "ダイビング中に行方不明の9人 約2時間後に全員救助 北海道",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T16:13:12+09:00",
-      "hoursAgo": 2
-    },
-    {
       "title": "東大 特任准教授ら21人処分 5万円の飲食接待も 不祥事受け調査",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092191000.html",
       "source": "NHK 主要ニュース",
@@ -39,18 +53,11 @@
       "hoursAgo": 3
     },
     {
-      "title": "大阪松竹座「さよなら公演」始まる 道頓堀のシンボル5月に閉館",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092131000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T14:20:22+09:00",
-      "hoursAgo": 4
-    },
-    {
       "title": "ノロウイルス 新たな変異ウイルスが国内外で拡大 研究グループ",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092091000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:55:01+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     }
   ]
 }
