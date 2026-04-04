@@ -1,63 +1,49 @@
 {
-  "updatedAt": "2026-04-04T11:06:53.322298+09:00",
-  "updatedAtJST": "2026/04/04 11:06 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-04T13:49:50.556466+09:00",
+  "updatedAtJST": "2026/04/04 13:49 JST",
+  "totalArticles": 6,
   "articles": [
     {
-      "title": "議員定数削減 野党側からは慎重意見も 全会派協議会で議論へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092111000.html",
+      "title": "「ダイビング中の9人戻らない」と通報 救助作業中 北海道",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T10:44:53+09:00",
+      "publishedAt": "2026-04-04T13:40:55+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "“米軍戦闘機 イラン上空で撃墜”報道 別の攻撃機も墜落報道",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T13:13:24+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "西日本で激しい雨 東・北日本でも今夜以降荒れた天気に",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T12:01:34+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ノロウイルス 新たな変異ウイルスが国内外で拡大 研究グループ",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092091000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T10:55:01+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "トランプ政権 国防関連費 1兆5000億ドル “過去最大の要求に”",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092071000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:15:42+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "3月だけでロシア軍兵士ら3万5000人超死傷 ゼレンスキー大統領",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092061000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T09:54:49+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "ドジャース 大谷翔平 今季初ホームラン 開幕7試合目で",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091961000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T08:31:11+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "“米軍戦闘機を撃墜”イランメディア伝える 攻撃の応酬続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T07:04:22+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "渋谷スクランブル交差点 路上に火 自首してきた50代男を逮捕",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091871000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T06:21:19+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "米 3月雇用統計 就業者は前月比17万8000人増 減速懸念和らぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091911000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-03T23:52:04+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "スカイマーク 来年春にも国内線に燃油サーチャージ導入を検討",
-      "url": "http://www3.nhk.or.jp/news/html/20260403/k10015091991000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-03T23:50:56+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
