@@ -1035,6 +1035,26 @@ function parseCSVLine(line) {
 }
 
 // ═══════════════════════════════════════════
+// KEY MIGRATION
+// ═══════════════════════════════════════════
+// Trades stored before the |count suffix fix have keys like:
+//   "受渡日|約定日|銘柄コード|取引種別|数量|単価"
+// New format adds a sequence number at the end:
+//   "受渡日|約定日|銘柄コード|取引種別|数量|単価|1"
+//
+// Migration is applied once on load so that re-importing the same CSV
+// correctly matches existing trades (preventing double-imports) while
+// also accepting the previously-skipped duplicate-price trades as new.
+function migrateTradeKeys(trades) {
+  const counts = {};
+  return trades.map(t => {
+    if (/\|\d+$/.test(t._key)) return t; // already new format, leave as-is
+    counts[t._key] = (counts[t._key] || 0) + 1;
+    return Object.assign({}, t, { _key: t._key + '|' + counts[t._key] });
+  });
+}
+
+// ═══════════════════════════════════════════
 // FORMAT HELPERS
 // ═══════════════════════════════════════════
 function fmtPnL(n) {
@@ -1188,7 +1208,10 @@ function loadData() {
     if (raw) {
       const d = JSON.parse(raw);
       if (d.trades && d.trades.length) {
-        allTrades = d.trades;
+        allTrades = migrateTradeKeys(d.trades);
+        // Persist migrated keys so the migration only runs once
+        const needsSave = allTrades.some((t, i) => t._key !== d.trades[i]._key);
+        if (needsSave) saveData();
         renderAll();
       }
     }
@@ -1329,8 +1352,8 @@ const GDRIVE = {
       const res = await this._fetch(`files/${f.id}?alt=media`);
       const data = await res.json();
       if (data.trades && data.trades.length > allTrades.length) {
-        allTrades = data.trades;
-        try { localStorage.setItem('trading_data', JSON.stringify(data)); } catch(e) {}
+        allTrades = migrateTradeKeys(data.trades);
+        try { localStorage.setItem('trading_data', JSON.stringify({ ...data, trades: allTrades })); } catch(e) {}
         renderAll();
         showStatus('☁️ Driveからデータを読み込みました');
       }
