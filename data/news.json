@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-04T13:49:50.556466+09:00",
-  "updatedAtJST": "2026/04/04 13:49 JST",
+  "updatedAt": "2026-04-04T14:56:25.426891+09:00",
+  "updatedAtJST": "2026/04/04 14:56 JST",
   "totalArticles": 6,
   "articles": [
     {
-      "title": "「ダイビング中の9人戻らない」と通報 救助作業中 北海道",
+      "title": "ダイビング中に行方不明の9人 約2時間後に全員救助 北海道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T13:40:55+09:00",
+      "publishedAt": "2026-04-04T14:08:41+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,35 +15,35 @@
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T13:13:24+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "西日本で激しい雨 東・北日本でも今夜以降荒れた天気に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T12:01:34+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "ノロウイルス 新たな変異ウイルスが国内外で拡大 研究グループ",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092091000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:55:01+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "トランプ政権 国防関連費 1兆5000億ドル “過去最大の要求に”",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092071000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:15:42+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "ドジャース 大谷翔平 今季初ホームラン 開幕7試合目で",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091961000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T08:31:11+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     }
   ]
 }
