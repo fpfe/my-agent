@@ -1,49 +1,56 @@
 {
-  "updatedAt": "2026-04-04T16:05:16.232544+09:00",
-  "updatedAtJST": "2026/04/04 16:05 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-04T17:39:53.630625+09:00",
+  "updatedAtJST": "2026/04/04 17:39 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "【地震情報】石川県で震度3 津波の心配なし",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015091061000.html",
+      "title": "“米軍戦闘機 イラン上空で撃墜”報道 別の攻撃機も墜落報道",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T15:57:13+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "東大 特任准教授ら21人処分 5万円の飲食接待も 不祥事受け調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092191000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T15:34:20+09:00",
+      "publishedAt": "2026-04-04T17:35:10+09:00",
       "hoursAgo": 0
     },
     {
       "title": "西日本で非常に激しい雨 東・北日本でも今夜以降荒れた天気に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T15:31:58+09:00",
+      "publishedAt": "2026-04-04T17:29:54+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "北陸新幹線 強風の影響 長野～富山 上下線で運転見合わせ",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092211000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T16:19:45+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "ダイビング中に行方不明の9人 約2時間後に全員救助 北海道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092151000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T14:08:41+09:00",
+      "publishedAt": "2026-04-04T16:13:12+09:00",
       "hoursAgo": 1
+    },
+    {
+      "title": "東大 特任准教授ら21人処分 5万円の飲食接待も 不祥事受け調査",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092191000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T15:34:20+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "駿河湾特産のサクラエビ 春の漁始まり初競り 静岡",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092181000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T15:05:07+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "ノロウイルス 新たな変異ウイルスが国内外で拡大 研究グループ",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092091000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T10:55:01+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "トランプ政権 国防関連費 1兆5000億ドル “過去最大の要求に”",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092071000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T10:15:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     }
   ]
 }
