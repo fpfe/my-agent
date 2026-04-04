@@ -969,7 +969,6 @@ function parseCSV(buf) {
   const decoder = new TextDecoder('shift_jis');
   const text = decoder.decode(buf);
   const lines = text.split('\n').map(l => l.replace(/\r$/, ''));
-  const keyCounts = {}; // tracks occurrences of each base key within this CSV
 
   // Row 0 = timestamp, Row 1 = headers → skip both
   const trades = [];
@@ -1004,12 +1003,10 @@ function parseCSV(buf) {
     };
 
     trade._pnl = calcPnL(trade);
-    // Unique key for duplicate detection.
-    // Append an occurrence count so two trades with identical fields
-    // (same date/type/qty/price) are treated as distinct entries.
-    const baseKey = [trade.受渡日, trade.約定日, trade.銘柄コード, trade.取引種別, trade.数量, trade.単価].join('|');
-    keyCounts[baseKey] = (keyCounts[baseKey] || 0) + 1;
-    trade._key = baseKey + '|' + keyCounts[baseKey];
+    // Base key — same-price trades intentionally share the same key.
+    // Deduplication in processFiles uses counts, not a presence Set,
+    // so genuinely duplicate-looking trades are all imported correctly.
+    trade._key = [trade.受渡日, trade.約定日, trade.銘柄コード, trade.取引種別, trade.数量, trade.単価].join('|');
 
     trades.push(trade);
   }
@@ -1032,26 +1029,6 @@ function parseCSVLine(line) {
   }
   cols.push(cur);
   return cols;
-}
-
-// ═══════════════════════════════════════════
-// KEY MIGRATION
-// ═══════════════════════════════════════════
-// Trades stored before the |count suffix fix have keys like:
-//   "受渡日|約定日|銘柄コード|取引種別|数量|単価"
-// New format adds a sequence number at the end:
-//   "受渡日|約定日|銘柄コード|取引種別|数量|単価|1"
-//
-// Migration is applied once on load so that re-importing the same CSV
-// correctly matches existing trades (preventing double-imports) while
-// also accepting the previously-skipped duplicate-price trades as new.
-function migrateTradeKeys(trades) {
-  const counts = {};
-  return trades.map(t => {
-    if (/\|\d+$/.test(t._key)) return t; // already new format, leave as-is
-    counts[t._key] = (counts[t._key] || 0) + 1;
-    return Object.assign({}, t, { _key: t._key + '|' + counts[t._key] });
-  });
 }
 
 // ═══════════════════════════════════════════
@@ -1160,23 +1137,48 @@ document.addEventListener('drop', e => {
 
 async function processFiles(files) {
   let newCount = 0, dupCount = 0;
-  const existingKeys = new Set(allTrades.map(t => t._key));
+
+  // Count-based deduplication:
+  // Rather than a simple "key exists → skip", we compare how many times
+  // each key appears in existing data vs the incoming CSV.
+  // toAdd = incomingCount[key] - existingCount[key]
+  // This means re-importing the same CSV adds nothing (counts match),
+  // while a CSV with N genuine same-price trades imports all N on first import.
+
+  // Step 1: frequency map of keys already in allTrades
+  const existingCount = {};
+  for (const t of allTrades) {
+    existingCount[t._key] = (existingCount[t._key] || 0) + 1;
+  }
 
   for (const file of files) {
     const buf = await file.arrayBuffer();
     const parsed = parseCSV(buf);
+
+    // Step 2: frequency map + grouped trades from this CSV
+    const incomingCount = {};
+    const incomingByKey = {};
     for (const t of parsed) {
-      if (existingKeys.has(t._key)) {
-        dupCount++;
-      } else {
-        allTrades.push(t);
-        existingKeys.add(t._key);
-        newCount++;
-      }
+      incomingCount[t._key] = (incomingCount[t._key] || 0) + 1;
+      if (!incomingByKey[t._key]) incomingByKey[t._key] = [];
+      incomingByKey[t._key].push(t);
+    }
+
+    // Step 3: for each key, add only the difference
+    for (const key of Object.keys(incomingByKey)) {
+      const have   = existingCount[key] || 0;
+      const coming = incomingCount[key];
+      const toSkip = Math.min(have, coming); // already imported
+      const toAdd  = coming - toSkip;        // genuinely new
+      dupCount += toSkip;
+      newCount += toAdd;
+      const newTrades = incomingByKey[key].slice(toSkip);
+      for (const t of newTrades) allTrades.push(t);
+      existingCount[key] = have + toAdd; // keep count current for multi-file imports
     }
   }
 
-  // Sort by 約定日 desc (primary), then by original order
+  // Sort by 約定日 desc
   allTrades.sort((a, b) => b.約定日.localeCompare(a.約定日));
 
   showStatus(`✅ 読み込み完了 — 新規: ${newCount}件 / 重複スキップ: ${dupCount}件`);
@@ -1208,10 +1210,7 @@ function loadData() {
     if (raw) {
       const d = JSON.parse(raw);
       if (d.trades && d.trades.length) {
-        allTrades = migrateTradeKeys(d.trades);
-        // Persist migrated keys so the migration only runs once
-        const needsSave = allTrades.some((t, i) => t._key !== d.trades[i]._key);
-        if (needsSave) saveData();
+        allTrades = d.trades;
         renderAll();
       }
     }
@@ -1352,8 +1351,8 @@ const GDRIVE = {
       const res = await this._fetch(`files/${f.id}?alt=media`);
       const data = await res.json();
       if (data.trades && data.trades.length > allTrades.length) {
-        allTrades = migrateTradeKeys(data.trades);
-        try { localStorage.setItem('trading_data', JSON.stringify({ ...data, trades: allTrades })); } catch(e) {}
+        allTrades = data.trades;
+        try { localStorage.setItem('trading_data', JSON.stringify(data)); } catch(e) {}
         renderAll();
         showStatus('☁️ Driveからデータを読み込みました');
       }
