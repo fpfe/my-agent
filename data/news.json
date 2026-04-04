@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-04-05T04:30:41.837779+09:00",
-  "updatedAtJST": "2026/04/05 04:30 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-05T05:31:47.913333+09:00",
+  "updatedAtJST": "2026/04/05 05:31 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "スタッフは日本での勤務経験者 焼き鳥チェーン ベトナムに進出",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092341000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-05T05:16:57+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "トランプ大統領「あと48時間」 イラン「新防空システム導入」",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T02:29:16+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "強風など各地で大荒れの天気 東・北日本は明け方にかけ警戒を",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092141000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T23:00:20+09:00",
       "hoursAgo": 5
     },
     {
@@ -36,28 +36,35 @@
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T22:25:11+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
+    },
+    {
+      "title": "【プロ野球結果】ヤクルト 先発全員ヒットで勝利 試合動画も",
+      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092301000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-04T22:16:53+09:00",
+      "hoursAgo": 7
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "トリカブトを誤食 80代男性が死亡 北海道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092221000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T17:59:49+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
