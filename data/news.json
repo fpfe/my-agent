@@ -1,70 +1,70 @@
 {
-  "updatedAt": "2026-04-05T05:31:47.913333+09:00",
-  "updatedAtJST": "2026/04/05 05:31 JST",
+  "updatedAt": "2026-04-05T06:30:37.173576+09:00",
+  "updatedAtJST": "2026/04/05 06:30 JST",
   "totalArticles": 9,
   "articles": [
+    {
+      "title": "気温上昇 夏日予想も 関東は局地的に急な雷雨に注意",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092381000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T06:00:41+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "イラン「新防空システム導入」 トランプ大統領「あと48時間」",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T05:49:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "国立公園制度100年の2031年へ環境省 訪日外国人利用増やす方針",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092321000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T05:30:44+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "スタッフは日本での勤務経験者 焼き鳥チェーン ベトナムに進出",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092341000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-05T05:16:57+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ大統領「あと48時間」 イラン「新防空システム導入」",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T02:29:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 1
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "“米軍戦闘機など2機 イランの攻撃で墜落 1人行方不明” 報道",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092011000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T22:25:11+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "【プロ野球結果】ヤクルト 先発全員ヒットで勝利 試合動画も",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092301000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T22:16:53+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "原油 来年の年明けまで確保できると見込む 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "トリカブトを誤食 80代男性が死亡 北海道",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092221000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T17:59:49+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
