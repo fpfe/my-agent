@@ -969,6 +969,7 @@ function parseCSV(buf) {
   const decoder = new TextDecoder('shift_jis');
   const text = decoder.decode(buf);
   const lines = text.split('\n').map(l => l.replace(/\r$/, ''));
+  const keyCounts = {}; // tracks occurrences of each base key within this CSV
 
   // Row 0 = timestamp, Row 1 = headers → skip both
   const trades = [];
@@ -1003,8 +1004,12 @@ function parseCSV(buf) {
     };
 
     trade._pnl = calcPnL(trade);
-    // Unique key for duplicate detection
-    trade._key = [trade.受渡日, trade.約定日, trade.銘柄コード, trade.取引種別, trade.数量, trade.単価].join('|');
+    // Unique key for duplicate detection.
+    // Append an occurrence count so two trades with identical fields
+    // (same date/type/qty/price) are treated as distinct entries.
+    const baseKey = [trade.受渡日, trade.約定日, trade.銘柄コード, trade.取引種別, trade.数量, trade.単価].join('|');
+    keyCounts[baseKey] = (keyCounts[baseKey] || 0) + 1;
+    trade._key = baseKey + '|' + keyCounts[baseKey];
 
     trades.push(trade);
   }
