@@ -1,13 +1,20 @@
 {
-  "updatedAt": "2026-04-05T21:57:00.305561+09:00",
-  "updatedAtJST": "2026/04/05 21:57 JST",
+  "updatedAt": "2026-04-05T22:56:16.663382+09:00",
+  "updatedAtJST": "2026/04/05 22:56 JST",
   "totalArticles": 8,
   "articles": [
     {
-      "title": "京都府知事選 現職の西脇隆俊氏 3回目の当選が確実",
+      "title": "京都府知事選 現職の西脇隆俊氏 3回目の当選",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015090831000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T21:23:15+09:00",
+      "publishedAt": "2026-04-05T22:44:46+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "福島第二原発1号機 燃料プール冷却停止 “直ちに問題起きず”",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092741000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T22:36:51+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,49 +22,42 @@
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092491000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T20:54:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "トランプ大統領“戦闘機の乗員救出” イラン側 徹底抗戦の構え",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T19:38:06+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "政府 石油元売り会社に“重要施設への直接販売”要請の方針",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092581000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-05T19:19:14+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "政府 石油元売り会社に“重要施設への直接販売”要請の方針",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092581000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T19:19:14+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "各地で気温上昇 夏日も あすも20度を超えるところ多い見込み",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092381000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T18:52:22+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "国民 玉木代表 “来春の統一地方選などで地方議員倍増目指す”",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092551000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T17:47:20+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "エンジェルス 外野手アデル “史上最高の守備” 米メディア",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092501000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T17:33:11+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     }
   ]
 }
