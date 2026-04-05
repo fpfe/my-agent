@@ -1,56 +1,56 @@
 {
-  "updatedAt": "2026-04-05T17:42:43.642045+09:00",
-  "updatedAtJST": "2026/04/05 17:42 JST",
+  "updatedAt": "2026-04-05T18:38:13.720657+09:00",
+  "updatedAtJST": "2026/04/05 18:38 JST",
   "totalArticles": 7,
   "articles": [
+    {
+      "title": "イラン 石油化学施設が攻撃受け5人死亡 戦闘の激化が懸念",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T18:18:05+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "国民 玉木代表 “来春の統一地方選などで地方議員倍増目指す”",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092551000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T17:47:20+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "福岡 岡垣町 廃材置き場で火事 今のところけが人なし",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092481000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T17:34:32+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "エンジェルス 外野手アデル “史上最高の守備” 米メディア",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092501000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T17:33:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "今年度予算案 自民 磯崎参院国対委員長 “今週前半に成立を”",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092491000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T16:47:14+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "各地で気温上昇 25度以上の夏日も 関東は急な雷雨に注意",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092381000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T15:23:29+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "イラン 石油化学施設が攻撃受け5人死亡 戦闘の激化が懸念",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T15:20:23+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "トランプ大統領 イランで撃墜された戦闘機の乗員救出 明らかに",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092471000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T14:59:48+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "高市首相 大型連休中にベトナムとオーストラリア訪問を調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092421000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T12:28:03+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "ドジャース 大谷翔平 ヒット2本でチームの連勝に貢献",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092371000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T09:34:14+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 3
     }
   ]
 }
