@@ -1,63 +1,56 @@
 {
-  "updatedAt": "2026-04-05T16:05:59.428233+09:00",
-  "updatedAtJST": "2026/04/05 16:05 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-05T17:42:43.642045+09:00",
+  "updatedAtJST": "2026/04/05 17:42 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "エンジェルス 外野手アデル “史上最高の守備” 米メディア",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092501000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T17:33:11+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "今年度予算案 自民 磯崎参院国対委員長 “今週前半に成立を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092491000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T16:47:14+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "各地で気温上昇 25度以上の夏日も 関東は急な雷雨に注意",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092381000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T15:23:29+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "イラン 石油化学施設が攻撃受け5人死亡 戦闘の激化が懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T15:20:23+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "トランプ大統領 イランで撃墜された戦闘機の乗員救出 明らかに",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092471000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T14:59:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
-      "title": "ホワイトソックス 村上宗隆 逆転のツーランホームラン",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092361000.html",
+      "title": "高市首相 大型連休中にベトナムとオーストラリア訪問を調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092421000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T14:02:27+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-04-05T12:28:03+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "ドジャース 大谷翔平 ヒット2本でチームの連勝に貢献",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092371000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T09:34:14+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "ゼレンスキー大統領 トルコと安全保障面の協力強化で合意",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092391000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T07:42:07+09:00",
       "hoursAgo": 8
-    },
-    {
-      "title": "国立公園制度100年の2031年へ環境省 訪日外国人利用増やす方針",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092321000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T05:30:44+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "スタッフは日本での勤務経験者 焼き鳥チェーン ベトナムに進出",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092341000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-05T05:16:57+09:00",
-      "hoursAgo": 10
     }
   ]
 }
