@@ -1,77 +1,63 @@
 {
-  "updatedAt": "2026-04-05T08:30:38.730635+09:00",
-  "updatedAtJST": "2026/04/05 08:30 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-05T11:28:33.902696+09:00",
+  "updatedAtJST": "2026/04/05 11:28 JST",
+  "totalArticles": 8,
   "articles": [
     {
-      "title": "富士山が噴火したら 停電時の「頼みの綱」にも火山灰は影響？",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092331000.html",
+      "title": "イラン「新防空システム導入」 トランプ大統領「あと48時間」",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T08:17:10+09:00",
+      "publishedAt": "2026-04-05T11:16:59+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "ドジャース 大谷翔平 ヒット2本でチームの連勝に貢献",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092371000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T09:34:14+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "気温上昇 夏日予想も 関東は局地的に急な雷雨に注意",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092381000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T08:08:03+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-04-05T09:20:06+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "ゼレンスキー大統領 トルコと安全保障面の協力強化で合意",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092391000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T07:42:07+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "イラン「新防空システム導入」 トランプ大統領「あと48時間」",
-      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092351000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-05T07:21:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "ホワイトソックス 村上宗隆 逆転のツーランホームラン",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092361000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T07:05:11+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
+    },
+    {
+      "title": "国立公園制度100年の2031年へ環境省 訪日外国人利用増やす方針",
+      "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092321000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-05T05:30:44+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "スタッフは日本での勤務経験者 焼き鳥チェーン ベトナムに進出",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092341000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-05T05:16:57+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
       "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "新入社員の給料が年々上昇 既存社員の待遇改善も新たな課題に",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092311000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T23:55:41+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "原油 来年の年明けまで確保できると見込む 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "原油 来年の年明けまで確保できると見込む 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260404/k10015092241000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-04T21:57:41+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
