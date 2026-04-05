@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-05T22:56:16.663382+09:00",
-  "updatedAtJST": "2026/04/05 22:56 JST",
+  "updatedAt": "2026-04-05T23:37:17.650058+09:00",
+  "updatedAtJST": "2026/04/05 23:37 JST",
   "totalArticles": 8,
   "articles": [
     {
@@ -15,7 +15,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092741000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T22:36:51+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "今年度予算案 自民 磯崎参院国対委員長 “今週前半に成立を”",
@@ -36,14 +36,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092581000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-05T19:19:14+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "政府 石油元売り会社に“重要施設への直接販売”要請の方針",
       "url": "http://www3.nhk.or.jp/news/html/20260405/k10015092581000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-05T19:19:14+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "各地で気温上昇 夏日も あすも20度を超えるところ多い見込み",
