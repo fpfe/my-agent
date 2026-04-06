@@ -1,126 +1,119 @@
 {
-  "updatedAt": "2026-04-06T22:09:40.545552+09:00",
-  "updatedAtJST": "2026/04/06 22:09 JST",
-  "totalArticles": 17,
+  "updatedAt": "2026-04-06T23:46:13.104831+09:00",
+  "updatedAtJST": "2026/04/06 23:46 JST",
+  "totalArticles": 16,
   "articles": [
     {
       "title": "トランプ氏 エネルギー施設攻撃延期か 停戦条件協議との報道も",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092771000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T21:37:26+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "京都 南丹 男児不明 小学校で保護者説明会開かれる",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093481000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T21:12:46+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "沖縄 辺野古沖の転覆事故 京都府が高校に複数回聞き取り調査",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093491000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T21:10:19+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "重い肝硬変患者の肝臓の再生目指し臨床研究へ 長崎大病院など",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093471000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-06T21:09:32+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "天皇ご一家 福島の「東日本大震災・原子力災害伝承館」を訪問",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093361000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-06T21:08:30+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "再審制度見直し “証拠開示あり方も政府案は不十分” 自民会議",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093431000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T20:50:43+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "6日は気温上昇 7日は沖縄と鹿児島で非常に激しい雨のおそれ",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093421000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T19:48:48+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
+    },
+    {
+      "title": "生活保護受給者状況 20代単身受給者が増加 25年前と比べ7倍に",
+      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093371000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-06T19:47:48+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "「武器」移転を原則可能とする案 政府が自民党の会合で示す",
+      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093391000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-06T19:43:38+09:00",
+      "hoursAgo": 4
     },
     {
       "title": "日銀 地域経済報告 イラン情勢悪化や原油価格上昇で【詳しく】",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092911000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T19:32:05+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "長期金利 2.4％超まで上昇 1999年以来の高水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092851000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T19:06:12+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "【Q＆A】サイバー攻撃対策で流通業界が連携 団体を設立 なぜ？",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T18:27:53+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "円相場 小幅な値動き 市場関係者 “慎重な投資家 多く”",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093351000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T18:22:13+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "株価 値上がり “トランプ大統領の会見 見極めたい”との声も",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093031000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T17:21:47+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "日本関係の船舶がホルムズ海峡通過 日本関係船の通過は3隻目",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T17:11:28+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "マツダ 中東に輸出する車の生産停止 欧州向けなどは生産増へ",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093221000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T16:07:56+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "コメ価格の先行き 値下がり続く見方 在庫水準の高さが背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092961000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T12:58:15+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "「ドン・キホーテ」運営会社 Olympicグループ買収へ",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093021000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T12:56:45+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "【きょうのおはBiz 4月6日(月)】“銅”高騰 暮らしへの影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092921000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-06T11:05:22+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
