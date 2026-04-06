@@ -191,6 +191,23 @@ body{
   display:inline-flex;align-items:center;gap:4px;margin-top:8px;
 }
 .drive-link:hover{text-decoration:underline}
+
+/* ── SERVER ERROR BOX ── */
+.server-error-box{
+  background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.4);
+  border-radius:12px;padding:16px;margin-top:14px;
+}
+.server-error-title{font-size:15px;font-weight:700;color:var(--red);margin-bottom:8px}
+.server-error-msg{font-size:13px;color:var(--text-muted);margin-bottom:10px}
+.server-error-code-wrap{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(0,0,0,.3);border-radius:8px;padding:10px 12px;
+}
+.server-error-code{
+  flex:1;font-family:'SF Mono',Menlo,monospace;font-size:12px;
+  color:#fca5a5;word-break:break-all;
+}
+.server-error-copy{flex-shrink:0}
 </style>
 <script src="google-drive-auth.js"></script>
 </head>
@@ -407,10 +424,11 @@ async function transcribe() {
   } catch (e) {
     clearInterval(ticker);
     progressWrap.style.display = 'none';
-    const msg = e instanceof TypeError
-      ? 'Cannot connect to local server. Is whisper_server.py running?'
-      : 'Error: ' + e.message;
-    toast(msg, 'red');
+    if (e instanceof TypeError) {
+      showServerError();
+    } else {
+      toast('Error: ' + e.message, 'red');
+    }
   } finally {
     btn.disabled = false;
     btn.textContent = 'Transcribe';
@@ -580,6 +598,35 @@ async function saveToDrive() {
     btn.disabled = false;
     btn.textContent = '☁️ Save to Drive';
   }
+}
+
+// ── Server Error Box ─────────────────────────
+function showServerError() {
+  const existing = document.getElementById('serverErrorBox');
+  if (existing) existing.remove();
+
+  const cmd = 'cd ~/my-agent && .venv/bin/python whisper_server.py';
+  const box = document.createElement('div');
+  box.id = 'serverErrorBox';
+  box.className = 'server-error-box';
+  box.innerHTML = `
+    <div class="server-error-title">⚠️ サーバーが起動していません</div>
+    <div class="server-error-msg">以下のコマンドをTerminalにコピー&ペーストしてください：</div>
+    <div class="server-error-code-wrap">
+      <code class="server-error-code">${escHtml(cmd)}</code>
+      <button class="btn btn-ghost btn-sm server-error-copy" id="serverCopyBtn">📋 コピー</button>
+    </div>
+  `;
+  const progressWrap = document.getElementById('progressWrap');
+  progressWrap.parentNode.insertBefore(box, progressWrap.nextSibling);
+
+  document.getElementById('serverCopyBtn').addEventListener('click', () => {
+    navigator.clipboard.writeText(cmd).then(() => {
+      const btn = document.getElementById('serverCopyBtn');
+      btn.textContent = '✅ コピー済み';
+      setTimeout(() => { btn.textContent = '📋 コピー'; }, 2000);
+    });
+  });
 }
 
 // ── Util ──────────────────────────────────────
