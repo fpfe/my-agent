@@ -1,13 +1,27 @@
 {
-  "updatedAt": "2026-04-07T02:43:21.598068+09:00",
-  "updatedAtJST": "2026/04/07 02:43 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-04-07T03:59:01.761485+09:00",
+  "updatedAtJST": "2026/04/07 03:59 JST",
+  "totalArticles": 15,
   "articles": [
     {
-      "title": "【ライブ配信中】トランプ大統領 記者会見",
+      "title": "米 トランプ大統領 軍と共同で記者会見",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093571000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T01:14:15+09:00",
+      "publishedAt": "2026-04-07T03:57:42+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NY原油市場 WTIの先物価格 一時1バレル＝114ドル台まで上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-07T02:52:27+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "NY原油市場 WTIの先物価格 一時1バレル＝114ドル台まで上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T02:52:27+09:00",
       "hoursAgo": 1
     },
     {
@@ -15,91 +29,84 @@
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093611000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T00:54:08+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "中国 遼寧省で無差別切りつけ事件か 複数の香港メディア報道",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093581000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T23:01:25+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "トランプ氏 エネルギー施設攻撃延期か 停戦条件協議との報道も",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092771000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T21:37:26+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "京都 南丹 男児不明 小学校で保護者説明会開かれる",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093481000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T21:12:46+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "生活保護受給者状況 20代単身受給者が増加 25年前と比べ7倍に",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093371000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-06T19:47:48+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "「武器」移転を原則可能とする案 政府が自民党の会合で示す",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093391000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-06T19:43:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日銀 地域経済報告 イラン情勢悪化や原油価格上昇で【詳しく】",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092911000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T19:32:05+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "長期金利 2.4％超まで上昇 1999年以来の高水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092851000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T19:06:12+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "【Q＆A】サイバー攻撃対策で流通業界が連携 団体を設立 なぜ？",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093211000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T18:27:53+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "円相場 小幅な値動き 市場関係者 “慎重な投資家 多く”",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093351000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T18:22:13+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "株価 値上がり “トランプ大統領の会見 見極めたい”との声も",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093031000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T17:21:47+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "日本関係の船舶がホルムズ海峡通過 日本関係船の通過は3隻目",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093171000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T17:11:28+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "マツダ 中東に輸出する車の生産停止 欧州向けなどは生産増へ",
       "url": "http://www3.nhk.or.jp/news/html/20260406/k10015093221000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-06T16:07:56+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
