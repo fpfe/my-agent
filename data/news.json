@@ -1,91 +1,77 @@
 {
-  "updatedAt": "2026-04-07T06:37:40.275057+09:00",
-  "updatedAtJST": "2026/04/07 06:37 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-04-07T07:36:16.126000+09:00",
+  "updatedAtJST": "2026/04/07 07:36 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "トランプ氏“期限過ぎれば発電所など失う”イラン側は停戦拒否",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093641000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T07:27:43+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "沖縄・奄美 東京 伊豆諸島で局地的に激しい雨のおそれ",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093551000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T06:08:53+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "大川原化工機の事件受け 裁判官“勾留継続 真摯な判断重要”",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093531000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T05:48:36+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ氏“期限過ぎれば発電所など失う”イラン側は停戦拒否",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093641000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T05:46:02+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "NY原油市場 WTIの先物価格 一時1バレル＝114ドル台まで上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T05:34:35+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "高市首相 イラン大統領との電話会談を行う方向で調整",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093511000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T05:32:57+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "トランプ大統領 軍と共同で記者会見【ノーカット動画】",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093571000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T05:31:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "今年度予算案 きょう採決が行われれば成立する公算大きく",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093501000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T05:13:00+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "航空会社の多く 国内線で運賃値上げや燃油サーチャージ検討",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093451000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T04:41:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "航空会社の多く 国内線で運賃値上げや燃油サーチャージ検討",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093451000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T04:41:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "ことしの大型連休に旅行に出かける人 去年比1.9％増 民間予測",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093461000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T04:37:51+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日銀 地域経済報告 イラン情勢悪化や原油価格上昇で【詳しく】",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092911000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-06T19:32:05+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "長期金利 2.4％超まで上昇 1999年以来の高水準に",
-      "url": "http://www3.nhk.or.jp/news/html/20260406/k10015092851000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-06T19:06:12+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 2
     }
   ]
 }
