@@ -1,49 +1,49 @@
 {
-  "updatedAt": "2026-04-08T06:41:24.357072+09:00",
-  "updatedAtJST": "2026/04/08 06:41 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-04-08T07:37:41.871571+09:00",
+  "updatedAtJST": "2026/04/08 07:37 JST",
+  "totalArticles": 11,
   "articles": [
-    {
-      "title": "NY原油 WTI先物価格 1バレル＝117ドル台まで上昇後に急落",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T06:27:04+09:00",
-      "hoursAgo": 0
-    },
     {
       "title": "トランプ大統領が主張する期限が迫る 仲介役は期限延長を要請",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094411000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T06:13:12+09:00",
+      "publishedAt": "2026-04-08T07:28:15+09:00",
       "hoursAgo": 0
     },
     {
       "title": "仲介役パキスタン首相「トランプ氏に期限の2週間延長を要請」",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094521000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T06:12:37+09:00",
+      "publishedAt": "2026-04-08T06:46:55+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "NY原油 WTI先物価格 1バレル＝117ドル台まで上昇後に急落",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T06:27:04+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "国会 今年度予算が成立 「国家情報局」設置法案など論戦続く",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094421000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T04:47:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "政府 “原油 年を越えて供給確保にめど” 代替調達など詳細は",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094431000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T04:46:14+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "川崎 製鉄所の足場崩れ作業員3人死亡 行方不明1人の発見急ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094461000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T04:42:03+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "来年春の就職活動 AI導入理由に大手で新卒採用減らす動きも",
@@ -71,20 +71,13 @@
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094451000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T00:06:57+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "中部電力 浜岡原発の不適切手続き問題で経産省が指導",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T20:22:09+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "2月の家計調査 世帯の実質消費支出 前年同月比1.8％減",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093721000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T19:04:41+09:00",
       "hoursAgo": 11
     }
   ]
