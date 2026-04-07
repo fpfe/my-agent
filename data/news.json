@@ -1,13 +1,27 @@
 {
-  "updatedAt": "2026-04-08T05:51:31.994208+09:00",
-  "updatedAtJST": "2026/04/08 05:51 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-04-08T06:41:24.357072+09:00",
+  "updatedAtJST": "2026/04/08 06:41 JST",
+  "totalArticles": 12,
   "articles": [
     {
-      "title": "イラン情勢 トランプ大統領が主張する期限 午前9時が迫る",
+      "title": "NY原油 WTI先物価格 1バレル＝117ドル台まで上昇後に急落",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T06:27:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トランプ大統領が主張する期限が迫る 仲介役は期限延長を要請",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094411000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T05:09:46+09:00",
+      "publishedAt": "2026-04-08T06:13:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "仲介役パキスタン首相「トランプ氏に期限の2週間延長を要請」",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094521000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T06:12:37+09:00",
       "hoursAgo": 0
     },
     {
@@ -36,34 +50,20 @@
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094371000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T04:38:46+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "来年春の就職活動 AI導入理由に大手で新卒採用減らす動きも",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094371000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T04:38:46+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "デジタル貿易に関税課さないルール採択 日本含む66の国・地域",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094361000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T04:37:50+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "デジタル貿易に関税課さないルール採択 日本含む66の国・地域",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094361000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T04:37:50+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "NY原油 WTI先物価格 一時1バレル＝117ドル台まで上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T03:36:50+09:00",
       "hoursAgo": 2
     },
     {
@@ -71,34 +71,20 @@
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094451000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T00:06:57+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "中部電力 浜岡原発の不適切手続き問題で経産省が指導",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094311000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T20:22:09+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "2月の家計調査 世帯の実質消費支出 前年同月比1.8％減",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093721000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T19:04:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "相続手続き一元化へ新たな仕組み作る方針 証券会社や銀行など",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094211000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T18:21:37+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 値下がり イラン情勢先行きへの不透明感の高まりから",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094201000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T18:15:15+09:00",
       "hoursAgo": 11
     }
   ]
