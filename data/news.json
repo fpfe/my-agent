@@ -1,55 +1,90 @@
 {
-  "updatedAt": "2026-04-07T16:16:44.189190+09:00",
-  "updatedAtJST": "2026/04/07 16:16 JST",
+  "updatedAt": "2026-04-07T18:02:20.423716+09:00",
+  "updatedAtJST": "2026/04/07 18:02 JST",
   "totalArticles": 18,
   "articles": [
     {
-      "title": "今年度予算案 このあと参議院本会議で採決へ 成立の見通し",
+      "title": "今年度予算が成立 一般会計の総額 過去最大122兆円余",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094021000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T16:13:37+09:00",
+      "publishedAt": "2026-04-07T17:54:03+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "【ライブ】川崎の製鉄所 足場崩れ複数作業員が転落 3人重体",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094161000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T17:52:06+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "京都 南丹 男児不明 自宅近くの山中を捜索 手がかり見つからず",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093671000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T17:50:32+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "はしかの感染者数197人 2020年以降最も早いペースで増加",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094101000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T17:43:22+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "コメの生産などにかかるコストは5キロ2800円余 試算まとまる",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094121000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-07T17:23:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東海道新幹線 運転再開 線路内に立ち入った人を保護",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094091000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T17:09:58+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "繊維メーカー 製品値上げ相次ぐ 原料の石油化学製品価格高騰で",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094081000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-07T17:07:17+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 イラン情勢見極めたいと売り買い交錯 方向感ない展開",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093941000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-07T16:38:25+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "天皇ご一家 福島 富岡町 震災当時の状況など伝える施設視察",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093861000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T16:00:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "NY原油市場 WTIの先物価格 一時1バレル＝116ドル台まで上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T15:49:30+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "NY原油市場 WTIの先物価格 一時1バレル＝116ドル台まで上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T15:49:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "2月の景気動向指数 前月比1.6ポイント低下 2か月ぶりに低下",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094061000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T15:26:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "人類が地球から最も離れた距離に到達 56年ぶり記録更新",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093711000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T15:23:44+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "ドジャース 大谷翔平 3号HR ブルージェイズ 岡本和真も2安打",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093741000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T14:04:42+09:00",
       "hoursAgo": 2
     },
     {
@@ -57,77 +92,42 @@
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094001000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T13:55:33+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "国内線への燃油サーチャージ導入検討 国交相 “丁寧な説明を”",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093821000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T13:04:25+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "株価 値下がり イラン情勢への警戒も",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093941000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T12:57:34+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "長期金利 2.43％まで上昇 1999年2月以来の高水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093921000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T12:50:02+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "2月の家計調査 世帯の実質消費支出 前年同月比1.8％減",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093721000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T12:23:19+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ゼンショーHD創業者 小川賢太郎会長 死去 すき家を全国に拡大",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093851000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T12:15:44+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "ゼンショーHD創業者 小川賢太郎会長 死去 すき家を全国に拡大",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093851000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T12:15:44+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "京都 南丹 男児不明 警察はけさから自宅近くの山中を捜索",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093671000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T12:06:40+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz 4月7日(火) 外資との競争 変わる日系ホテル",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093801000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T11:37:27+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "航空会社の多く 国内線で運賃値上げや燃油サーチャージ検討",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093451000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T04:41:28+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ことしの大型連休に旅行に出かける人 去年比1.9％増 民間予測",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093461000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-07T04:37:51+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
