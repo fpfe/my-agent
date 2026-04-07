@@ -1,77 +1,84 @@
 {
-  "updatedAt": "2026-04-07T08:35:31.736066+09:00",
-  "updatedAtJST": "2026/04/07 08:35 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-07T11:25:02.231595+09:00",
+  "updatedAtJST": "2026/04/07 11:25 JST",
+  "totalArticles": 11,
   "articles": [
+    {
+      "title": "再審制度見直し 自民 意見集約難航 平口法相 “説明を尽くす”",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093781000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T11:17:28+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "首都高6人死傷 元運転手 控訴取り下げ 懲役7年6か月の判決確定",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093791000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T11:15:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トランプ氏 攻撃期限で警告 イラン側は停戦拒否【各国の動き】",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093641000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T11:01:08+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "政府「デジタル教科書」導入へ 学校教育法などの改正案を決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093701000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T10:57:01+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トランプ大統領 軍と共同で記者会見【ノーカット動画】",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093571000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T10:49:45+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ドジャース 大谷翔平 3号ソロホームラン 2試合連続",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093741000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-07T10:04:06+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "2月の家計調査 世帯の実質消費支出 前年同月比1.8％減",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093721000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-07T08:59:34+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "京都 南丹 男児不明 警察はけさから自宅近くの山中を捜索",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093671000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-07T08:03:04+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ氏“期限過ぎれば発電所など失う”イラン側は停戦拒否",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093641000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T07:27:43+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "沖縄・奄美 東京 伊豆諸島で局地的に激しい雨のおそれ",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093551000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T06:08:53+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "NY原油市場 WTIの先物価格 一時1バレル＝114ドル台まで上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093621000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T05:34:35+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "高市首相 イラン大統領との電話会談を行う方向で調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093511000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T05:32:57+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "トランプ大統領 軍と共同で記者会見【ノーカット動画】",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093571000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T05:31:41+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "今年度予算案 きょう採決が行われれば成立する公算大きく",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093501000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T05:13:00+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "航空会社の多く 国内線で運賃値上げや燃油サーチャージ検討",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093451000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T04:41:28+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "航空会社の多く 国内線で運賃値上げや燃油サーチャージ検討",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093451000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-07T04:41:28+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "ことしの大型連休に旅行に出かける人 去年比1.9％増 民間予測",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015093461000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-07T04:37:51+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     }
   ]
 }
