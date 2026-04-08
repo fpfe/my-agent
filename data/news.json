@@ -1,77 +1,91 @@
 {
-  "updatedAt": "2026-04-08T08:36:45.807295+09:00",
-  "updatedAtJST": "2026/04/08 08:36 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-08T11:25:53.324100+09:00",
+  "updatedAtJST": "2026/04/08 11:25 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "【随時更新】“イランへの攻撃停止” 日本国内の反応は",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094621000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T11:12:56+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米大統領 条件付きでイラン攻撃2週間停止を表明【随時更新】",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094531000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T11:12:13+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "“北朝鮮が日本海に向けて弾道ミサイル数発を発射”韓国軍発表",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094581000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T11:09:23+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時2500円超値上がり “イランへの攻撃2週間停止”受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094551000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T10:25:54+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時2500円超値上がり “イランへの攻撃2週間停止”受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094551000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T10:25:54+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "2月経常収支 3兆9327億円の黒字 13か月連続黒字も黒字幅は縮小",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094611000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T10:03:42+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "台湾 最大野党トップが中国訪問 「台湾独立」反対の立場を強調",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094481000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T10:00:41+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "NY原油 WTI先物価格 一時1バレル＝91ドル台まで急落",
+      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T09:02:36+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "“ホルムズ海峡 2週間 安全航行も可能” イラン外相 SNSに投稿",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094561000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T08:31:29+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "NY原油 WTI先物価格 一時1バレル＝93ドル台まで急落",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T08:15:36+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "NY原油 WTI先物価格 一時1バレル＝93ドル台まで急落",
-      "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T08:15:36+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ大統領 条件付きでイランへの攻撃 2週間停止を表明",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094531000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T08:11:28+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "北朝鮮「韓国は最も敵対的な国家」改めて対話拒否の姿勢を強調",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094491000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T07:40:42+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "政府 “原油 年を越えて供給確保にめど” 代替調達など詳細は",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094431000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T04:46:14+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 2
     },
     {
       "title": "川崎 製鉄所の足場崩れ作業員3人死亡 行方不明1人の発見急ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094461000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T04:42:03+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "来年春の就職活動 AI導入理由に大手で新卒採用減らす動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094371000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T04:38:46+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "デジタル貿易に関税課さないルール採択 日本含む66の国・地域",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094361000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T04:37:50+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "高市首相 UAE大統領と電話会談 原油安定供給へ協力継続を要請",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094451000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T00:06:57+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 6
     }
   ]
 }
