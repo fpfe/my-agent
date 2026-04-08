@@ -1,104 +1,90 @@
 {
-  "updatedAt": "2026-04-09T05:41:57.321026+09:00",
-  "updatedAtJST": "2026/04/09 05:41 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-04-09T06:40:43.963019+09:00",
+  "updatedAtJST": "2026/04/09 06:40 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "デルタ航空 燃料費 3か月で3100億円余増見込み 減便など対策へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095261000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-09T05:41:36+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "デルタ航空 燃料費 3か月で3100億円余増見込み 減便など対策へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095261000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-09T05:41:36+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "2週間停戦合意 日本政府は歓迎 最終合意につながるか見極め",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095201000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-09T05:08:54+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "消費税減税 実務者会議 早期実施に懸念も自民・維新実現目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095211000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-09T05:06:45+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "川崎 製鉄所の作業員転落事故 直前に重りの上に重機配置か",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095301000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-09T05:04:24+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "ドジャース大谷翔平 連続出塁記録43試合に イチローさんに並ぶ",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095331000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-09T05:02:16+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "アジア各国原油確保へ 日本政府が現地企業支援の枠組みで調整",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095221000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-09T00:01:15+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "アジア各国原油確保へ 日本政府が現地企業支援の枠組みで調整",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095221000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-09T00:01:15+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "NYダウ一時1400ドル超の大幅値上がり 米イラン2週間停戦合意で",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015095341000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T22:54:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "米とイラン 2週間停戦で合意 “海峡 安全航行可能”イラン外相",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094531000.html",
       "source": "NHK 主要ニュース",
       "publishedAt": "2026-04-08T22:04:53+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "米とイラン 合意の背景は NW9キャスターが専門家と読み解く",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015095241000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T21:44:14+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "【動画】Pickup NEWS（4月8日）",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094051000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T19:42:44+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "ガソリン価格 全国平均1リットル167.4円 3週連続で下落",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094831000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T19:32:34+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 ドルに対し1円以上値上がり 米とイランの停戦合意受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015095051000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T18:23:10+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ミニストップ 最終損益56億円余赤字 消費期限の不正表示問題で",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094991000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T17:45:54+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "昨年度の企業の倒産件数1万件超 今年度も件数が増える可能性",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094961000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T17:42:57+09:00",
       "hoursAgo": 11
     }
   ]
