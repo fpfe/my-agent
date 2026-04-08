@@ -1,119 +1,126 @@
 {
-  "updatedAt": "2026-04-08T16:19:01.769042+09:00",
-  "updatedAtJST": "2026/04/08 16:19 JST",
-  "totalArticles": 16,
+  "updatedAt": "2026-04-08T18:00:40.950351+09:00",
+  "updatedAtJST": "2026/04/08 18:00 JST",
+  "totalArticles": 17,
   "articles": [
     {
       "title": "【随時更新】日本国内の反応は アメリカとイラン 停戦合意で",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094621000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T15:53:04+09:00",
+      "publishedAt": "2026-04-08T17:50:30+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "ガソリン価格 全国平均1リットル167.4円 3週連続で下落",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094831000.html",
+      "title": "ミニストップ 最終損益56億円余赤字 消費期限の不正表示問題で",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094991000.html",
       "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T15:37:33+09:00",
+      "publishedAt": "2026-04-08T17:45:54+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "ガソリン価格 全国平均1リットル167.4円 3週連続で下落",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094831000.html",
+      "title": "昨年度の企業の倒産件数1万件超 今年度も件数が増える可能性",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094961000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T17:42:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "昨年度の企業の倒産件数1万件超 今年度も件数が増える可能性",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094961000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T15:37:33+09:00",
+      "publishedAt": "2026-04-08T17:42:57+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "福島 郡山 住宅街にいたクマ 高速道路沿いの茂みに 警戒続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094791000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T15:34:04+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "北朝鮮から弾道ミサイルの可能性あるもの EEZ外に落下か",
+      "title": "北朝鮮 弾道ミサイル発射 EEZ外に落下か 防衛省",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094821000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T15:17:20+09:00",
+      "publishedAt": "2026-04-08T17:40:49+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "石破前首相 韓国大統領と会談 日韓関係さらなる発展へ交流確認",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094881000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T17:24:42+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "次世代型の「革新軽水炉」など2040年代運転開始目指す 経産省",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094901000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T17:20:25+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "3月景気ウォッチャー調査 4年前のウクライナ侵攻以来の低水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094891000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T17:15:11+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "高市首相 イランのペゼシュキアン大統領と電話会談行う",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094951000.html",
+      "source": "NHK 主要ニュース",
+      "publishedAt": "2026-04-08T16:53:25+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 2800円余値上がり 終値として過去3番目に大きい上昇幅",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094551000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T16:42:51+09:00",
       "hoursAgo": 1
     },
     {
       "title": "米とイラン 2週間停戦で合意 “海峡 安全航行可能”イラン外相",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094531000.html",
       "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T15:03:40+09:00",
+      "publishedAt": "2026-04-08T16:27:31+09:00",
       "hoursAgo": 1
+    },
+    {
+      "title": "ガソリン価格 全国平均1リットル167.4円 3週連続で下落",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094831000.html",
+      "source": "NHK ビジネス",
+      "publishedAt": "2026-04-08T15:37:33+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "きょうのおはBiz 4月8日(水) イラン情勢 電気代にも影響懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094631000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T14:30:03+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "相続手続き一括で進められる仕組み作りへ 金融機関10社合意",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094671000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T12:40:17+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "京都 南丹 不明男児捜索続く 新学期開始で警察が登下校時警戒",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094711000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T12:32:50+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "株価 一時2800円超値上がり 米とイランの2週間停戦合意受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094551000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T11:55:15+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "株価 一時2800円超値上がり 米とイランの2週間停戦合意受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094551000.html",
-      "source": "NHK 主要ニュース",
-      "publishedAt": "2026-04-08T11:55:15+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "NY原油市場 WTI先物価格 一時1バレル＝91ドル台まで急激に下落",
       "url": "http://www3.nhk.or.jp/news/html/20260407/k10015094471000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T11:32:41+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "【解説】日本経済への影響は “米・イラン停戦で合意”報道で",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094651000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T11:29:19+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "2月経常収支 3兆9327億円の黒字 13か月連続黒字も黒字幅は縮小",
       "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094611000.html",
       "source": "NHK ビジネス",
       "publishedAt": "2026-04-08T10:03:42+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "来年春の就職活動 AI導入理由に大手で新卒採用減らす動きも",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094371000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T04:38:46+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "デジタル貿易に関税課さないルール採択 日本含む66の国・地域",
-      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015094361000.html",
-      "source": "NHK ビジネス",
-      "publishedAt": "2026-04-08T04:37:50+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
