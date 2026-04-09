@@ -31,15 +31,8 @@ jobs:
           feeds = [
             {
               'name': 'NHK 経済',
-              'url': 'https://www3.nhk.or.jp/rss/news/cat4.xml'
+              'url': 'https://www3.nhk.or.jp/rss/news/cat5.xml'
             }
-          ]
-
-          KEYWORDS = [
-            '株', '株価', '日経', 'TOPIX', '為替', '円', 'ドル',
-            '金利', '日銀', '経済', 'GDP', 'インフレ', '物価',
-            '企業', '決算', '業績', '上場', '投資', '原油',
-            'FRB', '米国債', '財務省', '輸出', '輸入', '貿易'
           ]
 
           all_articles = []
@@ -61,9 +54,6 @@ jobs:
                 pub_date_str = item.findtext('pubDate', '').strip()
 
                 if not title or not pub_date_str:
-                  continue
-
-                if not any(kw in title for kw in KEYWORDS):
                   continue
 
                 try:
