@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-09T14:09:03.736031+09:00",
-  "updatedAtJST": "2026/04/09 14:09 JST",
+  "updatedAt": "2026-04-09T16:22:08.289192+09:00",
+  "updatedAtJST": "2026/04/09 16:22 JST",
   "totalArticles": 6,
   "articles": [
     {
       "title": "株価 値下がり アメリカとイラン停戦維持に投資家間で不透明感",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095581000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-09T13:11:18+09:00",
+      "publishedAt": "2026-04-09T16:03:44+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,35 +15,35 @@
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T11:16:11+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "アジア各国原油確保へ 日本政府が現地企業支援の枠組みで調整",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T07:49:32+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "FRB先月会合 大多数が“物価上昇率2％上回るリスク高まった”",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T07:14:30+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "NYダウ 前日比1300ドル超の大幅値上がり 2週間の停戦合意受け",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T06:49:00+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "デルタ航空 燃料費 3か月で3100億円余増見込み 減便など対策へ",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T05:41:36+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     }
   ]
 }
