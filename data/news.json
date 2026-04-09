@@ -1,63 +1,63 @@
 {
-  "updatedAt": "2026-04-09T18:07:39.363403+09:00",
-  "updatedAtJST": "2026/04/09 18:07 JST",
+  "updatedAt": "2026-04-09T19:58:16.874194+09:00",
+  "updatedAtJST": "2026/04/09 19:58 JST",
   "totalArticles": 8,
   "articles": [
+    {
+      "title": "ファーストリテイリング “イラン情勢 業績には影響限定的”",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T19:47:58+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【イラン情勢】日本経済への影響は？ 先行きへの不安も",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T19:35:27+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 値下がり 停戦合意先行き不透明で円売りドル買いの動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095871000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T18:56:10+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "ホルムズ海峡 停戦合意後に通過の船舶３隻のみ 位置情報の分析",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T17:29:37+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "JA全中会長 “イラン情勢悪化で国内農業 生産量低下のおそれ”",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T17:11:37+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "3月の「消費者態度指数」3か月ぶりに低下 原油価格高騰影響か",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T16:49:10+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "株価 値下がり アメリカとイラン停戦維持に投資家間で不透明感",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T16:03:44+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "【きょうのおはBiz 4月9日(木)】原油の安定調達・価格 焦点に",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T11:16:11+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "アジア各国原油確保へ 日本政府が現地企業支援の枠組みで調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T07:49:32+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "FRB先月会合 大多数が“物価上昇率2％上回るリスク高まった”",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095371000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T07:14:30+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "NYダウ 前日比1300ドル超の大幅値上がり 2週間の停戦合意受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T06:49:00+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
