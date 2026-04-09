@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-04-10T07:40:13.114159+09:00",
-  "updatedAtJST": "2026/04/10 07:40 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-10T08:37:03.643707+09:00",
+  "updatedAtJST": "2026/04/10 08:37 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "NYダウ 4万8000ドル台を回復 停戦維持への期待感から",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T06:25:55+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "NY原油市場 WTI先物価格が上昇 一時1バレル＝102ドル台に",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T04:35:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "ホルムズ海峡 停戦合意後に通過の船舶３隻のみ 位置情報の分析",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:40:40+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "政府 大手石油元売りに重要施設へ直接販売要請 イラン情勢影響",
@@ -36,13 +36,6 @@
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:17:39+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ファーストリテイリング “イラン情勢 業績には影響限定的”",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095971000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T19:47:58+09:00",
       "hoursAgo": 11
     }
   ]
