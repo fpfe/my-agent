@@ -1,35 +1,42 @@
 {
-  "updatedAt": "2026-04-10T05:51:44.641023+09:00",
-  "updatedAtJST": "2026/04/10 05:51 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-10T06:44:01.448541+09:00",
+  "updatedAtJST": "2026/04/10 06:44 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "NYダウ 4万8000ドル台を回復 停戦維持への期待感から",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096251000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T06:25:55+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NY原油市場 WTI先物価格が上昇 一時1バレル＝102ドル台に",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T04:35:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "ホルムズ海峡 停戦合意後に通過の船舶３隻のみ 位置情報の分析",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:40:40+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "政府 大手石油元売りに重要施設へ直接販売要請 イラン情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:38:41+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "セブン＆アイHD 中東情勢悪化でアメリカの子会社の上場延期へ",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:17:39+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "ファーストリテイリング “イラン情勢 業績には影響限定的”",
@@ -43,14 +50,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T19:35:27+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "円相場 値下がり 停戦合意先行き不透明で円売りドル買いの動き",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T18:56:10+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
