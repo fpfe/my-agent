@@ -1,70 +1,56 @@
 {
-  "updatedAt": "2026-04-10T04:19:04.118278+09:00",
-  "updatedAtJST": "2026/04/10 04:19 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-04-10T05:51:44.641023+09:00",
+  "updatedAtJST": "2026/04/10 05:51 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "NY原油市場 WTI先物価格が上昇 再び一時1バレル＝100ドル台に",
+      "title": "NY原油市場 WTI先物価格が上昇 一時1バレル＝102ドル台に",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096181000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-09T23:04:40+09:00",
-      "hoursAgo": 5
+      "publishedAt": "2026-04-10T04:35:16+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "ホルムズ海峡 停戦合意後に通過の船舶３隻のみ 位置情報の分析",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:40:40+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "政府 大手石油元売りに重要施設へ直接販売要請 イラン情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:38:41+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "セブン＆アイHD 中東情勢悪化でアメリカの子会社の上場延期へ",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T21:17:39+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "ファーストリテイリング “イラン情勢 業績には影響限定的”",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T19:47:58+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "【イラン情勢】日本経済への影響は？ 先行きへの不安も",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T19:35:27+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 値下がり 停戦合意先行き不透明で円売りドル買いの動き",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-09T18:56:10+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "JA全中会長 “イラン情勢悪化で国内農業 生産量低下のおそれ”",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T17:11:37+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "3月の「消費者態度指数」3か月ぶりに低下 原油価格高騰影響か",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095781000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T16:49:10+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
