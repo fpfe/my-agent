@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-04-09T10:09:58.296176+09:00",
-  "updatedAtJST": "2026/04/09 10:09 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-04-09T10:14:06.664572+09:00",
+  "updatedAtJST": "2026/04/09 10:14 JST",
+  "totalArticles": 5,
+  "articles": [
+    {
+      "title": "アジア各国原油確保へ 日本政府が現地企業支援の枠組みで調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T07:49:32+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "FRB先月会合 大多数が“物価上昇率2％上回るリスク高まった”",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095371000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T07:14:30+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "NYダウ 前日比1300ドル超の大幅値上がり 2週間の停戦合意受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T06:49:00+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "デルタ航空 燃料費 3か月で3100億円余増見込み 減便など対策へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095261000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-09T05:41:36+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "NYダウ一時1400ドル超の大幅値上がり 米イラン2週間停戦合意で",
+      "url": "http://www3.nhk.or.jp/news/html/20260408/k10015095341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-08T22:54:34+09:00",
+      "hoursAgo": 11
+    }
+  ]
 }
