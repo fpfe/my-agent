@@ -1,42 +1,49 @@
 {
-  "updatedAt": "2026-04-10T08:37:03.643707+09:00",
-  "updatedAtJST": "2026/04/10 08:37 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-04-10T11:31:09.755351+09:00",
+  "updatedAtJST": "2026/04/10 11:31 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "金子国交相 イラン停戦合意 “早期に最終合意に至ること期待”",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T11:05:56+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "3月の企業物価指数 前月比0.8％上昇 ガソリンなどの値上がりで",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T11:04:02+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時1000円超値上がり 停戦合意維持の見方広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015095401000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T10:54:22+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "アジア太平洋地域の経済成長率+5.1％ 去年より減速する見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096191000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T09:00:15+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NYダウ 4万8000ドル台を回復 停戦維持への期待感から",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T06:25:55+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "NY原油市場 WTI先物価格が上昇 一時1バレル＝102ドル台に",
       "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T04:35:16+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "ホルムズ海峡 停戦合意後に通過の船舶３隻のみ 位置情報の分析",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015095751000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T21:40:40+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "政府 大手石油元売りに重要施設へ直接販売要請 イラン情勢影響",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T21:38:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "セブン＆アイHD 中東情勢悪化でアメリカの子会社の上場延期へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-09T21:17:39+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
