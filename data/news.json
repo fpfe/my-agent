@@ -1,76 +1,76 @@
 {
-  "updatedAt": "2026-04-10T16:27:14.824421+09:00",
-  "updatedAtJST": "2026/04/10 16:27 JST",
+  "updatedAt": "2026-04-10T18:08:58.909578+09:00",
+  "updatedAtJST": "2026/04/10 18:08 JST",
   "totalArticles": 10,
   "articles": [
+    {
+      "title": "スーパーのコメ平均価格 5キロ 3933円 8週連続で値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096721000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-10T17:21:44+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "株価 一時 約1か月ぶりの5万7000円台に",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015095401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T16:02:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "【きょうのおはBiz4月10日(金) 】原油高騰 消費者心理は？",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T15:19:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "政策効果低い補助金など見直し 財務相 “各省庁が自己点検を”",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T13:04:12+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "鈴木農相 イラン情勢受け 農業用資材の流通実態把握進める考え",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:48:19+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "中国 3月の消費者物価指数 6か月連続でプラスに",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:46:55+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "金子国交相 イラン停戦合意 “早期に最終合意に至ること期待”",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:05:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "3月の企業物価指数 前月比0.8％上昇 ガソリンなどの値上がりで",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:04:02+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "アジア太平洋地域の経済成長率+5.1％ 去年より減速する見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T09:00:15+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "NYダウ 4万8000ドル台を回復 停戦維持への期待感から",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T06:25:55+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "NY原油市場 WTI先物価格が上昇 一時1バレル＝102ドル台に",
-      "url": "http://www3.nhk.or.jp/news/html/20260409/k10015096181000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-10T04:35:16+09:00",
       "hoursAgo": 11
     }
   ]
