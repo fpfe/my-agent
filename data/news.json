@@ -1,111 +1,104 @@
 {
-  "updatedAt": "2026-04-10T20:48:53.893781+09:00",
-  "updatedAtJST": "2026/04/10 20:48 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-04-10T22:09:17.593031+09:00",
+  "updatedAtJST": "2026/04/10 22:09 JST",
+  "totalArticles": 14,
   "articles": [
     {
       "title": "農林水産物や食品の輸出拡大へ 経産省と農水省が新チーム設置",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T20:27:28+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "停戦を受け緊急セミナー 中東地域進出企業から安全確保の相談",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T20:14:39+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "電気事業連合会会長 節電呼びかけに現時点で慎重な考え示す",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T19:47:08+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "【イラン情勢 国内影響】生産・流通 各地の現場では",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T19:38:08+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "「ナフサ」由来の断熱材が値上がり 住宅価格に影響は？",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T19:23:32+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "円相場 1ドル＝159円台前半に値下がり 「有事のドル買い」進む",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T18:45:25+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3933円 8週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T18:09:33+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "株価 一時 約1か月ぶりの5万7000円台に",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015095401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T16:02:57+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz4月10日(金) 】原油高騰 消費者心理は？",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T15:19:16+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "政策効果低い補助金など見直し 財務相 “各省庁が自己点検を”",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T13:04:12+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "鈴木農相 イラン情勢受け 農業用資材の流通実態把握進める考え",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:48:19+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "中国 3月の消費者物価指数 6か月連続でプラスに",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:46:55+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "金子国交相 イラン停戦合意 “早期に最終合意に至ること期待”",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:05:56+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "3月の企業物価指数 前月比0.8％上昇 ガソリンなどの値上がりで",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T11:04:02+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "アジア太平洋地域の経済成長率+5.1％ 去年より減速する見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-10T09:00:15+09:00",
       "hoursAgo": 11
     }
   ]
