@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-11T04:43:06.866654+09:00",
-  "updatedAtJST": "2026/04/11 04:43 JST",
+  "updatedAt": "2026-04-11T05:36:35.757884+09:00",
+  "updatedAtJST": "2026/04/11 05:36 JST",
   "totalArticles": 7,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T20:27:28+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "停戦を受け緊急セミナー 中東地域進出企業から安全確保の相談",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T20:14:39+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "電気事業連合会会長 節電呼びかけに現時点で慎重な考え示す",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T19:47:08+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "【イラン情勢 国内影響】生産・流通 各地の現場では",
@@ -36,21 +36,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T19:23:32+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "円相場 1ドル＝159円台前半に値下がり 「有事のドル買い」進む",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T18:45:25+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 3933円 8週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260410/k10015096721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-10T18:09:33+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
