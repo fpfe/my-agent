@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-13T03:50:08.872112+09:00",
-  "updatedAtJST": "2026/04/13 03:50 JST",
+  "updatedAt": "2026-04-13T04:38:44.424532+09:00",
+  "updatedAtJST": "2026/04/13 04:38 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260412/k10015097651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-12T21:51:15+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "ソフトバンク NECやホンダなどと新会社設立 “国産AIを開発”",
       "url": "http://www3.nhk.or.jp/news/html/20260412/k10015097731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-12T19:50:17+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     }
   ]
 }
