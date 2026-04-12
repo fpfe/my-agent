@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-04-13T06:34:26.074844+09:00",
-  "updatedAtJST": "2026/04/13 06:34 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-13T07:34:20.306378+09:00",
+  "updatedAtJST": "2026/04/13 07:34 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "NY原油 WTI先物価格上昇 一時1バレル＝105ドル台 供給面に懸念",
+      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097911000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-13T07:26:20+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ソフトバンク コスト増で基本料金値上げへ 引き上げ動き広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097751000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-13T06:44:02+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "“食料品の消費税をゼロする減税”で価格はどうなる？",
       "url": "http://www3.nhk.or.jp/news/html/20260412/k10015097651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-12T21:51:15+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "ソフトバンク NECやホンダなどと新会社設立 “国産AIを開発”",
       "url": "http://www3.nhk.or.jp/news/html/20260412/k10015097731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-12T19:50:17+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
