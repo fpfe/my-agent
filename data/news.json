@@ -1,35 +1,28 @@
 {
-  "updatedAt": "2026-04-14T05:04:45.750356+09:00",
-  "updatedAtJST": "2026/04/14 05:04 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-04-14T06:50:09.928257+09:00",
+  "updatedAtJST": "2026/04/14 06:50 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "長期金利上昇 “背景は27年前と異なる” 専門家",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098641000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T05:30:35+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "昨年度 日本企業が関わったM＆A 5000件超で最多",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T05:29:22+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "十分な賃上げ実現「感じない」54％ NHK世論調査",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:00:28+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "円相場 1ドル=159円台後半 イラン情勢受け値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-13T18:38:09+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日銀植田総裁 “イラン情勢なお不透明 影響を注視”",
-      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-13T18:07:09+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "関税措置で引き受け停止の米国向け郵便物 14日に再開 日本郵便",
-      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098281000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-13T17:36:17+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 1
     }
   ]
 }
