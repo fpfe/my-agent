@@ -1,28 +1,35 @@
 {
-  "updatedAt": "2026-04-14T06:50:09.928257+09:00",
-  "updatedAtJST": "2026/04/14 06:50 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-04-14T07:42:35.570346+09:00",
+  "updatedAtJST": "2026/04/14 07:42 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "NY原油1バレル＝100ドル割れ 協議進展への期待感で",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T07:28:02+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "長期金利上昇 “背景は27年前と異なる” 専門家",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098641000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:30:35+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "昨年度 日本企業が関わったM＆A 5000件超で最多",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:29:22+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "十分な賃上げ実現「感じない」54％ NHK世論調査",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:00:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     }
   ]
 }
