@@ -1,63 +1,56 @@
 {
-  "updatedAt": "2026-04-13T23:48:38.998518+09:00",
-  "updatedAtJST": "2026/04/13 23:48 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-14T01:12:35.019867+09:00",
+  "updatedAtJST": "2026/04/14 01:12 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "円相場 1ドル=159円台後半 イラン情勢受け値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T18:38:09+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "日銀植田総裁 “イラン情勢なお不透明 影響を注視”",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T18:07:09+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "関税措置で引き受け停止の米国向け郵便物 14日に再開 日本郵便",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T17:36:17+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "長期金利 一時2.49％に 1999年2月以来の高水準 物価上昇懸念で",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T16:57:26+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "株価 400円余 値下がり 米イラン協議合意至らず売り優勢",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T16:46:37+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "イラン情勢影響で調達不安定 TOTOがシステムバスなど受注停止",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T16:14:37+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "給付付き税額控除 “2年を待たずに簡素な形で導入を” 経団連",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T16:13:20+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "【きょうのおはBiz 4月13日(月)】原油高騰 「再生重油」に注目",
-      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-13T12:13:26+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
