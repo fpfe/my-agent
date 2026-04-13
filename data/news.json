@@ -1,28 +1,42 @@
 {
-  "updatedAt": "2026-04-13T11:38:15.913608+09:00",
-  "updatedAtJST": "2026/04/13 11:38 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-04-13T14:41:28.344509+09:00",
+  "updatedAtJST": "2026/04/13 14:41 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "株価 500円超 値下がり 米イラン協議合意至らず売り広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098141000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-13T12:14:54+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "【きょうのおはBiz 4月13日(月)】原油高騰 「再生重油」に注目",
+      "url": "http://www3.nhk.or.jp/news/html/20260413/k10015098061000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-13T12:13:26+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "長期金利2.49％に上昇 1999年2月以来の高水準 物価上昇懸念で",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T10:15:07+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "NY原油 WTI先物価格上昇 一時1バレル＝105ドル台 供給面に懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T07:26:20+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "ソフトバンク コスト増で基本料金値上げへ 引き上げ動き広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260413/k10015097751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-13T06:44:02+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     }
   ]
 }
