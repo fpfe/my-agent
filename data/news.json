@@ -1,49 +1,77 @@
 {
-  "updatedAt": "2026-04-14T11:32:05.136437+09:00",
-  "updatedAtJST": "2026/04/14 11:32 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-14T14:23:05.925828+09:00",
+  "updatedAtJST": "2026/04/14 14:23 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "日産 販売モデル9割に自動運転などAI活用へ 長期経営方針",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099021000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T13:59:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "きょうのおはBiz 4月14日(火) 伝統の大島紬 デザインに商機",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098811000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T12:31:09+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時1400円上昇 米とイラン協議再開への期待感で",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T12:18:05+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "サンマの国際会議 大阪で始まる 漁獲量の上限引き下げが焦点に",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T11:36:48+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "片山財務相G20など出席へ イラン情勢受けた経済や市場動向議論",
+      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098841000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-14T11:33:04+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "特定技能 外食業での受け入れ一時停止 農相 「影響は承知」",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T11:07:15+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 一時1400円以上値上がり 米イラン協議再開への期待感から",
-      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-14T09:55:00+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "NY原油1バレル＝100ドル割れ 協議進展への期待感で",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T07:28:02+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "長期金利上昇 “背景は27年前と異なる” 専門家",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098641000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:30:35+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "昨年度 日本企業が関わったM＆A 5000件超で最多",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:29:22+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "十分な賃上げ実現「感じない」54％ NHK世論調査",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T05:00:28+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
