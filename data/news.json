@@ -1,55 +1,62 @@
 {
-  "updatedAt": "2026-04-15T04:15:25.986982+09:00",
-  "updatedAtJST": "2026/04/15 04:15 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-15T05:53:44.186024+09:00",
+  "updatedAtJST": "2026/04/15 05:53 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "鶏肉も値上がり 業界関係者「消費者の節約志向が背景」",
+      "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099401000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-15T05:38:40+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東京23区 武蔵野 三鷹のタクシー運賃 20日から値上げ",
+      "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099461000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-15T05:15:15+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "IMF 世界経済の成長率 イラン情勢影響で引き下げ見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099621000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-14T22:39:53+09:00",
-      "hoursAgo": 5
+      "publishedAt": "2026-04-15T05:03:38+09:00",
+      "hoursAgo": 0
     },
     {
       "title": "国交省 不適切整備で全日空に業務改善勧告",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T22:08:40+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "高島屋 不動産一部売却で本業注力へ 株主意向も影響か",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T20:49:37+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "【詳しく】イラン情勢 石油製品に影響 シンナーも品薄に",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T19:16:08+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 対ユーロで最安値 対ドルでは値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T18:23:43+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "中国 3月輸出額 伸びが大幅鈍化 原油高がどう影響するか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T18:04:07+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価が上昇 軍事作戦直後の水準に 米とイラン協議の再開期待で",
-      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015098761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-14T16:26:20+09:00",
       "hoursAgo": 11
     }
   ]
