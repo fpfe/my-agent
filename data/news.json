@@ -1,35 +1,35 @@
 {
-  "updatedAt": "2026-04-15T06:51:57.139583+09:00",
-  "updatedAtJST": "2026/04/15 06:51 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-15T07:44:23.305860+09:00",
+  "updatedAtJST": "2026/04/15 07:44 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "鶏肉も値上がり 業界関係者「消費者の節約志向が背景」",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:38:40+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "東京23区 武蔵野 三鷹のタクシー運賃 20日から値上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:15:15+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "IMF 世界経済の成長率 イラン情勢影響で引き下げ見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:03:38+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "国交省 不適切整備で全日空に業務改善勧告",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T22:08:40+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "高島屋 不動産一部売却で本業注力へ 株主意向も影響か",
@@ -37,13 +37,6 @@
       "source": "NHK 経済",
       "publishedAt": "2026-04-14T20:49:37+09:00",
       "hoursAgo": 10
-    },
-    {
-      "title": "【詳しく】イラン情勢 石油製品に影響 シンナーも品薄に",
-      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099041000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-14T19:16:08+09:00",
-      "hoursAgo": 11
     }
   ]
 }
