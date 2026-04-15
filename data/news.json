@@ -1,70 +1,77 @@
 {
-  "updatedAt": "2026-04-15T19:59:04.232862+09:00",
-  "updatedAtJST": "2026/04/15 19:59 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-04-15T21:01:51.734056+09:00",
+  "updatedAtJST": "2026/04/15 21:01 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "TBSがBS4K終了を発表 民放5社がすべて終了へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-15T19:59:18+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "イラン情勢 ナフサ価格高騰が日用品に影響 値上げの動きも…",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100031000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T18:49:44+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "3月の訪日客361万人余 3月として過去最高 韓国 台湾が増加",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T18:44:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "円相場 対ドルで小幅な値動き イラン情勢にらみ伸び悩み",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T18:31:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "民間の石油備蓄義務の引き下げ措置 来月15日まで1か月間延長",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T18:08:54+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "サントリー 第一三共の子会社を買収へ 健康関連事業を強化",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T17:58:34+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "話題の船「ちきゅう」の中へ レアアースふくむ泥どうとった？",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015087631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T16:27:18+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "株価 5万8000円台回復 米 イラン近く協議再開との見方から",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T16:14:49+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "ガソリン価格 全国平均1リットル167.5円 4週ぶり値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T15:29:42+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "【きょうのおはBiz 4月15日(水)】韓国 “Kフード”の戦略",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T12:58:06+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     }
   ]
 }
