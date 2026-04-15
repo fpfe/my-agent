@@ -1,42 +1,35 @@
 {
-  "updatedAt": "2026-04-15T08:41:20.251826+09:00",
-  "updatedAtJST": "2026/04/15 08:41 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-04-15T11:30:23.850878+09:00",
+  "updatedAtJST": "2026/04/15 11:30 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "株価 値上がり 約1か月半ぶりに5万8000円台を一時回復",
+      "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099751000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-15T09:39:16+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "鶏肉も値上がり 業界関係者「消費者の節約志向が背景」",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:38:40+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "東京23区 武蔵野 三鷹のタクシー運賃 20日から値上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:15:15+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "IMF 世界経済の成長率 イラン情勢影響で引き下げ見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:03:38+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "国交省 不適切整備で全日空に業務改善勧告",
-      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099601000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-14T22:08:40+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "高島屋 不動産一部売却で本業注力へ 株主意向も影響か",
-      "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-14T20:49:37+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
