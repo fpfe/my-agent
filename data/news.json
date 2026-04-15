@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-16T06:52:01.288167+09:00",
-  "updatedAtJST": "2026/04/16 06:52 JST",
+  "updatedAt": "2026-04-16T07:41:07.456385+09:00",
+  "updatedAtJST": "2026/04/16 07:41 JST",
   "totalArticles": 6,
   "articles": [
     {
@@ -8,42 +8,42 @@
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:36:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "FRB最新経済報告を公表 イラン情勢受けインフレ再加速に警戒感",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:09:42+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "石油備蓄放出1か月 代替調達進むも目詰まり解消が課題",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:04:16+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "G7財務相・中銀総裁会議 イラン情勢受け経済や市場対応議論へ",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T05:14:21+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "政府備蓄米 2年ぶり買い入れ 初回落札は予定の5％余にとどまる",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T05:00:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "TBSがBS4K終了を発表 民放5社がすべて終了へ",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015100231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T19:59:18+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
