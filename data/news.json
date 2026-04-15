@@ -1,35 +1,42 @@
 {
-  "updatedAt": "2026-04-15T11:30:23.850878+09:00",
-  "updatedAtJST": "2026/04/15 11:30 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-04-15T14:23:35.695497+09:00",
+  "updatedAtJST": "2026/04/15 14:23 JST",
+  "totalArticles": 5,
   "articles": [
     {
-      "title": "株価 値上がり 約1か月半ぶりに5万8000円台を一時回復",
+      "title": "【きょうのおはBiz 4月15日(水)】韓国 “Kフード”の戦略",
+      "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099771000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-15T12:58:06+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 5万8000円台回復 イラン協議再開の見方で買い注文集まる",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099751000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-15T09:39:16+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-04-15T12:14:50+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "鶏肉も値上がり 業界関係者「消費者の節約志向が背景」",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:38:40+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "東京23区 武蔵野 三鷹のタクシー運賃 20日から値上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260415/k10015099461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:15:15+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "IMF 世界経済の成長率 イラン情勢影響で引き下げ見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260414/k10015099621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-15T05:03:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
