@@ -1,56 +1,63 @@
 {
-  "updatedAt": "2026-04-16T11:37:03.968338+09:00",
-  "updatedAtJST": "2026/04/16 11:37 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-16T14:30:33.065257+09:00",
+  "updatedAtJST": "2026/04/16 14:30 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "整備新幹線の貸付料で見直し案 国交省が有識者会議に提示へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100781000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-16T14:23:37+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日経平均株価 5万9500円台 取引時間中の最高値更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-16T12:58:06+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "【きょうのおはBiz 4月16日(木)】原油高 アジア各国の対応策は",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T11:16:06+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 5万9400円台に 最高値を更新 イラン情勢の懸念後退",
-      "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-16T11:13:50+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "ナスダックとS＆P500が最高値更新 米イラン協議前進に期待",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:36:34+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "FRB最新経済報告を公表 イラン情勢受けインフレ再加速に警戒感",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:09:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "石油備蓄放出1か月 代替調達進むも目詰まり解消が課題",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T06:04:16+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "G7財務相・中銀総裁会議 イラン情勢受け経済や市場対応議論へ",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T05:14:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "政府備蓄米 2年ぶり買い入れ 初回落札は予定の5％余にとどまる",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T05:00:48+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
