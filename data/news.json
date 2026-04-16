@@ -1,55 +1,55 @@
 {
-  "updatedAt": "2026-04-17T04:13:08.312505+09:00",
-  "updatedAtJST": "2026/04/17 04:13 JST",
+  "updatedAt": "2026-04-17T05:47:21.227281+09:00",
+  "updatedAtJST": "2026/04/17 05:47 JST",
   "totalArticles": 7,
   "articles": [
+    {
+      "title": "G20財務相中銀総裁会議が終了 議長国アメリカのもとで議論",
+      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-17T05:14:04+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "滋賀銀行と池田泉州HD 資本業務提携で最終調整",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T21:07:34+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "サンリオ 常務が不適切な報酬受領の疑いで調査始める",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T20:19:16+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "イラン情勢影響広がる 資材の費用上昇 資材そのもの入手困難に",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T19:40:37+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 終値の最高値更新 米イランの協議進展に期待",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T19:03:57+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "円相場 対ドルで小幅な値動き 米イラン協議の行方見極め",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T18:15:43+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "G20 財務相・中央銀行総裁会議 世界経済の安定へ議論深まるか",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T17:56:19+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "「原油」って？「ナフサ」って？ニュースでよく聞くことば",
-      "url": "http://www3.nhk.or.jp/news/html/20260416/k10015098931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-16T16:51:03+09:00",
       "hoursAgo": 11
     }
   ]
