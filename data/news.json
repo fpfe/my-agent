@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-17T00:25:28.392815+09:00",
-  "updatedAtJST": "2026/04/17 00:25 JST",
+  "updatedAt": "2026-04-17T02:13:50.117070+09:00",
+  "updatedAtJST": "2026/04/17 02:13 JST",
   "totalArticles": 9,
   "articles": [
     {
@@ -8,63 +8,63 @@
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T21:07:34+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "サンリオ 常務が不適切な報酬受領の疑いで調査始める",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T20:19:16+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "イラン情勢影響広がる 資材の費用上昇 資材そのもの入手困難に",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T19:40:37+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "株価 終値の最高値更新 米イランの協議進展に期待",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T19:03:57+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "円相場 対ドルで小幅な値動き 米イラン協議の行方見極め",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T18:15:43+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "G20 財務相・中央銀行総裁会議 世界経済の安定へ議論深まるか",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T17:56:19+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "「原油」って？「ナフサ」って？ニュースでよく聞くことば",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015098931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T16:51:03+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "石油備蓄放出1か月 代替調達進むも目詰まり解消が課題",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T15:46:50+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "整備新幹線の貸付料で見直し案 国交省が有識者会議に提示へ",
       "url": "http://www3.nhk.or.jp/news/html/20260416/k10015100781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-16T14:23:37+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
