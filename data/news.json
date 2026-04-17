@@ -1,76 +1,62 @@
 {
-  "updatedAt": "2026-04-18T03:59:58.758549+09:00",
-  "updatedAtJST": "2026/04/18 03:59 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-18T05:00:45.137662+09:00",
+  "updatedAtJST": "2026/04/18 05:00 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "サンマの国際会議 漁獲量の上限 去年より５％削減で合意",
+      "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-18T04:55:27+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "財政制度等審議会 骨太の方針めぐり議論 市場の信認確保を",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015102001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T20:52:50+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "軽油カルテル 東京地検特捜部が5社を独禁法違反の罪で起訴",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T19:42:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "円相場 対ユーロで最安値更新 一時1ユーロ＝188円に迫る水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T18:52:02+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "東証 不正会計のニデックに違約金9000万円超求める方針",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T18:38:21+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "滋賀銀行と池田泉州HD 資本業務提携を正式発表",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:52:51+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "化学繊維協会「原材料は十分確保」も値上げへ理解求める",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:21:32+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "スーパーのコメ平均価格 5キロ3873円 9週続けて値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:13:35+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "先端半導体の新研究施設 北海道で2028年度の稼働目指す",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T16:59:13+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ホンダ 中国の一部自動車工場を6月から休止へ 競争激化で",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101671000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T16:40:12+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株価 1000円超値下がり 利益確定の動き広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T16:16:36+09:00",
       "hoursAgo": 11
     }
   ]
