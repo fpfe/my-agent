@@ -1,91 +1,105 @@
 {
-  "updatedAt": "2026-04-17T14:27:40.472772+09:00",
-  "updatedAtJST": "2026/04/17 14:27 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-04-17T16:46:29.611485+09:00",
+  "updatedAtJST": "2026/04/17 16:46 JST",
+  "totalArticles": 14,
   "articles": [
+    {
+      "title": "ホンダ 中国の一部自動車工場を6月から休止へ 競争激化で",
+      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-17T16:40:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 1000円超値下がり 利益確定の動き広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-17T16:16:36+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米ネットフリックス 1～3月増益 “日本 WBC独占配信で会員増”",
+      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-17T15:24:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "きょうのおはBiz 4月17日(金) 原油高 長期化なら“価格転嫁”?",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T14:24:00+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "最先端画像センサー量産計画に最大600億円補助 経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T13:49:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "G20財務相・中銀総裁会議 イラン情勢の経済影響に懸念相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T13:43:40+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "JR北海道の“黄線区”上下分離案 金子国交相「十分議論を」",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T13:07:50+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "鈴木農相 “加工・米粉など主食用以外のコメ生産促す”",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T12:31:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "軽油カルテルで公取委が5社を独禁法違反疑いで刑事告発",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T12:28:42+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 値下がり 半導体関連などの銘柄が売られる",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T12:13:42+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "アジアが米国産原油に注目“超大型タンカー予約難しく”米報道",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T12:00:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "赤澤経産相 “塗料用シンナーや一部住宅設備の供給にめど”",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T11:56:30+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "日銀 植田総裁 “負の供給ショック”踏まえ金融政策を判断",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T11:40:51+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "ルフトハンザ航空子会社27機運航停止へ 燃料費高騰など受け",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T06:48:02+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ナスダック指数最高値更新 12営業日連続上昇は2009年以来",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T06:45:33+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     }
   ]
 }
