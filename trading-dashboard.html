@@ -742,7 +742,7 @@ body {
     <div class="tile-hd">
       <div>
         <div class="tile-title">AI Intelligence</div>
-        <div class="tile-sub">NewsAPI + Claude</div>
+        <div class="tile-sub">NewsAPI + Gemini</div>
       </div>
     </div>
 
@@ -754,7 +754,7 @@ body {
         </div>
         <div style="display:flex;flex-direction:column;gap:4px;">
           <button class="analyze-btn" id="step2-btn" onclick="runStep2()" disabled>🤖 Step 2: Get AI Advice</button>
-          <div style="font-size:10px;color:var(--muted2);text-align:center;">Claude analyzes news + your trades</div>
+          <div style="font-size:10px;color:var(--muted2);text-align:center;">Gemini analyzes news + your trades</div>
         </div>
       </div>
       <div id="step-msg" class="step-msg" style="display:none"></div>
@@ -777,11 +777,11 @@ body {
         <div style="color:#FF7B70;font-size:12px;font-weight:700;margin-bottom:6px;">⚠️ APIキーが未設定です</div>
         <div style="color:var(--muted2);font-size:11px;line-height:1.7;margin-bottom:10px;">
           設定方法：ブラウザのコンソール（F12）で以下を実行してください：<br>
-          <code style="background:var(--bg);padding:2px 6px;border-radius:6px;color:#5AADFF;font-size:11px;">localStorage.setItem('ja2_apikey', 'YOUR_KEY')</code><br>
+          <code style="background:var(--bg);padding:2px 6px;border-radius:6px;color:#5AADFF;font-size:11px;">localStorage.setItem('ja2_gemini_key', 'YOUR_KEY')</code><br>
           またはこちらから直接設定：
         </div>
         <div style="display:flex;gap:8px;align-items:center;">
-          <input type="password" id="apikey-input" placeholder="sk-ant-..."
+          <input type="password" id="apikey-input" placeholder="AIza..."
             style="flex:1;background:var(--surface-low);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:10px;font-size:12px;font-family:inherit;">
           <button onclick="saveApiKey()"
             style="background:var(--primary);color:#fff;border:none;padding:7px 14px;border-radius:10px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;font-family:inherit;">保存</button>
@@ -791,7 +791,7 @@ body {
       <div id="advisor-body">
         <div class="ai-placeholder">
           Step 1 でニュースを取得し<br>Step 2 でAIアドバイスを取得。<br>
-          <span style="font-size:11px;color:var(--muted2)">(localStorage: ja2_apikey)</span>
+          <span style="font-size:11px;color:var(--muted2)">(localStorage: ja2_gemini_key)</span>
         </div>
       </div>
     </div>
@@ -2096,35 +2096,32 @@ function renderAll() {
 function saveApiKey() {
   const val = document.getElementById('apikey-input').value.trim();
   if (!val) return;
-  localStorage.setItem('ja2_apikey', val);
+  localStorage.setItem('ja2_gemini_key', val);
   document.getElementById('apikey-section').style.display = 'none';
   document.getElementById('apikey-input').value = '';
   showStatus('✅ APIキーを保存しました。再度ボタンを押してください。');
 }
 
-// Helper: call Anthropic API and return raw text from response
-// options.webSearch = true → adds anthropic-beta header for web_search tool
-async function claudeCall(apiKey, payload, options = {}) {
-  const headers = {
-    'x-api-key': apiKey,
-    'anthropic-version': '2023-06-01',
-    'content-type': 'application/json',
-    'anthropic-dangerous-direct-browser-access': 'true'
-  };
-  if (options.webSearch) headers['anthropic-beta'] = 'web-search-2025-03-05';
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+// Helper: call Gemini API and return raw text from response
+async function geminiCall(apiKey, system, userMessage) {
+  const model = 'gemini-2.5-flash';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  const res = await fetch(url, {
     method: 'POST',
-    headers,
-    body: JSON.stringify(payload)
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: system }] },
+      contents: [{ role: 'user', parts: [{ text: userMessage }] }],
+      generationConfig: {
+        maxOutputTokens: 2000,
+        responseMimeType: 'application/json'
+      }
+    })
   });
   if (res.status === 429) { const e = new Error('429 Rate limit exceeded'); e.status = 429; throw e; }
   const data = await res.json();
   if (data.error) throw new Error(data.error.message || 'API error');
-  let text = '';
-  for (const blk of (data.content || [])) {
-    if (blk.type === 'text') text += blk.text;
-  }
-  return text;
+  return data.candidates[0].content.parts[0].text;
 }
 
 // Helper: robustly parse JSON from a raw API response (no prefill)
@@ -2322,7 +2319,7 @@ async function runStep1() {
 }
 
 async function runStep2() {
-  const apiKey = localStorage.getItem('ja2_apikey');
+  const apiKey = localStorage.getItem('ja2_gemini_key');
   if (!apiKey) { document.getElementById('apikey-section').style.display = 'block'; return; }
   document.getElementById('apikey-section').style.display = 'none';
 
@@ -2334,16 +2331,10 @@ async function runStep2() {
     `${i + 1}. ${a.title || a} (${a.source || ''})`
   ).filter(Boolean).join('\n') || '（ニュースなし）';
 
+  const systemPrompt = 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを分析してください。';
+  const userMessage = `<market_news>\n${newsStr}\n</market_news>\n\n<trade_data>\n${tradeStr}\n</trade_data>\n\n<instructions>\n上記の市場ニュースと取引データを分析してAdvisorとして以下のJSONで回答してください：\n{"aggressive":{"score":数値,"good":["良かった点（最大3つ）"],"bad":["改善点（最大3つ）"],"advice":"市場ニュースと取引を結びつけた具体的なアドバイス","nextAction":"明日の具体的なアクション"}}\n必ずJSONのみで回答してください。\n</instructions>`;
   const doAnalysis = async () => {
-    return await claudeCall(apiKey, {
-      model: 'claude-sonnet-4-6',
-      max_tokens: 2000,
-      system: 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを分析してください。',
-      messages: [{
-        role: 'user',
-        content: `<market_news>\n${newsStr}\n</market_news>\n\n<trade_data>\n${tradeStr}\n</trade_data>\n\n<instructions>\n上記の市場ニュースと取引データを分析してAdvisorとして以下のJSONで回答してください：\n{"aggressive":{"score":数値,"good":["良かった点（最大3つ）"],"bad":["改善点（最大3つ）"],"advice":"市場ニュースと取引を結びつけた具体的なアドバイス","nextAction":"明日の具体的なアクション"}}\n必ずJSONのみで回答してください。\n</instructions>`
-      }]
-    });
+    return await geminiCall(apiKey, systemPrompt, userMessage);
   };
 
   try {
