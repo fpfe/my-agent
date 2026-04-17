@@ -1,35 +1,28 @@
 {
-  "updatedAt": "2026-04-17T08:39:56.537016+09:00",
-  "updatedAtJST": "2026/04/17 08:39 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-04-17T11:32:55.558053+09:00",
+  "updatedAtJST": "2026/04/17 11:32 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "ルフトハンザ航空子会社27機運航停止へ 燃料費高騰など受け",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T06:48:02+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "ナスダック指数最高値更新 12営業日連続上昇は2009年以来",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T06:45:33+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "G20財務相中銀総裁会議が終了 議長国アメリカのもとで議論",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T05:14:04+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "滋賀銀行と池田泉州HD 資本業務提携で最終調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260416/k10015101121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-16T21:07:34+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
