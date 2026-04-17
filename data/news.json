@@ -1,111 +1,83 @@
 {
-  "updatedAt": "2026-04-18T01:01:27.121655+09:00",
-  "updatedAtJST": "2026/04/18 01:01 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-04-18T02:48:40.005034+09:00",
+  "updatedAtJST": "2026/04/18 02:48 JST",
+  "totalArticles": 11,
   "articles": [
     {
       "title": "財政制度等審議会 骨太の方針めぐり議論 市場の信認確保を",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015102001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T20:52:50+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "軽油カルテル 東京地検特捜部が5社を独禁法違反の罪で起訴",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T19:42:01+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "円相場 対ユーロで最安値更新 一時1ユーロ＝188円に迫る水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T18:52:02+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "東証 不正会計のニデックに違約金9000万円超求める方針",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T18:38:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "滋賀銀行と池田泉州HD 資本業務提携を正式発表",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:52:51+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "化学繊維協会「原材料は十分確保」も値上げへ理解求める",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:21:32+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "スーパーのコメ平均価格 5キロ3873円 9週続けて値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T17:13:35+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "先端半導体の新研究施設 北海道で2028年度の稼働目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T16:59:13+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "ホンダ 中国の一部自動車工場を6月から休止へ 競争激化で",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T16:40:12+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 1000円超値下がり 利益確定の動き広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T16:16:36+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "米ネットフリックス 1～3月増益 “日本 WBC独占配信で会員増”",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T15:24:45+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "きょうのおはBiz 4月17日(金) 原油高 長期化なら“価格転嫁”?",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T14:24:00+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "最先端画像センサー量産計画に最大600億円補助 経産省",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101601000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T13:49:30+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "G20財務相・中銀総裁会議 イラン情勢の経済影響に懸念相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T13:43:40+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "JR北海道の“黄線区”上下分離案 金子国交相「十分議論を」",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101481000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T13:07:50+09:00",
       "hoursAgo": 11
     }
   ]
