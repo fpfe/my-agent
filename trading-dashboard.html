@@ -2113,7 +2113,7 @@ async function geminiCall(apiKey, system, userMessage) {
       systemInstruction: { parts: [{ text: system }] },
       contents: [{ role: 'user', parts: [{ text: userMessage }] }],
       generationConfig: {
-        maxOutputTokens: 2000,
+        maxOutputTokens: 4000,
         responseMimeType: 'application/json'
       }
     })
@@ -2327,12 +2327,69 @@ async function runStep2() {
   document.getElementById('advisor-body').innerHTML = '<div class="spinner">🤖 Advisorが分析中...</div>';
 
   const tradeStr = getTodayTradesString();
-  const newsStr = window.fetchedNews.slice(0, 5).map((a, i) =>
+  const newsStr = window.fetchedNews.slice(0, 10).map((a, i) =>
     `${i + 1}. ${a.title || a} (${a.source || ''})`
   ).filter(Boolean).join('\n') || '（ニュースなし）';
 
-  const systemPrompt = 'あなたは積極的な投資アドバイザーです。取引データと市場ニュースを分析してください。';
-  const userMessage = `<market_news>\n${newsStr}\n</market_news>\n\n<trade_data>\n${tradeStr}\n</trade_data>\n\n<instructions>\n上記の市場ニュースと取引データを分析してAdvisorとして以下のJSONで回答してください：\n{"aggressive":{"score":数値,"good":["良かった点（最大3つ）"],"bad":["改善点（最大3つ）"],"advice":"市場ニュースと取引を結びつけた具体的なアドバイス","nextAction":"明日の具体的なアクション"}}\n必ずJSONのみで回答してください。\n</instructions>`;
+  const systemPrompt = `あなたは日本株のレバレッジETF短期売買を専門とする投資アドバイザーです。
+ユーザーの当日の取引データと直近のマーケットニュースを精読し、両者を結びつけた具体的で実用的な分析を行ってください。
+
+【分析の原則】
+- ニュースの内容を必ず引用しながら、それが取引にどう関係するかを説明する
+- 抽象的な評価（「良い」「悪い」）ではなく、具体的な銘柄・タイミング・損益額に言及する
+- 良かった点・改善点はそれぞれ最低2つ、最大3つ挙げる
+- スコアは10点刻みではなく、根拠を持って細かく採点する（例: 65, 72, 48）
+- nextActionは明日の具体的な行動指針として、注目すべきニュース・銘柄・エントリー条件を含める
+- 取引がない日でも、ニュースから明日の戦略を導き出す
+
+【スコア基準】
+90-100: ニュースの流れを完璧に捉えた取引
+70-89: 概ね妥当だがタイミングや銘柄選択に改善余地
+50-69: 平均的、ニュースとの整合性が部分的
+30-49: ニュースの流れに逆行または機会損失
+0-29: 大きな損失または明らかな判断ミス
+
+回答は必ず指定されたJSONフォーマットのみで返してください。`;
+  const userMessage = `<market_news>
+${newsStr}
+</market_news>
+
+<trade_data>
+${tradeStr}
+</trade_data>
+
+<analysis_framework>
+以下の手順で分析してください：
+
+1. まず市場ニュースを読み、本日の市場テーマ（金融政策、為替、セクター動向、地政学など）を特定する
+2. 取引データを確認し、各取引がどの市場テーマと関連しているかを判定する
+3. ニュースと取引の整合性、タイミング、リスク管理を評価する
+4. 明日の市場で注目すべきニュース展開と、それに対応した戦略を提案する
+</analysis_framework>
+
+<output_format>
+以下のJSONフォーマットで回答してください。各フィールドは必ず埋めてください：
+
+{
+  "aggressive": {
+    "score": <0-100の整数、根拠を持って細かく採点>,
+    "good": [
+      "<具体的な良い点1：銘柄名・損益額・関連ニュースを含めて2-3文で説明>",
+      "<具体的な良い点2：同上>",
+      "<具体的な良い点3：同上、該当があれば>"
+    ],
+    "bad": [
+      "<具体的な改善点1：銘柄名・タイミング・関連ニュースを引用して2-3文で説明>",
+      "<具体的な改善点2：同上>",
+      "<具体的な改善点3：同上、該当があれば>"
+    ],
+    "advice": "<3-4文の総合アドバイス。本日の市場テーマとユーザーの取引パターンを結びつけ、戦略全体への示唆を述べる>",
+    "nextAction": "<明日の具体的アクション。注目すべきニュース展開、見るべき銘柄、エントリー/エグジット条件を含めて2-3文で>"
+  }
+}
+
+JSON以外の文字（説明文、コードフェンス、前置き）は一切含めないでください。
+</output_format>`;
   const doAnalysis = async () => {
     return await geminiCall(apiKey, systemPrompt, userMessage);
   };
