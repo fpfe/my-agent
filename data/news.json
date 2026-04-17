@@ -1,34 +1,27 @@
 {
-  "updatedAt": "2026-04-18T06:40:58.870245+09:00",
-  "updatedAtJST": "2026/04/18 06:40 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-04-18T07:38:24.445834+09:00",
+  "updatedAtJST": "2026/04/18 07:38 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "サンマの国際会議 漁獲量の上限 去年より５％削減で合意",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T04:55:27+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "財政制度等審議会 骨太の方針めぐり議論 市場の信認確保を",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015102001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T20:52:50+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "軽油カルテル 東京地検特捜部が5社を独禁法違反の罪で起訴",
       "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-17T19:42:01+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 対ユーロで最安値更新 一時1ユーロ＝188円に迫る水準に",
-      "url": "http://www3.nhk.or.jp/news/html/20260417/k10015101911000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-17T18:52:02+09:00",
       "hoursAgo": 11
     }
   ]
