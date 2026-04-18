@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-18T22:01:45.920911+09:00",
-  "updatedAtJST": "2026/04/18 22:01 JST",
+  "updatedAt": "2026-04-18T23:38:55.060378+09:00",
+  "updatedAtJST": "2026/04/18 23:38 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T14:05:23+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "NYダウ 一時1100ドル上昇 NY原油市場 先物価格80ドル台に急落",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T12:07:40+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
