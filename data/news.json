@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-18T18:47:58.926250+09:00",
-  "updatedAtJST": "2026/04/18 18:47 JST",
+  "updatedAt": "2026-04-18T19:39:41.279149+09:00",
+  "updatedAtJST": "2026/04/18 19:39 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T14:05:23+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "NYダウ 一時1100ドル上昇 NY原油市場 先物価格80ドル台に急落",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T12:07:40+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "Ｇ7重要鉱物会議 供給網の多角化に向けた取り組み加速を確認",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T09:21:35+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
