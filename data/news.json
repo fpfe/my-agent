@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-04-18T11:23:59.006521+09:00",
-  "updatedAtJST": "2026/04/18 11:23 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-18T14:06:22.514279+09:00",
+  "updatedAtJST": "2026/04/18 14:06 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "米政府と対立する新興AI企業アンソロピック 高官と意見交わす",
+      "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-18T14:05:23+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NYダウ 一時1100ドル上昇 NY原油市場 先物価格80ドル台に急落",
+      "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102201000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-18T12:07:40+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "Ｇ7重要鉱物会議 供給網の多角化に向けた取り組み加速を確認",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T09:21:35+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "サンマの国際会議 漁獲量の上限 去年より５％削減で合意",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T04:55:27+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
