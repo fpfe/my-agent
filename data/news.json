@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-04-18T23:38:55.060378+09:00",
-  "updatedAtJST": "2026/04/18 23:38 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-19T00:36:53.327615+09:00",
+  "updatedAtJST": "2026/04/19 00:36 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "米政府と対立する新興AI企業アンソロピック 高官と意見交わす",
       "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-18T14:05:23+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "NYダウ 一時1100ドル上昇 NY原油市場 先物価格80ドル台に急落",
-      "url": "http://www3.nhk.or.jp/news/html/20260418/k10015102201000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-18T12:07:40+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
