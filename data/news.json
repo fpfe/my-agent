@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-20T08:35:58.748698+09:00",
-  "updatedAtJST": "2026/04/20 08:35 JST",
+  "updatedAt": "2026-04-20T11:38:38.753650+09:00",
+  "updatedAtJST": "2026/04/20 11:38 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T08:13:20+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "自動車各社 東南アジア戦略を強化 中国メーカーとの競争激化",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T06:58:55+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     }
   ]
 }
