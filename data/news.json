@@ -1,55 +1,48 @@
 {
-  "updatedAt": "2026-04-21T06:46:08.613446+09:00",
-  "updatedAtJST": "2026/04/21 06:46 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-21T07:42:24.493759+09:00",
+  "updatedAtJST": "2026/04/21 07:42 JST",
+  "totalArticles": 6,
   "articles": [
     {
       "title": "フジドリームエアラインズ 国内線燃油サーチャージ 引き上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T06:00:04+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "レアアースの「重希土類」使わない製品の実用化相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T05:47:59+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "中国 レアアース磁石の対日輸出27％余減 規制強化影響の見方も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T05:14:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "全日空 日本航空 国際線燃油サーチャージ引き上げ 5月に前倒し",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T20:54:08+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "地震・津波で宅配に影響 北海道・東北中心に配達停止や遅れ",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T20:40:53+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "東京23区 新築マンションの平均価格1億3784万円 過去最高更新",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T20:37:47+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 小幅な値動き 停戦協議に向けたイラン情勢の見極めで",
-      "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-20T18:53:07+09:00",
       "hoursAgo": 11
     }
   ]
