@@ -1,49 +1,56 @@
 {
-  "updatedAt": "2026-04-20T17:06:28.982696+09:00",
-  "updatedAtJST": "2026/04/20 17:06 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-20T19:47:41.358980+09:00",
+  "updatedAtJST": "2026/04/20 19:47 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "東京23区 新築マンションの平均価格1億3784万円 過去最高更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-20T19:22:27+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 小幅な値動き 停戦協議に向けたイラン情勢の見極めで",
+      "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-20T18:53:07+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "全日空 日本航空 国際線燃油サーチャージ引き上げ 5月に前倒し",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T16:36:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "株価 値上がり イラン情勢不透明で様子見も",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T16:25:00+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "【きょうのおはBiz 4月20日(月)】イラン情勢長期化で住宅は",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T13:30:06+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "広島 廿日市 ふるさと納税の寄付額約2割減少 かき被害の影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T13:07:59+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "NY原油先物価格上昇 1バレル91ドル台に 米イラン協議不透明で",
       "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-20T08:13:20+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "自動車各社 東南アジア戦略を強化 中国メーカーとの競争激化",
-      "url": "http://www3.nhk.or.jp/news/html/20260420/k10015103111000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-20T06:58:55+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
