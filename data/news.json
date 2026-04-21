@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-04-22T05:52:44.009668+09:00",
-  "updatedAtJST": "2026/04/22 05:52 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-04-22T06:44:33.739743+09:00",
+  "updatedAtJST": "2026/04/22 06:44 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "プルデンシャル生命 新規営業の自粛 半年延長を発表",
+      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-22T06:33:02+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "物価高で「消費の二極化」鮮明に 小売各社が対応強化",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:58:05+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "海外のプライベートクレジット 国内の影響 確認進める 金融庁",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:44:14+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "米小売統計 ガソリン高で増加 原油高の個人消費への影響焦点に",
@@ -43,28 +50,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:25:57+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "ソニー・ホンダモビリティ “市場投入は困難” 事業縮小を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:14:06+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "ノジマ 日立の家電事業の買収を発表 買収額約1100億円の見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T19:11:42+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅な値動きに イラン情勢見極めで",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T18:54:43+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
