@@ -1,70 +1,91 @@
 {
-  "updatedAt": "2026-04-21T14:26:49.256763+09:00",
-  "updatedAtJST": "2026/04/21 14:26 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-04-21T16:49:35.830135+09:00",
+  "updatedAtJST": "2026/04/21 16:49 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "株価 値上がり 米イラン2回目協議実現との見方から",
+      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-21T16:35:21+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "地震影響 荷物の配達遅れ 臨時休校 カキ水揚げ中止も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104421000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-21T14:20:55+09:00",
+      "publishedAt": "2026-04-21T16:24:54+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "“核のごみ” 小笠原村が南鳥島での「文献調査」受け入れ表明",
+      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-21T15:49:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ランサムウエア 被害企業222社 “身代金支払った”と回答",
+      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104591000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-21T15:24:25+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "高市首相 中東影響で経済に支障出ないよう対策強化と説明",
+      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104571000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-21T14:43:30+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "資源回収など循環経済推進 2030年までに官民で約1兆円投資計画",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T13:58:13+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "プルデンシャル生命 新規営業の自粛期間 延長の方向で最終調整",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T13:55:40+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 午前は値上がり 米イランの協議進展するとの見方広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T12:35:51+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "燃油サーチャージ引き上げ 金子国交相「丁寧な説明を」",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T11:44:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz 4月21日(火) 肥料供給懸念 日本への影響は？",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T11:21:34+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "フジドリームエアラインズ 国内線燃油サーチャージ 引き上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T06:00:04+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "レアアースの「重希土類」使わない製品の実用化相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T05:47:59+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "中国 レアアース磁石の対日輸出27％余減 規制強化影響の見方も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T05:14:48+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
