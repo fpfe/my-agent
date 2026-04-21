@@ -1,62 +1,62 @@
 {
-  "updatedAt": "2026-04-22T07:37:23.260239+09:00",
-  "updatedAtJST": "2026/04/22 07:37 JST",
+  "updatedAt": "2026-04-22T08:34:41.778975+09:00",
+  "updatedAtJST": "2026/04/22 08:34 JST",
   "totalArticles": 8,
   "articles": [
+    {
+      "title": "イラン情勢 “企業の資金繰りを支援” 三菱UFJ銀行新頭取",
+      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-22T08:11:10+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NYダウ293ドル安 米イランの協議不透明との見方から売り注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-22T08:03:35+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "プルデンシャル生命 新規営業の自粛 半年延長を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T07:16:39+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "物価高で「消費の二極化」鮮明に 小売各社が対応強化",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:58:05+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "海外のプライベートクレジット 国内の影響 確認進める 金融庁",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:44:14+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "米小売統計 ガソリン高で増加 原油高の個人消費への影響焦点に",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T23:48:34+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "地震影響 荷物の配達遅れ 臨時休校 カキ水揚げ中止も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T21:50:07+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "イラン情勢影響 ポリ袋など購入制限の商社 食用油値上げも",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:52:11+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "“核のごみ”南鳥島で文献調査実施へ 小笠原村長 受け入れ表明",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T20:25:57+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ソニー・ホンダモビリティ “市場投入は困難” 事業縮小を発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T20:14:06+09:00",
       "hoursAgo": 11
     }
   ]
