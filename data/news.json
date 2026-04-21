@@ -1,98 +1,84 @@
 {
-  "updatedAt": "2026-04-22T00:12:34.518262+09:00",
-  "updatedAtJST": "2026/04/22 00:12 JST",
-  "totalArticles": 13,
+  "updatedAt": "2026-04-22T02:00:52.647552+09:00",
+  "updatedAtJST": "2026/04/22 02:00 JST",
+  "totalArticles": 11,
   "articles": [
     {
       "title": "米小売統計 ガソリン高で増加 原油高の個人消費への影響焦点に",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T23:48:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "地震影響 荷物の配達遅れ 臨時休校 カキ水揚げ中止も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T21:50:07+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "イラン情勢影響 ポリ袋など購入制限の商社 食用油値上げも",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:52:11+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "“核のごみ”南鳥島で文献調査実施へ 小笠原村長 受け入れ表明",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:25:57+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ソニー・ホンダモビリティ “市場投入は困難” 事業縮小を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:14:06+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ノジマ 日立の家電事業の買収を発表 買収額約1100億円の見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T19:11:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "円相場 小幅な値動きに イラン情勢見極めで",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T18:54:43+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "フジドリームエアラインズ 国内線燃油サーチャージ 引き上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T17:31:50+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "株価 値上がり 米イラン2回目協議実現との見方から",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T16:35:21+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ランサムウエア 被害企業222社 “身代金支払った”と回答",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T15:24:25+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "高市首相 中東影響で経済に支障出ないよう対策強化と説明",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T14:43:30+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "資源回収など循環経済推進 2030年までに官民で約1兆円投資計画",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104481000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T13:58:13+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "プルデンシャル生命 新規営業の自粛期間 延長の方向で最終調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T13:55:40+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
