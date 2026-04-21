@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-04-22T06:44:33.739743+09:00",
-  "updatedAtJST": "2026/04/22 06:44 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-04-22T07:37:23.260239+09:00",
+  "updatedAtJST": "2026/04/22 07:37 JST",
+  "totalArticles": 8,
   "articles": [
     {
       "title": "プルデンシャル生命 新規営業の自粛 半年延長を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105091000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-22T06:33:02+09:00",
+      "publishedAt": "2026-04-22T07:16:39+09:00",
       "hoursAgo": 0
     },
     {
@@ -15,7 +15,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:58:05+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "海外のプライベートクレジット 国内の影響 確認進める 金融庁",
@@ -29,48 +29,34 @@
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T23:48:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "地震影響 荷物の配達遅れ 臨時休校 カキ水揚げ中止も",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T21:50:07+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "イラン情勢影響 ポリ袋など購入制限の商社 食用油値上げも",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:52:11+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "“核のごみ”南鳥島で文献調査実施へ 小笠原村長 受け入れ表明",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:25:57+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "ソニー・ホンダモビリティ “市場投入は困難” 事業縮小を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-21T20:14:06+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ノジマ 日立の家電事業の買収を発表 買収額約1100億円の見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104691000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T19:11:42+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 小幅な値動きに イラン情勢見極めで",
-      "url": "http://www3.nhk.or.jp/news/html/20260421/k10015104741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-21T18:54:43+09:00",
       "hoursAgo": 11
     }
   ]
