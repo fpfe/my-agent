@@ -1,84 +1,84 @@
 {
-  "updatedAt": "2026-04-22T14:25:18.354038+09:00",
-  "updatedAtJST": "2026/04/22 14:25 JST",
+  "updatedAt": "2026-04-22T16:46:43.646697+09:00",
+  "updatedAtJST": "2026/04/22 16:46 JST",
   "totalArticles": 11,
   "articles": [
+    {
+      "title": "ガソリン価格 全国平均1リットル169.5円 170円程度の水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105481000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-22T16:20:44+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 終値の最高値を更新 イラン情勢の警戒感和らぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-22T15:50:04+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "3月賃貸マンション平均家賃 東京23区 単身者向け過去最高更新",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T13:04:17+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "財務省 財務局長会議 景気判断維持も「中東情勢の影響注視」",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T13:02:49+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 取引時間中の最高値更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-22T12:02:32+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "3月貿易統計 原油輸入は減らず 中東向けの輸出は大幅減",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T11:52:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 4月22日(水)】肥料価格高騰 畜産への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T10:57:32+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ペルシャ湾内の船舶から新たに日本人乗組員4人が下船",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T10:32:45+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "イラン情勢 “企業の資金繰りを支援” 三菱UFJ銀行新頭取",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T08:11:10+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "NYダウ293ドル安 米イランの協議不透明との見方から売り注文",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T08:03:35+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "プルデンシャル生命 新規営業の自粛 半年延長を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T07:16:39+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "物価高で「消費の二極化」鮮明に 小売各社が対応強化",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T04:58:05+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "海外のプライベートクレジット 国内の影響 確認進める 金融庁",
-      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015104831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-22T04:44:14+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
