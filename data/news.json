@@ -1,62 +1,48 @@
 {
-  "updatedAt": "2026-04-23T03:08:19.428990+09:00",
-  "updatedAtJST": "2026/04/23 03:08 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-23T05:04:50.444045+09:00",
+  "updatedAtJST": "2026/04/23 05:04 JST",
+  "totalArticles": 6,
   "articles": [
     {
       "title": "欧州の航空会社の大幅減便相次ぐ イラン情勢受け燃料価格高騰",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T21:35:14+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "片山金融相 金融関係者と会合へ 米の新興企業のAIモデルめぐり",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T19:50:17+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "石油資源開発社長 中東情勢「二転三転四転して楽観できず」",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T19:06:54+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "自粛延長のプルデンシャル生命 “改革に時間必要”会見で社長",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T18:16:38+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 小幅に値下がり 停戦協議への不透明感",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T18:07:40+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "今年度の国債運用 大手生保各社が方針を公表",
       "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-22T17:45:49+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ガソリン価格 全国平均1リットル169.5円 170円程度の水準続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105481000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-22T16:20:44+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 終値の最高値を更新 イラン情勢の警戒感和らぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-22T15:50:04+09:00",
       "hoursAgo": 11
     }
   ]
