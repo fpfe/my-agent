@@ -1,77 +1,77 @@
 {
-  "updatedAt": "2026-04-23T18:28:00.690248+09:00",
-  "updatedAtJST": "2026/04/23 18:28 JST",
+  "updatedAt": "2026-04-23T20:08:09.583032+09:00",
+  "updatedAtJST": "2026/04/23 20:08 JST",
   "totalArticles": 10,
   "articles": [
+    {
+      "title": "3月の石油化学製品の国内生産量 大幅減少 イラン情勢の影響で",
+      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106501000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-23T19:33:13+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 対ドルで小幅に値下がり 米イラン協議の実現不透明",
+      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106621000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-23T18:27:25+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "4月景気判断「緩やかに回復」維持 「設備投資」など上方修正",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T18:19:27+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "3月の石油化学製品の国内生産量 大幅減少 イラン情勢の影響で",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106501000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T18:18:27+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "株価 6万円の大台初めて突破 その後は売り注文膨らみ値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T17:52:41+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "大手損保3社の社員 出向中にトヨタ内部情報を持ち出し",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T15:31:49+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "政府 牧野フライスTOBに中止勧告 “国の安全損なうおそれ”",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T14:53:19+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz4月23日(木)  原油高騰など 9割超の企業が懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T14:04:18+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "羽田空港 国際線で搭乗手続きシステムに不具合 一部の便に遅れ",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T12:13:17+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "米EVメーカー テスラ 1-3月期決算 増収増益に",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015105841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T11:24:22+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "東京23区中古マンション 平均1億2400万円 30％上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106101000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T11:06:04+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "NYダウ340ドル余値上がり トランプ大統領の停戦延長表明で",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T07:11:56+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
