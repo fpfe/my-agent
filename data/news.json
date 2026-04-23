@@ -1,35 +1,42 @@
 {
-  "updatedAt": "2026-04-23T08:45:02.078100+09:00",
-  "updatedAtJST": "2026/04/23 08:45 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-04-23T11:35:38.410102+09:00",
+  "updatedAtJST": "2026/04/23 11:35 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "米EVメーカー テスラ 1-3月期決算 増収増益に",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015105841000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-23T07:42:37+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-04-23T11:24:22+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東京23区中古マンション 平均1億2400万円 30％上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-23T11:06:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 6万円の大台を初めて突破 取引時間中の最高値を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106061000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-23T10:43:43+09:00",
+      "hoursAgo": 0
     },
     {
       "title": "NYダウ340ドル余値上がり トランプ大統領の停戦延長表明で",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T07:11:56+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "ボーイング1-3月期決算 航空機の生産回復で増収も最終赤字",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T05:40:17+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "欧州の航空会社の大幅減便相次ぐ イラン情勢受け燃料価格高騰",
-      "url": "http://www3.nhk.or.jp/news/html/20260422/k10015105931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-22T21:35:14+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
