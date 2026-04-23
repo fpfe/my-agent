@@ -1,48 +1,27 @@
 {
-  "updatedAt": "2026-04-24T05:52:27.804463+09:00",
-  "updatedAtJST": "2026/04/24 05:52 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-04-24T06:44:27.318015+09:00",
+  "updatedAtJST": "2026/04/24 06:44 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "台湾TSMC 2029年から1.3ナノメートル級半導体量産へ",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T23:41:09+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "欧州 EV新車販売が大幅増 イラン情勢で燃料上昇や補助金影響か",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T22:31:16+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "3月の石油化学製品の国内生産量 大幅減少 イラン情勢の影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T19:33:13+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 対ドルで小幅に値下がり 米イラン協議の実現不透明",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106621000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T18:27:25+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "4月景気判断「緩やかに回復」維持 「設備投資」など上方修正",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T18:19:27+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株価 6万円の大台初めて突破 その後は売り注文膨らみ値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T17:52:41+09:00",
       "hoursAgo": 11
     }
   ]
