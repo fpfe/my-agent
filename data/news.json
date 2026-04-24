@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-04-24T08:44:06.986594+09:00",
-  "updatedAtJST": "2026/04/24 08:44 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-24T11:36:13.737816+09:00",
+  "updatedAtJST": "2026/04/24 11:36 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "米 メタ マイクロソフト 人員削減や早期退職募集 AI開発背景か",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107011000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T10:48:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "3月の消費者物価指数 前年同月比+1.8％ 上昇率は2月から拡大",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015106981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T09:01:15+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "台湾TSMC 2029年から1.3ナノメートル級半導体量産へ",
       "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-23T23:41:09+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "欧州 EV新車販売が大幅増 イラン情勢で燃料上昇や補助金影響か",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106861000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T22:31:16+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
