@@ -1,28 +1,63 @@
 {
-  "updatedAt": "2026-04-24T11:36:13.737816+09:00",
-  "updatedAtJST": "2026/04/24 11:36 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-04-24T14:34:42.848599+09:00",
+  "updatedAtJST": "2026/04/24 14:34 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "会議システム「Zoom」のロゴ使用めぐり運営企業側に賠償命令",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T13:52:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "イラン情勢受けた節約の呼びかけ“規制的手法は考えず”経産相",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107211000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T13:01:27+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "【きょうのおはBiz 4月24日(金)】TOB中止勧告 ポイントを整理",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107031000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T12:48:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "改正農林中金法成立 巨額赤字受け運用の専門家 理事登用可能に",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107151000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T12:25:26+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "片山財務相 為替は日米緊密連携 株価6万円は“強い経済 象徴”",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T12:17:04+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価 午前は値上がり 市場拡大期待の半導体銘柄がけん引",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T12:03:47+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "3月消費者物価 5か月ぶりに上昇率拡大 イラン情勢緊迫も受けて",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015106981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T11:36:17+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "米 メタ マイクロソフト 人員削減や早期退職募集 AI開発背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T10:48:31+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "3月の消費者物価指数 前年同月比+1.8％ 上昇率は2月から拡大",
-      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015106981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-24T09:01:15+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "台湾TSMC 2029年から1.3ナノメートル級半導体量産へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260423/k10015106891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-23T23:41:09+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 3
     }
   ]
 }
