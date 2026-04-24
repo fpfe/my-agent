@@ -1,63 +1,77 @@
 {
-  "updatedAt": "2026-04-24T14:34:42.848599+09:00",
-  "updatedAtJST": "2026/04/24 14:34 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-04-24T17:03:01.830961+09:00",
+  "updatedAtJST": "2026/04/24 17:03 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "AIの進化見据え金融庁が作業部会 官民連携で対策検討へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T16:52:33+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日経平均株価 終値の最高値を更新 半導体関連銘柄が買われる",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T16:19:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "オンラインカジノ規制強化策“ブロッキング導入は検証が必要”",
+      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-24T14:57:15+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "会議システム「Zoom」のロゴ使用めぐり運営企業側に賠償命令",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T13:52:35+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "イラン情勢受けた節約の呼びかけ“規制的手法は考えず”経産相",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T13:01:27+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 4月24日(金)】TOB中止勧告 ポイントを整理",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107031000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T12:48:00+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "改正農林中金法成立 巨額赤字受け運用の専門家 理事登用可能に",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T12:25:26+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "片山財務相 為替は日米緊密連携 株価6万円は“強い経済 象徴”",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T12:17:04+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "株価 午前は値上がり 市場拡大期待の半導体銘柄がけん引",
-      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107171000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-24T12:03:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "3月消費者物価 5か月ぶりに上昇率拡大 イラン情勢緊迫も受けて",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015106981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T11:36:17+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "米 メタ マイクロソフト 人員削減や早期退職募集 AI開発背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-24T10:48:31+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     }
   ]
 }
