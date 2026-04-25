@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-04-25T20:37:59.856252+09:00",
-  "updatedAtJST": "2026/04/25 20:37 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-25T22:03:17.323001+09:00",
+  "updatedAtJST": "2026/04/25 22:03 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "東電 次期会長に産業革新投資機構の横尾社長を招く方向で調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-25T21:03:56+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "デンソー ロームへの買収提案 取り下げる方針固める",
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T18:19:44+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "米AI新興アンソロピックに出資 巨大テクノロジー企業で広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T17:02:40+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     }
   ]
 }
