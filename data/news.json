@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-26T02:36:47.623287+09:00",
-  "updatedAtJST": "2026/04/26 02:36 JST",
+  "updatedAt": "2026-04-26T03:52:35.444830+09:00",
+  "updatedAtJST": "2026/04/26 03:52 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T21:03:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "デンソー ロームへの買収提案 取り下げる方針固める",
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T18:19:44+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "米AI新興アンソロピックに出資 巨大テクノロジー企業で広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T17:02:40+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
