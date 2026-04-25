@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-04-25T11:26:02.004058+09:00",
-  "updatedAtJST": "2026/04/25 11:26 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-04-25T14:11:16.318365+09:00",
+  "updatedAtJST": "2026/04/25 14:11 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "NY株式市場 ナスダックとS＆P500が最高値更新 インテル急騰",
       "url": "http://www3.nhk.or.jp/news/html/20260425/k10015108061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-25T06:39:52+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "三菱電機 ホンハイと自動車部品で提携検討 出資受け入れも",
-      "url": "http://www3.nhk.or.jp/news/html/20260424/k10015107921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-24T23:28:48+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
