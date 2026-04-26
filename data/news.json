@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-27T07:37:51.360342+09:00",
-  "updatedAtJST": "2026/04/27 07:37 JST",
+  "updatedAt": "2026-04-27T08:38:23.957791+09:00",
+  "updatedAtJST": "2026/04/27 08:38 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015108881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T07:12:16+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "日銀 金融政策据え置きの方向で議論へ イラン情勢見極め",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015108771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T07:07:50+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     }
   ]
 }
