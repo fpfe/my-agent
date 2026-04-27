@@ -1,83 +1,55 @@
 {
-  "updatedAt": "2026-04-28T04:21:02.935272+09:00",
-  "updatedAtJST": "2026/04/28 04:21 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-04-28T06:01:29.106929+09:00",
+  "updatedAtJST": "2026/04/28 06:01 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "大和証券Gがオリックス銀行を買収 預金・融資で競争力強化へ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T21:28:05+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日立が過去最高益 イラン情勢で生産・原材料調達などに影響も",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T20:28:50+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "東京エレクトロン台湾子会社に7億円余罰金 TSMC機密を違法取得",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T19:53:06+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 小幅値上がり “イランが米に新提案”報じられ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T19:49:27+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日産 昨年度の業績見通し 営業赤字から営業黒字に上方修正",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:49:45+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "東京ガス 10月使用分から家庭向けガスの基本料金値上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:31:06+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "観光施設の「二重価格」 ガイドライン作成の議論開始 観光庁",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:26:25+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "大阪・関西万博の剰余金 夢洲整備など3つの分野で活用へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109431000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T17:44:16+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "NTT AI需要で国内データセンター3倍超に拡大 33年度までに",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T17:14:59+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "村田製作所 取引先や従業員の個人情報など約8万8000件流出か",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T16:52:05+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株価 終値で初の6万円台 最高値更新 “イランが新提案”報道で",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T16:47:01+09:00",
       "hoursAgo": 11
     }
   ]
