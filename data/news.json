@@ -1,98 +1,112 @@
 {
-  "updatedAt": "2026-04-27T20:03:25.954267+09:00",
-  "updatedAtJST": "2026/04/27 20:03 JST",
-  "totalArticles": 13,
+  "updatedAt": "2026-04-27T22:51:38.769360+09:00",
+  "updatedAtJST": "2026/04/27 22:51 JST",
+  "totalArticles": 15,
   "articles": [
+    {
+      "title": "大和証券Gがオリックス銀行を買収 預金・融資で競争力強化へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109651000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T21:28:05+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日立が過去最高益 イラン情勢で生産・原材料調達などに影響も",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T20:28:50+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "東京エレクトロン台湾子会社に7億円余罰金 TSMC機密を違法取得",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T19:53:06+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "円相場 小幅値上がり “イランが米に新提案”報じられ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T19:49:27+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "日産 昨年度の業績見通し 営業赤字から営業黒字に上方修正",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:49:45+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "東京ガス 10月使用分から家庭向けガスの基本料金値上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:31:06+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "観光施設の「二重価格」 ガイドライン作成の議論開始 観光庁",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T18:26:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "大阪・関西万博の剰余金 夢洲整備など3つの分野で活用へ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T17:44:16+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "NTT AI需要で国内データセンター3倍超に拡大 33年度までに",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T17:14:59+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "村田製作所 取引先や従業員の個人情報など約8万8000件流出か",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T16:52:05+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "株価 終値で初の6万円台 最高値更新 “イランが新提案”報道で",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T16:47:01+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "中東での新車販売台数が減少 自動車各社 イラン情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T16:11:27+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "“ナフサ供給不安”企業の44％「すでに影響」 生団連調べ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T14:53:47+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "JERA「電気料金 夏ごろに高騰懸念」イラン情勢受け",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T14:30:47+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "きょうのおはBiz 4月27日(月) 今週 日米で金融政策決める会合",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T11:55:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     }
   ]
 }
