@@ -1,55 +1,34 @@
 {
-  "updatedAt": "2026-04-28T06:01:29.106929+09:00",
-  "updatedAtJST": "2026/04/28 06:01 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-04-28T07:51:50.001120+09:00",
+  "updatedAtJST": "2026/04/28 07:51 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "政府 原油の代替調達 約6割の確保にめど 需要まかなう方針",
+      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109601000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-28T06:47:44+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "大和証券Gがオリックス銀行を買収 預金・融資で競争力強化へ",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T21:28:05+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日立が過去最高益 イラン情勢で生産・原材料調達などに影響も",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T20:28:50+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "東京エレクトロン台湾子会社に7億円余罰金 TSMC機密を違法取得",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T19:53:06+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 小幅値上がり “イランが米に新提案”報じられ",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109491000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T19:49:27+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日産 昨年度の業績見通し 営業赤字から営業黒字に上方修正",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T18:49:45+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "東京ガス 10月使用分から家庭向けガスの基本料金値上げへ",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T18:31:06+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "観光施設の「二重価格」 ガイドライン作成の議論開始 観光庁",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T18:26:25+09:00",
       "hoursAgo": 11
     }
   ]
