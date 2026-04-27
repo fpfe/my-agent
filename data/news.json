@@ -1,42 +1,77 @@
 {
-  "updatedAt": "2026-04-27T14:53:59.155588+09:00",
-  "updatedAtJST": "2026/04/27 14:53 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-04-27T17:24:17.901552+09:00",
+  "updatedAtJST": "2026/04/27 17:24 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "NTT AI需要で国内データセンター3倍超に拡大 33年度までに",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T17:14:59+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "村田製作所 取引先や従業員の個人情報など約8万8000件流出か",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T16:52:05+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 終値で初の6万円台 最高値更新 “イランが新提案”報道で",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T16:47:01+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "中東での新車販売台数が減少 自動車各社 イラン情勢影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T16:11:27+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日産 昨年度の業績見通し 営業赤字から営業黒字に上方修正へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T16:07:44+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "“ナフサ供給不安”企業の44％「すでに影響」 生団連調べ",
+      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109291000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-27T14:53:47+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "JERA「電気料金 夏ごろに高騰懸念」イラン情勢受け",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T14:30:47+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 取引時間中の最高値更新 “イランが新提案”報道で",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T13:01:10+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "きょうのおはBiz 4月27日(月) 今週 日米で金融政策決める会合",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T11:55:01+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "米FRB 利下げ見送りか 原油高でインフレ再加速を警戒",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015108881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T07:12:16+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "日銀 金融政策据え置きの方向で議論へ イラン情勢見極め",
       "url": "http://www3.nhk.or.jp/news/html/20260427/k10015108771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-27T07:07:50+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     }
   ]
 }
