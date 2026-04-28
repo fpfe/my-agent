@@ -1,28 +1,21 @@
 {
-  "updatedAt": "2026-04-28T08:53:14.196022+09:00",
-  "updatedAtJST": "2026/04/28 08:53 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-04-28T11:51:19.567112+09:00",
+  "updatedAtJST": "2026/04/28 11:51 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "米ユナイテッド航空CEO アメリカン航空との合併構想断念",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T08:44:43+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "政府 原油の代替調達 約6割の確保にめど 需要まかなう方針",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T06:47:44+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "大和証券Gがオリックス銀行を買収 預金・融資で競争力強化へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260427/k10015109651000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-27T21:28:05+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
