@@ -1,181 +1,139 @@
 {
-  "updatedAt": "2026-04-28T20:44:25.492564+09:00",
-  "updatedAtJST": "2026/04/28 20:44 JST",
-  "totalArticles": 25,
+  "updatedAt": "2026-04-29T01:50:48.220375+09:00",
+  "updatedAtJST": "2026/04/29 01:50 JST",
+  "totalArticles": 19,
   "articles": [
+    {
+      "title": "NY原油100ドル超に値上がり 今月中旬以来",
+      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-28T21:38:37+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "高松 栗林公園の土産物店 商品の入荷止まり 品切れに懸念",
+      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-28T20:59:18+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "宮城 塩釜 重油流出で漁業者支援へ 農水省など関係省庁",
+      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-28T20:55:44+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "食料品の消費税ゼロ 財源や事務負担など課題整理 実務者会議",
+      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110151000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-28T20:47:47+09:00",
+      "hoursAgo": 5
+    },
     {
       "title": "東京ガス“中東情勢の影響で9月ごろから料金上昇の可能性”",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T19:46:19+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 6
     },
     {
       "title": "【詳しく】日銀 利上げ見送り “物価上振れリスクに注意必要”",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T19:12:59+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "中部電力 中東情勢受けて今年度の業績見通しは「未定」と発表",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T18:48:47+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 7
     },
     {
       "title": "デンソー ロームへの買収提案 取り下げを正式決定",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T18:25:11+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "円相場 小幅な値下がり 日銀追加利上げ慎重見極め姿勢を意識",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T18:23:13+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "電気・ガス料金 5月使用分は大手のほとんどで値上がりへ",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T17:55:26+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "ホンダ “2040年販売の新車すべてをEV等とする”目標を撤回へ",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T17:52:42+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "肥料の主原料「尿素」の輸入価格17％上昇 イラン情勢影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T17:20:02+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 8
     },
     {
       "title": "キャベツやレタス 5月は平年より1割以上安く 農水省見通し公表",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T16:51:36+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 8
     },
     {
       "title": "財政審 医療費70歳以上も原則3割負担にすべきとの意見出される",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T16:49:59+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 9
     },
     {
       "title": "出光興産 ベトナムに原油供給へ 供給網の維持につながるか",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T16:48:33+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 9
     },
     {
       "title": "株価 終値6万円割れ 日銀の追加利上げ意識される",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T16:38:35+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 9
     },
     {
       "title": "愛媛 八幡浜 トロール漁で重油高・資材値上げに懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T15:21:58+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 10
     },
     {
       "title": "宮城 松島のかまぼこ店 レシート用紙の調達に影響",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T14:48:27+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 11
     },
     {
       "title": "宮城 松島のホテル 固形燃料入手できず料理変更の検討も",
       "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-28T14:46:10+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "JR西日本 りそなグループと資本業務提携の方向で最終調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109801000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T13:34:36+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "中国 米メタによるAI企業の買収を禁止 技術流出懸念か",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110041000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T13:28:10+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "鈴木農相「クマ対策は市町村に相談を」 農作業シーズン迎え",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T13:23:49+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "赤澤経産相 来月G7出席へ “多角的貿易体制の重要性訴える”",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110011000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T13:04:21+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "北海道新幹線 “整備着実に進むよう努力する” 金子国交相",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109991000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T13:00:34+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "【きょうのおはBiz 4月28日(火)】進む麺業界参入 ねらいは？",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109861000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T12:27:37+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "鈴木農相 農林水産・食品産業の資材57品目で流通調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T12:19:40+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "サンマの漁獲可能量が過去最少に 9万1000トン余り",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T12:15:44+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "サイバー攻撃にAI悪用「対策具体化進める」 木原官房長官",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109961000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T12:14:15+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "米ユナイテッド航空CEO アメリカン航空との合併構想断念",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015109731000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T08:44:43+09:00",
       "hoursAgo": 11
     }
   ]
