@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-04-29T19:05:02.089139+09:00",
-  "updatedAtJST": "2026/04/29 19:05 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-04-29T21:17:00.294797+09:00",
+  "updatedAtJST": "2026/04/29 21:17 JST",
+  "totalArticles": 2,
   "articles": [
     {
-      "title": "“日本関係の大型タンカー ホルムズ海峡を通過” イラン報道",
+      "title": "日本関係の大型タンカー ホルムズ海峡を通過",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110781000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-29T16:51:20+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-04-29T21:03:54+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ことしの傾向は“近場？” 大型連休は物価高なども背景か",
+      "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110991000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-29T19:27:58+09:00",
+      "hoursAgo": 1
     }
   ]
 }
