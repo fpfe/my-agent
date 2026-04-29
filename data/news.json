@@ -1,42 +1,49 @@
 {
-  "updatedAt": "2026-04-30T04:25:02.361331+09:00",
-  "updatedAtJST": "2026/04/30 04:25 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-04-30T06:04:36.645277+09:00",
+  "updatedAtJST": "2026/04/30 06:04 JST",
+  "totalArticles": 6,
   "articles": [
     {
-      "title": "【速報中】FRB 利下げ見送り「中東情勢 不確実性高めている」",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111161000.html",
+      "title": "鈴木農相 バングラデシュ訪れ日本産農産物 輸出拡大で協力要請",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111141000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-30T04:14:56+09:00",
+      "publishedAt": "2026-04-30T05:33:45+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "NY原油市場 1バレル＝107ドル台に上昇 イラン情勢長期化懸念で",
+      "title": "NY原油市場 1バレル＝108ドル台に上昇 イラン情勢長期化懸念で",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111271000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-04-30T04:05:12+09:00",
+      "publishedAt": "2026-04-30T05:11:08+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "【速報中】FRB 利下げ見送り パウエル議長“法的攻撃を懸念”",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111161000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T05:02:29+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "円相場 一時1ドル160円台に値下がり 約3週間ぶり NY外為市場",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015111211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T22:52:58+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "日本関係の大型タンカー ホルムズ海峡を通過",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T21:03:54+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ことしの傾向は“近場？” 大型連休は物価高なども背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T19:27:58+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     }
   ]
 }
