@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-30T00:12:46.408036+09:00",
-  "updatedAtJST": "2026/04/30 00:12 JST",
+  "updatedAt": "2026-04-30T02:27:51.146593+09:00",
+  "updatedAtJST": "2026/04/30 02:27 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015111211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T22:52:58+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "日本関係の大型タンカー ホルムズ海峡を通過",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T21:03:54+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ことしの傾向は“近場？” 大型連休は物価高なども背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T19:27:58+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     }
   ]
 }
