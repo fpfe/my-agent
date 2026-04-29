@@ -1,35 +1,35 @@
 {
-  "updatedAt": "2026-04-29T09:02:09.185344+09:00",
-  "updatedAtJST": "2026/04/29 09:02 JST",
+  "updatedAt": "2026-04-29T13:29:17.179301+09:00",
+  "updatedAtJST": "2026/04/29 13:29 JST",
   "totalArticles": 4,
   "articles": [
+    {
+      "title": "“日本関係の大型タンカー ホルムズ海峡を通過” イラン報道",
+      "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110781000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-29T12:15:43+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "世界銀行 エネルギー価格がイラン情勢で去年比24％上昇見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T06:37:45+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "米自動車 GM 約800億円分の関税が返還される見込みと明らかに",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T06:35:42+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "日銀 今後の金融政策は物価と景気への目配り 難しい対応も",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015110671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-29T05:15:31+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "NY原油100ドル超に値上がり 今月中旬以来",
-      "url": "http://www3.nhk.or.jp/news/html/20260428/k10015110631000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-28T21:38:37+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
