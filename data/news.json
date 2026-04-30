@@ -1,119 +1,140 @@
 {
-  "updatedAt": "2026-04-30T15:26:38.883282+09:00",
-  "updatedAtJST": "2026/04/30 15:26 JST",
-  "totalArticles": 16,
+  "updatedAt": "2026-04-30T18:10:10.646049+09:00",
+  "updatedAtJST": "2026/04/30 18:10 JST",
+  "totalArticles": 19,
   "articles": [
+    {
+      "title": "商船三井社長 ペルシャ湾外への1日も早い船舶移動で政府と連携",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111601000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T17:30:51+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東京電力 次期会長に産業革新投資機構社長の横尾敬介氏を内定",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111751000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T16:55:27+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 値下がり 原油先物価格の上昇で",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T16:32:21+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "花王 臨時総会で投資ファンドが求めた調達先の調査提案を否決",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T16:14:10+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "レギュラーガソリン全国平均 1リットルあたり169.7円に",
+      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-04-30T15:35:02+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "消費税減税の議論進む中 赤澤経産相が「スマートレジ」体験",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T14:58:40+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "NY原油1バレル＝110ドル台まで上昇 イラン長期化懸念で",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T14:54:15+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "長期金利2.535％まで上昇 1999年2月以来 約27年ぶり高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T14:52:42+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "3月の鉱工業生産指数2か月連続低下 基調判断「一進一退」維持",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T12:57:55+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "中国 4月製造業景況感  節目上回る 生産が増加 原油高が焦点に",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T12:55:39+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "株価 900円超下落 イラン情勢の長期化懸念",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-30T12:10:42+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "長期金利2.5％超に 原油先物価格上昇で 株安や円安も",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T11:58:23+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "きょうのおはBiz4月30日(木) 日銀 “タカ派”の姿勢にじむも…",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T11:53:22+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "「PayPay」送金に誘導する詐欺メールが急増 注意を",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T11:31:50+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "4月 卵の平均卸売価格 3か月連続で前年同月比下落も高止まり",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T10:57:59+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "FRB議長にウォーシュ氏就任へ 政治からの独立性問われる",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T10:54:51+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "米大手IT企業の決算で増益相次ぐ 巨額投資には懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T09:54:09+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "FRB 利下げ見送り ３会合連続 パウエル議長“法的攻撃を懸念”",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T08:14:21+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "円相場 一時1ドル＝160円台半ば 約1年9か月ぶりの円安水準",
       "url": "http://www3.nhk.or.jp/news/html/20260429/k10015111211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T07:12:54+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "JR西日本 りそなが資本業務提携へ “BaaS”拡大の可能性も",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-04-30T07:03:20+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "鈴木農相 バングラデシュ訪れ日本産農産物 輸出拡大で協力要請",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015111141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-30T05:33:45+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
