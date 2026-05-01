@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-05-02T07:50:14.682646+09:00",
-  "updatedAtJST": "2026/05/02 07:50 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-02T08:51:46.945229+09:00",
+  "updatedAtJST": "2026/05/02 08:51 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "NY株式市場 ナスダックとS＆P500指数 再び最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260502/k10015113241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-02T06:58:05+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "高性能AI悪用に備え 経産省が電力事業者に緊急点検要請",
-      "url": "http://www3.nhk.or.jp/news/html/20260501/k10015113001000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-01T20:19:30+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 1
     }
   ]
 }
