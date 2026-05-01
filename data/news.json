@@ -1,77 +1,70 @@
 {
-  "updatedAt": "2026-05-01T08:52:35.120262+09:00",
-  "updatedAtJST": "2026/05/01 08:52 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-05-01T11:58:39.902614+09:00",
+  "updatedAtJST": "2026/05/01 11:58 JST",
+  "totalArticles": 9,
   "articles": [
     {
-      "title": "NYダウ 790ドル上昇 ナスダックとS＆P500の株価指数が最高値",
-      "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112351000.html",
+      "title": "政府 日銀が市場介入 30日夜に急激な円高の動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112481000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-01T06:27:44+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-05-01T11:58:13+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東京23区の4月消費者物価指数は＋1.5％ 生鮮食品除いた総合で",
+      "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112401000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-01T11:13:48+09:00",
+      "hoursAgo": 0
     },
     {
       "title": "米アップル 3か月間決算 新型iPhone売り上げ好調 業績押し上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112141000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-01T06:26:59+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-05-01T11:09:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NYダウ 790ドル上昇 ナスダックとS＆P500の株価指数が最高値",
+      "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-01T06:27:44+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "鈴木農相 “ロヒンギャの人たちへの食料支援を検討”",
       "url": "http://www3.nhk.or.jp/news/html/20260501/k10015111981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-01T05:40:01+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "“農業しながら太陽光発電”規制を強化へ 農水省",
       "url": "http://www3.nhk.or.jp/news/html/20260501/k10015111991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-01T05:34:39+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "急激な円高 政府・日銀が市場介入か 市場に見方広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015112041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-01T05:06:20+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "欧州中央銀行 7会合連続で金利据え置き 今後は利上げ焦点か",
       "url": "http://www3.nhk.or.jp/news/html/20260430/k10015112181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-01T04:48:45+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "NY市場 円相場1ドル＝156円台 市場介入に警戒高まる",
       "url": "http://www3.nhk.or.jp/news/html/20260501/k10015112331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-01T04:45:49+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "フォルクスワーゲン 3か月間決算 最終利益は去年より29％余減",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015112191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-30T23:25:00+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "不正会計のニデックに違約金 東証が正式発表 KDDIにも",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015112161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-30T22:55:32+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "東京電力 昨年度決算4542億円の最終赤字 廃炉の準備費用膨らみ",
-      "url": "http://www3.nhk.or.jp/news/html/20260430/k10015112031000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-04-30T21:47:27+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
