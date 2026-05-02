@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-03T06:39:55.566138+09:00",
-  "updatedAtJST": "2026/05/03 06:39 JST",
+  "updatedAt": "2026-05-03T07:40:22.341725+09:00",
+  "updatedAtJST": "2026/05/03 07:40 JST",
   "totalArticles": 1,
   "articles": [
     {
@@ -8,7 +8,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260503/k10015113661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-03T05:35:30+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     }
   ]
 }
