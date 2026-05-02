@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-05-03T07:40:22.341725+09:00",
-  "updatedAtJST": "2026/05/03 07:40 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-03T08:42:02.502873+09:00",
+  "updatedAtJST": "2026/05/03 08:42 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "アメリカの格安航空 スピリット航空が運航停止 燃料高も打撃に",
+      "url": "http://www3.nhk.or.jp/news/html/20260503/k10015113721000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-03T08:14:43+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ADB総会やASEAN＋3会議開催へ イラン情勢など議論",
       "url": "http://www3.nhk.or.jp/news/html/20260503/k10015113661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-03T05:35:30+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     }
   ]
 }
