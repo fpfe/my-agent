@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-05-02T18:05:41.993474+09:00",
-  "updatedAtJST": "2026/05/02 18:05 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-02T19:51:30.185111+09:00",
+  "updatedAtJST": "2026/05/02 19:51 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "石油の「国家備蓄」 鹿児島でも追加放出始まる",
       "url": "http://www3.nhk.or.jp/news/html/20260502/k10015113481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-02T17:13:35+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "NY株式市場 ナスダックとS＆P500指数 再び最高値更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260502/k10015113241000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-02T06:58:05+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 2
     }
   ]
 }
