@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-03T08:42:02.502873+09:00",
-  "updatedAtJST": "2026/05/03 08:42 JST",
+  "updatedAt": "2026-05-03T11:51:12.539604+09:00",
+  "updatedAtJST": "2026/05/03 11:51 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260503/k10015113721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-03T08:14:43+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "ADB総会やASEAN＋3会議開催へ イラン情勢など議論",
       "url": "http://www3.nhk.or.jp/news/html/20260503/k10015113661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-03T05:35:30+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     }
   ]
 }
