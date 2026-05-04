@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-05-05T03:13:49.231260+09:00",
-  "updatedAtJST": "2026/05/05 03:13 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-05T05:14:40.945838+09:00",
+  "updatedAtJST": "2026/05/05 05:14 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "片山財務相 ADBと連携し途上国支援に貢献する考え強調",
+      "url": "http://www3.nhk.or.jp/news/html/20260505/k10015114681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-05T04:53:12+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "急速に円高進む 一時1ドル155円台に 再び市場介入との見方も",
       "url": "http://www3.nhk.or.jp/news/html/20260504/k10015114421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-04T18:04:14+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
