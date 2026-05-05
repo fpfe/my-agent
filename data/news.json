@@ -1,14 +1,28 @@
 {
-  "updatedAt": "2026-05-06T06:01:51.042009+09:00",
-  "updatedAtJST": "2026/05/06 06:01 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-06T07:54:35.574210+09:00",
+  "updatedAtJST": "2026/05/06 07:54 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "赤澤経産相 中東産油国と会談 原油安定供給へ協力で一致",
+      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115031000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-06T07:12:27+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NY市場 ナスダック S＆P500指数が最高値 イラン停戦継続やAIで",
+      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115181000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-06T06:30:15+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "G7貿易相会合 日本は多角的貿易体制の重要性訴える方針",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T05:03:41+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     }
   ]
 }
