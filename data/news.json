@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-05-07T05:21:39.201783+09:00",
-  "updatedAtJST": "2026/05/07 05:21 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-07T06:56:19.294234+09:00",
+  "updatedAtJST": "2026/05/07 06:56 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "NYダウ 600ドル余上昇 ナスダック・S＆P500指数は最高値更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T06:43:19+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "G7貿易相会合 重要鉱物の供給網多角化に向けた連携を確認",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115491000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T06:12:09+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "“空飛ぶクルマ 来年以降商用化” 官民協議会がロードマップ",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T04:51:48+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "NY原油市場 一時90ドル割れ イラン情勢緊張緩和への期待感から",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T21:55:33+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     }
   ]
 }
