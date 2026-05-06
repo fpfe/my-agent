@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-06T08:46:32.236295+09:00",
-  "updatedAtJST": "2026/05/06 08:46 JST",
+  "updatedAt": "2026-05-06T11:47:08.836887+09:00",
+  "updatedAtJST": "2026/05/06 11:47 JST",
   "totalArticles": 4,
   "articles": [
     {
@@ -8,28 +8,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T08:39:52+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "赤澤経産相 中東産油国と会談 原油安定供給へ協力で一致",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115031000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T07:12:27+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "NY市場 ナスダック S＆P500指数が最高値 イラン停戦継続やAIで",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T06:30:15+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "G7貿易相会合 日本は多角的貿易体制の重要性訴える方針",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T05:03:41+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     }
   ]
 }
