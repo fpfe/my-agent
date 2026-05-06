@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-05-07T03:15:40.319868+09:00",
-  "updatedAtJST": "2026/05/07 03:15 JST",
+  "updatedAt": "2026-05-07T05:21:39.201783+09:00",
+  "updatedAtJST": "2026/05/07 05:21 JST",
   "totalArticles": 2,
   "articles": [
+    {
+      "title": "“空飛ぶクルマ 来年以降商用化” 官民協議会がロードマップ",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T04:51:48+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NY原油市場 一時90ドル割れ イラン情勢緊張緩和への期待感から",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T21:55:33+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "急速に円高進み 一時1ドル＝155円台に 再び市場介入との見方も",
-      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115351000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-06T15:37:45+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
