@@ -1,49 +1,35 @@
 {
-  "updatedAt": "2026-05-06T14:57:22.357559+09:00",
-  "updatedAtJST": "2026/05/06 14:57 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-06T20:06:53.742761+09:00",
+  "updatedAtJST": "2026/05/06 20:06 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "急速に円高進み 一時1ドル＝155円台に 再び市場介入との見方も",
+      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-06T15:37:45+09:00",
+      "hoursAgo": 4
+    },
     {
       "title": "ホンダ カナダEV工場計画を無期限凍結へ 戦略見直しで",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T13:33:02+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "米証券取引委員会 企業による決算報告“半年ごとに”改正案",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T12:43:41+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "日産 欧州の従業員約900人削減 英工場の生産ラインは統合へ",
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T08:39:52+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "赤澤経産相 中東産油国と会談 原油安定供給へ協力で一致",
-      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115031000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-06T07:12:27+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "NY市場 ナスダック S＆P500指数が最高値 イラン停戦継続やAIで",
-      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115181000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-06T06:30:15+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "G7貿易相会合 日本は多角的貿易体制の重要性訴える方針",
-      "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115021000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-06T05:03:41+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
