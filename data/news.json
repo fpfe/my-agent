@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-05-07T07:54:41.706529+09:00",
-  "updatedAtJST": "2026/05/07 07:54 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-07T08:51:36.961125+09:00",
+  "updatedAtJST": "2026/05/07 08:51 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "独BMW 米関税“現在の水準のまま”とみて業績見通し据え置き",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T07:54:25+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NYダウ 600ドル余上昇 ナスダック・S＆P500指数は最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T06:43:19+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "G7貿易相会合 重要鉱物の供給網多角化に向けた連携を確認",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T06:12:09+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "“空飛ぶクルマ 来年以降商用化” 官民協議会がロードマップ",
@@ -29,7 +36,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260506/k10015115581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-06T21:55:33+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
