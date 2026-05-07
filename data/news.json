@@ -1,70 +1,70 @@
 {
-  "updatedAt": "2026-05-07T15:10:00.790070+09:00",
-  "updatedAtJST": "2026/05/07 15:10 JST",
+  "updatedAt": "2026-05-07T18:31:29.545306+09:00",
+  "updatedAtJST": "2026/05/07 18:31 JST",
   "totalArticles": 9,
   "articles": [
+    {
+      "title": "円相場 ドルに対して値上がり 市場介入への警戒感続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T18:12:37+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "三菱UFJがグーグルと提携 AI活用で次世代金融インフラづくりへ",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116081000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T18:03:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 終値 初の6万2000円台で最高値更新 上昇幅3300円超と最大",
+      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-07T16:35:12+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "日銀3月会合 イラン情勢で物価上昇リスク 利上げ加速意識も",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T14:24:44+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 取引時間中初めて6万3000円台 上昇幅は3400円超 過去最大",
-      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115711000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-07T14:09:06+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 5月7日(木)】解説　“新たな水田政策”",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T14:02:30+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "米スペースX 8兆円超投じ半導体工場建設を計画",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T13:45:23+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "三村財務官 連休中の円急騰 介入か明言せず 投機をけん制",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T11:34:15+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "独BMW 米関税“現在の水準のまま”とみて業績見通し据え置き",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T07:54:25+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "NYダウ 600ドル余上昇 ナスダック・S＆P500指数は最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T06:43:19+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "G7貿易相会合 重要鉱物の供給網多角化に向けた連携を確認",
-      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115491000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-07T06:12:09+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "“空飛ぶクルマ 来年以降商用化” 官民協議会がロードマップ",
-      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-07T04:51:48+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
