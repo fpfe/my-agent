@@ -1,56 +1,42 @@
 {
-  "updatedAt": "2026-05-08T01:49:10.042962+09:00",
-  "updatedAtJST": "2026/05/08 01:49 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-05-08T03:23:29.356955+09:00",
+  "updatedAtJST": "2026/05/08 03:23 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "政府・日銀 追加で4兆円規模の市場介入の可能性 民間が分析",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T20:56:12+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "味の素 中東情勢の影響続けば事業利益が約300億円減少と試算",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T18:48:26+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "円相場 ドルに対して値上がり 市場介入への警戒感続く",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T18:12:37+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "三菱UFJがグーグルと提携 AI活用で次世代金融インフラづくりへ",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T18:03:31+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "株価 終値 初の6万2000円台で最高値更新 上昇幅3300円超と最大",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T16:35:12+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "日銀3月会合 イラン情勢で物価上昇リスク 利上げ加速意識も",
-      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-07T14:24:44+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "【きょうのおはBiz 5月7日(木)】解説　“新たな水田政策”",
-      "url": "http://www3.nhk.or.jp/news/html/20260507/k10015115771000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-07T14:02:30+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
