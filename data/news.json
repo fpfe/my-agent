@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-05-08T06:57:31.431194+09:00",
-  "updatedAtJST": "2026/05/08 06:57 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-08T08:03:29.099293+09:00",
+  "updatedAtJST": "2026/05/08 08:03 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T07:39:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "自賠責の保険料 13年ぶり引き上げへ 平均6％余 ことし11月から",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116271000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T07:07:21+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "日EUハイレベル経済対話 重要海上ルート保護などで協力を",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T05:22:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "政府・日銀 追加で4兆円規模の市場介入の可能性 民間が分析",
       "url": "http://www3.nhk.or.jp/news/html/20260507/k10015116221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-07T20:56:12+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
