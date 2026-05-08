@@ -1,76 +1,97 @@
 {
-  "updatedAt": "2026-05-08T18:20:38.568197+09:00",
-  "updatedAtJST": "2026/05/08 18:20 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-05-08T20:14:21.243582+09:00",
+  "updatedAtJST": "2026/05/08 20:14 JST",
+  "totalArticles": 13,
   "articles": [
+    {
+      "title": "ソニー 次世代画像センサーの開発・製造でTSMCと提携合意",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T20:11:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T19:45:52+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "大手企業の決算発表相次ぐ 各社の業績や見通しは【8日まとめ】",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T19:27:37+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "「ニンテンドースイッチ2」1万円値上げへ 半導体価格の上昇で",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116961000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T18:47:07+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 ドルに対して値下がり 市場介入警戒も",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116941000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T18:24:26+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "ソニーグループ決算 映画ヒットで増収もEV中止で最終減益に",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T18:16:29+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "スーパーコメ価格 3796円 2週連続値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T17:16:22+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "NTT決算 今年度最終利益は減益見通し ドコモのシェア低下響く",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T17:00:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "8日の株価は値下がり イラン情勢の不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T16:11:10+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "トヨタ 初の売り上げ50兆円超 今年度も減益へ 中東情勢が影響",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T16:03:31+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T15:37:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "岩手 大槌町 山林火災で取りやめ続いたウニ漁を開始",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T12:31:00+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "【きょうのおはBiz 5月8日(金)】株価 史上最高値更新 今後は",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T11:05:32+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "3月の実質賃金 前年同月比1％増加 3か月連続でプラス",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T08:30:12+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "自賠責の保険料 13年ぶり引き上げへ 平均6％余 ことし11月から",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T07:07:21+09:00",
       "hoursAgo": 11
     }
   ]
