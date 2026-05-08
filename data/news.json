@@ -1,48 +1,27 @@
 {
-  "updatedAt": "2026-05-09T07:06:33.553296+09:00",
-  "updatedAtJST": "2026/05/09 07:06 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-09T08:55:35.019005+09:00",
+  "updatedAtJST": "2026/05/09 08:55 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "NY市場 ナスダック S＆P500株価指数が最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260509/k10015117311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-09T06:42:53+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "三菱自動車工業 中東影響も今年度は2.5倍の増益見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T22:04:39+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "JR東日本社長 国の「貸付料」 新たな案は「極めて遺憾」",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T21:20:05+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ソニー 次世代画像センサーの開発・製造でTSMCと提携合意",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T20:11:26+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T19:45:52+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "大手企業の決算発表相次ぐ 各社の業績や見通しは【8日まとめ】",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T19:27:37+09:00",
       "hoursAgo": 11
     }
   ]
