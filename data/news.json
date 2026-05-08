@@ -1,13 +1,34 @@
 {
-  "updatedAt": "2026-05-08T14:29:54.932315+09:00",
-  "updatedAtJST": "2026/05/08 14:29 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-05-08T16:41:05.334632+09:00",
+  "updatedAtJST": "2026/05/08 16:41 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "8日の株価は値下がり イラン情勢の不透明感で",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T16:11:10+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ソニーグループ決算 映画ヒットで増収もEV中止で最終減益に",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116841000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T16:08:55+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トヨタ 初の売り上げ50兆円超 今年度も減益へ 中東情勢が影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T16:03:31+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-08T12:46:48+09:00",
+      "publishedAt": "2026-05-08T15:37:47+09:00",
       "hoursAgo": 1
     },
     {
@@ -15,42 +36,35 @@
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T12:31:00+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日経平均株価 最高値から一転 午前は値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116541000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T12:03:53+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 5月8日(金)】株価 史上最高値更新 今後は",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T11:05:32+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "3月の実質賃金 前年同月比1％増加 3か月連続でプラス",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T08:30:12+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "自賠責の保険料 13年ぶり引き上げへ 平均6％余 ことし11月から",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T07:07:21+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日EUハイレベル経済対話 重要海上ルート保護などで協力を",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T05:22:28+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
