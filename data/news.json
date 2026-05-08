@@ -1,49 +1,56 @@
 {
-  "updatedAt": "2026-05-08T11:51:43.807447+09:00",
-  "updatedAtJST": "2026/05/08 11:51 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-08T14:29:54.932315+09:00",
+  "updatedAtJST": "2026/05/08 14:29 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "トランプ政権の10％関税「違法」と判断 米国際貿易裁判所",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116471000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-08T11:20:02+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-05-08T12:46:48+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "岩手 大槌町 山林火災で取りやめ続いたウニ漁を開始",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T12:31:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日経平均株価 最高値から一転 午前は値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-08T12:03:53+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "【きょうのおはBiz 5月8日(金)】株価 史上最高値更新 今後は",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T11:05:32+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "日経平均株価 最高値から一転 値下がりで始まる",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116541000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T10:33:05+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "3月の実質賃金 前年同月比1％増加 3か月連続でプラス",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T08:30:12+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "自賠責の保険料 13年ぶり引き上げへ 平均6％余 ことし11月から",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T07:07:21+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "日EUハイレベル経済対話 重要海上ルート保護などで協力を",
       "url": "http://www3.nhk.or.jp/news/html/20260508/k10015116421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-08T05:22:28+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
