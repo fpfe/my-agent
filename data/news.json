@@ -1,28 +1,14 @@
 {
-  "updatedAt": "2026-05-09T08:55:35.019005+09:00",
-  "updatedAtJST": "2026/05/09 08:55 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-05-09T11:51:06.822433+09:00",
+  "updatedAtJST": "2026/05/09 11:51 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "NY市場 ナスダック S＆P500株価指数が最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260509/k10015117311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-09T06:42:53+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "三菱自動車工業 中東影響も今年度は2.5倍の増益見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T22:04:39+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "JR東日本社長 国の「貸付料」 新たな案は「極めて遺憾」",
-      "url": "http://www3.nhk.or.jp/news/html/20260508/k10015117061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-08T21:20:05+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
