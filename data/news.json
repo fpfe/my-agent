@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-05-09T18:20:42.365608+09:00",
-  "updatedAtJST": "2026/05/09 18:20 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-09T19:56:44.277557+09:00",
+  "updatedAtJST": "2026/05/09 19:56 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "中国 4月の輸出額は14％余増加 原油高の影響が今後の焦点に",
       "url": "http://www3.nhk.or.jp/news/html/20260509/k10015117451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-09T15:09:55+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "NY市場 ナスダック S＆P500株価指数が最高値更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260509/k10015117311000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-09T06:42:53+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 4
     }
   ]
 }
