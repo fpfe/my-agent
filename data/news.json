@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-05-11T06:47:11.719586+09:00",
-  "updatedAtJST": "2026/05/11 06:47 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-11T07:46:47.072719+09:00",
+  "updatedAtJST": "2026/05/11 07:46 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "ガソリン補助 3月は1800億円支出 基金残高は約9800億円に 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117961000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T07:13:16+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "“家畜の餌用のコメ 不足で増産を” 農林水産省が呼びかけ",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T06:45:19+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "政府・日銀の介入警戒で今週も神経質な展開か 外国為替市場",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T06:41:08+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     }
   ]
 }
