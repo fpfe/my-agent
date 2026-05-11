@@ -1,49 +1,70 @@
 {
-  "updatedAt": "2026-05-11T12:29:07.780066+09:00",
-  "updatedAtJST": "2026/05/11 12:29 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-11T16:39:43.377476+09:00",
+  "updatedAtJST": "2026/05/11 16:39 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "株価 取引時間中の最高値更新 終値は値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T16:20:47+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "損害保険大手で自動車保険料の引き上げ相次ぐ 修理費上昇で",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118481000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T15:24:19+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "NY原油先物価格 一時100ドル超え イラン情勢先行き不透明で",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118461000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T15:17:05+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "イオン “8月末まで自社開発食料品の価格据え置き”",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T15:13:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "コメ価格 向こう3か月の見通し 在庫増を背景に下落の見方強い",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T11:52:17+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "きょうのおはBiz5月11日(月) “子ども向け”に大人の需要 なぜ",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T11:50:57+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 取引時間中の最高値更新 2営業日ぶり6万3000円台に",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118171000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T09:09:29+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "ガソリン補助 3月は1800億円支出 基金残高は約9800億円に 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T07:13:16+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "“家畜の餌用のコメ 不足で増産を” 農林水産省が呼びかけ",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T06:45:19+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "政府・日銀の介入警戒で今週も神経質な展開か 外国為替市場",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T06:41:08+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     }
   ]
 }
