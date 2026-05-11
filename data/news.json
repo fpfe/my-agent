@@ -1,70 +1,91 @@
 {
-  "updatedAt": "2026-05-11T16:39:43.377476+09:00",
-  "updatedAtJST": "2026/05/11 16:39 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-05-11T20:19:03.214348+09:00",
+  "updatedAtJST": "2026/05/11 20:19 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "中東以外の調達先 アゼルバイジャン産原油 12日にも日本到着へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T20:17:17+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "カルビー 一部商品パッケージ 白黒の2色に変更 中東情勢の影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T19:46:54+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トヨタ インドに新工場建設へ 成長市場で生産強化",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T19:14:33+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 対ドルでいくぶん値下がり 米とイランの協議不透明感で",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T18:37:47+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "中国国内の新車販売 前年同月比21％余減 輸出強化の動き加速へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T17:21:28+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "オートバックスセブン 中国の奇瑞自動車などとEV販売へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-11T16:41:38+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "株価 取引時間中の最高値更新 終値は値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T16:20:47+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "損害保険大手で自動車保険料の引き上げ相次ぐ 修理費上昇で",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T15:24:19+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "NY原油先物価格 一時100ドル超え イラン情勢先行き不透明で",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T15:17:05+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "イオン “8月末まで自社開発食料品の価格据え置き”",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T15:13:45+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "コメ価格 向こう3か月の見通し 在庫増を背景に下落の見方強い",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T11:52:17+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "きょうのおはBiz5月11日(月) “子ども向け”に大人の需要 なぜ",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T11:50:57+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "ガソリン補助 3月は1800億円支出 基金残高は約9800億円に 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117961000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T07:13:16+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "“家畜の餌用のコメ 不足で増産を” 農林水産省が呼びかけ",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T06:45:19+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "政府・日銀の介入警戒で今週も神経質な展開か 外国為替市場",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015117991000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T06:41:08+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 8
     }
   ]
 }
