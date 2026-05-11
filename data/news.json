@@ -1,48 +1,41 @@
 {
-  "updatedAt": "2026-05-12T07:53:15.571886+09:00",
-  "updatedAtJST": "2026/05/12 07:53 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-12T08:57:30.707317+09:00",
+  "updatedAtJST": "2026/05/12 08:57 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "3月の家計調査 世帯の実質消費支出 前年同月比2.9％の減少",
+      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119001000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-12T08:44:06+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ナスダック・S＆P500の株価指数 最高値更新 市場で「NACHO」も",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T06:57:15+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "アメリカでのEV計画 日本メーカーの見直し加速 需要減少で",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015118821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T05:14:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "損保大手が委託する調査会社 サイバー攻撃で個人情報漏えいか",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015118771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T00:02:46+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "日本郵船 中東向け自動車輸送でホルムズ海峡の代替ルート検討",
       "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118641000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-11T21:23:18+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "「日本茶」ブランドを保護へ 海外抹茶ブームで輸出増加の中",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T20:19:30+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "中東以外の調達先 アゼルバイジャン産原油 12日にも日本到着へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260511/k10015118691000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-11T20:17:17+09:00",
       "hoursAgo": 11
     }
   ]
