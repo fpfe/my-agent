@@ -1,160 +1,125 @@
 {
-  "updatedAt": "2026-05-12T23:24:02.903034+09:00",
-  "updatedAtJST": "2026/05/12 23:24 JST",
-  "totalArticles": 22,
+  "updatedAt": "2026-05-13T02:10:18.447575+09:00",
+  "updatedAtJST": "2026/05/13 02:10 JST",
+  "totalArticles": 17,
   "articles": [
     {
       "title": "米消費者物価指数 去年同月比3.8％上昇 2年11か月ぶりの高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119881000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-12T21:55:06+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-05-12T23:41:00+09:00",
+      "hoursAgo": 2
     },
     {
-      "title": "西日本シティ銀 不適切投稿受け 私用スマホ持ち込み禁止に",
+      "title": "西日本シティ銀行 不適切投稿受け 私用スマホ持ち込み禁止に",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:44:19+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "高性能AIモデルによるサイバー攻撃リスク対応を指示 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:40:57+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "ローム社長 東芝・三菱電機との事業統合「想定より時間」",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:16:06+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "出光興産トップ “原油調達 今の状況で続けていける感触”",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:00:04+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "シャープ 今年度の業績予想 11％余り減益見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T19:27:47+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "パナソニックHD 昨年度決算は大幅減益 構造改革費用膨らみ",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119641000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T19:23:28+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "カルビー製品包装 “白黒2色” で関係企業に聴き取りへ 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T18:57:33+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "エアコン３月の出荷台数 過去最多 「2027年問題」も影響か",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T18:56:22+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "高市首相 トランプ大統領の訪中前に米財務長官と会談",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T18:55:01+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "円相場 荒い値動き 157円台半ばに値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T18:13:09+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "マツダ 昨年度決算 最終利益は69.2％減 関税影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T18:09:09+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "カルビー パッケージ白黒化を発表 中東情勢でインク調達懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T17:41:02+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "金子国交相 貸付料めぐるJR東の対応に疑問 対立深まる",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T16:39:41+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "株価 値上がり イラン情勢の先行きに警戒感も",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T16:37:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "景気の基調判断 1年10か月ぶりに上方修正",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T15:56:54+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "中東以外の調達先 アゼルバイジャン産原油が日本に到着",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T14:20:31+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "長期金利 2.545％まで上昇 27年ぶり高水準 物価上昇への懸念で",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119101000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T13:58:44+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "AIのリスク見据え14日に作業部会 官民連携で対策検討へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T12:28:52+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "【きょうのおはBiz 5月12日(火)】クマ対策技術 最前線",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T12:23:59+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日銀 4月会合の主な意見を公表 利上げの必要性訴える意見も",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T12:19:13+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "3月家計調査 4か月連続減少 “家事用品買いだめの動きも”",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119001000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T11:26:08+09:00",
       "hoursAgo": 11
     }
   ]
