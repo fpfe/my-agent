@@ -1,83 +1,62 @@
 {
-  "updatedAt": "2026-05-13T06:19:12.701930+09:00",
-  "updatedAtJST": "2026/05/13 06:19 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-05-13T08:00:40.894860+09:00",
+  "updatedAtJST": "2026/05/13 08:00 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "中小企業のM＆A 仲介する個人に国家資格導入へ 悪質行為に対策",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T06:56:36+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ニデック 顧客に無断で設計変更など品質不正か 調査委設置へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119931000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T06:42:40+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "新築マンション引き渡し遅延の可能性 通知広がる イラン影響で",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T06:23:46+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "1-3月GDP民間予測 2期連続のプラス成長見込む",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T05:57:01+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "米消費者物価指数 去年同月比3.8％上昇 2年11か月ぶりの高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T23:41:00+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "西日本シティ銀行 不適切投稿受け 私用スマホ持ち込み禁止に",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:44:19+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "高性能AIモデルによるサイバー攻撃リスク対応を指示 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:40:57+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "ローム社長 東芝・三菱電機との事業統合「想定より時間」",
       "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-12T20:16:06+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "出光興産トップ “原油調達 今の状況で続けていける感触”",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119691000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T20:00:04+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "シャープ 今年度の業績予想 11％余り減益見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119651000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T19:27:47+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "パナソニックHD 昨年度決算は大幅減益 構造改革費用膨らみ",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119641000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T19:23:28+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "カルビー製品包装 “白黒2色” で関係企業に聴き取りへ 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T18:57:33+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "エアコン３月の出荷台数 過去最多 「2027年問題」も影響か",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T18:56:22+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "高市首相 トランプ大統領の訪中前に米財務長官と会談",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T18:55:01+09:00",
       "hoursAgo": 11
     }
   ]
