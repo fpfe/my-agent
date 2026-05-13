@@ -1,84 +1,112 @@
 {
-  "updatedAt": "2026-05-13T15:30:21.550437+09:00",
-  "updatedAtJST": "2026/05/13 15:30 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-05-13T18:43:25.845913+09:00",
+  "updatedAtJST": "2026/05/13 18:43 JST",
+  "totalArticles": 15,
   "articles": [
     {
-      "title": "ニデック 無断で設計変更など 不適切行為の疑いを発表",
+      "title": "決算発表ピーク 業績予想の「減益」「未定」増加 イラン情勢で",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T18:38:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ニデック 無断で設計変更など不適切行為の疑い 調査委を設置",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120301000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-13T15:15:34+09:00",
+      "publishedAt": "2026-05-13T18:16:29+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "ソフトバンクグループ 最終利益が5兆円超に 昨年度決算",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T18:12:43+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米の高性能AIモデル 3メガバンクが利用できるよう調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T18:08:28+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "4月街角景気 イラン情勢受け2か月連続低下 住宅関連で懸念の声",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120641000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T17:55:06+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日産自動車 今年度は最終損益が200億円の黒字の見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T17:53:43+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "農業や外食の業界団体 食料品消費税減税の影響に懸念の声",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T16:53:45+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "“日本は消費税の段階的引き上げを” OECDが提言",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T16:49:39+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 終値で最高値を更新 決算発表など受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120131000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T16:09:47+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "レギュラーガソリン価格 全国平均 1リットル169.4円",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T15:13:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "【きょうのおはBiz 5月13日(水)】変化の自動車業界 稼ぐ力を",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T14:29:51+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "あいちFGと三重の三十三FG 経営統合で基本合意を決定",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T14:00:06+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 午前は値上がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120131000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T12:24:49+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "長期金利2.6％まで上昇 約29年ぶりの高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T11:04:20+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "昨年度の経常収支 34兆円余の黒字 3年連続で過去最大を更新",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T10:50:45+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "中小企業のM＆A 仲介する個人に国家資格導入へ 悪質行為に対策",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T06:56:36+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "ニデック 顧客に無断で設計変更など品質不正か 調査委設置へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T06:42:40+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "新築マンション引き渡し遅延の可能性 通知広がる イラン影響で",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T06:23:46+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "1-3月GDP民間予測 2期連続のプラス成長見込む",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119841000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T05:57:01+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
