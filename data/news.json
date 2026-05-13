@@ -1,35 +1,14 @@
 {
-  "updatedAt": "2026-05-14T07:11:08.380842+09:00",
-  "updatedAtJST": "2026/05/14 07:11 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-14T08:57:52.281078+09:00",
+  "updatedAtJST": "2026/05/14 08:57 JST",
+  "totalArticles": 1,
   "articles": [
     {
-      "title": "高知名物ビスケット一部出荷見合わせ イラン情勢で包装影響",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120771000.html",
+      "title": "ナスダック・S＆P500指数 最高値を更新 半導体期待も",
+      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121111000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-13T20:56:28+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "あいちFGと三重県の三十三FG 経営統合で基本合意と発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T20:34:44+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ニデック 無断で設計変更など不適切行為の疑い 調査委を設置",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T19:19:53+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日産 今年度の最終損益200億円黒字見通し 構造改革一巡で",
-      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120691000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-13T19:15:20+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-05-14T07:51:27+09:00",
+      "hoursAgo": 1
     }
   ]
 }
