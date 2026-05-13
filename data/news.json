@@ -1,63 +1,56 @@
 {
-  "updatedAt": "2026-05-13T08:00:40.894860+09:00",
-  "updatedAtJST": "2026/05/13 08:00 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-05-13T11:58:19.358364+09:00",
+  "updatedAtJST": "2026/05/13 11:58 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "あいちFGと三重の三十三FGが経営統合に向け最終調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120141000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T11:56:15+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "長期金利2.6％まで上昇 約29年ぶりの高水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T11:04:20+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "昨年度の経常収支 34兆円余の黒字 3年連続で過去最大を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260513/k10015120091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-13T10:50:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "中小企業のM＆A 仲介する個人に国家資格導入へ 悪質行為に対策",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T06:56:36+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "ニデック 顧客に無断で設計変更など品質不正か 調査委設置へ",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T06:42:40+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "新築マンション引き渡し遅延の可能性 通知広がる イラン影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T06:23:46+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "1-3月GDP民間予測 2期連続のプラス成長見込む",
       "url": "http://www3.nhk.or.jp/news/html/20260513/k10015119841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-13T05:57:01+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "米消費者物価指数 去年同月比3.8％上昇 2年11か月ぶりの高水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T23:41:00+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "西日本シティ銀行 不適切投稿受け 私用スマホ持ち込み禁止に",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119781000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T20:44:19+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "高性能AIモデルによるサイバー攻撃リスク対応を指示 高市首相",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119281000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T20:40:57+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ローム社長 東芝・三菱電機との事業統合「想定より時間」",
-      "url": "http://www3.nhk.or.jp/news/html/20260512/k10015119731000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-12T20:16:06+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
