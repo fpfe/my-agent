@@ -1,41 +1,27 @@
 {
-  "updatedAt": "2026-05-15T07:55:47.228136+09:00",
-  "updatedAtJST": "2026/05/15 07:55 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-05-15T08:58:41.112535+09:00",
+  "updatedAtJST": "2026/05/15 08:58 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "NYダウ平均株価5万ドル回復 米中関係の改善期待などを背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T06:33:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "【Q＆A】最新AI「ミュトス」は何が違う？必要な対応は？",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015121901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T05:07:12+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "JDI 12年連続の最終赤字 主力工場での生産終了で",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T21:04:20+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "宇宙飛行士の若田光一さん 米宇宙開発企業の日本法人代表に",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-14T20:25:41+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "最先端AI「クロード・ミュトス」悪用リスクも…対策へ議論開始",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121241000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-14T19:58:48+09:00",
       "hoursAgo": 11
     }
   ]
