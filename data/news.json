@@ -1,83 +1,69 @@
 {
-  "updatedAt": "2026-05-15T04:44:40.989050+09:00",
-  "updatedAtJST": "2026/05/15 04:44 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-05-15T06:09:00.220224+09:00",
+  "updatedAtJST": "2026/05/15 06:09 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "【Q＆A】最新AI「ミュトス」は何が違う？必要な対応は？",
+      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015121901000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-15T05:07:12+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "JDI 12年連続の最終赤字 主力工場での生産終了で",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T21:04:20+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "宇宙飛行士の若田光一さん 米宇宙開発企業の日本法人代表に",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T20:25:41+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "最先端AI「クロード・ミュトス」悪用リスクも…対策へ議論開始",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T19:58:48+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "ENEOS管理の原油タンカーがホルムズ海峡通過の報道",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T19:03:24+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "カゴメ ケチャップのトマトのイラスト減らす インク調達不安定",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T19:00:58+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "米VC創業者 “今夏日本に拠点設立” 高市首相に伝達",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T18:52:19+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "長期金利2.635％まで上昇 1997年5月以来 約29年ぶり高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T18:43:38+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅に値下がり 1ドル＝157円台後半",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T18:09:34+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日本人4人乗船タンカー ホルムズ海峡を通過 ENEOS発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121791000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-14T18:08:08+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日銀・増委員“景気下振れの兆しなければ早期利上げ望ましい”",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121701000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-14T17:17:31+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "きょうのおはBiz 5月14日(木)  業績予想 「減益」「未定」増加",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-14T16:45:39+09:00",
       "hoursAgo": 11
     }
   ]
