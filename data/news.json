@@ -1,27 +1,41 @@
 {
-  "updatedAt": "2026-05-14T12:59:21.372413+09:00",
-  "updatedAtJST": "2026/05/14 12:59 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-14T15:50:20.883167+09:00",
+  "updatedAtJST": "2026/05/14 15:50 JST",
+  "totalArticles": 6,
   "articles": [
     {
-      "title": "株価 一時500円以上の値上がり 取引時間中の最高値を更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121141000.html",
+      "title": "長期金利2.630％まで上昇 1997年5月以来 約29年ぶり高水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121161000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-14T12:05:21+09:00",
+      "publishedAt": "2026-05-14T14:55:44+09:00",
       "hoursAgo": 0
     },
     {
       "title": "ENEOS管理の原油タンカーがホルムズ海峡通過の報道",
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121201000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-14T11:55:43+09:00",
+      "publishedAt": "2026-05-14T14:41:22+09:00",
       "hoursAgo": 1
     },
     {
-      "title": "長期金利2.605％まで上昇 1997年6月以来 約29年ぶり高水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121161000.html",
+      "title": "大韓航空 2026年12月にアシアナ航空との合併完了へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121511000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-14T09:53:39+09:00",
+      "publishedAt": "2026-05-14T14:34:45+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ホンダ 昨年度の決算 上場以来初の赤字 EV関連の損失で",
+      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-14T13:57:04+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時500円以上の値上がり 取引時間中の最高値を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121141000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-14T12:05:21+09:00",
       "hoursAgo": 3
     },
     {
@@ -29,7 +43,7 @@
       "url": "http://www3.nhk.or.jp/news/html/20260514/k10015121111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-14T07:51:27+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     }
   ]
 }
