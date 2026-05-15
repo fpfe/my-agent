@@ -1,49 +1,35 @@
 {
-  "updatedAt": "2026-05-16T07:05:55.891524+09:00",
-  "updatedAtJST": "2026/05/16 07:05 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-16T08:54:17.347122+09:00",
+  "updatedAtJST": "2026/05/16 08:54 JST",
+  "totalArticles": 4,
   "articles": [
     {
       "title": "NYダウ 537ドル下落 米中首脳会談への失望感広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-16T06:58:08+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "日本郵政 郵便料金の値上げ検討 収支改善目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:48:01+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "スカイマーク 今年度最終利益 51％減の見通し 燃油高騰などで",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:44:32+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "3メガバンク 金利高追い風に最高益 中東情勢影響は警戒",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:42:55+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "キオクシア 4～6月期の最終利益 47倍余に拡大見込み AI需要で",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T20:16:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "スーパーのコメ価格 5キロ税込み3742円 3週連続の値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T20:08:12+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
