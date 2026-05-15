@@ -1,125 +1,111 @@
 {
-  "updatedAt": "2026-05-15T21:52:36.867012+09:00",
-  "updatedAtJST": "2026/05/15 21:52 JST",
-  "totalArticles": 17,
+  "updatedAt": "2026-05-16T00:12:23.337641+09:00",
+  "updatedAtJST": "2026/05/16 00:12 JST",
+  "totalArticles": 15,
   "articles": [
     {
       "title": "日本郵政 郵便料金の値上げ検討 収支改善目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:48:01+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "スカイマーク 今年度最終利益 51％減の見通し 燃油高騰などで",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:44:32+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "3メガバンク 金利高追い風に最高益 中東情勢影響は警戒",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T21:42:55+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "キオクシア 4～6月期の最終利益 47倍余に拡大見込み AI需要で",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122921000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T20:16:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "スーパーのコメ価格 5キロ税込み3742円 3週連続の値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T20:08:12+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "円相場値下がり 1ドル＝158円台半ば",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T18:20:48+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "長期金利2.73％まで上昇 物価上昇や財政負担への懸念など背景",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T18:06:03+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "SUBARU 昨年度は大幅減益 関税措置やEV関連損失響く",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T17:36:59+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "JA全農 秋の農作業向け肥料値上げへ イラン情勢影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T17:31:33+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "大王製紙 8月に家庭用・業務用の全製品値上げ 中東情勢 影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T17:16:31+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "株価 一時1700円超値下がり 長期金利上昇も影響",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T16:29:01+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "経済安全保障推進法など改正案 衆院内閣委で一部修正され可決",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T14:59:03+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "物価高騰や円安の影響は研究現場にも 文部科学省が意識調査",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T13:03:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "片山財務相 補正予算案の編成ただちに必要なし 臨機応変に対応",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T12:54:43+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "きょうのおはBiz 5月15日(金)  エンゲル係数 45年ぶりの高さに",
       "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-15T12:49:45+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "インク懸念でパッケージ変更 鈴木農相“企業の予防的措置”",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122331000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T11:25:49+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "4月企業物価指数 イラン情勢で約3年ぶりの上昇幅に",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T10:50:35+09:00",
       "hoursAgo": 11
     }
   ]
