@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-05-17T04:03:25.236824+09:00",
-  "updatedAtJST": "2026/05/17 04:03 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-17T05:45:48.357370+09:00",
+  "updatedAtJST": "2026/05/17 05:45 JST",
+  "totalArticles": 1,
   "articles": [
     {
-      "title": "高松～小豆島の高速艇 約半分に減便 中東情勢で軽油値上がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123531000.html",
+      "title": "米中首脳会談 中国 “一部の品目 関税引き下げで原則合意”",
+      "url": "http://www3.nhk.or.jp/news/html/20260517/k10015123771000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-16T16:27:38+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "NYダウ 537ドル下落 米中首脳会談への失望感広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-16T16:16:14+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-05-17T05:12:10+09:00",
+      "hoursAgo": 0
     }
   ]
 }
