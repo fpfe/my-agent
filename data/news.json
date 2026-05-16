@@ -1,35 +1,14 @@
 {
-  "updatedAt": "2026-05-16T08:54:17.347122+09:00",
-  "updatedAtJST": "2026/05/16 08:54 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-16T11:50:47.107011+09:00",
+  "updatedAtJST": "2026/05/16 11:50 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "NYダウ 537ドル下落 米中首脳会談への失望感広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-16T06:58:08+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日本郵政 郵便料金の値上げ検討 収支改善目指す",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122961000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T21:48:01+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "スカイマーク 今年度最終利益 51％減の見通し 燃油高騰などで",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T21:44:32+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "3メガバンク 金利高追い風に最高益 中東情勢影響は警戒",
-      "url": "http://www3.nhk.or.jp/news/html/20260515/k10015122931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-15T21:42:55+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 4
     }
   ]
 }
