@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-16T22:20:38.024075+09:00",
-  "updatedAtJST": "2026/05/16 22:20 JST",
+  "updatedAt": "2026-05-16T23:55:59.804019+09:00",
+  "updatedAtJST": "2026/05/16 23:55 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-16T16:27:38+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "NYダウ 537ドル下落 米中首脳会談への失望感広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260516/k10015123341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-16T16:16:14+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     }
   ]
 }
