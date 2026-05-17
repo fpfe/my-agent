@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-05-17T20:05:13.068268+09:00",
-  "updatedAtJST": "2026/05/17 20:05 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-05-17T22:19:01.106018+09:00",
+  "updatedAtJST": "2026/05/17 22:19 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "イラン情勢で資材調達の“仲介役”に 金融機関で支援の動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260517/k10015124131000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-17T20:30:53+09:00",
+      "hoursAgo": 1
+    }
+  ]
 }
