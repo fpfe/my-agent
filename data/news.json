@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-05-18T04:08:33.219370+09:00",
-  "updatedAtJST": "2026/05/18 04:08 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-18T05:50:52.962010+09:00",
+  "updatedAtJST": "2026/05/18 05:50 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "多くの自動車メーカー 営業利益押し下げ見通し 中東情勢の影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260518/k10015124151000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-18T05:05:17+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "イラン情勢で資材調達の“仲介役”に 金融機関で支援の動き",
       "url": "http://www3.nhk.or.jp/news/html/20260517/k10015124131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-17T20:30:53+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     }
   ]
 }
