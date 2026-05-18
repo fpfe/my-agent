@@ -1,14 +1,35 @@
 {
-  "updatedAt": "2026-05-18T08:56:39.473005+09:00",
-  "updatedAtJST": "2026/05/18 08:56 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-18T13:00:16.282426+09:00",
+  "updatedAtJST": "2026/05/18 13:00 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "株価 一時1000円超下落 長期金利上昇など背景",
+      "url": "http://www3.nhk.or.jp/news/html/20260518/k10015124431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-18T12:40:01+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "きょうのおはBiz 5月18日(月)  中古車需要が拡大 人気の理由は",
+      "url": "http://www3.nhk.or.jp/news/html/20260518/k10015124421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-18T12:22:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "長期金利 一時2.8％に上昇 さらなる物価上昇への懸念も",
+      "url": "http://www3.nhk.or.jp/news/html/20260518/k10015124371000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-18T12:01:32+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "多くの自動車メーカー 営業利益押し下げ見通し 中東情勢の影響",
       "url": "http://www3.nhk.or.jp/news/html/20260518/k10015124151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-18T05:05:17+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     }
   ]
 }
