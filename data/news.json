@@ -1,63 +1,84 @@
 {
-  "updatedAt": "2026-05-19T17:35:38.423554+09:00",
-  "updatedAtJST": "2026/05/19 17:35 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-05-19T21:10:17.158330+09:00",
+  "updatedAtJST": "2026/05/19 21:10 JST",
+  "totalArticles": 11,
   "articles": [
+    {
+      "title": "「完全養殖」ウナギのかば焼き 初めて一般向け販売へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125271000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-19T19:21:51+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "1～3月のGDP 年率換算+2.1％ 2期連続プラス 輸出の伸び背景",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015124931000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-19T17:27:26+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-05-19T18:53:51+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "関西電力 裁判の法廷内のやりとり 複数社員が無断録音",
+      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125781000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-19T18:50:53+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "日清オイリオ 業務用油の一部でナフサ由来の容器を一斗缶に",
+      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-19T18:22:39+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "FDA 国内線の燃油サーチャージ 6月の発券分 さらに引き上げへ",
+      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-19T18:21:07+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "円相場 小幅な値動き 1ドル＝159円台前半",
+      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125731000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-19T18:14:00+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "北海道新幹線の線路敷設で談合疑い 公取委が立ち入り検査",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125501000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-19T17:06:36+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-05-19T17:43:47+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "株価 小幅な値下がり 半導体関連銘柄を中心に売り広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-19T16:43:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "株価 一時600円超上昇も売り注文が広がり値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-19T11:59:03+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "【きょうのおはBiz 5月19日(火)】宇宙ビジネス 地球観測に商機",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-19T11:26:39+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "鈴木農相「中東情勢長期化で来年春の肥料価格は予断許さず」",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-19T10:45:15+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "WTO事務局長「世界の貿易体制は過去80年で最大の混乱に直面」",
-      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125081000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-19T06:33:54+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "G7財務相・中銀総裁会議 新たなAIモデルの対策共有し具体化へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015124921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-19T06:01:10+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
