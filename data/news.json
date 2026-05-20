@@ -1,42 +1,35 @@
 {
-  "updatedAt": "2026-05-20T07:15:49.802979+09:00",
-  "updatedAtJST": "2026/05/20 07:15 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-05-20T09:05:18.126537+09:00",
+  "updatedAtJST": "2026/05/20 09:05 JST",
+  "totalArticles": 4,
   "articles": [
     {
       "title": "コンビニ各社 プラスチック削減進める 中東情勢の対応で",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015125971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T06:53:38+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
-      "title": "G7財相中銀総裁会議“世界経済にリスク AIモデルで協力”",
+      "title": "G7財務相・中銀総裁会議“世界経済にリスク AIモデルで協力”",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T06:14:04+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "全国の駅周辺再開発 7割で計画見直しなど 建設会社入札辞退も",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015125871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T05:05:46+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "米ベッセント財務長官“為替の過度な変動は望ましくない”",
       "url": "http://www3.nhk.or.jp/news/html/20260519/k10015126151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-19T23:20:15+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "「完全養殖」ウナギのかば焼き 初めて一般向け販売へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260519/k10015125271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-19T19:21:51+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
