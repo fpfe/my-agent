@@ -1,62 +1,41 @@
 {
-  "updatedAt": "2026-05-21T06:52:40.375276+09:00",
-  "updatedAtJST": "2026/05/21 06:52 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-05-21T08:12:27.891602+09:00",
+  "updatedAtJST": "2026/05/21 08:12 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "NYダウ 5万ドル台回復 トランプ大統領“最終段階”発言などで",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T06:50:48+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "電気・ガス支援で予備費支出調整 補正予算案の検討本格化 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T05:29:44+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "電気・ガス補助 この夏は拡充 予備費から5000億円程度支出へ",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T23:55:04+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "この夏の節電要請行わず 経産省 安定供給に最低限は確保見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T22:12:25+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日韓経済人会議日本側トップ“中東情勢不安定は両国のリスク”",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T20:32:30+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "石油連盟会長 “石油関連製品の安定供給に努める”",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126861000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T20:01:16+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "みずほ銀行が楽天銀行の株式取得 預金獲得などで連携強化へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T19:39:48+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "トイレットペーパーなど “原材料は十分確保” 日本製紙連合会",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127041000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T19:30:50+09:00",
       "hoursAgo": 11
     }
   ]
