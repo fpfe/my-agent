@@ -1,105 +1,105 @@
 {
-  "updatedAt": "2026-05-20T21:24:01.987905+09:00",
-  "updatedAtJST": "2026/05/20 21:24 JST",
+  "updatedAt": "2026-05-21T01:26:46.099964+09:00",
+  "updatedAtJST": "2026/05/21 01:26 JST",
   "totalArticles": 14,
   "articles": [
+    {
+      "title": "電気・ガス補助 この夏は拡充 予備費から5000億円程度支出へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127281000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-20T23:55:04+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "この夏の節電要請行わず 経産省 安定供給に最低限は確保見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127001000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-20T22:12:25+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "日韓経済人会議日本側トップ“中東情勢不安定は両国のリスク”",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T20:32:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "石油連盟会長 “石油関連製品の安定供給に努める”",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T20:01:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "みずほ銀行が楽天銀行の株式取得 預金獲得などで連携強化へ",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T19:39:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "トイレットペーパーなど “原材料は十分確保” 日本製紙連合会",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T19:30:50+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "夏の節電要請しない方針 経産省 安定供給に最低限は確保見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127001000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T19:08:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "円相場 小幅な値動き 1ドル＝159円台前半",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T18:21:27+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "訪日客 前年同月比5.5％減少 3か月ぶりマイナス 欧米も反動減",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T17:52:56+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "主食用米の作付面積は去年並みの水準に 農水省4月末調査",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T17:11:34+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "イトーヨーカ堂 プラスチック容器価格上昇で総菜販売変更へ",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T17:03:57+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "株価 約3週間ぶり6万円割れ 長期金利上昇傾向で",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T16:39:42+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "【きょうのおはBiz 5月20日(水)】中東産油国 ねらう“AI立国”",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T15:40:11+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "ガソリン価格 全国平均169.2円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T15:13:08+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     },
     {
       "title": "日本貿易会の会長「省エネ対策などの検討必要」中東情勢めぐり",
       "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-20T14:24:57+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "グーグル 「AIエージェント」機能を個人ユーザー向けに拡充へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015126381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T12:26:07+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
