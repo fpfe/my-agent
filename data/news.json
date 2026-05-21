@@ -1,42 +1,49 @@
 {
-  "updatedAt": "2026-05-21T08:12:27.891602+09:00",
-  "updatedAtJST": "2026/05/21 08:12 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-05-21T12:37:57.306071+09:00",
+  "updatedAtJST": "2026/05/21 12:37 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "きょうのおはBiz 5月21日(木)  スーパー おかず販売方法変更へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-21T11:59:51+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日経平均株価 2100円超の上昇 イラン情勢への懸念和らぎ",
+      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-21T11:55:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "貿易統計 4月の中東からの原油輸入量67％減 イラン情勢影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-21T11:22:15+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "米半導体エヌビディア 3か月決算 最終利益 前年同期の3.1倍に",
+      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-21T10:40:14+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "NYダウ 5万ドル台回復 トランプ大統領“最終段階”発言などで",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T06:50:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "電気・ガス支援で予備費支出調整 補正予算案の検討本格化 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T05:29:44+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "電気・ガス補助 この夏は拡充 予備費から5000億円程度支出へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127281000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T23:55:04+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "この夏の節電要請行わず 経産省 安定供給に最低限は確保見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127001000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T22:12:25+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日韓経済人会議日本側トップ“中東情勢不安定は両国のリスク”",
-      "url": "http://www3.nhk.or.jp/news/html/20260520/k10015127061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-20T20:32:30+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
