@@ -1,91 +1,77 @@
 {
-  "updatedAt": "2026-05-21T20:23:51.745096+09:00",
-  "updatedAtJST": "2026/05/21 20:23 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-05-22T00:23:55.932459+09:00",
+  "updatedAtJST": "2026/05/22 00:23 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "エチレンなど石油化学製品の4月生産量 前月比で増加も低水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-21T23:35:03+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "農林中金 理事候補者に外資系金融機関の元幹部など2人を選任",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T20:15:52+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "鈴木農相 国連機関に“途上国の農業支援で連携を”",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T20:02:43+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "エチレンなど石油化学製品の4月生産量 前月比で増加も低水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128091000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T19:53:36+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "「産油国共同備蓄」の補充原油 UAEからあすにも日本到着",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T19:14:13+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "円相場 ドルに対して小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T18:29:01+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "東京電力も法廷内で無断録音 電力業界で相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T18:25:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "日銀 小枝審議委員“物価高対応で適切なペースの利上げを”",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T18:00:55+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "首都圏 4月の新築マンション価格 平均8736万円 前年比24％余増",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T17:40:14+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "貿易統計 4月の中東からの原油輸入量67％減 イラン情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T17:20:10+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "株価 一時2200円超の値上がり イラン情勢への懸念和らぎ",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T16:21:47+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "きょうのおはBiz 5月21日(木)  スーパー おかず販売方法変更へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T11:59:51+09:00",
       "hoursAgo": 8
-    },
-    {
-      "title": "米半導体エヌビディア 3か月決算 最終利益 前年同期の3.1倍に",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015127411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T10:40:14+09:00",
-      "hoursAgo": 9
     }
   ]
 }
