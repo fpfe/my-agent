@@ -1,83 +1,76 @@
 {
-  "updatedAt": "2026-05-23T04:43:17.170312+09:00",
-  "updatedAtJST": "2026/05/23 04:43 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-05-23T06:08:37.236244+09:00",
+  "updatedAtJST": "2026/05/23 06:08 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "FRBウォーシュ新議長が就任 物価上昇で難しいかじ取り",
+      "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-23T06:03:11+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NYダウ 約3か月ぶりに取り引き時間中の最高値更新",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T23:08:06+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "「YKK AP」会長ら3人退任へ 私的飲食で会社の経費使用",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T21:42:59+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "ホルムズ海峡通過の原油タンカー 25日にも初めて日本到着へ",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T21:03:51+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "「新しい投資枠」は必要額を確保する仕組みに 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T20:23:55+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "高市首相と日銀植田総裁が会談 “十分な意思疎通図っていく”",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T20:01:44+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "「ふるさと納税サイト手数料引き下げを」事業者に要請 総務省",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T19:42:47+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "“6月使用分の電気料金 20円～80円ほど上がる” 電事連会長",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T19:13:40+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "円相場 小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129081000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T18:28:17+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "スーパーのコメ価格 5キロ税込み3768円 4週ぶり値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T18:10:42+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "消費者の節約志向で雑貨店やスーパーに変化も… 4月の物価は",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T17:56:11+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "サントリーホールディングス 新浪剛史元会長を不起訴 福岡地検",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128851000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T16:52:11+09:00",
       "hoursAgo": 11
     }
   ]
