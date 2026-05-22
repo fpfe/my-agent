@@ -1,28 +1,56 @@
 {
-  "updatedAt": "2026-05-22T09:00:59.764898+09:00",
-  "updatedAtJST": "2026/05/22 09:00 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-05-22T13:59:20.408418+09:00",
+  "updatedAtJST": "2026/05/22 13:59 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "4月の消費者物価指数 去年同月比1.4％上昇",
+      "title": "最先端AIめぐり当面の対応を要請 “システム停止も” 金融庁",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128621000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T13:42:07+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時1700円超値上がり 米イラン協議進展の受け止め広がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128361000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T13:40:27+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "4月の消費者物価指数+1.4％ 上昇率縮小も食料品の値上がり続く",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128341000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-22T08:44:35+09:00",
+      "publishedAt": "2026-05-22T13:03:49+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "APEC貿易相会合が中国で開幕 赤澤経産相が出席",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128211000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T12:05:26+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「産油国共同備蓄」の補充原油 UAEから日本到着 放出開始後初",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T11:08:51+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "今春卒業の大学生の就職率98％ ことしも「売手市場」",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T11:01:57+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "NYダウ 3か月ぶり最高値更新 米イラン協議の進展観測で",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T06:49:03+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "エチレンなど石油化学製品の4月生産量 前月比で増加も低水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128091000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T23:35:03+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 7
     }
   ]
 }
