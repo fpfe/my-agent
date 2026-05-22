@@ -1,35 +1,28 @@
 {
-  "updatedAt": "2026-05-22T07:17:58.972691+09:00",
-  "updatedAtJST": "2026/05/22 07:17 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-22T09:00:59.764898+09:00",
+  "updatedAtJST": "2026/05/22 09:00 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "4月の消費者物価指数 去年同月比1.4％上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T08:44:35+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NYダウ 3か月ぶり最高値更新 米イラン協議の進展観測で",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T06:49:03+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "エチレンなど石油化学製品の4月生産量 前月比で増加も低水準",
       "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-21T23:35:03+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "農林中金 理事候補者に外資系金融機関の元幹部など2人を選任",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128131000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T20:15:52+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "鈴木農相 国連機関に“途上国の農業支援で連携を”",
-      "url": "http://www3.nhk.or.jp/news/html/20260521/k10015128121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-21T20:02:43+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
