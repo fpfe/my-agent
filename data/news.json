@@ -1,77 +1,112 @@
 {
-  "updatedAt": "2026-05-22T17:28:29.094916+09:00",
-  "updatedAtJST": "2026/05/22 17:28 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-05-22T20:44:16.049377+09:00",
+  "updatedAtJST": "2026/05/22 20:44 JST",
+  "totalArticles": 15,
   "articles": [
+    {
+      "title": "「新しい投資枠」は必要額を確保する仕組みに 高市首相",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129191000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T20:23:55+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "高市首相と日銀植田総裁が会談 “十分な意思疎通図っていく”",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129181000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T20:01:44+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "「ふるさと納税サイト手数料引き下げを」事業者に要請 総務省",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T19:42:47+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "“6月使用分の電気料金 20円～80円ほど上がる” 電事連会長",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129131000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T19:13:40+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 小幅な値動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129081000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T18:28:17+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "スーパーのコメ価格 5キロ税込み3768円 4週ぶり値上がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129041000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T18:10:42+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "消費者の節約志向で雑貨店やスーパーに変化も… 4月の物価は",
+      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-22T17:56:11+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "サントリーホールディングス 新浪剛史元会長を不起訴 福岡地検",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T16:52:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "きょうのおはBiz 5月22日(金)  シンナー 目詰まりの3パターン",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T16:37:09+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "株価 終値で最高値更新 イラン戦闘の終結へ進展の見方",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T16:23:26+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "鈴木農相 “主食用米 需要を大幅に超過すれば価格は下落”",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T15:13:19+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "APEC貿易相会合が中国で開幕 赤澤経産相が出席",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T14:03:03+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "最先端AIめぐり当面の対応を要請 “システム停止も” 金融庁",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T13:42:07+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "4月の消費者物価指数+1.4％ 上昇率縮小も食料品の値上がり続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T13:03:49+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "「産油国共同備蓄」の補充原油 UAEから日本到着 放出開始後初",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T11:08:51+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "今春卒業の大学生の就職率98％ ことしも「売手市場」",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T11:01:57+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "NYダウ 3か月ぶり最高値更新 米イラン協議の進展観測で",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015128321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T06:49:03+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 9
     }
   ]
 }
