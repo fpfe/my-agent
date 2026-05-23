@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-05-23T09:12:24.632385+09:00",
-  "updatedAtJST": "2026/05/23 09:12 JST",
+  "updatedAt": "2026-05-23T13:39:46.316177+09:00",
+  "updatedAtJST": "2026/05/23 13:39 JST",
   "totalArticles": 3,
   "articles": [
+    {
+      "title": "EUとメキシコが新たな貿易協定に署名 EUは貿易の多角化を加速",
+      "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129591000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-23T10:50:55+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NYダウ 2日連続で最高値 米イラン協議の進展観測背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T07:00:19+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "FRBウォーシュ新議長が就任 物価上昇で難しいかじ取り",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T06:53:26+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "「YKK AP」会長ら3人退任へ 私的飲食で会社の経費使用",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129401000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T21:42:59+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
