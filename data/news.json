@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-24T01:08:38.446236+09:00",
-  "updatedAtJST": "2026/05/24 01:08 JST",
+  "updatedAt": "2026-05-24T03:00:48.152588+09:00",
+  "updatedAtJST": "2026/05/24 03:00 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T20:57:44+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "自民 鈴木幹事長 ガソリン価格支援策“見直し含め検討が必要”",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T17:21:37+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     }
   ]
 }
