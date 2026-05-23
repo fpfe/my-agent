@@ -1,42 +1,28 @@
 {
-  "updatedAt": "2026-05-23T18:51:56.309971+09:00",
-  "updatedAtJST": "2026/05/23 18:51 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-05-23T20:10:37.541129+09:00",
+  "updatedAtJST": "2026/05/23 20:10 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "APEC貿易相会合 “エネルギーなどの供給網の維持へ協力”",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T18:05:09+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "自民 鈴木幹事長 ガソリン価格支援策“見直し含め検討が必要”",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T17:21:37+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "EUとメキシコが新たな貿易協定に署名 EUは貿易の多角化を加速",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T10:50:55+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "NYダウ 2日連続で最高値 米イラン協議の進展観測背景に",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-23T07:00:19+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "FRBウォーシュ新議長が就任 物価上昇で難しいかじ取り",
-      "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-23T06:53:26+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
