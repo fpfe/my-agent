@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-05-23T20:10:37.541129+09:00",
-  "updatedAtJST": "2026/05/23 20:10 JST",
+  "updatedAt": "2026-05-23T22:23:49.781917+09:00",
+  "updatedAtJST": "2026/05/23 22:23 JST",
   "totalArticles": 3,
   "articles": [
     {
       "title": "APEC貿易相会合 “エネルギーなどの供給網の維持へ協力”",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129771000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-23T18:05:09+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-05-23T20:57:44+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "自民 鈴木幹事長 ガソリン価格支援策“見直し含め検討が必要”",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T17:21:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "EUとメキシコが新たな貿易協定に署名 EUは貿易の多角化を加速",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T10:50:55+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
