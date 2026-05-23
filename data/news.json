@@ -1,48 +1,27 @@
 {
-  "updatedAt": "2026-05-23T07:58:07.344040+09:00",
-  "updatedAtJST": "2026/05/23 07:58 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-23T09:12:24.632385+09:00",
+  "updatedAtJST": "2026/05/23 09:12 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "NYダウ 2日連続で最高値 米イラン協議の進展観測背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T07:00:19+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "FRBウォーシュ新議長が就任 物価上昇で難しいかじ取り",
       "url": "http://www3.nhk.or.jp/news/html/20260523/k10015129301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-23T06:53:26+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "「YKK AP」会長ら3人退任へ 私的飲食で会社の経費使用",
       "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-22T21:42:59+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ホルムズ海峡通過の原油タンカー 25日にも初めて日本到着へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129371000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T21:03:51+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "「新しい投資枠」は必要額を確保する仕組みに 高市首相",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T20:23:55+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "高市首相と日銀植田総裁が会談 “十分な意思疎通図っていく”",
-      "url": "http://www3.nhk.or.jp/news/html/20260522/k10015129181000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-22T20:01:44+09:00",
       "hoursAgo": 11
     }
   ]
