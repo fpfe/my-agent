@@ -1,28 +1,49 @@
 {
-  "updatedAt": "2026-05-25T09:08:50.210934+09:00",
-  "updatedAtJST": "2026/05/25 09:08 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-05-25T14:19:34.808285+09:00",
+  "updatedAtJST": "2026/05/25 14:19 JST",
+  "totalArticles": 6,
   "articles": [
     {
-      "title": "NY原油 一時1バレル＝91ドル台まで下落 戦闘終結へ進展の見方",
+      "title": "NY原油 一時1バレル＝90ドル台まで下落 戦闘終結へ進展の見方",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130551000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-25T07:28:38+09:00",
+      "publishedAt": "2026-05-25T14:17:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "きょうのおはBiz 5月25日(月) “完全養殖ウナギ” 一般販売へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T12:22:11+09:00",
       "hoursAgo": 1
+    },
+    {
+      "title": "日経平均株価 初の6万5000円台 イラン協議進展の見方から",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130571000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T12:21:12+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "セブン＆アイ 鈴木敏文名誉顧問が死去 日本のコンビニ礎築く",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T12:18:43+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "日本企業管理で初めてホルムズ海峡通過 原油タンカー日本到着",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T12:00:06+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "小売各社 中東情勢受け配送回数削減へ 価格転嫁抑えるねらい",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T06:24:41+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "ホルムズ海峡通過の原油タンカー きょうにも初めて日本到着へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T05:07:08+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     }
   ]
 }
