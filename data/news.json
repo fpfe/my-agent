@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-25T07:58:42.996952+09:00",
-  "updatedAtJST": "2026/05/25 07:58 JST",
+  "updatedAt": "2026-05-25T09:08:50.210934+09:00",
+  "updatedAtJST": "2026/05/25 09:08 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T07:28:38+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "小売各社 中東情勢受け配送回数削減へ 価格転嫁抑えるねらい",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T06:24:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "ホルムズ海峡通過の原油タンカー きょうにも初めて日本到着へ",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T05:07:08+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     }
   ]
 }
