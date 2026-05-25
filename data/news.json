@@ -1,70 +1,70 @@
 {
-  "updatedAt": "2026-05-26T04:38:18.783603+09:00",
-  "updatedAtJST": "2026/05/26 04:38 JST",
+  "updatedAt": "2026-05-26T06:05:14.871339+09:00",
+  "updatedAtJST": "2026/05/26 06:05 JST",
   "totalArticles": 9,
   "articles": [
+    {
+      "title": "補正予算案 3兆1000億円規模で提出へ 6月上旬成立目指す 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T05:08:53+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "成長戦略にスタートアップ企業支援策を反映 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T21:54:20+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "コカ・コーラ 165品目を値上げへ 中東情勢の影響受け9月から",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T20:30:39+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "日本企業管理で初めてホルムズ海峡通過 原油タンカー日本到着",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T19:40:36+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "セブン＆アイ 鈴木敏文名誉顧問が死去 日本のコンビニ礎築く",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T18:53:31+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "鹿児島 垂水市 メタノール確保で入札も不調に 中東情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T18:53:09+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅な値動き 午前中やや円高も午後は売り買い交錯",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T18:43:16+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "日商会頭 「目詰まり」解消へ 会員企業などに協力を要請へ",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T18:21:00+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "50年近く営業「ハンズ渋谷店」 11月で営業終了へ",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T18:09:10+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "春物衣料好調で4月のデパート売り上げ 4か月連続のプラスに",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T17:55:05+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
