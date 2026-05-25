@@ -1,49 +1,84 @@
 {
-  "updatedAt": "2026-05-25T14:19:34.808285+09:00",
-  "updatedAtJST": "2026/05/25 14:19 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-05-25T19:04:27.724686+09:00",
+  "updatedAtJST": "2026/05/25 19:04 JST",
+  "totalArticles": 11,
   "articles": [
+    {
+      "title": "セブン＆アイ 鈴木敏文名誉顧問が死去 日本のコンビニ礎築く",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T18:53:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "鹿児島 垂水市 メタノール確保で入札も不調に 中東情勢影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130991000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T18:53:09+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 小幅な値動き 午前中やや円高も午後は売り買い交錯",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T18:43:16+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日商会頭 「目詰まり」解消へ 会員企業などに協力を要請へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131001000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T18:21:00+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "50年近く営業「ハンズ渋谷店」 11月で営業終了へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131021000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T18:09:10+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "春物衣料好調で4月のデパート売り上げ 4か月連続のプラスに",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T17:55:05+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日本企業管理で初めてホルムズ海峡通過 原油タンカー日本到着",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T16:54:00+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "日経平均株価 終値 6万5000円台で最高値を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130571000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T16:15:21+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ボーイング737MAX 日本の航空会社 初めて導入を前に機体を公開",
+      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130871000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-25T14:47:07+09:00",
+      "hoursAgo": 4
+    },
     {
       "title": "NY原油 一時1バレル＝90ドル台まで下落 戦闘終結へ進展の見方",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T14:17:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "きょうのおはBiz 5月25日(月) “完全養殖ウナギ” 一般販売へ",
       "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-25T12:22:11+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日経平均株価 初の6万5000円台 イラン協議進展の見方から",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130571000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T12:21:12+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "セブン＆アイ 鈴木敏文名誉顧問が死去 日本のコンビニ礎築く",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130611000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T12:18:43+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "日本企業管理で初めてホルムズ海峡通過 原油タンカー日本到着",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130441000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T12:00:06+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "小売各社 中東情勢受け配送回数削減へ 価格転嫁抑えるねらい",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015130451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-25T06:24:41+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 6
     }
   ]
 }
