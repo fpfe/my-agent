@@ -1,98 +1,56 @@
 {
-  "updatedAt": "2026-05-27T00:24:57.738905+09:00",
-  "updatedAtJST": "2026/05/27 00:24 JST",
-  "totalArticles": 13,
+  "updatedAt": "2026-05-27T03:24:46.754618+09:00",
+  "updatedAtJST": "2026/05/27 03:24 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "個人向け国債 新商品を検討すべきとの意見 財務省の研究会",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T21:00:01+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "日本原子力発電も法廷内で無断録音 電力会社で相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T20:49:10+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "電気・ガス料金支援へ 今年度の予備費5135億円の支出決定",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:37:58+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "大手生保 金利上昇背景に利益拡大 国債運用では含み損も",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:16:07+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "円相場 小幅に値下がり アメリカ・イラン協議の不透明感から",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:04:29+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "5月の月例経済報告「緩やかに回復」維持 企業物価は上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:03:27+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "株価 4営業日ぶり下落 当面の利益確保の動き",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T16:35:17+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "【きょうのおはBiz 5月26日(火)】AI新興企業 26歳社長の勝ち筋",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T14:50:00+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "プルデンシャル生命 顧客への補償費用として47億円を計上",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T14:15:25+09:00",
       "hoursAgo": 10
-    },
-    {
-      "title": "赤澤経産相 夏の省エネ“例年どおりの取り組みを”",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131611000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T13:05:49+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "赤澤経産相 ロシアに幹部派遣 “日本企業の資産を守るため”",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131641000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T13:03:48+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "北陸新幹線延伸 関西経済界“小浜・京都ルート 最も望ましい”",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131581000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T12:38:37+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ホルムズ海峡 日本関係船1隻が通過 金子国交相が明らかに",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T12:32:12+09:00",
-      "hoursAgo": 11
     }
   ]
 }
