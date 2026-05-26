@@ -1,35 +1,77 @@
 {
-  "updatedAt": "2026-05-26T12:29:24.309530+09:00",
-  "updatedAtJST": "2026/05/26 12:29 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-26T16:43:53.099807+09:00",
+  "updatedAtJST": "2026/05/26 16:43 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "株価 4営業日ぶり下落 当面の利益確保の動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131571000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T16:35:17+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【きょうのおはBiz 5月26日(火)】AI新興企業 26歳社長の勝ち筋",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T14:50:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "プルデンシャル生命 顧客への補償費用として47億円を計上",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T14:15:25+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "赤澤経産相 夏の省エネ“例年どおりの取り組みを”",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T13:05:49+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "赤澤経産相 ロシアに幹部派遣 “日本企業の資産を守るため”",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131641000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T13:03:48+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "北陸新幹線延伸 関西経済界“小浜・京都ルート 最も望ましい”",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131581000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T12:38:37+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "ホルムズ海峡 日本関係船1隻が通過 金子国交相が明らかに",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T12:32:12+09:00",
+      "hoursAgo": 4
+    },
     {
       "title": "食料品の消費税 “税率含め方向性決まっていない” 官房副長官",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T12:16:03+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 値下がり 当面の利益を確保する動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131571000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T12:13:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "電気・ガス料金支援へ 今年度の予備費5135億円の支出決定",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T12:09:04+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "日本の対外純資産561兆円 過去最高も中国に抜かれ3位に",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T09:02:36+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     }
   ]
 }
