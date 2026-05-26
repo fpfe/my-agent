@@ -1,28 +1,35 @@
 {
-  "updatedAt": "2026-05-26T08:00:52.936663+09:00",
-  "updatedAtJST": "2026/05/26 08:00 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-05-26T12:29:24.309530+09:00",
+  "updatedAtJST": "2026/05/26 12:29 JST",
+  "totalArticles": 4,
   "articles": [
     {
-      "title": "補正予算案 3兆1000億円規模で提出へ 6月上旬成立目指す 政府",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131231000.html",
+      "title": "食料品の消費税 “税率含め方向性決まっていない” 官房副長官",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131481000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-26T05:08:53+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-05-26T12:16:03+09:00",
+      "hoursAgo": 0
     },
     {
-      "title": "成長戦略にスタートアップ企業支援策を反映 高市首相",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131281000.html",
+      "title": "株価 値下がり 当面の利益を確保する動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131571000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-25T21:54:20+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-05-26T12:13:34+09:00",
+      "hoursAgo": 0
     },
     {
-      "title": "コカ・コーラ 165品目を値上げへ 中東情勢の影響受け9月から",
-      "url": "http://www3.nhk.or.jp/news/html/20260525/k10015131201000.html",
+      "title": "電気・ガス料金支援へ 今年度の予備費5135億円の支出決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131441000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-25T20:30:39+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-05-26T12:09:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日本の対外純資産561兆円 過去最高も中国に抜かれ3位に",
+      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-26T09:02:36+09:00",
+      "hoursAgo": 3
     }
   ]
 }
