@@ -1,56 +1,56 @@
 {
-  "updatedAt": "2026-05-27T03:24:46.754618+09:00",
-  "updatedAtJST": "2026/05/27 03:24 JST",
+  "updatedAt": "2026-05-27T05:52:15.441694+09:00",
+  "updatedAtJST": "2026/05/27 05:52 JST",
   "totalArticles": 7,
   "articles": [
+    {
+      "title": "アサヒ 主力の第3のビールを「ビール」に 大手4社で同様の対応",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132271000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T04:23:42+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "個人向け国債 新商品を検討すべきとの意見 財務省の研究会",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T21:00:01+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日本原子力発電も法廷内で無断録音 電力会社で相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T20:49:10+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "電気・ガス料金支援へ 今年度の予備費5135億円の支出決定",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:37:58+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "大手生保 金利上昇背景に利益拡大 国債運用では含み損も",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:16:07+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅に値下がり アメリカ・イラン協議の不透明感から",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:04:29+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "5月の月例経済報告「緩やかに回復」維持 企業物価は上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-26T18:03:27+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "株価 4営業日ぶり下落 当面の利益確保の動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015131571000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T16:35:17+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
