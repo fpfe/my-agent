@@ -1,56 +1,98 @@
 {
-  "updatedAt": "2026-05-27T14:13:54.549992+09:00",
-  "updatedAtJST": "2026/05/27 14:13 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-05-27T18:43:58.310905+09:00",
+  "updatedAtJST": "2026/05/27 18:43 JST",
+  "totalArticles": 13,
   "articles": [
     {
-      "title": "4月の単身者向け家賃 東京23区は11万2500円に 過去最高を更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132691000.html",
+      "title": "春闘 大企業の賃上げ率 3年連続で5％超",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133151000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-27T13:03:16+09:00",
+      "publishedAt": "2026-05-27T18:36:30+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 小幅な値動き 植田総裁の発言材料不足で方向感欠く",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T18:16:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀 植田総裁 “原油高騰に加え賃金・為替等の影響も注視”",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T17:07:51+09:00",
       "hoursAgo": 1
+    },
+    {
+      "title": "株価 取り引き時間中の最高値更新も終値は小幅な値上がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T16:35:44+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "中部電力 浜岡原発での不適切手続きで経産省に報告",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132881000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T16:30:30+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "食品のパッケージ変更の動きで政府と業界が初の情報交換会",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132661000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-27T12:23:36+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-05-27T16:22:47+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ガソリン全国平均169.2円 政府補助金で170円水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132851000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T15:31:17+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "中東情勢対応で物資不足の具体例の情報提供呼びかけ 高市首相",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T15:27:34+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "オートバックスセブンと中国の奇瑞自動車 日本に軽EV投入へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132811000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T15:12:03+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "4月の単身者向け家賃 東京23区は11万2500円に 過去最高を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T13:03:16+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz 5月27日(水) “旅アト消費”で変わる日本食",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T12:14:15+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 初の6万6000円台に 取り引き時間中の最高値を更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T12:05:55+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "裁量労働制 労使双方の立場を十分踏まえ検討を 政府分科会",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T11:29:50+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "NY株式市場 ナスダックとS＆P500が最高値 半導体が押し上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T06:57:04+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "アサヒ 主力の第3のビールを「ビール」に 大手4社で同様の対応",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T04:23:42+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
