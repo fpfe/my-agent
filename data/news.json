@@ -1,21 +1,56 @@
 {
-  "updatedAt": "2026-05-27T09:02:59.688968+09:00",
-  "updatedAtJST": "2026/05/27 09:02 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-05-27T14:13:54.549992+09:00",
+  "updatedAtJST": "2026/05/27 14:13 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "4月の単身者向け家賃 東京23区は11万2500円に 過去最高を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T13:03:16+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "食品のパッケージ変更の動きで政府と業界が初の情報交換会",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T12:23:36+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "きょうのおはBiz 5月27日(水) “旅アト消費”で変わる日本食",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T12:14:15+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 初の6万6000円台に 取り引き時間中の最高値を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T12:05:55+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "裁量労働制 労使双方の立場を十分踏まえ検討を 政府分科会",
+      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-27T11:29:50+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NY株式市場 ナスダックとS＆P500が最高値 半導体が押し上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T06:57:04+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "アサヒ 主力の第3のビールを「ビール」に 大手4社で同様の対応",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T04:23:42+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 9
     }
   ]
 }
