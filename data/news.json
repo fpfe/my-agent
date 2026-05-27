@@ -1,55 +1,41 @@
 {
-  "updatedAt": "2026-05-28T04:23:47.890837+09:00",
-  "updatedAtJST": "2026/05/28 04:23 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-05-28T06:53:38.212211+09:00",
+  "updatedAtJST": "2026/05/28 06:53 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "NY株式市場 ダウ平均株価など最高値更新 ホルムズ海峡回復期待",
+      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-28T06:38:27+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NY原油 一時1バレル＝87ドル台に下落 その後は再び上昇も",
+      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-28T04:59:34+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "政府備蓄米の買い入れ ほぼ全量落札 今後値下がりの見方背景か",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T20:30:00+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "日銀決算 保有国債の含み損が45兆円規模に",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T19:58:52+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 取り引き時間中の最高値更新も終値は小幅な値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T19:50:19+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "春闘 大企業の賃上げ率 3年連続で5％超",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133151000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T18:36:30+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "円相場 小幅な値動き 植田総裁の発言材料不足で方向感欠く",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133171000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T18:16:35+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日銀 植田総裁 “原油高騰に加え賃金・為替等の影響も注視”",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132801000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T17:07:51+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "中部電力 浜岡原発での不適切手続きで経産省に報告",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T16:30:30+09:00",
       "hoursAgo": 11
     }
   ]
