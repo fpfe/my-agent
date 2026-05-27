@@ -1,35 +1,21 @@
 {
-  "updatedAt": "2026-05-27T07:18:36.164466+09:00",
-  "updatedAtJST": "2026/05/27 07:18 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-27T09:02:59.688968+09:00",
+  "updatedAtJST": "2026/05/27 09:02 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "NY株式市場 ナスダックとS＆P500が最高値 半導体が押し上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T06:57:04+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "アサヒ 主力の第3のビールを「ビール」に 大手4社で同様の対応",
       "url": "http://www3.nhk.or.jp/news/html/20260527/k10015132271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-27T04:23:42+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "個人向け国債 新商品を検討すべきとの意見 財務省の研究会",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T21:00:01+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日本原子力発電も法廷内で無断録音 電力会社で相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260526/k10015132071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-26T20:49:10+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 4
     }
   ]
 }
