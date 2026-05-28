@@ -1,28 +1,42 @@
 {
-  "updatedAt": "2026-05-28T08:16:19.263296+09:00",
-  "updatedAtJST": "2026/05/28 08:16 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-05-28T12:32:39.247738+09:00",
+  "updatedAtJST": "2026/05/28 12:32 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "株価 小幅な値動き 6万5000円台",
+      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-28T12:10:58+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ニップン 小麦粉やパスタなど値上げ 中東影響が一因",
+      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-28T12:06:20+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "きょうのおはBiz 5月28日(木) 大手企業賃上げ率 3年連続5％台",
+      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-28T11:31:31+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "NY株式市場 ダウ平均株価など最高値更新 ホルムズ海峡回復期待",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T06:38:27+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "NY原油 一時1バレル＝87ドル台に下落 その後は再び上昇も",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T04:59:34+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "政府備蓄米の買い入れ ほぼ全量落札 今後値下がりの見方背景か",
-      "url": "http://www3.nhk.or.jp/news/html/20260527/k10015133291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-27T20:30:00+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
