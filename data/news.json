@@ -1,77 +1,63 @@
 {
-  "updatedAt": "2026-05-28T20:41:24.664311+09:00",
-  "updatedAtJST": "2026/05/28 20:41 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-05-29T00:52:56.431515+09:00",
+  "updatedAtJST": "2026/05/29 00:52 JST",
+  "totalArticles": 8,
   "articles": [
     {
       "title": "石油代替調達進むも目詰まり課題 イラン情勢 各地への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T19:49:55+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 5
     },
     {
       "title": "ソニー生命 元社員4人が顧客と不適切な金銭授受 1億2000万円余",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T19:12:32+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "南米とのEPA交渉 自民党対策本部で農業への懸念の声相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T18:39:29+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "円相場 1ドル＝159円台半ばで小幅な値動き 市場介入に警戒感も",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T18:12:02+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "6月 電気・ガス料金 中東影響でほとんどの会社で値上がりへ",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T16:42:09+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 8
     },
     {
       "title": "自動車メーカー各社 中東での販売大幅減 情勢悪化受け",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T16:33:10+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "完全養殖ウナギ あすからオンラインで試験販売開始",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T16:19:15+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "株価 一時1100円超の値下がり イラン情勢不透明感強まり",
       "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-28T16:17:56+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "ニップン 小麦粉やパスタなど値上げ 中東影響が一因",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133711000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T12:06:20+09:00",
       "hoursAgo": 8
-    },
-    {
-      "title": "きょうのおはBiz 5月28日(木) 大手企業賃上げ率 3年連続5％台",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T11:31:31+09:00",
-      "hoursAgo": 9
     }
   ]
 }
