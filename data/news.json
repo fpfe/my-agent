@@ -1,56 +1,35 @@
 {
-  "updatedAt": "2026-05-29T06:08:03.851441+09:00",
-  "updatedAtJST": "2026/05/29 06:08 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-05-29T08:15:56.026289+09:00",
+  "updatedAtJST": "2026/05/29 08:15 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "ダウなど3指数が最高値更新 イラン進展期待やハイテク株買い",
+      "url": "http://www3.nhk.or.jp/news/html/20260529/k10015134581000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-29T06:11:51+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "スルメイカ 昨年度の漁獲上限を超過 管理の難しさ浮き彫りに",
       "url": "http://www3.nhk.or.jp/news/html/20260529/k10015134371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-29T05:28:09+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "メガバンク3行 オープンAI最新モデル利用へ 攻撃への備え急ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260529/k10015134481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-29T05:25:27+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "三菱 日産から車両供給受けアメリカで販売へ 関税影響軽減",
       "url": "http://www3.nhk.or.jp/news/html/20260529/k10015134351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-29T05:03:35+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "石油代替調達進むも目詰まり課題 イラン情勢 各地への影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015133941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T19:49:55+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ソニー生命 元社員4人が顧客と不適切な金銭授受 1億2000万円余",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134261000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T19:12:32+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "南米とのEPA交渉 自民党対策本部で農業への懸念の声相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134201000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T18:39:29+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 1ドル＝159円台半ばで小幅な値動き 市場介入に警戒感も",
-      "url": "http://www3.nhk.or.jp/news/html/20260528/k10015134191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-28T18:12:02+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 3
     }
   ]
 }
