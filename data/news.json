@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-30T20:19:08.517504+09:00",
-  "updatedAtJST": "2026/05/30 20:19 JST",
+  "updatedAt": "2026-05-30T22:27:36.969493+09:00",
+  "updatedAtJST": "2026/05/30 22:27 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260530/k10015136051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-30T18:41:24+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "AIモデル ミュトス 利用企業 “ゲームチェンジ起こす能力”",
       "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-30T15:42:53+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     }
   ]
 }
