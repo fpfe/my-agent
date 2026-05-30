@@ -1,35 +1,14 @@
 {
-  "updatedAt": "2026-05-30T08:11:21.731719+09:00",
-  "updatedAtJST": "2026/05/30 08:11 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-05-30T11:58:30.779510+09:00",
+  "updatedAtJST": "2026/05/30 11:58 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "NYダウ終値 初の5万1000ドル台に 米イラン協議進展へ期待感で",
       "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-30T06:45:47+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "サンリオ 役員の不適切報酬で調査報告書 総額は2億5000万円余",
-      "url": "http://www3.nhk.or.jp/news/html/20260529/k10015135561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-29T22:32:07+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "東海道新幹線 豪雨対策強化へ 三島～浜松 のり面の補強など",
-      "url": "http://www3.nhk.or.jp/news/html/20260529/k10015135441000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-29T20:45:42+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "プリマハムや丸大食品など値上げ発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260529/k10015135461000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-29T20:38:42+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
