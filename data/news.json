@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-05-30T15:28:02.813666+09:00",
-  "updatedAtJST": "2026/05/30 15:28 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-05-30T18:14:52.935799+09:00",
+  "updatedAtJST": "2026/05/30 18:14 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "AIモデル ミュトス 利用企業 “ゲームチェンジ起こす能力”",
+      "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135931000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-30T15:42:53+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NYダウ終値 初の5万1000ドル台に 米イラン協議進展へ期待感で",
       "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-30T06:45:47+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
