@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-05-30T18:14:52.935799+09:00",
-  "updatedAtJST": "2026/05/30 18:14 JST",
+  "updatedAt": "2026-05-30T20:19:08.517504+09:00",
+  "updatedAtJST": "2026/05/30 20:19 JST",
   "totalArticles": 2,
   "articles": [
+    {
+      "title": "介入後も円安傾向続く 日銀が利上げに踏み切るかも焦点に",
+      "url": "http://www3.nhk.or.jp/news/html/20260530/k10015136051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-30T18:41:24+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "AIモデル ミュトス 利用企業 “ゲームチェンジ起こす能力”",
       "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-30T15:42:53+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "NYダウ終値 初の5万1000ドル台に 米イラン協議進展へ期待感で",
-      "url": "http://www3.nhk.or.jp/news/html/20260530/k10015135671000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-30T06:45:47+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 4
     }
   ]
 }
