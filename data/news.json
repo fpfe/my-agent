@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-05-31T17:13:58.883150+09:00",
-  "updatedAtJST": "2026/05/31 17:13 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-05-31T19:56:23.495697+09:00",
+  "updatedAtJST": "2026/05/31 19:56 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "赤澤経産相 鹿児島の備蓄基地視察“今後も必要な石油確保”",
+      "url": "http://www3.nhk.or.jp/news/html/20260531/k10015136561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-05-31T19:10:51+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
