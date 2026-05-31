@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-06-01T06:58:47.041480+09:00",
-  "updatedAtJST": "2026/06/01 06:58 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-06-01T08:10:55.217574+09:00",
+  "updatedAtJST": "2026/06/01 08:10 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "4月のナフサ輸入量は減少も 代替調達先の米国からは209倍",
       "url": "http://www3.nhk.or.jp/news/html/20260531/k10015136681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-05-31T21:22:40+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "赤澤経産相 鹿児島の備蓄基地視察“今後も必要な石油確保”",
-      "url": "http://www3.nhk.or.jp/news/html/20260531/k10015136561000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-05-31T19:10:51+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
