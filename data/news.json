@@ -1,14 +1,28 @@
 {
-  "updatedAt": "2026-06-01T08:10:55.217574+09:00",
-  "updatedAtJST": "2026/06/01 08:10 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-06-01T13:00:07.110767+09:00",
+  "updatedAtJST": "2026/06/01 13:00 JST",
+  "totalArticles": 3,
   "articles": [
     {
-      "title": "4月のナフサ輸入量は減少も 代替調達先の米国からは209倍",
-      "url": "http://www3.nhk.or.jp/news/html/20260531/k10015136681000.html",
+      "title": "企業の採用活動スタート 政府要請ルールの“形骸化”指摘も",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136961000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-05-31T21:22:40+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-06-01T12:39:45+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 初の6万7000円台 ソフトバンクGが時価総額で一時首位に",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T11:59:11+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ことし1月から3月 国内企業の経常利益 前年同期比14.6％増",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136901000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T10:01:47+09:00",
+      "hoursAgo": 2
     }
   ]
 }
