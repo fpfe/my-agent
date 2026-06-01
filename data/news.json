@@ -1,41 +1,27 @@
 {
-  "updatedAt": "2026-06-02T05:53:40.365857+09:00",
-  "updatedAtJST": "2026/06/02 05:53 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-02T08:00:50.125307+09:00",
+  "updatedAtJST": "2026/06/02 08:00 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "NYダウ最高値更新 ナスダック S＆P500も イラン情勢に期待感",
+      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137751000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-02T07:30:35+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ソフトバンクGがトヨタ抜き時価総額で首位に 株価終値も最高値",
       "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-01T22:04:38+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "「フラット35」 6月の適用金利が3.21％ 3％超は現行で初",
       "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-01T20:36:10+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "円相場 小幅な値動き 米イランの協議など見極めたい投資家多く",
-      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137481000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-01T18:41:59+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "採用活動スタート 5月1日時点で67％内々定 ルール形骸化指摘も",
-      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136961000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-01T18:32:46+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "中東情勢で食品値上げ相次ぐ 5年連続で1万品目超の見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137421000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-01T18:08:33+09:00",
       "hoursAgo": 11
     }
   ]
