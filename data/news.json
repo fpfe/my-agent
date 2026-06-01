@@ -1,28 +1,77 @@
 {
-  "updatedAt": "2026-06-01T13:00:07.110767+09:00",
-  "updatedAtJST": "2026/06/01 13:00 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-01T19:17:22.898871+09:00",
+  "updatedAtJST": "2026/06/01 19:17 JST",
+  "totalArticles": 10,
   "articles": [
     {
-      "title": "企業の採用活動スタート 政府要請ルールの“形骸化”指摘も",
-      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136961000.html",
+      "title": "円相場 小幅な値動き 米イランの協議など見極めたい投資家多く",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137481000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-01T12:39:45+09:00",
+      "publishedAt": "2026-06-01T18:41:59+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "株価 初の6万7000円台 ソフトバンクGが時価総額で一時首位に",
+      "title": "採用活動スタート 5月1日時点で67％内々定 ルール形骸化指摘も",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136961000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T18:32:46+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "中東情勢で食品値上げ相次ぐ 5年連続で1万品目超の見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T18:08:33+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "中東情勢受けた価格転嫁適正か 約1000人のGメンが調査へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137391000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T17:39:15+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "中国 韓国 台湾からの輸入鋼材 政府が反ダンピング課税調査へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137331000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T17:20:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "相次ぐ再開発事業見直し 開発・建設の業界団体が初会合",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137281000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T16:44:30+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ソフトバンクGがトヨタ抜き時価総額で首位に 株価終値も最高値",
       "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136891000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-01T11:59:11+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-06-01T16:20:34+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ファミマにセブン銀行のATM設置 チェーンの垣根越えた連携進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015137201000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T15:29:48+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "【きょうのおはBiz 6月1日(月)】飲食店が連携して鶏肉調達へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-01T14:06:58+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "ことし1月から3月 国内企業の経常利益 前年同期比14.6％増",
       "url": "http://www3.nhk.or.jp/news/html/20260601/k10015136901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-01T10:01:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 9
     }
   ]
 }
