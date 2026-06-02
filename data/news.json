@@ -1,83 +1,69 @@
 {
-  "updatedAt": "2026-06-02T21:40:59.817828+09:00",
-  "updatedAtJST": "2026/06/02 21:40 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-06-03T02:21:55.312832+09:00",
+  "updatedAtJST": "2026/06/03 02:21 JST",
+  "totalArticles": 9,
   "articles": [
     {
-      "title": "蓄電池関連の日本企業売り上げ 2035年に3倍の約5兆円へ 経産省",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138721000.html",
+      "title": "クロード・ミュトス 日本政府と一部の国内銀行が利用可能に",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015138831000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-02T21:13:16+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-03T00:36:48+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "塗料やシンナーの原料 新たに石油元売りから直接供給 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138511000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-02T20:08:05+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-06-02T22:13:46+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "蓄電池関連の日本企業売り上げ 2035年に3倍の約5兆円へ 経産省",
+      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138721000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-02T21:13:16+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "子どものSNS利用規制 国内のルールはどうなる？【Q＆A】",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T19:35:05+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "円相場 値下がり イラン情勢先行きの不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T18:42:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "東電 新会長内定の横尾敬介氏 初会見“企業価値向上させる”",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T17:06:26+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 9
     },
     {
       "title": "株価 値下がり きのう最高値更新で利益確定の売りも",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T16:36:49+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "東北電力 法廷内で無断録音 全国の電力会社で相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T16:12:25+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 10
     },
     {
       "title": "高市首相 経済同友会代表幹事と会談 中東情勢めぐり意見交わす",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T15:54:42+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "円相場 市場介入前の水準に近づく 片山財務相「適切に対応」",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-02T11:45:05+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "鶏肉小売価格が過去最高 鈴木農相「鶏肉に需要がシフト」",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137901000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-02T11:35:54+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "【きょうのおはBiz 6月2日(火)】イラン情勢 問われる中央銀行",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-02T11:17:52+09:00",
       "hoursAgo": 10
     }
   ]
