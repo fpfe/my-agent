@@ -1,42 +1,28 @@
 {
-  "updatedAt": "2026-06-03T05:47:40.001072+09:00",
-  "updatedAtJST": "2026/06/03 05:47 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-03T08:01:31.591414+09:00",
+  "updatedAtJST": "2026/06/03 08:01 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "クロード・ミュトス 日本政府と一部の国内銀行が利用可能に",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015138831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T04:01:14+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "塗料やシンナーの原料 新たに石油元売りから直接供給 高市首相",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T22:13:46+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "蓄電池関連の日本企業売り上げ 2035年に3倍の約5兆円へ 経産省",
       "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-02T21:13:16+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "子どものSNS利用規制 国内のルールはどうなる？【Q＆A】",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015137951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-02T19:35:05+09:00",
       "hoursAgo": 10
-    },
-    {
-      "title": "円相場 値下がり イラン情勢先行きの不透明感で",
-      "url": "http://www3.nhk.or.jp/news/html/20260602/k10015138461000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-02T18:42:24+09:00",
-      "hoursAgo": 11
     }
   ]
 }
