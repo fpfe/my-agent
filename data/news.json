@@ -1,41 +1,34 @@
 {
-  "updatedAt": "2026-06-04T06:48:25.315245+09:00",
-  "updatedAtJST": "2026/06/04 06:48 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-04T08:42:30.636481+09:00",
+  "updatedAtJST": "2026/06/04 08:42 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "ヤマダホールディングスとエディオン 経営統合の方向で検討",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T08:35:56+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "世界経済成長率“イラン情勢混乱長期化なら大幅落ち込み”OECD",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T06:21:07+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "世界の中央銀行の外貨準備に占める金の割合 米国債を上回る",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015140181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T23:23:35+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "食料品の消費税減税 来年4月から1％に引き下げる案も 政府与党",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T20:57:44+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "電気事業連合会でも3人が法廷内で無断録音 電力会社で相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015140101000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T20:20:03+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日銀植田総裁 “利上げ是非の議論が必要” 中東情勢不安定でも",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T19:31:24+09:00",
       "hoursAgo": 11
     }
   ]
