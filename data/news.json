@@ -1,91 +1,91 @@
 {
-  "updatedAt": "2026-06-03T18:23:53.523403+09:00",
-  "updatedAtJST": "2026/06/03 18:23 JST",
+  "updatedAt": "2026-06-03T23:28:05.998316+09:00",
+  "updatedAtJST": "2026/06/03 23:28 JST",
   "totalArticles": 12,
   "articles": [
+    {
+      "title": "世界の中央銀行の外貨準備に占める金の割合 米国債を上回る",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015140181000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-03T23:23:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "食料品の消費税減税 来年4月から1％に引き下げる案も 政府与党",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139591000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-03T20:57:44+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "電気事業連合会でも3人が法廷内で無断録音 電力会社で相次ぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015140101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-03T20:20:03+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "日銀植田総裁 “利上げ是非の議論が必要” 中東情勢不安定でも",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139951000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-03T19:31:24+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "円相場 一時1ドル＝160円台に “有事のドル買い”進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015138891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-03T18:30:36+09:00",
+      "hoursAgo": 4
+    },
     {
       "title": "政府のガソリン補助金 4月は3100億円支出 基金残高6700億円に",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T18:20:18+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "日銀 植田総裁 “利上げの是非 しっかりと議論する必要”",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T18:04:38+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 5
     },
     {
       "title": "日本生命 米投資会社と資産運用で提携 運用多角化の動き進む",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T16:59:06+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "株価・TOPIXともに最高値更新 半導体関連銘柄がけん引",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T16:34:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz 6月3日(水)】子どものSNS利用 年齢制限は？",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T16:25:55+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "食料品の消費税減税 来年4月から1％に引き下げる案も 政府与党",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T16:15:17+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "ホルムズ海峡通過の日本の原油タンカー 2隻目が鹿児島に到着",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T16:08:15+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "中東情勢受けた補正予算案 3兆1135億円 閣議決定",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T15:54:02+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "ガソリン全国平均169.5円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-03T15:16:01+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "円相場 一時1ドル=160円まで値下がり 約1か月ぶり円安水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015138891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T10:31:53+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "NY株式市場 ダウ平均株価5営業日連続で最高値 AI需要拡大期待",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T10:16:44+09:00",
       "hoursAgo": 8
-    },
-    {
-      "title": "株価 取引時間中の最高値を更新 半導体関連に買い注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T09:12:55+09:00",
-      "hoursAgo": 9
     }
   ]
 }
