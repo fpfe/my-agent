@@ -1,35 +1,35 @@
 {
-  "updatedAt": "2026-06-04T08:42:30.636481+09:00",
-  "updatedAtJST": "2026/06/04 08:42 JST",
+  "updatedAt": "2026-06-04T12:56:53.069086+09:00",
+  "updatedAtJST": "2026/06/04 12:56 JST",
   "totalArticles": 4,
   "articles": [
+    {
+      "title": "株価 一時 1400円以上値下がり ニューヨーク市場での下落受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140361000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T12:16:12+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ヤマダホールディングスとエディオン 経営統合の方向で検討",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140341000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-04T08:35:56+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-04T11:55:50+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "きょうのおはBiz 6月4日(木) 日経平均株価上昇 “NT倍率”とは",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T11:48:58+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "世界経済成長率“イラン情勢混乱長期化なら大幅落ち込み”OECD",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T06:21:07+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "世界の中央銀行の外貨準備に占める金の割合 米国債を上回る",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015140181000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T23:23:35+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "食料品の消費税減税 来年4月から1％に引き下げる案も 政府与党",
-      "url": "http://www3.nhk.or.jp/news/html/20260603/k10015139591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-03T20:57:44+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
