@@ -1,70 +1,63 @@
 {
-  "updatedAt": "2026-06-04T20:52:52.339921+09:00",
-  "updatedAtJST": "2026/06/04 20:52 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-06-05T00:12:52.657129+09:00",
+  "updatedAtJST": "2026/06/05 00:12 JST",
+  "totalArticles": 8,
   "articles": [
     {
       "title": "“水素トラック”活用で輸送網整備 脱炭素へ官民の会議が発足",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T20:37:48+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "全日空機長 乗務員にわいせつ行為“受け入れてくれていると”",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T18:28:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "円相場 小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T18:24:49+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "JA全中会長 南米EPA交渉に懸念「政府・与党はきぜんと対応を」",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T17:46:57+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "ヤマダホールディングスとエディオン 経営統合の方向で検討",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T17:18:21+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "日経平均株価 900円以上値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T16:36:08+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "コメ価格の見通し 在庫増加で下落の見方強まる",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T14:35:19+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "米スペースX 上場で12兆円調達へ",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T13:35:03+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "きょうのおはBiz 6月4日(木) 日経平均株価上昇 “NT倍率”とは",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T11:48:58+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
