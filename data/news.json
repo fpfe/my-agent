@@ -1,35 +1,49 @@
 {
-  "updatedAt": "2026-06-04T12:56:53.069086+09:00",
-  "updatedAtJST": "2026/06/04 12:56 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-06-04T17:22:35.964489+09:00",
+  "updatedAtJST": "2026/06/04 17:22 JST",
+  "totalArticles": 6,
   "articles": [
-    {
-      "title": "株価 一時 1400円以上値下がり ニューヨーク市場での下落受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T12:16:12+09:00",
-      "hoursAgo": 0
-    },
     {
       "title": "ヤマダホールディングスとエディオン 経営統合の方向で検討",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140341000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-04T11:55:50+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-06-04T17:18:21+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日経平均株価 900円以上値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140361000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T16:36:08+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "コメ価格の見通し 在庫増加で下落の見方強まる",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T14:35:19+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "米スペースX 上場で12兆円調達へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-04T13:35:03+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "きょうのおはBiz 6月4日(木) 日経平均株価上昇 “NT倍率”とは",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T11:48:58+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "世界経済成長率“イラン情勢混乱長期化なら大幅落ち込み”OECD",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T06:21:07+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 11
     }
   ]
 }
