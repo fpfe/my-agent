@@ -1,56 +1,49 @@
 {
-  "updatedAt": "2026-06-05T03:13:45.373862+09:00",
-  "updatedAtJST": "2026/06/05 03:13 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-06-05T05:54:58.316046+09:00",
+  "updatedAtJST": "2026/06/05 05:54 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "小売各社が省エネ対応加速 中東情勢によるコスト高受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T05:18:34+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "食料品の消費税減税 外食業界・農業・漁業への支援検討へ 政府",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T05:04:09+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "NYダウ 一時900ドル超の値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T01:51:09+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "“水素トラック”活用で輸送網整備 脱炭素へ官民の会議が発足",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T20:37:48+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "全日空機長 乗務員にわいせつ行為“受け入れてくれていると”",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T18:28:37+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-04T18:24:49+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "JA全中会長 南米EPA交渉に懸念「政府・与党はきぜんと対応を」",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141241000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T17:46:57+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ヤマダホールディングスとエディオン 経営統合の方向で検討",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T17:18:21+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "日経平均株価 900円以上値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015140361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T16:36:08+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
