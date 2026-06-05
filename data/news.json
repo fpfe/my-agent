@@ -1,111 +1,90 @@
 {
-  "updatedAt": "2026-06-05T21:36:43.305453+09:00",
-  "updatedAtJST": "2026/06/05 21:36 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-06-06T00:53:00.499643+09:00",
+  "updatedAtJST": "2026/06/06 00:53 JST",
+  "totalArticles": 12,
   "articles": [
     {
       "title": "自民対策本部 南米EPA交渉なら“農業への配慮を”決議採択",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T20:05:49+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "ヤマダHDとエディオン 経営統合へ基本合意 商品開発を強化",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T18:22:45+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "米アラスカ州とアフリカから代替調達の原油が到着へ",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T18:18:50+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "円相場 小幅な値動き 注目は今夜の米雇用統計に",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T18:07:35+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "スーパーのコメ平均価格 5キロ 税込み3673円 2週連続値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T17:52:45+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "世界銀行総裁 日本とどう連携？ 途上国の若者の雇用不足に警鐘",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015137941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T17:12:56+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "伊藤ハム パッケージの色の数減らす 物価高や中東情勢影響",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T16:48:15+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "4月の景気動向指数 前月比1.1ポイントの上昇 上昇は2か月連続",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T16:39:32+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "株価 一時1600円超下落 午後は下落幅縮小",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T16:10:26+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "日立 最新AI「クロード・ミュトス」導入 インフラ防御強化へ",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T15:05:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "政府 ラピダスに1500億円追加出資を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T14:50:18+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     },
     {
       "title": "外貨準備高 日本円で12兆円余減少 介入実施が影響で大幅減",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T13:50:20+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "4月家計調査 支出5か月連続減少 ラップやポリ袋の支出は増える",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T11:44:38+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "きょうのおはBiz 6月5日(金) スペースX“史上最大”新規上場へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T11:30:50+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "片山財務相 食料品の消費税減税 財源は赤字国債に頼らず確保",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141711000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T10:20:23+09:00",
       "hoursAgo": 11
     }
   ]
