@@ -1,49 +1,63 @@
 {
-  "updatedAt": "2026-06-05T07:20:27.591776+09:00",
-  "updatedAtJST": "2026/06/05 07:20 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-06-05T09:06:40.781144+09:00",
+  "updatedAtJST": "2026/06/05 09:06 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "OECD閣僚理事会 閣僚声明 2年連続採択見送り",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T09:00:13+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "4月家計調査 世帯の消費金額 5か月連続減少",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T08:45:48+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "4月の実質賃金 前年同月比1.9％増 4か月連続でプラス 厚労省",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T08:35:21+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "スペースX 来週にもナスダック上場へ 調達資金は過去最大規模",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T07:15:56+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "NYダウ平均株価最高値 半導体からの資金移転の動きで",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T06:34:48+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "今月から株主総会相次ぐ 物言う株主からの議案は過去最多",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T06:31:55+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "小売各社が省エネ対応加速 中東情勢によるコスト高受け",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T05:18:34+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "食料品の消費税減税 外食業界・農業・漁業への支援検討へ 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T05:04:09+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "“水素トラック”活用で輸送網整備 脱炭素へ官民の会議が発足",
-      "url": "http://www3.nhk.or.jp/news/html/20260604/k10015141451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-04T20:37:48+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 4
     }
   ]
 }
