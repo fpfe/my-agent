@@ -1,63 +1,98 @@
 {
-  "updatedAt": "2026-06-05T09:06:40.781144+09:00",
-  "updatedAtJST": "2026/06/05 09:06 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-06-05T14:16:21.369845+09:00",
+  "updatedAtJST": "2026/06/05 14:16 JST",
+  "totalArticles": 13,
   "articles": [
+    {
+      "title": "外貨準備高 日本円で12兆円余減少 介入実施が影響で大幅減",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T13:50:20+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ヤマダHDとエディオン 経営統合へ基本合意 商品開発を強化",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T13:49:03+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時1600円超値下がり 利益確保しようという動き広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T12:40:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "4月家計調査 支出5か月連続減少 ラップやポリ袋の支出は増える",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T11:44:38+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "きょうのおはBiz 6月5日(金) スペースX“史上最大”新規上場へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T11:30:50+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "片山財務相 食料品の消費税減税 財源は赤字国債に頼らず確保",
+      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-05T10:20:23+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "OECD閣僚理事会 閣僚声明 2年連続採択見送り",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T09:00:13+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "4月家計調査 世帯の消費金額 5か月連続減少",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T08:45:48+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 5
     },
     {
       "title": "4月の実質賃金 前年同月比1.9％増 4か月連続でプラス 厚労省",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T08:35:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 5
     },
     {
       "title": "スペースX 来週にもナスダック上場へ 調達資金は過去最大規模",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T07:15:56+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 7
     },
     {
       "title": "NYダウ平均株価最高値 半導体からの資金移転の動きで",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T06:34:48+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "今月から株主総会相次ぐ 物言う株主からの議案は過去最多",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T06:31:55+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     },
     {
       "title": "小売各社が省エネ対応加速 中東情勢によるコスト高受け",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T05:18:34+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 8
     },
     {
       "title": "食料品の消費税減税 外食業界・農業・漁業への支援検討へ 政府",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T05:04:09+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 9
     }
   ]
 }
