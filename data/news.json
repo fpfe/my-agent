@@ -1,49 +1,14 @@
 {
-  "updatedAt": "2026-06-06T04:53:29.134831+09:00",
-  "updatedAtJST": "2026/06/06 04:53 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-06-06T06:24:48.616920+09:00",
+  "updatedAtJST": "2026/06/06 06:24 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "自民対策本部 南米EPA交渉なら“農業への配慮を”決議採択",
       "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-05T20:05:49+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "ヤマダHDとエディオン 経営統合へ基本合意 商品開発を強化",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015141831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T18:22:45+09:00",
       "hoursAgo": 10
-    },
-    {
-      "title": "米アラスカ州とアフリカから代替調達の原油が到着へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T18:18:50+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 小幅な値動き 注目は今夜の米雇用統計に",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142371000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T18:07:35+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "スーパーのコメ平均価格 5キロ 税込み3673円 2週連続値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015142321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T17:52:45+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "世界銀行総裁 日本とどう連携？ 途上国の若者の雇用不足に警鐘",
-      "url": "http://www3.nhk.or.jp/news/html/20260605/k10015137941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-05T17:12:56+09:00",
-      "hoursAgo": 11
     }
   ]
 }
