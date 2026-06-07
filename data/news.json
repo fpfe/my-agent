@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-06-08T05:11:09.034436+09:00",
-  "updatedAtJST": "2026/06/08 05:11 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-06-08T07:03:39.572712+09:00",
+  "updatedAtJST": "2026/06/08 07:03 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "車の排ガスから二酸化炭素回収 脱炭素へメーカーの開発進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T06:45:41+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
