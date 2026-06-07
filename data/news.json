@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-06-07T12:52:37.992425+09:00",
-  "updatedAtJST": "2026/06/07 12:52 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-06-07T16:54:37.818618+09:00",
+  "updatedAtJST": "2026/06/07 16:54 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "米と南スーダン産“代替調達”原油到着 去年6月比 7割超確保へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260607/k10015143431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-07T16:40:39+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "食料品の消費税減税めぐり各党政策責任者が議論 NHK日曜討論",
       "url": "http://www3.nhk.or.jp/news/html/20260607/k10015143301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-07T12:09:20+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     }
   ]
 }
