@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-07T19:29:01.586407+09:00",
-  "updatedAtJST": "2026/06/07 19:29 JST",
+  "updatedAt": "2026-06-07T21:20:28.829304+09:00",
+  "updatedAtJST": "2026/06/07 21:20 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260607/k10015143431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-07T16:40:39+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "食料品の消費税減税めぐり各党政策責任者が議論 NHK日曜討論",
       "url": "http://www3.nhk.or.jp/news/html/20260607/k10015143301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-07T12:09:20+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     }
   ]
 }
