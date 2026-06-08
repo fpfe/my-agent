@@ -1,105 +1,84 @@
 {
-  "updatedAt": "2026-06-08T19:52:51.293931+09:00",
-  "updatedAtJST": "2026/06/08 19:52 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-06-08T23:48:12.674154+09:00",
+  "updatedAtJST": "2026/06/08 23:48 JST",
+  "totalArticles": 11,
   "articles": [
     {
       "title": "キリンビバレッジ 166品目を10月納品分から値上げ 全品目の9割",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T19:02:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "九州電力送配電 1000万件超の個人情報保存した記録媒体を紛失",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T18:55:58+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "“生産性の向上を” 水田政策見直しで自民党が政府に提言",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T18:48:57+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "円相場 1ドル＝160円台に値下がり “米の利上げ観測と原油高”",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T18:29:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "TOTO ユニットバスなどの受注 9日から全面的に再開",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T17:38:33+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "5月倒産件数 770社余り 前年下回る 今後増加基調の可能性も",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T17:15:47+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "5月街角景気 3か月ぶり上昇 旅行・飲食堅調も中東懸念続く",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T16:48:49+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "株価 終値は過去5番目の下落幅 米の利上げ観測背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T16:37:08+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "中小企業の賃上げ率4.29％ 中東情勢で「未定」の企業も",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T15:26:23+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "きょうのおはBiz 6月8日(月) ヒト型ロボット 現場でどう活用",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T14:40:36+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "NTT開発の次世代IT技術普及 ファンド設立へ 国内外約20社出資",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T12:12:48+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "GDP 1-3月期の改定値は＋1.8％ 設備投資伸び率がマイナスに",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143771000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T11:10:20+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "株価 一時2600円超値下がり アメリカ利上げ観測強まりなどで",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T10:05:08+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ことし4月の経常収支3.9兆円の黒字 15か月連続",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143821000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T09:32:25+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
