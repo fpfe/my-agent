@@ -1,49 +1,28 @@
 {
-  "updatedAt": "2026-06-09T05:13:32.326810+09:00",
-  "updatedAtJST": "2026/06/09 05:13 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-06-09T07:25:52.055795+09:00",
+  "updatedAtJST": "2026/06/09 07:25 JST",
+  "totalArticles": 3,
   "articles": [
     {
-      "title": "キリンビバレッジ 166品目を10月納品分から値上げ 全品目の9割",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144411000.html",
+      "title": "日銀元総裁 白川方明氏 “日銀もう少し早く利上げするべき”",
+      "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144491000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-08T19:02:11+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-06-09T05:39:41+09:00",
+      "hoursAgo": 1
     },
     {
-      "title": "九州電力送配電 1000万件超の個人情報保存した記録媒体を紛失",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144391000.html",
+      "title": "G7農相 「肥料が食料安全保障の重要課題に」認識を共有",
+      "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144541000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-08T18:55:58+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-06-09T05:23:07+09:00",
+      "hoursAgo": 2
     },
     {
-      "title": "“生産性の向上を” 水田政策見直しで自民党が政府に提言",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144401000.html",
+      "title": "日英 経済安保で成果文書発表へ調整 洋上風力など連携強化",
+      "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144611000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-08T18:48:57+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 1ドル＝160円台に値下がり “米の利上げ観測と原油高”",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T18:29:48+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "TOTO ユニットバスなどの受注 9日から全面的に再開",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144351000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T17:38:33+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "5月倒産件数 770社余り 前年下回る 今後増加基調の可能性も",
-      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-08T17:15:47+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-06-09T05:16:03+09:00",
+      "hoursAgo": 2
     }
   ]
 }
