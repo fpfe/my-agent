@@ -1,21 +1,56 @@
 {
-  "updatedAt": "2026-06-08T09:06:42.477391+09:00",
-  "updatedAtJST": "2026/06/08 09:06 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-06-08T14:49:30.607962+09:00",
+  "updatedAtJST": "2026/06/08 14:49 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "1～3月のGDP 改定値 年率換算＋1.8％ 速報値から下方修正",
+      "title": "きょうのおはBiz 6月8日(月) ヒト型ロボット 現場でどう活用",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143941000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T14:40:36+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NTT開発の次世代IT技術普及 ファンド設立へ 国内外約20社出資",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015144071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T12:12:48+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価 一時3000円超下落 取り引き時間中で過去4番目の下げ幅",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T12:11:35+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "GDP 1-3月期の改定値は＋1.8％ 設備投資伸び率がマイナスに",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143771000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-08T09:01:31+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-08T11:10:20+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "株価 一時2600円超値下がり アメリカ利上げ観測強まりなどで",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T10:05:08+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "ことし4月の経常収支3.9兆円の黒字 15か月連続",
+      "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143821000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-08T09:32:25+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "車の排ガスから二酸化炭素回収 脱炭素へメーカーの開発進む",
       "url": "http://www3.nhk.or.jp/news/html/20260608/k10015143561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-08T06:45:41+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 8
     }
   ]
 }
