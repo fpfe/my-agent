@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-09T07:25:52.055795+09:00",
-  "updatedAtJST": "2026/06/09 07:25 JST",
+  "updatedAt": "2026-06-09T09:05:14.226187+09:00",
+  "updatedAtJST": "2026/06/09 09:05 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T05:39:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "G7農相 「肥料が食料安全保障の重要課題に」認識を共有",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T05:23:07+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "日英 経済安保で成果文書発表へ調整 洋上風力など連携強化",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T05:16:03+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     }
   ]
 }
