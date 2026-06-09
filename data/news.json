@@ -1,63 +1,49 @@
 {
-  "updatedAt": "2026-06-10T00:54:29.781091+09:00",
-  "updatedAtJST": "2026/06/10 00:54 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-06-10T03:04:40.666218+09:00",
+  "updatedAtJST": "2026/06/10 03:04 JST",
+  "totalArticles": 6,
   "articles": [
     {
       "title": "JR東日本 来春に磁気付き切符を廃止しQRコードの切符に",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T18:29:43+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "円相場 1ドル＝160円台の前半で小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T18:12:58+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "中東情勢 エアコン取り付けや酪農用資材に影響 調達に懸念の声",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145031000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T17:53:06+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "“ナフサ由来製品 足りていると発信続けること大事” 経産相",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T16:40:34+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日銀 利上げを最終判断へ 来週の金融政策決定会合で",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T16:37:50+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 終値はきのうと比べて1300円以上値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260609/k10015144761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-09T16:30:28+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "自民 積極財政議連が提言 “消費税率ゼロ 必ず実現を”",
-      "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-09T15:02:49+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "中国 5月の輸出額 19％余り増加 原油高の影響が今後の焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260609/k10015145101000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-09T14:58:44+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
