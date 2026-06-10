@@ -1,28 +1,56 @@
 {
-  "updatedAt": "2026-06-10T09:12:54.317477+09:00",
-  "updatedAtJST": "2026/06/10 09:12 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-10T14:17:32.940660+09:00",
+  "updatedAtJST": "2026/06/10 14:17 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "株価 一時1600円超値下がり AI・半導体銘柄に売り注文広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145901000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T13:56:39+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "きょうのおはBiz6月10日(水) アメリカメディア 明暗分けるのは",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T13:18:48+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NTT 次世代技術「IOWN」普及へファンド設立 AI新興企業に投資",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145851000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T11:47:33+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "5月企業物価指数 前年同月比6.3％上昇 中東情勢で上昇幅拡大",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T11:33:21+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "米アンソロピック ミュトス級AIを一般提供開始 安全対策加えて",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T08:39:00+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 5
     },
     {
       "title": "経団連会長 “対中 新ビジネス枯渇に懸念” 関係改善探る",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T07:31:59+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "ひぼう中傷などの投稿削除 SNS事業者によってばらつき",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T07:17:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 7
     }
   ]
 }
