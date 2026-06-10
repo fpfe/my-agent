@@ -1,49 +1,63 @@
 {
-  "updatedAt": "2026-06-11T01:57:26.609669+09:00",
-  "updatedAtJST": "2026/06/11 01:57 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-06-11T04:38:36.356244+09:00",
+  "updatedAtJST": "2026/06/11 04:38 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "トヨタ自動車 豊田章男会長の昨年度の役員報酬は21億円",
+      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015146551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-11T03:50:38+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ヨーロッパ中央銀行 2年9か月ぶり利上げか 11日の理事会で",
+      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015146331000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-11T03:47:53+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米スターバックスが日本事業の売却を含めて検討と報道",
+      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015146641000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-11T03:37:23+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "大手金融各社 米アンソロピック・NEC連携に参加の方針固める",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015146481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T00:35:13+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "日銀植田総裁が入院 来週の金融政策決定会合は欠席の見込み",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015146301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T20:54:12+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "5月企業物価指数 前年同月比6.3％上昇 中東情勢で上昇幅拡大",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T18:43:46+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "円相場 小幅な値動きも 1ドル＝160円台での取り引き続く",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015146251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T18:30:14+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "NTT 次世代技術「IOWN」普及へファンド設立 AI新興企業に投資",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T16:50:46+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ガソリン全国平均169.5円 政府補助金で170円水準続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015146051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-10T15:13:54+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
