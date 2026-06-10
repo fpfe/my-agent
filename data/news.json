@@ -1,14 +1,28 @@
 {
-  "updatedAt": "2026-06-10T07:24:44.618856+09:00",
-  "updatedAtJST": "2026/06/10 07:24 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-06-10T09:12:54.317477+09:00",
+  "updatedAtJST": "2026/06/10 09:12 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "米アンソロピック ミュトス級AIを一般提供開始 安全対策加えて",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145721000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T08:39:00+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "経団連会長 “対中 新ビジネス枯渇に懸念” 関係改善探る",
+      "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-10T07:31:59+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "ひぼう中傷などの投稿削除 SNS事業者によってばらつき",
       "url": "http://www3.nhk.or.jp/news/html/20260610/k10015145341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-10T07:17:25+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     }
   ]
 }
