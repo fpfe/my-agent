@@ -1,41 +1,27 @@
 {
-  "updatedAt": "2026-06-12T06:19:47.983640+09:00",
-  "updatedAtJST": "2026/06/12 06:19 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-12T08:20:26.717049+09:00",
+  "updatedAtJST": "2026/06/12 08:20 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "NYダウ900ドル超値上がり イラン攻撃中止表明で買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015147971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T06:15:53+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "ANA 新運賃体系に問い合わせ殺到 窓口対応や返信に遅れ",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T21:28:26+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日系企業 レアアースなど輸出規制の運用透明化を中国に要望",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T20:56:01+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "三井住友FGなど金融大手 アンソロピック・NECとAI連携を発表",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T19:09:04+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "中国地方 中東情勢悪化で旅客船の減便・値上げ相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147481000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T18:51:35+09:00",
       "hoursAgo": 11
     }
   ]
