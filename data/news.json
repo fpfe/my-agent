@@ -1,69 +1,41 @@
 {
-  "updatedAt": "2026-06-12T03:11:55.185825+09:00",
-  "updatedAtJST": "2026/06/12 03:11 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-06-12T06:19:47.983640+09:00",
+  "updatedAtJST": "2026/06/12 06:19 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "NYダウ900ドル超値上がり イラン攻撃中止表明で買い注文広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015147971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T06:15:53+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ANA 新運賃体系に問い合わせ殺到 窓口対応や返信に遅れ",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T21:28:26+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "日系企業 レアアースなど輸出規制の運用透明化を中国に要望",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T20:56:01+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "三井住友FGなど金融大手 アンソロピック・NECとAI連携を発表",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T19:09:04+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "中国地方 中東情勢悪化で旅客船の減便・値上げ相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-11T18:51:35+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "北陸新幹線延伸 8ルートの費用対効果の試算まとめる 国交省",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T18:15:12+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "円相場 小幅な値動き 1ドル＝160円台半ばで取り引き",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147581000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T18:13:28+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "自動車業界でEVやエンジン車など「混流生産」の動き広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T17:35:55+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "株価 荒い値動き 半導体関連銘柄など買い戻す動きも",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015146761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T16:12:03+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "半導体量産目指すラピダス 英伊の公的機関と技術開発協力へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T15:36:47+09:00",
       "hoursAgo": 11
     }
   ]
