@@ -1,28 +1,42 @@
 {
-  "updatedAt": "2026-06-12T08:20:26.717049+09:00",
-  "updatedAtJST": "2026/06/12 08:20 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-12T12:54:21.023817+09:00",
+  "updatedAtJST": "2026/06/12 12:54 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "日銀植田総裁の入院“金融政策決定会合に影響ない”片山財務相",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148201000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T12:53:43+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 午前は大幅な上昇 米大統領のイラン攻撃中止表明で",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T12:52:58+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "水田政策見直しで説明会開催へ 鈴木農相“生産者の意見を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148211000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T11:51:34+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "東京株式市場 キオクシアHDの時価総額が一時国内首位に",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148141000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T11:11:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "NYダウ900ドル超値上がり イラン攻撃中止表明で買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015147971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T06:15:53+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "ANA 新運賃体系に問い合わせ殺到 窓口対応や返信に遅れ",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T21:28:26+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日系企業 レアアースなど輸出規制の運用透明化を中国に要望",
-      "url": "http://www3.nhk.or.jp/news/html/20260611/k10015147701000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-11T20:56:01+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
