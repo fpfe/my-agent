@@ -1,70 +1,105 @@
 {
-  "updatedAt": "2026-06-12T17:25:00.837516+09:00",
-  "updatedAtJST": "2026/06/12 17:25 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-06-12T21:18:35.313608+09:00",
+  "updatedAtJST": "2026/06/12 21:18 JST",
+  "totalArticles": 14,
   "articles": [
+    {
+      "title": "ウリ信用組合に一部業務停止命令 顧客の預金着服などで 金融庁",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148851000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T20:26:28+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "大手航空2社 燃油サーチャージ再度引き上げ 燃料価格高騰で",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T19:39:08+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "Booking.comの予約客に不審なメッセージ相次ぐ 注意呼びかけ",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T18:46:17+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "円相場 小幅な値動き 1ドル＝160円台前半での取り引き",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T18:15:06+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "スーパーのコメ平均価格 5キロ 税込み3644円 3週連続値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148621000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T18:00:29+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "生命保険の営業職員 新たな呼び名は「ソナエルジュ」に",
+      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148651000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-12T17:58:59+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "自民対策本部 南米EPA交渉なら“農業に配慮を”政府に申し入れ",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T17:12:31+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "株価 一時2800円超上昇 イランへの攻撃中止表明受け",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T16:33:23+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "東京株式市場 キオクシアHDの時価総額が国内首位に",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T16:30:54+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "“来月 原油代替調達で去年並み確保も対策進める”経産相",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T14:29:44+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "改正郵便法が成立 郵便料金を柔軟に変更可能に 値上げも検討",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T14:24:09+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "きょうのおはBiz6月12日(金) 半導体量産へ“3つの課題”とは",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T13:21:58+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "日銀植田総裁の入院“金融政策決定会合に影響ない”片山財務相",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T12:53:43+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "水田政策見直しで説明会開催へ 鈴木農相“生産者の意見を”",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-12T11:51:34+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "NYダウ900ドル超値上がり イラン攻撃中止表明で買い注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015147971000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-12T06:15:53+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
