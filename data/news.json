@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-06-13T08:15:56.761291+09:00",
-  "updatedAtJST": "2026/06/13 08:15 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-06-13T12:39:17.817529+09:00",
+  "updatedAtJST": "2026/06/13 12:39 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "「スペースX」が上場 調達資金 約12兆円は過去最大規模",
       "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148891000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-13T07:21:54+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "ウリ信用組合に一部業務停止命令 顧客の預金着服などで 金融庁",
-      "url": "http://www3.nhk.or.jp/news/html/20260612/k10015148851000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-12T20:26:28+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-06-13T08:18:14+09:00",
+      "hoursAgo": 4
     }
   ]
 }
