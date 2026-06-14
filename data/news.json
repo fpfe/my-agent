@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-06-15T05:16:27.097998+09:00",
-  "updatedAtJST": "2026/06/15 05:16 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-06-15T07:08:32.941963+09:00",
+  "updatedAtJST": "2026/06/15 07:08 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "日銀 きょうから金融政策決定会合 利上げを最終判断へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015149881000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T05:55:44+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "米FRBウォーシュ新議長のもと初会合へ 発言に関心集まる",
       "url": "http://www3.nhk.or.jp/news/html/20260614/k10015149831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-14T22:29:29+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     }
   ]
 }
