@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-06-14T20:56:56.582093+09:00",
-  "updatedAtJST": "2026/06/14 20:56 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-06-14T23:11:44.387511+09:00",
+  "updatedAtJST": "2026/06/14 23:11 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "米FRBウォーシュ新議長のもと初会合へ 発言に関心集まる",
+      "url": "http://www3.nhk.or.jp/news/html/20260614/k10015149831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-14T22:29:29+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
