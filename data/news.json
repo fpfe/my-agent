@@ -1,35 +1,42 @@
 {
-  "updatedAt": "2026-06-15T15:23:02.128718+09:00",
-  "updatedAtJST": "2026/06/15 15:23 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-06-15T22:12:32.239559+09:00",
+  "updatedAtJST": "2026/06/15 22:12 JST",
+  "totalArticles": 5,
   "articles": [
     {
-      "title": "日経平均株価 初の6万9000円台 アメリカとイランの合意伝わり",
+      "title": "米とイランの合意 経済同友会 石油連盟から歓迎の声",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T18:48:26+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "NY原油先物価格 一時1バレル＝79ドル台まで下落",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T18:47:55+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "円相場 原油下落でいくぶん値上がりも1ドル＝160円台",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150501000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T18:35:48+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "株価 終値も初の6万9000円台 アメリカとイラン 協議合意伝わり",
       "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150021000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-15T12:27:28+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-06-15T17:01:42+09:00",
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz6月15日(月) 国債買い入れペース どう見直す",
       "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-15T11:36:51+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "NY原油市場 80ドル台に下落 米イラン合意で供給回復に期待感",
-      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015149981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-15T07:27:45+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "日銀 きょうから金融政策決定会合 利上げを最終判断へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015149881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-15T05:55:44+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
