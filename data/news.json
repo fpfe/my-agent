@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-06-15T07:08:32.941963+09:00",
-  "updatedAtJST": "2026/06/15 07:08 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-06-15T09:07:26.526727+09:00",
+  "updatedAtJST": "2026/06/15 09:07 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "株価 1400円以上値上がり アメリカとイランの合意受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015150021000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T09:06:38+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NY原油市場 80ドル台に下落 米イラン合意で供給回復に期待感",
+      "url": "http://www3.nhk.or.jp/news/html/20260615/k10015149981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-15T07:27:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "日銀 きょうから金融政策決定会合 利上げを最終判断へ",
       "url": "http://www3.nhk.or.jp/news/html/20260615/k10015149881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-15T05:55:44+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "米FRBウォーシュ新議長のもと初会合へ 発言に関心集まる",
       "url": "http://www3.nhk.or.jp/news/html/20260614/k10015149831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-14T22:29:29+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     }
   ]
 }
