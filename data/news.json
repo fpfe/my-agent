@@ -1,111 +1,76 @@
 {
-  "updatedAt": "2026-06-17T00:51:32.941674+09:00",
-  "updatedAtJST": "2026/06/17 00:51 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-06-17T04:34:41.640100+09:00",
+  "updatedAtJST": "2026/06/17 04:34 JST",
+  "totalArticles": 10,
   "articles": [
     {
       "title": "鶏肉小売価格 6月は過去最高に 物価高続くなか需要強まったか",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T22:12:31+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "ニデック不正会計 昨年度の有価証券報告書の提出延期を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T21:20:34+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "太平洋クロマグロ資源管理 新ルール合意目指す方針 水産庁",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T19:37:04+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "日銀 利上げ決定 政策金利1％程度に “物価上昇リスクに対応”",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T19:18:21+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "【詳しく】利上げで暮らしへの影響は？金利どこまで上がる？",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150921000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T19:16:30+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "ソフトバンク 米オープンAIと連携 セキュリティ対策提供へ",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T19:11:44+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "株価 一時7万円を初めて突破 利上げ想定内との見方も後押しに",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T19:05:28+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "大手銀行 普通預金の金利 8月から0.4％へ 日銀の追加利上げで",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T18:53:30+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "円相場 小幅な値動き 利上げ決定も想定どおりとの受け止め",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T18:47:24+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "富士通 取締役会長が辞任 「女性関連の不適切な行動確認」",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T16:35:50+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "鳥インフルエンザによる卵値上がり抑制へ 農水省が対策",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T14:53:03+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ドコモとWOWOW 配信事業強化へ 新会社設立",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151191000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T14:40:31+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "中国 5月の小売売上高 3年5か月ぶりのマイナスに",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T14:10:34+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "農産物輸出拡大で関係閣僚会議 販路の拡大支援を強化へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151111000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T13:28:27+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "アンソロピックAI提供停止 松本デジタル相「ほかのAI活用」",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015151071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T13:23:28+09:00",
       "hoursAgo": 11
     }
   ]
