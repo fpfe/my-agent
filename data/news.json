@@ -1,28 +1,56 @@
 {
-  "updatedAt": "2026-06-16T08:44:33.350667+09:00",
-  "updatedAtJST": "2026/06/16 08:44 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-16T13:02:55.155796+09:00",
+  "updatedAtJST": "2026/06/16 13:02 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "株価 初めて7万円の大台突破 取引時間中の最高値更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150931000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-16T12:48:46+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀が利上げを決定 政策金利1％程度に引き上げ 31年ぶり水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150911000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-16T12:42:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀 金融政策決定会合で議論 利上げに踏み切る見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-16T11:53:22+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "きょうのおはBiz6月16日(火) パソコン廃棄ラッシュ 連携で備え",
+      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150991000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-16T11:46:17+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "金子国交相「ペルシャ湾内の日本関係船舶1隻に損傷確認」",
+      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150901000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-16T11:23:51+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "NYダウ 終値としての最高値を更新 ホルムズ海峡の開放期待で",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T07:08:32+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "昨年度コメ購入額 12年ぶりにパン上回る 総務省家計調査",
       "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-16T06:58:28+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日銀 きょう金融政策決定会合2日目の議論 利上げ判断へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260616/k10015150681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-16T05:11:35+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     }
   ]
 }
