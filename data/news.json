@@ -1,69 +1,90 @@
 {
-  "updatedAt": "2026-06-17T15:10:14.803327+09:00",
-  "updatedAtJST": "2026/06/17 15:10 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-06-17T20:46:45.210631+09:00",
+  "updatedAtJST": "2026/06/17 20:46 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "東海道・山陽新幹線の「個室」東京－名古屋間 片道3万2660円に",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T19:37:27+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "食料品の消費税 来年4月から1％ 所得連動給付で“実質ゼロ”案",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T19:27:59+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "5月の訪日客 2か月連続でマイナス 中国の大幅減少が影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T18:34:00+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "円相場 小幅な値動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T18:31:44+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "米FRBウォーシュ新議長 初会合の結果発表へ 発言が焦点",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T17:18:37+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "石油関連製品で価格転嫁の実態把握へ緊急調査 公取委",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T16:44:14+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "食品メーカー 値上げ相次ぐ 中東情勢影響で包装資材の価格上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T15:58:03+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "株価最高値を更新 原油先物価格下落で業績改善の見方",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T15:51:16+09:00",
+      "hoursAgo": 4
+    },
+    {
+      "title": "ガソリン価格 全国平均169.7円 政府補助金で170円水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152501000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-17T15:27:15+09:00",
+      "hoursAgo": 5
+    },
     {
       "title": "トヨタ株主総会 近社長を含む6人の取締役の選任案を承認",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T14:39:29+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "食料品消費税減税 とりまとめの方向性案判明 来年4月から1％に",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T14:25:44+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 6
     },
     {
       "title": "きょうのおはBiz 6月17日(水) 日本に流入? “違法漁業”水産物",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T14:14:24+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 取引時間中の最高値を更新 幅広い銘柄に買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T13:08:17+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "5月中東からの原油輸入量 前年同月比61.9％減 代替調達は増加",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T11:35:24+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "世界の半導体市場89％増加へ AI需要で過去最大規模",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015151991000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T07:50:40+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "スペースX 一時時価総額世界4位に マイクロソフト抜く",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152021000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T06:35:54+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "NYダウ最高値更新 原油は一時75ドル台に下落",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152041000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T06:06:23+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "日銀 利上げに踏み切るも円安傾向続く 物価抑制で難しい対応も",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015151901000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T05:47:23+09:00",
       "hoursAgo": 9
     }
   ]
