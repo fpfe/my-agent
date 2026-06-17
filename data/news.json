@@ -1,83 +1,62 @@
 {
-  "updatedAt": "2026-06-18T03:14:43.178243+09:00",
-  "updatedAtJST": "2026/06/18 03:14 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-06-18T06:05:13.723469+09:00",
+  "updatedAtJST": "2026/06/18 06:05 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "NY市場 一時1ドル＝160円台後半まで値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153081000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T05:18:25+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "NYダウ FRBの政策金利見通しや会見で一時600ドルあまり下落",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T04:51:18+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "米自動車大手が防衛産業と提携 兵器生産の加速がねらいか",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015152851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T02:36:38+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "米 5月の小売業売上高 前月比0.9％増 個人消費は堅調さ維持",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T02:34:19+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "東海道・山陽新幹線の「個室」東京－名古屋間 片道3万2660円に",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T19:37:27+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "食料品の消費税 来年4月から1％ 所得連動給付で“実質ゼロ”案",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T19:27:59+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "5月の訪日客 2か月連続でマイナス 中国の大幅減少が影響",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T18:34:00+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "円相場 小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-17T18:31:44+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "米FRBウォーシュ新議長 初会合の結果発表へ 発言が焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152511000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T17:18:37+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "石油関連製品で価格転嫁の実態把握へ緊急調査 公取委",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152541000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T16:44:14+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "食品メーカー 値上げ相次ぐ 中東情勢影響で包装資材の価格上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T15:58:03+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株価最高値を更新 原油先物価格下落で業績改善の見方",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T15:51:16+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ガソリン価格 全国平均169.7円 政府補助金で170円水準続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260617/k10015152501000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-17T15:27:15+09:00",
       "hoursAgo": 11
     }
   ]
