@@ -1,56 +1,70 @@
 {
-  "updatedAt": "2026-06-18T17:46:55.141718+09:00",
-  "updatedAtJST": "2026/06/18 17:46 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-06-18T21:25:33.622038+09:00",
+  "updatedAtJST": "2026/06/18 21:25 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "日本経済はどうなる？ 米・イランが覚書署名で【詳しく】",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T19:42:06+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "太平洋クロマグロ 取れ過ぎで漁停止 全漁連“漁獲枠の増枠を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T18:51:02+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ニデック株主総会 不正会計で創業者 永守氏の責任問う声相次ぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T18:41:26+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "円相場 1ドル＝160円台後半に値下がり 米利上げ観測広がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153731000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T18:36:53+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "全銀協“能動的にシステム停止も想定” サイバー攻撃対策で",
+      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-18T18:30:30+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "首都圏5月新築マンション価格 平均1億660万円 過去3番目高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153641000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T17:28:28+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "石油化学製品の5月生産量 前月比で増加も低水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T17:22:42+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "ニデック株主総会 不正会計で創業者 永守氏の責任問う声相次ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-18T16:53:59+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "株価 終値として初の7万円超え 最高値を更新",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T16:29:33+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 6月18日(木)】不正会計のニデック 株主総会",
       "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-18T12:06:12+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "ニデック きょう株主総会 新たな経営体制などに理解得られるか",
-      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015152801000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-18T06:53:57+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "NY市場 一時1ドル＝160円台後半まで値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153081000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-18T06:09:11+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
