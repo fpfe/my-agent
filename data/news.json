@@ -1,42 +1,77 @@
 {
-  "updatedAt": "2026-06-19T09:25:38.770936+09:00",
-  "updatedAtJST": "2026/06/19 09:25 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-19T15:18:28.049506+09:00",
+  "updatedAtJST": "2026/06/19 15:18 JST",
+  "totalArticles": 10,
   "articles": [
     {
-      "title": "株価 取引時間中の最高値を更新 ホルムズ海峡正常化を期待",
-      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154081000.html",
+      "title": "きょうのおはBiz 6月19日(金) ホルムズ海峡 安全航行は可能か",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154161000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-19T09:14:32+09:00",
+      "publishedAt": "2026-06-19T14:35:00+09:00",
       "hoursAgo": 0
     },
     {
-      "title": "5月 消費者物価指数 去年同月比1.4％上昇 上昇率 前月と横ばい",
+      "title": "政府 塗料用シンナーを直接販売する仕組み導入 今月23日から",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154391000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T14:06:50+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "“中国・台湾産の一部鋼材が不当に安く輸入され損害” 仮決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T13:31:14+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "郵便ネットワーク維持のため日本郵便に年650億円交付へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154371000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T13:21:56+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 取引時間中の最高値更新 円相場は161円台の円安水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154081000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T12:22:36+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ホルムズ海峡の自由で安全な航行に期待 米イラン合意で国交相",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T11:45:40+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "1ドル161円台 片山財務相「投機動きあれば断固たる措置」",
+      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154191000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-19T11:30:40+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "5月の消費者物価指数 前年比+1.4％ 上昇率は変わらず横ばい",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154071000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-19T09:02:25+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-19T11:17:00+09:00",
+      "hoursAgo": 4
     },
     {
       "title": "日鉄 USスチール買収1年 森副会長 “成長は海外にしかない”",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015153821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T05:26:47+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 9
     },
     {
       "title": "円相場 一時1ドル＝161円台に FRB利上げ観測で 1年11か月ぶり",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015153951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T05:17:51+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "2040年度までの17分野の官民投資額 370兆円規模を想定",
-      "url": "http://www3.nhk.or.jp/news/html/20260618/k10015153921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-18T23:53:44+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
