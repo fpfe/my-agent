@@ -1,83 +1,76 @@
 {
-  "updatedAt": "2026-06-20T02:56:23.433479+09:00",
-  "updatedAtJST": "2026/06/20 02:56 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-06-20T04:51:58.221678+09:00",
+  "updatedAtJST": "2026/06/20 04:51 JST",
+  "totalArticles": 10,
   "articles": [
     {
       "title": "東電の提携交渉 日米の投資ファンドや通信大手の5陣営が軸に",
       "url": "http://www3.nhk.or.jp/news/html/20260620/k10015154971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-20T00:10:46+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "NISA対象と偽って不適切販売 外資系ネット証券に行政処分",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T20:24:08+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "JBIC新総裁に天川和彦氏就任 “対米投資サポートする”",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T19:56:01+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "日清食品 カップ焼きそば28万食余を自主回収",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T19:54:22+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "ロッテ アイスの値上げ発表 カルテル疑いで立ち入り検査後",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T19:45:58+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日銀植田総裁が19日退院 来週23日から公務に",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T18:55:50+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "セブン-イレブン 加盟店負担軽減の新契約 半世紀ぶりの見直し",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T18:51:18+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 1ドル＝161円台に値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T18:44:23+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "5月の消費者物価指数 前年比+1.4％ 食料品が物価押し上げる",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T18:17:36+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "コメ平均価格 5キロ税込み3500円台に 約10か月ぶり",
       "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-19T18:08:30+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "株価 終値として5日連続最高値更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260619/k10015154081000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-19T16:16:57+09:00",
       "hoursAgo": 10
     }
   ]
