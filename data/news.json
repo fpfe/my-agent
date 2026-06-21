@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-22T06:12:30.560256+09:00",
-  "updatedAtJST": "2026/06/22 06:12 JST",
+  "updatedAt": "2026-06-22T08:11:42.443017+09:00",
+  "updatedAtJST": "2026/06/22 08:11 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260622/k10015155861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-22T05:40:52+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "メガバンク3行 ステーブルコイン 今年度中に共同発行へ",
       "url": "http://www3.nhk.or.jp/news/html/20260622/k10015155841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-22T05:19:45+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     }
   ]
 }
