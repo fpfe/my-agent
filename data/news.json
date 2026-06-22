@@ -1,28 +1,49 @@
 {
-  "updatedAt": "2026-06-22T13:10:07.685118+09:00",
-  "updatedAtJST": "2026/06/22 13:10 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-22T19:36:28.897264+09:00",
+  "updatedAtJST": "2026/06/22 19:36 JST",
+  "totalArticles": 6,
   "articles": [
     {
-      "title": "株価 初の7万2000円台 “米イラン協議に進展”の見方から",
-      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156031000.html",
+      "title": "円相場 1ドル＝161円台後半に 米利上げ観測広がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156381000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-22T12:03:01+09:00",
+      "publishedAt": "2026-06-22T18:24:19+09:00",
       "hoursAgo": 1
     },
     {
-      "title": "“書店の減少に歯止めを” 15社が収益改善に向け共同声明",
-      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015155861000.html",
+      "title": "北陸新幹線 JR西社長「小浜・京都ルート」支持 国の試算受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156321000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-22T05:40:52+09:00",
-      "hoursAgo": 7
+      "publishedAt": "2026-06-22T17:27:39+09:00",
+      "hoursAgo": 2
     },
     {
-      "title": "メガバンク3行 ステーブルコイン 今年度中に共同発行へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015155841000.html",
+      "title": "株価 終値初の7万2000円超 6営業日連続で終値として最高値更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156031000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-22T05:19:45+09:00",
-      "hoursAgo": 7
+      "publishedAt": "2026-06-22T16:31:28+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "「紅プリンセス」苗木が中国で販売か 農相“愛媛県を支援”",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156291000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-22T16:18:09+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "塗料用シンナー直接販売する仕組み整備 23日から注文受け付け",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156251000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-22T15:59:22+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "【きょうのおはBiz 6月22日(月)】国際援助で農作物確保へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-22T14:53:27+09:00",
+      "hoursAgo": 4
     }
   ]
 }
