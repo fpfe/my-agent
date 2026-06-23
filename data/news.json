@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-24T07:11:49.351084+09:00",
-  "updatedAtJST": "2026/06/24 07:11 JST",
+  "updatedAt": "2026-06-24T08:56:11.718776+09:00",
+  "updatedAtJST": "2026/06/24 08:56 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T06:26:54+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "南米とEPA交渉この夏にも開始 農業めぐり厳しい交渉に",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T06:15:28+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     }
   ]
 }
