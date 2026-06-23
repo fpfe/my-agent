@@ -1,48 +1,48 @@
 {
-  "updatedAt": "2026-06-23T07:01:19.226850+09:00",
-  "updatedAtJST": "2026/06/23 07:01 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-06-23T09:05:04.389618+09:00",
+  "updatedAtJST": "2026/06/23 09:05 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "米FRB グリーンスパン元議長が死去 危機対応で名指揮者の異名",
+      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-23T08:52:01+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "中国で「サプライチェーン博覧会」始まる 日本企業も出展",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T05:49:12+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "株式で従業員に報酬 上場企業の6割が導入 人材定着がねらいか",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T05:47:49+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "“フィジカルAI” 自動車生産に活用 メーカーの研究開発が加速",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T05:26:02+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "円相場 約39年半ぶりの円安水準に迫る 市場介入の警戒も",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T03:04:24+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "片山財務相 米ベッセント財務長官と会談 為替動向を意見交換か",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T01:14:29+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "米FRB グリーンスパン元議長が死去 危機対応で名指揮者の異名",
-      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156551000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-22T23:39:21+09:00",
       "hoursAgo": 7
     },
     {
@@ -50,13 +50,6 @@
       "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-22T23:34:27+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "リニア 静岡県住民説明会が終了 知事が着工いつ認めるか焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-22T21:04:51+09:00",
       "hoursAgo": 9
     }
   ]
