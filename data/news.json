@@ -1,62 +1,55 @@
 {
-  "updatedAt": "2026-06-24T00:47:02.726783+09:00",
-  "updatedAtJST": "2026/06/24 00:47 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-06-24T02:53:49.231591+09:00",
+  "updatedAtJST": "2026/06/24 02:53 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "円相場 1ドル＝161円台で神経質な取引 介入への警戒続く",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T19:00:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "1422万件のアドレスなど流出か KDDIシステムに不正アクセス",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T18:46:03+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "東京23区中古マンション 平均1億2800万円余 賃貸の家賃も上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T18:29:08+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日産株主総会 みずほFG出身の社外取締役の再任を否決",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T18:24:57+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "YKKが「買いたたき」 再発防止などを求める勧告 公取委",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T18:17:54+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "塗料用シンナーの直接販売 きょうから注文受け付け始まる",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T18:14:24+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "株価 2500円超下落で7万円割れ 利益確保の売り膨らむ",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T16:44:36+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "【きょうのおはBiz 6月23日(火)】ゴミ袋 素材に新たな手法",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156911000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T13:56:39+09:00",
       "hoursAgo": 10
     }
   ]
