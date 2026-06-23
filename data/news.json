@@ -1,49 +1,21 @@
 {
-  "updatedAt": "2026-06-24T05:03:26.434809+09:00",
-  "updatedAtJST": "2026/06/24 05:03 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-06-24T07:11:49.351084+09:00",
+  "updatedAtJST": "2026/06/24 07:11 JST",
+  "totalArticles": 2,
   "articles": [
     {
-      "title": "円相場 1ドル＝161円台で神経質な取引 介入への警戒続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157371000.html",
+      "title": "サイバー攻撃への新たな対応サービス開発相次ぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157541000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-23T19:00:56+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-06-24T06:26:54+09:00",
+      "hoursAgo": 0
     },
     {
-      "title": "1422万件のアドレスなど流出か KDDIシステムに不正アクセス",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157301000.html",
+      "title": "南米とEPA交渉この夏にも開始 農業めぐり厳しい交渉に",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157551000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-23T18:46:03+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "東京23区中古マンション 平均1億2800万円余 賃貸の家賃も上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T18:29:08+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日産株主総会 みずほFG出身の社外取締役の再任を否決",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157091000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T18:24:57+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "YKKが「買いたたき」 再発防止などを求める勧告 公取委",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157261000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T18:17:54+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "塗料用シンナーの直接販売 きょうから注文受け付け始まる",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T18:14:24+09:00",
-      "hoursAgo": 10
+      "publishedAt": "2026-06-24T06:15:28+09:00",
+      "hoursAgo": 0
     }
   ]
 }
