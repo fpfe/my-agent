@@ -1,77 +1,70 @@
 {
-  "updatedAt": "2026-06-23T13:59:42.178095+09:00",
-  "updatedAtJST": "2026/06/23 13:59 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-06-23T17:34:36.182844+09:00",
+  "updatedAtJST": "2026/06/23 17:34 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "1422万件のアドレスなど流出か KDDIシステムに不正アクセス",
+      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-23T17:13:22+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 2500円超下落で7万円割れ 利益確保の売り膨らむ",
+      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157011000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-23T16:44:36+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日産株主総会 みずほFG出身の社外取締役の再任を否決",
+      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-23T14:40:49+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "東京23区中古マンション 平均1億2800万円余 賃貸の家賃も上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-23T14:37:30+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "【きょうのおはBiz 6月23日(火)】ゴミ袋 素材に新たな手法",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T13:56:39+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "経営再建中の日産の株主総会 社外取締役の選任否決 異例の判断",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157091000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T12:55:13+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 値下がり 利益確定させようと売り注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015157011000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T12:51:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "片山財務相 為替市場“断固たる措置 日米合意揺るぎない”",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T12:35:01+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "5月の東京23区中古マンション 平均1億2800万円余 約27％上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T11:02:19+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "米FRB グリーンスパン元議長が死去 危機対応で名指揮者の異名",
       "url": "http://www3.nhk.or.jp/news/html/20260622/k10015156551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T08:52:01+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "中国で「サプライチェーン博覧会」始まる 日本企業も出展",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T05:49:12+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "株式で従業員に報酬 上場企業の6割が導入 人材定着がねらいか",
       "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-23T05:47:49+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "“フィジカルAI” 自動車生産に活用 メーカーの研究開発が加速",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156511000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T05:26:02+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "円相場 約39年半ぶりの円安水準に迫る 市場介入の警戒も",
-      "url": "http://www3.nhk.or.jp/news/html/20260623/k10015156751000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-23T03:04:24+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
