@@ -1,69 +1,41 @@
 {
-  "updatedAt": "2026-06-25T05:47:58.261511+09:00",
-  "updatedAtJST": "2026/06/25 05:47 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-06-25T07:16:36.620834+09:00",
+  "updatedAtJST": "2026/06/25 07:16 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "NY原油 一時1バレル＝70ドル割れ 3か月半ぶり安値水準",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015158891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T05:07:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "17戦略分野への投資額 2040年度までに「370兆円超」",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T21:41:31+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "不正アクセスで情報漏えいのKDDIに報告徴収 総務省",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:33:44+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "官民ファンド クールジャパン機構 累積赤字拡大 統廃合検討へ",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:14:48+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "日産株主総会 再任否決された永井氏の賛成率は48％余",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:07:23+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "日銀 植田総裁 今後も中東情勢見ながら利上げ検討の姿勢示す",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T18:40:38+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株主総会が今週ピーク 経営の抜本的見直し求める提案も",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T18:38:26+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 1ドル＝161円台 神経質な値動きに",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T18:10:25+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "KADOKAWA株主総会 社長解任求める株主提案は否決",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157971000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T18:07:14+09:00",
       "hoursAgo": 11
     }
   ]
