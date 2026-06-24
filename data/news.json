@@ -1,105 +1,119 @@
 {
-  "updatedAt": "2026-06-24T19:48:42.916915+09:00",
-  "updatedAtJST": "2026/06/24 19:48 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-06-24T22:21:30.008851+09:00",
+  "updatedAtJST": "2026/06/24 22:21 JST",
+  "totalArticles": 16,
   "articles": [
     {
       "title": "17戦略分野への投資額 2040年度までに「370兆円超」",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157951000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-24T19:13:46+09:00",
+      "publishedAt": "2026-06-24T21:41:31+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "不正アクセスで情報漏えいのKDDIに報告徴収 総務省",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158671000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T20:33:44+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "官民ファンド クールジャパン機構 累積赤字拡大 統廃合検討へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T20:14:48+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "日産株主総会 再任否決された永井氏の賛成率は48％余",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158651000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T20:07:23+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "日銀 植田総裁 今後も中東情勢見ながら利上げ検討の姿勢示す",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:40:38+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "株主総会が今週ピーク 経営の抜本的見直し求める提案も",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:38:26+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "円相場 1ドル＝161円台 神経質な値動きに",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:10:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "KADOKAWA株主総会 社長解任求める株主提案は否決",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:07:14+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "ロート製薬株主総会 物言う株主からの会長解任議案は否決",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T17:41:20+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "株価 利益確定の売り注文で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T17:27:13+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "メガバンク3行がグーグルの最新AI利用へ 片山金融担当相",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158401000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T16:59:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "JDI株主総会 車載向け事業を中心に経営再建の方針説明",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T16:36:26+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ソフトバンクG 孫社長 “あと10年か15年は頑張る”",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T16:09:39+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "ガソリン価格 全国平均169.8円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T14:46:14+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "利上げ決定の日銀会合 追加利上げ早期に検討すべきの意見も",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T13:13:49+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "きょうのおはBiz 6月24日(水) イラン情勢で進むエネルギー転換",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T11:14:30+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "ナスダックの株価指数2％超の大幅下落 日韓のハイテク株安波及",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T10:00:41+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
