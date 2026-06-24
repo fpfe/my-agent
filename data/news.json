@@ -1,97 +1,69 @@
 {
-  "updatedAt": "2026-06-25T03:50:51.248673+09:00",
-  "updatedAtJST": "2026/06/25 03:50 JST",
-  "totalArticles": 13,
+  "updatedAt": "2026-06-25T05:47:58.261511+09:00",
+  "updatedAtJST": "2026/06/25 05:47 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "NY原油 一時1バレル＝70ドル割れ 3か月半ぶり安値水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015158891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T05:07:57+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "17戦略分野への投資額 2040年度までに「370兆円超」",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T21:41:31+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "不正アクセスで情報漏えいのKDDIに報告徴収 総務省",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:33:44+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "官民ファンド クールジャパン機構 累積赤字拡大 統廃合検討へ",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:14:48+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日産株主総会 再任否決された永井氏の賛成率は48％余",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T20:07:23+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日銀 植田総裁 今後も中東情勢見ながら利上げ検討の姿勢示す",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:40:38+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "株主総会が今週ピーク 経営の抜本的見直し求める提案も",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:38:26+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "円相場 1ドル＝161円台 神経質な値動きに",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:10:25+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "KADOKAWA株主総会 社長解任求める株主提案は否決",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T18:07:14+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ロート製薬株主総会 物言う株主からの会長解任議案は否決",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158421000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T17:41:20+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 利益確定の売り注文で値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T17:27:13+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "メガバンク3行がグーグルの最新AI利用へ 片山金融担当相",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158401000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T16:59:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "JDI株主総会 車載向け事業を中心に経営再建の方針説明",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T16:36:26+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ソフトバンクG 孫社長 “あと10年か15年は頑張る”",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T16:09:39+09:00",
       "hoursAgo": 11
     }
   ]
