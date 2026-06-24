@@ -1,42 +1,70 @@
 {
-  "updatedAt": "2026-06-24T12:47:51.958203+09:00",
-  "updatedAtJST": "2026/06/24 12:47 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-24T16:39:27.863782+09:00",
+  "updatedAtJST": "2026/06/24 16:39 JST",
+  "totalArticles": 9,
   "articles": [
     {
-      "title": "株価 値下がり このところの上昇受け利益確定の売り注文",
+      "title": "JDI株主総会 車載向け事業を中心に経営再建の方針説明",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158391000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T16:36:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ソフトバンクG 孫社長 “あと10年か15年は頑張る”",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158271000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T16:09:39+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ガソリン価格 全国平均169.8円 政府補助金で170円水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158241000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T14:46:14+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時1000円以上値下がり 当面の利益確定へ売り注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158071000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-24T12:19:03+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-24T13:56:21+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "利上げ決定の日銀会合 追加利上げ早期に検討すべきの意見も",
+      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158131000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-24T13:13:49+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "きょうのおはBiz 6月24日(水) イラン情勢で進むエネルギー転換",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T11:14:30+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "ナスダックの株価指数2％超の大幅下落 日韓のハイテク株安波及",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T10:00:41+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "サイバー攻撃への新たな対応サービス開発相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T06:26:54+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     },
     {
       "title": "南米とEPA交渉この夏にも開始 農業めぐり厳しい交渉に",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T06:15:28+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     }
   ]
 }
