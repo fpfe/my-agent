@@ -1,21 +1,35 @@
 {
-  "updatedAt": "2026-06-25T09:12:14.443103+09:00",
-  "updatedAtJST": "2026/06/25 09:12 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-06-25T14:04:53.281801+09:00",
+  "updatedAtJST": "2026/06/25 14:04 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "みらい 与野党の議員対象にAI勉強会を開催 安野党首が講師",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T13:28:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 7万2000円台を回復 半導体やAI関連中心に幅広く買い注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159251000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T13:05:33+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ホンダと日産 次世代車の基幹部品を共通化 開発費を軽減",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T11:46:45+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NY原油 一時1バレル＝70ドル割れ 3か月半ぶり安値水準",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015158891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T05:07:57+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "17戦略分野への投資額 2040年度までに「370兆円超」",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T21:41:31+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
