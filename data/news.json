@@ -1,41 +1,20 @@
 {
-  "updatedAt": "2026-06-25T07:16:36.620834+09:00",
-  "updatedAtJST": "2026/06/25 07:16 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-25T09:12:14.443103+09:00",
+  "updatedAtJST": "2026/06/25 09:12 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "NY原油 一時1バレル＝70ドル割れ 3か月半ぶり安値水準",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015158891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T05:07:57+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "17戦略分野への投資額 2040年度までに「370兆円超」",
       "url": "http://www3.nhk.or.jp/news/html/20260624/k10015157951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-24T21:41:31+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "不正アクセスで情報漏えいのKDDIに報告徴収 総務省",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158671000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T20:33:44+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "官民ファンド クールジャパン機構 累積赤字拡大 統廃合検討へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158691000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T20:14:48+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日産株主総会 再任否決された永井氏の賛成率は48％余",
-      "url": "http://www3.nhk.or.jp/news/html/20260624/k10015158651000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-24T20:07:23+09:00",
       "hoursAgo": 11
     }
   ]
