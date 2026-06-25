@@ -1,91 +1,84 @@
 {
-  "updatedAt": "2026-06-26T00:38:57.412228+09:00",
-  "updatedAtJST": "2026/06/26 00:38 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-06-26T03:08:58.956296+09:00",
+  "updatedAtJST": "2026/06/26 03:08 JST",
+  "totalArticles": 11,
   "articles": [
     {
       "title": "全日空 上位の特典制度の変更を見直しへ 厳しい意見受け",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T21:13:48+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "先週の株式市場 個人の株式売買金額が過去最高に",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T21:12:26+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "5月のデパート売り上げ 5か月連続増加 免税品好調で",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160001000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T18:39:04+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "景気動向指数「改善」に上方修正 71か月上昇傾向続く",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T18:36:46+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "円相場1ドル＝161円台後半での取り引き 市場介入警戒も",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160101000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T18:18:03+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日銀 田村委員“利上げは物価動向次第でちゅうちょなく”",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T18:11:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "キオクシアが株主総会 時価総額国内トップ AI普及で急成長",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160031000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T17:59:37+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "東京電力の新会長に横尾敬介氏就任 他社との提携が焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T17:36:59+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "中部電力の株主総会 会長・社長の取締役選任案が可決",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T17:21:28+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "株価 3100円以上値上がり 終値で最高値を更新",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T16:15:21+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "きょうのおはBiz6月25日(木) クールジャパン機構 統廃合検討へ",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T16:11:07+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "みらい 与野党の議員対象にAI勉強会を開催 安野党首が講師",
-      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159441000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-25T13:28:31+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
