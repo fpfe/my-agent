@@ -1,35 +1,70 @@
 {
-  "updatedAt": "2026-06-25T14:04:53.281801+09:00",
-  "updatedAtJST": "2026/06/25 14:04 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-06-25T18:22:52.781986+09:00",
+  "updatedAtJST": "2026/06/25 18:22 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "円相場1ドル＝161円台後半での取り引き 市場介入警戒も",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T18:18:03+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀 田村委員“利上げは物価動向次第でちゅうちょなく”",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T18:11:38+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "キオクシアが株主総会 時価総額国内トップ AI普及で急成長",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160031000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T17:59:37+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "東京電力の新会長に横尾敬介氏就任 他社との提携が焦点",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T17:36:59+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "中部電力の株主総会 会長・社長の取締役選任案が可決",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159781000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T17:21:28+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 3100円以上値上がり 終値で最高値を更新",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159251000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T16:15:21+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "きょうのおはBiz6月25日(木) クールジャパン機構 統廃合検討へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159331000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-25T16:11:07+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "みらい 与野党の議員対象にAI勉強会を開催 安野党首が講師",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T13:28:31+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 7万2000円台を回復 半導体やAI関連中心に幅広く買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159251000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-25T13:05:33+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "ホンダと日産 次世代車の基幹部品を共通化 開発費を軽減",
       "url": "http://www3.nhk.or.jp/news/html/20260625/k10015159411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-25T11:46:45+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "NY原油 一時1バレル＝70ドル割れ 3か月半ぶり安値水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015158891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-25T05:07:57+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 6
     }
   ]
 }
