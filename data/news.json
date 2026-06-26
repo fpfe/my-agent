@@ -1,35 +1,28 @@
 {
-  "updatedAt": "2026-06-26T09:07:54.043756+09:00",
-  "updatedAtJST": "2026/06/26 09:07 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-06-26T14:07:46.241785+09:00",
+  "updatedAtJST": "2026/06/26 14:07 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "株価 3500円超の大幅下落 AIや半導体関連銘柄が売られる",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T12:41:19+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "東京23区 6月の消費者物価指数 前年同月比で1.6％上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160781000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-26T08:44:50+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-26T11:26:34+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "EU 米からの工業製品の関税撤廃 近く発効へ",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T06:20:10+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "全日空 上位の特典制度の変更を見直しへ 厳しい意見受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-25T21:13:48+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "先週の株式市場 個人の株式売買金額が過去最高に",
-      "url": "http://www3.nhk.or.jp/news/html/20260625/k10015160351000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-25T21:12:26+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
