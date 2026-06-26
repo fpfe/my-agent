@@ -1,84 +1,112 @@
 {
-  "updatedAt": "2026-06-26T18:24:35.397194+09:00",
-  "updatedAtJST": "2026/06/26 18:24 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-06-26T21:10:22.620228+09:00",
+  "updatedAtJST": "2026/06/26 21:10 JST",
+  "totalArticles": 15,
   "articles": [
     {
-      "title": "カルビー ポテトチップスなど値上げ ことしに入って4回目",
-      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161491000.html",
+      "title": "フジとSBIがメディア事業で業務提携協議 コンテンツ展開強化へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160891000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-26T18:20:10+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-26T19:49:36+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "静岡県知事 “来月7日に判断示す” リニア県内着工容認 表明へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T19:29:16+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "AIブームの韓国株価 一時8％超下落 過熱感を指摘する声も",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T19:26:33+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "財政審が提言 “予算編成改革は 財政規律との整合性を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161631000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T19:13:13+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場1ドル＝161円台後半 神経質な取り引き続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161581000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T18:57:03+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "スーパーのコメ平均価格 5キロ税込み3590円 5週ぶり値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161511000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-26T17:32:07+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-06-26T18:55:55+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "カルビー ポテトチップスなど値上げ ことしに入って4回目",
+      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161491000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-26T18:20:10+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "株価 一時3700円超下落 終値は過去3番目の下落幅に",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T17:18:02+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "ホンダ株主総会 社長が巨額損失を陳謝 経営陣の選任案は可決",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T16:38:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "7月の電気・ガス料金は大手全社値下がり 政府の補助で",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T16:35:05+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 6月26日(金)】東京電力 新会長に横尾氏",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T16:05:01+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "ANAホールディングス株主総会 システム刷新後の不具合など謝罪",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T15:40:02+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "日産自動車 60万台余をリコール「ノート」など3車種",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T15:29:13+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "赤澤経産相 東京電力・横尾新会長に「変革リードを期待」",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015161131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T14:52:37+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "フジとSBIがメディア事業で業務提携協議 コンテンツ展開強化へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-26T14:14:55+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "東京23区 6月の消費者物価指数 前年同月比で1.6％上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260626/k10015160781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-26T11:26:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
