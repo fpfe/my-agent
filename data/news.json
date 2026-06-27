@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-06-27T12:23:02.570996+09:00",
-  "updatedAtJST": "2026/06/27 12:23 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-06-27T15:51:16.636196+09:00",
+  "updatedAtJST": "2026/06/27 15:51 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "アンソロピック AI「ミュトス5」米の一部企業などに提供再開へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260627/k10015162581000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-27T14:16:57+09:00",
+      "hoursAgo": 1
+    }
+  ]
 }
