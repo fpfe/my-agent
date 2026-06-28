@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-06-29T05:12:49.232035+09:00",
-  "updatedAtJST": "2026/06/29 05:12 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-06-29T07:01:10.825870+09:00",
+  "updatedAtJST": "2026/06/29 07:01 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "7月発表の短観予測 イラン情勢影響で悪化予測多く",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T06:53:21+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
