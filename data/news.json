@@ -1,14 +1,28 @@
 {
-  "updatedAt": "2026-06-29T09:08:22.990421+09:00",
-  "updatedAtJST": "2026/06/29 09:08 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-06-29T14:49:33.844602+09:00",
+  "updatedAtJST": "2026/06/29 14:49 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "【きょうのおはBiz 6月29日(月)】町の“資産”で稼ぐ力を",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T13:18:19+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時1300円超値下がり AIや半導体銘柄に売り注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163491000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T12:26:38+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "7月発表の短観予測 イラン情勢影響で悪化予測多く",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T06:53:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     }
   ]
 }
