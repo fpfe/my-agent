@@ -1,42 +1,28 @@
 {
-  "updatedAt": "2026-06-30T04:56:08.642093+09:00",
-  "updatedAtJST": "2026/06/30 04:56 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-06-30T06:27:08.439835+09:00",
+  "updatedAtJST": "2026/06/30 06:27 JST",
+  "totalArticles": 3,
   "articles": [
     {
-      "title": "外国為替市場で39年半ぶり円安水準 1ドル＝161円90銭台後半",
-      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T01:55:41+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "トランプ大統領のFRB理事解任通知 米連邦最高裁が無効の判断",
+      "title": "米連邦最高裁判所 トランプ大統領によるFRB理事解任は無効",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164241000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-06-29T23:39:06+09:00",
-      "hoursAgo": 5
+      "publishedAt": "2026-06-30T05:31:55+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 一時1ドル＝161円90銭台後半 約39年半ぶりの円安水準に",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-30T05:29:52+09:00",
+      "hoursAgo": 0
     },
     {
       "title": "日本版CFIUS「対日外国投資委員会」始動 審査体制強化へ",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T21:23:18+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "円相場 1ドル＝161円台後半 神経質な取り引き続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163971000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-29T18:12:43+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "中国での5月新車販売数 多くのメーカーで減“中東情勢影響も”",
-      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163851000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-29T17:05:25+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
