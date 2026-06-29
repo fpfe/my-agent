@@ -1,35 +1,56 @@
 {
-  "updatedAt": "2026-06-29T19:57:28.755718+09:00",
-  "updatedAtJST": "2026/06/29 19:57 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-06-29T23:49:11.023963+09:00",
+  "updatedAtJST": "2026/06/29 23:49 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "トランプ大統領のFRB理事解任通知 米連邦最高裁が無効の判断",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164241000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T23:39:06+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "外国為替市場で39年半ぶり円安水準 1ドル＝161円90銭台後半",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T23:08:11+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日本版CFIUS「対日外国投資委員会」始動 審査体制強化へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015164161000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T21:23:18+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "円相場 1ドル＝161円台後半 神経質な取り引き続く",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T18:12:43+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "中国での5月新車販売数 多くのメーカーで減“中東情勢影響も”",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T17:05:25+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "株価は小幅上昇 値下がりの銘柄を午後に買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T16:23:42+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "【きょうのおはBiz 6月29日(月)】町の“資産”で稼ぐ力を",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T13:18:19+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     }
   ]
 }
