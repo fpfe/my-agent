@@ -1,28 +1,35 @@
 {
-  "updatedAt": "2026-06-29T14:49:33.844602+09:00",
-  "updatedAtJST": "2026/06/29 14:49 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-06-29T19:57:28.755718+09:00",
+  "updatedAtJST": "2026/06/29 19:57 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "円相場 1ドル＝161円台後半 神経質な取り引き続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T18:12:43+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "中国での5月新車販売数 多くのメーカーで減“中東情勢影響も”",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163851000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T17:05:25+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価は小幅上昇 値下がりの銘柄を午後に買い戻す動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163491000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-06-29T16:23:42+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "【きょうのおはBiz 6月29日(月)】町の“資産”で稼ぐ力を",
       "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-29T13:18:19+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 一時1300円超値下がり AIや半導体銘柄に売り注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163491000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-29T12:26:38+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "7月発表の短観予測 イラン情勢影響で悪化予測多く",
-      "url": "http://www3.nhk.or.jp/news/html/20260629/k10015163221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-29T06:53:21+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 6
     }
   ]
 }
