@@ -1,84 +1,63 @@
 {
-  "updatedAt": "2026-07-01T02:52:17.080735+09:00",
-  "updatedAtJST": "2026/07/01 02:52 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-07-01T04:55:48.876729+09:00",
+  "updatedAtJST": "2026/07/01 04:55 JST",
+  "totalArticles": 8,
   "articles": [
     {
       "title": "「骨太の方針」の原案 強い経済実現向け国内投資拡大打ち出す",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:46:18+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日銀 審議委員に佐藤綾野氏が就任 “データ重視で政策判断”",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:40:39+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "USJ 発売後も入場券の価格が変動する制度導入へ 9月入場分から",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:29:03+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "記録的水準の円安 今後は？暮らしはどうなる？【詳しく】",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T19:30:17+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "7月の食品値上げ2566品目 5年連続で1万品目超えの見通しも",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T18:32:40+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "5月の原油輸入量 前年比38％減 代替調達で4月より減少幅は縮小",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T18:18:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "6月の月例経済報告 「緩やかに回復」を維持",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T17:45:27+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "日本航空 “空飛ぶクルマ”研究めぐり補助金を不正受給",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164921000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T17:23:25+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "“AIロボット 製造業などの分野で1000万台規模に” 政府新目標",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164871000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T16:44:34+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 一時1000円以上値上がり AIや半導体関連銘柄に買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164421000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T16:36:35+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "アフラック生命 約438万人分 個人情報漏えい 一部は口座情報も",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164791000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T16:14:48+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
