@@ -1,62 +1,48 @@
 {
-  "updatedAt": "2026-07-01T04:55:48.876729+09:00",
-  "updatedAtJST": "2026/07/01 04:55 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-01T06:27:57.438702+09:00",
+  "updatedAtJST": "2026/07/01 06:27 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "1ドル＝162円台後半に値下がり 日米の金利差拡大などで",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165311000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T06:15:59+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "「骨太の方針」の原案 強い経済実現向け国内投資拡大打ち出す",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:46:18+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "日銀 審議委員に佐藤綾野氏が就任 “データ重視で政策判断”",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:40:39+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "USJ 発売後も入場券の価格が変動する制度導入へ 9月入場分から",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015165091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T20:29:03+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "記録的水準の円安 今後は？暮らしはどうなる？【詳しく】",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T19:30:17+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "7月の食品値上げ2566品目 5年連続で1万品目超えの見通しも",
       "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-06-30T18:32:40+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "5月の原油輸入量 前年比38％減 代替調達で4月より減少幅は縮小",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T18:18:01+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "6月の月例経済報告 「緩やかに回復」を維持",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T17:45:27+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日本航空 “空飛ぶクルマ”研究めぐり補助金を不正受給",
-      "url": "http://www3.nhk.or.jp/news/html/20260630/k10015164921000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-06-30T17:23:25+09:00",
       "hoursAgo": 11
     }
   ]
