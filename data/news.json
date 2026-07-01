@@ -1,77 +1,77 @@
 {
-  "updatedAt": "2026-07-01T21:06:21.846092+09:00",
-  "updatedAtJST": "2026/07/01 21:06 JST",
+  "updatedAt": "2026-07-02T00:40:36.538294+09:00",
+  "updatedAtJST": "2026/07/02 00:40 JST",
   "totalArticles": 10,
   "articles": [
+    {
+      "title": "ユーロ圏 6月 消費者物価指数 去年同月比2.8％上昇 前月下回る",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T21:56:03+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "モバイルSuica トラブルから夕方に復旧 サーバー不具合が原因",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T20:37:52+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "日銀短観発表 大企業の製造業の指数改善 ものづくりの現場は",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T19:21:28+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "「路線価」全国平均 過去最大の上昇率 観光地で大幅上昇目立つ",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T17:35:58+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "5月ガソリン補助 約2900億円支出 6月末の基金残高約3800億円に",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166101000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T17:19:23+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "株価 値上がり 半導体関連の銘柄中心に買い注文",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T16:28:43+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "ガソリン価格 全国平均169.8円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T15:59:57+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "米大統領 資産報告書公開“主要収益は暗号資産関連 2300億円”",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T15:40:08+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "高校生の就職活動が事実上スタート “初任給30万円”企業も",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T14:20:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     },
     {
       "title": "旅券手数料 きょうから最大7000円引き下げ “余裕持ち申請を”",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T13:06:27+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "きょうのおはBiz 7月1日(水) 記録的株高 新規上場企業の戦略は",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T12:13:16+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
