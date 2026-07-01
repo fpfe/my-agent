@@ -1,91 +1,77 @@
 {
-  "updatedAt": "2026-07-01T17:12:03.046999+09:00",
-  "updatedAtJST": "2026/07/01 17:12 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-07-01T21:06:21.846092+09:00",
+  "updatedAtJST": "2026/07/01 21:06 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "モバイルSuica トラブルから夕方に復旧 サーバー不具合が原因",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165501000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T20:37:52+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀短観発表 大企業の製造業の指数改善 ものづくりの現場は",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T19:21:28+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「路線価」全国平均 過去最大の上昇率 観光地で大幅上昇目立つ",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165461000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T17:35:58+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "5月ガソリン補助 約2900億円支出 6月末の基金残高約3800億円に",
+      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-01T17:19:23+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "株価 値上がり 半導体関連の銘柄中心に買い注文",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T16:28:43+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "モバイルPASMOの不具合は復旧 モバイルSuicaは復旧作業急ぐ",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165501000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T16:27:31+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "ガソリン価格 全国平均169.8円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T15:59:57+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "米大統領 資産報告書公開“主要収益は暗号資産関連 2300億円”",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T15:40:08+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "高校生の就職活動が事実上スタート “初任給30万円”企業も",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T14:20:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "旅券手数料 きょうから最大7000円引き下げ “余裕持ち申請を”",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T13:06:27+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "きょうのおはBiz 7月1日(水) 記録的株高 新規上場企業の戦略は",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T12:13:16+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "「路線価」全国平均 過去最大の上昇率 観光地で大幅上昇目立つ",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165461000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T11:23:39+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "日銀短観 大企業の製造業の景気判断示す指数 5期連続の改善",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T10:04:36+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "NYダウ平均株価が最高値更新 AI需要拡大や米景気への期待で",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T08:23:39+09:00",
       "hoursAgo": 8
-    },
-    {
-      "title": "“出国税” きょうから引き上げ 1人当たり1000円が3000円に",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165101000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T06:53:31+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "1ドル＝162円台後半に値下がり 日米の金利差拡大などで",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165311000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T06:15:59+09:00",
-      "hoursAgo": 10
     }
   ]
 }
