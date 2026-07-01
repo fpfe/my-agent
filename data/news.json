@@ -1,27 +1,20 @@
 {
-  "updatedAt": "2026-07-02T06:27:08.884097+09:00",
-  "updatedAtJST": "2026/07/02 06:27 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-02T08:14:29.823644+09:00",
+  "updatedAtJST": "2026/07/02 08:14 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "ユーロ圏 6月 消費者物価指数 去年同月比2.8％上昇 前月下回る",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015166321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T21:56:03+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "モバイルSuica トラブルから夕方に復旧 サーバー不具合が原因",
       "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-01T20:37:52+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "日銀短観発表 大企業の製造業の指数改善 ものづくりの現場は",
-      "url": "http://www3.nhk.or.jp/news/html/20260701/k10015165321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-01T19:21:28+09:00",
       "hoursAgo": 11
     }
   ]
