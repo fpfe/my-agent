@@ -1,49 +1,42 @@
 {
-  "updatedAt": "2026-07-03T04:22:50.492120+09:00",
-  "updatedAtJST": "2026/07/03 04:22 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-07-03T06:05:49.308267+09:00",
+  "updatedAtJST": "2026/07/03 06:05 JST",
+  "totalArticles": 5,
   "articles": [
     {
       "title": "アメリカ 6月の就業者数 前月比増加続くも市場予想を下回る",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T03:43:20+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "中東情勢受け 「ナフサ」由来の石油製品など備蓄検討 業界団体",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T22:30:58+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "日本とインドが蓄電池供給網の強化で協力 覚書に署名",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T22:03:41+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "海外勢の株式買い越し 上半期9兆7000億円で過去最高",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T19:03:16+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "夏休み旅行者は去年より4.6％減少見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T18:53:17+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "大手企業 夏のボーナス 初の100万円超 経団連調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167251000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-02T17:31:05+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
