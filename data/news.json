@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-07-03T06:05:49.308267+09:00",
-  "updatedAtJST": "2026/07/03 06:05 JST",
+  "updatedAt": "2026-07-03T08:05:12.532624+09:00",
+  "updatedAtJST": "2026/07/03 08:05 JST",
   "totalArticles": 5,
   "articles": [
+    {
+      "title": "テスラ 欧州や中国で需要回復か ガソリン価格高騰も追い風に",
+      "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-03T06:55:34+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ダウ平均株価 最高値を更新 FRBの利上げ観測後退で",
+      "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167731000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-03T06:09:57+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "アメリカ 6月の就業者数 前月比増加続くも市場予想を下回る",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T03:43:20+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "中東情勢受け 「ナフサ」由来の石油製品など備蓄検討 業界団体",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T22:30:58+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日本とインドが蓄電池供給網の強化で協力 覚書に署名",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T22:03:41+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "海外勢の株式買い越し 上半期9兆7000億円で過去最高",
-      "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167331000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-02T19:03:16+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "夏休み旅行者は去年より4.6％減少見通し",
-      "url": "http://www3.nhk.or.jp/news/html/20260702/k10015167201000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-02T18:53:17+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
