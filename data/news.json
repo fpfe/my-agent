@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-07-02T12:31:10.724762+09:00",
-  "updatedAtJST": "2026/07/02 12:31 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-02T16:31:00.450585+09:00",
+  "updatedAtJST": "2026/07/02 16:31 JST",
+  "totalArticles": 3,
   "articles": [
     {
-      "title": "株価 一時1700円以上値下がり NY市場のAIや半導体関連下落受け",
+      "title": "株価 1700円超値下がり AIや半導体関連銘柄への売り注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015166831000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-02T12:05:59+09:00",
+      "publishedAt": "2026-07-02T16:14:26+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "【きょうのおはBiz 7月2日(木)】“サプライズ”だった短観",
+      "url": "http://www3.nhk.or.jp/news/html/20260702/k10015166861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-02T13:14:09+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "2025年度の税収 84兆円台 6年連続で過去最高の見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260702/k10015166901000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-02T11:42:17+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     }
   ]
 }
