@@ -1,90 +1,76 @@
 {
-  "updatedAt": "2026-07-04T00:10:23.662971+09:00",
-  "updatedAtJST": "2026/07/04 00:10 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-07-04T02:24:23.866793+09:00",
+  "updatedAtJST": "2026/07/04 02:24 JST",
+  "totalArticles": 10,
   "articles": [
     {
       "title": "関西財界代表団 10月に中国訪問で調整 日中関係悪化する中",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T21:39:59+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "長期金利 約29年ぶり一時2.81％に上昇 インフレ加速観測などで",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T21:12:20+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "円相場 3日も市場介入への警戒強まり 神経質な取り引き続く",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T20:27:31+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "昨年度の税収 84兆2000億円程度 過去最高を更新",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T20:25:44+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "春闘 最終集計 平均賃上げ率が3年連続5％超 連合",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T19:09:32+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "キオクシア 最先端メモリのサンプル出荷開始 生成AI需要に対応",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T19:07:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "スーパーのコメ平均価格 5キロ税込み3554円  2週ぶり値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T18:02:37+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日本郵便 ゆうパックの料金を10月から平均約10％値上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T18:00:39+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "株価 一時1000円以上値下がりも午後には上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T16:32:35+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ブルボン 菓子2万袋余を自主回収 アレルギー物質「えび」混入",
       "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-03T14:31:49+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ペルシャ湾内の日本関係船舶 新たに1隻がホルムズ海峡通過",
-      "url": "http://www3.nhk.or.jp/news/html/20260703/k10015168021000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-03T13:05:30+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "きょうのおはBiz 7月3日(金) アメリカ雇用統計 市場予想下回る",
-      "url": "http://www3.nhk.or.jp/news/html/20260703/k10015167831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-03T12:28:28+09:00",
       "hoursAgo": 11
     }
   ]
