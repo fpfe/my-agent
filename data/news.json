@@ -1,28 +1,42 @@
 {
-  "updatedAt": "2026-07-06T14:10:07.415272+09:00",
-  "updatedAtJST": "2026/07/06 14:10 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-06T19:18:53.957273+09:00",
+  "updatedAtJST": "2026/07/06 19:18 JST",
+  "totalArticles": 5,
   "articles": [
     {
-      "title": "株価 午前は値下がり AIや半導体関連銘柄に売り注文",
+      "title": "円相場 162円台前半に値下がり 日米金利差意識され円安進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015170091000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-06T18:28:38+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "長期金利2.83％に上昇 およそ29年ぶりの高水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169951000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-06T16:48:47+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価 小幅に値下がり AI・半導体関連に売り注文",
       "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169791000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-06T12:40:00+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-07-06T16:17:53+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "コメ価格の見通し示す指数 過去最低に並ぶ水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-06T12:22:36+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 6
     },
     {
       "title": "きょうのおはBiz 7月6日(月) 進むパッケージのシフトチェンジ",
       "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-06T11:25:28+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 7
     }
   ]
 }
