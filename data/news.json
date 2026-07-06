@@ -1,14 +1,49 @@
 {
-  "updatedAt": "2026-07-07T04:54:49.741583+09:00",
-  "updatedAtJST": "2026/07/07 04:54 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-07-07T06:28:00.353711+09:00",
+  "updatedAtJST": "2026/07/07 06:28 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "農業従事者が初めて100万人下回る 高齢化で離農続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T06:24:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "メガバンク 中小企業向けサービス強化の動き相次ぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T05:44:36+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "経団連会長 “中国への訪問団派遣へ中国側と対話進める”",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T05:41:48+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "リニア中央新幹線　静岡県知事がきょう着工容認を表明へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170401000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T05:37:57+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "データ無償提供の強要問題 公取委が指針策定",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170431000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T05:31:48+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "円相場 162円台前半に値下がり 日米金利差意識され円安進む",
       "url": "http://www3.nhk.or.jp/news/html/20260706/k10015170091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-06T18:28:38+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
