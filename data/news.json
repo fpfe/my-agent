@@ -1,6 +1,28 @@
 {
-  "updatedAt": "2026-07-06T09:04:37.750612+09:00",
-  "updatedAtJST": "2026/07/06 09:04 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-06T14:10:07.415272+09:00",
+  "updatedAtJST": "2026/07/06 14:10 JST",
+  "totalArticles": 3,
+  "articles": [
+    {
+      "title": "株価 午前は値下がり AIや半導体関連銘柄に売り注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169791000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-06T12:40:00+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "コメ価格の見通し示す指数 過去最低に並ぶ水準に",
+      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169771000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-06T12:22:36+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "きょうのおはBiz 7月6日(月) 進むパッケージのシフトチェンジ",
+      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-06T11:25:28+09:00",
+      "hoursAgo": 2
+    }
+  ]
 }
