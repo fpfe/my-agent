@@ -1,55 +1,48 @@
 {
-  "updatedAt": "2026-07-08T04:00:52.670078+09:00",
-  "updatedAtJST": "2026/07/08 04:00 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-08T06:23:02.156644+09:00",
+  "updatedAtJST": "2026/07/08 06:23 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "株主総会 “物言う株主”の提案最多も賛成率は減少傾向",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171291000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T06:04:34+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "リニア中央新幹線 JR東海が静岡で着工へ 開業へなお課題も",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T05:54:23+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "クロマグロ国際会議8日開幕 新ルール合意で増枠できるか焦点",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171241000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T05:06:45+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "北陸新幹線延伸「『小浜・京都』か『米原』で」大阪表明",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T21:30:05+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "クレジットカードの決済代行「全東信」が破産手続き開始 大阪",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T20:21:32+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "円相場 円高ドル安進む 日米金利差縮小の見方から",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T18:50:40+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "リニア中央新幹線 静岡県知事 県内の着工容認を表明",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170621000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T17:54:53+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "景気動向指数が上昇 景気の基調判断「改善」を維持",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T16:58:38+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "長期金利 2.85％まで上昇 約29年ぶりの高い水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T16:40:56+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "株価 値下がり AIや半導体関連の銘柄が売られる展開に",
-      "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169791000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T16:06:13+09:00",
       "hoursAgo": 11
     }
   ]
