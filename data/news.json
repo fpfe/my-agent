@@ -1,48 +1,48 @@
 {
-  "updatedAt": "2026-07-08T06:23:02.156644+09:00",
-  "updatedAtJST": "2026/07/08 06:23 JST",
+  "updatedAt": "2026-07-08T07:59:53.077947+09:00",
+  "updatedAtJST": "2026/07/08 07:59 JST",
   "totalArticles": 6,
   "articles": [
+    {
+      "title": "バイオディーゼル燃料 トラックで活用の動き進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T06:51:42+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "株主総会 “物言う株主”の提案最多も賛成率は減少傾向",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T06:04:34+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "リニア中央新幹線 JR東海が静岡で着工へ 開業へなお課題も",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T05:54:23+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "クロマグロ国際会議8日開幕 新ルール合意で増枠できるか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T05:06:45+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "北陸新幹線延伸「『小浜・京都』か『米原』で」大阪表明",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T21:30:05+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "クレジットカードの決済代行「全東信」が破産手続き開始 大阪",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T20:21:32+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 円高ドル安進む 日米金利差縮小の見方から",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T18:50:40+09:00",
       "hoursAgo": 11
     }
   ]
