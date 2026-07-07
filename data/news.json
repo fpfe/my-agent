@@ -1,97 +1,97 @@
 {
-  "updatedAt": "2026-07-07T19:54:22.634203+09:00",
-  "updatedAtJST": "2026/07/07 19:54 JST",
+  "updatedAt": "2026-07-07T22:19:59.170445+09:00",
+  "updatedAtJST": "2026/07/07 22:19 JST",
   "totalArticles": 13,
   "articles": [
+    {
+      "title": "北陸新幹線延伸「『小浜・京都』か『米原』で」大阪表明",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171181000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T21:30:05+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "クレジットカードの決済代行「全東信」が破産手続き開始 大阪",
+      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-07T20:21:32+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "円相場 円高ドル安進む 日米金利差縮小の見方から",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015171061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T18:50:40+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "リニア中央新幹線 静岡県知事 県内の着工容認を表明",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T17:54:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "景気動向指数が上昇 景気の基調判断「改善」を維持",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T16:58:38+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "長期金利 2.85％まで上昇 約29年ぶりの高い水準",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T16:40:56+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "株価 値下がり AIや半導体関連の銘柄が売られる展開に",
       "url": "http://www3.nhk.or.jp/news/html/20260706/k10015169791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T16:06:13+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "韓国 サムスン電子 4月～6月営業利益は前年同期比 約19倍",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T15:21:23+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "マイクロソフト 約4800人削減へ 家庭用ゲーム機の部門などで",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170851000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T14:36:46+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "“「骨太」原案で利上げけん制の見方は誤解” 城内成長戦略相",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T14:22:28+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "株価 午前は値下がり AI・半導体関連の銘柄に売り",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T12:05:10+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "5月家計調査 6か月連続で減少 中東情勢など背景に旅行支出減",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T11:20:38+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "トヨタ 米テキサスに約5800億円投資しメキシコから生産移管へ",
       "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-07T10:25:03+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "【きょうのおはBiz 7月7日(火)】AIで変革するドラマ制作",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170551000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T09:36:09+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "5月の実質賃金 前年同月比で1.4％増 5か月連続のプラス",
-      "url": "http://www3.nhk.or.jp/news/html/20260707/k10015170261000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-07T08:31:00+09:00",
       "hoursAgo": 11
     }
   ]
