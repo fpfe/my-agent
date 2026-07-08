@@ -1,111 +1,111 @@
 {
-  "updatedAt": "2026-07-09T00:21:02.987287+09:00",
-  "updatedAtJST": "2026/07/09 00:21 JST",
+  "updatedAt": "2026-07-09T02:28:11.825279+09:00",
+  "updatedAtJST": "2026/07/09 02:28 JST",
   "totalArticles": 15,
   "articles": [
+    {
+      "title": "NY株式市場 ダウ一時800ドル超値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172411000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-09T01:27:19+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "中東情勢が日本経済に影響 NW9広内キャスターが現場取材",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T22:19:13+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "ミニストップ 23億円余りの赤字 客数十分回復せず",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T19:52:39+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "全日空の運航管理施設 首都圏での災害想定し北海道内に新設",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T19:37:35+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "上半期の企業倒産件数 2年連続5000件超 物価高を背景に増加か",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T19:28:46+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "クロマグロ国際会議が開幕 新ルール合意で増枠できるか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T19:27:31+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "新幹線の個室が公開 10月から東海道・山陽の一部車両に導入",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T18:31:10+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "円相場 値下がり アメリカとイランの緊張の高まり受け",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T18:26:59+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "アサヒグループHD 最終利益が36％減 去年のシステム障害の影響",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T18:18:25+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "6月街角景気 2か月連続で上昇 「持ち直しの兆し」上方修正",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T17:22:09+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "ガソリン価格 全国平均169.9円 補助金で170円程度の水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:22:40+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "株価 大きく値下がり AIや半導体関連の過熱感が意識され",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:20:55+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "コメめぐり「需要に応じた生産」明記の改正食糧法が成立",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:03:59+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "長期金利 2.87％まで上昇 1997年5月以来の高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T15:33:35+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "議論呼ぶ「需要に応じた生産」って？ コメ価格 今後どうなる",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T14:53:18+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "【きょうのおはBiz 7月8日(水)】障害者雇用 どう向き合う",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T13:09:54+09:00",
       "hoursAgo": 11
     }
   ]
