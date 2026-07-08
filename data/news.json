@@ -1,98 +1,91 @@
 {
-  "updatedAt": "2026-07-08T16:27:53.369280+09:00",
-  "updatedAtJST": "2026/07/08 16:27 JST",
-  "totalArticles": 13,
+  "updatedAt": "2026-07-08T19:16:37.619121+09:00",
+  "updatedAtJST": "2026/07/08 19:16 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "新幹線の個室が公開 10月から東海道・山陽の一部車両に導入",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171961000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T18:31:10+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 値下がり アメリカとイランの緊張の高まり受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172121000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T18:26:59+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "アサヒグループHD 最終利益が36％減 去年のシステム障害の影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171721000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T18:18:25+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "6月街角景気 2か月連続で上昇 「持ち直しの兆し」上方修正",
+      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-08T17:22:09+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "ガソリン価格 全国平均169.9円 補助金で170円程度の水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:22:40+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "株価 大きく値下がり AIや半導体関連の過熱感が意識され",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:20:55+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "コメめぐり「需要に応じた生産」明記の改正食糧法が成立",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T16:03:59+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "長期金利 2.87％まで上昇 1997年5月以来の高水準",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T15:33:35+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "議論呼ぶ「需要に応じた生産」って？ コメ価格 今後どうなる",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T14:53:18+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "【きょうのおはBiz 7月8日(水)】障害者雇用 どう向き合う",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T13:09:54+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "アサヒグループHD 最終利益が36％減 去年のシステム障害の影響",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171721000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T12:50:19+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "クロマグロ国際会議が開幕 新ルール合意で増枠できるか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T12:16:34+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "ことし5月の経常収支 3.9兆円の黒字 16か月連続",
       "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171541000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-08T10:31:33+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "バイオディーゼル燃料 トラックで活用の動き進む",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171301000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T06:51:42+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "株主総会 “物言う株主”の提案最多も賛成率は減少傾向",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T06:04:34+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "リニア中央新幹線 JR東海が静岡で着工へ 開業へなお課題も",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171231000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T05:54:23+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "クロマグロ国際会議8日開幕 新ルール合意で増枠できるか焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015171241000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T05:06:45+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
