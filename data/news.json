@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-07-09T08:06:30.661690+09:00",
-  "updatedAtJST": "2026/07/09 08:06 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-09T11:55:00.176870+09:00",
+  "updatedAtJST": "2026/07/09 11:55 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "株価 一時1500円以上値上がり 半導体関連 買い戻す動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172501000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-09T10:20:57+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "長期金利2.88％まで上昇 1996年11月以来29年8か月ぶりの水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-09T09:44:41+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NY株式市場 ダウ 570ドル余り値下がり イラン情勢への懸念で",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T07:08:00+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "中東情勢が日本経済に影響 NW9広内キャスターが現場取材",
-      "url": "http://www3.nhk.or.jp/news/html/20260708/k10015172261000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-08T22:19:13+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 4
     }
   ]
 }
