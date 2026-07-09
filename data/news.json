@@ -1,55 +1,34 @@
 {
-  "updatedAt": "2026-07-10T05:46:00.357057+09:00",
-  "updatedAtJST": "2026/07/10 05:46 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-10T07:21:39.670463+09:00",
+  "updatedAtJST": "2026/07/10 07:21 JST",
+  "totalArticles": 4,
   "articles": [
     {
       "title": "破産手続き開始の全東信 預金残高の水増しなど粉飾決算の疑い",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T05:14:37+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "停戦掲げる覚書の行方は NW9広内キャスターが専門家に聞く",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T21:53:26+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "三菱自 人型ロボット開発・量産化へ 東大発ベンチャーと提携",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172991000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T20:05:20+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "「全東信」破産手続き 飲食店や地方銀行などに影響広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T19:38:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 小幅に値下がり イラン情勢 先行き不透明との見方から",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172931000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-09T18:48:59+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "NTTドコモが銀行業に参入 店舗とデジタルサービス強化【QAも】",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172841000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-09T18:46:25+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日銀 地域経済報告 全地域 判断据え置き",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172871000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-09T18:19:48+09:00",
       "hoursAgo": 11
     }
   ]
