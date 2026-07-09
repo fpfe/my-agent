@@ -1,77 +1,91 @@
 {
-  "updatedAt": "2026-07-09T19:24:03.717336+09:00",
-  "updatedAtJST": "2026/07/09 19:24 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-09T22:49:05.777996+09:00",
+  "updatedAtJST": "2026/07/09 22:49 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "停戦掲げる覚書の行方は NW9広内キャスターが専門家に聞く",
+      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-09T21:53:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "三菱自 人型ロボット開発・量産化へ 東大発ベンチャーと提携",
+      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172991000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-09T20:05:20+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "「全東信」破産手続き 飲食店や地方銀行などに影響広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172661000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-09T19:12:50+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-07-09T19:38:24+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "円相場 小幅に値下がり イラン情勢 先行き不透明との見方から",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172931000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T18:48:59+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "NTTドコモが銀行業に参入 店舗とデジタルサービス強化【QAも】",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172841000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T18:46:25+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
-      "title": "日銀 地域経済報告 全地域 判断据え置き 食料品など値上げ検討",
+      "title": "日銀 地域経済報告 全地域 判断据え置き",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T18:19:48+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "長期金利2.９％まで上昇 1996年11月以来29年8か月ぶりの水準",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T17:09:49+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "株価 値上がりも長期金利上昇で午後は伸び悩み",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T16:35:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "スズキ 50万台余リコール 「スペーシア」など4車種",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T15:22:10+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "カルビー 白黒化したパッケージの一部 表面のみカラーに戻す",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T15:06:15+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "【きょうのおはBiz 7月9日(木)】改正食糧法 3つのポイント解説",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T15:01:44+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "中国 6月の生産者物価指数 3年11か月ぶり高水準 企業に痛手か",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T13:22:17+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
