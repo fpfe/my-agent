@@ -1,70 +1,63 @@
 {
-  "updatedAt": "2026-07-11T01:55:23.362706+09:00",
-  "updatedAtJST": "2026/07/11 01:55 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-07-11T03:22:34.205838+09:00",
+  "updatedAtJST": "2026/07/11 03:22 JST",
+  "totalArticles": 8,
   "articles": [
     {
       "title": "ソフトバンクやPayPayなど セブン＆アイHDに出資を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260711/k10015174161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-11T00:14:29+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "スーパーのコメ平均価格 約1年半ぶりに3500円を下回る",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T19:49:03+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "赤潮被害受け 熊本と鹿児島の知事ら 養殖業者支援など国に要望",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T19:37:44+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "円相場 一時1円以上円高 年金資金めぐる片山財務相の発言受け",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T19:27:44+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "「全東信」破産 赤澤経産相 全国378か所に相談窓口を設置",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T19:01:25+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "「日本茶」国のブランド保護制度に登録 海外産と差別化ねらう",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T17:01:13+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "モバイルSuicaの障害 アクセス急増が原因",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T16:56:23+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 一時1600円超値上がり AI・半導体中心に買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T16:54:59+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "地方税収 初の50兆円超 5年連続過去最高更新 総務省",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173551000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T14:00:29+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
