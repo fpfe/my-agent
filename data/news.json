@@ -1,21 +1,56 @@
 {
-  "updatedAt": "2026-07-10T09:03:53.410178+09:00",
-  "updatedAtJST": "2026/07/10 09:03 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-10T13:51:09.026659+09:00",
+  "updatedAtJST": "2026/07/10 13:51 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "「全東信」破産 赤澤経産相 全国378か所に相談窓口を設置",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T12:54:31+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【きょうのおはBiz 7月10日(金)】全東信 破産 支援策は",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T12:46:38+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時1600円超値上がり AI・半導体中心に買い注文広がる",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173461000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T12:20:56+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "破産手続き開始の全東信 預金残高の水増しなど粉飾決算の疑い",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173041000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-10T05:14:37+09:00",
-      "hoursAgo": 3
+      "publishedAt": "2026-07-10T12:11:48+09:00",
+      "hoursAgo": 1
     },
     {
-      "title": "停戦掲げる覚書の行方は NW9広内キャスターが専門家に聞く",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172741000.html",
+      "title": "日銀に金融政策方向性“事前に示すことない” 城内成長戦略相",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173481000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-09T21:53:26+09:00",
-      "hoursAgo": 11
+      "publishedAt": "2026-07-10T11:59:03+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "6月企業物価指数 前年同月比7.1％上昇 価格転嫁進み大幅な上昇",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173361000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T11:35:32+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ペルシャ湾内の日本関係船舶 新たに22隻がホルムズ海峡通過",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T11:22:55+09:00",
+      "hoursAgo": 2
     }
   ]
 }
