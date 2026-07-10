@@ -1,34 +1,20 @@
 {
-  "updatedAt": "2026-07-10T07:21:39.670463+09:00",
-  "updatedAtJST": "2026/07/10 07:21 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-10T09:03:53.410178+09:00",
+  "updatedAtJST": "2026/07/10 09:03 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "破産手続き開始の全東信 預金残高の水増しなど粉飾決算の疑い",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T05:14:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "停戦掲げる覚書の行方は NW9広内キャスターが専門家に聞く",
       "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-09T21:53:26+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "三菱自 人型ロボット開発・量産化へ 東大発ベンチャーと提携",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172991000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-09T20:05:20+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "「全東信」破産手続き 飲食店や地方銀行などに影響広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260709/k10015172661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-09T19:38:24+09:00",
       "hoursAgo": 11
     }
   ]
