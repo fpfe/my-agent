@@ -1,42 +1,21 @@
 {
-  "updatedAt": "2026-07-11T07:01:01.576778+09:00",
-  "updatedAtJST": "2026/07/11 07:01 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-07-11T08:56:26.359306+09:00",
+  "updatedAtJST": "2026/07/11 08:56 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "韓国半導体 SKハイニックス ナスダック上場 約4兆3000億円調達",
+      "url": "http://www3.nhk.or.jp/news/html/20260711/k10015174281000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-11T08:48:40+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ソフトバンクやPayPayなど セブン＆アイHDに出資を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260711/k10015174161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-11T00:14:29+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "スーパーのコメ平均価格 約1年半ぶりに3500円を下回る",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173611000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T19:49:03+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "赤潮被害受け 熊本と鹿児島の知事ら 養殖業者支援など国に要望",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173871000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T19:37:44+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 一時1円以上円高 年金資金めぐる片山財務相の発言受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T19:27:44+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "「全東信」破産 赤澤経産相 全国378か所に相談窓口を設置",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T19:01:25+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 8
     }
   ]
 }
