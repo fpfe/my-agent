@@ -1,77 +1,98 @@
 {
-  "updatedAt": "2026-07-10T17:21:51.368794+09:00",
-  "updatedAtJST": "2026/07/10 17:21 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-10T20:51:07.237786+09:00",
+  "updatedAtJST": "2026/07/10 20:51 JST",
+  "totalArticles": 13,
   "articles": [
+    {
+      "title": "スーパーのコメ平均価格 約1年半ぶりに3500円を下回る",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T19:49:03+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "赤潮被害受け 熊本と鹿児島の知事ら 養殖業者支援など国に要望",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173871000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T19:37:44+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 一時1円以上円高 年金資金めぐる片山財務相の発言受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T19:27:44+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「全東信」破産 赤澤経産相 全国378か所に相談窓口を設置",
+      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-10T19:01:25+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "「日本茶」国のブランド保護制度に登録 海外産と差別化ねらう",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T17:01:13+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "モバイルSuicaの障害 アクセス急増が原因",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173731000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T16:56:23+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "株価 一時1600円超値上がり AI・半導体中心に買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T16:54:59+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "地方税収 初の50兆円超 5年連続過去最高更新 総務省",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T14:00:29+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "「全東信」破産 赤澤経産相 全国378か所に相談窓口を設置",
-      "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-10T12:54:31+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz 7月10日(金)】全東信 破産 支援策は",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T12:46:38+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "破産手続き開始の全東信 預金残高の水増しなど粉飾決算の疑い",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T12:11:48+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "日銀に金融政策方向性“事前に示すことない” 城内成長戦略相",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T11:59:03+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "6月企業物価指数 前年同月比7.1％上昇 価格転嫁進み大幅な上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T11:35:32+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "ペルシャ湾内の日本関係船舶 新たに22隻がホルムズ海峡通過",
       "url": "http://www3.nhk.or.jp/news/html/20260710/k10015173451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-10T11:22:55+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     }
   ]
 }
