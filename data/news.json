@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-07-11T11:50:19.837456+09:00",
-  "updatedAtJST": "2026/07/11 11:50 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-11T14:39:58.055723+09:00",
+  "updatedAtJST": "2026/07/11 14:39 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "韓国半導体 SKハイニックス ナスダック上場 約4兆3000億円調達",
       "url": "http://www3.nhk.or.jp/news/html/20260711/k10015174281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-11T08:48:40+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "ソフトバンクやPayPayなど セブン＆アイHDに出資を検討",
-      "url": "http://www3.nhk.or.jp/news/html/20260711/k10015174161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-11T00:14:29+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
