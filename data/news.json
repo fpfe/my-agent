@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-12T14:57:14.973415+09:00",
-  "updatedAtJST": "2026/07/12 14:57 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-12T17:24:05.655570+09:00",
+  "updatedAtJST": "2026/07/12 17:24 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "日本ではホルムズ海峡を通らない代替ルートでの原油調達が進む",
+      "url": "http://www3.nhk.or.jp/news/html/20260712/k10015175001000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-12T16:21:28+09:00",
+      "hoursAgo": 1
+    }
+  ]
 }
