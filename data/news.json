@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-13T06:48:57.932144+09:00",
-  "updatedAtJST": "2026/07/13 06:48 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-13T07:47:03.036118+09:00",
+  "updatedAtJST": "2026/07/13 07:47 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "ホルムズ海峡封鎖表明で週明けの金融市場 影響に注目",
+      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175161000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-13T06:48:46+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
