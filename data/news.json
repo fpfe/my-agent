@@ -1,55 +1,48 @@
 {
-  "updatedAt": "2026-07-14T03:42:28.156282+09:00",
-  "updatedAtJST": "2026/07/14 03:42 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-14T05:13:46.692094+09:00",
+  "updatedAtJST": "2026/07/14 05:13 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "歴史的な円安「経済に悪い影響」61％ NHK世論調査",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015175471000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T05:02:25+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "韓国株価8％超の大幅な下落 売買を一時的に中断する措置も",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T21:58:04+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "LINEヤフー ゲーム利用者に関する情報約710万件流出",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015176021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:55:52+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "ビスケットや炭酸飲料など値上げ 包装資材や原材料価格上昇で",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:23:14+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "68％「資金繰り悪化」 「全東信」破産手続きで調査 飲食関連",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:20:12+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "ホルムズ海峡代替ルートでの原油調達進める 資源エネルギー庁",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T18:29:47+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "三菱UFJの株価上昇 時価総額が国内首位に 長期金利上昇の影響",
-      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175791000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-13T17:13:15+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 一時1900円余の大幅な値下がり イラン情勢で警戒感広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175501000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-13T16:43:57+09:00",
       "hoursAgo": 10
     }
   ]
