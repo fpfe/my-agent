@@ -1,42 +1,56 @@
 {
-  "updatedAt": "2026-07-14T06:55:21.314108+09:00",
-  "updatedAtJST": "2026/07/14 06:55 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-07-14T07:55:22.477159+09:00",
+  "updatedAtJST": "2026/07/14 07:55 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "国内市場縮小の中 ビール各社で海外事業強化の動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T07:06:02+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ナスダック株価指数1.5％超の下落 日韓ハイテク株安や原油高で",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176201000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T07:02:35+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "歴史的な円安「経済に悪い影響」61％ NHK世論調査",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015175471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T05:02:25+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "韓国株価8％超の大幅な下落 売買を一時的に中断する措置も",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T21:58:04+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "LINEヤフー ゲーム利用者に関する情報約710万件流出",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015176021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:55:52+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "ビスケットや炭酸飲料など値上げ 包装資材や原材料価格上昇で",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:23:14+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "68％「資金繰り悪化」 「全東信」破産手続きで調査 飲食関連",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T20:20:12+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
