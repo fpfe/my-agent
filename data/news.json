@@ -1,28 +1,35 @@
 {
-  "updatedAt": "2026-07-13T11:41:48.627089+09:00",
-  "updatedAtJST": "2026/07/13 11:41 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-13T15:17:04.598672+09:00",
+  "updatedAtJST": "2026/07/13 15:17 JST",
+  "totalArticles": 4,
   "articles": [
     {
-      "title": "株価 一時1000円以上値下がり 原油先物価格の上昇などで警戒感",
+      "title": "株価 一時1500円以上値下がり 原油先物価格上昇 警戒感広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175501000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-13T11:13:26+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-07-13T13:53:29+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "【きょうのおはBiz 7月13日(月)】過熱するコンビニ衣料品",
+      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175481000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-13T13:45:33+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "円相場 いくぶん円安進む 原油先物価格の上昇受け警戒感",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T10:20:54+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "ホルムズ海峡封鎖表明で週明けの金融市場 影響に注目",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T06:48:46+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     }
   ]
 }
