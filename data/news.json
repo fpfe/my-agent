@@ -1,35 +1,42 @@
 {
-  "updatedAt": "2026-07-13T15:17:04.598672+09:00",
-  "updatedAtJST": "2026/07/13 15:17 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-13T19:24:48.386362+09:00",
+  "updatedAtJST": "2026/07/13 19:24 JST",
+  "totalArticles": 5,
   "articles": [
     {
-      "title": "株価 一時1500円以上値下がり 原油先物価格上昇 警戒感広がる",
+      "title": "ホルムズ海峡代替ルートでの原油調達進める 資源エネルギー庁",
+      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175821000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-13T18:29:47+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "三菱UFJの株価上昇 時価総額が国内首位に 長期金利上昇の影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175791000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-13T17:13:15+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価 一時1900円余の大幅な値下がり イラン情勢で警戒感広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175501000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-13T13:53:29+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-07-13T16:43:57+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "【きょうのおはBiz 7月13日(月)】過熱するコンビニ衣料品",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T13:45:33+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
-      "title": "円相場 いくぶん円安進む 原油先物価格の上昇受け警戒感",
+      "title": "円相場 原油先物価格上昇で いくぶん円安進む",
       "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175431000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-13T10:20:54+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "ホルムズ海峡封鎖表明で週明けの金融市場 影響に注目",
-      "url": "http://www3.nhk.or.jp/news/html/20260713/k10015175161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-13T06:48:46+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     }
   ]
 }
