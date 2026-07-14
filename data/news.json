@@ -1,112 +1,105 @@
 {
-  "updatedAt": "2026-07-14T23:49:36.146253+09:00",
-  "updatedAtJST": "2026/07/14 23:49 JST",
-  "totalArticles": 15,
+  "updatedAt": "2026-07-15T01:13:46.159055+09:00",
+  "updatedAtJST": "2026/07/15 01:13 JST",
+  "totalArticles": 14,
   "articles": [
     {
       "title": "米物価上昇率3.5％ 伸び率縮小で早期利上げ観測 やや後退",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015177041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T23:17:54+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "東和銀行 全東信破産手続き受け 債権処理で有価証券売却へ",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T21:12:36+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "ソフトバンクG 孫社長 “AIエージェント普及で景色変わる”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:59:32+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "日本郵便 収賄事件で新たに1人の関与判明 懲戒解雇に",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:07:52+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "クロマグロ国際会議 漁獲枠拡大めぐり合意に至らず",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T19:15:03+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "中古スマホ販売台数 過去最高更新 新品スマホの価格上昇背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T18:46:06+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T18:31:38+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "関西財界 10月に中国訪問を計画 政府幹部との会談は未定",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T18:19:29+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "JR東日本 新たな検査専用車両「SOAR」発表 2029年度中に導入へ",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T18:13:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "経産省 光通信用半導体の量産計画に最大約1600億円補助",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T18:11:14+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "株価 値上がり 半導体関連の銘柄 買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T16:59:50+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "片山財務相 GPIF運用割合 “適時適切に検証を行うルール”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T15:16:22+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "AIの雇用喪失リスク挙げ「いま行動を」ノーベル賞受賞者ら声明",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T14:25:54+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "全東信破産手続き受け 赤澤経産相“代行業者の実態調査検討”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T14:18:17+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "きょうのおはBiz 7月14日(火) 日本の工場に中国製ロボットが",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176361000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T12:24:43+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
