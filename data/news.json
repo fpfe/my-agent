@@ -1,77 +1,91 @@
 {
-  "updatedAt": "2026-07-14T17:02:20.928005+09:00",
-  "updatedAtJST": "2026/07/14 17:02 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-14T19:44:33.251198+09:00",
+  "updatedAtJST": "2026/07/14 19:44 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "クロマグロ国際会議 漁獲枠拡大めぐり合意に至らず",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T19:15:03+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "中古スマホ販売台数 過去最高更新 新品スマホの価格上昇背景に",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T18:46:06+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176771000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T18:31:38+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "関西財界 10月に中国訪問を計画 政府幹部との会談は未定",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T18:19:29+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "JR東日本 新たな検査専用車両「SOAR」発表 2029年度中に導入へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T18:13:56+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "経産省 光通信用半導体の量産計画に最大約1600億円補助",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176701000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T18:11:14+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "株価 値上がり 半導体関連の銘柄 買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T16:59:50+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "クロマグロ国際会議 漁獲枠拡大めぐり合意に至らず",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T16:47:28+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "ソフトバンクG 孫社長 “AIエージェント普及で景色変わる”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T15:34:20+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "片山財務相 GPIF運用割合 “適時適切に検証を行うルール”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T15:16:22+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "AIの雇用喪失リスク挙げ「いま行動を」ノーベル賞受賞者ら声明",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T14:25:54+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "全東信破産手続き受け 赤澤経産相“代行業者の実態調査検討”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176551000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T14:18:17+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "きょうのおはBiz 7月14日(火) 日本の工場に中国製ロボットが",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T12:24:43+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "国内市場縮小の中 ビール各社で海外事業強化の動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T07:06:02+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "ナスダック株価指数1.5％超の下落 日韓ハイテク株安や原油高で",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176201000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T07:02:35+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "歴史的な円安「経済に悪い影響」61％ NHK世論調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015175471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T05:02:25+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
