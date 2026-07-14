@@ -1,28 +1,56 @@
 {
-  "updatedAt": "2026-07-14T11:25:25.912286+09:00",
-  "updatedAtJST": "2026/07/14 11:25 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-14T14:28:58.467049+09:00",
+  "updatedAtJST": "2026/07/14 14:28 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "AIの雇用喪失リスク挙げ「いま行動を」ノーベル賞受賞者ら声明",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T14:25:54+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "全東信破産手続き受け 赤澤経産相“代行業者の実態調査検討”",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176551000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T14:18:17+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 午前は値下がり イラン情勢の先行き不透明との見方で",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T12:27:12+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "きょうのおはBiz 7月14日(火) 日本の工場に中国製ロボットが",
+      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176361000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-14T12:24:43+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "国内市場縮小の中 ビール各社で海外事業強化の動き",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T07:06:02+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "ナスダック株価指数1.5％超の下落 日韓ハイテク株安や原油高で",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176201000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T07:02:35+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "歴史的な円安「経済に悪い影響」61％ NHK世論調査",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015175471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T05:02:25+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
