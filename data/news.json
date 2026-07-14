@@ -1,77 +1,56 @@
 {
-  "updatedAt": "2026-07-15T05:10:17.248720+09:00",
-  "updatedAtJST": "2026/07/15 05:10 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-15T06:56:11.458505+09:00",
+  "updatedAtJST": "2026/07/15 06:56 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "国内のEV乗用車の販売台数 前年同期比2倍余増 1月～6月",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176951000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T06:44:23+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "政府 ナフサの供給対策検討 イラン情勢による流通影響受け",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T06:42:52+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "米物価上昇率3.5％ 伸び率縮小で早期利上げ観測 やや後退",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015177041000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-14T23:17:54+09:00",
-      "hoursAgo": 5
+      "publishedAt": "2026-07-15T05:45:26+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "東和銀行 全東信破産手続き受け 債権処理で有価証券売却へ",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T21:12:36+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ソフトバンクG 孫社長 “AIエージェント普及で景色変わる”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:59:32+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "日本郵便 収賄事件で新たに1人の関与判明 懲戒解雇に",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:07:52+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "クロマグロ国際会議 漁獲枠拡大めぐり合意に至らず",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T19:15:03+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "中古スマホ販売台数 過去最高更新 新品スマホの価格上昇背景に",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176351000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T18:46:06+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176771000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T18:31:38+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "関西財界 10月に中国訪問を計画 政府幹部との会談は未定",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T18:19:29+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "JR東日本 新たな検査専用車両「SOAR」発表 2029年度中に導入へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T18:13:56+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "経産省 光通信用半導体の量産計画に最大約1600億円補助",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176701000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T18:11:14+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
