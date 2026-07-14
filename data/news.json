@@ -1,55 +1,55 @@
 {
-  "updatedAt": "2026-07-15T06:56:11.458505+09:00",
-  "updatedAtJST": "2026/07/15 06:56 JST",
+  "updatedAt": "2026-07-15T07:57:24.012760+09:00",
+  "updatedAtJST": "2026/07/15 07:57 JST",
   "totalArticles": 7,
   "articles": [
+    {
+      "title": "租税特別措置 廃止の方向性は1件にとどまる 各省庁の自己点検",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176961000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T07:09:44+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "国内のEV乗用車の販売台数 前年同期比2倍余増 1月～6月",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T06:44:23+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "政府 ナフサの供給対策検討 イラン情勢による流通影響受け",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T06:42:52+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "米物価上昇率3.5％ 伸び率縮小で早期利上げ観測 やや後退",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015177041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T05:45:26+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "東和銀行 全東信破産手続き受け 債権処理で有価証券売却へ",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T21:12:36+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "ソフトバンクG 孫社長 “AIエージェント普及で景色変わる”",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:59:32+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "日本郵便 収賄事件で新たに1人の関与判明 懲戒解雇に",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-14T20:07:52+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "クロマグロ国際会議 漁獲枠拡大めぐり合意に至らず",
-      "url": "http://www3.nhk.or.jp/news/html/20260714/k10015176661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-14T19:15:03+09:00",
       "hoursAgo": 11
     }
   ]
