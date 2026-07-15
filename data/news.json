@@ -1,91 +1,98 @@
 {
-  "updatedAt": "2026-07-15T21:13:39.687901+09:00",
-  "updatedAtJST": "2026/07/15 21:13 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-07-15T23:49:25.764511+09:00",
+  "updatedAtJST": "2026/07/15 23:49 JST",
+  "totalArticles": 13,
   "articles": [
+    {
+      "title": "石油連盟会長 “中東産油国のパイプライン増強へ支援検討”",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177871000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T22:05:37+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "ニチレイ サイバー攻撃を公表 外食企業や食品メーカーに影響",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T20:58:18+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "北陸新幹線延伸ルート “「桂川案」が望ましい” 与党委員会",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T18:44:54+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "円相場 ドルに対して小幅な値動き",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T18:25:24+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "上半期の訪日客は5年ぶり減少 専門家「今後は“成熟期”へ」",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T18:13:58+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "中国 GDP 4～6月は前年同期比＋4.3％ 景気の減速傾向鮮明に",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T18:13:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "株価 値上がり 半導体の需要拡大の見方から関連銘柄値上がり",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T16:48:24+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "ガソリン全国平均169.9円 政府補助金で170円水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T16:39:26+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "きょうのおはBiz 7月15日(水) AIで支えるスーパーマーケット",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T16:12:34+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "暗号資産を「金融商品」に位置づける改正金融商品取引法が成立",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T16:06:22+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "暑さ対策も 最新の農業設備集めた展示会  東京 江東区",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T14:51:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "日銀 10年前のマイナス金利政策導入した会合の議事録を公開",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177301000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T12:46:42+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "ケンタッキー食材納入に遅れ ニチレイで発生のシステム障害で",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T12:34:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
