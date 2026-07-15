@@ -1,42 +1,70 @@
 {
-  "updatedAt": "2026-07-15T11:35:51.267120+09:00",
-  "updatedAtJST": "2026/07/15 11:35 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-07-15T14:30:05.114933+09:00",
+  "updatedAtJST": "2026/07/15 14:30 JST",
+  "totalArticles": 9,
   "articles": [
     {
       "title": "北陸新幹線延伸ルート “「桂川案」が望ましい” 与党委員会",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177231000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-15T11:02:11+09:00",
+      "publishedAt": "2026-07-15T14:10:14+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "株価 値上がり AI・半導体関連の業績 堅調に推移との見方から",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177371000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T13:17:31+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "中国 GDP 4～6月は前年同期比＋4.3％ 景気の減速傾向鮮明に",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177331000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T13:14:21+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日銀 10年前のマイナス金利政策導入した会合の議事録を公開",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177301000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T12:46:42+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ケンタッキー 一部店舗で営業休止の可能性 委託先システム障害",
+      "url": "http://www3.nhk.or.jp/news/html/20260715/k10015177391000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-15T12:34:01+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "租税特別措置 廃止の方向性は1件にとどまる 各省庁の自己点検",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T07:09:44+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "国内のEV乗用車の販売台数 前年同期比2倍余増 1月～6月",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T06:44:23+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "政府 ナフサの供給対策検討 イラン情勢による流通影響受け",
       "url": "http://www3.nhk.or.jp/news/html/20260715/k10015176971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T06:42:52+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "米物価上昇率3.5％ 伸び率縮小で早期利上げ観測 やや後退",
       "url": "http://www3.nhk.or.jp/news/html/20260714/k10015177041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-15T05:45:26+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     }
   ]
 }
