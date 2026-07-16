@@ -1,84 +1,77 @@
 {
-  "updatedAt": "2026-07-17T00:00:43.946434+09:00",
-  "updatedAtJST": "2026/07/17 00:00 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-07-17T02:13:54.104674+09:00",
+  "updatedAtJST": "2026/07/17 02:13 JST",
+  "totalArticles": 10,
   "articles": [
     {
       "title": "米 6月の小売業売上高 前月比0.2％増 消費堅調続くか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T23:57:12+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T23:47:08+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "台湾 TSMC 4-6月期決算 売り上げ 最終利益 ともに過去最高更新",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T21:15:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "全東信破産 債権額124億円超の近畿産業信用組合が陳謝",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T20:24:10+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ニチレイ サイバー攻撃 広がる影響 あすから順次業務再開へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015177911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T19:13:15+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "円相場 小幅な値動き ドルの売り買いが交錯",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T18:26:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "1年後の物価「上がる」の見方が過去最高に イラン情勢背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T17:11:49+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "株価 一時 2200円以上値下がり 半導体関連など売り注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T16:18:22+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ダイハツ 軽トラック3車種 29万台余リコール",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T15:36:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "石油化学製品6月生産量 公表対象品目の半分で前年同月上回る",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T15:06:49+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "きょうのおはBiz 7月16日(木) 暗号資産の規制 大幅に見直し",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T13:41:46+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
