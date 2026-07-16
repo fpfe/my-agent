@@ -1,62 +1,48 @@
 {
-  "updatedAt": "2026-07-17T04:08:12.290736+09:00",
-  "updatedAtJST": "2026/07/17 04:08 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-17T05:55:59.839962+09:00",
+  "updatedAtJST": "2026/07/17 05:55 JST",
+  "totalArticles": 6,
   "articles": [
     {
       "title": "米 6月の小売業売上高 前月比0.2％増 消費堅調続くか焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T23:57:12+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T23:47:08+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "台湾 TSMC 4-6月期決算 売り上げ 最終利益 ともに過去最高更新",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T21:15:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "全東信破産 債権額124億円超の近畿産業信用組合が陳謝",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T20:24:10+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ニチレイ サイバー攻撃 広がる影響 あすから順次業務再開へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015177911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T19:13:15+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 小幅な値動き ドルの売り買いが交錯",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-16T18:26:42+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "1年後の物価「上がる」の見方が過去最高に イラン情勢背景に",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178451000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T17:11:49+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 一時 2200円以上値下がり 半導体関連など売り注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178121000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T16:18:22+09:00",
       "hoursAgo": 11
     }
   ]
