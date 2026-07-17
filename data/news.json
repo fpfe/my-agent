@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-07-18T07:49:13.141248+09:00",
-  "updatedAtJST": "2026/07/18 07:49 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-18T08:51:12.670933+09:00",
+  "updatedAtJST": "2026/07/18 08:51 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "EU 「排出量取引制度」排出規制の緩和などを提案 産業界に配慮",
+      "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-18T08:19:04+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "ナスダック株価指数 一時2％超の下落 中国AIへの警戒感で売り",
+      "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-18T08:15:16+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "ニチレイ 来週正常化目指す方針 流通業界の課題指摘する声も",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015179771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T05:05:11+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "キオクシア 米で約371億円の賠償の評決 控訴含め争う方針",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179581000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T20:29:53+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 3
     }
   ]
 }
