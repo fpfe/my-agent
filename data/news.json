@@ -1,62 +1,34 @@
 {
-  "updatedAt": "2026-07-18T05:53:36.380431+09:00",
-  "updatedAtJST": "2026/07/18 05:53 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-18T06:52:56.038237+09:00",
+  "updatedAtJST": "2026/07/18 06:52 JST",
+  "totalArticles": 4,
   "articles": [
     {
       "title": "ニチレイ 来週正常化目指す方針 流通業界の課題指摘する声も",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015179771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T05:05:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "キオクシア 米で約371億円の賠償の評決 控訴含め争う方針",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T20:29:53+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T19:39:00+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "ニチレイ 出庫業務など順次再開 “来週中の正常化目指す”",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T19:30:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "浜岡原発データ不正「原子力事業への信頼失墜」電事連会長",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179491000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T18:36:26+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "全東信破産 手続き開始後も一時利用可能に 数千万円が決済",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179501000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T18:31:18+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "スーパー コメ平均価格 5キロ3403円に下落 1年9か月ぶり水準に",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179471000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T18:26:58+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "円相場 小幅な値動き 売り買いが交錯",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T18:25:48+09:00",
       "hoursAgo": 11
     }
   ]
