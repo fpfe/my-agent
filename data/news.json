@@ -1,34 +1,20 @@
 {
-  "updatedAt": "2026-07-18T06:52:56.038237+09:00",
-  "updatedAtJST": "2026/07/18 06:52 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-18T07:49:13.141248+09:00",
+  "updatedAtJST": "2026/07/18 07:49 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "ニチレイ 来週正常化目指す方針 流通業界の課題指摘する声も",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015179771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T05:05:11+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "キオクシア 米で約371億円の賠償の評決 控訴含め争う方針",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T20:29:53+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T19:39:00+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "ニチレイ 出庫業務など順次再開 “来週中の正常化目指す”",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T19:30:24+09:00",
       "hoursAgo": 11
     }
   ]
