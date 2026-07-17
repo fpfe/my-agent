@@ -1,49 +1,56 @@
 {
-  "updatedAt": "2026-07-17T15:13:44.238441+09:00",
-  "updatedAtJST": "2026/07/17 15:13 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-07-17T18:08:00.095891+09:00",
+  "updatedAtJST": "2026/07/17 18:08 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "システム障害のニチレイ 出庫などのシステムの稼働 一部再開",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T17:57:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "トラック運送の「適正原価」策定へ 有識者検討会で議論開始",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T17:42:26+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時4100円超下落 取引時間中の下落幅 過去3番目の大きさ",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178951000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T16:31:39+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "クロマグロの漁獲枠 “他国などと連携し協議再開を” 鈴木農相",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T15:44:10+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "日本で開発された種苗 海外流出を防止へ 改正種苗法が成立",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T14:26:35+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "日本の資源開発大手 インドネシアLNG開発に向けた準備で式典",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T14:18:24+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 午後も一段と売り注文膨らむ 一時4000円以上値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T13:44:37+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "【きょうのおはBiz 7月17日(金)】解説 給付付き税額控除とは",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T13:28:04+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "システム障害のニチレイ 出庫などのシステムの稼働 一部再開",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T12:03:40+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "ニチレイ きょう業務再開予定 物流網正常化できるかが焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178791000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T06:04:24+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 4
     }
   ]
 }
