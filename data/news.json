@@ -1,90 +1,69 @@
 {
-  "updatedAt": "2026-07-18T02:09:53.864982+09:00",
-  "updatedAtJST": "2026/07/18 02:09 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-07-18T04:06:01.201724+09:00",
+  "updatedAtJST": "2026/07/18 04:06 JST",
+  "totalArticles": 9,
   "articles": [
     {
       "title": "キオクシア 米で約371億円の賠償の評決 控訴含め争う方針",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179581000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T20:29:53+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
       "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T19:39:00+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "ニチレイ 出庫業務など順次再開 “来週中の正常化目指す”",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T19:30:24+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "浜岡原発データ不正「原子力事業への信頼失墜」電事連会長",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T18:36:26+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "全東信破産 手続き開始後も一時利用可能に 数千万円が決済",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T18:31:18+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "スーパー コメ平均価格 5キロ3403円に下落 1年9か月ぶり水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179471000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T18:26:58+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "円相場 小幅な値動き 売り買いが交錯",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T18:25:48+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "トラック運送の「適正原価」策定へ 有識者検討会で議論開始",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T17:42:26+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "株価 一時4100円超下落 取引時間中の下落幅 過去3番目の大きさ",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T16:31:39+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "クロマグロの漁獲枠 “他国などと連携し協議再開を” 鈴木農相",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T15:44:10+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "日本で開発された種苗 海外流出を防止へ 改正種苗法が成立",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T14:26:35+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日本の資源開発大手 インドネシアLNG開発に向けた準備で式典",
-      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015179271000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-17T14:18:24+09:00",
       "hoursAgo": 11
     }
   ]
