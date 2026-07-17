@@ -1,35 +1,28 @@
 {
-  "updatedAt": "2026-07-17T08:57:52.918904+09:00",
-  "updatedAtJST": "2026/07/17 08:57 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-17T12:22:03.564827+09:00",
+  "updatedAtJST": "2026/07/17 12:22 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "システム障害のニチレイ 出庫などのシステムの稼働 一部再開",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178981000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T12:03:40+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時2500円以上値下がり グーグルAI開発遅れの報道などで",
+      "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178951000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-17T09:51:00+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "ニチレイ きょう業務再開予定 物流網正常化できるかが焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260717/k10015178791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-17T06:04:24+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "米 6月の小売業売上高 前月比0.2％増 消費堅調続くか焦点",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T23:57:12+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "国産AI開発「ノエトラ」 エヌビディアから新システム導入へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178411000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T23:47:08+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "台湾 TSMC 4-6月期決算 売り上げ 最終利益 ともに過去最高更新",
-      "url": "http://www3.nhk.or.jp/news/html/20260716/k10015178681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-16T21:15:21+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
