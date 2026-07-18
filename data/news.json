@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-07-18T23:51:03.834477+09:00",
-  "updatedAtJST": "2026/07/18 23:51 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-19T00:56:00.924851+09:00",
+  "updatedAtJST": "2026/07/19 00:56 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "リニア中央新幹線 静岡県内着工へ 静岡県とJR東海協定締結",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180281000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T19:44:09+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "米アップル 日本でiPhoneの販売価格を約10％値上げ",
-      "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180171000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-18T12:40:21+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 5
     }
   ]
 }
