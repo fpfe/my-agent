@@ -1,28 +1,35 @@
 {
-  "updatedAt": "2026-07-18T18:23:51.666747+09:00",
-  "updatedAtJST": "2026/07/18 18:23 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-18T20:02:01.256634+09:00",
+  "updatedAtJST": "2026/07/18 20:02 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "リニア中央新幹線 静岡県内着工へ 静岡県とJR東海協定締結",
+      "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180281000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-18T19:44:09+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "米アップル 日本でiPhoneの販売価格を約10％値上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T12:40:21+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "EU 「排出量取引制度」排出規制の緩和などを提案 産業界に配慮",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T08:19:04+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "ナスダック株価指数 一時2％超の下落 中国AIへの警戒感で売り",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T08:15:16+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
