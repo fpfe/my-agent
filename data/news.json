@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-18T14:24:29.421986+09:00",
-  "updatedAtJST": "2026/07/18 14:24 JST",
+  "updatedAt": "2026-07-18T16:47:08.033736+09:00",
+  "updatedAtJST": "2026/07/18 16:47 JST",
   "totalArticles": 4,
   "articles": [
     {
@@ -8,28 +8,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T12:40:21+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "EU 「排出量取引制度」排出規制の緩和などを提案 産業界に配慮",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T08:19:04+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "ナスダック株価指数 一時2％超の下落 中国AIへの警戒感で売り",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015180051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T08:15:16+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "ニチレイ 来週正常化目指す方針 流通業界の課題指摘する声も",
       "url": "http://www3.nhk.or.jp/news/html/20260718/k10015179771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-18T05:05:11+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
