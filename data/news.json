@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-20T07:50:46.460769+09:00",
-  "updatedAtJST": "2026/07/20 07:50 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-20T08:55:31.399194+09:00",
+  "updatedAtJST": "2026/07/20 08:55 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "NY原油市場 1バレル＝85ドル台に上昇 1か月ぶりの高値水準",
+      "url": "http://www3.nhk.or.jp/news/html/20260720/k10015181071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-20T08:02:43+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
