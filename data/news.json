@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-21T05:19:13.053126+09:00",
-  "updatedAtJST": "2026/07/21 05:19 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-21T06:58:24.634206+09:00",
+  "updatedAtJST": "2026/07/21 06:58 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "トヨタ 近健太社長 “開発や生産の効率化進め 稼ぐ力強化を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T06:45:42+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
