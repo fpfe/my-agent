@@ -1,28 +1,56 @@
 {
-  "updatedAt": "2026-07-21T11:34:47.314325+09:00",
-  "updatedAtJST": "2026/07/21 11:34 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-21T14:49:22.725205+09:00",
+  "updatedAtJST": "2026/07/21 14:49 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "株価 一時1500円以上値上がり ほぼ全面高の展開",
+      "title": "政府 新たな成長戦略決定 “17分野の投資規模 総額370兆円超”",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181811000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T14:29:07+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "エアコン国内出荷額21％増 “エアコン2027年問題”背景に",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181821000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T14:13:14+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時1800円超値上がり 半導体関連銘柄中心に買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181591000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-21T10:56:11+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-07-21T13:32:28+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "「強い経済」へ経済財政運営を抜本転換 高市政権 初の骨太方針",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T13:00:12+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "金子国交相 今週24日にJR東海社長と面会へ リニア中央新幹線",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181611000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T11:39:46+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "生産地 備蓄米の早期買い戻し求める声強まる 政府は慎重に検討",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T06:59:44+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "トヨタ 近健太社長 “開発や生産の効率化進め 稼ぐ力強化を”",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T06:45:42+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     }
   ]
 }
