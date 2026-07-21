@@ -1,62 +1,55 @@
 {
-  "updatedAt": "2026-07-22T07:55:19.389017+09:00",
-  "updatedAtJST": "2026/07/22 07:55 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-22T08:55:32.223891+09:00",
+  "updatedAtJST": "2026/07/22 08:55 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "“夜勤も快適に” 鉄道業界で深夜に働く社員への待遇改善進む",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T07:19:49+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "プラ容器高値で容器の変更相次ぐ 小売各社で",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182121000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T06:57:07+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "自動車メーカー 完成車の共同輸送を検討 2028年までに実施へ",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T06:53:02+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "ケンタッキー きょうから全店舗で通常営業を再開",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T05:03:32+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "ニチレイ ハッカー集団が犯行声明 「ランサムウエア」攻撃か",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182261000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T05:01:00+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "円相場 一時1ドル＝163円台に値下がり 約39年半ぶりの円安水準",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T02:35:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "高市政権初の骨太方針 NW9広内キャスターが与野党幹部に聞く",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T21:44:59+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "政府とアジア開発銀行 水道インフラ支援で基金を創設",
-      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015182011000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-21T20:11:50+09:00",
       "hoursAgo": 11
     }
   ]
