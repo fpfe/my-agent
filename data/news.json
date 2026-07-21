@@ -1,69 +1,55 @@
 {
-  "updatedAt": "2026-07-22T02:17:54.118898+09:00",
-  "updatedAtJST": "2026/07/22 02:17 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-07-22T04:19:51.183585+09:00",
+  "updatedAtJST": "2026/07/22 04:19 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "円相場 一時1ドル＝163円台に値下がり 約39年半ぶり水準",
+      "title": "円相場 一時1ドル＝163円台に値下がり 約39年半ぶりの円安水準",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182211000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-22T00:02:04+09:00",
-      "hoursAgo": 2
+      "publishedAt": "2026-07-22T02:35:42+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "高市政権初の骨太方針 NW9広内キャスターが与野党幹部に聞く",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T21:44:59+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "政府とアジア開発銀行 水道インフラ支援で基金を創設",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015182011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T20:11:50+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "「強い経済」へ経済財政運営を抜本転換 高市政権 初の骨太方針",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T19:33:15+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T18:31:34+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "首都圏新築マンション平均価格 上半期初めて1億円超に",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:36:49+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "【きょうのおはBiz 7月21日(火)】夏は夜に商機！",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:20:58+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "株価 2000円以上値上がり 半導体関連銘柄中心に買い注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-21T16:16:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "政府 新たな成長戦略決定 “17分野の投資規模 総額370兆円超”",
-      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-21T14:29:07+09:00",
       "hoursAgo": 11
     }
   ]
