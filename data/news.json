@@ -1,77 +1,70 @@
 {
-  "updatedAt": "2026-07-22T00:42:14.002077+09:00",
-  "updatedAtJST": "2026/07/22 00:42 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-22T02:17:54.118898+09:00",
+  "updatedAtJST": "2026/07/22 02:17 JST",
+  "totalArticles": 9,
   "articles": [
     {
       "title": "円相場 一時1ドル＝163円台に値下がり 約39年半ぶり水準",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182211000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T00:02:04+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "高市政権初の骨太方針 NW9広内キャスターが与野党幹部に聞く",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T21:44:59+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "政府とアジア開発銀行 水道インフラ支援で基金を創設",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015182011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T20:11:50+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "「強い経済」へ経済財政運営を抜本転換 高市政権 初の骨太方針",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T19:33:15+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T18:31:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "首都圏新築マンション平均価格 上半期初めて1億円超に",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:36:49+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "【きょうのおはBiz 7月21日(火)】夏は夜に商機！",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:20:58+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "株価 2000円以上値上がり 半導体関連銘柄中心に買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:16:24+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "政府 新たな成長戦略決定 “17分野の投資規模 総額370兆円超”",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T14:29:07+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "エアコン国内出荷額21％増 “エアコン2027年問題”背景に",
-      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181821000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-21T14:13:14+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
