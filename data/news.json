@@ -1,63 +1,77 @@
 {
-  "updatedAt": "2026-07-21T20:06:44.876854+09:00",
-  "updatedAtJST": "2026/07/21 20:06 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-21T22:46:46.152656+09:00",
+  "updatedAtJST": "2026/07/21 22:46 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "高市政権初の骨太方針 NW9広内キャスターが与野党幹部に聞く",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181941000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T21:44:59+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "政府とアジア開発銀行 水道インフラ支援で基金を創設",
+      "url": "http://www3.nhk.or.jp/news/html/20260721/k10015182011000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-21T20:11:50+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "「強い経済」へ経済財政運営を抜本転換 高市政権 初の骨太方針",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T19:33:15+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "円相場 いくぶん値下がり イラン情勢の先行き不透明感で",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181961000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T18:31:34+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "首都圏新築マンション平均価格 上半期初めて1億円超に",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:36:49+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz 7月21日(火)】夏は夜に商機！",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:20:58+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "株価 2000円以上値上がり 半導体関連銘柄中心に買い注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181591000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T16:16:24+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "政府 新たな成長戦略決定 “17分野の投資規模 総額370兆円超”",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T14:29:07+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "エアコン国内出荷額21％増 “エアコン2027年問題”背景に",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T14:13:14+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "金子国交相 今週24日にJR東海社長と面会へ リニア中央新幹線",
       "url": "http://www3.nhk.or.jp/news/html/20260721/k10015181611000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-21T11:39:46+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
