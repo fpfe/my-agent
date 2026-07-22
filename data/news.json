@@ -1,63 +1,56 @@
 {
-  "updatedAt": "2026-07-22T22:50:11.667088+09:00",
-  "updatedAtJST": "2026/07/22 22:50 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-23T00:40:54.073384+09:00",
+  "updatedAtJST": "2026/07/23 00:40 JST",
+  "totalArticles": 7,
   "articles": [
     {
       "title": "輸入牛肉と豚肉の小売価格が過去最高 農林水産省の7月調査",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T19:28:33+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "円相場 1ドル＝163円台の取引が中心に 有事のドル買い続く",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T19:27:12+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ソフトバンク 通信社などと提携 記事データをAI開発企業に提供",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T18:53:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "ニチレイ 個人情報漏えいした可能性のある対象者に通知行う",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T17:38:45+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "株価 小幅な値動き 午後に利益確定の売り注文広がる",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182421000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T17:13:38+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "JRが支払う新幹線「貸付料」増額可能性も 国交省の案【Q＆A】",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T16:42:34+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "【きょうのおはBiz 7月22日(水)】AIミュトスで日本企業は",
       "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182371000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-22T14:10:44+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "6月の中東からの原油輸入量 前年同月比で40.6％減",
-      "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-22T11:28:14+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
