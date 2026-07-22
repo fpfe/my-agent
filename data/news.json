@@ -1,42 +1,28 @@
 {
-  "updatedAt": "2026-07-23T06:05:26.653495+09:00",
-  "updatedAtJST": "2026/07/23 06:05 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-07-23T08:01:54.036398+09:00",
+  "updatedAtJST": "2026/07/23 08:01 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "グーグル親会社 4～6月期決算 営業利益は6兆6400億円余",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T06:43:46+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "関税措置めぐる日米合意から1年 なお不透明な状況続く",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T05:50:57+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "折りたたみ式スマホ薄型の新モデル発表 競争激化か",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T05:04:58+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "輸入牛肉と豚肉の小売価格が過去最高 農林水産省の7月調査",
-      "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-22T19:28:33+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 1ドル＝163円台の取引が中心に 有事のドル買い続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182331000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-22T19:27:12+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ソフトバンク 通信社などと提携 記事データをAI開発企業に提供",
-      "url": "http://www3.nhk.or.jp/news/html/20260722/k10015182881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-22T18:53:16+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 2
     }
   ]
 }
