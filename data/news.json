@@ -1,28 +1,42 @@
 {
-  "updatedAt": "2026-07-23T08:01:54.036398+09:00",
-  "updatedAtJST": "2026/07/23 08:01 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-23T11:38:47.142534+09:00",
+  "updatedAtJST": "2026/07/23 11:38 JST",
+  "totalArticles": 5,
   "articles": [
     {
-      "title": "グーグル親会社 4～6月期決算 営業利益は6兆6400億円余",
+      "title": "東京23区中古マンション 1億2000万円超え続くも「一服感」",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T11:16:30+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米テスラ 4～6月決算 EV販売増加もAI投資かさみ減益に",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183311000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T10:14:47+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "グーグル親会社 4～6月期決算 営業利益前年同期比30％増",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183101000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-23T06:43:46+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-07-23T09:19:00+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "関税措置めぐる日米合意から1年 なお不透明な状況続く",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T05:50:57+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "折りたたみ式スマホ薄型の新モデル発表 競争激化か",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T05:04:58+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     }
   ]
 }
