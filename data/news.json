@@ -1,84 +1,91 @@
 {
-  "updatedAt": "2026-07-23T14:52:27.785943+09:00",
-  "updatedAtJST": "2026/07/23 14:52 JST",
-  "totalArticles": 11,
+  "updatedAt": "2026-07-23T17:27:51.456723+09:00",
+  "updatedAtJST": "2026/07/23 17:27 JST",
+  "totalArticles": 12,
   "articles": [
+    {
+      "title": "経団連の夏のフォーラム “大手企業が国内の設備投資主導を”",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015184071000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T17:11:41+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 値上がり AI・半導体関連に買い注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T16:15:07+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ガソリン全国平均170円 政府の補助金で170円水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015184021000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-23T15:50:58+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "東電新会長が赤澤経産相と会談 “福島への責任貫徹が使命”",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183871000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T14:26:19+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "きょうのおはBiz 7月23日(木)歴史的な円安 日本経済への影響は",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T14:17:45+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "円相場 1ドル＝163円台前半中心 有事のドル買い続く",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T12:30:24+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "株価 午前は値上がり AI・半導体関連に買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-23T12:13:37+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "クロマグロ漁獲枠拡大へ “交渉再開を” 自民が鈴木農相に要請",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T12:13:12+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "セブン-イレブン キャラ商品を販売日前買い占めなど不適切事例",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T12:06:14+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "東京23区中古マンション 1億2000万円超え続くも「一服感」",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183351000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T11:16:30+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "米テスラ 4～6月決算 EV販売増加もAI投資かさみ減益に",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183311000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T10:14:47+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "グーグル親会社 4～6月期決算 営業利益前年同期比30％増",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183101000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T09:19:00+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "関税措置めぐる日米合意から1年 なお不透明な状況続く",
       "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-23T05:50:57+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "折りたたみ式スマホ薄型の新モデル発表 競争激化か",
-      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015183071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-23T05:04:58+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     }
   ]
 }
