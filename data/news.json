@@ -1,77 +1,70 @@
 {
-  "updatedAt": "2026-07-24T08:59:09.005812+09:00",
-  "updatedAtJST": "2026/07/24 08:59 JST",
-  "totalArticles": 10,
+  "updatedAt": "2026-07-24T12:33:31.633409+09:00",
+  "updatedAtJST": "2026/07/24 12:33 JST",
+  "totalArticles": 9,
   "articles": [
+    {
+      "title": "トランプ政権 新追加関税を発動へ 日本は既存税率あわせ12.5％",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184731000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T12:23:37+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 一時2000円以上値下がり 円安進行の影響懸念などで",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184971000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T11:24:04+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "アメリカ財務省 “円相場の過度な変動 望ましくない”",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T09:35:38+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "6月の消費者物価 生鮮食品除く指数 前年比+1.6％",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T08:42:56+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ政権 新追加関税を発動へ 日本は既存税率あわせ12.5％",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184731000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T07:11:26+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "ナスダック株価指数 2％超の下落 AI過剰投資警戒や金利上昇",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T07:03:33+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "米トランプ政権の10％関税措置 24日に失効 新関税の判断焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184451000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T05:32:28+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "NY原油 一時1バレル93ドル台に 約1か月半ぶりの高値水準",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184701000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T04:31:16+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "円安加速 1ドル164円に迫る 39年8か月ぶりの水準に",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T03:47:41+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "EUがグーグルに制裁金 検索サイトで公正な競争妨害として",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T01:47:39+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "愛媛県「いよぎんHD」と「愛媛銀行」経営統合に向け最終調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015184581000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-23T23:58:27+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "円相場 1ドル＝163円台後半まで値下がり 39年半ぶりの円安水準",
-      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015184591000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-23T22:46:08+09:00",
       "hoursAgo": 10
-    },
-    {
-      "title": "経団連の夏のフォーラム “大手企業が国内の設備投資主導を”",
-      "url": "http://www3.nhk.or.jp/news/html/20260723/k10015184071000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-23T21:42:54+09:00",
-      "hoursAgo": 11
     }
   ]
 }
