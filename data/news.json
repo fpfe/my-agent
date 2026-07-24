@@ -1,111 +1,111 @@
 {
-  "updatedAt": "2026-07-24T18:20:35.308992+09:00",
-  "updatedAtJST": "2026/07/24 18:20 JST",
+  "updatedAt": "2026-07-24T20:40:52.480552+09:00",
+  "updatedAtJST": "2026/07/24 20:40 JST",
   "totalArticles": 15,
   "articles": [
     {
-      "title": "プルデンシャル生命など 新たに7億9000万円の不適切受領判明",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185381000.html",
+      "title": "資材価格上昇受け値上げも海外展開強化 金沢 しょうゆメーカー",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185501000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-24T18:10:25+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "スーパーのコメ平均価格 5キロ3373円 4週連続値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185441000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T18:03:20+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トランプ政権 新追加関税を発動 日本は既存税率あわせ12.5％",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184731000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T18:00:15+09:00",
+      "publishedAt": "2026-07-24T19:52:23+09:00",
       "hoursAgo": 0
     },
     {
       "title": "ニチレイ サイバー攻撃によるシステム障害から復旧 業務正常化",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185471000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-24T17:59:39+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-07-24T19:09:53+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "トランプ政権 新追加関税を発動 日本は既存税率あわせ12.5％",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184731000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T19:00:16+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "スーパーのコメ平均価格 5キロ3373円 4週連続値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185441000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T18:57:47+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "円相場 円安進み1ドル＝163円台後半での取り引き",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T18:31:41+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "物価高続き「恐怖の夏休み」の声も 6月の消費者物価指数は",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T18:22:29+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "プルデンシャル生命など 新たに7億9000万円の不適切受領判明",
+      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-24T18:10:25+09:00",
+      "hoursAgo": 2
     },
     {
       "title": "土用のうしの日を前にスーパーでうなぎ販売強化の動き",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185241000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T17:17:27+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "株価 一時2200円超値下がり 原油価格上昇やAIへの過剰投資懸念",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T16:52:20+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "【きょうのおはBiz 7月24日(金)】どうなる原油価格【解説】",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184911000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T16:22:44+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "経済財政白書 中東情勢の影響を分析 個人消費の動向注視を",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T15:46:48+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "SNS上の不適切投稿めぐりグーグルやXなど5社に勧告 総務省",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T15:03:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "リニア 品川～名古屋 “開業時期は年内に示す”JR東海社長",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T13:35:15+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "6月の消費者物価 生鮮食品除く指数 前年比+1.6％",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T13:21:36+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "PayPayとセブン＆アイが利用者のID統合へ調整",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T13:13:53+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "円相場 円安進み1ドル＝163円台後半での取り引き",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T12:59:42+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "アメリカ財務省 “円相場の過度な変動 望ましくない”",
       "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-24T09:35:38+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "ナスダック株価指数 2％超の下落 AI過剰投資警戒や金利上昇",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015184741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T07:03:33+09:00",
       "hoursAgo": 11
     }
   ]
