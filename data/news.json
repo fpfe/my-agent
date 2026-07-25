@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-07-25T20:08:39.393921+09:00",
-  "updatedAtJST": "2026/07/25 20:08 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-25T22:23:07.517069+09:00",
+  "updatedAtJST": "2026/07/25 22:23 JST",
+  "totalArticles": 2,
+  "articles": [
+    {
+      "title": "ジャングリア沖縄 開業1年 運営会社“思うような数字 至らず”",
+      "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186161000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-25T22:16:40+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "韓国大統領府 “米韓企業が155兆円規模のAI半導体協力”",
+      "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186141000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-25T21:33:03+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
