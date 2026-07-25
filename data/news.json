@@ -1,35 +1,21 @@
 {
-  "updatedAt": "2026-07-25T09:11:45.524273+09:00",
-  "updatedAtJST": "2026/07/25 09:11 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-25T13:08:55.362418+09:00",
+  "updatedAtJST": "2026/07/25 13:08 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "「全東信」経営破綻 経産省と金融庁が調査を開始",
       "url": "http://www3.nhk.or.jp/news/html/20260725/k10015185721000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-25T05:08:39+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "コメの民間在庫量 243万トン 6月末時点で過去最大に",
       "url": "http://www3.nhk.or.jp/news/html/20260725/k10015185671000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-25T05:06:26+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "情報セキュリティー会社 企業から相談相次ぐ ニチレイ障害受け",
-      "url": "http://www3.nhk.or.jp/news/html/20260725/k10015185661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-25T00:10:24+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "経団連 夏のフォーラム 「投資けん引型経済」実現へ総括文書",
-      "url": "http://www3.nhk.or.jp/news/html/20260724/k10015185761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-24T23:14:39+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 8
     }
   ]
 }
