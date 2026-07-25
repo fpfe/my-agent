@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-26T02:57:52.073105+09:00",
-  "updatedAtJST": "2026/07/26 02:57 JST",
+  "updatedAt": "2026-07-26T04:17:35.172234+09:00",
+  "updatedAtJST": "2026/07/26 04:17 JST",
   "totalArticles": 2,
   "articles": [
     {
@@ -8,14 +8,14 @@
       "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186161000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-25T22:16:40+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "韓国大統領府 “米韓企業が155兆円規模のAI半導体協力”",
       "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-25T21:33:03+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     }
   ]
 }
