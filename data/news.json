@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-07-27T06:58:10.033428+09:00",
-  "updatedAtJST": "2026/07/27 06:58 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-27T08:03:22.523746+09:00",
+  "updatedAtJST": "2026/07/27 08:03 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "米国産生鮮ジャガイモ 輸入解禁手続き進む一方で懸念の声も",
+      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186811000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-27T07:06:59+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "日銀 今週決定会合 政策金利据え置きか 経済・物価見通し焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T06:24:20+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "米FRB会合 イラン情勢によるインフレ再加速懸念で判断注目",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T05:02:21+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     }
   ]
 }
