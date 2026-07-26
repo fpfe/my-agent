@@ -1,28 +1,14 @@
 {
-  "updatedAt": "2026-07-26T08:59:33.840200+09:00",
-  "updatedAtJST": "2026/07/26 08:59 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-26T12:46:22.607762+09:00",
+  "updatedAtJST": "2026/07/26 12:46 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "トランプ大統領 グーグルに制裁金科したEUに関税課すと主張",
       "url": "http://www3.nhk.or.jp/news/html/20260726/k10015186361000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-26T08:49:14+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "ジャングリア沖縄 開業1年 運営会社“思うような数字 至らず”",
-      "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186161000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-25T22:16:40+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "韓国大統領府 “米韓企業が155兆円規模のAI半導体協力”",
-      "url": "http://www3.nhk.or.jp/news/html/20260725/k10015186141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-25T21:33:03+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 3
     }
   ]
 }
