@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-27T03:06:28.382297+09:00",
-  "updatedAtJST": "2026/07/27 03:06 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-07-27T05:08:03.730164+09:00",
+  "updatedAtJST": "2026/07/27 05:08 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "米FRB会合 イラン情勢によるインフレ再加速懸念で判断注目",
+      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186781000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-27T05:02:21+09:00",
+      "hoursAgo": 0
+    }
+  ]
 }
