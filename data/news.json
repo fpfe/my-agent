@@ -1,14 +1,21 @@
 {
-  "updatedAt": "2026-07-27T05:08:03.730164+09:00",
-  "updatedAtJST": "2026/07/27 05:08 JST",
-  "totalArticles": 1,
+  "updatedAt": "2026-07-27T06:58:10.033428+09:00",
+  "updatedAtJST": "2026/07/27 06:58 JST",
+  "totalArticles": 2,
   "articles": [
+    {
+      "title": "日銀 今週決定会合 政策金利据え置きか 経済・物価見通し焦点",
+      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186771000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-27T06:24:20+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "米FRB会合 イラン情勢によるインフレ再加速懸念で判断注目",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T05:02:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     }
   ]
 }
