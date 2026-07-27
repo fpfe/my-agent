@@ -1,27 +1,20 @@
 {
-  "updatedAt": "2026-07-28T03:23:27.699898+09:00",
-  "updatedAtJST": "2026/07/28 03:23 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-07-28T05:20:51.830498+09:00",
+  "updatedAtJST": "2026/07/28 05:20 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "東京23区 単身向けマンションの平均家賃11.4万円余 上昇続く",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T19:06:42+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "円相場 いくぶん値上がり 原油の先物価格下落に伴い",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T18:33:58+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "株価 値上がり 幅広い銘柄で買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187171000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-27T16:35:10+09:00",
       "hoursAgo": 10
     }
   ]
