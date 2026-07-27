@@ -1,35 +1,49 @@
 {
-  "updatedAt": "2026-07-27T11:49:52.365466+09:00",
-  "updatedAtJST": "2026/07/27 11:49 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-27T15:29:01.995580+09:00",
+  "updatedAtJST": "2026/07/27 15:29 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "東京23区 単身向けマンションの平均家賃11.4万円余 上昇続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187221000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-27T13:11:04+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "株価 午前は値上がり 幅広い銘柄で買い注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187171000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-27T12:06:30+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "【きょうのおはBiz 7月27日(月)】暑い前橋でいま熱い！バナナ",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T11:33:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "米国産生鮮ジャガイモ 輸入解禁手続き進む一方で懸念の声も",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186811000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T07:06:59+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "日銀 今週決定会合 政策金利据え置きか 経済・物価見通し焦点",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T06:24:20+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "米FRB会合 イラン情勢によるインフレ再加速懸念で判断注目",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T05:02:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     }
   ]
 }
