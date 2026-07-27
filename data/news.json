@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-27T19:41:16.551669+09:00",
-  "updatedAtJST": "2026/07/27 19:41 JST",
+  "updatedAt": "2026-07-27T22:38:07.273038+09:00",
+  "updatedAtJST": "2026/07/27 22:38 JST",
   "totalArticles": 4,
   "articles": [
     {
@@ -8,28 +8,28 @@
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T19:06:42+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "円相場 いくぶん値上がり 原油の先物価格下落に伴い",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T18:33:58+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "株価 値上がり 幅広い銘柄で買い注文",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T16:35:10+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz 7月27日(月)】暑い前橋でいま熱い！バナナ",
       "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-27T11:33:30+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     }
   ]
 }
