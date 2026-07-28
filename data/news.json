@@ -1,56 +1,49 @@
 {
-  "updatedAt": "2026-07-28T16:36:51.342645+09:00",
-  "updatedAtJST": "2026/07/28 16:36 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-28T19:33:05.871278+09:00",
+  "updatedAtJST": "2026/07/28 19:33 JST",
+  "totalArticles": 6,
   "articles": [
+    {
+      "title": "携帯各社 “熊本県の一部 通信サービス利用しづらい状況”",
+      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188561000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-28T17:31:37+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "農水省 備蓄米買い戻し 新米の作柄など見極め判断へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-28T17:03:51+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "片山財務相 日米合意の対米投資 米銀からの資金調達を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T15:26:22+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "株価 午前は一時3000円以上値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T12:51:49+09:00",
-      "hoursAgo": 3
-    },
-    {
-      "title": "農水省 備蓄米買い戻し 新米の作柄など見極め判断へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187861000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-28T12:40:40+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "【きょうのおはBiz 7月28日(火)】猛暑から働く人をどう守る",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187781000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T12:17:29+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "ディズニーのチケット1万2000円超に 入園料値上げの動き相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T08:45:05+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "エディオン会長 ヤマダHDとの統合「対等の精神は譲れない」",
-      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187521000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-28T06:59:30+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "スマホ法に基づきグーグルとアップルが公取委提出の報告書公表",
-      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-28T06:54:14+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
