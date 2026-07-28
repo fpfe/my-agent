@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-07-28T07:05:31.276670+09:00",
-  "updatedAtJST": "2026/07/28 07:05 JST",
+  "updatedAt": "2026-07-28T09:00:47.587984+09:00",
+  "updatedAtJST": "2026/07/28 09:00 JST",
   "totalArticles": 3,
   "articles": [
+    {
+      "title": "ディズニーのチケット1万2000円超に 入園料値上げの動き相次ぐ",
+      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-28T08:45:05+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "エディオン会長 ヤマダHDとの統合「対等の精神は譲れない」",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T06:59:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "スマホ法に基づきグーグルとアップルが公取委提出の報告書公表",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T06:54:14+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "東京23区 単身向けマンションの平均家賃11.4万円余 上昇続く",
-      "url": "http://www3.nhk.or.jp/news/html/20260727/k10015187221000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-27T19:06:42+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 2
     }
   ]
 }
