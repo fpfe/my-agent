@@ -1,63 +1,56 @@
 {
-  "updatedAt": "2026-07-28T21:52:11.736391+09:00",
-  "updatedAtJST": "2026/07/28 21:52 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-07-29T00:19:39.452950+09:00",
+  "updatedAtJST": "2026/07/29 00:19 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "トヨタ 福岡の3工場で稼働停止 ホンダも熊本の工場で稼働停止",
+      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-28T22:56:39+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "円相場 小幅な値動き 日米の金融政策見極めか",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188981000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T21:46:37+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "トヨタ 福岡の3工場で稼働停止 ホンダも熊本の工場で稼働停止",
-      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188891000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-28T21:43:43+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "ことしのサンマ 近海への来遊量は減少の見通し",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T21:30:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "株価 一時3000円超値下がり 半導体関連銘柄中心に売り",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T20:55:14+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "携帯各社 “熊本県の一部 通信サービス利用しづらい状況”",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188561000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T17:32:01+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "農水省 備蓄米買い戻し 新米の作柄など見極め判断へ",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T17:03:51+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "片山財務相 日米合意の対米投資 米銀からの資金調達を検討",
       "url": "http://www3.nhk.or.jp/news/html/20260728/k10015188071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-28T15:26:22+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "【きょうのおはBiz 7月28日(火)】猛暑から働く人をどう守る",
-      "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187781000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-28T12:17:29+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 8
     }
   ]
 }
