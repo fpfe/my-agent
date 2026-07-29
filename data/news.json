@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-07-29T15:29:34.026496+09:00",
-  "updatedAtJST": "2026/07/29 15:29 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-07-29T18:36:08.324789+09:00",
+  "updatedAtJST": "2026/07/29 18:36 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "イオン社長が会見 「3人死亡 1人心肺停止」",
+      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-29T18:20:42+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 値下がり 半導体関連銘柄への売り注文強まる",
+      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189601000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-29T16:29:58+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "トヨタ 福岡県の3工場 31日まで稼働停止 地震の影響で",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T15:14:05+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 一時1500円超値下がり 地震影響などで売り注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189601000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-29T13:12:30+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     }
   ]
 }
