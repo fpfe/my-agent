@@ -1,49 +1,56 @@
 {
-  "updatedAt": "2026-07-29T20:59:52.815511+09:00",
-  "updatedAtJST": "2026/07/29 20:59 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-07-29T23:27:02.264615+09:00",
+  "updatedAtJST": "2026/07/29 23:27 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "九州にある大手メーカーの工場 操業に影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189681000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-29T21:45:02+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "全日空 国内一部路線の運航 アイベックスエアラインズに委託へ",
+      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015190101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-29T21:24:47+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "イオン 3人死亡1人心肺停止明らかに 「夏休みで約3000人来店」",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T19:26:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "消費税 国民会議「意見一致至らず」 高市首相近く減税判断へ",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T19:20:52+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "KDDI 情報流出 通信の秘密漏えいで厳重注意の行政指導",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T18:52:45+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "円相場 小幅な値動き アメリカの金融政策決定する会合控え",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T18:36:09+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "株価 値下がり 半導体関連銘柄への売り注文強まる",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189601000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T16:29:58+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "トヨタ 福岡県の3工場 31日まで稼働停止 地震の影響で",
-      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189681000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-29T15:14:05+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     }
   ]
 }
