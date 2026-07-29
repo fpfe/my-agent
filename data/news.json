@@ -1,49 +1,42 @@
 {
-  "updatedAt": "2026-07-30T06:59:49.716786+09:00",
-  "updatedAtJST": "2026/07/30 06:59 JST",
-  "totalArticles": 6,
+  "updatedAt": "2026-07-30T08:06:10.713512+09:00",
+  "updatedAtJST": "2026/07/30 08:06 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "ダウ平均株価1153ドル下落 FRBがインフレ対策に後手の懸念も",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-30T07:51:05+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "FRB政策金利 5会合連続で据え置き 委員3人利上げ主張",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T06:35:51+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "政府 ナミビアでのレアアース鉱山開発会社に最大50億円出資へ",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T00:00:20+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "九州にある大手メーカーの工場 操業に影響",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T23:56:59+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "全日空 国内一部路線の運航 アイベックスエアラインズに委託へ",
       "url": "http://www3.nhk.or.jp/news/html/20260729/k10015190101000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-29T21:24:47+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "イオン 3人死亡1人心肺停止明らかに 「夏休みで約3000人来店」",
-      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-29T19:26:53+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "消費税 国民会議「意見一致至らず」 高市首相近く減税判断へ",
-      "url": "http://www3.nhk.or.jp/news/html/20260729/k10015189951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-29T19:20:52+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
