@@ -1,55 +1,34 @@
 {
-  "updatedAt": "2026-07-31T06:08:16.080069+09:00",
-  "updatedAtJST": "2026/07/31 06:08 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-31T08:05:34.627748+09:00",
+  "updatedAtJST": "2026/07/31 08:05 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "NY市場 ダウ平均株価613ドル上昇 AIへの巨額投資の懸念後退",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191521000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T06:11:00+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "消費税率引き下げ 小売業界システム改修終えられるか課題",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T05:08:29+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "NY市場 1ドル＝157円台後半まで値上がり 市場介入の観測も",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T00:54:59+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "【熊本地震 企業影響 30日】半導体関連 稼働再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T20:55:01+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "食料品消費税 来年4月から1％方針 日本経済・消費者への影響は",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190741000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T19:28:29+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "円相場 小幅な値動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191041000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T18:39:02+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "経産省 熊本地震で被害の中小企業向けに相談窓口などの支援",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191051000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T18:38:03+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "8月の電気 ガス料金 大手会社の多くで値下がり 政府の補助で",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190941000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T18:21:53+09:00",
       "hoursAgo": 11
     }
   ]
