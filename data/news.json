@@ -1,70 +1,77 @@
 {
-  "updatedAt": "2026-07-30T14:39:56.197284+09:00",
-  "updatedAtJST": "2026/07/30 14:39 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-07-30T17:24:23.623101+09:00",
+  "updatedAtJST": "2026/07/30 17:24 JST",
+  "totalArticles": 10,
   "articles": [
+    {
+      "title": "株価 値上がり 半導体関連の一部銘柄に買い注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190651000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-30T16:58:43+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "食料品消費税 来年4月から1％方針 日本経済・消費者への影響は",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-30T16:27:15+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "概算要求の基本方針を閣議了解 新投資枠に予算要求の上限なし",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-30T15:09:57+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "片山財務相 金融機関などに被災住民や事業者へ柔軟な対応要請",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T14:35:37+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "【きょうのおはBiz 7月30日(木)】熊本地震 金融機関の対応は",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T13:53:43+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "山崎製パン 熊本 宇城市の工場は稼働停止 再開の時期未定",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T13:40:30+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価 値上がり 半導体関連の一部銘柄に買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190651000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T12:56:43+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "概算要求の基本方針を閣議了解 新投資枠に予算要求の上限なし",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190541000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T12:15:03+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "今年度の経済成長率 ＋0.9％程度に下方修正 中東情勢の影響",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T11:54:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "米IT決算 マイクロソフト増益もメタ減益 AIで明暗分かれる",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190491000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T11:37:06+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "FRB政策金利据え置き 今後の利上げめぐる見方分かれる",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T11:14:24+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "ダウ平均株価1153ドル下落 FRBがインフレ対策に後手の懸念も",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-30T07:51:05+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
