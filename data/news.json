@@ -1,90 +1,69 @@
 {
-  "updatedAt": "2026-08-01T03:19:21.716360+09:00",
-  "updatedAtJST": "2026/08/01 03:19 JST",
-  "totalArticles": 12,
+  "updatedAt": "2026-08-01T05:19:14.578893+09:00",
+  "updatedAtJST": "2026/08/01 05:19 JST",
+  "totalArticles": 9,
   "articles": [
     {
       "title": "“原発建て替え 2040年代までに最大5基”政府が正式決定",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T21:38:21+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "短時間で急激な円高進む 政府・日銀が再び市場介入か",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T21:01:38+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "木を食い荒らす“クビアカツヤカミキリ” 国が対策本部設置",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T20:45:54+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "UEFA “計画撤回されなければW杯参加せず” FIFAを非難",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T20:39:01+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "【熊本地震 企業影響 31日】工場稼働停止など続く 再開へ動き",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191881000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T20:17:44+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "スーパーのコメ平均価格 5キロ3311円 5週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T19:42:15+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日本製紙 八代工場での9人の死亡を公表",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T19:04:47+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "日銀 政策金利を1％程度に据え置き決定",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T18:56:07+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "新しい財務事務次官に宇波弘貴主計局長が昇格へ",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T17:50:41+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "太平洋クロマグロ 農水省“調整案反対のメキシコ 増枠を支持”",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192251000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T16:39:57+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "株価 大きく値上がり AI・半導体関連の銘柄に買い注文",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T16:38:25+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "官房長官の元秘書官を訓告処分 不適切な出張報道 赤澤経産相",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T15:54:55+09:00",
       "hoursAgo": 11
     }
   ]
