@@ -1,56 +1,84 @@
 {
-  "updatedAt": "2026-07-31T11:43:25.002731+09:00",
-  "updatedAtJST": "2026/07/31 11:43 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-07-31T15:12:13.739194+09:00",
+  "updatedAtJST": "2026/07/31 15:12 JST",
+  "totalArticles": 11,
   "articles": [
+    {
+      "title": "政府・日銀 市場介入実施と判明 約5円変動した昨夜の円高",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T14:58:53+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "スルメイカ 来遊量は低水準見通し 太平洋側は一部増加か",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192051000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T14:38:08+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【熊本地震 企業影響 31日】工場の稼働停止など続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191881000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T14:17:16+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日銀 政策金利を1％程度に据え置き決定【ライブ配信予定】",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191761000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T14:01:47+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 大きく値上がり 半導体関連の銘柄中心に買い注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T12:16:45+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "きょうのおはBiz7月31日(金) 急激な円高に 1時間足らずで約5円",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191741000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T12:04:12+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "7月の東京23区の消費者物価指数 前年同月比＋1.9％",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191621000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T11:20:30+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "米アップル3か月決算 iPhone好調で増益もメモリ高騰の影響示唆",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T10:55:35+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "円相場 一時1ドル=157円台まで値上がり 市場介入との見方",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T09:55:11+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "株価 一時3200円以上値上がり AI・半導体市場拡大への期待",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191661000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T09:36:26+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "鉱工業生産指数 3か月連続上昇 基調判断「一進一退」維持",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191651000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T09:16:20+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "NY市場 ダウ平均株価613ドル上昇 AIへの巨額投資の懸念後退",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T06:11:00+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 9
     },
     {
       "title": "消費税率引き下げ 小売業界システム改修終えられるか課題",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T05:08:29+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     }
   ]
 }
