@@ -1,35 +1,56 @@
 {
-  "updatedAt": "2026-07-31T08:05:34.627748+09:00",
-  "updatedAtJST": "2026/07/31 08:05 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-07-31T11:43:25.002731+09:00",
+  "updatedAtJST": "2026/07/31 11:43 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "7月の東京23区の消費者物価指数 前年同月比＋1.9％",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191621000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T11:20:30+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米アップル3か月決算 iPhone好調で増益もメモリ高騰の影響示唆",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T10:55:35+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "円相場 一時1ドル=157円台まで値上がり 市場介入との見方",
+      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T09:55:11+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "株価 一時3200円以上値上がり AI・半導体市場拡大への期待",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191661000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T09:36:26+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "鉱工業生産指数 3か月連続上昇 基調判断「一進一退」維持",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191651000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T09:16:20+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NY市場 ダウ平均株価613ドル上昇 AIへの巨額投資の懸念後退",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191521000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T06:11:00+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "消費税率引き下げ 小売業界システム改修終えられるか課題",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T05:08:29+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "NY市場 1ドル＝157円台後半まで値上がり 市場介入の観測も",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T00:54:59+09:00",
-      "hoursAgo": 7
-    },
-    {
-      "title": "【熊本地震 企業影響 30日】半導体関連 稼働再開の動きも",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190621000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-30T20:55:01+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
