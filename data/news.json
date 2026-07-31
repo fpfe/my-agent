@@ -1,118 +1,104 @@
 {
-  "updatedAt": "2026-07-31T20:58:34.878838+09:00",
-  "updatedAtJST": "2026/07/31 20:58 JST",
-  "totalArticles": 16,
+  "updatedAt": "2026-07-31T23:26:09.515386+09:00",
+  "updatedAtJST": "2026/07/31 23:26 JST",
+  "totalArticles": 14,
   "articles": [
     {
-      "title": "木を食い荒らす“クビアカツヤカミキリ” 国が対策本部設置",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192321000.html",
+      "title": "“原発建て替え 2040年代までに最大5基”政府が正式決定",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192391000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:45:54+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "UEFA “計画撤回されなければW杯参加せず” FIFAを非難",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192111000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:39:01+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "【熊本地震 企業影響 31日】工場稼働停止など続く 再開へ動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:17:44+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "スーパーのコメ平均価格 5キロ3311円 5週連続で値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T19:42:15+09:00",
+      "publishedAt": "2026-07-31T21:38:21+09:00",
       "hoursAgo": 1
     },
     {
       "title": "短時間で急激な円高進む 政府・日銀が再び市場介入か",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-07-31T19:41:05+09:00",
-      "hoursAgo": 1
+      "publishedAt": "2026-07-31T21:01:38+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "木を食い荒らす“クビアカツヤカミキリ” 国が対策本部設置",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T20:45:54+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "UEFA “計画撤回されなければW杯参加せず” FIFAを非難",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192111000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T20:39:01+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "【熊本地震 企業影響 31日】工場稼働停止など続く 再開へ動き",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191881000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T20:17:44+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "スーパーのコメ平均価格 5キロ3311円 5週連続で値下がり",
+      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192291000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-07-31T19:42:15+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "日本製紙 八代工場での9人の死亡を公表",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T19:04:47+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "日銀 政策金利を1％程度に据え置き決定",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T18:56:07+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "新しい財務事務次官に宇波弘貴主計局長が昇格へ",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T17:50:41+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "太平洋クロマグロ 農水省“調整案反対のメキシコ 増枠を支持”",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T16:39:57+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "株価 大きく値上がり AI・半導体関連の銘柄に買い注文",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191661000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T16:38:25+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "官房長官の元秘書官を訓告処分 不適切な出張報道 赤澤経産相",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192141000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T15:54:55+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "スルメイカ 来遊量は低水準見通し 太平洋側は一部増加か",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192051000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T14:38:08+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "きょうのおはBiz7月31日(金) 急激な円高に 1時間足らずで約5円",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191741000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T12:04:12+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "7月の東京23区の消費者物価指数 前年同月比＋1.9％",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191621000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T11:20:30+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "米アップル3か月決算 iPhone好調で増益もメモリ高騰の影響示唆",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191711000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T10:55:35+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "鉱工業生産指数 3か月連続上昇 基調判断「一進一退」維持",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191651000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T09:16:20+09:00",
       "hoursAgo": 11
     }
   ]
