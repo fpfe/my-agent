@@ -1,35 +1,63 @@
 {
-  "updatedAt": "2026-08-01T09:00:39.220583+09:00",
-  "updatedAtJST": "2026/08/01 09:00 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-08-01T13:19:21.741277+09:00",
+  "updatedAtJST": "2026/08/01 13:19 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "【熊本地震 企業影響 1日】工場・店舗の状況は 再開の動きも",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193321000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T13:06:43+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "セブン＆アイにソフトバンクなどが出資 AIを店舗効率化に",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193341000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T11:39:41+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "キオクシア 4月から6月の最終利益が前年同期比で46倍に",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193331000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T11:17:03+09:00",
+      "hoursAgo": 2
+    },
+    {
+      "title": "ルネサスエレクトロニクス 高崎工場を閉鎖へ 老朽化などで",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015192921000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T10:06:02+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "牧野フライス 日本産業推進機構からの買収提案の検討終了発表",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193041000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T09:45:50+09:00",
+      "hoursAgo": 3
+    },
+    {
+      "title": "LINEヤフーに総務省が行政指導 利用者に関する情報流出で",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015192861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T09:44:00+09:00",
+      "hoursAgo": 3
+    },
     {
       "title": "円相場 再び急激な円買い 米財務省が市場介入の可能性伝達",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T06:35:27+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "大手銀行 8月の住宅ローン固定金利引き上げ 長期金利上昇で",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T06:22:31+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "“原発建て替え 2040年代までに最大5基”政府が正式決定",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T21:38:21+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "短時間で急激な円高進む 政府・日銀が再び市場介入か",
-      "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T21:01:38+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
