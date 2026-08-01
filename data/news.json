@@ -1,28 +1,21 @@
 {
-  "updatedAt": "2026-08-02T04:20:48.557517+09:00",
-  "updatedAtJST": "2026/08/02 04:20 JST",
-  "totalArticles": 3,
+  "updatedAt": "2026-08-02T05:50:57.926397+09:00",
+  "updatedAtJST": "2026/08/02 05:50 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "円相場 再び円高方向に 円安是正で日米が異例の協調対応か",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T20:15:01+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     },
     {
       "title": "【熊本地震 企業影響 1日】工場・店舗の状況は 再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T19:04:22+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "被災地のコンビニで飲料などの需要高まる 店舗への配送強化",
-      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193571000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-01T16:36:04+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 10
     }
   ]
 }
