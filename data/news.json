@@ -1,56 +1,63 @@
 {
-  "updatedAt": "2026-08-01T18:57:17.824277+09:00",
-  "updatedAtJST": "2026/08/01 18:57 JST",
-  "totalArticles": 7,
+  "updatedAt": "2026-08-01T20:20:23.283770+09:00",
+  "updatedAtJST": "2026/08/01 20:20 JST",
+  "totalArticles": 8,
   "articles": [
+    {
+      "title": "円相場 再び円高方向に 円安是正で日米が異例の協調対応か",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193711000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-01T20:15:01+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "【熊本地震 企業影響 1日】工場・店舗の状況は 再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193321000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-08-01T18:13:58+09:00",
-      "hoursAgo": 0
+      "publishedAt": "2026-08-01T19:04:22+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "被災地のコンビニで飲料などの需要高まる 店舗への配送強化",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T16:36:04+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "セブン＆アイにソフトバンクなどが出資 AIを店舗効率化に",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T11:39:41+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "キオクシア 4月から6月の最終利益が前年同期比で46倍に",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T11:17:03+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "ルネサスエレクトロニクス 高崎工場を閉鎖へ 老朽化などで",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015192921000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T10:06:02+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "牧野フライス 日本産業推進機構からの買収提案の検討終了発表",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193041000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T09:45:50+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     },
     {
       "title": "LINEヤフーに総務省が行政指導 利用者に関する情報流出で",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015192861000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T09:44:00+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 10
     }
   ]
 }
