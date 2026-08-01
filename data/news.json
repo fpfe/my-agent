@@ -1,69 +1,34 @@
 {
-  "updatedAt": "2026-08-01T07:04:09.960252+09:00",
-  "updatedAtJST": "2026/08/01 07:04 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-08-01T09:00:39.220583+09:00",
+  "updatedAtJST": "2026/08/01 09:00 JST",
+  "totalArticles": 4,
   "articles": [
     {
       "title": "円相場 再び急激な円買い 米財務省が市場介入の可能性伝達",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193171000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T06:35:27+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "大手銀行 8月の住宅ローン固定金利引き上げ 長期金利上昇で",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T06:22:31+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "“原発建て替え 2040年代までに最大5基”政府が正式決定",
       "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T21:38:21+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "短時間で急激な円高進む 政府・日銀が再び市場介入か",
       "url": "http://www3.nhk.or.jp/news/html/20260730/k10015191381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-07-31T21:01:38+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "木を食い荒らす“クビアカツヤカミキリ” 国が対策本部設置",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192321000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:45:54+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "UEFA “計画撤回されなければW杯参加せず” FIFAを非難",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192111000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:39:01+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "【熊本地震 企業影響 31日】工場稼働停止など続く 再開へ動き",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191881000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T20:17:44+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "スーパーのコメ平均価格 5キロ3311円 5週連続で値下がり",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192291000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T19:42:15+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日本製紙 八代工場での9人の死亡を公表",
-      "url": "http://www3.nhk.or.jp/news/html/20260731/k10015192381000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-07-31T19:04:47+09:00",
       "hoursAgo": 11
     }
   ]
