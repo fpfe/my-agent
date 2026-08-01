@@ -1,42 +1,28 @@
 {
-  "updatedAt": "2026-08-01T22:17:38.034628+09:00",
-  "updatedAtJST": "2026/08/01 22:17 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-08-01T23:59:01.070904+09:00",
+  "updatedAtJST": "2026/08/01 23:59 JST",
+  "totalArticles": 3,
   "articles": [
     {
       "title": "円相場 再び円高方向に 円安是正で日米が異例の協調対応か",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193711000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T20:15:01+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "【熊本地震 企業影響 1日】工場・店舗の状況は 再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T19:04:22+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "被災地のコンビニで飲料などの需要高まる 店舗への配送強化",
       "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-01T16:36:04+09:00",
-      "hoursAgo": 5
-    },
-    {
-      "title": "セブン＆アイにソフトバンクなどが出資 AIを店舗効率化に",
-      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-01T11:39:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "キオクシア 4月から6月の最終利益が前年同期比で46倍に",
-      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193331000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-01T11:17:03+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
