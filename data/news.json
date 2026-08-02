@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-08-03T06:54:58.887019+09:00",
-  "updatedAtJST": "2026/08/03 06:54 JST",
+  "updatedAt": "2026-08-03T07:55:39.617360+09:00",
+  "updatedAtJST": "2026/08/03 07:55 JST",
   "totalArticles": 3,
   "articles": [
+    {
+      "title": "日米の協調介入 ことし5月の日米財務相会談から本格調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-03T07:39:31+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "OPECプラスの7か国 9月も日量18万バレル余の増産発表",
       "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-03T05:10:08+09:00",
-      "hoursAgo": 1
-    },
-    {
-      "title": "日米の協調介入 ことし5月の日米財務相会談から本格調整",
-      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194421000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-03T05:01:10+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "円安是正へ日米が異例の協調介入 3日に日米共同の声明発表へ",
       "url": "http://www3.nhk.or.jp/news/html/20260802/k10015194291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-02T20:40:45+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
