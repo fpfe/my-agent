@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-08-02T15:06:35.253695+09:00",
-  "updatedAtJST": "2026/08/02 15:06 JST",
-  "totalArticles": 0,
-  "articles": []
+  "updatedAt": "2026-08-02T18:07:00.783671+09:00",
+  "updatedAtJST": "2026/08/02 18:07 JST",
+  "totalArticles": 1,
+  "articles": [
+    {
+      "title": "【熊本地震 企業影響 2日】九州のメーカー工場で操業に影響",
+      "url": "http://www3.nhk.or.jp/news/html/20260802/k10015194101000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-02T16:48:35+09:00",
+      "hoursAgo": 1
+    }
+  ]
 }
