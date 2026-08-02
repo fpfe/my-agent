@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-08-03T03:01:32.867631+09:00",
-  "updatedAtJST": "2026/08/03 03:01 JST",
+  "updatedAt": "2026-08-03T05:08:43.641188+09:00",
+  "updatedAtJST": "2026/08/03 05:08 JST",
   "totalArticles": 2,
   "articles": [
+    {
+      "title": "日米の協調介入 ことし5月の日米財務相会談から本格調整",
+      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194421000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-03T05:01:10+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "円安是正へ日米が異例の協調介入 3日に日米共同の声明発表へ",
       "url": "http://www3.nhk.or.jp/news/html/20260802/k10015194291000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-02T20:40:45+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "【熊本地震 企業影響 2日】九州のメーカー工場で操業に影響",
-      "url": "http://www3.nhk.or.jp/news/html/20260802/k10015194101000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-02T16:48:35+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 8
     }
   ]
 }
