@@ -1,42 +1,35 @@
 {
-  "updatedAt": "2026-08-04T09:12:54.177430+09:00",
-  "updatedAtJST": "2026/08/04 09:12 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-08-04T13:12:17.084590+09:00",
+  "updatedAtJST": "2026/08/04 13:12 JST",
+  "totalArticles": 4,
   "articles": [
+    {
+      "title": "株価 値下がり 半導体関連などに売り注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195691000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T12:47:12+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "米トランプ政権の追加関税 25の州が取り消し求め提訴",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195531000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T10:42:18+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "NYダウ最高値更新 中東情勢悪化の懸念和らぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T07:46:51+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 5
     },
     {
       "title": "日米 追加協調介入も辞さず 米当局のドル調達の仕組み活用で",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T06:45:11+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "【熊本地震 企業影響 3日】工場で操業停止続く 生産一部再開も",
-      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194851000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-04T00:22:43+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "7月31日介入は4兆円超える規模か 民間仲介会社の分析",
-      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015195391000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-03T22:42:20+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "大手企業が3か月決算発表 熊本の地震や中東情勢の影響も",
-      "url": "http://www3.nhk.or.jp/news/html/20260803/k10015195061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-03T21:14:57+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
