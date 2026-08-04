@@ -1,97 +1,97 @@
 {
-  "updatedAt": "2026-08-04T22:00:56.113055+09:00",
-  "updatedAtJST": "2026/08/04 22:00 JST",
+  "updatedAt": "2026-08-05T01:10:21.449010+09:00",
+  "updatedAtJST": "2026/08/05 01:10 JST",
   "totalArticles": 13,
   "articles": [
+    {
+      "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T23:54:48+09:00",
+      "hoursAgo": 1
+    },
     {
       "title": "【熊本地震 企業影響 4日】工場操業に影響 稼働再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T21:01:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 4
     },
     {
       "title": "ソフトバンク宮川社長 “災害時の通信各社の連携 今後も強化”",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T20:29:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "トヨタ 今年度の業績見通しを上方修正 営業利益は3兆4000億円",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T19:48:31+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "大企業の設備投資 昨年度実績比19.7％増の見通し AI分野で旺盛",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196181000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T19:36:00+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "円相場 値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196221000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T18:27:47+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 6
     },
     {
       "title": "ドコモのシェアサイクルでシステム不具合 サービスの提供停止",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196131000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T18:03:20+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "中部電力に不正アクセス 約7万4000人の個人情報漏えいの可能性",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T18:01:59+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 7
     },
     {
       "title": "日本製紙 熊本地震で9人死亡 あす社長らが会見へ",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196071000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T17:12:51+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 7
     },
     {
       "title": "小学館 社長ら26人 役員報酬の一部自主返納 漫画家起用問題で",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T16:45:22+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "株価 小幅に値上がり 値下がりした銘柄買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195691000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T16:29:12+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "農林水産物 食品の輸出額 上半期2年連続で過去最高に",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T15:53:44+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "【きょうのおはBiz 8月4日(火)】広がる食品ロス削減アプリ",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195571000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T13:17:54+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "米トランプ政権の追加関税 25の州が取り消し求め提訴",
-      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195531000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-04T10:42:18+09:00",
       "hoursAgo": 11
     }
   ]
