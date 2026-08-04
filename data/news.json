@@ -1,35 +1,56 @@
 {
-  "updatedAt": "2026-08-04T13:12:17.084590+09:00",
-  "updatedAtJST": "2026/08/04 13:12 JST",
-  "totalArticles": 4,
+  "updatedAt": "2026-08-04T16:38:02.631059+09:00",
+  "updatedAtJST": "2026/08/04 16:38 JST",
+  "totalArticles": 7,
   "articles": [
     {
-      "title": "株価 値下がり 半導体関連などに売り注文",
+      "title": "トヨタ 今年度の業績見通しを上方修正 営業利益は3兆4000億円",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T16:29:47+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "株価 小幅に値上がり 値下がりした銘柄買い戻す動き",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195691000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-08-04T12:47:12+09:00",
+      "publishedAt": "2026-08-04T16:29:12+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "農林水産物 食品の輸出額 上半期2年連続で過去最高に",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195821000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T15:53:44+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "【きょうのおはBiz 8月4日(火)】広がる食品ロス削減アプリ",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195571000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-04T13:17:54+09:00",
+      "hoursAgo": 3
     },
     {
       "title": "米トランプ政権の追加関税 25の州が取り消し求め提訴",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195531000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T10:42:18+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "NYダウ最高値更新 中東情勢悪化の懸念和らぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195501000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T07:46:51+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "日米 追加協調介入も辞さず 米当局のドル調達の仕組み活用で",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195341000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T06:45:11+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     }
   ]
 }
