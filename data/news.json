@@ -1,104 +1,83 @@
 {
-  "updatedAt": "2026-08-06T00:11:52.651021+09:00",
-  "updatedAtJST": "2026/08/06 00:11 JST",
-  "totalArticles": 14,
+  "updatedAt": "2026-08-06T02:27:34.580750+09:00",
+  "updatedAtJST": "2026/08/06 02:27 JST",
+  "totalArticles": 11,
   "articles": [
     {
       "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T22:05:21+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "イオンモール熊本 “LPガス爆発の可能性高い”経産省など調査",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T21:49:45+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 4
     },
     {
       "title": "SBI新生銀行 14地銀と協定締結 大型案件融資目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T19:59:45+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "【熊本地震 企業影響 5日】大手メーカーの工場など操業に影響",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:58:15+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "熊本地震で9人死亡の日本製紙 初めて記者会見 社長が陳謝",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:56:07+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 7
     },
     {
       "title": "円相場は小幅な値動き 中東情勢緩和で午前中は円買いも",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:21:56+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 8
     },
     {
       "title": "イオン 7人死亡の大規模な爆発を受け 事故調査委員会を設置へ",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:09:14+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "異例の介入 米側の思惑は ベッセント財務長官単独インタビュー",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197021000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T16:31:33+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 9
     },
     {
       "title": "日経平均株価2300円超上昇 中東情勢の緊張緩和との見方で",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196831000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T16:19:30+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 10
     },
     {
       "title": "高市首相「強い経済」実現と財政持続可能性は両立可能",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197231000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T15:21:29+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 11
     },
     {
       "title": "ガソリン全国平均170.1円 政府補助金で170円程度の水準続く",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197251000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T14:51:41+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "【きょうのおはBiz 8月5日(水)】クルマづくりのAI活用どこまで",
-      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196861000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T14:20:36+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "財務省 全国の景気判断据え置き 関東と東海は引き上げ",
-      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196951000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T13:03:21+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "日銀 利上げ決定の6月会合の議事要旨 早期の追加利上げ主張も",
-      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197061000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T12:42:41+09:00",
       "hoursAgo": 11
     }
   ]
