@@ -1,70 +1,105 @@
 {
-  "updatedAt": "2026-08-05T13:07:13.731635+09:00",
-  "updatedAtJST": "2026/08/05 13:07 JST",
-  "totalArticles": 9,
+  "updatedAt": "2026-08-05T16:36:57.672042+09:00",
+  "updatedAtJST": "2026/08/05 16:36 JST",
+  "totalArticles": 14,
   "articles": [
+    {
+      "title": "異例の介入 米側の思惑は ベッセント財務長官単独インタビュー",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197021000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T16:31:33+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日本製紙 地震のあと初めて社長ら記者会見",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197011000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T16:21:44+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "日経平均株価2300円超上昇 中東情勢の緊張緩和との見方で",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196831000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T16:19:30+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "高市首相「強い経済」実現と財政持続可能性は両立可能",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197231000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T15:21:29+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "ガソリン全国平均170.1円 政府補助金で170円程度の水準続く",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197251000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T14:51:41+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "【きょうのおはBiz 8月5日(水)】クルマづくりのAI活用どこまで",
+      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196861000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T14:20:36+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "財務省 全国の景気判断据え置き 関東と東海は引き上げ",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196951000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T13:03:21+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "日銀 利上げ決定の6月会合の議事要旨 早期の追加利上げ主張も",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197061000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T12:42:41+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "株価値上がり 中東情勢の緊張緩和との見方で買い注文広がる",
-      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T12:24:03+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 3
     },
     {
       "title": "ルーマニア 水位低下により原発一部停止 車生産一時休止も",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196681000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T10:37:26+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 5
     },
     {
       "title": "米 スペースX 上場後初の決算 AI開発投資が負担となり赤字に",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196821000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T10:25:09+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 6
     },
     {
       "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T08:08:00+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 8
     },
     {
       "title": "公取委30年ぶり組織再編へ 中小企業の価格転嫁へ監視強化",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:49:02+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "NYダウ 2日連続で最高値更新 中東情勢 緊張緩和への期待感で",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:37:02+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 9
     },
     {
       "title": "三菱重工業 次世代型原子炉「SMR」国内実用化に向け本格開発へ",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:24:01+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 10
     }
   ]
 }
