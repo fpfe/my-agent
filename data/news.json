@@ -1,62 +1,62 @@
 {
-  "updatedAt": "2026-08-06T04:27:15.826679+09:00",
-  "updatedAtJST": "2026/08/06 04:27 JST",
+  "updatedAt": "2026-08-06T06:05:57.107912+09:00",
+  "updatedAtJST": "2026/08/06 06:05 JST",
   "totalArticles": 8,
   "articles": [
+    {
+      "title": "ホンダ 地震で生産に影響 部品メーカーの復旧状況見て再開判断",
+      "url": "http://www3.nhk.or.jp/news/html/20260806/k10015197541000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-06T05:17:29+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T22:05:21+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "イオンモール熊本 “LPガス爆発の可能性高い”経産省など調査",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197391000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T21:49:45+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 8
     },
     {
       "title": "SBI新生銀行 14地銀と協定締結 大型案件融資目指す",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197461000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T19:59:45+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 10
     },
     {
       "title": "【熊本地震 企業影響 5日】大手メーカーの工場など操業に影響",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196971000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:58:15+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "熊本地震で9人死亡の日本製紙 初めて記者会見 社長が陳謝",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:56:07+09:00",
-      "hoursAgo": 9
+      "hoursAgo": 11
     },
     {
       "title": "円相場は小幅な値動き 中東情勢緩和で午前中は円買いも",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197381000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:21:56+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     },
     {
       "title": "イオン 7人死亡の大規模な爆発を受け 事故調査委員会を設置へ",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T18:09:14+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "異例の介入 米側の思惑は ベッセント財務長官単独インタビュー",
-      "url": "http://www3.nhk.or.jp/news/html/20260805/k10015197021000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T16:31:33+09:00",
       "hoursAgo": 11
     }
   ]
