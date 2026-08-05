@@ -1,62 +1,41 @@
 {
-  "updatedAt": "2026-08-05T07:10:09.314698+09:00",
-  "updatedAtJST": "2026/08/05 07:10 JST",
-  "totalArticles": 8,
+  "updatedAt": "2026-08-05T09:00:54.615817+09:00",
+  "updatedAtJST": "2026/08/05 09:00 JST",
+  "totalArticles": 5,
   "articles": [
+    {
+      "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
+      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-05T08:08:00+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "公取委30年ぶり組織再編へ 中小企業の価格転嫁へ監視強化",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196441000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:49:02+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "NYダウ 2日連続で最高値更新 中東情勢 緊張緩和への期待感で",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:37:02+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "三菱重工業 次世代型原子炉「SMR」国内実用化に向け本格開発へ",
       "url": "http://www3.nhk.or.jp/news/html/20260805/k10015196481000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-05T06:24:01+09:00",
-      "hoursAgo": 0
-    },
-    {
-      "title": "米 ベッセント財務長官 “協調介入は象徴的な意味合い”",
-      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196511000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-05T03:15:30+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 2
     },
     {
       "title": "【熊本地震 企業影響 4日】工場操業に影響 稼働再開の動きも",
       "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-04T21:01:21+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "ソフトバンク宮川社長 “災害時の通信各社の連携 今後も強化”",
-      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196341000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-04T20:29:41+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "トヨタ 今年度の業績見通しを上方修正 営業利益は3兆4000億円",
-      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195831000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-04T19:48:31+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "大企業の設備投資 昨年度実績比19.7％増の見通し AI分野で旺盛",
-      "url": "http://www3.nhk.or.jp/news/html/20260804/k10015196181000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-04T19:36:00+09:00",
       "hoursAgo": 11
     }
   ]
