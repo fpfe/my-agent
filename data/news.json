@@ -1,112 +1,112 @@
 {
-  "updatedAt": "2026-08-07T18:59:45.861149+09:00",
-  "updatedAtJST": "2026/08/07 18:59 JST",
+  "updatedAt": "2026-08-07T20:01:10.732376+09:00",
+  "updatedAtJST": "2026/08/07 20:01 JST",
   "totalArticles": 15,
   "articles": [
     {
-      "title": "公的年金積立金運用実績 四半期として過去最高の黒字 GPIF",
-      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199351000.html",
+      "title": "ニチレイ サイバー攻撃影響などで売り上げ50億円減少の見通し",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199521000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-08-07T18:42:50+09:00",
+      "publishedAt": "2026-08-07T19:56:08+09:00",
       "hoursAgo": 0
     },
     {
       "title": "スーパーのコメ平均価格 5キロ3198円 6週連続で値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199341000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-08-07T18:05:46+09:00",
+      "publishedAt": "2026-08-07T19:48:33+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "秋田市に日本最大級のデータセンター整備計画",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199451000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T19:48:00+09:00",
+      "hoursAgo": 0
+    },
+    {
+      "title": "公的年金積立金運用実績 四半期として過去最高の黒字 GPIF",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199351000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T18:42:50+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "6月景気動向指数が上昇 景気の基調判断「改善」を維持 内閣府",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199331000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T17:55:53+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "中国 7月の輸出額23％余増加 半導体やEVがけん引",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199321000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T17:31:41+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 2
     },
     {
       "title": "株価 小幅に値下がり",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199011000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T16:32:49+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "土地取得ルール「届け出必要な対象拡大を」国交省の有識者会議",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199271000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T16:31:38+09:00",
-      "hoursAgo": 2
+      "hoursAgo": 3
     },
     {
       "title": "4月-6月決算ピーク イラン情勢の不透明感後退で上方修正相次ぐ",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199191000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T15:49:08+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "食料自給率 過去最低 ここにも“米騒動”の影響が【Q＆A】",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199111000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T15:33:41+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 4
     },
     {
       "title": "食料自給率37％ 過去最低に コメの価格高騰が低下招く",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199091000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T14:00:35+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 6
     },
     {
       "title": "きょうのおはBiz 8月7日(金) 春の原油価格上昇 物価押し上げへ",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T12:48:42+09:00",
-      "hoursAgo": 6
+      "hoursAgo": 7
     },
     {
       "title": "米 半導体や太陽光パネルの材料に追加関税 中国を念頭か",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198941000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T11:53:02+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "6月家計調査 7か月連続で減少 台風や梅雨で幅広く支出が減少",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T11:19:45+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     },
     {
       "title": "4月30日の市場介入 6兆円余 円買いとして1日あたりで過去最大",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T10:30:00+09:00",
-      "hoursAgo": 8
-    },
-    {
-      "title": "アメリカの原油輸出減少 代替調達進める日本にも影響可能性も",
-      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198761000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-07T07:53:16+09:00",
-      "hoursAgo": 11
-    },
-    {
-      "title": "大手企業の夏のボーナス初の100万円超 経団連最終集計",
-      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198751000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-07T07:48:18+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 9
     }
   ]
 }
