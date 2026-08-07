@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-08-07T08:57:05.121571+09:00",
-  "updatedAtJST": "2026/08/07 08:57 JST",
+  "updatedAt": "2026-08-07T11:50:39.232713+09:00",
+  "updatedAtJST": "2026/08/07 11:50 JST",
   "totalArticles": 5,
   "articles": [
     {
-      "title": "6月家計調査 7か月連続減少",
+      "title": "6月家計調査 7か月連続で減少 台風や梅雨で幅広く支出が減少",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198791000.html",
       "source": "NHK 経済",
-      "publishedAt": "2026-08-07T08:50:10+09:00",
+      "publishedAt": "2026-08-07T11:19:45+09:00",
       "hoursAgo": 0
+    },
+    {
+      "title": "4月30日の市場介入 6兆円余 円買いとして1日あたりで過去最大",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198801000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T10:30:00+09:00",
+      "hoursAgo": 1
     },
     {
       "title": "アメリカの原油輸出減少 代替調達進める日本にも影響可能性も",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T07:53:16+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "大手企業の夏のボーナス初の100万円超 経団連最終集計",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T07:48:18+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 4
     },
     {
       "title": "経産省 日本製紙の煙突倒壊受け自家発事業者に報告求める通知",
       "url": "http://www3.nhk.or.jp/news/html/20260806/k10015198631000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-06T23:50:45+09:00",
-      "hoursAgo": 9
-    },
-    {
-      "title": "“現場職への転職”に20代の約半数が関心 背景にAIへの危機感",
-      "url": "http://www3.nhk.or.jp/news/html/20260806/k10015198141000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-06T22:34:18+09:00",
-      "hoursAgo": 10
+      "hoursAgo": 11
     }
   ]
 }
