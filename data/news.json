@@ -1,42 +1,56 @@
 {
-  "updatedAt": "2026-08-07T11:50:39.232713+09:00",
-  "updatedAtJST": "2026/08/07 11:50 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-08-07T13:53:03.058173+09:00",
+  "updatedAtJST": "2026/08/07 13:53 JST",
+  "totalArticles": 7,
   "articles": [
+    {
+      "title": "きょうのおはBiz 8月7日(金) 春の原油価格上昇 物価押し上げへ",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198891000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T12:48:42+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "日経平均株価 値下がり AI・半導体関連中心に売り注文",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199011000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T12:05:52+09:00",
+      "hoursAgo": 1
+    },
+    {
+      "title": "米 半導体や太陽光パネルの材料に追加関税 中国を念頭か",
+      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198941000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-07T11:53:02+09:00",
+      "hoursAgo": 2
+    },
     {
       "title": "6月家計調査 7か月連続で減少 台風や梅雨で幅広く支出が減少",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198791000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T11:19:45+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "4月30日の市場介入 6兆円余 円買いとして1日あたりで過去最大",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198801000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T10:30:00+09:00",
-      "hoursAgo": 1
+      "hoursAgo": 3
     },
     {
       "title": "アメリカの原油輸出減少 代替調達進める日本にも影響可能性も",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198761000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T07:53:16+09:00",
-      "hoursAgo": 3
+      "hoursAgo": 5
     },
     {
       "title": "大手企業の夏のボーナス初の100万円超 経団連最終集計",
       "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198751000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-07T07:48:18+09:00",
-      "hoursAgo": 4
-    },
-    {
-      "title": "経産省 日本製紙の煙突倒壊受け自家発事業者に報告求める通知",
-      "url": "http://www3.nhk.or.jp/news/html/20260806/k10015198631000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-06T23:50:45+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 6
     }
   ]
 }
