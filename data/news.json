@@ -1,21 +1,14 @@
 {
-  "updatedAt": "2026-08-08T21:44:41.362217+09:00",
-  "updatedAtJST": "2026/08/08 21:44 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-08-08T22:43:45.028171+09:00",
+  "updatedAtJST": "2026/08/08 22:43 JST",
+  "totalArticles": 1,
   "articles": [
     {
       "title": "オープンAI 開発一時中断 AIみずからサイバー攻撃実行のおそれ",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015200151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T15:10:11+09:00",
-      "hoursAgo": 6
-    },
-    {
-      "title": "「なりすまし広告」詐欺対策強化を 政府がSNS事業者に要請",
-      "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199771000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-08T10:04:37+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 7
     }
   ]
 }
