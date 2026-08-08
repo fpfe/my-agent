@@ -1,21 +1,28 @@
 {
-  "updatedAt": "2026-08-08T14:41:01.288131+09:00",
-  "updatedAtJST": "2026/08/08 14:41 JST",
-  "totalArticles": 2,
+  "updatedAt": "2026-08-08T15:50:45.349524+09:00",
+  "updatedAtJST": "2026/08/08 15:50 JST",
+  "totalArticles": 3,
   "articles": [
+    {
+      "title": "オープンAI 開発一時中断 AIみずからサイバー攻撃実行のおそれ",
+      "url": "http://www3.nhk.or.jp/news/html/20260808/k10015200151000.html",
+      "source": "NHK 経済",
+      "publishedAt": "2026-08-08T15:10:11+09:00",
+      "hoursAgo": 0
+    },
     {
       "title": "「なりすまし広告」詐欺対策強化を 政府がSNS事業者に要請",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T10:04:37+09:00",
-      "hoursAgo": 4
+      "hoursAgo": 5
     },
     {
       "title": "千葉 銚子 輸入サバ高騰で加工業者の約2割が倒産や廃業状態に",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T07:28:58+09:00",
-      "hoursAgo": 7
+      "hoursAgo": 8
     }
   ]
 }
