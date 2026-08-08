@@ -1,14 +1,6 @@
 {
-  "updatedAt": "2026-08-09T02:28:16.888026+09:00",
-  "updatedAtJST": "2026/08/09 02:28 JST",
-  "totalArticles": 1,
-  "articles": [
-    {
-      "title": "オープンAI 開発一時中断 AIみずからサイバー攻撃実行のおそれ",
-      "url": "http://www3.nhk.or.jp/news/html/20260808/k10015200151000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-08T15:10:11+09:00",
-      "hoursAgo": 11
-    }
-  ]
+  "updatedAt": "2026-08-09T03:35:04.453536+09:00",
+  "updatedAtJST": "2026/08/09 03:35 JST",
+  "totalArticles": 0,
+  "articles": []
 }
