@@ -1,42 +1,21 @@
 {
-  "updatedAt": "2026-08-08T10:27:15.931721+09:00",
-  "updatedAtJST": "2026/08/08 10:27 JST",
-  "totalArticles": 5,
+  "updatedAt": "2026-08-08T12:23:52.142286+09:00",
+  "updatedAtJST": "2026/08/08 12:23 JST",
+  "totalArticles": 2,
   "articles": [
     {
       "title": "「なりすまし広告」詐欺対策強化を 政府がSNS事業者に要請",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T10:04:37+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 2
     },
     {
       "title": "千葉 銚子 輸入サバ高騰で加工業者の約2割が倒産や廃業状態に",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T07:28:58+09:00",
-      "hoursAgo": 2
-    },
-    {
-      "title": "KDDI 楽天への回線提供の契約 9月で終了 一部では提供継続",
-      "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199811000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-08T00:04:09+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "米就業者 市場予想に反し減少 利上げ観測後退で円高ドル安進む",
-      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199701000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-07T23:53:24+09:00",
-      "hoursAgo": 10
-    },
-    {
-      "title": "石油元売りに新交付金案 原油の代替調達促す 経産省会合で",
-      "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199711000.html",
-      "source": "NHK 経済",
-      "publishedAt": "2026-08-07T22:28:52+09:00",
-      "hoursAgo": 11
+      "hoursAgo": 4
     }
   ]
 }
