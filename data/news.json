@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-08T15:50:45.349524+09:00",
-  "updatedAtJST": "2026/08/08 15:50 JST",
+  "updatedAt": "2026-08-08T16:48:09.760286+09:00",
+  "updatedAtJST": "2026/08/08 16:48 JST",
   "totalArticles": 3,
   "articles": [
     {
@@ -8,21 +8,21 @@
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015200151000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T15:10:11+09:00",
-      "hoursAgo": 0
+      "hoursAgo": 1
     },
     {
       "title": "「なりすまし広告」詐欺対策強化を 政府がSNS事業者に要請",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199771000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T10:04:37+09:00",
-      "hoursAgo": 5
+      "hoursAgo": 6
     },
     {
       "title": "千葉 銚子 輸入サバ高騰で加工業者の約2割が倒産や廃業状態に",
       "url": "http://www3.nhk.or.jp/news/html/20260808/k10015199891000.html",
       "source": "NHK 経済",
       "publishedAt": "2026-08-08T07:28:58+09:00",
-      "hoursAgo": 8
+      "hoursAgo": 9
     }
   ]
 }
